@@ -41,3 +41,9 @@ License: https://creativecommons.org/licenses/by/3.0/deed.en
 Attribution: Dan Kaminsky (Self portrait)
 Picture is altered for this blog
 
+#CapitolStorming21.jpg
+
+Attribution: Tyler Merbler
+License: https://creativecommons.org/licenses/by/2.0/deed.en
+Picture is altered for this blog
+
