@@ -1,0 +1,178 @@
+<!--{TAGS:M}-->
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS update</h1>
+
+<h2>September 22, 2012</h2>
+
+In today's blog, I describe the work I have done on MaraDNS,
+link to a new DNS server, explain why I don't like some ultrabooks,
+and post an update for BuyVM.
+
+<A name=deadwood> </A>
+<p>
+<div class=blogtitle>
+<b>Deadwood update</b>
+</div><br>
+
+I have gotten an unconfirmed report of Deadwood no longer running after
+a couple of days from a friend.  While I am unable to recreate this bug, I 
+take reports like this very seriously.  That in mind, I have created
+a special debug version of Deadwood which logs all packets Deadwood
+receives.  
+
+<p>
+
+To use this debug version of Deadwood, enable the "SHOWPACKET" compile-time
+tag (such as with <tt>export FLAGS='-Os -DSHOWPACKET'</tt> before compiling
+Deadwood).
+
+<p>
+
+For Windows users, I have made a debug build of Deadwood with this flag
+set.  It has the name "Deadwood-showpacket-20120922.exe"; use this
+binary to replace "Deadwood.exe" in Deadwood-3-2-02-win32.zip.
+
+<p>
+
+If this bug does not pop up again, I plan on releasing Deadwood 3.2.03
+next month.
+
+<p>
+
+In addition, I have updated the documentation to reflect the fact that Windows 
+7 and any RHEL6 clone are now the supported OSes for Deadwood, added a note
+on Deadwood's use of malloc() (may not work with some embedded systems), as 
+well as having Deadwood give out a more useful error message if chdir()
+fails (it now lets the user know which directory it tried to go to).
+
+<p>
+Downloads are here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<A name=maradns> </A>
+<p>
+<div class=blogtitle>
+<b>MaraDNS update</b>
+</div><br>
+
+In today's MaraDNS update, I have updated MaraDNS to use a new GPG key
+(see below), use xz instead of bz2 compression for the snapshots, and
+have changed the ej2txt tool to use lynx instead of links (since CentOS
+6 does not have a package for elinks).  Note that Deadwood still uses
+bzip2 compression because the old version of msys I recommend people use
+doesn't have an xz binary, and won't compile xz.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+<A name=gpg> </A>
+<p>
+<div class=blogtitle>
+<b>MaraDNS GPG sig update</b>
+</div><br>
+
+I mentioned <A href=20120907.html>in an earlier blog</A> that I lost
+my MaraDNS signing key.  Fortunately, I had a really old backup lurking
+around down here and was able to recover my signing key.
+
+<p>
+
+However, since it has been over a decade, I have created a new <A 
+href=/pgp.key.txt>MaraDNS signing key</A> which is signed with the
+old MaraDNS signing key (the paranoid amoung you can now breathe a
+sigh of relief).  Barring a compromise of MaraDNS' private key, this
+will be the last MaraDNS GPG key I will generate until 2017, around
+the same time I update the OS MaraDNS is supported on.
+
+<p>
+
+I plan to work on MaraDNS/Deadwood again one day next month, after the 20th,
+unless a critical security bug <i>with a CVE number</i> is found.
+
+<A name=knotdns> </A>
+<p>
+<div class=blogtitle>
+<b>Knot DNS</b>
+</div><br>
+
+I just found out about a nice authoritative-only server called "Knot DNS".  
+Unlike MaraDNS, it has DNSSEC and full zone transfer support. 
+More information:
+
+<blockquote>
+<A href=http://www.knot-dns.cz/>http://www.knot-dns.cz/</A>
+</blockquote>
+
+<A name=ultrabooks> </A>
+<p>
+<div class=blogtitle>
+<b>Why I don't like ultrabooks</b>
+</div><br>
+
+While I really like the idea of having a full sized computer the weighs
+less, I really don't like the Macbook air clones called "ultrabooks".
+The purpose of a laptop is to be able to travel; a laptop that doesn't
+use standard parts is a disaster waiting to happen.
+
+<p>
+
+To wit: If someone goes wrong with an Ultrabook and I'm
+in an exotic country, I am screwed until I can get back
+home to get the computer repaired.  With my Sandy Bridge <A
+href=http://www.dell.com/us/p/inspiron-n411z/pd>Inspiron 14z</A>,
+on the other hand, when something goes wrong in an exotic country,
+I can go down to the local technology bazaar, pick up a standard part
+(a hard disk, in my case), and be working again within 24 hours.
+
+<p>
+
+It's just not worth paying $1,000 more for a computer that can not be
+repaired in the field -- nor have its memory upgraded -- just to have
+something that weighs one pound (1/2 a kilogram) less. 
+[<A href=#footnotes>1</A>]
+
+<A name=buyvm> </A>
+<p>
+<div class=blogtitle>
+<b>BuyVM finally has regular stock</b>
+</div><br>
+
+A few months ago, I <A href=20120327.html>complained that BuyVM never
+has stock</A>.  Jonathan Obrania Tan has let me know that BuyVM has
+improved things and, indeed, has stock.  Current information about BuyVM's
+stock is here:
+
+<blockquote>
+<a href=http://doesbuyvmhavestock.com/>http://doesbuyvmhavestock.com/</a>
+</blockquote>
+
+<A name=footnotes> </A>
+<p>
+<div class=blogtitle>
+<b>Footnotes</b>
+</div><br>
+
+I need to note that some computers marketed as "Ultrabooks", such as the
+Inspiron 14z "Ultrabook", are <A 
+href=http://www.wired.com/reviews/2012/07/dell-inspiron-14z/>not really
+Ultrabooks</A> and use more standard parts.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+
+<A href=/blog/>Blog index</A>
+
+</div>

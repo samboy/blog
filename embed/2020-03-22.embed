@@ -1,0 +1,120 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/SAN-chart.jpg width=224 height=126>
+</div>
+
+<h1>COVID-19: Good news</h1>
+<h2>March 22, 2020</h2>
+Some good news in San Diego: We <i>are</i> making progress controlling 
+the spread of the virus, and the full lockdown now in effect should control 
+its spread even more.
+
+<p>
+
+<A name=COVID19s_growth_rate></A><A name=COVID19sgrowthrate></A><span class=moyet>==</span><span class=blogtitle><b>COVID-19’s growth rate</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/SAN-COVID19-1.png" alt="">
+<br class=nomobile>
+<i>COVID-19’s growth in San Diego</i>
+<p>
+
+<p>
+
+The amount of growth we are currently seeing (which <i>should</i> go down) 
+would saturate San Diego’s population in about eight weeks. Previous 
+growth, before the quarantine was in effect, would had saturated our 
+population in five weeks.
+
+<p>
+
+The thing to keep in mind is that we can stop saturation with less
+economic impact once we ramp up testing: We test large numbers of people
+and only quarantine those who test positive. This way, we can hang out
+with our friends and open up schools again, without the virus spreading
+unchecked. But we need wide scale testing to pull it off.
+
+<p>
+
+If we can get the growth factor to be small enough, the virus will burn
+out; I don’t think that’s achievable without testing, but, then again,
+I’m a computer software developer, not an epidemiologist.
+
+<p>
+
+<A name=Updates></A><A name=Updates></A><span class=moyet>==</span><span class=blogtitle><b>Updates</b></span><span class=moyet>==</span>
+
+<p>
+
+As of the afternoon of March 22, San Diego now has 205 cases, which is a
+29% increase over the previous day.  This is a higher increase than the
+one we had the previous day (21%), so is hopefully just a blip and we will
+see the increase go down again.
+
+<p>
+
+<i>March 23, 2020 update:</i> San Diego now has 230 cases, which is only
+a 12% increase from yesterday.  Taking in to account yesterday’s blip,
+we are seeing the same 21% increase we saw two days ago; saturation
+(everyone in San Diego being infected) remains about seven or eight
+weeks away.  If this 12% increase can be sustained, saturation will
+take 12 weeks, probably longer.
+
+<p>
+
+<i>March 24, 2020 update:</i> San Diego has 242 cases, only a 5% growth
+from yesterday.  <i>The quarantine is working!</i>  It would take over
+six months to saturate at this point; we may have effective medicines
+and possibly even a vaccine before then.
+<p>
+
+<i>Final update:</i> San Diego has 1696 cases and a doubling time of
+over 11 days on April 11, 2020.
+<div id=dynamic></div>
+<p>
+<!--
+<script src="libs/jquery-3.4.1.min.js"></script>
+<script>
+$.ajax({
+	url: "https://samboy.github.io/covid-19-html/covid-19-byCounty.json",
+	dataType: "json",
+	success: function(result) {
+		dates = result.California["San Diego"]
+		cases = 0
+		for(key in dates) {
+			if(dates.hasOwnProperty(key)) {
+				value = dates[key]
+				if(value.cases > cases) {
+					cases = value.cases;
+				}
+			}
+		}
+		$("#dynamic").html("<i>Current information:</i> " +
+			"San Diego has " + cases +
+			" known COVID-19 cases." +
+			" Data obtained from <a " + 
+			"href=https://github.com/nytimes/covid-19-data>" +
+			"The New York Times</a>.");
+	}
+});
+</script>
+<noscript>Javascript will allow current San Diego figures for COVID-19 
+to be loaded</noscript>
+-->
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,76 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>My new job</h1>
+<h2>April 10, 2018</h2>
+I have a new job.  I also look at how my old MaraDNS code is still
+notable. 
+
+<p>
+
+<A name=My_new_job></A><A name=Mynewjob></A><span class=moyet>==</span><span class=blogtitle><b>My new job</b></span><span class=moyet>==</span>
+
+<p>
+
+While I have been very happy at Midigator, and have indeed not been
+looking for a job, another company contacted me and gave me an offer
+I could not refuse.  While Midigator required two phone screenings
+and a in-person interview (albeit, the second to easiest in person
+interview I have ever done), this job required only a single video
+conference screening before they extended an offer to me, where I
+mainly talked about my need for work-life balance because I am
+a single parent.
+
+<p>
+
+Because of the amount of toxic hatred on the Internet,
+<a href="http://samiam.org/blog/2017-07-08.html#Why_I_am_keeping_my_current_boss_secret">I am keeping my current employer secret</a>; just like I did with Midigator,
+I will make this employer known once I am no longer working for them.
+If some nutcase were to call up Midigator and tell them I should be
+fired because, say, I no longer think Linux is a viable end-user desktop,
+they will politely explain to them that I am already leaving and that
+Friday is my last day there (yes, for the record, I gave them a full two 
+week notice).
+
+<p>
+
+<A name=MaraDNS_Still_notable_after_all_these_years></A><A name=MaraDNSStillnotableafteralltheseyears></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS: Still notable after all these years</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS is still getting mentioned in notable scholarly journals.
+
+<p>
+
+In 2017, MaraDNS was extensively discussed in the paper
+<a href="http://www.faginfamily.net/barry/Papers/Fagin%20Carlisle%20Klanderman%20COMPSAC%202017.pdf">Making DNS Servers Resistant to Cyber Attacks:  An Empirical Study on Formal Methods and Performance</a>
+which was published in IEEE Xplore.  There is also a discussion about
+how MaraDNS handles bailiwick processing in the 2016 paper
+<a href="https://arxiv.org/ftp/arxiv/papers/1605/1605.01394.pdf">The Availability and Security Implications of Glue in the Domain Name System</a> (my comment:
+MaraDNS’ bailiwick design, which is the same in both MaraDNS 1 and in 
+Deadwood/MaraDNS 2, is based on an outdated 2001 view of the internet 
+and DNS).
+
+<p>
+
+Point being: While I have not actively added new features to MaraDNS 
+since 2010, and while I now only fix security and other critical bugs
+(including, yes, root server changes, though I will probably stop doing
+those in a few years), MaraDNS is still considered a viable DNS server
+and is still getting notable coverage.
+
+<p>
+
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

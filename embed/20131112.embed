@@ -1,0 +1,41 @@
+<!--{TAGS:L,M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>TinyVZ update</h1>
+<h2>November 12, 2013</h2>
+<a href="http://samiam.org/TinyVZ">TinyVZ</a>
+(not to be confused with the hosting provider) is a Busybox-based
+OpenVZ template which uses a fraction of the ram and disk space that
+an OpenVZ template based on a traditional Linux distribution uses.
+
+<p>
+
+Since I use TinyVZ as a tiny recursive DNS server toaster, I have just
+updated it to use the latest version of Deadwood (3.2.03c), with all
+of the fixes to resolve names out there.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/TinyVZ">http://samiam.org/TinyVZ</A>
+</blockquote>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

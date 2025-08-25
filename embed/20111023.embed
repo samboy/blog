@@ -1,0 +1,89 @@
+<!--{TAGS:G,L}-->
+
+<h1>RMS on Jobs; Raspberry Pi</h1>
+
+<h2>October 23, 2011</h2>
+
+<div class=blogtitle>
+<b>RMS on Jobs</b>
+</div><br>
+
+RMS — the founder of the GNU Free software movement — has little love
+for Steve Jobs.  In the wake of Jobs’ tragic death, RMS said that “<A
+href="http://www.ibtimes.com/articles/227480/20111008/steve-jobs-death-2011-richard-stallman-remarks-fsf-founder-free-software-linux-apple-computers-apple.htm">I’m
+not glad he’s dead, but I’m glad he’s gone</A>”.
+
+<p>
+
+One of the reasons RMS has such animosity with Jobs is because of
+Apple’s “Look and Feel” lawsuits from the 1980s and early 1990s
+that tried to argue that a GUI was copyrighted by Apple; this litigation
+slowed down innovation in the tech industry.  Yes, those lawsuits were
+a step in the wrong direction, but:
+
+<ul>
+<li> Steve Jobs was not a part of Apple at the time — he was working on the NExT cube and with Pixar while Apple was pursuing those lawsuits.
+<li> Apple has, under Steve Jobs, made a number of contributions to open source.  Jobs, unlike RMS, brought UNIX — indeed, UNIX built with GNU software — to the desktop.  Apple also gave us Webkit and has made a lot of contributions to GCC under Jobs’ tenure
+<li> The lawsuits are from two decades ago.  
+<li> Apple paid a very high price for pursuing an ultimately vain attempt to get a monopoly on GUIs via litigation: Once Windows 95 came out, Apple nearly died until Jobs returned to the reins to make Apple profitable again.
+
+</ul>
+
+RMS completely misses the point when he complains about Apple taking away
+freedom.  The market has spoken, and people would rather have something
+that works and is easy to use than have something with a “freedom”
+that only matters if you’re a programmer or other hardcore geek,
+but has an inconsistent, obtuse, and hard-to-use interface.
+
+<p>
+<div class=blogtitle>
+<b>The Raspberry Pi</b>
+</div><br>
+
+The <A href=http://raspberrypi.org>Raspberry Pi</A> is an interesting
+idea: Making a usable computer that costs only $35.  Right now, the
+project is vaporware; while the computer is supposed to be available
+next month, it still can not be purchased.
+
+<p>
+
+This looks like the One Laptop per Child (OLPC) project over all again.
+OLPC promised us a usable small laptop for $100 at a time when a small
+subnotebook would set you back $1000 or more.  In the end, it gave us a
+$200 laptop, but only available if purchased in bulk for the education
+market in developing countries.
+
+<p>
+
+OLPC, however, inspired the netbook revolution of the late 2000s — the
+best technological development of the first decade in the 2000s — and I
+hope the Raspberry Pi inspires a similar revolution in low-cost computers.
+It’s possible today to make a computer more powerful than the desktop
+computers of the mid-1990s running Windows 95 that propelled the dot-com
+revolution for $35 — the hard part is finding software that will run
+on such a computer that people will actually want to use.
+
+<p>
+<div class=blogtitle>
+<b>C|Net site design</b>
+</div><br>
+
+I <A href=20111010.html>recently commented</A> on C|Net being very bold
+by using, for their body text, a font without delta hinting.  They got
+enough complaints from people that the font looks "gray" that they have
+replaced the slab-serif font they were using with Arial. Personally,
+I think they would have been better off using a slab-serif web font with
+delta hinting, such as Monotype's <A href=http://webfonts.fonts.com/en-US/Project/ChooseFonts?ViewDetails=T&ViewFontID=693134>Rockwell
+Light</A>, but that might have been too expensive — it would cost
+C|Net well over $1,000 per month to get a site license from fonts.com.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

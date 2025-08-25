@@ -1,0 +1,47 @@
+<!--{TAGS:M}-->
+
+<h1>I no longer accept patches</h1>
+
+<h2>July 23, 2012</h2>
+
+<div class=blogtitle>
+<b>MaraDNS update</b>
+</div><br>
+
+I am letting the MaraDNS community know that I am no longer integrating
+third party patches in to the MaraDNS codebase unless the patch fixes a
+security problem with a CVE number.
+
+<p>
+
+While I do appreciate third-party contributions to MaraDNS, I am the
+one who takes responsibility for any bugs a patch I accept introduces.
+I do not at present devote enough time to MaraDNS to be fixing bugs
+introduced by patches.
+
+<p>
+
+There has been <A href=http://woodlane.webconquest.com/pipermail/list/2012-March/001082.html>talk
+of setting up a Git tree for a MaraDNS-ng fork</A> and I hope that a
+MaraDNS-ng fork can be started.  I would not be able to devote any time
+to contributing or approving patches for this fork, nor in setting up
+a Git host, but I do agree there is need for a MaraDNS-ng branch more
+open to third party contributions.
+
+<p>
+
+<i>2014 update: MaraDNS now is in GitHub at
+<A href=https://github.com/samboy/MaraDNS>https://github.com/samboy/MaraDNS</A>
+</i>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

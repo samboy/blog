@@ -1,0 +1,93 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/2024-05-01.jpg width=224 height=126>
+</div>
+
+<h1>Lua table iterator</h1>
+<h2>March 9, 2025</h2>
+Let’s look at an interator which lists all of the keys of a Lua table
+in sorted order.  Both string and numeric keys are allowed, and all
+string keys will be listed before all of the numeric keys.
+
+<p>
+
+<A name=The_code></A><A name=Thecode></A><span class=moyet>==</span><span class=blogtitle><b>The code</b></span><span class=moyet>==</span>
+
+<p>
+
+<tt>function sortedKeys(inTable)</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>local keyList = {}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>local index = 1</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>for k,_ in pairs(inTable) do</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>table.insert(keyList,k)</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>end</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>-- Allow numbers and strings;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>-- strings before numbers </tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>local sf = function(a,b)</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>if(type(a) == 'number' </tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>and </tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>type(b) == 'string') </tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>then</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return false</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>elseif (type(b) == 'number'</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>and </tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>type(a) == 'string')</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>then</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return true</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>end</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return a &lt; b</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>end</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>table.sort(keyList, sf)</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>return function()</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>rvalue = keyList[index]</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>index = index + 1</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return rvalue</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>end</tt><br>
+<tt>end</tt><br>
+
+<p>
+
+To run:
+
+<p>
+
+<tt>a = {hi="there"}</tt><br>
+<tt>a[1] = "one"</tt><br>
+<tt>a["one"] = "1string"</tt><br>
+<tt>a["999"] = "three9s"</tt><br>
+<tt>a[2] = "two"</tt><br>
+<tt>for k in sortedKeys(a) do</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>print(k,a[k])</tt><br>
+<tt>end</tt><br>
+
+<p>
+
+This will output the following:
+
+<p>
+
+<tt>999 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>three9s</tt><br>
+<tt>hi <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>there</tt><br>
+<tt>one <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>1string</tt><br>
+<tt>1 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>one</tt><br>
+<tt>2 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>two</tt><br>
+
+<p>
+
+Strings are lexically sorted and numbers are numerically sorted.  All
+strings come before all numbers.  Unlike Javascript objects, in Lua, the 
+number 1 and the string "1" can both be in the same table and are 
+separate table keys.
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

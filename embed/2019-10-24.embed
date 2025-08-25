@@ -1,0 +1,149 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>October roundup #2</h1>
+<h2>October 24, 2019</h2>
+I have released MaraDNS 3.4.01, discuss the updated search boxes, remember
+Flash websites not-so-fondly, and go over issues with buying some 
+products on Amazon.
+
+<p>
+
+<A name=MaraDNS_3401_released></A><A name=MaraDNS3401released></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.4.01 released</b></span><span class=moyet>==</span>
+
+<p>
+
+I have released MaraDNS 3.4.01.  This is just 
+<a href="https://www.samiam.org/blog/2019-10-05.html">MaraDNS 3.3.03</a> declared
+“stable”.  Compared to the last stable release of MaraDNS, I have
+added the ability to specify which IP a given host name has to Deadwood,
+MaraDNS’s recursive nameserver, and have updated the recursive nameserver
+to use, by default, the
+<a href="https://quad9.net">Quad9</a> recursive nameservers.
+
+<p>
+
+It can be downloaded on
+<a href="https://maradns.samiam.org/download.html">MaraDNS’s download page</a>.
+
+<p>
+
+Using Quad9 is me throwing in the towel with trying to get Deadwood
+to resolve every single misconfigured domain on the Internet bug-for-bug
+the same way Bind does.  While Deadwood resolves a correctly configured
+RFC-1034/1035 compliant domain name without problem (probably about 99.9%
+of the names out there), there are a 
+<a href="https://github.com/samboy/MaraDNS/issues/56">number of corner cases</a> which
+Deadwood resolves slowly or not at all (Amazon is a big offender here).
+
+<p>
+
+There was a time when even the smallest office connected to the Internet
+had their own recursive DNS server.  Those days are over; recursive DNS is
+now handled by big companies with deep pockets who can afford expensive 
+servers and server space in highly connected Internet hubs.  While
+it still is possible to do recursive DNS from a computer on a home Internet
+connection, and indeed still possible to use Deadwood as a fully recursive
+DNS server, it’s sometimes slow and doesn’t always work.
+
+<p>
+
+<A name=Google_Do_lots_of_evil></A><A name=GoogleDolotsofevil></A><span class=moyet>==</span><span class=blogtitle><b>Google: Do lots of evil</b></span><span class=moyet>==</span>
+
+<p>
+
+About a decade ago, I added some Google search boxes to help people
+find content on my web pages.  Those search boxes stopped working a
+couple of years ago, and I have finally gotten around to updating
+the HTML/Javascript to work with Google’s current search boxes.
+
+<p>
+
+The old search boxes were a lot better: They just added HTML where
+I put the search box.  The new search boxes overlay the entire page,
+and the ads often time hide all of the legitimate search results:  One
+needs to scroll down to see the search results.
+
+<p>
+
+<a href="https://samiam.org/blog/2015-12-07.html">I removed ads from my site back in 2015 when Google made them too obtrusive</a>; this is part of Google’s
+pattern of becoming less and less ethical in the interests of getting
+more ad revenue.  See also:
+<a href="https://www.vice.com/en_us/article/wjmqmq/upcoming-version-of-google-chrome-will-make-it-harder-to-block-ads">Google is making it harder to disable ads with their browser Chrome</a>.
+
+<p>
+
+<A name=I_do_not_miss_Flash></A><A name=IdonotmissFlash></A><span class=moyet>==</span><span class=blogtitle><b>I do not miss Flash</b></span><span class=moyet>==</span>
+
+<p>
+
+It amazes me the number of people
+<a href="https://news.ycombinator.com/item?id=21242857">who actually miss Flash</a>.
+Flash was a one-vendor proprietary solution with questionable Linux 
+support and countless serious security holes.  Back in the first 2000s
+decade, a site which needed Flash for basic navigation was the sign of 
+a site of a small company or a company which did not care too much about
+its web presence.  Flash was used by obnoxious websites with poor user
+design and obnoxious ads.  Its only reasonable use was by sites for things
+the cross browser HTML of the time could not handle: Web fonts, in-browser
+games, and video.
+
+<p>
+
+I was, at the time, able to block all obnoxious ads by simply disabling 
+looping animated GIFs and use a “click to Flash” plugin in Firefox.
+
+<p>
+
+<A name=Beware_of_grey_market_cameras_on_Amazon></A><A name=BewareofgreymarketcamerasonAmazon></A><span class=moyet>==</span><span class=blogtitle><b>Beware of grey market cameras on Amazon</b></span><span class=moyet>==</span>
+
+<p>
+
+Grey market cameras are cameras that are from outside the United States
+for foreign markets being sold in the United States.  They are somewhat
+cheaper, but do not have a warranty in the US.  The buyer usually knows
+this: Somewhere in the copy the words “import model” or words to that
+effect appear.
+
+<p>
+
+<a href="https://www.amazon.com/Panasonic-DMC-GX85-Mirrorless-Digital-Carrying/dp/B07PHHKMDS/">I recently found a grey market camera being solid on Amazon without the usual warnings that the camera is an import model</a>.  The reason I <i>know</i> it is
+an import model is because it is sold by 6ave, which is a 
+<a href="https://www.uglyhedgehog.com/t-196762-1.html">known grey market seller</a> (as can be seen in their
+<a href="https://www.ebay.com/itm/Nikon-Z6-Mirrorless-Digital-Camera-Body-Only-/323576192497">eBay listings</a>).  
+I have reported the issue to Amazon but my report was ignored.
+
+<p>
+
+The price for the USA version of cameras is fixed by the manufacturer, and
+if a camera is significantly cheaper, make sure it is not a grey market
+model.  This information is usually available if one carefully checks 
+the product description; with Amazon, if one wants to avoid a grey market
+(or even counterfeit) item, buy only products being sold directly by Amazon 
+or a reputable seller like Adorama.
+
+<p>
+
+<A name=I_do_not_buy_food_online></A><A name=Idonotbuyfoodonline></A><span class=moyet>==</span><span class=blogtitle><b>I do not buy food online</b></span><span class=moyet>==</span>
+
+<p>
+
+When I want to get food, I go to the local grocery store.  
+
+<p>
+
+<a href="https://www.cnbc.com/2019/10/20/amazon-is-shipping-expired-baby-formula-and-other-out-of-date-foods.html">I do <i>not</i> buy food on Amazon</a>.  There is too much risk of the food being
+expired.
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

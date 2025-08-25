@@ -1,0 +1,118 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/VoteHere.jpg width=224 height=126>
+</div>
+
+<h1>Grab bag: October 2020</h1>
+<h2>October 25, 2020</h2>
+I make another prediction of how the election will go, make an 
+observation about Doctor Who, and mention another MaraDNS
+release. <i>402 words</i>
+
+<p>
+
+<A name=My_fourth_election_prediction></A><A name=Myfourthelectionprediction></A><span class=moyet>==</span><span class=blogtitle><b>My fourth election prediction</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/2020-Election-Prediction-4.png" alt="">
+<br class=nomobile>
+<i>My fourth prediction for the November 3 presidential election</i>
+<p>
+
+<p>
+
+Now that Trump looks to be better, I will revise my prediction.  I 
+predict that Biden will get 319 electoral votes (EVs), and Trump
+only will get 219 EVs.  I predict that Biden will get the sun belt
+(Arizona and Florida) and the rust belt (Pennsylvania, Michigan,
+Wisconsin, and Minnesota).  
+
+<p>
+
+It’s important that Biden get the sun belt because Florida will be
+counting its votes more quickly than key states in the rust belt.
+If Biden gets Florida, we will know who won the presidential race on
+election night; otherwise, it may take up to a week to know the
+winner.
+
+<p>
+
+<A name=Doctor_Who_An_observation></A><A name=DoctorWhoAnobservation></A><span class=moyet>==</span><span class=blogtitle><b>Doctor Who: An observation</b></span><span class=moyet>==</span>
+
+<p>
+
+As a white cisgender male who was 
+<a href="https://www.samiam.org/blog/2017-09-12.html">in an interracial marriage 
+with a Latina until she passed away</a>, an interaction we once had made 
+me very aware of how white privilege is something that has been as 
+invisible to me as water is to a fish.
+
+<p>
+
+We were watching this British TV series called 
+<a href="https://en.wikipedia.org/wiki/Doctor_Who">Doctor Who</a> on
+Netflix.  First, we watched a mid-1970s story,
+<a href="https://en.wikipedia.org/wiki/Pyramids_of_Mars">Pyramids of Mars</a>, 
+then we watched an aughts (first 2000s decade) story,
+<a href="https://en.wikipedia.org/wiki/School_Reunion_(Doctor_Who)">School 
+Reunion</a>.  Her observation: The 1970s one did not have any Black people 
+in it, but the 2000s one did.
+
+<p>
+
+I was shocked: This was something I never noticed, even as a long term
+Doctor Who fan.  White privilege was invisible to me: I did not even
+<i>notice</i> when Black people were being excluded.
+
+<p>
+
+I do not think the BBC producers were consciously excluding Black
+people when making this episode. <i>Pyramids of Mars</i> was made
+in an era when the BBC was still openly homophobic (Pete Shelley’s
+1981 song <i>Homosapien</i> was banned by the BBC for making
+references to homosexuality) and produced at least one show
+(<i>It Ain’t Half Hot Mum</i>) which is
+considered racist today.
+
+<p>
+
+Times have changed: The BBC plans on having the next incarnation of the 
+lead character in Doctor Who be a Black woman.
+
+<p>
+
+<A name=MaraDNS_350017_released></A><A name=MaraDNS350017released></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0017 released</b></span><span class=moyet>==</span>
+
+<p>
+
+I released MaraDNS 3.5.0017 earlier this month.  The only program to
+be updated is the Lua-based coLunacyDNS server; that server now allows
+the Lua script to specify some flags (RA: Recursion available and AA:
+Authoritative answer) and the TTL (time to live) in the DNS response
+sent to the client.
+
+<p>
+
+Now that I am working again, this will probably be the last MaraDNS
+release for a while.
+<p>
+
+<i>Comments for blog entries can be seen on the
+<a href=https://forum.samiam.org/forum/topic/blog-comments-thread/>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

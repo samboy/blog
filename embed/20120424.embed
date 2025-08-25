@@ -1,0 +1,60 @@
+<!--{TAGS:M}-->
+
+<h1>EasyDNS and truncation</h1>
+
+<h2>April 24, 2012</h2>
+
+I have updated Deadwood today.  This will be my last MaraDNS and Deadwood
+update until late May.
+
+<p>
+
+EasyDNS sometimes has given out packets marked
+"truncated" that, in violation of RFC1035 section
+4.1.1, do not mean that "[the] message was
+truncated due to length greater than that
+permitted on the transmission channel.", but mean
+"our UDP server is broken, try using our TCP
+server".
+
+<p>
+
+This in mind, I have updated Deadwood so that if we got a truncated packet and
+can not extract any useful information from the
+packet, unless Deadwood is using DNS-over-TCP,
+it's better to completely ignore the reply (when
+EasyDNS has had this issue, only some of their
+DNS servers have been affected).
+
+<p>
+
+I have added a SQA test to ensure Deadwood correctly handles this abuse of 
+the "truncated" DNS bit.
+
+<p>
+
+In addition, <tt>Makefile.ipv6</tt> now works again.  Keep in mind that,
+while Deadwood has IPv6 support, Deadwood with IPv6 has not been
+widely tested.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood again one day in May, after the 20th,
+unless a critical security bug is found.
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,101 @@
+<h1>A brief review of my VPS hosts</h1>
+
+<h2>February 5, 2012</h2>
+
+I will briefly review the four VPS hosts I have used.  A VPS, or virtual
+private server, is a type of low-cost hosting where one has root on their
+own IP at a fraction of a cost of having their own computer at a 
+colocation.  Plans start at only $10 a year.
+
+<p>
+
+I described these plans in more detail <A href=20110614.html>last year 
+in my blog</A>.  Buyer beware: Of the three providers who I listed
+last year, two are deadpool (no longer exist).
+
+<p>
+
+These reviews come from the viewpoint of someone using CentOS on the
+server.
+
+<p>
+
+<div class=blogtitle>
+<b>AlienVPS</b>
+</div><br>
+
+The very first VPS I have signed up for.  $19/year comes with enough ram
+to allow one to easily update the system once the "fastestmirror" plug-in
+is disabled.  Uptime is about 98%-99%; the company has experienced
+growing pains but is remarkably stable.
+
+<p>
+
+I am very happy with their response time to the tickets I have opened up
+with them.
+
+<p>
+
+The normal price is $19, but they right now have the low-end VPSes <A 
+href=http://alienvps.com/vps-hosting-specials/>on sale for $15/year</A>
+
+<p>
+
+<div class=blogtitle>
+<b>Cripperz</b>
+</div><br>
+
+<A href=http://www.samiam.org/blog/20120203.html>As I recently blogged</A>,
+Cripperz recently went deadpool.  My VPS with them was noticeably slower than
+my nodes with AlienVPS, and they had more downtime.  System was easily
+updated--I didn't even need to disable "fastestmirror" to do so.
+
+<p>
+<div class=blogtitle>
+<b>FastVPS.co</b>
+</div><br>
+
+This is a really new company offering VPSes.  Since they are unproven, they
+are deeply discounting their service; it's only $12/year.  I got one just
+last week to replace my now-dead Cripperz node.  So far, it's really
+fast, and I'm getting a lot more bandwidth (one terabyte per month)
+than I am with my other providers.  CentOS updates were not a problem.
+
+<p>
+
+<A href=http://www.fastvps.co/vps-hosting.php>Sign-up page</A>.
+
+<p>
+<div class=blogtitle>
+<b>123Systems</b>
+</div><br>
+
+They have been around a while and people seem happy with their service
+on <A href=http://webhostingtalk.com>WHT</A>.  Their really-low-cost
+$10/year nodes are really low-end.  Running updates in CentOS was a
+royal pain; I needed about an hour to finally get the system updated 
+because the VPS doesn't have the resources to do a really big update
+all at once, and the OS template is an older CentOS release.
+
+<p>
+
+The <A href=https://123systems.net/billing/cart.php?gid=19>sign-up page</A>
+for their low-cost solutions is hidden.  They do not offer CentOS 6, but
+unlike other providers listed here, they do offer Scientific Linux 6.
+
+<p>
+
+Right now they are out of stock of the $10/year plan.  Just as well;
+I only would recommend this VPS for a seasoned UNIX user who knows their
+system well enough to update a distribution piecemeal.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,36 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS webpage update</h1>
+<h2>August 29, 2013</h2>
+Now that I moved MaraDNS’ webpage to 
+<a href="http://maradns.samiam.org">maradns.samiam.org</a>, I have given the design
+a facelift to look more like the the web design for the main samiam.org
+site.  
+
+<p>
+
+Navigation and usage is identical to the old maradns.org web site.
+The web page is compatible with Internet Explorer 6-10 and any modern
+CSS browser (Firefox 3.5+, Safari 5, Opera 12, Chrome 29, etc.).
+It gracefully degrades in Internet Explorer 5, Netscape 4, and browsers
+without CSS and Javascript.
+
+<p>
+
+Like yesterday’s move of maradns.org to maradns.samiam.org, I made this 
+change to more closely associate MaraDNS with my personal web page.
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

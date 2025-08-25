@@ -1,0 +1,61 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Deadwood 3.2.04 released</h1>
+<h2>December 20, 2013</h2>
+I have released Deadwood 3.2.04.  This has, compared to Deadwood 3.2.03 
+(released a year ago), a number of bug fixes and one security update.
+
+<p>
+
+Users of Deadwood 3.2.03d do not need to update to this release to stay
+current with regards to security; however, there are a number of bug
+fixes for 3.2.03d users and it is worthwhile to update.  More
+information is in the CHANGELOG:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/doc/CHANGELOG">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>doc/<![if gt IE 6]>&#8203;<![endif]><wbr>CHANGELOG</A>
+</blockquote>
+
+Users of older Deadwood releases who set root_servers in their Deadwood
+configuration file need to change the IP for one of the root servers from 
+128.8.10.90 to 199.7.91.13.
+
+<p>
+
+There is one bug fix which could cause issues with certain, probably
+hypothetical, DNS setups on the Internet:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20131206.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20131206.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/stable/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>stable/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

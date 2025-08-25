@@ -1,0 +1,165 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>2013 in review</h1>
+<h2>December 31, 2013</h2>
+2013 was a good year in a lot of ways.  Here are my personal 
+accomplishments for this year:
+
+<p>
+
+<A name=Its_a_girl></A><A name=Itsagirl></A><span class=moyet>==</span><span class=blogtitle><b>It’s a girl!</b></span><span class=moyet>==</span>
+
+<p>
+
+My wife and I had a beautiful daughter together this year.  
+
+<p>
+
+<A name=Servers_updated></A><A name=Serversupdated></A><span class=moyet>==</span><span class=blogtitle><b>Servers updated</b></span><span class=moyet>==</span>
+
+<p>
+
+I managed to get better virtual server nodes for hosting my web pages by 
+finally getting two nodes with 
+<a href="http://doesbuyvmhavestock.com/">BuyVM</a> and one node with
+<a href="https://vpsboard.com/topic/2789-vps-from-15yr-11m-cpanel-licenses-crissic-solutions-llc/">Crissic</a>.  
+This allows me to have IPv6 for all my web pages, and the server upgrade 
+has made my sites more reliable.
+
+<p>
+
+<A name=MaraDNS_maintenance></A><A name=MaraDNSmaintenance></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS maintenance</b></span><span class=moyet>==</span>
+
+<p>
+
+While I, by and large, no longer actively develop MaraDNS, I still maintain
+MaraDNS (and its recursor Deadwood) in the following ways:
+
+<p>
+
+<ul>
+<li> I will update the software as needed for the IPv6 transition which should
+  finally become mainstream later on in the 2010s
+<li> I will fix security and other serious bugs in MaraDNS and Deadwood
+<li> I will continue to fix corner cases which cause Deadwood to be unable to
+  resolve a given hostname (as long as said hostname has a real-world 
+  example on the Internet)
+</ul>
+
+<p>
+
+In 2013, I only had to fix one 
+<a href="http://maradns.samiam.org/security.html">security issue</a> in Deadwood (be
+sure to be using MaraDNS 2.0.07d with Deadwood 3.2.03d or a
+more recent release), but ended up handling three issues causing names to 
+not resolve in Deadwood:
+
+<p>
+
+<ul>
+<li> An unusual corner case where a record started at a particular point
+  in the uncompressed DNS packet: <A href="http://samiam.org/blog/20130320.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130320.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> When Deadwood receives a name with a different case than the original
+  query sent to Deadwood: <A href="http://samiam.org/blog/20130713.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130713.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> When a DNS server does not have an IP for its NS records:
+  <A href="http://maradns.samiam.org/deadwood/browse-source/stable/update/3.2.04/deadwood-3.2.03-oncetv-ipn.net.patch">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>browse-<![if gt IE 6]>&#8203;<![endif]><wbr>source/<![if gt IE 6]>&#8203;<![endif]><wbr>stable/<![if gt IE 6]>&#8203;<![endif]><wbr>update/<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>04/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood-<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>03-<![if gt IE 6]>&#8203;<![endif]><wbr>oncetv-<![if gt IE 6]>&#8203;<![endif]><wbr>ipn.<![if gt IE 6]>&#8203;<![endif]><wbr>net.<![if gt IE 6]>&#8203;<![endif]><wbr>patch</A>
+</ul>
+
+<p>
+
+In addition, I have improved MaraDNS’ IPv6 support by having the
+authoritative server include IPv6 glue records for name servers.
+
+<p>
+
+Besides that, I didn’t add anything to MaraDNS.  
+
+<p>
+
+Since I lost a couple of subscribers every time there was a big support thread
+in the MaraDNS mailing list, I changed the mailing list in to a moderated
+list where I only announce new MaraDNS releases; MaraDNS support is now
+available in 
+<a href="https://forum.samiam.org/forum-5.html">a special forum</a> I have set up
+(and heavily moderate to keep it spam and argument free).
+
+<p>
+
+I also 
+<a href="http://samiam.org/blog/20130420.html">saved the MaraDNS Wikipedia article</a>
+by clearly showing that it has generated enough attention in reliable
+sources to merit a Wikipedia page.
+
+<p>
+
+<A name=Other_minor_geek_projects></A><A name=Otherminorgeekprojects></A><span class=moyet>==</span><span class=blogtitle><b>Other minor geek projects</b></span><span class=moyet>==</span>
+
+<p>
+
+I played around with the ancient video game Pitfall to give it different
+maps: <A href="http://samiam.org/blog/20130617.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130617.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+I finally added an RSS feed to my web pages:
+<A href="http://samiam.org/blog/20130731.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130731.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+I dealt with one of VirtualBox’s annoying bugs:
+<A href="http://samiam.org/blog/20130826.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130826.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+I made yet another implementation of SipHash:
+<A href="http://samiam.org/blog/20131006.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20131006.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+I updated my TinyOVZ Busybox-based virtual machine for OpenVZ:
+<A href="http://samiam.org/TinyOVZ">http://samiam.org/TinyOVZ</A>
+
+<p>
+
+I converted the 7x14 font included with X-Windows in to a Windows
+font that works both in PuTTY and in MSYS:
+<A href="http://samiam.org/blog/20131215.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20131215.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+<A name=Other_accomplishments></A><A name=Otheraccomplishments></A><span class=moyet>==</span><span class=blogtitle><b>Other accomplishments</b></span><span class=moyet>==</span>
+
+<p>
+
+I have had a storage locker in the US to store some of my things while I
+lived in Mexico.  After not even opening the locker for six years (since
+it was out of town), I finally emptied it out.  
+
+<p>
+
+I joined a gym again.
+
+<p>
+
+I converted my old Windows XP laptop in to a Linux server running multiple
+virtual machines via OpenVZ.
+
+<p>
+
+2013 was a good year but I know 2014 will be an even better year!
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

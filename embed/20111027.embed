@@ -1,0 +1,45 @@
+<h1>Deadwood hacking</h1>
+
+<h2>October 27, 2011</h2>
+
+One issue that has been annoying me is DNS timeouts wating to get a
+PTR ("reverse DNS lookup") answer when there isn't one (such as when
+the system is not on the net, etc.).  Since I need my system to be
+just as responsive to do the software development I'm doing for my day
+job when the system is not online, I needed to resolve the slow DNS
+timeout problems.
+
+<p>
+
+So, I hacked together a special version of Deadwood which will instantly
+reject any PTR queries...this is currently hard-coded in to the program,
+but hopefully I will have time to add a <tt>reject_ptr</tt> parameter
+early next month sometime.
+
+<p>
+
+I also need to improve <tt>reject_aaaa</tt> so Deadwood instantly gives out
+the answer, instead of waiting for a reply from upstream (I have already
+written most of this code when I did today's hack to Deadwood).
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood without sponsorship again
+one day next month, before the 15th; if I get some sponsorship, I will
+work on MaraDNS again sooner.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

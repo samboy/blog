@@ -1,0 +1,113 @@
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>Phasing out email</h1>
+<h2>March 10, 2018</h2>
+I no longer have a link to my email address on my web page.
+
+<p>
+
+<A name=Phasing_out_email></A><A name=Phasingoutemail></A><span class=moyet>==</span><span class=blogtitle><b>Phasing out email</b></span><span class=moyet>==</span>
+
+<p>
+
+For a very long time, I have had a link to my email address on my
+web page.  No more.
+
+<p>
+
+A lot has changed since I first had an email on my web
+page.  Email is no longer used the way it used to be; at my current
+job, email is not even used for corporate communication: We use either
+Slack or Skype.  The majority of email I get these days is robot 
+generated email.
+
+<p>
+
+I have not gotten an email from someone using my web page email address
+that was worth receiving for years.
+
+<p>
+
+That in mind, the email link on my web pages has now been replaced
+with a link to my resume.  People who wish to contact me can 
+become part of my LinkedIn network:
+
+<p>
+
+<blockquote>
+<A href="https://www.linkedin.com/in/sam-trenholme/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>linkedin.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>in/<![if gt IE 6]>&#8203;<![endif]><wbr>sam-<![if gt IE 6]>&#8203;<![endif]><wbr>trenholme/</A>
+</blockquote>
+
+<A name=Font_update></A><A name=Fontupdate></A><span class=moyet>==</span><span class=blogtitle><b>Font update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have updated the font on my web page to use Charis SIL for the
+non-italic body text instead of Bitstream Charter.  Charis SIL is a
+Bitstream Charter variant which has a slightly darker weight than
+the original Charter; it looks a little nicer, especially on 
+“retina” displays and in Google Chrome.
+
+<p>
+
+I have been a fan of this font for a while; I used this very same font 
+for my English lessons back when I was a professional ESL teacher.
+
+<p>
+
+The spacing between letters for Charis SIL italic is a little too
+tight; I am still using Bitstream Charter for italic text.  This
+results in the italic being somewhat lighter than the non-italic
+text, but that’s normal for an italic.
+
+<p>
+
+The updated font can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/Caulixtla008.zip">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>Caulixtla<![if gt IE 6]>&#8203;<![endif]><wbr>008.<![if gt IE 6]>&#8203;<![endif]><wbr>zip</A>
+</blockquote>
+
+<i>Edit</i>: Yes, it looks a little splotchy on low resolution displays when
+using Firefox, Internet Explorer, or Edge in Windows; but it’s
+still perfectly readable, and it looks better on high resolution
+displays than the older font.  It also looks better on Chrome, both
+at low and high resolutions, both in Windows and on Android smart
+phones.
+
+<p>
+
+The number of users in 2018 using a low resolution PC display is 
+decreasing, while the number of users with retina displays, Macintoshes
+(even on a low resolution display, the new font looks better in
+MacOS), and even Linux (yes, I checked, and the new font is an improvement
+on a Linux desktop), or smart phone is increasing, so the technology
+has advanced to the point that a nice-looking printing font that looked
+bad on the screen in 2009 now looks really nice.
+
+<p>
+
+<i>Edit #2</i>: I was able to fix the splotchy problem on low resolution
+displays by using ttfautohint 1.8.1; I had to set the maximum size to apply
+hinting to a small value (24 PPEM) so that it both looks good on low 
+resolution Windows displays (it now looks like it looks in Linux when in
+Windows, since ttfautohint uses Linux’s hinting) while looking the same
+as it did before on anything with more than 75dpi or so.
+
+<p>
+
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

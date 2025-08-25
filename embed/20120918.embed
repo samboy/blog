@@ -1,0 +1,258 @@
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Web typography</h1>
+
+<h2>September 18, 2012</h2>
+
+In today's blog, I discuss the current state of web typography, and some
+of my struggles making web fonts cross-browser compatible on my web page.
+
+<p>
+<div class=blogtitle>
+<b>Web-safe fonts</b>
+</div><br>
+
+Once upon a time, one was limited to a very limited selection of
+"<A href=http://www.ampsoft.net/webdesign-l/WindowsMacFonts.html>web safe
+fonts</A>" that one could have on their web page.  This <A 
+href=20110528.html>fairly recently changed</A>, and one can have pretty much
+any font they want on their web page.
+
+<p>
+
+Kinda, sorta.
+
+<p>
+
+The first challenge, and one <A href=20111023.html>that bit C|Net</A>, is 
+that the <A href=20110719.html>font needs to look good on older systems
+without Clear Type or other modern font hinting technologies</A>.  Since
+there are almost no good free proportional fonts that look good using delta
+hinting, my web site design only uses a single custom font for headline
+text; body text is still using Verdana, an old school "web safe" font used
+by almost all computer users, <A href=http://www.codestyle.org/css/font-family/sampler-CombinedResultsFull.shtml>even
+Linux users</A>.  For the occasional Linux or Mac user without
+Verdana, I have listed a number of similar wide proportional sans-serif
+fonts in my CSS:
+
+<p>
+<tt>font-family: Verdana, "Bitstream Vera Sans", Geneva, "DejaVu Sans", sans-serif;</tt>
+
+<p>
+
+The second challenge is finding a font that both looks very good and 
+has a good license.  During the '00s, there really wasn't a good open-source
+license for fonts out there.  Bitstream Vera, for example, used a rather
+unusual license, and RedHat's "Liberation" fonts used a variant on the GPL.
+It was only in the late '00s that the Open Font License came out, and it
+has taken years for there to be a significant number of OFL-licensed
+fonts.  Even the relatively new Ubuntu font uses an unusual non-OFL
+license.  The font this web page uses is Abobe's "Source Sans Pro" font
+which was released this year.
+
+<p>
+<div class=blogtitle>
+<b>Making a web font kit</b>
+</div><br>
+
+After finding a font that looks good on a web page, the next challenge is
+to convert the font in to a form that renders well on all major web browsers.
+To make a font compatible across all web browsers, it needs to be in three
+different formats: Internet Explorer's "EOT" format, Firefox's "WOFF" format,
+as well as True Type for Chrome and Apple's Safari browser.
+
+<p>
+
+FontSquirrel.com has <A href=http://www.fontsquirrel.com/fontface/generator>an 
+excellent free web service</A> that converts a true type
+font in to the other two formats and can optionally hint the fonts, as well 
+as providing some example CSS and HTML showing how to use the fonts on a 
+web page.
+
+<p>
+<A name=crossbrowser> </A>
+<div class=blogtitle>
+<b>Making the fonts cross browser compatible</b>
+</div><br>
+
+After making the fonts at FontSquirrel.com, there is still a lot that needs
+to be done to make the fonts look the same across browsers.  Firefox, unlike
+any other browser, will alter the shape of the fonts unless 
+the CSS is peppered with "font-weight: lighter;" which fortunately all
+of the other browsers ignore.  If only Firefox honored 
+"<A href=http://www.w3.org/TR/css3-fonts/>font-synthesis: none</A>;", but 
+alas no. <b>Update</b>: I found an article which shows how to
+<A href=http://www.alistapart.com/articles/say-no-to-faux-bold/>eliminate
+Firefox's faux bold via CSS</A>.
+
+<p>
+
+Since I have some text rendered with "font-weight: bold" using
+the web font, I am using a semi-bold instead of a fully bold version of the
+font so that it is still readable when converted in to a darker font
+by Firefox.
+
+<p>
+
+Unless one is using one of the very few open-source fonts with delta hinting
+(such as PT Sans or Cousine), it is necessary to test how the font rendering
+looks on Windows XP systems without Clear Type enabled.  Font Squirrel's
+default hinting usually does a pretty good job of ensuring that fonts look
+OK on older systems, but it sometimes distorts the form of the fonts a 
+little.  
+
+<p>
+
+There is a really great free tool out there called 
+"<A href=http://www.freetype.org/ttfautohint/>ttfautohint</A>" that
+automatically provides nice hinting for true type fonts.  The main
+disadvantage to the "ttfautohint" tool is that it makes the fonts look
+"grey" and blurry for people still using Windows XP who haven't enabled
+Clear Type.
+
+<p>
+
+It is true that both Internet Explorer 7 and higher, as well as Firefox
+4 and higher, force web fonts to be rendered using Clear Type on Windows
+XP.  Unfortunately, neither Safari or Chrome force Clear Type hinting on
+XP.  Considering the number of people who complained last year about
+how C|Net's fonts looked when they tried using a font that looks beautiful
+on systems using modern font hinting technologies, but looks grey and
+blurry without modern font hinting, there are still quite a few users
+using outdated font rendering technologies.
+
+<p>
+
+Cross-browser font rendering is a matter of compromise.  While I would love
+to use the "ttfautohint" version of the font on my web page--in addition
+to having better looking numbers, it also looks a lot better at 12 point 
+than the FontSquirrel-hinted form of the font--I really can
+not until 2014 or 2015 when people using XP are forced to upgrade after
+Microsoft stops providing XP security updates in 2014.
+
+<p> 
+
+Since FontSquirrel's hinting made the numbers in Source Sans Pro
+look ugly, I ended up using Font Squirrel's hinting for most of the characters
+but "ttfautohint" to hint the numbers.  Because of the combined hinting, the 
+numbers can look a little "off" on Windows systems with Clear Type; I hide
+this by carefully choosing font sizes where the numbers render well.
+
+<p>
+
+To do this font editing, I used a free tool available for Linux called
+"FontForge".  While the program has a bit of a learning curve, it does
+allow fonts to be fully edited.
+
+<p>
+
+In addition to combining two different hinting strategies, since there are
+still a number of Internet users out there without broadband, I made the
+font a smaller download by only having one font weight, and by removing all
+characters not in either of the languages I speak (English and Spanish).
+
+<p>
+
+There are a couple of bugs to keep in mind when using web fonts.  One is
+that webfonts can not be in iframes when using Internet Explorer 8, 
+otherwise <A href=20110619.html>the web fonts do not load at all</A>.  
+Annoyingly enough, this bug only shows up when using IE8 natively; 
+things look OK when using IE9 in IE8 render mode.
+
+<p>
+
+Another bug, or if you will feature, is that web fonts do not load for
+Firefox users who use the "noscript" add-on.
+
+<p>
+
+Another significant bug is that web fonts do not work when printing web 
+pages in Firefox, Chrome, or Safari.
+
+<p>
+<A name=printing> </A>
+<div class=blogtitle>
+<b>Web fonts and printing</b>
+</div><br>
+
+When trying to print pages with web fonts in Chrome or Safari, the printed
+page look really bad.  The ugly workaround is to disable web fonts in
+these browsers; I describe how to do so in an earlier blog:
+
+<blockquote>
+<A href=20110606.html>http://samiam.org/blog/20110606.html</A>
+</blockquote>
+
+In addition, web fonts <A 
+href=https://bugzilla.mozilla.org/show_bug.cgi?id=468568>do not correctly 
+print in Firefox</A>; they simply print using a single font in the entire 
+printed document.
+
+<p>
+
+The only browsers the correctly print a web page using web fonts are
+Internet Explorer and Opera.  With all of the other major browsers, font
+printing is still the 2002 era of "web safe" fonts.
+
+<p>
+
+For printing, I use "Trebuchet MS" as the web-safe font for browsers that
+don't support web font printing.  While Trebuchet has too much contrast 
+against Verdana to use on the screen, it adds interest to the simpler
+print layout.  
+
+<p>
+
+While the number of people who will see
+the screen "web safe" font is far smaller, they are still a significant
+number of users.  Firefox users using Noscript won't see the web font (unless
+they explicitly enable @font-face support in Noscript's settings), and 
+there is at least one browser with limited CSS but no @font-face support:
+Dillo.  More to the point, Internet Explorer and Opera users will see a brief 
+"flash" of the web safe font as the web font loads the first time they come 
+to my web page.
+
+<p>
+
+I chose Arial for the screen web safe font; it's more plain that Trebuchet, 
+but works better on the screen because there are more visual elements than in 
+the print version of the page.
+
+<p>
+
+While Cambria actually has more compatible metrics with Source Sans Pro, I
+am not using this font because it's not "Web Safe": While free with Windows
+as well as Microsoft Office for Mac, it <A 
+href=http://www.myfonts.com/fonts/ascender/cambria/>is a $120 download for
+Linux users</A>.  Unlike the 1990s "Core fonts for the web" (which is
+a <A href=http://corefonts.sourceforge.net>free download</A>), there are 
+just too many users out there without the Windows Vista fonts to use them 
+on a web page.
+
+<p>
+<A name=end> </A>
+<div class=blogtitle>
+<b>To summarize</b>
+</div><br>
+
+The state of web typography has greatly improved in the last decade and
+the era of "web safe" fonts.  Unfortunately, there are a lot of issues that
+still plague web fonts: How they look with older font rendering technologies,
+printing with web fonts, Firefox's rendering of web fonts, and other issues
+that make using them very challenging. 
+
+<p>
+
+Undoubtedly, over the next years web font rendering will improve in browsers
+and web font design will not require as many workarounds and compromises.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

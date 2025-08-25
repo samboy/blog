@@ -1,0 +1,121 @@
+<h1>Usenet</h1>
+
+<h2>January 11, 2011</h2>
+
+<h2>Usenet: The corpse still twitches</h2>
+
+A year and a half ago,
+<A 
+href=old-200907-memories_of_usenet.html>I
+posted that Usenet is dead</A>.
+
+<p>
+
+I was only partially correct.
+
+<p>
+
+Usenet is like a fungus that grows in the ventilation shaft of your car.  You
+can never make it all go away.  No matter how much time has passed, there
+is always a little left.
+
+<p>
+
+Usenet is the same way.  It's dead, but the corpse still twitches.  On a
+lark, I decided to make my Wifi router (a netbook) a news server, since
+having it just be a wifi router was a waste.  
+
+<p>
+
+Back in the day, a Usenet server was a service any decent ISP was supposed
+to supply.  Those days are long gone.  Usenet is now served by a variety
+of for-pay servers catering to people who use Usenet to download
+pornography or copyrighted material, as well as a speckling of free
+servers that only serve text newsgroups.  
+
+<p>
+
+Looking around for the
+easiest Usenet feed to hook up to, I found <A 
+href=http://aioe.org>aioe.org</A>, who allow posting without any registration 
+required.  I figure it would give me something to read the next time my
+internet connection goes down (Usenet's great strength is that you
+can read and post to it offline).
+
+<p>
+
+After too much bother getting everything set up, I was able to download 
+Usenet articles, store them on my hard disk, post (which goes to a file
+on my hard disk until either I or the crontab runs the script to update
+Usenet).  That done, I was able to look at what has happened to Usenet
+in the over seven years since I last was on it (my last posting to Usenet
+was in July of 2003).
+
+<p>
+
+A lot has changed.  The number of active newsgroups has decreased greatly.  
+The mass exodus to web bulletin boards (phpbb, etc) was well under way 
+when I left.  This process has not stopped.  Newsgroups with a healthy
+userbase back in 2003 are now deserted ghost towns.  Others have no
+on-topic traffic, but are merely repositories for off-topic excessively 
+cross-posted flames.  Others have very little traffic, barely hanging on
+by a thread.
+
+<p>
+
+In news.groups.proposals, people talk about demolishing whole scale hundreds
+of inactive newsgroups, just as they have talked about demolishing entire 
+neighborhoods of towns in suburbs of Detroit where no one lives any more.
+
+<p>
+
+A number of newsgroups, however, are still active, albeit with far
+less traffic than they used to have.  To correct something I posted on
+that blog posting: rec.audio.pro actually is still remarkably active;
+a lot of regulars who I remember from years back still post there today
+(and they, nicely enough, remember me).
+
+<p>
+
+So, yes, Usenet is dying.  It has all of the issues the old Usenet
+had: Out of control flame wars which can only be stopped by people
+updating their filters (Usenet is unusable without both a killfile
+on my local client and a filter for more obnoxious trolls on the
+server); the same cliquish elitism that it has always had (partially
+in response to the number of trolls and flamers in Usenet, admittedly);
+and the same obsolete text-only interface which was outdated in the
+late 1990s and downright prehistoric today.
+
+<p>
+
+But, it has it charm.  Mainly nostalgia for someone like me who likes
+to wear rose tinted glasses and remember the old Usenet.  I like to imagine
+myself in the 1990s with far more money than I actually had back then,
+using a Poqet PC or Gateway Handbook to access Usenet via a dialup to 
+some *NIX shell account.
+
+<p>
+
+<b>Some cool newsgroups I used to participate in which are now ghost
+towns</b>
+
+<p>
+
+alt.hackers (then again, this group was in its death throes back in 2003)<br>
+alt.tech-support.recovery <br>
+comp.os.linux.portable <br>
+comp.unix.admin<br>
+soc.religion.christian (to be fair, this was a moderated group and it
+might just be a case of the moderator moving on to other things)
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

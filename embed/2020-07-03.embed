@@ -1,0 +1,125 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/graph-2020-05.jpg width=224 height=126>
+</div>
+
+<h1>COVID-19 growth by state</h1>
+<h2>July 3, 2020</h2>
+In the blog, I discuss COVID-19 growth across the US, and discuss
+why we should take down Confederate statues. <i>371 words</i>
+
+<p>
+
+<A name=COVID19_growth_by_state></A><A name=COVID19growthbystate></A><span class=moyet>==</span><span class=blogtitle><b>COVID-19 growth by state</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/COVID-19-US-2020-07-03.png" alt="">
+<br class=nomobile>
+<i>COVID-19 growth over the last week.  Red is high growth, blue is low growth.</i>
+<p>
+
+<p>
+
+Let’s take a look at COVID-19 growth in the United States over the last
+seven days.  In this map, dark red indicates a high percentage of growth
+(as much as 5.8% per day); light blue indicates a low amount of growth.
+
+<p>
+
+In this map, Florida leads with a 5.8% daily growth of COVID-19 cases
+over the last week. On the heels of Florida, we have Arizona (4.7%),
+Idaho (4.6%), South Carolina (4.6%), Montana (4.4%), Nevada (4.2%),
+and Texas (4.2%).
+
+<p>
+
+As Senator Marco Rubio pointed out,
+<a href="https://twitter.com/marcorubio/status/1279048086090907648">wearing a mask
+in public is a simple public heath issue, <i>not</i> a political issue</a>.
+It’s important to continue wearing a mask in public (especially if indoors), 
+avoid large public gatherings, and to practice social distancing.
+
+<p>
+
+<A name=Confederate_Statues></A><A name=ConfederateStatues></A><span class=moyet>==</span><span class=blogtitle><b>Confederate Statues</b></span><span class=moyet>==</span>
+
+<p>
+
+I support taking down Confederate statutes, mainly because they were by
+and large put up in the 20th century to support Jim Crow laws.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote1">1</a></sup> 
+I do <i>not</i> support what extremists are doing, tearing down statues 
+of people like George Washington in places like Portland just because 
+he owned slaves.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote2">2</a></sup>
+
+<p>
+
+What these extremists fail to do is distinguish between someone being a
+product of their time (George Washington owning slaves in the late 1700s,
+back when that was still a normal acceptable practice) vs. someone being
+malicious as per the values of their era (Confederates fighting a war to
+continue owning slaves, and their statue being put up in the 20th century
+to bolster Jim Crow). I saw this with some of the extremes of #MeToo
+(e.g. Nolan Bushnell was attacked for being the president of a company
+with was more openly sexual at work in the 1970s than would be acceptable
+today),<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote3">3</a></sup> and I am now seeing it in the wake of the 
+George Floyd Protests.
+
+<p>
+
+In terms of southern culture: I lived in Georgia for two
+years. I have a distinct southern drawl in my voice. I love southern
+culture and southern hospitality and the people there. Southern culture
+does not mean we need to celebrate the subjugation of Black people.
+
+<p>
+
+<A name=Notes></A><A name=Notes></A><span class=moyet>==</span><span class=blogtitle><b>Notes</b></span><span class=moyet>==</span>
+
+<p>
+
+The COVID-19 Data comes from the New York Times over at
+<A href="https://github.com/nytimes/covid-19-data">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>nytimes/<![if gt IE 6]>&#8203;<![endif]><wbr>covid-<![if gt IE 6]>&#8203;<![endif]><wbr>19-<![if gt IE 6]>&#8203;<![endif]><wbr>data</A> The
+SVG map template is public domain, obtained from
+<A href="https://en.wikipedia.org/wiki/File:ElectoralCollege2020.svg">https://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>File:<![if gt IE 6]>&#8203;<![endif]><wbr>Electoral<![if gt IE 6]>&#8203;<![endif]><wbr>College<![if gt IE 6]>&#8203;<![endif]><wbr>2020.<![if gt IE 6]>&#8203;<![endif]><wbr>svg</A> The code to
+take the New York Times data and convert it in to a visual map is open
+source, available at <A href="https://github.com/samboy/covid-19-html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>covid-<![if gt IE 6]>&#8203;<![endif]><wbr>19-<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+I originally 
+<a href="https://www.dailykos.com/stories/2020/07/04/1958118/-Where-COVID-19-is-growing-the-fastest">posted 
+the COVID-19 data at DailyKOS</a>.
+
+<p>
+
+<i>Footnotes</i>
+
+<p>
+
+<ol>
+<a name="Footnote1"> </a><li>See <A href="https://www.splcenter.org/sites/default/files/com_whose_heritage.pdf">https://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>splcenter.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>sites/<![if gt IE 6]>&#8203;<![endif]><wbr>default/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>com_<![if gt IE 6]>&#8203;<![endif]><wbr>whose_<![if gt IE 6]>&#8203;<![endif]><wbr>heritage.<![if gt IE 6]>&#8203;<![endif]><wbr>pdf</A> or <A href="https://www.theatlantic.com/ideas/archive/2020/06/ole-misss-monument-white-supremacy/613255/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>theatlantic.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>ideas/<![if gt IE 6]>&#8203;<![endif]><wbr>archive/<![if gt IE 6]>&#8203;<![endif]><wbr>2020/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>ole-<![if gt IE 6]>&#8203;<![endif]><wbr>misss-<![if gt IE 6]>&#8203;<![endif]><wbr>monument-<![if gt IE 6]>&#8203;<![endif]><wbr>white-<![if gt IE 6]>&#8203;<![endif]><wbr>supremacy/<![if gt IE 6]>&#8203;<![endif]><wbr>613255/</A> for discussion of the checkered history of Confederate statues
+<a name="Footnote2"> </a><li><A href="https://thehill.com/changing-america/respect/equality/503559-george-washington-statue-vandalized-and-toppled-by">https://<![if gt IE 6]>&#8203;<![endif]><wbr>thehill.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>changing-<![if gt IE 6]>&#8203;<![endif]><wbr>america/<![if gt IE 6]>&#8203;<![endif]><wbr>respect/<![if gt IE 6]>&#8203;<![endif]><wbr>equality/<![if gt IE 6]>&#8203;<![endif]><wbr>503559-<![if gt IE 6]>&#8203;<![endif]><wbr>george-<![if gt IE 6]>&#8203;<![endif]><wbr>washington-<![if gt IE 6]>&#8203;<![endif]><wbr>statue-<![if gt IE 6]>&#8203;<![endif]><wbr>vandalized-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>toppled-<![if gt IE 6]>&#8203;<![endif]><wbr>by</A>
+<a name="Footnote3"> </a><li>“<a href="https://kotaku.com/sex-pong-and-pioneers-what-atari-was-really-like-ac-1822930057">Sex, 
+<i>Pong,</i> And Pioneers: What Atari Was Really Like, According 
+To Women Who Were There</a>” by Cecilia D'Anastasio, published by Kotaku
+</ol>
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

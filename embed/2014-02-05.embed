@@ -1,0 +1,52 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS on GitHub</h1>
+<h2>February 5, 2014</h2>
+There has been some talk about setting up a repository for MaraDNS.  I
+have now made it so: MaraDNS is available on GitHub.
+
+<p>
+
+For people who wish to make their own fork of MaraDNS, or who prefer
+to download with git instead of downloading a tarball, one can now
+grab MaraDNS thusly:
+
+<p>
+
+<blockquote>
+git clone <A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+</blockquote>
+
+The above link can also be opened in a browser; I have gone to some
+effort to ensure MaraDNS compiles when downloaded via git or if
+GitHub's zip file of MaraDNS (on the linked webpage) is downloaded.
+
+<p>
+
+Feel free to fork this repo, but please do not name your fork
+"MaraDNS" or "Deadwood"; some names that can be used are "MaraDNS-ng",
+"N-MaraDNS", or any other name besides "MaraDNS" and "Deadwood".
+
+<p>
+
+Note that having MaraDNS in git does not affect future tarball/zipfile
+releases of MaraDNS; those continue to be built and released
+separately from git.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

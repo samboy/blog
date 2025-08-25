@@ -1,0 +1,77 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Forum spammers</h1>
+<h2>September 4, 2013</h2>
+Even though 
+<a href="http://forum.samiam.org">the forum</a>
+has only been up since Sunday, and only linked to since
+Monday, I have already had seven spammers attempt to register accounts.
+Here is how I stop forum spammers:
+
+<p>
+
+I have, from the get-go, set up the forum to not allow anyone to
+post unless I activate the account by hand. I started off handling the
+spammers by sending them emails asking for their real name. They did not reply
+to me, so I just deleted the spam accounts.
+
+<p>
+
+I turned on 
+<a href="http://www.google.com/recaptcha">reCAPTCHA</a>, but
+that didn’t stop them. It would appear there are spammers sitting in
+little sweatshops in front of a computer screen answering reCAPTCHAs
+all day so they can spam to forums.
+
+<p>
+
+So, the next step was to install the 
+<a href="http://mods.mybb.com/view/registration-security-question">registration security module</a>
+and put in a few
+custom common sense questions like "Name the president of the United States".
+That still didn’t stop them. Again, spammers are sitting in little sweatshops
+filling out these registration forums by hand eight hours a day, five days a
+week. (Note: If using this plugin, use the updated version 
+<a href="http://community.mybb.com/thread-129189-page-2.html">I posted at the MyBB community</a>.)
+
+<p>
+
+Finally, I added another defense: The 
+<a href="https://github.com/tommm/stopforumspam">Stop Forum Spam plugin</a>. 
+What this plugin
+does is check new registrations against 
+<a href="http://stopforumspam.com/">a black list of spammers</a> and block
+anyone who looks like a spammer.
+
+<p>
+
+A few minutes after installing this plugin, it already stopped spammers in
+their tracks; I saw in the logs a blocked registration.
+
+<p>
+
+I verified the filter worked by testing it from a Tor exit node, which was
+(not surprisingly) blacklisted as a spammer. The only issue is that there’s a
+bug where, in MyBB’s admin control panel, it says “Install and activate this
+plugin” even though the spam-blacklister has already been installed.
+
+<p>
+
+I will see how well these protections work over the new few days, but, so far,
+I am ahead of the spammers.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

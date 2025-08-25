@@ -1,0 +1,168 @@
+<div class=blogpic>
+<img src=pics/Sam-with-Citlalli-blog.jpg width=120 height=120>
+</div>
+
+<h1>Alpine in CentOS</h1>
+<h2>April 23, 2014</h2>
+This blog is about how I set up Alpine, an easy-to-use text-based
+mail client, in CentOS 6.  I also discuss accessing my Gmail with 
+Alpine.
+
+<p>
+
+<A name=Why_Alpine></A><A name=WhyAlpine></A><span class=moyet>==</span><span class=blogtitle><b>Why Alpine?</b></span><span class=moyet>==</span>
+
+<p>
+
+Alpine is an open-source reimplementation of Pine, a classic text-based
+email client that was very popular in the 1990s, by the same development
+team.
+
+<p>
+
+I am not using Alpine because of a sudden nostalgia for the 1990s.  I use
+Alpine because I need to sometimes check my email while I am out on the
+road with my metered-bandwidth G3 internet connection.  By using a text-only
+interface, I can read and send email using 1% of the bandwidth of a
+webmail interface.
+
+<p>
+
+<A name=Getting_Alpine></A><A name=GettingAlpine></A><span class=moyet>==</span><span class=blogtitle><b>Getting Alpine</b></span><span class=moyet>==</span>
+
+<p>
+
+Alpine does not come with CentOS 6 (the only included email client is
+Mutt, which I never cared for), but I have made an RPM of Alpine 2.00 which
+can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/software/alpine/">http://samiam.org/software/alpine/</A>
+</blockquote>
+
+To install this RPM in a 32-bit setup, download alpine-2.00-1.i686.rpm, then:
+
+<p>
+
+<tt>rpm -i alpine-2.00-1.i686.rpm</tt><br>
+
+<p>
+
+To install this RPM on a 64-bit system, download alpine-2.00-1.src.rpm, then:
+
+<p>
+
+<tt>rpm -i alpine-2.00-1.src.rpm</tt><br>
+<tt>cd ~/rpmbuild/SPECS</tt><br>
+<tt>rpmbuild -ba alpine-2.00.spec</tt><br>
+
+<p>
+
+This might take a couple of minutes while Alpine is compiled.  Once done:
+
+<p>
+
+<tt>cd ~/rpmbuild/RPMS/x86_64/</tt><br>
+<tt>rpm -i alpine-2.00-1.x86_64.rpm</tt><br>
+
+<p>
+
+To verify Alpine has been installed, type in "alpine".
+
+<p>
+
+<A name=Using_Alpine_with_Gmail></A><A name=UsingAlpinewithGmail></A><span class=moyet>==</span><span class=blogtitle><b>Using Alpine with Gmail</b></span><span class=moyet>==</span>
+
+<p>
+
+Most of these directions are adapted from these HOWTOs:
+
+<p>
+
+<blockquote>
+<A href="http://people.virginia.edu/~ll2bf/docs/nix/alpine.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>people.<![if gt IE 6]>&#8203;<![endif]><wbr>virginia.<![if gt IE 6]>&#8203;<![endif]><wbr>edu/~<![if gt IE 6]>&#8203;<![endif]><wbr>ll<![if gt IE 6]>&#8203;<![endif]><wbr>2<![if gt IE 6]>&#8203;<![endif]><wbr>bf/<![if gt IE 6]>&#8203;<![endif]><wbr>docs/<![if gt IE 6]>&#8203;<![endif]><wbr>nix/<![if gt IE 6]>&#8203;<![endif]><wbr>alpine.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<blockquote>
+<A href="http://www.wijeyesakere.com/tech/alpine/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>wijeyesakere.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>tech/<![if gt IE 6]>&#8203;<![endif]><wbr>alpine/</A>
+</blockquote>
+
+First, I had to set up Gmail so Alpine can access my Gmail inbox.  To do
+this: Tools (gear icon) -&gt; Settings -&gt; Forwarding and POP/IMAP -&gt; IMAP
+access -&gt; Enable IMAP.
+
+<p>
+
+After doing that, since IMAP does not support two-factor authentication,
+I had to set up an application specific password, as described here:
+
+<p>
+
+<blockquote>
+<A href="https://support.google.com/mail/answer/1173270?hl=en">https://<![if gt IE 6]>&#8203;<![endif]><wbr>support.<![if gt IE 6]>&#8203;<![endif]><wbr>google.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>answer/<![if gt IE 6]>&#8203;<![endif]><wbr>1173270?<![if gt IE 6]>&#8203;<![endif]><wbr>hl=<![if gt IE 6]>&#8203;<![endif]><wbr>en</A>
+</blockquote>
+
+Once I did that, I then had to set up Alpine to read my Gmail via IMAP.
+I went in to Alpine, then went to Main menu -&gt; Setup -&gt; collection List -&gt; Add
+(I just typed in 'MSLA' after opening Alpine).  The nickname is how
+the mailbox will appear under "folder List"; the server line looks like
+this:
+
+<p>
+
+<tt>imap.gmail.com/ssl/user=username@gmail.com</tt><br>
+
+<p>
+
+Replace "username" with the actual Gmail account user name.
+
+<p>
+
+At this point, I could read, but not send email in Alpine.  To set up
+the SMTP server so I could send email, I did the following:
+
+<p>
+
+I went to Main menu -&gt; Setup -&gt; Rules -&gt; Roles ('MSRR'), added a role, which
+I gave the nickname 'Gmail' to.  I then scrolled down to
+"Actions begin here", put in my Gmail name and email in the Set From
+field, so it looked like "My name &lt;username@gmail.com&gt;" (Replacing
+"my name" with my name and "username" with my Gmail username).
+
+<p>
+
+For "Use SMTP server", I put in a value like this:
+
+<p>
+
+<tt>smtp.gmail.com/novalidate-cert/user=username@gmail.com/ssl</tt><br>
+
+<p>
+
+Again, replacing "username" with my Gmail username.
+
+<p>
+
+I then went to the bottom, where it says "Compose Use", and put in the
+value "With confirmation".
+
+<p>
+
+For security reasons, I have set up things so I need to enter a password
+to read or send email; to change this requires recompiling Alpine.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

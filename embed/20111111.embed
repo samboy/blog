@@ -1,0 +1,55 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS update</h1>
+
+<h2>November 11, 2011</h2>
+
+<div class=blogtitle>
+<b>MaraDNS 1.4.07</b>
+</div><br>
+
+Because of a very very generous donation from Nicholas Bamber, I was
+able to release MaraDNS 1.4.07 today.  This is MaraDNS 1.4.06 with six
+different bug fixes backported from MaraDNS 2.0:
+
+<ul>
+<li>A typo fix for fetchzone
+<li>AXFR-over-UDP packets are now correctly marked "truncated"
+<li>It is now possible to have the '/' in hostnames
+<li>Fix for Debian bug #607739: Hostname shown when complaining about DDIP
+    issues
+<li>AngelD's issue with zone transfers when there are a lot of FQDN4 records
+    fixed.
+<li>Karim's issue with '/read' directive fixed
+</ul>
+
+Please note that <b>this is a legacy version of MaraDNS</b> and is only
+for users of MaraDNS 1.x who are not ready to update to MaraDNS 2.0 yet.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/1.4/1.4.07/>http://www.maradns.org/download/1.4/1.4.07/</A>
+</blockquote>
+
+<div class=blogtitle>
+<b>Deadwood roadmap</b>
+</div><br>
+
+Because of Nicholas' generous donation, I also plan to make a Deadwood
+3.1 branch which will fully utilize caching of dangling CNAME records.
+Fixing this issue with Deadwood will help Deadwood more quickly resolve
+names in "Akamai hell" -- names which require chasing a lot of CNAME
+records to resolve.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

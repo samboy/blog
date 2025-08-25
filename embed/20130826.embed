@@ -1,0 +1,183 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>VirtualBox’s host-only adapter</h1>
+<h2>August 26, 2013</h2>
+How to fix VirtualBox’s host-only adapter when it breaks down in Windows 7.
+
+<p>
+
+<A name=VirtualBox></A><A name=VirtualBox></A><span class=moyet>==</span><span class=blogtitle><b>VirtualBox</b></span><span class=moyet>==</span>
+
+<p>
+
+<a href="https://www.virtualbox.org/">VirtualBox</a> is an 
+<i>emulator</i>
+that allows an entire virtual computer running its own operating system
+(called a guest) to run as a program inside an actual computer (the host)
+running either the same or another operating system.  It allows me to
+run Linux and Windows at the same time on the same computer.
+
+<p>
+
+<A name=Networking_with_VirtualBox></A><A name=NetworkingwithVirtualBox></A><span class=moyet>==</span><span class=blogtitle><b>Networking with VirtualBox</b></span><span class=moyet>==</span>
+
+<p>
+
+It is best if the machine running in VirtualBox is in its own virtual
+network, so that I can both:
+
+<p>
+
+<ul>
+<li> Use SSH to access the Linux virtual machine from Windows
+<li> Have the Virtual machine run regardless of the network the host computer
+  is in.  
+<li> If the host computer has Internet, the virtual machine should also have
+  Internet connectivity.
+</ul>
+
+<p>
+
+To do this in Virtual Box, the machine needs to have two network adapters 
+enabled:
+
+<p>
+
+<ul>
+<li> A NAT adapter to give the virtual machine Internet access
+<li> A host-only adapter to allow SSH access from PuTTY on the Windows host.
+</ul>
+
+<p>
+
+Ifconfig looks like this on my Linux virtual machine:
+
+<p>
+
+<tt>eth1 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>Link encap:Ethernet <span class=pc>&nbsp;</span>HWaddr 08:00:27:7A:32:A4</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>inet addr:192.168.56.101 <span class=pc>&nbsp;</span>Bcast:192.168.56.255 <span class=pc>&nbsp;</span>Mask:255.255.255.0</tt><br>
+
+<p>
+
+<i>Some redundant data removed</i>
+
+<p>
+
+<tt>eth2 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>Link encap:Ethernet <span class=pc>&nbsp;</span>HWaddr 08:00:27:5F:03:F9</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>inet addr:10.0.5.15 <span class=pc>&nbsp;</span>Bcast:10.0.5.255 <span class=pc>&nbsp;</span>Mask:255.255.255.0</tt><br>
+
+<p>
+
+Eth1 is the host-only adapter; I use this to connect to the box using
+PuTTY on the Windows host and sshd (openssh-server) in the Linux host.
+The Windows host, on the eth1 adapter in Windows, has the IP 192.168.56.2.
+When I connect to 192.168.56.101, Windows uses a special virtual Ethernet
+adapter called the "VirtualBox Host-only Ethernet Adapter" to connect to the
+virtual machine.  
+
+<p>
+
+Here is the output of "route" on the virtual machine:
+
+<p>
+
+<tt>Destination <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>Gateway <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>Genmask <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>Iface</tt><br>
+<tt>10.0.5.0 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>* <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>255.255.255.0 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>eth2</tt><br>
+<tt>192.168.56.0 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>* <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>255.255.255.0 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>eth1</tt><br>
+<tt>default <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>10.0.5.2 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>0.0.0.0 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>eth2</tt><br>
+
+<p>
+
+The Ethernet adapter eth2 connects the virtual machine to the Internet
+via the host computer’s Internet connection because it uses a “NAT” adapter.
+
+<p>
+
+<A name=Setting_up_the_network_in_VirtualBox></A><A name=SettingupthenetworkinVirtualBox></A><span class=moyet>==</span><span class=blogtitle><b>Setting up the network in VirtualBox</b></span><span class=moyet>==</span>
+
+<p>
+
+Network adapter settings can only be altered in VirtualBox when the virtual
+machine is powered off.  Once the virtual machine has Linux installed on it
+and is powered off, click on the yellow “settings” gear button after 
+selecting the Linux virtual machine.  Next, click on the network button.
+Make “Adapter 1” be a NAT adapter, and “Adapter 2” be a host-only adapter.
+Make sure the check box "Cable connected" is checked, and power up the
+Linux virtual machine.
+
+<p>
+
+Once the Linux virtual machine is powered up, the virtual networks can be
+enabled by running this as root:
+
+<p>
+
+<tt>dhclient eth0 eth1</tt><br>
+
+<p>
+
+<A name=The_hostonly_network_stops_working></A><A name=Thehostonlynetworkstopsworking></A><span class=moyet>==</span><span class=blogtitle><b>The host-only network stops working!</b></span><span class=moyet>==</span>
+
+<p>
+
+Unfortunately, there is a bug with VirtualBox’s host-only network adapter
+which makes it stop running in Windows.   
+<a href="http://robboek.com/2008/12/18/vmware-unidentified-network-issue-in-vista-and-windows-server-2008-fix/">Rob Boek</a>
+blogged about the solution so the network adapter works again:
+
+<p>
+
+<ul>
+<li> Run regedit
+<li> Go to HKEY_LOCAL_MACHINE\ SYSTEM\ CurrentControlSet\ Control\ 
+  Class\ {4AD36E972-E325-11CE-BFC1-08002BE10318}
+<li> There will be a bunch of folders with names like "0000", "0001", and so
+  on.  
+<li> Look for the folder with a key named "DriverDesc" with the value 
+  "VirtualBox Host-Only Ethernet Adapter" in the folder
+<li> Create a new Dword (32-bit) called "*NdisDeviceType" (yes, it needs to 
+  start with a star) and a value of 1, in the same folder with the
+  "DriverDesc" of "VirtualBox Host-Only Ethernet Adapter"
+<li> Disable then enable the VirtualBox host-only adapter.
+</ul>
+
+<p>
+
+Some more information is in a
+<a href="http://msdn.microsoft.com/en-us/library/ff557037%28VS.85%29.aspx">MSDN article</a>.
+
+<p>
+
+<i>Warning:</i> Regedit is a very dangerous tool.  Making a mistake here can
+make it necessary to reinstall one’s operating system.  Use at your own risk!
+
+<p>
+
+Once the above is done, make sure the host-only adapter has a good IP and DHCP
+server settings by going to, in VirtualBox, File -&gt; Preferences -&gt; Network
+
+<p>
+
+<A name=Conclusion></A><A name=Conclusion></A><span class=moyet>==</span><span class=blogtitle><b>Conclusion</b></span><span class=moyet>==</span>
+
+<p>
+
+It took me over an hour of research to find this solution to VirtualBox’s
+host-only network problems in Windows 7.  I hope this blog entry helps
+the next Linux + Windows power user with the same problem.
+
+<p>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

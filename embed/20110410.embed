@@ -1,0 +1,49 @@
+<h1>du for Windows</h1>
+
+<h2>April 10, 2011</h2>
+
+One thing that has always annoyed me is that the version of MSYS I use
+(MSYS 1.0 with 64-bit compatibility fixed; MSYS is a tiny Unix-like 
+environment for Windows--think of it as "Cygwin light") is that it does
+not include a version of "du".  
+
+<p>
+
+Finally, after being annoyed by this for a couple of years (and even going
+as far as installing Cygwin just so I would have "du"), I have implemented a
+version of du for Windows.  
+
+<p>
+
+This program is very simple: It acts like "du -ab".  Only directories can
+be given, not file names.  Due to a bug in the program, directory names can
+not have a trailing slash.  The program is large-file-size compatible.
+
+<p>
+
+In addition, I have made a program that supplies both the sizes of files
+and their "Radio Gatun 32" cryptographic sums.
+
+<p>
+
+Source code and Windows binaries are provided (compiles with MINGW).
+The programs are public domain.
+
+<p>
+
+It can be looked at here:
+
+<blockquote>
+<A href=http://samiam.org/rg32/>http://samiam.org/rg32/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

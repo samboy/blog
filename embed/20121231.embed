@@ -1,0 +1,61 @@
+<h1>2012 wrap-up</h1>
+
+<h2>December 31, 2012</h2>
+
+2012 has been a good year.  
+
+<p>
+
+While I only devote one day a month to MaraDNS,
+I was able to update MaraDNS to be immune to the "ghost domain" security bug 
+which hit every single DNS server (including djbdns) this year.  I was
+also able to update Deadwood <A href=20121220.html>with a bunch of bug 
+fixes</A> as well as update it for CentOS/RHEL 6.  
+
+<p>
+
+In addition, I finally purchased Civilization IV and <A href=/civ4>made
+a number of contributions</A>, most notably improvements to Cephalo's "Perfect
+World" map script.  I also fixed some bugs and added some polish to
+the mostly forgotten "Legends of Ancient Arabia" Civ IV mod--it is now
+possible to play random maps with this mod.
+
+<p>
+
+In addition, Fritz <A href=20121212.html>made another release of the ObHack 
+Doom random map generator this year</A>
+
+<p>
+
+Looking ahead at 2013, now that Deadwood has been updated for CentOS 6, I
+plan on making a MaraDNS 2.0.07 release which updates the rest of MaraDNS
+for the most current RHEL release.  This is my last planned OS update until
+2017 (RHEL/CentOS 6 will be supported until 2020).
+
+<p>
+
+I am also starting to play Civilization IV again, and may have time to make
+some more contributions for this game.  I am not promising anything.
+
+<p>
+
+Finally, I have decided to no longer use Facebook comments.  Since Facebook
+doesn't allow me to approve postings before they become visible, the comments
+are spam magnets in waiting.  People may email me if they have anything to
+say about any of my blog entries.
+
+<p>
+
+Happy 2013 everyone!  I know it's going to be a fabulous year!
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

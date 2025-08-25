@@ -1,0 +1,103 @@
+<!--{TAGS:L}-->
+
+<h1>TinyVZ 0.7 released</h1>
+
+<h2>August 20, 2011</h2>
+
+I have released TinyVZ 0.7 today.  This will be my last TinyVZ release
+for the foreseeable future.
+
+<p>
+
+TinyVZ 0.7 is a tiny little OpenVZ template for making OpenVZ
+containers that use the lowest amount of memory and hard disk space
+possible.
+
+<p>
+
+This is a self-hosting template with all source code; it is possible
+to compile the entire system inside of the template.  Look in the
+<tt>build/</tt> directory (inside the template) for source code.
+
+<p>
+
+The main addition to this release of TinyVZ is that it is now possible
+to use the relevant <tt>vzctl</tt> commands to add or remove an IP, set the
+machine's hostname, determine what nameservers to use, as well as
+setting user's passwords.  I had to add the Bash shell to do this; details
+below.
+
+<p>
+
+The tarball now contains the template's tarball inside of it, the
+relevant scripts used by vzctl, as well as an installation guide
+(README).
+
+<p>
+
+The system is for hard core UNIX/Linux gurus: The only editor is a
+miniature version of vi included with Busybox (actually, I also
+compiled in Busybox's version of the "ed" editor, for those who feel
+vi pampers the user too much); all configuration is done by editing
+text files.  You will need to compile your own mail server, SSH
+server, web server, or other desired server.
+
+<p>
+
+It can be downloaded here:
+
+<blockquote>
+<A href=http://samiam.org/TinyVZ/>http://samiam.org/TinyVZ/</A>
+</blockquote>
+
+<p>
+
+One discovery I made making TinyVZ 0.7 is that, for the OpenVZ tools
+to work, not only is it mandatory for the container to have the Bash
+shell, but also that /bin/sh has to be a symlink to Bash.  This is
+because the "vzctl" program prepends the contents of the Bash-only
+"<tt>/etc/vz/dists/scripts/functions</tt>" script to any script used by the
+container to configure the system, and there does not appear to be any
+way to configure a container to not use this Bash-only script.
+
+<p>
+
+Any OpenVZ template without <tt>/bin/sh</tt> as an alias for
+Bash can not be configured via the "<tt>vzctl</tt>" tools (nor the
+corresponding Proxmox/SolusVM/whatever tools that call "vzctl").
+
+<p>
+
+Since someone asked:  The actual deed of concatenating the Bash-only
+script with the distribution-specific script run by vzctl is done by
+the <tt>read_script()</tt> function in <tt>src/lib/script.c</tt> in the
+<tt>vzctl</tt> source code.  <tt>read_script()</tt> is, in
+turn, called by <tt>vps_exec_script()</tt> in <tt>src/lib/exec.c</tt>; 
+<tt>vps_exec_script()</tt> is called from several places.
+
+<p>
+
+The offending code has the name <tt>DIST_FUNC</tt> whenever it is used to
+specify the offending script in <tt>vps_exec_script()</tt>.  
+<tt>DIST_FUNC</tt> is specified in <tt>include/dist.h</tt>.
+
+<p>
+
+The code is spaghetti code; it took me hours to unravel all of this.
+
+<p>
+
+The real solution to this issue would be to replace <tt>DIST_FUNC</tt> with a
+parameter that can be controlled by the 
+<tt>/etc/vz/dists/${distname}.func</tt> configuration file.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

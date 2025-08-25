@@ -1,0 +1,133 @@
+<h1>On Civilization IV</h1>
+
+<h2>May 10, 2012</h2>
+
+I have begun work on Totestra, which is my modifications to a Civilization
+IV map script.  Civilization IV is a mid-2000s strategy video game; I
+finally purchased it because I now have a laptop that can run it smoothly.
+The map script is a Python program that generates a random Civilization
+IV map.
+
+<p>
+<div class=blogtitle>
+<b>Perfect World: The best map script</b>
+</div><br>
+
+Hands down the most popular map script for Civilization IV is
+<A href=http://members.socket.net/~ricardo/>Cephalo</A>'s "Perfect World"
+map script.  This script uses plate tectonics and weather modeling to 
+create a remarkably Earth-like random planet.  
+
+<p>
+
+The main disadvantage of this script is that it takes far longer to render
+a map of an imaginary world; people using mid-2000s CPU talked about it 
+taking 10 minutes to generate a Civilization IV map.  
+
+<p>
+
+This is less of an issue on a modern Sandy Bridge or Ivy Bridge processor;
+on my Core i5-2430M, it takes 30 seconds to a minute to render a map.
+
+<p>
+
+<p>
+<div class=blogtitle>
+<b>Totestra: My fork of Perfect World</b>
+</div><br>
+
+I like the script so much that I am beginning work on making some 
+modifications to it.  My goal with this fork is to address issues
+people have had with the script which Cephalo has never addressed. Unlike
+Cephalo, I feel basic settings should be changed from Civ4's menus instead
+of editing the script. I like having the knobs on the front instead of
+in the back of the unit.
+
+<p>
+
+It is currently possible to set the ocean level from inside of Civ4,
+but I have not bothered setting up climate parameters yet. It's also
+possible to use a fixed seed instead of a randomly chosen seed.
+
+<p>
+
+In addition, I have made it a tunable parameter how many islands the
+script has (it doesn't reduce the "grain" size but instead makes the
+height map larger which makes the grain relatively smaller), and began
+work on having it be possible for the script to make "quick and dirty"
+maps (rendering time appears to be the square of the heightmap size,
+so smaller height maps result in faster renders). This has not been
+extensively tested.
+
+<p>
+
+This script is currently derived from Cephalo's last (and probably
+final) release of PerfectWorld2.py (version 2.06), and currently does
+not incorporate any third party changes.
+
+<p>
+<div class=blogtitle>
+<b>Getting the script</b>
+</div><br>
+
+Totestra is available at <A href=../Civ4>http://samiam.org/Civ4/</A>.
+
+<p>
+
+To install the script, download then copy Totestra.py
+to the <tt>PublicMaps</tt> directory, which should be at
+<tt>/Users/</tt><i>yourname</i><tt>/Documents/My Games/Sid Meier's
+Civilization 4 Complete/PublicMaps</tt> or somewhere similar.
+
+<p>
+<div class=blogtitle>
+<b>Getting support</b>
+</div><br>
+
+Before filing a bug report or making a feature request, please keep in mind
+the following:
+
+<ul>
+
+<li>Make sure logging is enabled. In CivilizationIV.ini (this may be a 
+different file depending on the Civilization IV install being used),
+make sure LoggingEnabled = 1, RandLog = 1, and MessageLog = 1
+
+<p>
+<li>If you try and load the script and it gives you nothing but grassland,
+this means the script failed for some reason. Make sure to post the
+relevant lines of PythonDbg.log and PythonErr.log so we can try and
+figure out what's broken with your Civ IV install.
+
+<p>
+<li>I can not look at any reports of issues with strange looking maps,
+strange player placements, etc. unless I know the exact parameters that
+made the map in question. To get this information, look in PythonDbg.log
+for the map seed as well as the map parameters; post these parameters
+along with your bug report.
+
+<p>
+<li>I will probably not implement whatever pet feature you want to have
+implemented. You have the source and I don't think Cephalo will mind if
+you implement it yourself.
+
+<p>
+<li>All support requests or comments need to be posted at <A
+href=http://forums.civfanatics.com/showthread.php?t=461262
+>http://forums.civfanatics.com/showthread.php?t=461262</A>.
+Do not email me, or use any other contact method to discuss with me
+this map script.
+
+</ul>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

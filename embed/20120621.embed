@@ -1,0 +1,52 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS 1 End-of-life</h1>
+
+<h2>June 21, 2012</h2>
+
+<div class=blogtitle>
+<b>MaraDNS 1 end-of-life: June 21, 2015</b>
+</div><br>
+
+Ten years ago today, I released MaraDNS 1.0.  All things have a beginning
+and an end.  Today, I am announcing the end of life for MaraDNS 1.
+
+<p>
+
+Support for MaraDNS 1 will end three years from today, on June 21, 2015.
+To clarify for people who do not regularly read the MaraDNS blog or mailing
+list: MaraDNS 1 has only been supported for critical security bug fixes as of
+the beginning of this year.
+
+<P>
+
+People are encouraged to upgrade from MaraDNS 1 to MaraDNS 2.
+I understand that MaraDNS 2 does not support every single
+configuration MaraDNS 1 supports.  My plan was originally
+to have MaraDNS 2 be more compatible with MaraDNS 1,
+and come out with a MaraDNS 3 release that would have been
+completely compatible but then open source economics kicked in and <A
+href=old-200910-grow_up.html>I
+realized I could no longer do professional quality software development
+"for fun and for free"</A>.
+
+<p>
+
+<div class=blogtitle>
+<b>Work plans for June</b>
+</div><br>
+
+Things are really busy with my day job right now.  I hope to be able to
+put aside a little time for MaraDNS baby sitting this weekend.
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

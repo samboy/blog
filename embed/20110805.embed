@@ -1,0 +1,51 @@
+<h1>MaraDNS 2.0.03 released</h1>
+
+<h2>August 5, 2011</h2>
+
+I have released MaraDNS 2.0.03 today.
+
+This incorporates six months' worth of bugfixes; read 
+<A href=http://maradns.org/changelog.html>the changelog</A>
+for details.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download.html>http://www.maradns.org/download.html</A>
+</blockquote>
+
+Now that I have released MaraDNS 2.0.03 (as well as the companion
+Deadwood 3.0.03), I am going to phase back how much unpaid support I
+give MaraDNS.  Instead of working on MaraDNS once every two weeks
+without compensation, I will now work on MaraDNS once a month.  Since
+today is August 5, my next scheduled day for unpaid MaraDNS work is
+going to be a month from today: Monday, September 5.  The only
+exceptions to this will be the occasional comment on the mailing
+list, or any work needed to fix a critical security problem with
+MaraDNS.
+
+<p>
+
+That said, since JFC Morfin has very generously contributed to the
+MaraDNS cause every month, I plan on doing the following work with
+MaraDNS before September 5:
+
+<ul>
+<li> I will write up an essay on how to compile the older 1.4 branch of
+MaraDNS and post it here on the mailing list.
+
+<li> I will make sure "make install" does the right thing in Ubuntu 10.04
+(their most recent long-term-support release), albeit in /usr/local
+</ul>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

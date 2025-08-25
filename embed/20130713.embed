@@ -1,0 +1,66 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>UltraDNS vs. Deadwood</h1>
+<h2>July 13, 2013</h2>
+UltraDNS sometimes adds upper-case letters to their replies.
+These host names were unable to resolve in Deadwood;
+I have updated Deadwood to have these names resolve.
+
+<p>
+
+<A name=Deadwood_update></A><A name=Deadwoodupdate></A><span class=moyet>==</span><span class=blogtitle><b>Deadwood update</b></span><span class=moyet>==</span>
+
+<p>
+
+www.getcafecup.com did not resolve in Deadwood because UltraDNS, in
+their custom DNS server, decided to add upper-case in a reply from
+their server:
+
+<p>
+
+<tt>$ askmara Awww.getcafecup.com. 204.74.108.1</tt><br>
+<tt><font color=#008700># Question: Awww.getcafecup.com.</font></tt><br>
+<tt>WWW.getcafecup.com. +7200 a 216.242.93.163</tt><br>
+
+<p>
+
+Observe how the “www” becomes “WWW”.  This is, as pointed out in the
+<a href="http://tools.ietf.org/html/draft-vixie-dnsext-dns0x20-00">0x20 hack document</a>,
+unusual behavior.  Not only does this break resolution in Deadwood (until
+today, anyway), it also results in bigger DNS packets (they do not compress 
+quite as well).
+
+<p>
+
+To work around this behavior, I have had to 
+<a href="http://maradns.org/deadwood/browse-source/head/update/3.2.04/deadwood-3.2.03-www.getcafecup.com.patch">patch Deadwood</a> 
+to ignore case when deciding whether a DNS label is the same.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://www.maradns.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+This is another out-of-band update.  When Deadwood doesn’t resolve a domain
+on the Internet that other DNS servers can resolve, I usually patch 
+Deadwood until it can resolve the name in question.
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

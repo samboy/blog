@@ -1,0 +1,90 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS support update</h1>
+<h2>December 19, 2021</h2>
+I discuss a change in MaraDNS’s support policy in this blog.  Also,
+I discuss another of the top 5 1980s songs on YouTube.
+
+<p>
+
+<A name=MaraDNS_Bug_reports_removed></A><A name=MaraDNSBugreportsremoved></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS: Bug reports removed</b></span><span class=moyet>==</span>
+
+<p>
+
+Back in the mid-2010s, GitHub bug reports were a gold mine of clueful
+bug reports.  The bug reports had full descriptions, sometimes
+scripts to reproduce the bugs, and were very helpful with improving
+MaraDNS.  Something changed in 2019: Instead of getting useful bug
+reports, I started getting support requests disguised as bug reports.
+One user became so hostile with me after I made it clear bug reports
+are not for support, I had to delete the entire support thread.
+
+<p>
+
+All of this, despite me telling users not to use support requests for 
+bug reports as a pinned bug report.
+
+<p>
+
+That in mind, since I haven’t gotten a <i>useful</i> bug report for
+nearly three years, I have removed the “issue” tab from MaraDNS’s GitHub
+repo.  To file a bug report, go to the 
+<a href="https://github.com/samboy/MaraDNS/discussions/102">bug report thread</a>
+on GitHub.
+
+<p>
+
+<A name=3_Sweet_Child_O_Mine></A><A name=3SweetChildOMine></A><span class=moyet>==</span><span class=blogtitle><b>#3: Sweet Child O’ Mine</b></span><span class=moyet>==</span>
+
+<p>
+
+<i>This continues my series on 1980s songs which are popular on 
+YouTube. <a href="2021-11-07.html">My last posting on this topic was
+a month ago</a>.</i>
+
+<p>
+
+The third most popular 1980s song is Guns N’ Roses’s song
+<a href="https://www.youtube.com/watch?v=1w7OgIMMRc4">Sweet Child O’ Mine</a>,
+with 1,304,342,951 YouTube views as I type this.
+
+<p>
+
+Guns N’ Roses was the first really popular act in the 1980s which bucked
+the trend of synth-heavy music which dominated the 1980s.  The synth heavy
+trend even affected traditional rock bands: As just one example, after 
+many years of floundering, the band Heart finally stopped making classic
+rock and instead made the synth heavy album <i>Heart</i> in 1985, which
+gave Heart their first #1 hit, “These Dreams”, and went 5x platinum.
+The sound of <i>Heart</i> differs from their classic hits 
+to the point my daughter is convinced it is not the same band which
+gave us both their 1975 classic rock song “Magic Man” and their mid-1980s
+hits “These Dreams” and “Never”.
+
+<p>
+
+Guns N’ Roses, on the other hand, was convinced you could make a Rock
+and Roll hit again without relying on synthesizers.  And, indeed, there
+is not a single synthesizer in this entire song, and yet it hit #1
+back in 1988 and, to this day, is the third most popular 1980s song
+on YouTube.
+
+<p>
+
+This song paved the way for Nirvana to start having mainstream hits,
+followed by the entire 1990s “grunge” movement.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

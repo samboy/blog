@@ -1,0 +1,122 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Ukraine.png width=224 height=126>
+</div>
+
+<h1>MaraDNS updates &amp; more</h1>
+<h2>March 29, 2022</h2>
+I discuss the Ukraine invasion, some minor updates I have been making
+for MaraDNS, why I don’t like 5G, and Will Smith’s now world-famous
+slap at the Oscars last night.
+
+<p>
+
+<A name=The_Ukraine_invasion></A><A name=TheUkraineinvasion></A><span class=moyet>==</span><span class=blogtitle><b>The Ukraine invasion</b></span><span class=moyet>==</span>
+
+<p>
+
+Putin’s invasion of Ukraine is a brazen power grab trying to use blunt
+force to conquer a sovereign nation.  I agree with Biden: It is a war 
+crime.  This inhuman invasion must stop.
+
+<p>
+
+I have been following World Chess Champion #13 Kasparov’s Twitter feed,
+because, as a Russian who lived under Soviet oppression, Kasparov has an
+excellent perspective of Putin’s actions:
+
+<p>
+
+<blockquote>
+<A href="https://twitter.com/Kasparov63">https://twitter.com/Kasparov63</A>
+</blockquote>
+
+<A name=MaraDNS_updates></A><A name=MaraDNSupdates></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS updates</b></span><span class=moyet>==</span>
+
+<p>
+
+I have been, based on user feedback, making some minor updates
+to MaraDNS:
+
+<p>
+
+<ul>
+<li> An incomplete last line in the <tt>dwood3rc.txt</tt> file is no longer
+  fatal if running Deadwood in Windows (still fatal in *NIX clones).
+<li> Document how to have CAA records in MaraDNS.
+<li> Fix a minor issue with example SPF records in MaraDNS’s documentation.
+</ul>
+
+<p>
+
+These changes are all pretty minor, and do not merit an updated release,
+but I have recompiled Deadwood for Windows with the incomplete last line
+change and updated the web page with MaraDNS documentation.
+
+<p>
+
+The snapshot of MaraDNS can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+</blockquote>
+
+<A name=5G_is_harmful></A><A name=5Gisharmful></A><span class=moyet>==</span><span class=blogtitle><b>5G is harmful</b></span><span class=moyet>==</span>
+
+<p>
+
+I consider 5G harmful.  Not because of the alleged health risks of
+5G radio waves which I think is a bunch of bull.  But because, in 
+the name of upgrading to 5G, US cell carriers are in the process
+of decommissioning their 3G networks.  I had multiple 3G cell
+phones, including one only four years old, which is now a
+paperweight because the cell phone carriers have decided they
+can make more profit selling the “new improved 5G experience”
+while forcing those of us who still have 3G cellphones to buy
+a new cellphone I didn’t want to buy just so that I can have
+the same functionality my previous cell phone had.
+
+<p>
+
+While it makes business sense to force people to buy phones
+they really do not need, it makes no sense for the environment
+to have a network upgrade convert perfectly good cell phones
+in to landfill.
+
+<p>
+
+<A name=Will_Smith_at_the_Oscars></A><A name=WillSmithattheOscars></A><span class=moyet>==</span><span class=blogtitle><b>Will Smith at the Oscars</b></span><span class=moyet>==</span>
+
+<p>
+
+For context, this is about Will Smith slapping Chris Rock last night
+at the Oscars.  Since everyone is talking about it, I may as well
+chime in with my two cents.
+
+<p>
+
+I think the best moment in this entire Will Smith affair at the Oscars
+is how Denzel Washington and Tyler Perry walked up to Will Smith and
+defused the situation with Smith. I don’t think they were enabling bad
+behavior, but reacting to a very inappropriate action with empathy
+and compassion.
+
+<p>
+
+Then again, Tyler Perry starred in and directed my favorite movie:
+“Why did I get Married”. Yes, I love romcoms, especially realistic
+romcoms where the characters actually believe in God.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

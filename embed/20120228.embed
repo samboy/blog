@@ -1,0 +1,36 @@
+<h1>Deadwood update</h1>
+
+<h2>February 28, 2012</h2>
+
+Today's update of Deadwood only updates the documentation:
+
+<ul>
+<li>I make it clear that it's important to adjust the cache size if
+    there are a lot of root_servers and upstream_servers elements.
+<li>I have split up the description of how Deadwood does recursion in
+    to sections.
+</ul>
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+Or, more simply, just look at the updated documents:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/doc/>http://www.maradns.org/deadwood/doc/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

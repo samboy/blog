@@ -1,0 +1,166 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/graph-2020-05.jpg width=224 height=126>
+</div>
+
+<h1>May update</h1>
+<h2>May 11, 2020</h2>
+Some updates for May of 2020.
+
+<p>
+
+<A name=COVID19_in_San_Diego></A><A name=COVID19inSanDiego></A><span class=moyet>==</span><span class=blogtitle><b>COVID-19 in San Diego</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/SAN-COVID-2020-05-11.png" alt="">
+<br class=nomobile>
+<i>COVID-19’s doubling time in San Diego</i>
+<p>
+
+<p>
+
+In San Diego, the lockdown has been fairly effective: We have decreased 
+the doubling time (the number of days it takes for the number of COVID-19
+cases to double) from four days to 20 days.  <i>However</i>, we still
+have exponential growth in San Diego: The virus is still spreading, 
+and current growth figures means it will take between three to five
+months for pretty much everyone in San Diego to be exposed to the
+virus.
+
+<p>
+
+In the above chart, blue is calculated doubling time, based on the
+average growth over the previous seven days (since there are weekly
+fluctuations in growth, we need a seven-day average to show accurate
+growth).  Orange is the actual doubling time, based on how many days
+ago we had half the current number of cases.
+
+<p>
+
+As we can see, the calculated and actual doubling time agree that
+we’re seeing the number of cases double in just under 20 days.
+
+<p>
+
+Since we still don’t really know how many people actually have
+COVID-19, we don’t know how long it will take for the number
+of cases to saturate.  We know, based on entire populations 
+which have been tested (the crew of the USS Theodore Roosevelt and
+what not), that there is a high number of <i>asymptomatic</i> cases:
+Cases where someone does not develop any symptoms at all, and is not
+even aware they have the virus which cases COVID-19.
+
+<p>
+
+I estimate, based on antibody studies, that about 1.5% of the population
+of San Diego already have the COVID-19 virus, so we will have full
+exposure after six doublings, or in four months.  I estimate that about 
+10,000 people will end up dying from COVID-19 in San Diego.
+
+<p>
+
+What the social isolation has given us is a little time to prepare 
+hospitals for the coming storm.  A cure will take over a year; this 
+just lets us reduce fatalities by not overwhelming our medical 
+facilities. 
+
+<p>
+
+Since COVID-19 is such a new disease, the amount of scientific
+information we have about it is small, so these figures are very rough
+guesses, and are probably quite inaccurate.
+
+<p>
+
+Speaking of the virus, toilet paper has <i>finally</i> come back to
+store shelves down here in San Diego last weekend.  Life is nowhere
+near back to normal—there are still lines to enter stores, wearing a mask
+is mandatory, and other social distancing measures are in place—but 
+almost all essential supplies are available again.  And, yes, since I
+buy TP in bulk at CostCo when it’s on sale, I was never close to
+running out.
+
+<p>
+
+<A name=Nexuiz_Tiny_updated></A><A name=NexuizTinyupdated></A><span class=moyet>==</span><span class=blogtitle><b>Nexuiz Tiny updated</b></span><span class=moyet>==</span>
+
+<p>
+
+I have been working on 
+<a href="https://github.com/samboy/nexuiz-tiny">Nexuiz Tiny</a>.  This is a small
+version of an open source Unreal Tournament / Quake III Areana clone.
+In this game, one is in an arena (there are thousands of different arenas
+of various sizes out there that are compatible with or can be converted
+in to an arena for this game), fighting one or more opponents to the
+death with various weapons.  Every time an opponent is killed, the
+killer scores a “frag” and the vanquished player is resurrected.
+After a few minutes (traditionally, 10 minutes, but I prefer a quick
+3-minute match), the player with the most “frags” wins.
+
+<p>
+
+The game can be played over the network with other people, but the
+game also includes bots which make for a satisfying single player
+game.
+
+<p>
+
+This game is a minimalist version of an old open source game called
+“Nexuiz”; this version only includes seven small arena maps which
+run well on pretty much anything.  The seven maps have even been tested
+on a 2007 business laptop with very basic Intel graphics acceleration.
+Nexuiz is no longer developed, but its direct successor,
+<a href="https://github.com/xonotic/xonotic">Xonotic</a>, is still actively
+updated.
+
+<p>
+
+Indeed, my fork of Nexuiz includes a conversion of a popular third party
+map made for Xonotic, as well as the corresponding textures and music.
+
+<p>
+
+Nexuiz Tiny can be downloaded from 
+<a href="https://sourceforge.net/projects/nexuiz-tiny/files/2020-05-07/">Sourceforge</a>.
+
+<p>
+
+<A name=MaraDNS_update></A><A name=MaraDNSupdate></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS update</b></span><span class=moyet>==</span>
+
+<p>
+
+Right now, I am working on making a proper Docker container for 
+<a href="https://maradns.samiam.org/">MaraDNS</a>,
+so people can download and use MaraDNS without needing to set up 
+an operating system that can support it.  While I have no plans to stop
+making my Windows binary of MaraDNS, this will allow people to more 
+easily download and use this program.
+
+<p>
+
+<i>2020-05-13 update: I have made an 
+<a href="https://samiam.org/blog/pics/COVID19-2020-04-12.txt">ASCII version</a> 
+of this graph for Lynx users</i>
+
+<p>
+
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,126 @@
+<h1>Round Up</h1>
+
+<h2>December 17, 2011</h2>
+
+In today's blog entry, I discuss SOPA, a bug in MaraDNS, revising
+my web design for older IE releases, and a <A href=
+http://css3pie.com>css3pie</A> issue.
+
+<p>
+
+<div class=blogtitle>
+<b>My thoughts on SOPA</b>
+</div><br>
+
+I have been seeing a lot of noise on the Internet about the problems
+with the proposed Stop Onine Piracy Act (SOPA).  I have to question
+the motives of a lot of people who are against this act.
+
+<p>
+
+For anyone reading this blog who is against SOPA, let me ask you this:
+<i>Do you feel piracy is stealing?</i>
+
+<p>
+
+Personally, I don't think piracy is stealing under all circumstances.
+For example, if one has the CDs to an older game, and the game isn't
+available to purchase in a version that doesn't require the CD, I think
+it is fair for someone to download a version of the game to play it
+on their computer without a CD drive, as long as they buy the game when
+and if it becomes legally available in a no-CD version.
+
+<p>
+
+There can very well be first amendment issues with the SOPA as it is
+currently worded.  But, I wonder if such issues are being blown out
+of proportion by people who really just want to continue downloading
+digital media without compensating the content creators for their
+hard work.
+
+<p>
+
+<div class=blogtitle>
+<b>A bug in MaraDNS</b>
+</div><br>
+
+Deadwood, MaraDNS' recursive resolver, has a bug where it will take
+too much time to process a large configuration file with a lot
+of entries.  
+
+<p>
+
+The issue is in <A 
+href=http://maradns.org/deadwood/browse-source/deadwood-3.0.05/src/DwDict.c>DwDict.c</A>.
+In technical detail, <tt>dwd_nextkey()</tt> does not use the hash function 
+<tt>dwh_hash_compress()</tt> (in <A
+href=http://maradns.org/deadwood/browse-source/deadwood-3.0.05/src/DwHash.c>DwHash.c</A>)
+to find the right hash bucket, but instead performs a slow traversal of the
+hash buckets.
+
+<p>
+
+<div class=blogtitle>
+<b>Revising the design for older IE releases</b>
+</div><br>
+
+Even though Internet Explorer 6 (IE6) holdouts only account for 2.5% or so
+of visitors to my web site, I went to a lot of trouble last night
+making sure that IE6 users will see the pretty clouds and my face at
+the top of my web pages instead of the grey background they were
+getting.  
+
+<p>
+
+To pull it off, I had to make another version of the image at the top.
+There are now three versions of this image:
+
+<ul>
+<li>A version of the image with the clouds, the "Sam Trenholme's page"
+text, and my picture in the corner for IE6 users.
+<li>A version of the image with just the clouds and my picture for IE7 and
+IE8 users.  The "Sam Trenholme's page" text is another image.
+<li>A version of the image with just the clouds for IE9 and other modern 
+browsers with current CSS support.  My picture and the "Sam Trenholme's page" 
+text are separate images.
+</ul>
+
+I will probably continue to support IE6 in my web page designs 
+until early 2014, when Microsoft <i>finally</i> pulls the plug on
+Windows XP.
+
+<p>
+
+<div class=blogtitle>
+<b>css3pie issues</b>
+</div><br>
+
+I <A href=20111216.html>mentioned yesterday</A> the one issue 
+<A href=http://css3pie.com>css3pie</A> has is that it slows
+down page loading on netbooks.  Another issue is that it does
+not correctly zoom background images.
+
+<p>
+
+I was able to kill two birds with one stone:
+My workaround is to not use css3pie for the background image of the
+clouds at the top; this is where the slowdown was most visible and
+where css3pie's zoom bug was an issue.  Instead, the top of the
+page has square corners and uses the IE7 version of the top image.
+
+<p>
+
+I also made the gradient background for the link bar a tileable version
+for IE8 so it doesn't look too bad when zoomed while having the css3pie
+curved corners.  
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

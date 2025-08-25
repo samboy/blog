@@ -1,0 +1,144 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/nexuiz.jpg width=224 height=126>
+</div>
+
+<h1>Nexuiz: Beer and pretzels</h1>
+<h2>January 29, 2022</h2>
+While there are a number of free and open source first person shooter
+games out there, Nexuiz is still my favorite one.
+
+<p>
+
+<A name=Beer_and_Pretzels></A><A name=BeerandPretzels></A><span class=moyet>==</span><span class=blogtitle><b>Beer and Pretzels</b></span><span class=moyet>==</span>
+
+<p>
+
+A “beer and pretzels” game is a game which can be played and enjoyed
+by casual gamers without devoting too much time to learning the rules.
+An example “Beer and pretzels” game is <i>Axis and Allies</i>, whose rules
+were far simpler than most Avalon Hill or SSI games from the same era,
+and is one of the few board wargames still published today.
+
+<p>
+
+Other “beer and pretzels” games include <i>Risk</i> and 
+<i>Monopoly</i>.  Simple rules, not as deep as other games, but very 
+fun casual games.
+
+<p>
+
+Contrast “beer and pretzels” games with games which have very complex
+rules, and significant cult followings.  Back in the day, we bought
+both <i>Wizard’s Quest</i> and <i>Magic Realm</i> to play.  We
+found <i>Wizard’s Quest</i>, a simple Risk-like game, a lot more
+fun than <i>Magic Realm</i>, whose rules are far too complex for
+a casual game.  It is, however, <i>Magic Realm</i> which developed
+a devoted following: <i>Magic Realm</i> games go for hundreds of dollars
+on eBay, while <i>Wizard’s Quest</i> sets can be had for around $25.
+
+<p>
+
+<A name=First_person_shooters></A><A name=Firstpersonshooters></A><span class=moyet>==</span><span class=blogtitle><b>First person shooters</b></span><span class=moyet>==</span>
+
+<p>
+
+A “first person shooter” game is a game using three dimensional 
+graphics where one is the hero of a game with the goal of shooting
+as many enemies as possible.  
+
+<p>
+
+Famous examples include <i>Doom</i>, <i>Quake</i>, and the 
+<i>Call of Duty</i> series of games.
+
+<p>
+
+<A name=Open_source_first_person_shooters></A><A name=Opensourcefirstpersonshooters></A><span class=moyet>==</span><span class=blogtitle><b>Open source first person shooters</b></span><span class=moyet>==</span>
+
+<p>
+
+There have been a number of open source first person shooters
+released over the years, including 
+<a href="https://warsow.net/">Warsow</a>, 
+<a href="http://cubeengine.com/cube.php4">Cube</a>, 
+<a href="http://openarena.ws">Open Arena</a>,
+<a href="https://xonotic.org/">Xonotic</a>, a successor to Nexuiz,
+and
+<a href="https://freedoom.github.io/">Freedoom</a>.
+
+<p>
+
+Some of these games come off as clones of other games: While both are
+excellent games, Open Arena is a poor man’s Quake3, and Freedoom is a
+poor man’s Doom.  Other games are incredibly complicated games in the
+vein of <i>Magic Realm</i>: While all very good games for their devoted
+fans, Warsow and Xonotic are in this category, and Cube appears to be
+there too based on what I have read online.
+
+<p>
+
+<A name=Nexuiz></A><A name=Nexuiz></A><span class=moyet>==</span><span class=blogtitle><b>Nexuiz</b></span><span class=moyet>==</span>
+
+<p>
+
+This leads us to Nexuiz, pronounced (Nex-ee-is).  Nexuiz was released
+between 2005 and 2009 as a simple open-source first person shooter in
+the vein of Unreal Tournament.  It is a simple enough game to learn and
+become good at, not having the complicated trick jumps and other complex
+moves Xonotic and Warsow have.  With the bots, it’s fairly quick to
+become proficient at Nexuiz and have a fun casual game.
+
+<p>
+
+It’s a game simple enough to make for a fun LAN party game, where
+people who have never played the game before can still have a lot of
+fun playing it without having to overcome a steep learning curve.
+
+<p>
+
+Since the game is from the first 2000s decade, it plays well even on
+low end hardware; I have no problem getting over 100 frames per second
+on a $133 computer I got a couple of years ago.
+
+<p>
+
+The only issue with its game mechanics is that the rocket launcher 
+was an overpowered weapon.
+
+<p>
+
+I have made a tiny 50-megabyte remix of Nexuiz with seven quality
+1-on-1 (Duel) maps, including an Xonotic map converted back in
+to a fun Nexuiz map, a Nexuiz adaptation of the classic 
+<a href="https://lvlworld.com/review/id:1717">Hubster Remix II of Aerowalk</a>,
+and five maps from Nexuiz 2.3.  This version has a weaker rocket
+launcher, and each map has been updated to include all weapons.
+
+<p>
+
+It is available for download here:
+
+<p>
+
+<blockquote>
+<A href="https://sourceforge.net/projects/nexuiz-tiny">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>nexuiz-<![if gt IE 6]>&#8203;<![endif]><wbr>tiny</A>
+</blockquote>
+
+This is my favorite first person shooter; it’s open source, it has
+simple rules, and it’s a fun little game to play.
+
+<p>
+
+<i>As an aside, <a href="https://news.ycombinator.com/item?id=5848387">I am not
+the only one to prefer Nexuiz over Xonotic</a></i>.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

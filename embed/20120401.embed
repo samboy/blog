@@ -1,0 +1,91 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS now has funding</h1>
+
+<h2>April 1, 2012</h2>
+
+In today's blog entry (for April 1, 2012), I discuss MaraDNS' funding and
+my development plans.
+
+<p>
+<div class=blogtitle>
+<b>MaraDNS now has funding</b>
+</div><br>
+
+I am very pleased to let the community of MaraDNS users know that I 
+have gotten a $1,048,576 USD grant from an anonymous donor.  In light
+of this, I will be able to implement some features I have been meaning
+to implement in MaraDNS.
+
+<p>
+<div class=blogtitle>
+<b>DNSSEC and DNSCurve</b>
+</div><br>
+
+First of all, this funding will give me a chance to fully implement
+DNSSEC and DNSCurve.  Due to the amount of code that needs to 
+be written, I will hire Dan Kaminsky to help me implement the
+DNSSEC code, as well has contracting Daniel J. Bernstein to write
+the DNSCurve code.
+
+<p>
+
+The code will be in separate modules and I hope it will be possible
+to compile MaraDNS and Deadwood with both DNSSEC and DNSCurve support
+at the same time; this is a logistical issue we will work out.
+
+<p>
+<div class=blogtitle>
+<b>Random number generator</b>
+</div><br>
+
+In addition to contracting Daniel J. Bernstein to write the DNSCurve
+code, I will also bring in Guido Bertoni, Joan Daemen, Michael Peeters,
+and Gilles Van Assche who will work with Bernstein in implementing a
+high-speed cryptographic block cipher with a 1024-bit block size on
+32-bit platforms, a 2048-bit block size on 64-bit platforms, a 4096-bit
+block size on 128-bit platforms, as well as a 1152-bit block size on
+36-bit platforms for our substantial number of users who run MaraDNS
+and Deadwood on PDP-10s.
+
+<p>
+
+This block cipher primitive will be used in a sponge mode of operation
+as a pseudo-random number generator for Deadwood.
+
+<p>
+
+We will also research making a hash compression primitive for 32-bit,
+36-bit, 64-bit, and 128-bit platforms which is both very fast and 
+cryptographically secure from collisions as long as our attacker doesn't
+know the primitive's randomly generated secret number.
+
+<p>
+<div class=blogtitle>
+<b>Other plans</b>
+</div><br>
+
+I was hoping to be able to implement a 20nm 128-bit version of the 6502
+processor with memory management and protected mode, as well as a 
+series of op codes to make processing DNS packets faster (such as
+FINDDNSLABEL).  Unfortunately, my anonymous donor will not give me
+the $5 billion grant needed to implement this processor until our
+team successfully implements DNSSEC, DNSCurve, as well as the
+large-block-size cipher, not to mention the secure hash compressor.
+
+<p>
+
+This should all be done within a year, and I will then be able to get
+a larger grant.  I will let people know what that grant will let us do
+a year from today, on Monday, April 1, 2013.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

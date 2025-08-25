@@ -1,0 +1,99 @@
+<div class=blogpic>
+<img src=pics/pitfall.jpg width=160 height=120>
+</div>
+
+<h1>Pitfall’s polynomial</h1>
+<h2>June 12, 2013</h2>
+In this blog, I continue looking at Pitfall's random number generator.
+This continues a series with
+<a href="http://samiam.org/blog/20130606.html">two</a>
+<a href="http://samiam.org/blog/20130608.html">previous</a>
+blog entries.
+
+<p>
+
+<A name=Implementing_an_LFSR_in_6502></A><A name=ImplementinganLFSRin6502></A><span class=moyet>==</span><span class=blogtitle><b>Implementing an LFSR in 6502</b></span><span class=moyet>==</span>
+
+<p>
+
+Here is one way of implementing a
+<a href="http://samiam.org/blog/20130608.html">LFSR</a> in 6502 and c:
+
+<p>
+
+<tt>uint8_t lfsr_1(uint8_t r) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>uint8_t a, c, t;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a = r; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// LDA r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &amp; 1; a &gt;&gt;= 1; <font color=#008700>// LSR; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a: r &gt;&gt; 1</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &amp; 1; a &gt;&gt;= 1; <font color=#008700>// LSR; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a: r &gt;&gt; 2</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a ^= r; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// EOR r; a: r &gt;&gt; 2 ^ r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &amp; 1; a &gt;&gt;= 1; <font color=#008700>// LSR; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a: r &gt;&gt; 3 ^ r &gt;&gt; 1</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a ^= r; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// EOR r; a: r &gt;&gt; 3 ^ r &gt;&gt; 2 ^ r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &amp; 1; a &gt;&gt;= 1; <font color=#008700>// LSR; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a: r &gt;&gt; 4 ^ r &gt;&gt; 2 ^ r &gt;&gt; 1</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a ^= r; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// EOR r; a: r &gt;&gt; 4 ^ r &gt;&gt; 2 ^ r &gt;&gt; 1 ^ r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &amp; 1; a &gt;&gt;= 1; <font color=#008700>// LSR; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a: r &gt;&gt; 5 ^ r &gt;&gt; 3 ^ r &gt;&gt; 2 ^ r &gt;&gt; 1</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &amp; 1; a &gt;&gt;= 1; <font color=#008700>// LSR; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a: r &gt;&gt; 6 ^ r &gt;&gt; 4 ^ r &gt;&gt; 3 ^ r &gt;&gt; 2</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &amp; 1; a &gt;&gt;= 1; <font color=#008700>// LSR; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a: r &gt;&gt; 7 ^ r &gt;&gt; 5 ^ r &gt;&gt; 4 ^ r &gt;&gt; 3</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &amp; 1; a &gt;&gt;= 1; <font color=#008700>// LSR; c: (r &gt;&gt; 7 ^ r &gt;&gt; 5 ^ r &gt;&gt; 4 ^ r &gt;&gt; 3) &amp; 1</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>t = r; r &lt;&lt;= 1; r |= (c &amp; 1); c = t &gt;&gt; 7; <font color=#008700>// ROL r; r &lt;&lt;=1; r |= c;</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return r;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+
+<p>
+
+The 6502 above is a bit confusing to follow because our code is
+affecting both the 8-bit accumulator (“a”) and a 1-bit carry flag (“c”).
+Until the final LSR, the accumulator is the variable affecting the final
+result; the final LSR is there to store the low bit of the accumulator
+in the carry flag.  The subsequent “ROL r” operation shifts “r” one
+bit to the left, setting the low bit to the value of the carry flag.
+
+<p>
+
+Here is easier to follow equivalent code:
+
+<p>
+
+<tt>uint8_t lfsr_2(uint8_t random) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>uint8_t t; <font color=#008700>// temp</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>t = (random &gt;&gt; 7) ^ (random &gt;&gt; 5) ^ (random &gt;&gt; 4) ^ (random &gt;&gt; 3);</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>random &lt;&lt;= 1;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>random |= t &amp; 1;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return random;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+When you need to store an entire game in 4,096 bytes, it is very
+important to make code as compact as possible.  The above 6502 takes
+18 bytes of code to render (“LDA r”, “EOR r”, and “ROL r” take two
+bytes; “LSR” uses one byte).  Is there a way to make it smaller?
+
+<p>
+
+<A name=More_to_come></A><A name=Moretocome></A><span class=moyet>==</span><span class=blogtitle><b>More to come</b></span><span class=moyet>==</span>
+
+<p>
+
+In a 
+<a href="http://samiam.org/blog/20130616.html">future blog entry</a>, 
+we will look at how to make the above code
+even smaller, and look at the code used in the actual Pitfall game.
+
+<p>
+
+<i>Edit: The code I posted had an error (fixed June 16, 2013)</i>
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

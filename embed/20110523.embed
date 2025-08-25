@@ -1,0 +1,69 @@
+<!--{TAGS:G}-->
+<div class=blogpic>
+<img src=pics/AMD-T40E.jpg width=160 height=120>
+</div>
+
+<h1>T40E: Atom killer</h1>
+
+<h2>May 23, 2011</h2>
+
+AMD has just released two new chips: The single-core T40R and dual-core T40E.  
+These chips, <A 
+href=http://www.pclaunches.com/processors/amd_embedded_gseries_t40e_and_t40r_apus_launched.php>looking
+at their specs</A>, are nearly identical to the C-30 and C-50 chips currently
+on the market.  The only difference is that they have a lower TDP--they
+use less energy (and generate less heat) to generate the same amount of
+computing performance.
+
+<p>
+
+Indeed, the dual-core T40E has identical specs to the C-50: 1.0 ghz clock
+speed, a 512kb cache for each core, and an included 6250 GPU which can
+perform both 3D graphics rendering and numerical calculations.
+
+<p>
+
+Unlike the C-50 (9W TDP), the T40E had a TDP of only 6.4W.  This is less
+than the 6.5W that the Atom N455 uses, and much less than the 
+N550/N570 (8.5W).
+
+<p>
+
+Assuming this chip has the same performance as the C-50, we can use <A 
+href=http://www.netbooklive.com/asus-1015b-eee-pc-review-9302/>this
+excellent netbooklive article</A> to get a good idea of how it
+performs; we can also look at the 
+<A href=http://cpubenchmark.net/cpu_list.php>C-50's
+Passmark score</A>.  To summarize: Faster CPU performance (Passmark
+460) than the N455 (PM of 317), but slower than the N550 (PM 561) or N570
+(PM 645); faster <A 
+href=http://www.videocardbenchmark.net/gpu_list.php>GPU performance</A> (PM of 
+198) than the Atom chips (PM of 69), even if the system has an ION chip
+(PM of 118).  
+
+<p>
+
+In other words, the T40E, using the same amount of power as an Atom N455, 
+has superior CPU performance (comparable to the N550) and far superior gaming
+(GPU) performance.
+
+<p>
+
+The AMD T40E is an Atom killer.  Intel has to significantly increase 
+performance when they release their Cedar Trail chips or they will lose the
+Netbook market to AMD.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing).  Supplied image showing
+T40E design courtesy AMD.</i>
+
+<p>
+
+Related: <A href=20110426.html>E-350 redux</A> <A href=20110422.html>E-350
+overview</A> <p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

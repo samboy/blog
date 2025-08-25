@@ -1,0 +1,67 @@
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Thursday election prediction</h1>
+
+<h2>October 18, 2012</h2>
+
+In tonight's prediction, I am using NerdWallet's numbers from today.  This
+is otherwise very similar to <A href=20121017.html>yesterday's blog</A>.
+
+<p>
+<div class=blogtitle>
+<b>No correlation between states</b>
+</div><br>
+
+Assuming there is no correlation between the states, NerdWallet gives the
+following numbers.  In other words, I am assuming that Obama getting
+Ohio does not affect his chances of getting Florida, and vice-versa.
+
+<pre>
+<b>Overall</b>
+Romney   32.4%
+Tie       1.2%
+Obama    66.4%
+</pre>
+
+<A name=state> </A>
+<p>
+<div class=blogtitle>
+<b>The big three: Florida, Virginia, and Ohio</b>
+</div><br>
+
+I have looked at how Romney's victory or loss in these three states affects
+the election results based on Nerd Wallet's numbers:
+
+<pre>
+<b>Obama gets OH</b>
+Romney   20.88%
+Tie      0.73%
+Obama    78.38%
+<b>Romney gets OH</b>
+Romney   50.52%
+Tie      1.98%
+Obama    47.50%
+
+<b>Obama gets FL</b>
+Romney   6.23%
+Tie      0.74%
+Obama    93.04%
+<b>Romney gets FL</b>
+Romney   46.91%
+Tie      1.46%
+Obama    51.63%
+</pre>
+
+As before, there are few paths to victory for Romney if Obama gets Florida.
+Romney's chances decrease by over 10% if Obama gets either Ohio or Virginia.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

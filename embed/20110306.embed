@@ -1,0 +1,33 @@
+<h1>Automating the blog</h1>
+<h2>March 6, 2011</h2>
+
+I am in the process of updating the blog.  I am still keeping the files
+as flat files; this saves me from having
+to deal with annoyances like the webpage going down if the SQA server
+dies, and results in faster performance (all the web server has to do is
+fetch the HTML file from disk and give it to the user).
+
+<p>
+
+However, I spent yesterday writing scripts that update the blog indexes
+which I run every time I make a blog entry.  I have a <A 
+href=summarize.pl>Perl script</A> which converts one or more blog
+entries in to one line pipe-separated summaries.  I have another
+<A href=convert.blog.index>another script</A> (mainly AWK) that takes that
+summary and converts it in to the blog indexes.
+
+<p>
+
+This makes it easier for me to write a blog entry, having the scripts
+do most of the work of indexing the entry.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

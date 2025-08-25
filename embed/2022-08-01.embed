@@ -1,0 +1,129 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS security update</h1>
+<h2>August 1, 2022</h2>
+I have made a security update for a fairly minor security problem in
+MaraDNS.  Also, a discussion of dark mode and a chess game from the
+currently running chess olympiad.
+
+<p>
+
+<A name=MaraDNS_security_update></A><A name=MaraDNSsecurityupdate></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS security update</b></span><span class=moyet>==</span>
+
+<p>
+
+Xiang Li from Network and Information Security Lab, Tsinghua University 
+discovered a clever way to keep names in Deadwood’s cache after a 
+rogue domain has been revoked.  I have implemented measures to make
+this attack no longer feasible.  The <i>only</i> impact is that
+sometimes a name can stay in the cache longer than desired.  The issue
+<i>only</i> affects people using Deadwood as a fully recursive DNS 
+server; if one uses <tt>upstream_servers</tt> and not <tt>root_servers</tt>,
+one will not be affected by this bug.
+
+<p>
+
+This issue was fixed in Deadwood 3.5.0022 released on May 7, 2022. To
+allow other DNS server developers ample time to fix and patch the issue,
+I kept a 90-day embargo. I made the issue public on August 1, 2022,
+after coordinating with other DNS implementors to ensure the issue has
+been addressed across the board before making it public.
+
+<p>
+
+The updated version of MaraDNS is available on the
+<a href="https://maradns.samiam.org/download.html">MaraDNS download page</a> 
+and at <a href="https://github.com/samboy/MaraDNS">GitHub</a>.
+
+<p>
+
+<A name=Dark_mode></A><A name=Darkmode></A><span class=moyet>==</span><span class=blogtitle><b>Dark mode</b></span><span class=moyet>==</span>
+
+<p>
+
+I have updated my web pages to have dark mode support in CSS.  If
+one is seeing this page with a light text on a dark background, this
+means dark mode is enabled in the browser; people without dark mode
+enabled will see no change to the web sites.
+
+<p>
+
+As an aside, for people who want to view websites without dark mode
+support with light text and dark backgrounds, 
+<a href="https://github.com/darkreader/darkreader">Dark Reader</a> looks to do
+a really good job.
+
+<p>
+
+<A name=Shirov_v_Toczek_2022></A><A name=ShirovvToczek2022></A><span class=moyet>==</span><span class=blogtitle><b>Shirov v. Toczek 2022</b></span><span class=moyet>==</span>
+
+<p>
+
+The international chess olympiad is ongoing, with well over 150 nations
+playing each other chess in India every day.  With over 600 games being
+played every day, a number of interesting games have come up.  Here’s
+an interesting game between Shirov (White) and Toczek (Black) from the
+second day of the olympiad.
+
+<p>
+
+This is how the game went:
+
+<p>
+
+<b class=s>1.e4 d6 2.d4 Nf6 3.Nc3 e5 4.Nf3 Nbd7 5.g4 Nxg4 6.Rg1 Ngf6 7.Bc4 h6 
+8.dxe5 dxe5 9.Be3 c6 10.Qd3 b5 11.Bb3 Qa5 12. O-O-O Ba6 13.Nd2 Rd8 14.Qf1 
+c5 15.Nd5 c4 16.Nxc4 bxc4 17.Bxc4 Bb7 18.Bd2 Qc5 19.Bb4 Qc8 20.Ba5 Nxd5 
+21.Bxd5 Ba6 22.Qh3 Nb6 23.Qh5 Rd7 24.Qxe5+ Re7 25.Qd4 Nxd5 26.Qa4+ Qd7?</b>
+
+<p>
+
+<script src="/blog/chess/jquery-1.12.4.min.js"></script><script>$.ajaxSetup({contents: {script: false}})</script><script src="/blog/chess/chessboard-0.3.0.min.js" type="text/javascript"></script><script src="/blog/chess/chess.js"></script><link href="/blog/chess/chessboard-0.3.0.min.css" rel="stylesheet"></link><script src="/blog/chess/chessgame.js"></script><div id="gameScore-box"></div><script type="text/javascript">runGame(
+"1.e4 d6 2.d4 Nf6 3.Nc3 e5 4.Nf3 Nbd7 5.g4 Nxg4 6.Rg1 Ngf6 7.Bc4 h6 " +
+"8.dxe5 dxe5 9.Be3 c6 10.Qd3 b5 11.Bb3 Qa5 12.O-O-O Ba6 13.Nd2 Rd8 14.Qf1 " +
+"c5 15.Nd5 c4 16.Nxc4 bxc4 17.Bxc4 Bb7 18.Bd2 Qc5 19.Bb4 Qc8 20.Ba5 Nxd5 " +
+"21.Bxd5 Ba6 22.Qh3 Nb6 23.Qh5 Rd7 24.Qxe5+ Re7 25.Qd4 Nxd5 26.Qa4+ Qd7? " +
+"27.Rxd5! 1-0"
+,
+"Black resigns",
+"gameScore",
+52,
+"White to move and win",
+0,0
+);</script>
+<noscript>
+<img src=pics/chess/2022-08-01-1.png><br>
+While to move and win
+</noscript>
+
+<p>
+
+<b class=s>28.Rxd5! 1-0</b>
+
+<p>
+
+Black resigned because he could not save his queen.  For example, if
+<i>28... Qxa4</i> then <i>29.Rd8#</i> delivers checkmate.
+
+<p>
+
+<i>The code and graphics to make the chess game diagram come from a
+variety of open source projects.  There is <a href="chess/COPYING.txt">a
+list of contributors and copyrights</a> for the hard working people
+who made these chess diagrams possible.  Also, the diagram code has a
+<a href="https://github.com/samboy/ChessDiagrams">GitHub page</a>.</i>
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,195 @@
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>Configuration files</h1>
+<h2>May 5, 2018</h2>
+This blog is about some ways of formatting configuration files.
+
+<p>
+
+<A name=The_MaraDNS_way></A><A name=TheMaraDNSway></A><span class=moyet>==</span><span class=blogtitle><b>The MaraDNS way</b></span><span class=moyet>==</span>
+
+<p>
+
+The MaraDNS way to format a configuration file is a syntax based
+on a subset of Python.  It looks like this:
+
+<p>
+
+<tt>foo = 1</tt><br>
+<tt>bar = "String"</tt><br>
+<tt># This is a comment</tt><br>
+<tt>bar += ", and some more text"</tt><br>
+<tt># bar is now "String, and some more text"</tt><br>
+<tt>bax = {}</tt><br>
+<tt>bax["something"] = "Something else"</tt><br>
+
+<p>
+
+Here, the name of a parameter at the top level is a bare string (and,
+yes, MaraDNS and Deadwood will exit with a fatal error if the name is
+not one that they recognize).
+
+<p>
+
+I designed this syntax back in 2000 and used it in both MaraDNS (2001)
+and in Deadwood (2007)—I felt no need to change the syntax for
+the MaraDNS 2.0 recursive resolver.
+
+<p>
+
+If I were designing something like MaraDNS today, I would do it
+differently, since there is more standardization on how to convert
+hierarchical data in to a text file.
+
+<p>
+
+In the mid-2000s, the trend was to use XML, which could look like
+this:
+
+<p>
+
+<tt>&lt;foo&gt;1&lt;/foo&gt;</tt><br>
+<tt>&lt;bar&gt;String, and some more text&lt;/bar&gt;</tt><br>
+<tt>&lt;!-- This is a comment --&gt;</tt><br>
+<tt>&lt;bax&gt;&lt;something&gt;Something else&lt;/something&gt;&lt;/bax&gt;</tt><br>
+
+<p>
+
+Or like this:
+
+<p>
+
+<tt>&lt;foo value=1 /&gt;</tt><br>
+<tt>&lt;bar text="String, and some more text" /&gt;</tt><br>
+<tt>&lt;bax&gt;&lt;something data="Something else" /&gt;&lt;/bax&gt;</tt><br>
+
+<p>
+
+Or even a combination of the above two:
+
+<p>
+
+<tt>&lt;foo value=1 /&gt;</tt><br>
+<tt>&lt;bar&gt;String, and some more text&lt;/bar&gt;</tt><br>
+<tt>&lt;bax somethingData="Something else" /&gt;</tt><br>
+
+<p>
+
+Needless to say, except in domains where people wanted marked up text
+(web pages, word processing documents, etc.), XML was not the best
+choice.  So the next format which came out was 
+<a href="https://json.org">JSON</a>:
+
+<p>
+
+<tt>{"foo": 1,</tt><br>
+<tt>&nbsp;"bar": "String, and some more text",</tt><br>
+<tt>&nbsp;"REM": "Since JSON doesn't have comments, let's fake them",</tt><br>
+<tt>&nbsp;"bax": {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"something": "Something else"</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+Simple, direct, easy to parse.  This is probably the 
+<i>lingua franca</i> 
+of transferring hierarchical data between programs right now.  
+
+<p>
+
+However, JSON, while great for machines to read and write, is less
+suitable for text files edited by humans.  There are a couple of
+formats which try to be a "JSON for humans".
+
+<p>
+
+One simple solution is to just have
+<a href="https://github.com/vaidik/commentjson">comments in JSON</a>.  There
+are proposals to allow both "//" and "#" to specify a comment; I
+have written simple Comment JSON parsers which strip a file of
+all lines beginning with the character "#" before processing the
+file with a conventional JSON parser.  The format is similar to
+the JSON example above:
+
+<p>
+
+<tt>{"foo": 1,</tt><br>
+<tt>&nbsp;"bar": "String, and some more text",</tt><br>
+<tt># This is a simple way to have comments in JSON</tt><br>
+<tt>&nbsp;"bax": {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"something": "Something else"</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+The inventor of JSON 
+<a href="https://plus.google.com/+DouglasCrockfordEsq/posts/RK8qyGVaGSr">wrote that</a>
+a good way to have comments in JSON is to run a JSON-with-comments file
+through his 
+<a href="https://www.crockford.com/javascript/jsmin.html">JSMin</a> processor, which
+strips out '//' and '/* */' comments from a file.  For example:
+
+<p>
+
+<tt>{"foo": 1,</tt><br>
+<tt>&nbsp;"bar": "String, and some more text",</tt><br>
+<tt>// This is another simple way to have comments in JSON</tt><br>
+<tt>&nbsp;"bax": { /* We can have comments which</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>span multiple lines, if</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>desired */</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"something": "Something else"</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+If something with more features than JSON with comments is desired,
+one popular option (used by, for example, Docker and Ansible), is 
+<a href="http://yaml.org/">YAML</a>:
+
+<p>
+
+<tt>foo: 1</tt><br>
+<tt>bar: String, and some more text</tt><br>
+<tt># YAML, naturally, supports comments</tt><br>
+<tt>bax:</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>something: Something else</tt><br>
+
+<p>
+
+YAML can also parse JSON files; it is a superset of JSON and even a
+superset of JSON with comments.
+
+<p>
+
+Some feel that while JSON is too simple, YAML is too complex.  One
+attempt at a middle ground between JSON and YAML is the language 
+Terraform uses, 
+<a href="https://github.com/hashicorp/hcl">HCL (HashiCorp configuration language)</a>:
+
+<p>
+
+<tt>foo = 1</tt><br>
+<tt>bar = "String, and some more text"</tt><br>
+<tt># Comments are supported</tt><br>
+<tt>bax = { "something": "Something else" }</tt><br>
+
+<p>
+
+I’m sure there are other mini-languages for representing hierarchical
+data, but this covers the ones I have seen working in the software
+industry.
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

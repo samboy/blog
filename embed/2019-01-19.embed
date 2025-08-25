@@ -1,0 +1,102 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>Hello 2019!</h1>
+<h2>January 19, 2019 </h2>
+I have released Deadwood 3.2.14, discuss working on MaraDNS again, and 
+explain why Lenovo is not releasing a Thinkpad T490 laptop right now.
+
+<p>
+
+<A name=Im_working_on_MaraDNS_again></A><A name=ImworkingonMaraDNSagain></A><span class=moyet>==</span><span class=blogtitle><b>I’m working on MaraDNS again</b></span><span class=moyet>==</span>
+
+<p>
+
+There have been been some changes in my personal life which make it 
+possible for me to work on MaraDNS and Deadwood again for a couple of 
+hours each week.
+
+<p>
+
+I have released Deadwood 3.2.14.  This is a five-line patch which took 
+about four hours of work to release: I have an extensive set of “smoke 
+tests” to make sure any change to the Deadwood code base does not 
+introduce regressions.  In addition, I need to both prepare the 
+Deadwood source code release tarball and the Deadwood Windows binary
+zipfile.
+
+<p>
+
+In Deadwood 3.2.14, I have fixed a bug where, in the Windows version of 
+Deadwood, it would sometimes not read all of the bytes in the binary 
+“secret.txt” file.  The issue is that the Windows open() system call is 
+not 100% compatible with UNIX API; It needs to have non-UNIX O_BINARY 
+flag set to act the same way.
+
+<p>
+
+More discussion about this update is here:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS/issues/51">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>issues/<![if gt IE 6]>&#8203;<![endif]><wbr>51</A>
+</blockquote>
+
+Download links:
+
+<p>
+
+<ul>
+<li> <A href="https://maradns.samiam.org/deadwood/stable/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>stable/</A>
+<li> <A href="https://sourceforge.net/projects/maradns/files/Deadwood/3.2.14/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>14/</A>
+</ul>
+
+<p>
+
+My plans for MaraDNS in 2019 is to fix at least one other open bug,
+and to add at least one new feature to MaraDNS.  While I now have a
+little more time to look at non-critical bugs and to add small features,
+I do not have enough free time for MaraDNS to do significant overhauls
+(e.g. DNSSEC).
+
+<p>
+
+<A name=Why_the_Thinkpad_T490_is_delayed></A><A name=WhytheThinkpadT490isdelayed></A><span class=moyet>==</span><span class=blogtitle><b>Why the Thinkpad T490 is delayed</b></span><span class=moyet>==</span>
+
+<p>
+
+The reason why Lenovo is not releasing a Thinkpad T490 laptop right now 
+is because there isn’t anything really new Lenovo can put in this 
+computer.  The cycle has been, so far:
+
+<p>
+
+<ul>
+<li> In the fall, Intel announces some new update to their mobile x86 chips
+<li> In the spring, Lenovo announces a new T4X0 computer using that new Intel
+  chipset
+</ul>
+
+<p>
+
+However, this year, Ice Lake has been delayed, so there is nothing new
+Lenovo can put in the T490 to distinguish it from the T480—so we will
+get another few months of the T480 until Intel has their Ice Lake chips
+ready for Lenovo to put in the T490.
+
+<p>
+
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

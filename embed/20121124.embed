@@ -1,0 +1,67 @@
+<!--{TAGS:M}-->
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Deadwood update</h1>
+
+<h2>November 24, 2012</h2>
+
+After adding a domain to blacklist to my Deadwood server and restarting 
+the process, I discovered that Deadwood had a bug where it would sometimes
+give out a confusing error message if the cache file was older than the
+dwood3rc (configuration) file.
+
+<p>
+
+I fixed this problem by having Deadwood compare the timestamp for the
+dwood3rc file and the cache file; if the cache file is older than the
+dwood3rc file, Deadwood will now refuse to load the cache.  
+
+<p>
+
+As it turns out, the interface for stat() that I use is identical in
+Windows and *NIX.  Another thing: I now understand why *NIX fanatics
+hate it when you say that st_ctime is the creation time of the file:
+In Windows, st_ctime is, indeed, the file's creation time.  However,
+in *NIX, it's the last time the inode (meta-information) for the file 
+was changed.
+
+<p>
+
+Here's an interesting question: Does the file's st_ctime change if the files
+contents are changed, but no inode information is changed?  Of course,
+since the file's size and atime is in the inode, then I would say st_ctime
+changes every time the file is changed.  Indeed, since inode information
+is changed every time the file is accessed, I think it would make sense
+to change the st_ctime every time we change st_atime (the last time a file 
+was accessed).
+
+<p>
+
+st_ctime really should have been the file creation time if you ask me.  
+Windows, not *NIX, gets this right.
+
+<p>
+
+All of this, of course, is academic; Deadwood looks at st_mtime to
+verify the cache is newer than the dwood3rc file.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood again one day in December, after the 20th,
+unless a critical security bug with a CVE number is found.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,45 @@
+<h1>Finally, I have BuyVM</h1>
+
+<h2>January 1, 2013</h2>
+
+Last year, <A href=20120327.html>I complained that it was impossible
+to get a BuyVM node</A>.  Actually, it's not...I finally have one.  
+
+<p>
+
+I didn't even have to try that hard to get it; I happened to visit
+<A href=http://doesbuyvmhavestock.com/>doesbuyvmhavestock.com</A>
+yesterday, saw they still had a few 128 megabyte nodes (only $15/year)
+available, and was able to easily purchase my new node.
+
+<p>
+
+They are out of stock again today, but the sign up page was not at all
+overloaded yesterday and purchasing a node was a perfectly smooth process.
+
+<p>
+
+I can see why this virtual machine provider is popular on <A
+href=http://webhostingtalk.com>WHT</A>; the node I have is very snappy
+and responsive, and includes 16 IPv6 addresses in addition to its
+IPv4 address.
+
+<p>
+
+I chose to put CentOS 6 on this new node and spent the good part of
+today converting one of my other virtual machine nodes from CentOS 5
+in to CentOS 6.  One of my 2013 resolutions is to completely phase out
+CentOS 5; I have one more node to convert and plan to finish up the MaraDNS
+upgrade to CentOS 6.  
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

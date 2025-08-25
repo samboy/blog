@@ -1,0 +1,46 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Forum will be down</h1>
+<h2>November 8, 2013</h2>
+<b>Edit</b> The move has been completed and forum.samaim.org is up again on
+both IPv4 and IPv6.
+<p>
+Because the ISP for 
+<a href="https://forum.samiam.org">forum.samiam.org</a> is moving servers this
+weekend to a new datacenter, the 
+<a href="https://forum.samiam.org/forum-5.html">MaraDNS support forum</a> will be
+down for much of the weekend.
+
+<p>
+
+The forum should be back up again by Sunday or Monday.
+
+<p>
+
+The MaraDNS website and blog will be functioning normally during this
+move.
+
+<p>
+
+The good news is that the new datacenter will be much better.  Among other
+things, this node will finally have native (as opposed to tunneled) IPv6
+connectivity.
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

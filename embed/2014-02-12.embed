@@ -1,0 +1,208 @@
+<!--{TAGS:L,M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS security update</h1>
+<h2>February 12, 2014</h2>
+Today, I celebrate my anniversary with my wife, release a MaraDNS security
+update, and post a couple links given to me in private email.
+
+<p>
+
+<A name=Happy_Anniversary_Marina></A><A name=HappyAnniversaryMarina></A><span class=moyet>==</span><span class=blogtitle><b>¡Happy Anniversary Marina!</b></span><span class=moyet>==</span>
+
+<p>
+
+The most important thing comes first:
+
+<p>
+
+Four years ago today, I had the great honor of marrying the most beautiful
+woman in the world.  My life is infinitely better than it was when 
+I was alone. It is a great honor to celebrate four years of marriage 
+with Marina today. I LOVE YOU! May God continue to bless our marriage.
+
+<p>
+
+<A name=MaraDNS_security_update></A><A name=MaraDNSsecurityupdate></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS security update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have released MaraDNS 2.0.09, MaraDNS 1.4.14, Deadwood 3.2.05, and
+Deadwood 2.3.09.  This is an important stability and security update
+and all MaraDNS users are encouraged to update at their soonest
+convenience.
+
+<p>
+
+<A name=How_to_download></A><A name=Howtodownload></A><span class=moyet>==</span><span class=blogtitle><b>How to download</b></span><span class=moyet>==</span>
+
+<p>
+
+Most MaraDNS users should download MaraDNS 2.0.09, which includes 
+Deadwood 3.2.05:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.org/download/2.0/2.0.09">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>09</A>
+</blockquote>
+
+<blockquote>
+<A href="https://sourceforge.net/projects/maradns/files/MaraDNS/2.0.09/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>09/</A>
+</blockquote>
+
+The GitHub version of MaraDNS has also been updated (it was actually
+the first version to be updated):
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+</blockquote>
+
+git clone <A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+
+<p>
+
+It's also possible to download just Deadwood 3.2.05:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/stable/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>stable/</A>
+</blockquote>
+
+<blockquote>
+<A href="https://sourceforge.net/projects/maradns/files/Deadwood/3.2.05/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>05/</A>
+</blockquote>
+
+People who are still using MaraDNS 1 may download MaraDNS 1.4.14
+(source code "tarball" only):
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download/1.4/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>4/</A>
+</blockquote>
+
+<blockquote>
+<A href="https://sourceforge.net/projects/maradns/files/MaraDNS/1.4.14/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>4.<![if gt IE 6]>&#8203;<![endif]><wbr>14/</A>
+</blockquote>
+
+Please note that MaraDNS 1 will stop being supported on June 21, 2015.
+
+<p>
+
+For anyone still using Deadwood 2.3, here are links to Deadwood 2.3.09:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/tiny/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>tiny/</A>
+</blockquote>
+
+<blockquote>
+<A href="https://sourceforge.net/projects/maradns/files/Deadwood/2.3.09/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>09/</A>
+</blockquote>
+
+Note that Deadwood 2.3 will stop being supported on June 21, 2016.
+
+<p>
+
+<A name=Description_of_the_problem></A><A name=Descriptionoftheproblem></A><span class=moyet>==</span><span class=blogtitle><b>Description of the problem</b></span><span class=moyet>==</span>
+
+<p>
+
+There has been a long-standing bug in Deadwood (ever since 2007) where
+bounds checking for strings was not correctly done under some
+circumstances.
+
+<p>
+
+Because of this, it has been possible to send Deadwood a "packet of
+death" which will crash Deadwood. Since the attack causes
+out-of-bounds memory to be read, but not written to, the impact of the
+bug is denial of service. It appears this attack can only be exploited
+by an IP with permission to perform recursive queries against
+Deadwood.
+
+<p>
+
+This bug is fixed in Deadwood 3.2.05 and Deadwood 2.3.09. MaraDNS
+2.0.09 and 1.4.14 have been updated to include Deadwood 3.2.05.
+
+<p>
+
+Note that this bug only affects users of the Deadwood recursive resolver.
+
+<p>
+
+CVE number: None
+
+<p>
+
+Impact: Remote denial of service
+
+<p>
+
+<A name=My_mistake></A><A name=Mymistake></A><span class=moyet>==</span><span class=blogtitle><b>My mistake</b></span><span class=moyet>==</span>
+
+<p>
+
+The mistake I have made was to make one of the core string handling
+functions an overly complicated "Swiss army knife" function; when it
+comes to security, it's better to have two simple functions than one
+overly complicated function.
+
+<p>
+
+<A name=VirtualBOX_hostonly_network></A><A name=VirtualBOXhostonlynetwork></A><span class=moyet>==</span><span class=blogtitle><b>VirtualBOX host-only network</b></span><span class=moyet>==</span>
+
+<p>
+
+A few months ago, I posted a 
+<a href="http://samiam.org/blog/20130826.html">blog entry</a> showing how to set
+up a host-only network, as well as how to edit the registry to work
+around a bug in how VirtualBox sets up host-only networks.  David gave
+me the following link:
+
+<p>
+
+<blockquote>
+<A href="http://teamchivers.com/?p=48">http://teamchivers.com/?p=48</A>
+</blockquote>
+
+<A name=Updated_link_for_bulk_polyhedral_dice></A><A name=Updatedlinkforbulkpolyhedraldice></A><span class=moyet>==</span><span class=blogtitle><b>Updated link for bulk polyhedral dice</b></span><span class=moyet>==</span>
+
+<p>
+
+A couple of years ago, I posted a 
+<a href="http://samiam.org/blog/20120218.html">blog entry</a> 
+on buying bulk polyhedral dice (I was part of a role playing game
+campaign at the time).  Some of the links in that blog no longer
+work (one eBay supplier has since closed up shop) but William Joyner
+pointed out this new listing at Amazon:
+
+<p>
+
+<blockquote>
+<A href="http://www.amazon.com/gp/product/B00G1RPRUO">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>amazon.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>gp/<![if gt IE 6]>&#8203;<![endif]><wbr>product/<![if gt IE 6]>&#8203;<![endif]><wbr>B<![if gt IE 6]>&#8203;<![endif]><wbr>00<![if gt IE 6]>&#8203;<![endif]><wbr>G<![if gt IE 6]>&#8203;<![endif]><wbr>1<![if gt IE 6]>&#8203;<![endif]><wbr>RPRUO</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

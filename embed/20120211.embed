@@ -1,0 +1,47 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>February 11, 2012</h2>
+
+I <A href=20120128.html>recently mentioned</A> that the changes to give
+Deadwood finer time stamps was causing one of the TCP regression tests to
+fail. 
+
+<p>
+
+The reason this test was failing was because the code to 
+make Deadwood's time stamps more fine-grained also decreased the
+amount of time given to allow a DNS-over-TCP connection to complete.
+I have fixed this issue by increasing the time we give Deadwood to finish
+a DNS-over-TCP connection, letting the test pass again.
+
+<p>
+
+If all goes well, I will be able to release Deadwood 3.2.01 later
+this weekend.
+
+<p>
+The updated code can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<p>
+<b>Update</b>: Deadwood 3.2.01 released:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/stable/>http://www.maradns.org/deadwood/stable/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

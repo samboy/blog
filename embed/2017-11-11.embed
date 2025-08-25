@@ -1,0 +1,85 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>November 2017 round up</h1>
+<h2>November 11, 2017</h2>
+I discuss a MaraDNS update and Roy Moore.
+
+<p>
+
+<A name=MaraDNS_update></A><A name=MaraDNSupdate></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS update</b></span><span class=moyet>==</span>
+
+<p>
+
+On October 24, 2017, the IPv4 IP for b.root-servers.net was changed.
+I have updated Deadwood with the new IP.  In addition, for anyone using
+a dwood3rc file with the root servers set in it, the IP 192.228.79.201
+needs to be replaced with 199.9.14.201.
+
+<p>
+
+A dwood3rc file for Deadwood sometimes has a section looking like this:
+
+<p>
+
+<tt>root_servers = {}</tt><br>
+<tt>root_servers["."]="198.41.0.4, 199.9.14.201, 192.33.4.12, 199.7.91.13,"</tt><br>
+<tt>root_servers["."]+="192.203.230.10, 192.5.5.241, 192.112.36.4, "</tt><br>
+<tt>root_servers["."]+="198.97.190.53, 192.36.148.17, 192.58.128.30, "</tt><br>
+<tt>root_servers["."]+="193.0.14.129, 199.7.83.42, 202.12.27.33"</tt><br>
+
+<p>
+
+If so, make sure the out of date 192.228.79.201 IP is replaced, like it
+is above.
+
+<p>
+
+The deadwood configuration file is usually located at /etc/dwood3rc
+
+<p>
+
+I have updated the Deadwood source to use the updated IP, and have
+updated the list of root servers everywhere the out of date IP was
+in the documentation.
+
+<p>
+
+I plan on making a release of MaraDNS in 2018 with this update.  Until
+then, both the GitHub repo at <A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A> and
+the Deadwood snapshot at <A href="http://maradns.samiam.org/deadwood/snap">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap</A> have
+this change.
+
+<p>
+
+<A name=Roy_Moore></A><A name=RoyMoore></A><span class=moyet>==</span><span class=blogtitle><b>Roy Moore</b></span><span class=moyet>==</span>
+
+<p>
+
+Now that 
+<a href="https://www.washingtonpost.com/investigations/woman-says-roy-moore-initiated-sexual-encounter-when-she-was-14-he-was-32/2017/11/09/1f495878-c293-11e7-afe9-4f60b5a6c4a0_story.html">The Washington Post has brought to light multiple verified allegations of child molestation against Alabama Senator candidate Ray Moore</a> 
+(to be technical, the youngest one was 14 at the time of the
+allegations, but that’s child molestation in my book, since Moore was
+in his 30s at the time), it remains an open question whether Alabama
+voters would rather elect a child molester or a Democrat to the US Senate
+come December 12.  It’s a lose-lose for the Republicans either way;
+they either lose one critical seat in a very closely held Senate, or
+they have to deal with the political fallout of one of their own being
+a child molester.
+
+<p>
+
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

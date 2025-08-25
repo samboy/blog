@@ -1,0 +1,83 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>MaraDNS update</h1>
+<h2>February 11, 2019</h2>
+I have released Deadwood 3.3.01, which implements a feature users
+have wanted for years.
+
+<p>
+
+<A name=In_more_detail></A><A name=Inmoredetail></A><span class=moyet>==</span><span class=blogtitle><b>In more detail</b></span><span class=moyet>==</span>
+
+<p>
+
+Deadwood 3.3.01 adds a new feature: The ability to set the IPs for
+a given domain name.  For example, let’s add these lines to a
+dwood3rc Deadwood configuration file:
+
+<p>
+
+<tt>ip4 = {}</tt><br>
+<tt>ip4["maradns.foo."] = "10.10.10.10"</tt><br>
+<tt>ip4["kabah.foo."] = "10.11.11.11"</tt><br>
+
+<p>
+
+With these lines, whenever we ask Deadwood for the IP for “maradns.foo”,
+we get the ip 10.10.10.10, regardless of the IP this domain may actually
+have.  Likewise, when we ask for “kabah.foo”, we get the IP 10.11.11.11.
+
+<p>
+
+<A name=Limitations></A><A name=Limitations></A><span class=moyet>==</span><span class=blogtitle><b>Limitations</b></span><span class=moyet>==</span>
+
+<p>
+
+There are a number of limitations with this feature:
+
+<p>
+
+<ul>
+<li> Only IPv4, not IPv6 is currently supported.
+<li> A given hostname can only have a single IP.
+<li> Since Deadwood uses a fairly large amount of memory to store these
+  entries, we can only store 20,000 entries.  This is not enough to
+  use this feature for DNS blacklists.
+<li> The feature is currently unstable: I have not thoroughly tested this
+  code.
+</ul>
+
+<p>
+
+<A name=Getting_Deadwood_3301></A><A name=GettingDeadwood3301></A><span class=moyet>==</span><span class=blogtitle><b>Getting Deadwood 3.3.01</b></span><span class=moyet>==</span>
+
+<p>
+
+Both the source code and Windows binaries of Deadwood 3.3.01 are available:
+
+<p>
+
+<ul>
+<li> <A href="https://maradns.samiam.org/deadwood/snap/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+<li> <A href="https://sourceforge.net/projects/maradns/files/Deadwood/3.3.01/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>01/</A>
+</ul>
+
+<p>
+
+As always, MaraDNS is a free open-source download, and I was not
+compensated for developing this feature (but donations are always
+welcome).
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

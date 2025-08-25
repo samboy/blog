@@ -1,0 +1,135 @@
+<div class=blogpic>
+<img src=pics/20120907.jpg width=160 height=120>
+</div>
+
+<h1>Slashdot and more</h1>
+
+<h2>September 7, 2012</h2>
+
+In today's blog, I discuss changing fonts on my webpage, my SSD hard disk
+crash, and Slashdot some more.
+
+<p>
+<div class=blogtitle>
+<b>Changing the webpage font</b>
+</div><br>
+
+After reading a couple of <A href=http://lwn.net/Articles/509952/>articles</A>
+<A href=https://lwn.net/Articles/502371/>on LWN</A>, I looked over the
+license of the Ubuntu font which I have been using on my webpage and realized
+that <A href=http://font.ubuntu.com/ufl/ubuntu-font-licence-1.0.txt>its
+license</A> may or may not allow me to embed their font on my web page
+with the name "Userspace", depending on whether the changes I made
+(removing a lot of glyphs and converting it in to various web-friendly
+formats) constitutes a "Substantially Changed" font.
+
+<p>
+
+In truth, I was never 100% happy with this font.  While Ubuntu's font
+is one of the relatively few open-source proportional fonts with delta
+hinting, this actually doesn't matter because I used a semi-bold version
+without delta hinting at the sizes the webpage renders the font.  The font
+looked a little too stylized for my tastes, since its "science fiction"
+look didn't quite work with the rest of the web page's design.
+
+<p>
+
+Since the 2011 web page redesign, Adobe has released a new open source font 
+called "Source Sans Pro", which is OFL-licensed (I can use it as long as I
+rename it; to make the transition as easy as possible, I just renamed it
+"Userspace" to minimize the CSS changes).  This font is less stylized
+and has a more informal and friendly look to it.  It looks best with
+advanced font hinting, but is perfectly readable with basic hinting
+(such as in legacy Windows XP installs) or even on a monochrome display.
+
+<p>
+<div class=blogtitle>
+<b>My SSD hard disk crash</b>
+</div><br>
+
+I used to believe that SSD (Solid State Drive) hard disks were immune
+to failure.  While I have been making regular backups, I kept the backups
+home before going traveling.  Naturally, my SSD hard disk died on me
+just one week after leaving my backups 2,000 miles away.
+
+<p>
+
+Fortunately, I was able to burn recovery DVDs to restore the system before
+the SSD completely died, and get a fairly inexpensive replacement hard disk
+down here.  
+
+<p>
+
+I am still recovering from the failure, but am productive at work again and
+have a much cleaner system now.  This was a time consuming process.  As 
+just one example, Windows updates everything at once after a system
+restore.  I lost my GPG private keys; it has been time to make new
+MaraDNS signing keys (the last key was generated over a decade ago)
+and the next release of Deadwood will be signed with the new key.
+
+<p>
+
+Unfortunately, for the paranoid out there, I will not be able to sign
+the new key with the old key until I return from my travels and have
+access to my old backups, probably mid-October.
+
+<p>
+<A name=slashdot> </A>
+<div class=blogtitle>
+<b>Slashdot and the Napster crowd</b>
+</div><br>
+
+<i>This section continues my look at Slashdot which I 
+<A href=20120903.html>started a week ago</A></i>
+
+<p>
+
+Slashdot started to change with the Napsterization of the Internet.  Before
+Napster, <A href=https://groups.google.com/forum/?fromgroups=#!msg/net.comics/eo7fUmdYNLw/62IH6xsJpiIJ>copyright 
+infringement was frowned upon in public forums</A>.
+
+<p>
+
+The original Linux developers respected copyright.  They went to great
+effort to make a clean-room implementation of Linux which did not violate any
+copyright or patent laws.  Their effort paid off: Linux became the dominant
+free Unix while BSD was fighting a copyright lawsuit from the original 
+creators of UNIX.
+
+<p>
+
+Napster changed the face of the Internet and how people looked at copyright.
+Before, the Internet community understood that making meaningful intellectual
+property was hard work and should be respected.  Once Napster allowed anyone
+with an Internet connection to have all the music they wanted for free, with
+only a small nagging detail that it was violating copyright, thousands
+of self-centered young college students and others did just that.
+
+<p>
+
+Instead of taking the high road, Slashdot decided to (by and large) side
+with the masses of people coming up with convoluted rationalizations
+and justifications for downloading copyrighted content without permission.
+
+<p>
+
+This resulted in Slashdot attracting a much less mature community of posters.
+It was the beginning of the fall of Slashdot.
+
+<p>
+
+<i>In a future blog entry, I will discuss some of Slashdot's other
+problems which stopped me from being an active poster there.</i>
+
+<p>
+
+<i>Continued in <A href=20120929.html>Slashdot: A final look</A></i>
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

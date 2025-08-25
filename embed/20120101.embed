@@ -1,0 +1,106 @@
+<!--{TAGS:M}-->
+
+<h1>Welcome to 2012</h1>
+
+<h2>January 1, 2012</h2>
+
+In today's blog entry, I welcome my readers to twenty-twelve (2012) and
+discuss my hopes and plans for this new year.
+
+<p>
+
+<div class=blogtitle>
+<b>New MaraDNS snapshot</b>
+</div><br>
+
+Let me start off 2012 with a new MaraDNS snapshot: I have forward-ported
+the randomized hash to the 2.0 branch of the MaraDNS tree.
+
+<p>
+
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+<p>
+<div class=blogtitle>
+<b>MaraDNS 2012 roadmap</b>
+</div><br>
+
+MaraDNS 1.3 will no longer be updated or supported on December 21, 2012.
+I currently do not have an end of life for MaraDNS 1.4, but am
+decreasing my support for it: While I did fix non-security bugs 
+with MaraDNS 1.4 in 2011, this will no longer be done.
+Other bug fixes will only be applied to MaraDNS 2.
+
+<p>
+
+MaraDNS 2 has been declared stable for over a year and it's time for
+MaraDNS 1 users to upgrade.
+
+<p>
+
+As mentioned <A href=20111224.html>before</A>, I have no plans to
+add significant new features to MaraDNS, but I am currently getting
+enough funding to do basic babysitting: Fixing non-security bugs
+and answering email sent to the mailing list.
+Hopefully the funding will continue so I can provide the bug
+fixes and email support for all of 2012.
+
+<p>
+<div class=blogtitle>
+<b>Netbooks in 2012</b>
+</div><br>
+
+I am looking forward to the new Cedar Trail netbook chips.  Not only
+do they offer slightly superior CPU performance
+than last year's N550 Atom chip while using less energy, their
+GPU performance is twice that of the older Atom chips.  It may
+even be possible to play 2004 and 2005-era video games on them.
+
+<p>
+
+2011 was not the best year for netbooks.  Not only have both
+Dell and Samsung declared they they are pulling out of the netbook market,
+but also Lenovo and Toshiba only released their newer mid-2011 Atom
+N550 netbooks outside of the US.
+
+<p>
+
+While there is already buzz about the Lenovo S110 with a Cedar Trail
+chip, I find it unlikely it will be released in the United States.
+
+<p>
+
+Both Acer and ASUS, however, appear committed to releasing newer Cedar Trail
+netbooks state-side.  Hopefully they will do well enough in 2012 that
+Lenovo and Toshiba will also make their new offerings available 
+here in the US.
+
+<p>
+<div class=blogtitle>
+<b>The economy in 2012</b>
+</div><br>
+
+It appears that the tech economy is really picking up for 2012.  I was
+able to get more face-to-face job interviews in the last two months of
+2011 than I was able over a four-month period a year ago.  
+
+<p>
+
+It is going to take a while for our economy to fully recover; it
+will probably be at least a couple of years before we have dot-com levels of
+employment again, but the economy is at least moving upward again.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

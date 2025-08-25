@@ -1,0 +1,111 @@
+<!--{TAGS:G}-->
+<h1>E-350 redux</h1>
+
+<h2>April 26, 2011</h2>
+
+I recently <A href=20110422.html>posted a blog</A> about the AMD Zacate
+E-350.  In that blog post, I compared the E-350 to the Intel Atom.  In
+this post, as well as comparing it to the Atom, I will also compare it
+to some of Intel's more expensive offerings.
+
+Going to <A href=http://notebookcheck.net>Notebook check</A>, I compared
+the Zacate with some Intel Processors with a similar TDP (energy usage).
+Here is the results of my informal comparison:
+
+<pre>
+Maker   Name            TDP     price   PI-32M  3DMark 06
+Intel   i7-2657M        17      317      751    2546
+Intel   i3-380UM        18      ?       1719    1426
+Intel   i3-330UM        18      ?       1876 	1310
+AMD     E-350           18      < 129   2475    1015 
+Intel   Atom N455        6.5    64      4523     156
+</pre>
+
+In this chart, the PI-32M is the number of seconds needed to calculate
+32 million digits of Pi; lower numbers are better.  3D mark numbers record
+3D performance; higher numbers are better.
+
+<p>
+
+The OEM price for an E-350 is not readily available, but a motherboard 
+with the E-350 chipset is available for $129; I would guess that
+an E-350 costs about the same or a little more than the Atom N455.
+
+<p>
+
+As we can see, Intel is perfectly capable of making chips that have
+better performance using the same amount of energy.  Intel's disadvantage
+is that they are not doing this <i>cheaply</i>; their high-performance
+18W processors use a more expensive 32nm process (compared to the 40nm
+process used by the E-350 and the 45nm process of the N455).
+
+<p>
+
+It would appear that Intel is not interested in filling the gap between
+their inexpensive Atom processors and their more lucrative core series
+processors.  Their Atom processors are handicapped in a number of ways:
+they are using a 45nm process while other Intel processors use 32nm;
+the highest TDP used by an Atom is 13W (for the D525); the maximum
+memory that an Atom can use is only 2Gb; and the graphics chipset
+included with the Atom is lackluster at best.  
+
+<p>
+
+While details about the up and coming Atom Cedar Trail are not public yet,
+<A 
+href=http://news.softpedia.com/newsImage/Intel-Cedar-Trail-to-Feature-DirectX-10-1-Graphics-and-Full-HD-Video-Playback-4.jpg/>one 
+source</A> shows that Intel is not going to lift the 2Gb limitation with
+the next-generation Atom chips.  While the next-generation Atoms should match
+the E-350 in terms of CPU speed--indeed the D525 is almost as fast as
+the E-350 right now--they will probably not match its GPU speed, and 
+they will continue to have their memory capacity crippled. 
+
+<p>
+
+Quite frankly, it seems to me that Intel does not want to make a 
+low-cost processor that is perceived as being fast enough for mainstream
+computer use.  Intel looks more interested in making their Atoms use less
+power for the same amount of performance than in giving their Atoms
+more performance--the Pineview (N450, N455) series of Atoms did not have
+significantly better performance than the previous generation of Atom
+chips.  When Intel talks about their Cedar Trail Atoms, they talk about
+better performance at specialized tasks such as video decoding more than
+about better general performance; they also are emphasizing the ability to
+make fanless computers with the next generation of Atom chips.
+
+<p>
+
+AMD, on the other hand, is marketing their E-350 as a general-purpose 
+chip that costs less and uses less power.  Their is no crippled memory
+limitation; these chips support up to 8Gb, more than enough for most
+daily computing tasks.  Indeed, unlike the Intel Atom, a number of 
+mainstream computer makers (Acer, Toshiba, etc.) are making 15" laptops 
+with the E-350 chipset.  In addition, Lenovo is making the C205 desktop
+computer with an E-350.
+
+<p>
+
+Mainstream computer users want an affordable computer they feel is not
+crippled.  While the netbook form factor works very well for some 
+users (I personally don't like anything bigger than 11" because it's
+too big to readily carry around or to use on an airplane), many find
+it too small (and the 1024x600 display most common with netbooks is
+not compatible with a lot of software).
+
+<p>
+
+The E-350 works very well for people who want something with the Atom's
+price but without the Atom's limitations.  It's unfortunate that Intel
+does not appear interested in filling the gap between the Atom chip
+(perceived by many as underpowered) and their "core" mainstream chips.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

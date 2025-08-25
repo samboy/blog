@@ -1,0 +1,48 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>IPv6 update</h1>
+<h2>September 15, 2013</h2>
+I have updated my servers to more fully use IPv6.  To wit:
+
+<p>
+
+<ul>
+<li> All domain names (samiam.org, www.samiam.org, etc.) now have both
+  IPv4 and IPv6 addresses.
+<li> There are multiple IPv6 servers and DNS failover should one of the servers
+  go down.
+</ul>
+
+<p>
+
+Just in case there is an issue with IPv6 on these servers, 
+there are also IPv4 only aliases:
+
+<p>
+
+<ul>
+<li> <A href="http://ipv4.samiam.org/">http://ipv4.samiam.org/</A>
+<li> <A href="http://maradns-ipv4.samiam.org/">http://maradns-ipv4.samiam.org/</A>
+<li> <A href="http://forum-ipv4.samiam.org/">http://forum-ipv4.samiam.org/</A>
+</ul>
+
+<p>
+
+I am guessing that, by 2020, IPv6 adoption will be widespread and IPv4 will
+be looked at the way people look at CRT televisions today.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

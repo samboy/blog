@@ -1,0 +1,44 @@
+<h1>MaraDNS update</h1>
+
+<h2>June 10, 2011</h2>
+
+In today's snapshot of MaraDNS:
+
+<ul>
+<li>Certain TXT record parsing errors now tell the user which man page to
+    read.
+<li><tt>--pid</tt> support for Duende (courtesy Yarin) backported to
+    MaraDNS 2.0's Duende.
+</ul>
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+Deadwood has been sending recursive DNS queries upstream with the RA
+bit set.  Occasionally, this results in the upstream DNS server ignoring
+Deadwood's request.  Fixed.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+The next day I plan to work on MaraDNS/Deadwood is two weeks from today:
+June 24, 2011.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

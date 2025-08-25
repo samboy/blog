@@ -1,0 +1,121 @@
+<h1>GOG HOMM3 Multiplayer</h1>
+
+<h2>July 10, 2011</h2>
+
+It is really nice that <a href=http://www.gog.com/>gog.com</a> has made
+a legal DRM-free version of <a href=http://www.gog.com/en/gamecard/heroes_of_might_and_magic_3_complete_edition>Heroes of Might
+and Magic III</a> (HOMM3) available.  While the program does run nicely
+in Windows 7 (as long as it's run in Windows 98 compatibility mode),
+the TCP/IP networking for multiplayer does not appear to work. <p>
+
+This does not mean it's impossible to play multiplayer networked HOMM3
+in Windows 7, however. <p>
+
+In order to play a two-player networked game, my roommate and I ended up
+using a combination of HOMM3's null modem support along with a program
+called <a href=http://www.eterlogic.com/Products.VSPE.html>Virtual Serial Ports Emulator</a>
+(VSPE) which creates a virtual serial port which HOMM3 thinks is a real
+serial port; it is possible to send information over TCP/IP using VSPE
+while using HOMM3's "null modem" mode. <p>
+
+Since this program is more geared for other applications (some ham radio
+operators and what not like being able to have multiple programs use the
+same serial port at the same time, or have two different programs on the
+same computer communicate with each other via a virtual serial port),
+it's a little tricky to set it up for having two HOMM3 players play each
+other over TCP/IP.  To do so:
+
+<ul>
+
+<li>Make sure both computers have the GOG.com version of HOMM3 installed
+
+<li>Go to <A href=http://www.eterlogic.com/>eterlogic.com</A>, click on
+"Downloads" and download the "Virtual serial ports emulator" (VSPE)
+program.  Please note that this program is free, but only for users
+of 32-bit Windows; people using 64-bit Windows will need to either
+find another way to emulate a serial connection over TCP/IP, or pay
+the $25 registration fee (the reason for this is because Microsoft
+charges $500 a year for a digital signature).  
+
+<li>Scan the VSPE file to ensure it has no viruses (this should always
+be done for executable files downloaded from the internet)
+
+<li>Install the VSPE program on both computers that will be used to play 
+HOMM3.
+
+<li>Open up VSPE on one computer.
+
+<li>In VSPE, go to "Device -&gt; Create" and create a new "connector" device.
+Give the connector device the virtual serial port COM4, and leave the
+"emulate baud rate" box unchecked.
+
+<li>Now, go to "Device -&gt; Create" again and create a "TCP server" device.
+Use "COM4" as the "source serial port", do not make the device read-only
+nor write-only; keep the TCP port of 5555 and leave "Interface IP" blank
+(so it will bind to all IPs your computer has)
+
+<li>Click on the "play" icon (which looks like a green arrow pointing
+right) to start the serial-over-TCP server
+
+<li>Make sure Windows firewall allows VSPE to be available to 
+    other computers on the network
+
+<li>Now, open up VSPE on the other computer
+
+<li>Go to "Device -&gt; Create" and create a "connector" device on COM4,
+just like on the other machine.
+
+<li>Now, go to "Device -&gt; Create" but this time create a "TCP client"
+device.
+
+<li>For "Remote TCP host", type in the IP of the first computer running
+the server.  If you don't know the first computer's IP, this information
+may be obtained either by the "ipconfig" command, or by opening HOMM3
+on the server and going to "New Game -&gt; Multi Player -&gt; TCP/IP"
+
+<li>Make sure the serial emulation client is enabled by clicking on the
+green "play" arrow on the client.
+
+<li>Now, open up HOMM3 on both computers, go to "New Game -&gt; Multi
+Player", and select "direct connect" for the connection type (this is
+the third icon from the bottom, two above the icon of a circle with a
+line through it)
+
+<li>One machine will be the "Host"; the other will "Join" the hosted game.
+Start the host before the second computer joins.
+
+<li>Use "COM4" on both computers, and increase the baud rate to its
+maximum speed.  Make sure any other serial settings are identical on
+both machines.
+
+<li>At this point, it should be possible to play a two-player HOMM3 game
+over the network in a modern Windows 7 environment.
+
+</ul>
+
+There are a couple of disadvantages to this approach:
+
+<ul>
+
+<li>This trick only works for two-player networked HOMM3 games.
+
+<li>The serial-over-TCP driver is only free for users of 32-bit Windows
+
+<li>Since this driver is not geared for gamers, it is complicated to
+set up.
+
+</ul>
+
+However, this is the only working solution I know of for playing
+multiplayer HOMM3 in Windows 7.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

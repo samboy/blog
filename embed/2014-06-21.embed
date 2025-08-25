@@ -1,0 +1,360 @@
+<div class=blogpic>
+<img src=pics/Sam-with-Citlalli-blog.jpg width=120 height=120>
+</div>
+
+<h1>The best open-source fonts</h1>
+<h2>June 21, 2014</h2>
+In this blog, I list the best open-source fonts out there, discuss getting 
+lining numbers in Georgia (yes, it can be done without buying Georgia 
+Pro...kinda sorta), and somewhat revise my outlook on web fonts for body 
+text.
+
+<p>
+
+<A name=Best_opensource_fonts></A><A name=Bestopensourcefonts></A><span class=moyet>==</span><span class=blogtitle><b>Best open-source fonts</b></span><span class=moyet>==</span>
+
+<p>
+
+I am listing the best open-source fonts out there by category.  An open
+source font is one I can freely download, use in any program (open
+source or not), modify, and share with others (either with or without
+modifications).  So, without further ado:
+
+<p>
+
+<A name=Best_Serif_Font_Bitstream_Charter></A><A name=BestSerifFontBitstreamCharter></A><span class=moyet>==</span><span class=blogtitle><b>Best Serif Font: Bitstream Charter</b></span><span class=moyet>==</span>
+
+<p>
+
+Matthew Carter, the same font designer who gave us the legendary Verdana 
+and Georgia fonts, has made one font which has become open source: Bitstream
+Charter.  This is one of the first digital typefaces, having come out
+back in 1987.  
+
+<p>
+
+While the bold form looks a little distinct for my tastes at large font sizes
+(it’s perfectly good at body text sizes), 
+the regular weight is very attractive at all font sizes.  I use it for
+my
+<a href="http://samiam.org/resume/Resume-Sam-Trenholme.pdf">PDF resume</a> with
+excellent results.
+
+<p>
+
+It was donated as a postscript font to the X Consortium back in 1992 under
+open-source license terms.  For years, it was a beautiful printing font
+but not the best screen font; ttfautohint has made it possible for it to
+finally be used as a web and screen font at body text font sizes.
+
+<p>
+
+Matthew Butterick has
+<a href="http://practicaltypography.com/charter.html">converted it in to modern font formats</a>;
+I have used ttfautohint to make it a
+<a href="http://samiam.org/fonts/charter-2014-06/demo.html">really nice web font</a>.
+It is available for download here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/best-opensource/charter-2014-06.zip">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>best-<![if gt IE 6]>&#8203;<![endif]><wbr>opensource/<![if gt IE 6]>&#8203;<![endif]><wbr>charter-<![if gt IE 6]>&#8203;<![endif]><wbr>2014-<![if gt IE 6]>&#8203;<![endif]><wbr>06.<![if gt IE 6]>&#8203;<![endif]><wbr>zip</A>
+</blockquote>
+
+Here is a demo:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/charter-2014-06/demo.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>charter-<![if gt IE 6]>&#8203;<![endif]><wbr>2014-<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>demo.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<A name=A_possible_improvement_to_Bitstream_Charter></A><A name=ApossibleimprovementtoBitstreamCharter></A><span class=moyet>==</span><span class=blogtitle><b>A possible improvement to Bitstream Charter</b></span><span class=moyet>==</span>
+
+<p>
+
+For screen rendering, I find Charter’s "E" and "F" to have serifs that
+are a little too large, so I have created a modified version of Charter
+with smaller serifs in the uppercase E and F letters:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/Charter/Chortle2014e.zip">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>Charter/<![if gt IE 6]>&#8203;<![endif]><wbr>Chortle<![if gt IE 6]>&#8203;<![endif]><wbr>2014<![if gt IE 6]>&#8203;<![endif]><wbr>e.<![if gt IE 6]>&#8203;<![endif]><wbr>zip</A>
+</blockquote>
+
+It can be seen here on the screen:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/Charter/Chortle2014e/woff/demo.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>Charter/<![if gt IE 6]>&#8203;<![endif]><wbr>Chortle<![if gt IE 6]>&#8203;<![endif]><wbr>2014<![if gt IE 6]>&#8203;<![endif]><wbr>e/<![if gt IE 6]>&#8203;<![endif]><wbr>woff/<![if gt IE 6]>&#8203;<![endif]><wbr>demo.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<A name=Best_SansSerif_Font_Source_Sans_Pro></A><A name=BestSansSerifFontSourceSansPro></A><span class=moyet>==</span><span class=blogtitle><b>Best Sans-Serif Font: Source Sans Pro</b></span><span class=moyet>==</span>
+
+<p>
+
+The best grotesque (Sans-serif) open source font is Paul Hunt’s very
+beautiful Source Sans Pro.  Commissioned by Adobe to use in their
+open source applications, it makes for a very good font, both on the
+screen and on paper.  I use a modified (and renamed) version of it for 
+headings on this web page; I also use it for the web site’s body text on 
+mobile browsers and will make it the body text within a year once
+I feel holdouts still using Windows XP without clear type have finally
+upgraded their systems.
+
+<p>
+
+Source Sans Pro also wins a prize for being the best open source
+Multi Master font out there.  Source Sans Pro’s weight can actually be
+dynamically changed to be any value, as I demonstrate here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/Userspace/UserspaceMMr/Web/demo.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>Userspace/<![if gt IE 6]>&#8203;<![endif]><wbr>Userspace<![if gt IE 6]>&#8203;<![endif]><wbr>MMr/<![if gt IE 6]>&#8203;<![endif]><wbr>Web/<![if gt IE 6]>&#8203;<![endif]><wbr>demo.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+Not only is Source Sans Pro available for download on
+<a href="http://sourceforge.net/projects/sourcesans.adobe/files/">Sourceforge</a>, but
+also I have a mirror of it here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/best-opensource/Source-Sans-Pro/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>best-<![if gt IE 6]>&#8203;<![endif]><wbr>opensource/<![if gt IE 6]>&#8203;<![endif]><wbr>Source-<![if gt IE 6]>&#8203;<![endif]><wbr>Sans-<![if gt IE 6]>&#8203;<![endif]><wbr>Pro/</A>
+</blockquote>
+
+Here is a demo of my derivative of Source Sans Pro:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/Userspace/2014/rev3a/demo.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>Userspace/<![if gt IE 6]>&#8203;<![endif]><wbr>2014/<![if gt IE 6]>&#8203;<![endif]><wbr>rev<![if gt IE 6]>&#8203;<![endif]><wbr>3<![if gt IE 6]>&#8203;<![endif]><wbr>a/<![if gt IE 6]>&#8203;<![endif]><wbr>demo.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<A name=Best_Monospace_vector_font_Cousine_OFL></A><A name=BestMonospacevectorfontCousineOFL></A><span class=moyet>==</span><span class=blogtitle><b>Best Monospace vector font: Cousine (OFL)</b></span><span class=moyet>==</span>
+
+<p>
+
+A few years ago, RedHat comissioned Steve Matteson to make Liberation
+Mono, a monospace font that is the same size as Microsoft’s Courier
+New.  Google then paid for the font to be released as an OFL font
+as part of their Google Web Fonts.
+
+<p>
+
+Unlike the majority of open source fonts, Cousine has full delta hinting,
+which means it looks very good, even on older Windows XP systems without
+clear type as well as in terminal applications when the font is 
+configured to be rendered with any anti-aliasing.
+
+<p>
+
+Recently, Google “updated” the license of Cousine to no longer be
+OFL licensed, and removed the delta hinting that has made Cousine
+such a beautiful terminal font.  I have an older OFL version of
+Cousine available for download:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/best-opensource/Cousine.zip">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>best-<![if gt IE 6]>&#8203;<![endif]><wbr>opensource/<![if gt IE 6]>&#8203;<![endif]><wbr>Cousine.<![if gt IE 6]>&#8203;<![endif]><wbr>zip</A>
+</blockquote>
+
+Here is a demo (note that the left smart quotes in this Cousine
+variant, called WTerm, have been modified, and that Cousine, unlike
+WTerm, has an italic/oblique, bold, and bold italic form):
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/terminal/WTerm/demo.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>WTerm/<![if gt IE 6]>&#8203;<![endif]><wbr>demo.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<A name=Best_monospace_pixel_font_Miscfixed_7x14></A><A name=BestmonospacepixelfontMiscfixed7x14></A><span class=moyet>==</span><span class=blogtitle><b>Best monospace pixel font: Misc-fixed 7x14</b></span><span class=moyet>==</span>
+
+<p>
+
+Like Bitstream Charter, this font dates back to the 1980s.  Unlike
+Bitstream Charter, we do not know who originally made this font.
+Misc fixed 7x14 is one of the terminal fonts that comes with
+the X windows system.  I have been using this font
+<a href="http://samiam.org/screenshots/1995_08_02.png">since 1995</a> and still use
+it today as my preferred terminal font.
+
+<p>
+
+It’s very readable and small enough that two terminals fit side-by-side 
+on a 1366x768 (or even 1280x800) screen, and three terminals fit side-by-side
+on a 1920x1080 (HD) screen.
+
+<p>
+
+The font comes with Linux; Macintosh users can get it via the XQuartz
+package.  I have made a Windows conversion of this font which works well
+in Cygwin (right click on a terminal, choose “options”, then choose
+“text”), PuTTY, or even MSys’s RXVT terminal:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/best-opensource/m7x14.fon">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>best-<![if gt IE 6]>&#8203;<![endif]><wbr>opensource/<![if gt IE 6]>&#8203;<![endif]><wbr>m<![if gt IE 6]>&#8203;<![endif]><wbr>7<![if gt IE 6]>&#8203;<![endif]><wbr>x<![if gt IE 6]>&#8203;<![endif]><wbr>14.<![if gt IE 6]>&#8203;<![endif]><wbr>fon</A>
+</blockquote>
+
+More information about this conversion is in a previous blog entry:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20131215.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20131215.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+Here is a screenshot with this font:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/screenshots/screenshot-2004.05.23.png">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>screenshots/<![if gt IE 6]>&#8203;<![endif]><wbr>screenshot-<![if gt IE 6]>&#8203;<![endif]><wbr>2004.<![if gt IE 6]>&#8203;<![endif]><wbr>05.<![if gt IE 6]>&#8203;<![endif]><wbr>23.<![if gt IE 6]>&#8203;<![endif]><wbr>png</A>
+</blockquote>
+
+<A name=Honorable_mention_PT_Sans_Narrow></A><A name=HonorablementionPTSansNarrow></A><span class=moyet>==</span><span class=blogtitle><b>Honorable mention: PT Sans Narrow</b></span><span class=moyet>==</span>
+
+<p>
+
+PT Sans Narrow gets an honorable mention as the best open-source
+condensed font that I have found.  PT Sans has a very distinct style
+to it; for example, the "3" is very angular.  To me, PT Sans Narrow
+feels a little like a Trebuchet Condensed font.
+
+<p>
+
+In my previous gig, we used this for PDF reports when we needed to fit
+a lot of text on a single line, with very good results.
+
+<p>
+
+I have a mirror of the font here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/best-opensource/honorable-mention/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>best-<![if gt IE 6]>&#8203;<![endif]><wbr>opensource/<![if gt IE 6]>&#8203;<![endif]><wbr>honorable-<![if gt IE 6]>&#8203;<![endif]><wbr>mention/</A>
+</blockquote>
+
+<A name=Georgia_with_lining_numbers></A><A name=Georgiawithliningnumbers></A><span class=moyet>==</span><span class=blogtitle><b>Georgia with lining numbers</b></span><span class=moyet>==</span>
+
+<p>
+
+I mentioned in a
+<a href="http://samiam.org/blog/2014-06-11.html">previous blog</a>
+that Georgia originally had lining numbers.  As it turns out, 
+Microsoft kept Georgia’s lining numbers in the version of the
+font for Windows 3.11.  Keep in mind that these are proportional,
+not tabular, numbers.
+
+<p>
+
+This font is an earlier version of Georgia; in particular its language
+support is far less extensive than more recent versions of Georgia —
+it only supports characters in earlier versions of the Windows-1252 code
+page without the Euro symbol.
+
+<p>
+
+For people interested in a free version of Georiga with lining numbers,
+I have made a mirror of the older Georgia here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/other/Microsoft/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>other/<![if gt IE 6]>&#8203;<![endif]><wbr>Microsoft/</A>
+</blockquote>
+
+<A name=Web_fonts_for_body_text></A><A name=Webfontsforbodytext></A><span class=moyet>==</span><span class=blogtitle><b>Web fonts for body text</b></span><span class=moyet>==</span>
+
+<p>
+
+In my
+<a href="http://samiam.org/blog/2014-06-11.html">last blog</a>, I mentioned that
+we might not be ready for web fonts in body text, because of holdouts
+still using Windows XP without clear type.  It is true that 
+<a href="http://samiam.org/blog/20111023.html">back in 2011</a> one could not
+readily use a web font for body text without non-cleartype 
+users complaining, but the number of such people has certainly
+greatly decreased.
+
+<p>
+
+Fonts with modern hinting technologies only look bad in Windows XP
+without clear type enabled
+systems in the following browsers (mostly outdated):
+
+<p>
+
+<ul>
+<li> Opera 12 
+<li> Older versions of Firefox
+<li> Chrome (But not as bad as Opera and older Firefox)
+</ul>
+
+<p>
+
+For people using Opera 12 or and older Firefox in Windows XP, please update
+your browser.  Opera 12 is scheduled to
+<a href="http://www.zdnet.com/time-to-move-on-final-patch-for-opera-12-due-by-mid-2014-7000023427/">no longer get security updates</a> 
+and any version of Firefox which doesn’t mandate clear type rendering for 
+clear type is unpatched.  
+
+<p>
+
+All users in Windows XP should enable Clear Type:
+
+<p>
+
+<ul>
+<li> Right click on the desktop
+<li> Click on “Properties”
+<li> Select the tab above marked “Appearance”
+<li> Press the button marked “Effects”
+<li> Select “Clear Type” as the way to smooth font edges
+</ul>
+
+<p>
+
+Better yet, Windows XP users really should replace their systems with
+either Windows 7 or Linux; Windows XP is no longer getting security
+updates (no, the security updates for the point-of-sale version of XP
+do not protect the entire system) and is a security incident waiting
+to happen.  And, yes, modern web fonts tend to look better in Linux and
+Windows 7 than they do in XP.
+
+<p>
+
+I will update my web page to use my Source Sans Pro derivative for
+all body text in early 2015 — I am giving holdouts who still use XP and who
+still haven’t enabled Clear Type eight months after Microsoft has stopped
+supporting XP.  The mobile design of this web page already
+uses a webfont for body text, as well as the compact blog index:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/all.html">http://samiam.org/blog/all.html</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

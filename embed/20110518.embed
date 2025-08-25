@@ -1,0 +1,61 @@
+<!--{TAGS:L}-->
+<div class=blogpic>
+<img src=pics/Android-Netbook.jpg>
+</div>
+
+<h1>Android SDK on a Netbook</h1>
+
+<h2>May 18, 2011</h2>
+
+As I mentioned in <A href=20110516.html>a previous blog</A>, many feel the 
+Intel N455 chip commonly found in low-end netbooks may be underpowered.  For
+example, they are sure that it is not fast enough to perform Android 
+development.  But, is it so?
+
+<p>
+
+Having downloaded and installed the Android SDK in my 32-bit Windows
+starter setup, my first conclusion was that running the Android emulator
+is far too slow to do any meaningful Android software development on a
+N455-based netbook.
+
+<p>
+
+Then I remembered that the Atom N455 is a 64-bit
+capable chip.  So, I brushed off the dust of my 64-bit Linux partition,
+installed the 32-bit compatible libraries (the Android SDK hasn't been
+compiled for 64-bit Linux yet), installed a 64-bit version of Java,
+and fired up the Linux Android SDK.
+
+<p>
+
+To say that it is faster than the Windows version is a vast understatement.
+Granted, the emulated Android platform is still sluggish, but it appears fast
+enough to develop and debug software on.
+
+<p>
+
+So, yes, Android SDK development is a "killer app" that runs better in Linux
+than it does in Windows.
+
+<p>
+
+As a result, I've been spending much of today getting Linux up to snuff 
+(e-book reader, multiple browsers, Skype--now available for 64-bit Linux, 
+etc.).  
+
+<p>
+
+I don't think Linux will ever be my main desktop again, but it is now
+my desktop when I am developing Android applications.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

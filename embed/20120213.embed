@@ -1,0 +1,48 @@
+<!--{TAGS:M}-->
+
+<h1>On Ghost Domains</h1>
+
+<h2>February 13, 2012</h2>
+
+Earlier this month Haixin Duan, et al released the paper <A 
+href=https://www.isc.org/files/imce/ghostdomain_camera.pdf>"Ghost
+Domain Names: Revoked Yet Still Resolvable"</A> (PDF document).  
+For people who do not have the time to read the paper, this paper 
+describes how a phisher can keep a malicious domain resolving after
+said domain is canceled upstream.
+
+<p>
+
+As it turns out, Deadwood is immune to this attack because it uses a 
+different method to resolve domains than what most other DNS servers 
+use.  While more complicated, Deadwood is immune to some attacks which 
+other DNS servers are vulnerable to.
+
+<p>
+
+I describe how Deadwood resolves domains in great depth in the
+following paper:
+
+<blockquote>
+<A href=http://maradns.org/deadwood/doc/Recursive-algorithm.html 
+>http://maradns.org/deadwood/doc/Recursive-algorithm.html</A>
+</blockquote>
+
+<p>
+
+Since the above document does not clarify this: Deadwood, like any
+other modern DNS server, does DNS ID and source port randomization. 
+Indeed, Deadwood was doing this well before Kaminsky's attack came
+to surface in mid-2008.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>
+

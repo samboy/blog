@@ -1,0 +1,166 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>2014 goals</h1>
+<h2>January 1, 2014</h2>
+This blog looks at some of my goals for 2014.
+
+<p>
+
+<A name=Returning_to_the_gym></A><A name=Returningtothegym></A><span class=moyet>==</span><span class=blogtitle><b>Returning to the gym</b></span><span class=moyet>==</span>
+
+<p>
+
+I got a gym membership in 2013.  One goal in 2014 is to use it more 
+frequently.
+
+<p>
+
+<A name=Getting_up_at_a_reasonable_hour></A><A name=Gettingupatareasonablehour></A><span class=moyet>==</span><span class=blogtitle><b>Getting up at a reasonable hour</b></span><span class=moyet>==</span>
+
+<p>
+
+One nice thing about having a baby in my life is that I have 
+<i>finally</i> stopped being a night owl and usually go to bed around 
+10pm at night, waking up fairly early in the morning.  Another goal for
+2014 is to maintain a normal sleep schedule.
+
+<p>
+
+
+<p>
+
+<A name=Making_money></A><A name=Makingmoney></A><span class=moyet>==</span><span class=blogtitle><b>Making money</b></span><span class=moyet>==</span>
+
+<p>
+
+Another personal goal for 2014 is to find more sources of revenue in my life
+to better support my wife and child.  I don’t have a solid plan on
+how I will go about doing this yet, but am open to suggestions.
+
+<p>
+
+That in mind, one step is for me to minimize spending time on things that do 
+not get me closer to that goal (video games, time wasting web sites, Internet
+communities, any kind of partying, etc.).
+
+<p>
+
+This leads me to my...
+
+<p>
+
+<A name=MaraDNS_roadmap></A><A name=MaraDNSroadmap></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS roadmap</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS is in maintenance mode, as I
+<a href="http://samiam.org/blog/20131231.html">mentioned yesterday</a>.  
+I need to update and reinforce the support boundaries for MaraDNS:
+
+<p>
+
+<ul>
+<li> No new features added without me getting paid
+<li> All unpaid support is now done in the forum.  
+<li> New for 2014: The minimum fee for paid MaraDNS work is now $500.  Any 
+  request for paid MaraDNS features will require a non-refundable $500 payment 
+  made to me before any work is done.  These terms are not open to 
+  negotiation.
+</ul>
+
+<p>
+
+My plan for 2014 is to, barring a security hole with a CVE number, make
+a single MaraDNS release (2.0.08) later on this month, and a single
+Deadwood release (3.2.05) incorporating any and all hostname resolution
+updates near the end of the year.
+
+<p>
+
+The only supported OSes for MaraDNS and Deadwood in 2014 will be CentOS 6
+(barring CentOS falling behind on updates like they did in 2011) and partial
+support for Windows 7 (while Deadwood has full Windows support, the native 
+Windows version of MaraDNS’ authoritative server does not have DNS-over-TCP
+nor the native ability to run as a Windows service).
+
+<p>
+
+People using MaraDNS in more recent Linux releases with systemd are 
+free to use 
+<a href="http://maradns.samiam.org/download/patches/3rd_party/Thomasz-Torcz-systemd-2013-10-14.patch">Tomasz Torcz’s systemd patch</a>.
+
+<p>
+
+I know these are pretty strong support boundaries, but the fact of the
+matter is this: The only revenue stream I have found for MaraDNS has
+been to use it as “resume-ware” (showing it to potential employers
+to get better job offers), and working on MaraDNS does not otherwise help me
+find solid revenue sources.
+
+<p>
+
+<A name=Internet_communities></A><A name=Internetcommunities></A><span class=moyet>==</span><span class=blogtitle><b>Internet communities</b></span><span class=moyet>==</span>
+
+<p>
+
+I used to be a pretty active member of 
+<a href="http://samiam.org/slashdot.html">Slashdot</a>, the 
+<a href="http://en.wikipedia.org/wiki/User:Samboy">Wikipedia</a>, and other Internet
+communities.  Since being a part of those communities is not making me any
+money, it’s time to cut the cord: No posting in places like those (including,
+but not limited to: Reddit, Ycombinator’s “Hacker news”, etc.)
+
+<p>
+
+One possible exception: 
+<a href="http://stackoverflow.com">Stack Overflow</a>.  I use Stack Overflow a lot in my
+day job for finding solutions to problems developing our software. The
+advantage of being a part of this community compared to others is that
+I can show my programming expertise in a public manner which might help
+me get more revenue in my life.
+
+<p>
+
+<A name=My_blog></A><A name=Myblog></A><span class=moyet>==</span><span class=blogtitle><b>My blog</b></span><span class=moyet>==</span>
+
+<p>
+
+Another goal is to only make 
+<i>at most</i> about one blog entry a week.  I
+made 73 blog entries in 2013; my plan is to make no more than 52 blogs
+in 2014, unless, of course, someone wants to pay me to blog.
+
+<p>
+
+Speaking of my blog, my first geek accomplishment in 2014 has been to
+change my blog’s date format from YYYYMMDD (for example, “20131231”) to
+<a href="http://xkcd.com/1179/">ISO-8601</a> compliant YYYY-MM-DD dates (for example,
+“2014-01-01”).  The reason I did this just after the new year is so
+the transition does not break sorting with old blog entries in the
+previous date format.
+
+<p>
+
+<A name=2014_Lets_go></A><A name=2014Letsgo></A><span class=moyet>==</span><span class=blogtitle><b>2014: Let’s go</b></span><span class=moyet>==</span>
+
+<p>
+
+While there are a lot of other things I would like to accomplish in 2014,
+making this list is a pretty good start.  2013 was a good year but I
+know 2014 will be even better.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

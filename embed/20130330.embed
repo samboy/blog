@@ -1,0 +1,757 @@
+<h1>March 2013 Microblogs</h1>
+<h2>March 30, 2013</h2>
+Here are all of the microblog postings I made in March 2013.
+I discuss Linux and how TANSTAAFL (there ain’t no such thing as a
+free lunch), MaraDNS, gay rights, sex and being in the friendzone, etc.
+
+<p>
+
+<A name=WPA_in_Linux_without_Gnome></A><A name=WPAinLinuxwithoutGnome></A><span class=moyet>==</span><span class=blogtitle><b>WPA in Linux without Gnome</b></span><span class=moyet>==</span>
+
+<p>
+
+I know all of the hardware on my primary laptop, except for
+the wired ethernet, works in CentOS 6 Linux.  Unfortunately, I
+couldn’t find the time to figure out how to use wireless networks
+without using Gnome’s GUI; this blog answered my question:
+<A href="http://www.janoszen.com/2013/03/26/using-wpa-from-the-linux-command-line/">http://www.janoszen.com/2013/03/26/using-wpa-from-the-linux-command-line/</A>
+
+<p>
+
+<i>Posted Mar 29 2013</i>
+
+<p>
+
+<A name=Thank_you_anonymous_poster></A><A name=Thankyouanonymousposter></A><span class=moyet>==</span><span class=blogtitle><b>Thank you, anonymous poster</b></span><span class=moyet>==</span>
+
+<p>
+
+Since I have no plans to post to Slashdot again until 2014, I
+will post a thank you to the anonymous hero who posted this at
+<A href="http://slashdot.org/comments.pl?sid=3592647&amp;cid=43313739">http://slashdot.org/comments.pl?sid=3592647&amp;cid=43313739</A>
+
+<p>
+
+<blockquote>
+Thank you for MaraDNS. It's a great piece of software. This incident 
+again demonstrates, that DNS security is pivotal, and that is why I 
+chose MaraDNS to manage my own domain name. It has all that I need, 
+with everything explained in relatively simple terms and the security 
+implications are always well-documented. Thank you!
+</blockquote>
+
+I wish more people at Slashdot were as kind as this anonymous poster.
+
+<p>
+
+<i>Posted Mar 29 2013</i>
+
+<p>
+
+<A name=Letting_go_of_MaraDNS></A><A name=LettinggoofMaraDNS></A><span class=moyet>==</span><span class=blogtitle><b>Letting go of MaraDNS</b></span><span class=moyet>==</span>
+
+<p>
+
+One of the challenges I am dealing with right now is letting go of
+MaraDNS.  I’m not talking on a development level — I have long since
+stopped actively developing Mara and now only maintain her — but on
+an emotional level.
+
+<p>
+
+The truth of the matter is this: Back in 2002, MaraDNS was good because
+it was the first complete open-source authoritative and recursive DNS
+server besides BIND.  Things have changed a lot since then and
+<a href="http://samiam.org/blog/20120326.html">I no longer consider MaraDNS “Secure”</a>, and
+I sometimes wonder
+<a href="http://samiam.org/blog/20120321.html#future">what lies in the future for MaraDNS</a>.
+
+<p>
+
+MaraDNS was an important part of the development of DNS options in the
+first 2000s decade, but that time is past and I need to find a different
+identity for myself in geek-space besides “the MaraDNS guy”.
+
+<p>
+
+In more detail:
+
+<p>
+
+BIND ultimately won 2001’s BIND-vs-djbdns endless flamewar because
+of DNSSEC; DJB tried to stop DNSSEC steamrolling djbdns with DNSCURVE.
+For better or for worse, DNSSEC won, and now DNS is no longer can
+practically be implemented by a one-man show any more.  While I disagree
+with DJB on a lot of things, I understand why he rejected DNSSEC and
+proposed DNSCURVE: He wanted to keep DNS simple, to keep DNS something
+that a single talented developer can implement in their spare time.
+
+<p>
+
+I plain simply can not implement DNSSEC for MaraDNS 
+<a href="http://maradns.org/products.html">unless someone were to put some serious money on the table</a>.
+Neckbeards are good at operating computers, but their social skills and
+empathy for others is at best so-so, which makes them not very good at
+making that kind of money. (A “neckbeard” does not have to be literal;
+Sheldon Cooper, for example, is a canonical neckbeard)
+
+<p>
+
+As for the monoculture problem DNS had in 2001 (open-source DNS 
+<i>was</i>
+a monoculture because djbdns wasn’t open-source back then), nlnet labs
+was, a few years after MaraDNS 1.0, able to get a government grant and
+use the money to develop a DNS server suite (NSD/Unbound) that not only
+fully supports BIND’s zone file format, but also fully supports DNSSEC.
+The sense I get is that many who used to use MaraDNS (people who wanted
+something open-source but wasn’t BIND) are now either using a newer
+BIND or a combination of NSD and Unbound.
+
+<p>
+
+I will continue to maintain MaraDNS but I will no longer define myself
+by MaraDNS.
+
+<p>
+
+<i>Posted Mar 29 2013</i>
+
+<p>
+
+<A name=The_gay_marriage_debate_in_50_years></A><A name=Thegaymarriagedebatein50years></A><span class=moyet>==</span><span class=blogtitle><b>The gay marriage debate in 50 years</b></span><span class=moyet>==</span>
+
+<p>
+
+The gay marriage debate in 50 years: <A href="http://theoatmeal.com/comics/gay_marriage">http://theoatmeal.com/comics/gay_marriage</A>
+
+<p>
+
+An older friend in the south who remembers the battle for civil rights
+in the 1960s tells me that it got really ugly.
+
+<p>
+
+<i>Posted Mar 29 2013</i>
+
+<p>
+
+<A name=Living_in_moms_basement></A><A name=Livinginmomsbasement></A><span class=moyet>==</span><span class=blogtitle><b>Living in mom’s basement</b></span><span class=moyet>==</span>
+
+<p>
+
+In other cultures, multiple generations living under the same roof is
+normal; I feel the idea that a kid has to move out of the house at 18
+to be a real man is one that is bad for families. It's actually in many
+ways good when a 45-year-old man still lives in his mother's basement,
+since he will become the one taking care of his aging mother instead of
+sending her to a nursing home.
+
+<p>
+
+<i>Posted Mar 29 2013</i>
+
+<p>
+
+<A name=Linux_Game_Tome_announcement></A><A name=LinuxGameTomeannouncement></A><span class=moyet>==</span><span class=blogtitle><b>Linux Game Tome announcement</b></span><span class=moyet>==</span>
+
+<p>
+
+Here is the Linux Game Tome announcement of the site shutting down:
+
+<p>
+
+<blockquote>
+Hi folks,
+
+<p>
+
+The Linux Game Tome will shut down on April 13. Those of us who have
+maintained happypenguin.org over the years now lack both the time and
+the ambition to do what is necessary to keep the site afloat. If you've
+been paying attention, you've noticed the spam clogging the forums, the
+lack of updates and the increasing brokenness of the site. The code
+driving this site, written by a novice web developer in 1999, is sorely
+out of date. It's time to put it out of its misery.
+
+<p>
+
+If the community misses this resource, I urge it to build The Linux Game
+Tome v3.0. If such an effort ever came to fruition and publicly pledged
+to remain free and not for profit, I would be delighted to transfer
+ownership of the happypenguin.org domain. Sometime soon, I'll make
+available a dump of the Game Tome games database (minus user information)
+that anyone may use for any purpose they'd like, including building
+a successor site. Before you ask: no, you may not have a copy of the
+site code. It is not fit for human consumption. Even as a reference, it
+can only corrupt.
+
+<p>
+
+Thank you to everyone who contributed to the site over the years, either
+as moderators, contributors or benefactors.
+</blockquote>
+
+<blockquote>
+bobz
+</blockquote>
+
+<i>Posted Mar 28 2013</i>
+
+<p>
+
+<A name=DNS_and_DDOS></A><A name=DNSandDDOS></A><span class=moyet>==</span><span class=blogtitle><b>DNS and DDOS</b></span><span class=moyet>==</span>
+
+<p>
+
+I will probably make this entry a full blown blog, but in the meantime,
+in light of the huge (300Gb/S) distributed denial-of-service (DDOS)
+attack against Spamhaus that used DNS, here are my thoughts:
+
+<p>
+
+<ul>
+<li> MaraDNS 1 and Deadwood do not support a technology called “EDNS”
+  that allows for large DNS packets.  By only supporting 512-byte packets,
+  both DNS servers do not allow for the 100x amplification used in this
+  DDOS that other DNS servers have.
+<li> My DNS software does not come with unrestricted recursive access enabled
+  by default, and the documentation strongly discourages open recursion.
+<li> I will have to double check, but, as I recall, the documentation and
+  example configuration files do not include an example with unrestricted
+  recursive access.
+</ul>
+
+<p>
+
+One feature that would be nice would be to be able to restrict how
+much data my DNS server sends to a given IP (again, as noted above,
+MaraDNS/Deadwood already has a form of this because they do not support
+EDNS).  Unfortunately, since I am not developing new features for MaraDNS
+like this without being compensated for my time, I would need a corporate
+or government grant to implement this.
+
+<p>
+
+<i>Posted Mar 28 2013</i>
+
+<p>
+
+<A name=Friendzone_Powned></A><A name=FriendzonePowned></A><span class=moyet>==</span><span class=blogtitle><b>Friendzone Powned</b></span><span class=moyet>==</span>
+
+<p>
+
+In the old “That 70’s Show” episode “A New Hope”, the notion
+of a guy in a girl’s friendzone being able to convert the friendship
+in to a relationship is shattered to pieces.  The episode can be seen
+here <A href="http://www.youtube.com/watch?v=nSDZgnNoLR8">http://www.youtube.com/watch?v=nSDZgnNoLR8</A>
+
+<p>
+
+For any guy in a relationship like this:
+<i>Stop fooling yourself!</i>
+While it is possible to have a productive friendship with a girl, a
+“friendship” when someone has more-than-friends feelings is just
+going to hurt until expectations are reset and the misplaced romantic
+feelings go away.
+
+<p>
+
+<i>Posted Mar 27 2013</i>
+
+<p>
+
+<A name=Life_Cycle_of_a_Freeware_Game></A><A name=LifeCycleofaFreewareGame></A><span class=moyet>==</span><span class=blogtitle><b>Life Cycle of a Freeware Game</b></span><span class=moyet>==</span>
+
+<p>
+
+Steffen, author of the open-source C-evo game, has an
+interesting summary on the life cycle of a freeware game:
+<A href="http://c-evo.org/forum/recall.php?p=4615">http://c-evo.org/forum/recall.php?p=4615</A>
+
+<p>
+
+I think this is generally true of all software, open-source or not.
+A new program hits the market, people have a lot of interest in it,
+it no longer is new and shiny, stops making money (if commercial), and
+eventually people lose interest in it altogether.  It’s more true of
+games than applications, but the same cycle applies with applications
+(I see a lot more of Google Docs being used than Microsoft Office
+these days).
+
+<p>
+
+<i>Posted Mar 27 2013</i>
+
+<p>
+
+<A name=Google_Reader></A><A name=GoogleReader></A><span class=moyet>==</span><span class=blogtitle><b>Google Reader</b></span><span class=moyet>==</span>
+
+<p>
+
+The lesson to learn from Google Reader is this: When using a
+<i>free</i>
+web service, said service can go away any time; especially if they can
+not figure out how to make money from its free users.
+
+<p>
+
+A web service is very different from a piece of software.  It requires
+someone to actively keep the site up:
+
+<p>
+
+<ul>
+<li> Upgrading the system the site is on with respect to security and
+  other updates.
+<li> Paying hosting fees to keep the site up.  Said hosting fees go up when
+  the web site gets more users.
+<li> Keeping the site current so that it continues to work with newer
+  browsers and newer environments that access the web.
+</ul>
+
+<p>
+
+This is the baseline maintenance needed for a web site; compare this to
+a piece of software, where baseline maintenance is fixing security bugs.
+Indeed, I still use a program called FVWM1 today, a piece of software
+which has not been updated for nearly two decades.  I would not be able
+to use a web service the author lost interest in a year ago (much less
+two decades ago); their web site would have been shut down already.
+
+<p>
+
+<i>Posted Mar 27 2013</i>
+
+<p>
+
+<A name=Mosaics_default_home_page_is_still_around></A><A name=Mosaicsdefaulthomepageisstillaround></A><span class=moyet>==</span><span class=blogtitle><b>Mosaic’s default home page is still around</b></span><span class=moyet>==</span>
+
+<p>
+
+Mosaic was the first mainstream browser; it
+made the Internet graphical instead of text-based.
+<A href="http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/NCSAMosaicHome.html">http://www.ncsa.uiuc.edu/SDG/Software/Mosaic/NCSAMosaicHome.html</A>
+(Mosaic’s default home page) is still around and redirects to a page
+that says “get another browser”
+
+<p>
+
+Speaking of getting other browsers on older systems, newer versions of
+Firefox do not install in Windows 2000, but Firefox 10.0.12 ESR does:
+ftp://ftp.mozilla.org/pub/firefox/releases/10.0.12esr/
+
+<p>
+
+<i>Posted Mar 26 2013</i>
+
+<p>
+
+<A name=Linux_Game_Tome_shutting_down></A><A name=LinuxGameTomeshuttingdown></A><span class=moyet>==</span><span class=blogtitle><b>Linux Game Tome shutting down</b></span><span class=moyet>==</span>
+
+<p>
+
+The Linux Game Tome has been, for years, a very useful resource for
+reviewing and finding games for Linux.  They have announced yesterday
+that they are shutting down the site in April; the site is currently
+non-responsive.  Here is Slashdot’s coverage:
+<A href="http://linux.slashdot.org/story/13/03/26/065223/the-end-is-nigh-for-the-linux-game-tome">http://linux.slashdot.org/story/13/03/26/065223/the-end-is-nigh-for-the-linux-game-tome</A>
+
+<p>
+
+The reason why many Linux and free software sites keep going down
+is because, without money changing hands, there is relatively little
+motivation for people to keep sites up, even if the sites are popular.
+TANSTAAFL (There ain’t no such thing as a free lunch).  This sarcastic
+/. post summarizes what is wrong with a lot of thinking in the open source
+community: <A href="http://linux.slashdot.org/comments.pl?sid=3582897&amp;cid=43280533">http://linux.slashdot.org/comments.pl?sid=3582897&amp;cid=43280533</A>
+
+<p>
+
+The best monetization strategy I have seen for Linux websites is the one
+<a href="http://lwn.net/">LWN</a> uses:
+<A href="http://lwn.net/subscribe/Info">http://lwn.net/subscribe/Info</A>
+
+<p>
+
+<i>Posted Mar 26 2013</i>
+
+<p>
+
+<A name=That_red_and_pink_equals_sign></A><A name=Thatredandpinkequalssign></A><span class=moyet>==</span><span class=blogtitle><b>That red and pink equals sign</b></span><span class=moyet>==</span>
+
+<p>
+
+That pink equals sign with a red background which a number
+of people are making their Facebook profile picture today
+is a symbol representing human rights for gay people.
+<A href="http://newsfeed.time.com/2013/03/26/what-is-the-red-equal-sign-all-over-facebook-and-twitter/">http://newsfeed.time.com/2013/03/26/what-is-the-red-equal-sign-all-over-facebook-and-twitter/</A>
+
+<p>
+
+It goes back to the book I’m reading right now—Orwell’s 1984. In
+1984 “All marriages between Party members had to be approved by a
+committee”. I don’t want that. Our country is about freedom. It’s
+the freedom to say “I want to marry who I love”. It’s not the
+government’s place to say “You can’t marry this adult”.
+
+<p>
+
+<i>Posted Mar 26 2013</i>
+
+<p>
+
+<A name=SSI_Entitlements></A><A name=SSIEntitlements></A><span class=moyet>==</span><span class=blogtitle><b>SSI Entitlements</b></span><span class=moyet>==</span>
+
+<p>
+
+I can’t say that The Atlantic is a liberal shill.
+Not when they complain about this government entitlement:
+<A href="http://www.theatlantic.com/business/archive/2013/03/disability-insurance-americas-124-billion-secret-welfare-program/274302/">http://www.theatlantic.com/business/archive/2013/03/disability-insurance-americas-124-billion-secret-welfare-program/274302/</A>
+
+<p>
+
+The problem with SSI entitlements is that they are set up to encourage
+people to not work.  If someone gets a job while on SSI, they take away
+the SSI entitlement and usually won’t allow them to get SSI again.
+
+<p>
+
+Pournelle’s “iron law of bureaucracy” is in play here:
+<A href="http://www.jerrypournelle.com/reports/jerryp/iron.html">http://www.jerrypournelle.com/reports/jerryp/iron.html</A>
+
+<p>
+
+I have a better idea: Anyone on SSI entitlements who gets a job is
+allowed to keep one dollar of every two dollars they earn.  If they end
+up earning more than twice of what they got on SSI, and keep the job
+for a year earning that much, they are automatically taken off of SSI.
+
+<p>
+
+They are probably better ways to get someone on SSI working again.
+See Clinton’s “Welfare to Work” programs implemented in the 1990s.
+
+<p>
+
+<i>Posted Mar 25 2013</i>
+
+<p>
+
+<A name=Proud_to_move_away_from_Twitter></A><A name=ProudtomoveawayfromTwitter></A><span class=moyet>==</span><span class=blogtitle><b>Proud to move away from Twitter</b></span><span class=moyet>==</span>
+
+<p>
+
+And then, there’s people like me who no longer actively use Twitter.
+Real developers can implement their own Twitter clone in a day or
+two.  <A href="http://mashable.com/2013/03/25/tech-industry-obnoxious-tweeters/">http://mashable.com/2013/03/25/tech-industry-obnoxious-tweeters/</A>
+
+<p>
+
+<i>Posted Mar 25 2013</i>
+
+<p>
+
+<A name=LXC_is_still_not_there></A><A name=LXCisstillnotthere></A><span class=moyet>==</span><span class=blogtitle><b>LXC is still not there</b></span><span class=moyet>==</span>
+
+<p>
+
+Back in 1991, Linux had no future and GNU Hurd was going to soon replace
+it.  Didn’t happen.  Likewise, for me to see OpenVZ replaced by LXC, it
+is going to have to be able to to do everything OpenVZ does first (or,
+at least, provide secure isolation from other containers).  Here’s
+a comparison: <A href="http://www.janoszen.com/2013/01/22/lxc-vs-openvz/">http://www.janoszen.com/2013/01/22/lxc-vs-openvz/</A>
+
+<p>
+
+<i>Posted Mar 25 2013</i>
+
+<p>
+
+<A name=Special_Effects_people_not_paid_enough></A><A name=SpecialEffectspeoplenotpaidenough></A><span class=moyet>==</span><span class=blogtitle><b>Special Effects people not paid enough</b></span><span class=moyet>==</span>
+
+<p>
+
+The only significant non-unionized group in Hollywood, special effects
+people, are not getting paid enough and, indeed, a number of special
+effect houses are going out of business:
+<A href="http://www.latimes.com/entertainment/envelope/cotown/la-et-ct-runaway-visual-effects-20130324,0,1842816.story">http://www.latimes.com/entertainment/envelope/cotown/la-et-ct-runaway-visual-effects-20130324,0,1842816.story</A>
+
+<p>
+
+<i>Posted Mar 25 2013</i>
+
+<p>
+
+<A name=Reading_1984_again></A><A name=Reading1984again></A><span class=moyet>==</span><span class=blogtitle><b>Reading 1984 again</b></span><span class=moyet>==</span>
+
+<p>
+
+I’m reading Orwell’s 1984 again. I read this book once every decade
+or so to remind me why I must never take my own freedom for granted—or
+take anyone else’s freedom from them. It can be legally downloaded
+here: <A href="http://ebooks.adelaide.edu.au/o/orwell/george/o79n/">http://ebooks.adelaide.edu.au/o/orwell/george/o79n/</A>
+
+<p>
+
+I find it ironic that Kindle owners who had their copies of 1984 yanked
+from their Kindles by Amazon can now legally download 1984 from this
+site in a Kindle-compatible format (it’s also available there as epub
+and nicely formatted html; I’m using Lynx to convert the html in to
+text to read it in a PuTTY terminal)
+
+<p>
+
+<i>Posted Mar 24 2013</i>
+
+<p>
+
+<A name=Finally_a_patch_for_CVE20121193></A><A name=FinallyapatchforCVE20121193></A><span class=moyet>==</span><span class=blogtitle><b>Finally, a patch for CVE-2012-1193</b></span><span class=moyet>==</span>
+
+<p>
+
+It took over a year, but PowerDNS finally has a patch for
+CVE-2012-1193: <A href="http://wiki.powerdns.com/trac/ticket/668">http://wiki.powerdns.com/trac/ticket/668</A>
+I was about to declare PowerDNS’ recursor abandoned.
+
+<p>
+
+<i>Posted Mar 23 2013</i>
+
+<p>
+
+<A name=Bad_sex_isnt_rape></A><A name=Badsexisntrape></A><span class=moyet>==</span><span class=blogtitle><b>Bad sex isn’t rape</b></span><span class=moyet>==</span>
+
+<p>
+
+This one is personal to me: I had a friend falsely accused of rape
+after having consentual sex with a girl, because she didn’t want
+to admit she cheated.  “My bad sex wasn’t rape”, by Anna March
+<A href="http://www.salon.com/2013/03/22/my_bad_sex_wasnt_rape/">http://www.salon.com/2013/03/22/my_bad_sex_wasnt_rape/</A>
+
+<p>
+
+<i>Posted Mar 23 2013</i>
+
+<p>
+
+<A name=Friend_zone></A><A name=Friendzone></A><span class=moyet>==</span><span class=blogtitle><b>Friend zone</b></span><span class=moyet>==</span>
+
+<p>
+
+I have had very positive friendships with women where sex or even the
+potential for sex was not on the table.
+
+<p>
+
+The thing men need to understand that being in the friend zone is just
+that—the relationship will never become physical.
+
+<p>
+
+Women in a friend zone relationships with men need to understand that it
+is not appropriate to ask for favors from male friends that they would
+not ask for from a female friend.
+
+<p>
+
+<i>Posted Mar 22 2013</i>
+
+<p>
+
+<A name=Hookup_culture></A><A name=Hookupculture></A><span class=moyet>==</span><span class=blogtitle><b>Hookup culture</b></span><span class=moyet>==</span>
+
+<p>
+
+Today’s “hook up” culture is downright dangerous.  A society where the
+majority of women only have sex with relatively few Alpha males is a
+much more unstable society than one where lifetime monogamy is the norm.
+<A href="http://www.theatlantic.com/magazine/archive/2012/09/boys-on-the-side/309062/?single_page=true">http://www.theatlantic.com/magazine/archive/2012/09/boys-on-the-side/309062/?single_page=true</A>
+
+<p>
+
+<i>Posted Mar 22 2013</i>
+
+<p>
+
+<A name=Alpha_Beta></A><A name=AlphaBeta></A><span class=moyet>==</span><span class=blogtitle><b>Alpha Beta</b></span><span class=moyet>==</span>
+
+<p>
+
+Alpha Beta is not only a name of a
+<a href="http://www.groceteria.com/store/regional-chains/a-e/alpha-beta/">defunct
+</a>grocery chain|,
+it is also a view of human reproductive strategy: Alpha males end up
+having more access to females and, therefore, more offspring, while Beta
+males end up having fewer offspring.
+
+<p>
+
+The paper
+<i>Strong gender differences in reproductive success variance,</i>
+<i>and the times to the most recent common ancestors</i>
+by Maroussia Favre and Didier Sornette presents evidence that, historically,
+men had about a 40% chance of propagating their genetic code, while women
+have had an 80% of doing so.
+
+<p>
+
+One can read this paper here: <A href="http://arxiv.org/pdf/1203.6231.pdf">http://arxiv.org/pdf/1203.6231.pdf</A>
+(PDF file)
+
+<p>
+
+<i>Posted Mar 21 2013</i>
+
+<p>
+
+<A name=How_fame_fades_so_quickly></A><A name=Howfamefadessoquickly></A><span class=moyet>==</span><span class=blogtitle><b>How fame fades so quickly</b></span><span class=moyet>==</span>
+
+<p>
+
+I’m amazed how quickly fame fades with those things that go
+viral on the Internet.  Remember that young lady who got fired
+for posting a receipt online?  (If not, I blogged about it at
+<A href="http://www.samiam.org/blog/20130205.html">http://www.samiam.org/blog/20130205.html</A>).  She now has a Twitter
+account, with all of 20 (yes, 20 as in twenty) followers, and still
+hasn’t found a new job: <A href="https://twitter.com/ChelseaGWelch">https://twitter.com/ChelseaGWelch</A>
+
+<p>
+
+In addition to my comment, when I discussed Adria Richards, about being
+very careful with one’s words in public that may reflect poorly on
+one’s employer, I also have this to say: I blog here so that, should
+something I post ever go viral, I’m the one making the ad revenue.
+This way, I still have something to show for my 15 minutes of fame once
+the Internet loses interest and moves on to whatever becomes viral next.
+I’m sure Ms. Welch would feel very differently today about how things
+went down if she had a few thousand dollars of ad revenue to show for it.
+
+<p>
+
+There’s one thing I don’t understand about people spending so much
+time on Twitter, Facebook, Reddit, and other corporate sites owned by
+someone else: Time spent there becomes money in someone else’s pocket.
+At least with Usenet, no megacorp was directly making money from
+people’s postings.
+
+<p>
+
+<i>Posted Mar 21 2013</i>
+
+<p>
+
+<A name=Adria_Richards></A><A name=AdriaRichards></A><span class=moyet>==</span><span class=blogtitle><b>Adria Richards</b></span><span class=moyet>==</span>
+
+<p>
+
+To summarize a hugely viral story making the rounds right now:
+
+<p>
+
+<ul>
+<li> One Adria Richards was at a “sausage fest” conference where she felt
+  offended that a couple of men were making what she felt were off-color
+  sexist jokes.
+<li> Instead of directly confronting the men, she took their picture, along
+  with a short summary of their joke, and posted it on Twitter.
+<li> One of the men pictured was fired from his job
+<li> This person getting fired upset a number of people, resulting in
+  Ms. Richards herself getting fired.
+</ul>
+
+<p>
+
+The lesson here is:
+<i>Be very careful with what you say in public that may represent </i>
+<i>your employer.</i>
+An off-color joke that may be OK when said in whispered tones in the corner
+of a cubicle should not be repeated in public—not with people one does not
+know well, not even in a personal conversation if said conversation is in
+a public place.
+
+<p>
+
+People had to be fired not because of the joke or because people
+were outed for saying said joke.  People were fired because all of
+this happened in public, where the employers were forced to be held
+accountable.
+
+<p>
+
+My experience is that employers are a lot more tolerant of things that
+stay within the walls of their offices than they are of things that the
+entire Internet can see.
+
+<p>
+
+Here’s the best summary of the whole soap opera that I found:
+<A href="http://amandablumwords.wordpress.com/2013/03/21/3/">http://amandablumwords.wordpress.com/2013/03/21/3/</A>
+
+<p>
+
+<i>Posted Mar 21 2013</i>
+
+<p>
+
+<A name=Nginx_quirk></A><A name=Nginxquirk></A><span class=moyet>==</span><span class=blogtitle><b>Nginx quirk</b></span><span class=moyet>==</span>
+
+<p>
+
+With nginx, the following will show you the PHP source code for foo.php
+when going to nginx.foo:
+
+<p>
+
+<tt>location / {</tt><br>
+<tt>&nbsp;root html/nginx.foo/;</tt><br>
+<tt>&nbsp;index foo.php;</tt><br>
+<tt>}</tt><br>
+<tt></tt><br>
+<tt>location ~ \.php$ {</tt><br>
+<tt>&nbsp;root html/nginx.foo/;</tt><br>
+<tt>&nbsp;fastcgi_pass unix:/tmp/php.socket;</tt><br>
+<tt>&nbsp;fastcgi_index foo.php;</tt><br>
+<tt>&nbsp;include fastcgi_params;</tt><br>
+<tt>&nbsp;index foo.php;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+To fix this:
+
+<p>
+
+<tt>location ~ \.php$ {</tt><br>
+<tt>&nbsp;root html/nginx.foo/;</tt><br>
+<tt>&nbsp;fastcgi_pass unix:/tmp/php.socket;</tt><br>
+<tt>&nbsp;fastcgi_index foo.php;</tt><br>
+<tt>&nbsp;include fastcgi_params;</tt><br>
+<tt>&nbsp;index foo.php;</tt><br>
+<tt>}</tt><br>
+<tt></tt><br>
+<tt>location / {</tt><br>
+<tt>&nbsp;root html/nginx.foo/;</tt><br>
+<tt>&nbsp;index foo.php;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+This way, all PHP pages are processed by fastcgi first.
+
+<p>
+
+<i>Posted Mar 20 2013</i>
+
+<p>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,139 @@
+<h1>On NXDOMAIN</h1>
+
+<h2>April 23, 2011</h2>
+Some feel that NXDOMAIN should not only mean "this host name does
+not exist", but also should mean "not only does this host name not exist, 
+but any child names also do not exist" (in more detail, if foo.example.com
+returns a NXDOMAIN, some feel this means bar.foo.example.com does not
+exist, but tinydns will return a NXDOMAIN for foo.example.com even if
+bar.foo.example.com exists):
+
+<blockquote>
+	<A href="http://marc.info/?l=djbdns&m=130132697825674&w=1">http://marc.info/?l=djbdns&m=130132697825674&w=1</A>
+</blockquote>
+
+However, back in 1999, Paul Vixie said that a server must return a NXDOMAIN,
+even if there are child names:
+
+<hr>
+<div class=usenet>
+<pre>
+From: Paul A Vixie {vi...@mibh.net}
+Subject: Re: sub.dom with cached NXDOMAIN dom
+Date: 1999/12/08
+Message-ID: {199912080700.XAA18392@bb.rc.vix.com}#1/1
+X-Deja-AN: 558054698
+Approved: use...@vix.com
+X-Complaints-To: abuse@isc.org
+Organization: none
+Mime-Version: 1.0
+NNTP-Posting-Date: 8 Dec 1999 08:02:48 GMT
+Newsgroups: comp.protocols.dns.std
+
+} Here are three ways to use a recently cached NXDOMAIN foo.bar IN A:
+} 
+}    (1) Respond NXDOMAIN for any IN query within the foo.bar domain.
+}    (2) Respond NXDOMAIN for any IN query for the name foo.bar.
+}    (3) Respond NXDOMAIN for any IN A query for the name foo.bar.
+} 
+} RFC 2308 recommends #2. It doesn't mention #1 or #3. Is this choice
+} based on some unpublished statistics on caching effectiveness? Or did
+} RFC 2308 actually mean to recommend #1?
+
+NXDOMAIN's scope is the {name,type}.  RFC 2308 implicitly outlawed BIND's
+behaviour, which is to return NOERROR/ANCOUNT=0 for empty nonterminals.
+After RFC 2308, empty nonterminals are signalled with NXDOMAIN.  Therefore
+#1 would be incorrect.  #3, while correct, would waste information since
+NXDOMAIN signals "no RRs of any type at this name".
+</pre>
+</div>
+<hr>
+
+Reference:
+
+<blockquote>
+<a href=http://groups.google.com/group/comp.protocols.dns.std/msg/69e4500e7b7d73c8>http://groups.google.com/group/comp.protocols.dns.std/msg/69e4500e7b7d73c8</A>
+</blockquote>
+
+And DJB referring to this:
+
+<blockquote>
+<a href=http://marc.info/?l=djbdns&m=130135043022339&w=1>http://marc.info/?l=djbdns&m=130135043022339&w=1</a>
+</blockquote>
+
+There actually isn't an RFC that requires this behavior.
+What there is instead is a draft proposal:
+
+<blockquote>
+<a href=http://tools.ietf.org/html/draft-vixie-dnsext-resimprove-00>http://tools.ietf.org/html/draft-vixie-dnsext-resimprove-00</a></blockquote>
+
+Hauke Lampe pointed out that recent Unbound builds no longer expect
+NXDOMAIN to means "also for all domain names below" unless the
+remote cache supports DNSSEC:
+
+<blockquote>
+<a href=http://marc.info/?l=djbdns&m=130148377625400&w=1>http://marc.info/?l=djbdns&m=130148377625400&w=1</a>
+</blockquote>
+
+He is referring to the changelog in Unbound's SVN trunk:
+
+<blockquote>
+<a href=http://unbound.nlnetlabs.nl/svn/trunk/doc/Changelog>http://unbound.nlnetlabs.nl/svn/trunk/doc/Changelog</a>
+</blockquote>
+
+<hr>
+
+MaraDNS and NXDOMAIN:
+
+<ul>
+<li> MaraDNS 1.0 never returned a NXDOMAIN
+
+<li> MaraDNS 1.2 returned a NXDOMAIN if a given name has no answers.  
+  Child nodes are not checked.
+
+<li> Newer versions of MaraDNS have MaraDNS 1.2's behavior.
+
+<li> This is generally a non-issue, since MaraDNS synthesizes SOA records 
+  for zones if the zone does not have a SOA record.
+
+<li> Since MaraDNS does not have DNSSEC, this should be a non-issue.  Quite
+  frankly, this behavior should be considered undefined by default, and,
+  if the behavior is desired, there should be a EDNS0 flag requesting the
+  behavior.
+</ul>
+
+<hr>
+
+My thoughts:
+
+<ul>
+<li> DJB is right.  This is new behavior and a lot of DNS software written 
+  before this draft RFC was made do not have this behavior.
+
+<li>Accusations of RFC non-compliance need to quote chapter and verse of the
+  relevant RFC or are invalid.
+
+<li>Even if a future RFC codified that NXDOMAIN means "all names that are a
+  child of this name also do not exist" (this would be a bad case of "retcon")
+  this would be, by and large, a non-issue with MaraDNS since all zones have
+  SOA records at the top of the zone, making it so requests for zone tops
+  do not generate NXDOMAIN records.
+</ul>
+
+<p>
+
+<b>Update:</b> I have posted to the dnsext mailing list my concerns:
+
+<blockquote>
+<a href=http://www.ietf.org/mail-archive/web/dnsext/current/msg11207.html>http://www.ietf.org/mail-archive/web/dnsext/current/msg11207.html</a>
+</blockquote>
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

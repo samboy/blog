@@ -1,0 +1,75 @@
+<h1>Deadwood 3.0.03 released</h1>
+
+<h2>July 22, 2011</h2>
+
+<A href=http://www.ietf.org/rfc/rfc2181.txt>RFC2181</A> has this
+bit of text:
+
+<blockquote>
+"When a DNS client receives a reply with TC set, it should ignore 
+that response"
+</blockquote>
+
+This should be cheerfully ignored.  The fact of the matter is this:
+When an upstream DNS server sends us a truncated reply, they will usually
+give us the first 512 bytes of that reply, which can often times have
+useful information.
+
+<p>
+
+Indeed, one of the answers we get while trying to process 
+<tt>answers.yahoo.com</tt> is truncated.  But has useful information.
+So I have added some code which will, when getting a truncated reply, 
+grab the first answer from the truncated reply and use that.
+
+<p>
+
+In the case of getting a reply marked truncated and not getting any
+information in the packet, it is still possible to enable 
+<tt>tcp_listen</tt> and get the packet via TCP, but, with this update,
+this will almost never need to be done to resolve a query.  Indeed,
+I recommend that users with <tt>tcp_listen</tt> enabled disable it
+when upgrading to Deadwood 3.0.03.
+
+<p>
+
+In addition, this release of Deadwood has a number of other bug fixes
+from the last six months:
+
+<ul>
+<li>RA bit is no longer sent when sending recursive queries
+<li>Synthetic "not there" replies are now correctly formed DNS packets
+<li>Domains where one of the nameservers gives us a "QUERY REFUSED" 
+    correctly handled unless we are asking for an AAAA IPv6 IP
+    (since some broken DNS servers respond to AAAA requests with
+     "QUERY REFUSED")
+<li>SQA tests and other elements updated for Scientific Linux 6
+<li>Example dwood3rc file updated to show how to blacklist domains
+</ul>
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/stable/>http://www.maradns.org/deadwood/stable/</A>
+</blockquote>
+
+I have also updated MaraDNS to use Deadwood 3.0.03:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+The next day I plan to work on MaraDNS/Deadwood is two weeks from today:
+August 5, 2011.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

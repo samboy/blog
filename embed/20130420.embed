@@ -1,0 +1,332 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS and the Wikipedia</h1>
+<h2>April 20, 2013</h2>
+I did not get a chance to update MaraDNS this month.  The reason is
+because I already have devoted a few hours to MaraDNS, fighting an
+incorrectly proposed request for deletion.
+
+<p>
+
+<A name=Attempts_to_remove_MaraDNS_from_the_Wikipedia></A><A name=AttemptstoremoveMaraDNSfromtheWikipedia></A><span class=moyet>==</span><span class=blogtitle><b>Attempts to remove MaraDNS from the Wikipedia</b></span><span class=moyet>==</span>
+
+<p>
+
+I always feel hurt and upset whenever some “deletionist” at the 
+Wikipedia tries to delete my MaraDNS article. A 
+<a href="http://en.wikipedia.org/wiki/User:Theserialcomma">now-banned Wiki editor</a>
+tried to delete the article over three years ago and another editor 
+put it on the
+<a href="http://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/MaraDNS">Wikipedia deletion page</a>
+just a couple of weeks ago.
+
+<p>
+
+<A name=MaraDNS_will_stay_on_the_Wikipedia></A><A name=MaraDNSwillstayontheWikipedia></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS will stay on the Wikipedia</b></span><span class=moyet>==</span>
+
+<p>
+
+I am pleased that the MaraDNS article was able to survive this “Articles
+for deletion” nomination with a strong “Keep” consensus because
+of the significant coverage in third party sources establishing
+notability.  Because of how Wikipedia works, now that the MaraDNS
+article has clearly been shown to be notable enough to keep on the
+Wikipedia in this deletion discussion, it is very difficult for another
+editor to try and delete it in the future.  Indeed, Wikipedia has a 
+policy called “<a href="http://en.wikipedia.org/wiki/WP:NTEMP">Notability is not temporary</a>”
+which means MaraDNS is now permanently notable enough to stay on the 
+Wiki for the foreseeable future.
+
+<p>
+
+While I have finished up actively developing MaraDNS in 2010, and
+am slowly winding the project down, MaraDNS will always be something
+important to me.  Indeed, MaraDNS may very well become be my legacy,
+the thing I will show my grandkids when they ask me what I accomplished
+in my life, and it’s good to know it will have a Wikipedia article.
+
+<p>
+
+<A name=Down_the_Wikipedia_rabbithole></A><A name=DowntheWikipediarabbithole></A><span class=moyet>==</span><span class=blogtitle><b>Down the Wikipedia rabbit-hole</b></span><span class=moyet>==</span>
+
+<p>
+
+Wikipedia, being a large community, has created their own terms for
+describing Wikipedia-related things.
+
+<p>
+
+In Wikipedia-speak, for an article to remain on the Wikipedia, it needs
+to be “notable”.  Notability has a
+<a href="http://en.wikipedia.org/wiki/Wikipedia:GNG#General_notability_guideline">very specific meaning</a>
+in the Wikipedia world: It means that the subject in question has
+“received significant coverage in reliable sources that are independent of 
+the subject”.  
+
+<p>
+
+“Significant coverage” also has a specific meaning: It means that the 
+subject in question has more than a vaguely-defined “trivial mention”.  
+For the purposes of this blog posting, I will consider “significant coverage”
+more than 100 words discussing MaraDNS.
+
+<p>
+
+“Reliable” additionally has a specific meaning: It generally means something
+published by an established journalistic entity and/or publishing company,
+or a peer-reviewed academic paper.
+
+<p>
+
+<A name=How_MaraDNS_is_notable></A><A name=HowMaraDNSisnotable></A><span class=moyet>==</span><span class=blogtitle><b>How MaraDNS is notable</b></span><span class=moyet>==</span>
+
+<p>
+
+Here are three sources which are both reliable and devote well over 100 
+words to discussing MaraDNS:
+
+<p>
+
+<ul>
+<li> Jan-Piet Mars, in 2008, wrote
+<i>Alternative DNS Servers: Choice and Deployment, and Optional   SQL/LDAP Back-Ends,</i>
+a book published by UIT Cambridge Ltd. and now available as a
+<a href="http://jpmens.net/2010/10/29/alternative-dns-servers-the-book-as-pdf/">free PDF download</a>.  
+  In this book, there are over 7,000 words (an entire chapter and mentions
+  elsewhere in the book) that discuss MaraDNS.
+<li> Carla Schroder wrote a two-part article about MaraDNS that is published 
+  in Enterprise Networking Planet:
+<a href="http://www.enterprisenetworkingplanet.com/netos/article.php/3639976/Buck-DNS-Monoculture-with-BIND-Alternatives.htm">Buck DNS Monoculture with BIND Alternatives (part 1)</a> and
+<a href="http://www.enterprisenetworkingplanet.com/netos/article.php/3641731/Buck-DNS-Monoculture-with-BIND-Alternatives-Part-2.htm">Buck DNS Monoculture with BIND Alternatives (part 2)</a>.
+  This two-part article talks about pretty much nothing but MaraDNS; that’s
+  over 2400 words from a reliable third party source.
+<li> A peer-reviewed article by Sooel Son and Vitaly Shmatikov,
+<a href="http://www.cs.utexas.edu/~shmat/shmat_securecomm10.pdf">The Hitchhiker’s Guide to DNS cache poisoning</a> 
+  (PDF download) devotes well over 300 words discussing MaraDNS’ recursive
+  resolution algorithm.  This article was published in the book “Security and
+  Privacy in Communication Networks: 6th International ICST Conference,
+  SecureComm 2010.” (edited by Sushil Jajodia, Jianying Zhou) printed by
+  Springer.
+</ul>
+
+<p>
+
+There are a number of other mentions in other sources; click “show” on the
+green box in the
+<a href="http://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/MaraDNS">MaraDNS deletion article</a> for them.
+
+<p>
+
+<A name=Why_did_they_try_to_delete_the_MaraDNS_article></A><A name=WhydidtheytrytodeletetheMaraDNSarticle></A><span class=moyet>==</span><span class=blogtitle><b>Why did they try to delete the MaraDNS article?</b></span><span class=moyet>==</span>
+
+<p>
+
+Considering that MaraDNS easily meets even the most strict Wikipedia 
+definition of “notable”, how did the article get nominated for deletion?
+
+<p>
+
+While I can not enter the mind of another person and determine what exact
+feelings they had when adding the deletion discussion for MaraDNS, we
+can make some reasonable speculations.
+
+<p>
+
+Wikipedia is a crowd-sourced web site; like open-source software, the 
+majority of contributors are volunteers.  Since no one is getting paid, 
+it is hard to motivate people to do the tedious work which an 
+encyclopedia sometimes needs.  
+
+<p>
+
+The request for deletion appeared about a week after 
+<a href="http://en.wikipedia.org/w/index.php?title=Talk%3AMaraDNS&diff=547334479&oldid=394327520">I put up a request</a>
+for a neutral third-party editor to update the MaraDNS article.  That 
+request was ignored for over a week; nine days after my request, 
+<a href="http://en.wikipedia.org/w/index.php?title=MaraDNS&diff=548811037&oldid=545643700">MaraDNS was nominated for deletion</a>.
+
+<p>
+
+It took an editor only seven minutes to say, in so many words, “<a href="http://en.wikipedia.org/w/index.php?title=Wikipedia:Articles_for_deletion/MaraDNS&oldid=548811049">MaraDNS is not notable, delete it</a>”.  I got the seven-minute figure because seven minutes 
+elapsed between this editor’s 
+<a href="http://en.wikipedia.org/w/index.php?title=User_talk:Shii&diff=prev&oldid=548810641">last edit before marking MaraDNS for deletion</a> 
+and
+<a href="http://en.wikipedia.org/w/index.php?title=User_talk:Arcade&diff=prev&oldid=548811239">his final MaraDNS-deletion related edit</a>.
+
+<p>
+
+It took me, on the other hand, about three hours to look through all of
+the links provided by the relevant Google searches, find notable mentions
+of MaraDNS, and catalog them (who wrote it, when did they write it, who
+published it) to add them to the deletion discussion.  It probably took
+me another hour or two to write my own version of the MaraDNS article,
+to help the Wikipedia no longer have an outdated article about MaraDNS.
+
+<p>
+
+In summary: Seven minutes work to say “let’s delete MaraDNS”.
+Five hours work to establish MaraDNS’ notability and update the article.
+
+<p>
+
+I don’t blame unpaid editors for sometimes taking the easy way out; with
+the number of editors per reader 
+<a href="http://mako.cc/copyrighteous/editor-to-reader-ratios-on-wikipedia">decreasing</a>, and with Wikipedia’s increasing popularity to the point
+it’s an Alexa top 10 site and almost always one of the first hits when
+one does an Internet search, I am sure a lot of editors have become
+very jaded with the number of “POV-pushers” (people who edit the Wiki
+not to make it a better encyclopedia, but to have it promote their
+company or product) out there.
+
+<p>
+
+<A name=The_history_of_MaraDNS_Wikipedia_article></A><A name=ThehistoryofMaraDNSWikipediaarticle></A><span class=moyet>==</span><span class=blogtitle><b>The history of MaraDNS’ Wikipedia article</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS’ Wikipedia article is almost as old as the Wikipedia itself; it was 
+<a href="http://en.wikipedia.org/w/index.php?title=MaraDNS&amp;oldid=247722">created in December of 2001</a>, before even the stable MaraDNS 1.0
+release came out (that happened in June of 2002).
+
+<p>
+
+The article pretty much languished until 2005, when,
+<a href="http://en.wikipedia.org/w/index.php?title=Talk%3AMaraDNS&diff=24917391&oldid=24879315">after getting permission</a>, I started expanding the article.  Before I 
+started editing it, it was a 
+<a href="http://en.wikipedia.org/w/index.php?title=MaraDNS&amp;oldid=20718344">4-sentence stub</a>; after making a few edits over a couple of months, it
+had become
+<a href="http://en.wikipedia.org/w/index.php?title=MaraDNS&amp;oldid=29042754">a much more extensive article</a>.
+
+<p>
+
+All of this was done during the “growth” period of the early Wikipedia,
+when the priority was to grow the Wikipedia and get as many articles
+as possible written.  Sometime between 2005, when I was able to
+edit the MaraDNS article without controversy, and 2007, things changed.
+
+<p>
+
+The Wikipedia had become more popular; as a result, a number of parties
+otherwise uninterested in the Wikipedia started coming to the Wikipedia
+to promote their products and services.
+
+<p>
+
+This kind of editing violates a guideline called “Conflict of Interest”
+(COI in Wikipedia-speak).  With many Wiki newcomers attempting to
+use the Wikipedia as a promotion vehicle, the consensus changed from
+one where people could edit an article they were personally involved
+in as long as they tried to stay neutral to one where it was strongly
+discouraged to edit an article one was personally involved with.
+
+<p>
+
+By 2007, 
+<a href="http://en.wikipedia.org/w/index.php?title=Talk%3AMaraDNS&diff=173376520&oldid=162417453">an administrator asked me to stop editing the MaraDNS article</a>.  
+After that, all of my MaraDNS-related edits, with one exception, have been
+the kind of “non-controversial” edits that an editor with a “conflict of 
+interest” 
+<a href="http://en.wikipedia.org/w/index.php?title=Wikipedia:Conflict_of_interest&oldid=548955598#Non-controversial_edits">is permitted to make</a>.
+
+<p>
+
+The only “controversial” edit I made has been an edit where, after having 
+the MaraDNS release number on the Wikipedia page be a year out-of-date (it 
+claimed that 2.0.04 was the current version even though 2.0.05 was released 
+a year before my edit), I finally took it upon myself to 
+<a href="http://en.wikipedia.org/w/index.php?title=MaraDNS&diff=538036654&oldid=526563607">update the MaraDNS version number to 2.0.07</a>.
+
+<p>
+
+(It’s an open question whether I would have gotten consensus to
+edit the MaraDNS article in 2005 if more editors had been part of the
+discussion back then.  I think I would have; the change in Wikipedia’s
+culture towards editors with a conflict of interest [COI] happened between 
+2005 and 2007.  To wit, a COI notice on another article
+<a href="http://en.wikipedia.org/w/index.php?title=Talk%3AEmpire_of_Atlantium%2FArchive_2&diff=80257953&oldid=80038196">was added in October of 2006</a>.)
+
+<p>
+
+<A name=How_the_Wikipedia_has_changed></A><A name=HowtheWikipediahaschanged></A><span class=moyet>==</span><span class=blogtitle><b>How the Wikipedia has changed</b></span><span class=moyet>==</span>
+
+<p>
+
+Back in 2001, when the MaraDNS article was first created, MaraDNS was a
+computer program which would not pass today’s arbitrary “notability”
+guidelines.  It’s an open question whether MaraDNS ended up getting
+enough attention from journalists and academic researchers to become
+a subject that passes Wikipedia’s “notability” tests because it
+has had a Wikipedia article which the press and academia noticed.
+
+<p>
+
+I think it is very unfortunate that it’s a lot harder for a new open
+source project to get a Wikipedia article than it used to be.  Open
+source developers are people who work very hard but usually do not get 
+financially compensated for their effort.  It’s very important that 
+today’s hard-working open source developers get compensated in other
+ways; letting even new open-source projects have a Wikipedia article
+would be one way for the Internet to show appreciation for their hard
+work.  I really wish that Wikipedia’s current crop of admins did
+set the bar for new articles to be so high.
+
+<p>
+
+Indeed, while I used to be a regular Wikipedia editor—I contributed a
+lot more to the Wikipedia than editing the MaraDNS article, back in
+the day—I have mostly stopped editing the Wikipedia after seeing
+a number of useful open source projects get deleted from the Wiki.
+My Wiki user page used to have this on it:
+
+<p>
+
+<blockquote>
+I find the deletionist movement here very disturbing and very much against
+this hacker ethic. I think there is something fundamentally broken with
+the way the Wikipedia allows articles to be deleted because the subject
+they cover is not “notable” enough; to me the deliberate destruction
+of information goes against the hacker ethic of making information freely
+available. It’s sad that the Wikipedia allows a single person using TW
+[Note for blog: TW is a tool used by some editors to help automate the 
+editing of Wikipedia articles] to mark dozens of useful articles to be 
+deleted in just a few minutes, and has a culture that encourages this 
+what I see as destructive behavior.
+</blockquote>
+ 
+<blockquote>
+Then again, I should really just let go of the Wikipedia and let the
+deletionists go on their rampage here; if they continue unabated,
+Wikipedia will ultimately become a less useful place for readers, but
+that’s Wikipedia’s problem, not my problem.
+</blockquote>
+
+I can not speculate why other editors have quit editing, but undoubtedly
+many of them also quit because they did not like how deletionists became
+so powerful.
+
+<p>
+
+<A name=Back_to_MaraDNS></A><A name=BacktoMaraDNS></A><span class=moyet>==</span><span class=blogtitle><b>Back to MaraDNS</b></span><span class=moyet>==</span>
+
+<p>
+
+Since I devoted so much time dealing with Wikipedia’s MaraDNS article,
+I did not get a chance to do any actual MaraDNS development this month.
+Maybe next month, but, then again, I am in the process of transitioning
+from working on MaraDNS once a month to once every other month.
+I probably will not devote time to MaraDNS again until June, unless a
+critical security bug with a CVE number is found.
+
+<p>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

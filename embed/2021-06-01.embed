@@ -1,0 +1,136 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/2020-flag.jpg width=224 height=126>
+</div>
+
+<h1>The Drumhead</h1>
+<h2>June 1, 2021</h2>
+I review the Star Trek episode <i>The Drumhead</i>, and talk about why
+it’s important to watch here in 2021.  Also, another MaraDNS release.
+
+<p>
+
+<A name=Star_Trek></A><A name=StarTrek></A><span class=moyet>==</span><span class=blogtitle><b>Star Trek</b></span><span class=moyet>==</span>
+
+<p>
+
+I was reading 
+<a href="https://gizmodo.com/the-making-of-star-trek-the-next-generations-greatest-1786330645">an
+article</a> claiming that <i>The Inner Light</i> is the best Star Trek
+episode ever made.  I disagree.
+
+<p>
+
+When my mother was still with us, one night we opened up Netflix and
+she asked me to choose some episodes from <i>Star Trek: The Next 
+Generation</i> to watch together.  I chose three: <i>Remember Me</i>, <i>The
+Inner Light</i>, and <i>The Drumhead</i>.
+
+<p>
+
+Of the three episodes, the one which stood and which we both agreed was
+the best episode was <i>The Drumhead</i>.
+
+<p>
+
+In this day and age of runaway cancel culture, <i>The Drumhead</i> deserves
+to be looked at again.
+
+<p>
+
+<A name=Whats_wrong_with_cancel_culture></A><A name=Whatswrongwithcancelculture></A><span class=moyet>==</span><span class=blogtitle><b>What’s wrong with “cancel culture”</b></span><span class=moyet>==</span>
+
+<p>
+
+The problem with cancel culture is that there is no legal guard rails
+controlling the process.  There is nothing stopping injustice from 
+happening, and with little to no worker’s rights in the United States,
+there is little to no protection from people having their jobs lost
+when and if the “woke mob” comes after them.
+
+<p>
+
+Typical legal protections include:
+
+<p>
+
+<ul>
+<li> Due process.  We should make decisions of guilt based on hard facts,
+  not wishy washy feelings.
+<li> Presumption of innocence.  We should not decide someone is guilty of
+  a crime without proof beyond a reasonable doubt.
+<li> Statute of limitations.  We should not drag people through the mud for
+  things that happened years or decades ago.
+<li> No <i>Ex Post Facto</i>.  In other words, we can not retroactively 
+  decide someone is guilty for doing something which was reasonable and
+  acceptable at the time.
+<li> Adversarial system.  Every story has two sides to it; we should hear
+  both sides before rushing to judgment.
+</ul>
+
+<p>
+
+Cancel culture has none of these protections, yet its consequences are
+quite dire: Loss of job, loss of business, having a scarlet letter 
+affecting one’s job search for years, to name just a few.
+
+<p>
+
+<A name=The_Drumhead></A><A name=TheDrumhead></A><span class=moyet>==</span><span class=blogtitle><b>The Drumhead</b></span><span class=moyet>==</span>
+
+<p>
+
+<i>This review is spoiler free</i>
+
+<p>
+
+That in mind, this story, from over 30 years ago, did an amazing job 
+of predicting today’s cancel culture.  In the story, someone is falsely
+accused of a crime, and the forces of justice have to fight back against
+the cancel culture forces for fairness to prevail.  
+
+<p>
+
+A number of typical cancel culture tropes come up in the story, notably
+“offense archeology”, where, after our hero is accused of a crime,
+Worf and his assistants look through their entire history, including
+finding out who their friends and family are, to find out what other
+misdeeds they can dig up, no matter how old or irrelevant they are.
+
+<p>
+
+As I have <a href="https://twitter.com/caulixtla/status/1384362701577760770">recently
+Tweeted</a>, anyone who goes through someone’s posting history to find
+something then post it out of context to make someone look bad is someone
+who is not acting in good faith. Usually, the motive is to be a bully.
+
+<p>
+
+I feel very strongly in human rights and constitutional protections,
+and am disappointed that some proponents of today’s “cancel culture”
+often times do not honor these protections.  As this classic <i>Star
+Trek</i> episode shows us, we need to be vigilant to make sure we remain
+a free society that respects human rights.
+
+<p>
+
+<A name=MaraDNS_350020_released></A><A name=MaraDNS350020released></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0020 released</b></span><span class=moyet>==</span>
+
+<p>
+
+Sometimes, it is desirable to have MaraDNS control the source IP used 
+when making upstream DNS queries.  MaraDNS 3.5.0020 adds a new parameter,
+<tt>source_ip4</tt>, which implements this feature.  Downloads are
+at <a href="https://maradns.samiam.org/download.html">the usual location</a>.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

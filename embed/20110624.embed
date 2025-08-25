@@ -1,0 +1,41 @@
+<h1>Deadwood update</h1>
+
+<h2>June 24, 2011</h2>
+
+I have spent all afternoon going through Deadwood's SQA tests to update
+them to work with Scientific Linux 6 as well as MaraDNS 2.0.  Once I
+updated the tests, I discovered a bug in how <tt>ip_blacklist</tt> is
+handled (since Scientific Linux 6's <tt>dig</tt> is more verbose about
+unusual DNS packets).
+
+<p>
+
+I will fix this bug before releasing Deadwood 3.0.03.  
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+In addition to fixing the bug in Deadwood, I need to backport an
+update to <tt>ej2html</tt> from Deadwood to MaraDNS, so this
+script will work with the newer version of Perl included with 
+Scientific Linux 6.
+
+<p>
+
+The next day I plan to work on MaraDNS/Deadwood is two weeks from today:
+July 8, 2011.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

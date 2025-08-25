@@ -1,0 +1,78 @@
+<h1>Inspiron 14z sound problem</h1>
+
+<h2>May 8, 2012</h2>
+
+I had a bizarre problem on a Dell Inspiron 14z with a Conexant SmartAudio
+HD driver: The sound would intermittently cut out.  To be more precise,
+the soundstage would collapse and it would output mono instead of stereo
+audio.
+
+<p>
+
+After some maddening troubleshooting, including reinstalling the drivers
+and multiple reboots, I finally found the culprit: The Conexant SmartAudio
+driver doesn't work very well when it is outputting 16-bit 44.1 KHz audio;
+it's a lot happier outputting 24-bit 44.1 audio.
+
+<p>
+
+To change this in Windows 7:
+
+<ul>
+<li>Go to the start menu (you know, the Windows logo button usually in the
+    lower left corner of the screen)
+<li>Click on "Control Panel"
+<li>Make sure "View by" in the upper right hand corner of the control
+    panel says "View By: Small Icons" (makes finding things much easier)
+<li>Click on "Sound"
+<li>Click on "Speakers: Conexant SmartAudio HD" then click on
+    "Properties"
+<li>In the "Speakers Properties" window, click on the "Advanced" tab
+<li>Make the "Default Format" "24 bit, 44100 Hz (Studio Quality)"
+<li>Click on "OK" 
+<li>Close all Control panel windows.
+</ul>
+
+At this point the sound will (knock on wood) no longer switch from mono 
+to stereo.
+
+<p>
+
+Bizarre driver bug. 
+
+<p>
+
+As an aside, choosing a higher sampling rate like 96000 Hz or
+192000 Hz won't make any difference anyone besides your cat can
+hear, and might very well not make any audio difference at all.
+
+<p>
+
+Indeed, 
+<A href=http://www.davidgriesinger.com/>David Griesinger</A>, creator
+of the legendary Lexicon reverberation sound (Griesinger's sound can be
+clearly heard in the "booms" at the beginning of <i>Blade Runner</i>'s
+opening titles), has 
+<A href=http://www.davidgriesinger.com/intermod.ppt>an amusing Powerpoint</A>
+which points out that
+there are sound cards that advertise 96Khz sampling, but don't 
+actually output audio above 23 Khz.
+
+<p>
+
+<!--NOGOPHER -->
+For people who don't want to download a Powerpoint file, this
+<A href=https://docs.google.com/viewer?a=v&q=cache:XbofXSgqmQMJ:www.davidgriesinger.com/intermod.ppt+Intermod+site:davidgriesinger.com&hl=es&gl=us&pid=bl&srcid=ADGEESiuq-2wDLB2RX66kpdYQYJIHNdKCRFjB9PF9r4IW0kmcM_RjCKOVRQZYDoeifdM44BXBPP8jsd8u0_W67HkMyOJQ2iH2pscxHErAeKLNKjylPXMcs-dnuuRKIlDzdoDlUPMll0y&sig=AHIEtbTQsTEZpWstQGUBItr19zAdG96MnA>Google cache of the file</A>
+might work.
+<p>
+<!-- NOGOPHER-->
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

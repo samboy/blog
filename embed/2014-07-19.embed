@@ -1,0 +1,188 @@
+<div class=blogpic>
+<img src=pics/Sam-with-Citlalli-blog.jpg width=120 height=120>
+</div>
+
+<h1>PT Sans and PT Serif</h1>
+
+<h2>July 19, 2014</h2>
+
+In today’s blog, I give PT Serif and to a lesser extent PT Sans a
+more full review.  Summary: While a very good font, I feel Charter
+is an even better font.
+
+<p>
+
+<A name=Background></A><span class=moyet>==</span><span class=blogtitle><b>Background</b></span><span class=moyet>==</span>
+
+<p>
+
+PT Serif and PT Sans were commissioned by the Federal Agency on Press and 
+Mass Communications of the Russian Federation, who are also known as
+“Rospechat”.  The fonts were designed, to quote the
+<a href=http://en.wikipedia.org/wiki/PT_Sans>Wikipedia</a> 
+“to support all the different variations of Cyrillic script used by the 
+minority languages of Russia”.  The fonts not only have fairly extensive
+Latin support (ASCII, ISO-8859-1, Windows Codepage 1252, etc.) but also
+support a number of mathematical symbols and have, as per their design,
+some of the most extensive Cyrillic support for any font out there.
+
+<p>
+
+The important thing to keep in mind is that these fonts were, first
+and foremost, designed to render Russian languages well; rendering
+Latin script was a secondary priority.
+
+<p>
+
+Bitstream Charter, on the other hand, was designed by Matthew Carter to
+render English and a few other Western European languages.  The version
+donated to the X Consortium in 1992 only supports English and the other
+languages “Mac Roman” supports (The languages Mac Roman supports
+include Italian, Spanish, Portuguese, French, German, Dutch, English,
+Danish, Swedish, Norwegian, and Icelandic).
+
+<p>
+
+PT Sans and PT Serif were developed by a type foundry in California 
+called ParaType.  Not only does ParaType sell expanded versions
+of <A href=http://www.paratype.com/pstore/fonts/PT-Sans-Pro.htm>PT Sans</A>
+and 
+<A href=http://www.paratype.com/pstore/fonts/PT-Serif-Pro.htm>PT Serif</A>, 
+they also sell 
+<A href=http://www.paratype.com/pstore/fonts/ITC-Charter.htm>a version of 
+Bitstream Charter with Russian letters</A> (made by one very talented 
+Vladimir Yefimov who sadly is not with us any more; the late Vladimir Yefimov 
+also oversaw the development of PT Serif) that Matthew Carter 
+has praised.
+
+<p>
+
+Now that we have gone over the background, let’s have a...
+
+<p>
+<A name=Visual_comparison_of_PT_Serif_and_Charter></A><A name=VisualcomparisonofPTSerifandCharter></A><span class=moyet>==</span><span class=blogtitle><b>Visual comparison of PT Serif and Charter</b></span><span class=moyet>==</span>
+
+<p>
+
+
+In the first image, on the left is Charter and on the right is PT Serif.
+
+<p>
+
+<img src=font-pics/Charter-vs-PT-serif.png>
+<br><i>The “y”, “3”, and “J” close up in Charter and PT Serif</i>
+
+<p>
+
+Here, we can see that Charter is more rounded looking and PT Serif is 
+more angular.  I don’t like PT Serif’s “Dagger” serif in the “3” at
+all (As an aside, I really feel Constantia would have looked a lot better
+if it used rounded or slab instead of “dagger” serifs).  The descender in 
+Charter's “y” is longer and ends more smoothly, and I prefer its slab
+serifs on the top over PT Serif’s angular serifs.  The “J” looks a lot
+better in Charter — it is wider and far easier to read; I just am
+not a fan of this “dagger” J which sometimes pops up in serif typefaces.
+
+<p>
+
+The reason why the “3” looks so distinct in PT Serif is so it is not 
+confused with a letter in Cyrillic.
+
+<p>
+
+<A name=Visual_comparison_2></A><span class=moyet>==</span><span class=blogtitle><b>Another visual comparison</b></span><span class=moyet>==</span>
+<p>
+
+<img src=font-pics/Charter-vs-Pt_Serif-3.png>
+<br><i>This is a Clear Type rendering of Charter and PT Serif converted
+to greyscale; Charter is on the left and PT Serif is on the right</i>
+
+<p>
+
+Now, when rendered at screen resolutions using modern font hinting
+technologies, I will conceded that the two look similar, but I think Charter
+looks a little better.  
+
+<p>
+
+One feature PT Serif has that Charter does not have is delta hinting.  This
+makes PT Serif look a lot nicer on now-obsolete Windows XP systems, but not
+as nice as Carter’s delta hinted fonts (Verdana and Georgia).  Indeed, I had
+this to say about PT Serif 
+<A href=http://samiam.org/blog/20110719.html>three years ago</A>:
+
+<blockquote>
+PT Serif, coming from Russia, has, to western eyes, a very distinct
+look to it that is not entirely satisfactory, reminding one of dusty
+old books in a dusty old library. It's perfectly readable, but very
+stiff. It doesn't have the soft charm of, say, Matthew Carter's serif
+fonts like Georgia and Bitstream Charter. And, like PT Sans, it's not
+really a screen font the way Georgia is.
+</blockquote>
+
+I was referring to the delta-hinted version of PT Serif; when using
+clear type rendering, PT Serif has less of a hard edge to it and is a
+really nice looking readable screen font.  
+
+<p>
+<A name=Weight></A><span class=moyet>==</span><span class=blogtitle><b>Charter’s weight</b></span><span class=moyet>==</span>
+<p>
+
+One thing to keep in mind is that Charter is a good deal lighter than
+PT Serif’s regular weight.  While the for-pay version of PT Serif
+has a lighter “book” weight, it <i>still</i> is not quite as light
+as Charter.  The reason Charter is so light is probably because, to
+<a href="http://typophile.com/node/69387">quote one graphic design 
+professional</a> on Typophile, 
+“Charter was designed when the print workflow was repro-negative-plate”.
+In other words, there was an intermediate step in the printing when
+Charter came out that made letters darker; Carter compensated for this
+by making Charter’s letters a little lighter.
+
+<p>
+
+Ironically, since the current trend is to make web fonts a little
+lighter, Charter works nicely as a very modern looking serif webfont.  
+For people who wish for a slightly heavier Charter, 
+<A href=http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=charissilfont>Charis
+SIL</A> is an excellent free choice (and has a far greater Unicode and 
+language support than the free Charter).
+
+<p>
+<A name=Conclusion></A><span class=moyet>==</span><span class=blogtitle><b>Conclusion</b></span><span class=moyet>==</span>
+<p>
+
+PT Serif and Bitstream Charter are both very beautiful fonts which are
+available in free versions.  The free version — and, indeed,
+the for-pay version — of PT Serif has a larger number of weights and
+forms, including, quite nicely, a version with a small “caption”
+optical size which is available both as regular and italic for free.
+As far as I know, PT Sans and PT Serif are the only open source fonts
+with variable optical sizes.
+
+<p>
+
+While I feel PT Serif is an excellent free font, I think Charter has a
+slight edge when used for Western European language body text.  This is
+why I gave Charter my <A href=2014-06-21.html>best serif font prize</A>,
+while giving PT Sans a honorable mention for best condensed font.  I will
+also give both PT Sans and PT Serif a honorable mention for being the
+best free fonts with a “caption” optical size available.
+
+<p>
+
+Charter was designed by an expert font designer who had over three
+<i>decades</i> of font design experience when he made it, and it shows.
+It is the best free serif font I have found.
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

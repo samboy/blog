@@ -1,0 +1,70 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS 3.4.02 released</h1>
+<h2>January 17, 2020</h2>
+I have released MaraDNS 3.4.02.
+
+<p>
+
+<A name=What_has_been_updated></A><A name=Whathasbeenupdated></A><span class=moyet>==</span><span class=blogtitle><b>What has been updated</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS 3.4.02 is a stable update.  No security updates have been done 
+in this release; the last security issue was fixed in MaraDNS 2.0.16
+from August of 2018.
+
+<p>
+
+The following updates have been done:
+
+<p>
+
+<ul>
+<li> Tests updated to run and pass in CentOS 7
+<li> Fix typo in asktest.c
+<li> Deadwood: Issue building Deadwood from the GitHub tree in CentOS8 fixed
+<li> Deadwood: Issue building Deadwood from the GitHub tree in CentOS8 fixed
+</ul>
+
+<p>
+
+MaraDNS 3.4.02 can be downloaded from the
+<a href="https://maradns.samiam.org/download.html">MaraDNS download page</a>.
+
+<p>
+
+<A name=What_is_next_for_MaraDNS></A><A name=WhatisnextforMaraDNS></A><span class=moyet>==</span><span class=blogtitle><b>What is next for MaraDNS</b></span><span class=moyet>==</span>
+
+<p>
+
+My plan now is to update MaraDNS’s build process for the 2020s.  
+Instead of using the old first-2000s-decade process of using a shell
+script which applies all patches and updates, I plan on applying
+continuous integration to MaraDNS’s build process.  I plan to have the
+<a href="https://github.com/samboy/MaraDNS">Git version of MaraDNS</a> be the
+“one source of truth” for MaraDNS’s source code, and have scripts
+which convert a Git checkout in to release tarballs and zipfiles (we
+use zipfiles for the Windows binary release).
+
+<p>
+
+The version number will be determined from the most recent tag in 
+the master branch.
+
+<p>
+
+Since MaraDNS is open source and I am not getting paid for this work,
+I have no timeline for when this update will be done.
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

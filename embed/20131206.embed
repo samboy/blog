@@ -1,0 +1,176 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>The OnceTV update</h1>
+<h2>December 6, 2013</h2>
+I discuss the OnceTV update from
+<a href="http://samiam.org/blog/20131203.html#Deadwood_update">the other day</a>
+and some possible consequences of the code change I did.
+
+<p>
+
+<A name=Note_on_updating_Deadwood></A><A name=NoteonupdatingDeadwood></A><span class=moyet>==</span><span class=blogtitle><b>Note on updating Deadwood</b></span><span class=moyet>==</span>
+
+<p>
+
+When updating Deadwood to fix the oncetv-ipn.net bug, be sure to delete
+Deadwood’s cache:
+
+<p>
+
+<ul>
+<li> Stop Deadwood
+<li> Remove the cache file
+<li> Start Deadwood again
+</ul>
+
+<p>
+
+Otherwise, Deadwood will have bad NS referrals in its cache.
+
+<p>
+
+<A name=The_speed_up></A><A name=Thespeedup></A><span class=moyet>==</span><span class=blogtitle><b>The speed up</b></span><span class=moyet>==</span>
+
+<p>
+
+Let’s suppose we have the following gluless name referral to follow to
+resolve name.example.net:
+
+<p>
+
+<ul>
+<li> First we go the the root name servers
+<li> Which point us to the .net servers, who point out the nameservers 
+  for name.example.net are ns1.example.org and ns2.example.org:
+</ul>
+
+<p>
+
+<tt>AN</tt><br>
+<tt>&lt;blank&gt;</tt><br>
+
+<p>
+
+<tt>NS</tt><br>
+<tt>example.net NS ns1.example.org</tt><br>
+<tt>example.net NS ns2.example.org</tt><br>
+
+<p>
+
+<tt>AR</tt><br>
+<tt>&lt;blank&gt;</tt><br>
+
+<p>
+
+<ul>
+<li> We now go back to the root name severs
+<li> Which take us to the .org name server who give us this packet:
+</ul>
+
+<p>
+
+<tt>AN</tt><br>
+<tt>&lt;blank&gt;</tt><br>
+
+<p>
+
+<tt>NS</tt><br>
+<tt>example.org NS ns1.example.org</tt><br>
+<tt>example.org NS ns2.example.org</tt><br>
+
+<p>
+
+<tt>AR</tt><br>
+<tt>ns1.example.org A 172.31.254.1</tt><br>
+<tt>ns2.example.org A 172.31.254.2</tt><br>
+
+<p>
+
+Now, with versions of Deadwood before the oncetv-ipn.net update, we would
+now go to one of the example.org name servers before getting our final
+answer; the oncetv-ipn.net update saves us a single DNS query by resolving
+the glueless record when querying the .org name servers.
+
+<p>
+
+In most cases, when resolving glueless name server records, this saves us
+one DNS lookup.
+
+<p>
+
+One minor disadvantage is that if we want to find another record in
+example.org, Deadwood and have cached all the records needed to solve
+name.example.net, Deadwood will now have to do two instead
+of one lookup (since earlier versions of Deadwood would cache the
+nameservers for example.org, but current Deadwood will instead cache
+the IP for either ns1.example.org or ns2.example.org).
+
+<p>
+
+<A name=A_new_corner_case></A><A name=Anewcornercase></A><span class=moyet>==</span><span class=blogtitle><b>A new corner case</b></span><span class=moyet>==</span>
+
+<p>
+
+Let us suppose we are looking for ns01.example.org and the upstream
+DNS server gives us this record:
+
+<p>
+
+<tt>AN</tt><br>
+<tt>&lt;blank&gt;</tt><br>
+
+<p>
+
+<tt>NS</tt><br>
+<tt>example.org NS ns1.example.org</tt><br>
+
+<p>
+
+<tt>AR</tt><br>
+<tt>ns1.example.org A 172.31.254.1</tt><br>
+<tt>ns1.example.org A 172.31.254.2</tt><br>
+
+<p>
+
+The updated Deadwood, when getting this packet, will assume ns1.example.org
+only has one IP, 172.31.254.1 in this case since that was the first IP in
+the packet Deadwood got.  Should 172.31.254.2 be the only server that can 
+resolve example.net (and lists ns1.example.org as its glueless name server),
+Deadwood would now be unable to resolve example.net.
+
+<p>
+
+Should I see a real-world case where this particular corner case causes a
+domain to be unable to resolve, I will update Deadwood to handle it.
+At this point I only update Deadwood to solve real-world domain
+resolution issues (as well as security issues); theoretical problems 
+are put on the back burner.
+
+<p>
+
+<A name=Deadwood_roadmap></A><A name=Deadwoodroadmap></A><span class=moyet>==</span><span class=blogtitle><b>Deadwood roadmap</b></span><span class=moyet>==</span>
+
+<p>
+
+I plan on releasing Deadwood 3.2.04 soon; at this point, 3.2.03e would only
+be released should I discover another security issue.  3.2.04 will first 
+be a testing release; I will mark it as being a stable release after seeing
+no problems caused by it for a couple of months.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

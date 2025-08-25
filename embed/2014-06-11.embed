@@ -1,0 +1,261 @@
+<div class=blogpic>
+<img src=pics/Sam-with-Citlalli-blog.jpg width=120 height=120>
+</div>
+
+<h1>Fonts in 2014</h1>
+<h2>June 11, 2014</h2>
+In today's blog, I discuss web fonts in 2014.
+
+<p>
+
+<A name=New_in_2014></A><A name=Newin2014></A><span class=moyet>==</span><span class=blogtitle><b>New in 2014</b></span><span class=moyet>==</span>
+
+<p>
+
+Both Firefox and Safari have fixed their bugs with printing pages
+that use a web font.  This makes web fonts finally a solution for
+both on-screen and on-paper rendering of web pages.
+
+<p>
+
+Windows XP has reached its end of life.  There are people and corporations
+stubbornly holding on to this now-dead operating system, of course, and,
+more to the point, there are people on fixed incomes who may not have had
+a chance to scrape together enough money to get a computer that can run
+anything newer than Windows XP.  As one example: My old Thinkpad 600X -- a 
+computer from 1999 -- ran XP fine but would not even boot in to Windows 7.
+Another data point: Just two years ago, a friend of mine bought a 
+refurbished computer (a Thinkpad, to boot) running XP which could not 
+be readily upgraded to Windows 7.
+
+<p>
+
+Point being, Windows XP is still out there.  World wide, 16% of users
+are still using it.  While XP 
+<i>does</i>
+support Clear type, enabling it is well hidden (Control panel -&gt; Display
+-&gt; Appearance -&gt; Effects) and there are many XP users out there who
+haven't done that.  Indeed, while Internet Explorer 8 forces Clear Type
+font rendering in XP, Chrome, Firefox, and Opera do not.  (Firefox
+in Windows XP, however, will usually use Clear Type to render web fonts,
+but Chrome, which has a higher browser market share, does not).
+
+<p>
+
+Bottom line, while every day fewer and fewer computers are using older
+font rendering technologies, there are still enough of them out there
+that I still feel uncomfortable using a font without delta hinting (one
+that looks like discrete pixels on a low-resolution display) for body text.
+
+<p>
+
+To make things worse, since there have been bugs in font rendering 
+engines which could have been used to allow attackers to break in to
+desktop computers via "drive by download" attacks (when, upon visiting
+a web page, someone's computer gets infect by malware), browsers strip
+out delta hinting information from fonts download from the web.  So,
+even if there was a beautiful web font out there with delta hinting,
+those delta hints will not render in an old XP system, and the font
+will almost always look grey and blurry (I will mention an exception
+to this rule below).
+
+<p>
+
+This leaves us with very few choices for body text out there.
+
+<p>
+
+<A name=Fonts_for_body_text></A><A name=Fontsforbodytext></A><span class=moyet>==</span><span class=blogtitle><b>Fonts for body text</b></span><span class=moyet>==</span>
+
+<p>
+
+There are only seven "web safe" fonts (fonts installed on pretty
+much any computer out there, including <a href=http://corefonts.sourceforge.net/>Linux</a>) with full delta hinting: Comic Sans, Courier
+New, Times New Roman, Trebuchet, Arial, Georgia, and Verdana.  In
+more detail:
+
+<p>
+
+<ul>
+<li><span style="font-family: 'Comic Sans MS'">Comic Sans</span>.  This is a very polarizing font; people either love it or
+  hate it.  It's a very feminine font, so I can see why insecure "macho"
+  men are repelled by it.  As a practical matter, it's too stylized to
+  make for really readable body text.
+</ul>
+
+<p>
+
+<ul>
+<li><span style="font-family: 'Courier New'">Courier New</span>.  This is a rather ugly monospaced font.  While usable
+  for code samples when I have to use a 100% web safe font (such as
+  using an HTML email editor which forces me to name the font), it
+  otherwise should not be used.
+</ul>
+
+<p>
+
+<ul>
+<li><span style="font-family: 'Times New Roman'">Times New Roman</span>.  This is a great printing font when something has
+  to be readable in a small space.  On the screen, not so great -- it
+  looks rather bland and plain, and is harder to read than a good
+  screen font.
+</ul>
+
+<p>
+
+<ul>
+<li><span style="font-family: 'Trebuchet MS'">Trebuchet</span>.  This was a great choice a decade ago when designers still
+  had to use web safe fonts for all the fonts on their page, yet wanted to
+  use a font with a bit of a flair.  It's good for headings, but has some
+  readability issues when rendered using Clear Type (the M and W look a
+  little off).  I use it as one of the fallback fonts for headings when 
+  the browser can not or will not install a web font.
+</ul>
+
+<p>
+
+<ul>
+<li><span style="font-family: Arial">Arial</span>.  This font is the most popular font with young "hipster" web
+  designers for body text.  I can see why they like the choice -- while
+  not the most readable web safe font out there, it is probably the
+  most aesthetically pleasing one.  As an aside, some font stacks
+  (list of possible fonts to use for a web page) put Helvectica before Arial,
+  but that may not be a good idea because Windows users sometimes install
+  programs that add a Helvectica that is a really ugly, unreadable 
+  mess on the screen.
+</ul>
+
+<p>
+
+<ul>
+<li><span style="font-family: Georgia">Georgia</span>.  A beautiful serifed screen font with full delta hinting designed
+  by Matthew Carter.  Its only real defect is that it only has old-style 
+  numerals, which do not look as good as lining numbers for on-screen
+  text.  Carter is not responsible for the old-style numbers; the original
+  Georgia had lining numbers but Carter's supervisor, Robert Norton, forced
+  the numbers to be old-style at the last minute.  
+</ul>
+
+<p>
+
+<ul>
+<li><span style="font-family: Verdana">Verdana</span>.  Hands down the most readable web safe font out there.  It's
+  really beautiful at 9 or 10 point.  At 12 point or bigger, it remains
+  really readable, but looks a little gawky and awkward.  
+</ul>
+
+<p>
+
+For this web page, I use a large version of Verdana because, for me, 
+readability of body text is more important than aesthetics.  
+
+<p>
+
+Since Verdana's bold is really heavy (it would better be described as
+"Verdana Black"; the reason Verdana is so heavy as a bold is because the
+technology Verdana was made for -- pixel rendering on low-resolution
+screens -- forced the bold to be twice as heavy as non-bold), in
+places with a lot of bold text I use Arial as the bold font along with
+Verdana for non-bold text.  While not a perfect match, it looks better
+than having a lot of Verdana bold on a page.
+
+<p>
+
+There actually is a better solution out there:
+<a href="http://georgiaverdana.com/">Verdana Pro Semi Bold</a>.  The main problem
+is cost: It would cost me $40 each year to add that single typeface
+style to my webpage.  Since this is a noncommercial page that is
+already losing money for me, it's hard to justify yet another expense
+when I have three mouths to feed.
+
+<p>
+
+As an aside,
+<a href="http://georgiaverdana.com/">Georgia Pro</a> has lining numerals, solving
+one particular issue.  Unfortunately, since it is a web font, it
+does not have delta hinting, so loses the one big advantage Georgia has:
+Readability on older computers.  Sure, one 
+<i>could</i>
+use Georgia Pro with lining numbers for numbers and normal Georgia for the
+rest of the text, but having a blurry-looking font next to a clear 
+delta-hinted font would be a jarring experience (it would look OK on
+computers using modern font hinting).  
+
+<p>
+
+Since a semi-bold does not need delta hinting as much as a font with 
+"regular" weight, combining Verdana Pro Semi Bold (without delta hinting) 
+with Verdana (using delta hinting) looks good, even on systems with old
+font rendering technologies.
+
+<p>
+
+<A name=One_possible_web_font></A><A name=Onepossiblewebfont></A><span class=moyet>==</span><span class=blogtitle><b>One possible web font</b></span><span class=moyet>==</span>
+
+<p>
+
+One web font that is remarkably readable, even when using older font
+rendering technologies, is Matthew Butterick's really beautiful
+<a href="http://practicaltypography.com/equity.html">Equity font</a>.
+
+<p>
+
+While it is a little blurry around the edges when rendered with 
+older font rendering technologies, it is still perfectly readable at
+12 point or larger.  It looks really great on systems with modern font
+rendering technologies.
+
+<p>
+
+The font is remarkably affordable, especially considering that it comes
+with a license to use it as a web font (as long as its used for one's own
+web page -- companies need to buy a separate, inexpensive license).  
+
+<p>
+
+The font has a true italic, which I find a little jarring for a screen 
+font (many fonts these days have an "italic" which is really an oblique
+with a couple of letters stylized differently), but I applaud Butterick
+for being one of the relatively few designers who has done the work of
+making a real italic font.
+
+<p>
+
+This is a font I will proably get down the road when I can pull
+enough funds together to do so.  I don't plan on using it for my
+web page, however (except possibly my 
+<a href="http://samiam.org/resume/">resume</a>); it's a little more formal
+looking than the design I like my web page to have.
+
+<p>
+
+<A name=See_also></A><A name=Seealso></A><span class=moyet>==</span><span class=blogtitle><b>See also</b></span><span class=moyet>==</span>
+
+<p>
+
+<a href="http://samiam.org/blog/20110528.html">Embedding web fonts</a> -
+<a href="http://samiam.org/blog/20110606.html">Webkit @font-face bug</a> -
+<a href="http://samiam.org/blog/20110619.html">IE8 @font-face bug</a> - 
+<a href="http://samiam.org/blog/20110719.html">Web typography</a> -
+<a href="http://samiam.org/blog/20111010.html">On web site design</a> -
+<a href="http://samiam.org/blog/20111023.html">RMS on Jobs; Raspberry Pi</a> 
+(I briefly discuss C|Net moving away from webfonts at the bottom) -
+<a href="http://samiam.org/blog/20120907.html">Slashdot and more</a> 
+(I discuss why I changed from Ubuntu to Source Sans for my page's webfont) -
+<a href="http://samiam.org/blog/20120918.html">Web typography (2012)</a> -
+<a href="http://samiam.org/blog/20130203.html">Web font rendering</a>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

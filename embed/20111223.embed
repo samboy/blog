@@ -1,0 +1,116 @@
+<!--{TAGS:W}-->
+
+<h1>Wrapping up the web design</h1>
+
+<h2>December 23, 2011</h2>
+
+Now that 2011 is coming to an end, it is time for me to wrap up the
+web page facelift for 2011.  
+
+<p>
+<div class=blogtitle>
+<b>My web site design has improved</b>
+</div><br>
+
+At the beginning of 2011, my web site design was a <A
+href=http://www.samiam.org/screenshots/index-2006-design.html>simple
+design from five years ago</A> that only used one font, wasn't very
+compatible with small-screen browsers, and had a somewhat plain look
+to it.  Oh yeah, the picture of me at the top was out of date.
+
+<p>
+
+I was able to completely overhaul the web design in 2011.  The design
+is tighter, more fancy looking, more readable, and includes layouts for 
+medium and small screen browsers.  
+
+<p>
+
+As I wrap up the web design at the end of 2011, some thoughts on its
+process.
+
+<p>
+<div class=blogtitle>
+<b>CSS has gotten so much better</b>
+</div><br>
+
+Five years ago, the state of CSS -- the language used to determine the
+visual look of a web page -- was a lot worse.  Back then, with Internet
+Explorer 6 still being so prominent and with so few web users using a
+browser that could pass even the <A href=http://acid2.acidtests.org>Acid
+2</A> test (<A href=http://acid3.acidtests.org>Acid3</A> didn't even
+<i>exist</i>), there were two choices: One could either make a page
+using CSS layout that required the web page to have a fixed width,
+or a web page using table layout with a more flexible design.
+
+<p>
+
+I chose a <A href=http://samiam.org/screenshots/index-2005-design.html>design
+with a fixed width</A> using pure CSS for samiam.org (just under 800 pixels, 
+because 800x600 was still common at the time) and a <A 
+href=http://maradns.org>variable-width design</A> for 
+MaraDNS.org using tables for layout and CSS for visual appearance.  
+
+<p>
+
+Back in 2006, I wanted to use <tt>display: table</tt> in my CSS; this
+was just not possible with the browsers of the time.  I finally had
+a chance to use this in the update to the late 2011 design; it allows
+desktop computers to see one layout and mobile small-screen devices to
+see another layout.  Since IE6 and IE7 are still around, I still have
+hard-coded HTML tables -- but only seen by those older IE releases.
+
+<p>
+<div class=blogtitle>
+<b>Fennec: A useful tool for mobile device web design</b>
+</div><br>
+
+I discovered another useful tool for testing my web page:
+<A href=http://mozilla.com/mobile>Fennec</A> (also called "Firefox
+for Android" or "Firefox for mobile").  While Fennec is a mobile
+browser, there is also a build of it for desktop operating systems,
+which is very useful for testing out how a web site looks like on a
+mobile device without needing to walk away from ones desk.
+
+<p>
+<div class=blogtitle>
+<b>Verdana doesn't have a great bold</b>
+</div><br>
+
+While Verdana is the reference standard for a great looking screen
+font, it is only so at its normal weight.  While Verdana bold looks
+good on older systems without true type, its bold is thick to the
+point of sometimes being difficult to read (especially with strings like 
+<b>ill</b>) on systems with modern font hinting technologies; the letter 
+spacing is a little tight.
+
+<p>
+
+One of the advantages of web fonts -- another technology just not there
+five years ago -- is that I can use Verdana where it's strongest, namely
+body text, and another font for headings.
+
+<p>
+<div class=blogtitle>
+<b>Looking ahead</b>
+</div><br>
+
+I used my last web page design for five years.  I hope that the new 2011
+design can be used for a couple of years, maybe even half a decade like
+the previous design.
+
+<p>
+
+Did I mention that it's a lot easier to keep the picture of me at the top
+up-to-date with this new design?  
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

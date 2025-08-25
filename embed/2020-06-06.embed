@@ -1,0 +1,128 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Dumbbells.jpg width=224 height=126>
+</div>
+
+<h1>Masculinity, etc.</h1>
+<h2>June 6, 2020</h2>
+I discuss masculinity in light of Tom Cotton’s recent op-ed, announce
+a new MaraDNS release, and now have “free beer” eBook versions of all
+of my blog entries available to download.
+
+<p>
+
+<A name=Tom_Cotton_Toxic_masculinity></A><A name=TomCottonToxicmasculinity></A><span class=moyet>==</span><span class=blogtitle><b>Tom Cotton: Toxic masculinity</b></span><span class=moyet>==</span>
+
+<p>
+
+Tom Cotton recently wrote
+<a href="https://www.nytimes.com/2020/06/03/opinion/tom-cotton-protests-military.html">an op-ed published in <i>The New York Times</i></a>
+saying, in so many words, that we should have our own military attack US
+citizens:
+
+<p>
+
+<blockquote>
+One thing above all else will restore order to our streets: an 
+overwhelming show of force to disperse, detain and ultimately 
+deter lawbreakers.
+</blockquote>
+
+This is toxic masculinity at its worst.  The idea of using an
+“overwhelming show of force” to handle “lawbreakers” is the language
+used by despots to silence opposition.
+
+<p>
+
+It is the method that, when taken to its inevitable conclusion,
+ends up with 
+<a href="https://en.wikipedia.org/wiki/Tlatelolco_massacre">the 1968 massacre in Mexico of by and large peaceful protesters</a>
+as well as
+<a href="https://en.wikipedia.org/wiki/People%27s_Liberation_Army_at_the_1989_Tiananmen_Square_protests">the 1989 Tiananmen Square crackdown</a>.  Indeed, 
+<a href="https://thebulwark.com/hong-kong-is-the-latest-battle-for-the-values-of-the-free-world/">the former world chess champion Kasparov has made a similar comparison</a>.
+
+<p>
+
+This kind of toxic masculinity is not limited to Tom Cotton; a similar kind
+of toxic masculinity can be seen with the 
+<a href="https://www.quietlyromantic.com/why-you-never-take-advice-from-the-red-pill/">harmful “Red Pill” movement</a>,
+which sought to exploit women for men’s selfish sexual satisfaction.
+This movement was very popular in the mid-2010s, but is fortunately waning 
+here in the 2020s.
+
+<p>
+
+76 years ago today, our brave troops landed at Normandy on D-Day to counter
+the inevitable results of the out of control toxic masculine thinking which
+dominated the Nazi movement.  To not let that kind of fascist “masculine”
+thinking take control of our society requires constant vigilance. 
+
+<p>
+
+Healthy masculinity, as practiced by 
+<a href="https://www.samiam.org/blog/2020-06-01.html#TheGeorgeFloydprotests">the likes of Arnold Schwarzenegger and others</a>,
+is about compassion and care, about empathy.  It is not about using force
+to oppress and silence voices nor is it about exploiting others for our
+selfish desires.
+
+<p>
+
+<A name=MaraDNS_350005_released></A><A name=MaraDNS350005released></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0005 released</b></span><span class=moyet>==</span>
+
+<p>
+
+I have released MaraDNS 3.5.0005:
+
+<p>
+
+<ul>
+<li> MaraDNS is now fully supported in Cygwin
+<li> Windows port of MaraDNS no longer includes maradns.exe; we instead
+  tell people how to compile MaraDNS in Cygwin. <i>Note:</i> We continue 
+  to fully support Deadwood for Windows, which is a proper Windows 
+  service (unlike the old maradns.exe).
+<li> Dockerfile now creates Docker image with working instance of
+  MaraDNS. This is still a work in progress; one currently needs to enter
+  the Docker container to change MaraDNS configuration files.
+<li> Version number fixed when compiling a MaraDNS release. 
+</ul>
+
+<p>
+
+My plan now for MaraDNS 3.5.0006 is to flush out the Docker
+support.
+
+<p>
+
+<A name=My_blog_is_now_available_as_a_free_eBook></A><A name=MyblogisnowavailableasafreeeBook></A><span class=moyet>==</span><span class=blogtitle><b>My blog is now available as a free eBook</b></span><span class=moyet>==</span>
+
+<p>
+
+It is now possible to download all of my blog entries as a free eBook,
+either in Kindle (mobi) or ePub format.  I have an automated process for
+updating the eBook with the new entry every time I publish to my blog,
+so this eBook will remain up to date.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="https://samiam.org/blog/ebooks.html">https://samiam.org/blog/ebooks.html</A>
+</blockquote>
+
+While one is free to download and read this eBook without charge, I 
+remain its copyright owner.
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

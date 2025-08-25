@@ -1,0 +1,42 @@
+<h1>New MaraDNS snapshot</h1>
+
+<h2>February 18, 2011</h2>
+
+In today's snapshot, I have finished resolving <A 
+href=http://woodlane.webconquest.com/pipermail/list/2010-November/000702.html>William
+Summers' issue with ANY replies which are larger than 512 bytes</A>.
+
+<p>
+
+Not only does MaraDNS now send proper TRUNCATED replies
+over UDP for a DNS packet for an ANY answer that is
+over 512 bytes in size, but it is now possible to use <A
+href=http://maradns.org/tutorial/dnstcp.html>long_packet_ipv4</A> to
+resolve long ANY queries using DNS-over-TCP.
+
+<p>
+
+This resolves Willian Summers' issue.  I now only have one more open issue
+with MaraDNS: <A
+href=http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=607739>Debian bug
+607739</A>
+
+<p>
+
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

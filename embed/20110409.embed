@@ -1,0 +1,95 @@
+<h1>On Xonotic</h1>
+
+<h2>April 9, 2011</h2>
+
+Once upon a time, there was a real cool open-source first-person-shooter
+game called <A href=http://sourceforge.net/projects/nexuiz>Nexuiz</A>.  It
+was a fun little game that was very similar to Unreal Tournament or Quake
+III.
+
+<p>
+
+After being around for a few years, the lead developer decided he wanted
+to get paid for his hard work, and made the game commercial.  The reaction
+by the open-source community was very disappointing: They attacked the 
+developer for trying to make money.  
+
+<p>
+
+I've seen this movie played out before.  In the early 2000s, when the Tux
+Racer developers tried to make money with their open-source game, the same
+hostility was encountered.  Then, and now, the arguments boiled down to
+the open-source community saying "How dare the developers try to make money
+from their hard work". [1] [2]
+
+<p>
+
+In the aftermath of this, Nexuiz was forked and there is now a project called
+"Xonotic". 
+
+<p>
+
+I tried playing the original preview of Xonotic.  I didn't like it.  On
+my admittedly underpowered netbook (N455 / GMA 3150), Xonotic is too slow to
+play at all unless all textures are disabled.  Contrast this with Nexuiz 2.3,
+which has a good FPS (frames per second) with textures enabled.
+
+<p>
+
+The issue is that, since Xonotic is completely open-source, there is no way
+to pay the developers, so there is no way to enforce discipline.  Each
+developer is going to make contributions that work well with whatever
+computer and graphics card they happen to have; there is no one that can
+say "This game has to be playable on an Intel N455/GMA 3150" or, if that
+is too limiting, "This game has to be playable on an AMD E-350/Radeon
+6310" or whatever.
+
+<p>
+
+Because of this, I am still going to be playing Nexuiz.
+
+<p>
+
+Since I am going to be using a low-end N455 netbook for a while, I have
+made a special <A href=http://samiam.org/nexuiz>netbook remix of Nexuiz</A>.
+Unlike other netbook remixes of Nexuiz, this remix does not eliminate 
+textures; it has the same experience as the full version of Nexuiz. [3]
+
+<p>
+
+I am glad to see that open-source Nexuiz lives on in the form of Xonotic,
+but the resentment the Xonotic developers have against the core Nexuiz 
+developers (as can be
+seen in their <A href=http://www.xonotic.org/the-game/faq/>FAQ</A>) for
+trying to make money is unproductive.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+[1] This kind of knee-jerk reaction is most prominent with open-source 
+games.  I do not recall similar hostility when RedHat stopped giving away
+their operating system.  
+
+<p>
+
+[2] The arguments made when Nexuiz went commercial were along the lines 
+    that the original core Nexuiz developers ignored the entire Nexuiz
+    community.  Never mind that the core developers did the lion's share 
+    of the hard work.  With Tux Racer, the arguments were along the lines 
+    that the game was not good enough to be sold.
+   
+<p>
+
+[3] It also uses Nexuiz 2.3 instead of a newer version of Nexuiz.  The
+    community contributions to Nexuiz made after 2.3 slow down the game
+    too much on low-end hardware.
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

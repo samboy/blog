@@ -1,0 +1,187 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>New Cousine/MSYS font</h1>
+<h2>December 15, 2013</h2>
+I have converted the 7x14 version of the
+<a href="http://en.wikipedia.org/wiki/Fixed_(typeface)">misc-fixed</a> bitmap
+font to a Windows-compatible version that both
+<a href="http://mirror.facebook.net/putty/">PuTTY</a> and
+<a href="http://www.mingw.org/wiki/MSYS">MSYS</a> can use.
+
+<p>
+
+<A name=Downloading_and_installing></A><A name=Downloadingandinstalling></A><span class=moyet>==</span><span class=blogtitle><b>Downloading and installing</b></span><span class=moyet>==</span>
+
+<p>
+
+The font can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/terminal/misc-fixed/m7x14.fon">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>misc-<![if gt IE 6]>&#8203;<![endif]><wbr>fixed/<![if gt IE 6]>&#8203;<![endif]><wbr>m<![if gt IE 6]>&#8203;<![endif]><wbr>7<![if gt IE 6]>&#8203;<![endif]><wbr>x<![if gt IE 6]>&#8203;<![endif]><wbr>14.<![if gt IE 6]>&#8203;<![endif]><wbr>fon</A>
+</blockquote>
+
+After downloading, to install in Windows, double click on the font (m7x14)
+then click on the button in the font preview window marked “install”.
+
+<p>
+
+<A name=Using_the_font_in_PuTTY></A><A name=UsingthefontinPuTTY></A><span class=moyet>==</span><span class=blogtitle><b>Using the font in PuTTY</b></span><span class=moyet>==</span>
+
+<p>
+
+After the font has been installed, in PuTTY one can change the font used
+for a terminal session by going to Window -&gt; Appearance and clicking on
+the button marked “change” to the right of where it says “Font”.
+
+<p>
+
+Select the font “m7x14” in the menu on the left then click on “OK”.
+
+<p>
+
+To save these settings, click on “Session”, put a name in the box for
+“Saved Sessions”, then click on “Save”.
+
+<p>
+
+<A name=Using_the_font_in_MSYS></A><A name=UsingthefontinMSYS></A><span class=moyet>==</span><span class=blogtitle><b>Using the font in MSYS</b></span><span class=moyet>==</span>
+
+<p>
+
+In MSYS 1.0.10 (which is available for download
+<a href="http://samiam.org/software/">right here</a>), one changes the font by
+editing the file msys.bat.  In that file, there is a line that looks
+like this:
+
+<p>
+
+<tt>start rxvt -backspacekey ^H -sl 2500 -fg %FGCOLOR% -bg %BGCOLOR% -sr -fn Courier -12 -tn msys -geometry 80x25 -e /bin/sh --login -i</tt><br>
+
+<p>
+
+Change the line to look like this:
+
+<p>
+
+<tt>start rxvt -backspacekey ^H -sl 2500 -fg %FGCOLOR% -bg %BGCOLOR% -sr -fn m7x14 -tn msys -geometry 82x25 -e /bin/sh --login -i</tt><br>
+
+<p>
+
+It’s possible to choose colors here.  For example, green on black:
+
+<p>
+
+<tt>start rxvt -backspacekey ^H -sl 2500 -fg <font color=#008700>#00d000</font> -bg #000000 -sr -fn m7x14 -tn msys -geometry 82x25 -e /bin/sh --login -i</tt><br>
+
+<p>
+
+Note that the ^H is a literal ctrl-H character.
+
+<p>
+
+Once this is done, MSYS should restart using the 7x14 font.  Two things
+to note:
+
+<p>
+
+<ul>
+<li> The “-fn m7x14” part chooses which font MSYS starts with
+<li> The geometry is 82x25 because a RXVT’s code for calculating the screen size
+  is buggy; the resulting window is 80x25 
+</ul>
+
+<p>
+
+<A name=How_I_made_the_font></A><A name=HowImadethefont></A><span class=moyet>==</span><span class=blogtitle><b>How I made the font</b></span><span class=moyet>==</span>
+
+<p>
+
+First I went to the 
+<a href="http://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html">current page for the 
+misc-fixed fonts</a>
+and downloaded the most recent version of the fonts.  The source font I
+used was 7x14; its source file is 7x14.bdf, which can be seen here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/terminal/misc-fixed/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>misc-<![if gt IE 6]>&#8203;<![endif]><wbr>fixed/</A>
+</blockquote>
+
+I then opened up the font in 
+<a href="http://fontforge.org/">FontForge</a>, and exported the font as a Winwdows .fnt
+file.
+
+<p>
+
+Once I had the Windows .fnt file, I used Simon Tatham’s dewinfont.py tool
+to convert the font in to a “.fd” file.  Once I had the fd file, I had to
+make sure of the following:
+
+<p>
+
+<ul>
+<li> The font needs the line near the top with the charset to say “charset 0”,
+  otherwise MSYS will be unable to open the font
+<li> To avoid looking buggy in MSYS’ RXVT client, I had to make sure the letters
+  had no pixels in the leftmost column of the font.  7x14 comes from upstream
+  “left aligned” (the blank pixel separing characters is on the right size of
+  the font); I used a Perl script to make the letters “right aligned”, by
+  moving all characters one pixel to the right, discarding the blank right 
+  column, and inserting a blank column on the left hand side.
+<li> The RXVT included with MSYS will not open a font whose name starts with
+  a number.  This is why the font is called “m7x14” instead of “7x14”.
+<li> All of the characters needed to have the same width (no “width 0”
+  characters), or PuTTY would refuse to open the font.
+</ul>
+
+<p>
+
+Once all that was done, I used Simon’s mkwinfont.py script to convert the
+.fd file in a to the final Windows .fon file.
+
+<p>
+
+Simon’s tools can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://www.chiark.greenend.org.uk/~sgtatham/fonts/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>chiark.<![if gt IE 6]>&#8203;<![endif]><wbr>greenend.<![if gt IE 6]>&#8203;<![endif]><wbr>org.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/~<![if gt IE 6]>&#8203;<![endif]><wbr>sgtatham/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/</A>
+</blockquote>
+
+I have made a mirror here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/terminal/Simon-Tatham/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>Simon-<![if gt IE 6]>&#8203;<![endif]><wbr>Tatham/</A>
+</blockquote>
+
+<A name=Conclusion></A><A name=Conclusion></A><span class=moyet>==</span><span class=blogtitle><b>Conclusion</b></span><span class=moyet>==</span>
+
+<p>
+
+While bitmapped fonts will become obsolete once retina displays are 
+universal (probably within 10 years), it’s nice to be able to use
+a font I have been using
+<a href="http://samiam.org/screenshots/">since 1995</a> with all of my
+Windows terminal applications.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

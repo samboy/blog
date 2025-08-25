@@ -1,0 +1,74 @@
+<!--{TAGS:G}-->
+<div class=blogpic>
+<img src=pics/Seamicro_server.jpg width=160 height=120>
+</div>
+
+<h1>Atom Supercomputer</h1>
+
+<h2>May 20, 2011</h2>
+
+Intel, when they designed and released the Atom, probably imagined that it
+would be used for cell phones and possibly very portable computers.  I do
+not think Intel saw the Atom chip as a replacement for their desktop computer,
+much less as a chip to power a supercomputer.
+
+<p>
+
+A supercomputer using Intel Atom chips?  You bet.  <A 
+href=http://seamicro.com>Seamicro</A> is a Silicon Valley startup that
+makes Atom-powered supercomputers.  Their most recent computer takes 256
+Intel Atom N570 chips and puts them in a single box.  
+
+<p>
+
+The cost of a system is pretty steep: $148,000.  Compare this to buying
+256 ASUS N570-based netbooks, which currently have 
+<a href=http://www.amazon.com/ASUS-1015PX-MU17-WT-10-1-Inch-Netbook-White/dp/tech-data/B004SUO3W4>a 
+street price of $320</a>.  Getting the same number of N570 chips by buying 
+256 netbooks (where each chip also has a 250gig hard disk, a display and 
+keyboard, ports, etc.) is $81,920.
+
+<p>
+
+The advantage of a system like this compared to, say, an Itanium-based
+supercomputer (yes, the Itanium still lives, but who knows for how long),
+is that the system uses less power per unit of computing power.  The
+other advantage is binary compatibility with x86 applications.  Indeed,
+Seamicro recently upgraded their flagship system to use N570 chips
+because they wanted to have x86-64 support.
+
+<p>
+
+This system is not designed to be a compute cluster, of course--the Atom
+is not that efficient per watt when it comes to number crunching.  Indeed,
+each one of those Atom chips in Seamicro's cluster has a GMA3150 GPU that
+is not being used.
+
+<p>
+
+If I were Seamciro and wanted to make a low-energy computation
+supercomputer, I would probably use the AMD C-50 chip (or possibly the
+AMD E-350).  While 
+<A href=http://www.netbooklive.com/asus-1015b-eee-pc-review-9302/>the C-50's 
+APU is slower than the N570's</A>, the C-50 has
+the advantage of having a programmable GPU unit.  In a C-50 supercomputer,
+not only can each CPU use its APU to perform numerical calculations,
+but the GPU could also be programmed to perform calculations.
+
+<p>
+
+An Atom supercomputer is an interesting concept and the idea of using 
+low-cost, low-power-usage chips to make a supercomputer is very
+intriguing. 
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing).  Image of Seamicro server
+obtained from Seamicro's web site.</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

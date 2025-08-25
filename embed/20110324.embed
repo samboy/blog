@@ -1,0 +1,45 @@
+<!--{TAGS:L,M}-->
+<h1>MaraDNS updates</h1>
+
+<h2>March 24, 2011</h2>
+
+<A href=20110319.html>As I blogged about before</A>, I have made the
+transition from CentOS 5 to <A href=http://scientificlinux.org>Scientific
+Linux</A> 5.  This affects MaraDNS development because CentOS 5 is no
+longer an officially supported platform.  The officially supported platforms
+are now:
+
+<ul>
+<li>Scientific Linux 5
+<li>Windows 7
+</ul>
+
+This change should have no practical effect on MaraDNS or Deadwood; the code
+is quite portable.  "Not supported" doesn't mean "won't work"; it means "I
+won't help with problems one may have running MaraDNS or Deadwood on this
+OS".  
+
+<p><hr><p>
+
+Bryan Duff has <A 
+href=http://woodlane.webconquest.com/pipermail/list/2011-March/000807.html>reported
+on the MaraDNS list</A> that zone transfers which start with a DNS-over-UDP
+query do not work.  The solution is to modify the UDP server to send out
+a "truncated" reply to AXFR and IXFR requests.
+
+<p>
+
+The next day when I will work on MaraDNS is on <A 
+href=http://samiam.org/blog/20110318.html>April 15</A>; I will address this
+issue on that day.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

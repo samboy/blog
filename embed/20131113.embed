@@ -1,0 +1,58 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Deadwood Update</h1>
+<h2>November 13, 2013</h2>
+I have updated Deadwood and discuss DNS-over-TCP.
+
+<p>
+
+<A name=Deadwood_update></A><A name=Deadwoodupdate></A><span class=moyet>==</span><span class=blogtitle><b>Deadwood update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have fixed some warnings that came up when compiling Deadwood using
+llvm's clang.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://www.maradns.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<A name=DNS_over_TCP></A><A name=DNSoverTCP></A><span class=moyet>==</span><span class=blogtitle><b>DNS over TCP</b></span><span class=moyet>==</span>
+
+<p>
+
+Since this has come up twice this last week: DNS-over-TCP is optional
+as per section 6.1.3.2 of RFC1123.  Any program or web service that
+considers no DNS-over-TCP an error is not RFC-compliant.
+
+<p>
+
+Not having DNS-over-TCP is more secure, because it gives attackers a
+smaller surface to attack.  While I do allow MaraDNS users to have 
+DNS-over-TCP via the zoneserver program (Windows users will just have
+to modify and compile the source, or use Cygwin if they want zoneserver),
+it is not necessary or even that good of an idea.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

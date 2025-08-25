@@ -1,0 +1,162 @@
+<!--{TAGS:W}-->
+
+<h1>Dillo CSS hacks</h1>
+
+<h2>December 13, 2011</h2>
+
+A while ago, I posted an article about <A
+href="http://maradns.blogspot.com/2010/02/dillo-22-return-of-css-hack.html">Dillo
+CSS hacks</A>.  Since that article came out, Dillo has changed and the
+old CSS hacks for hiding content from Dillo no longer work.
+
+<p>
+
+Since I'm not particularly interested in chasing a moving target, I gave
+up on trying to make my web page good in Dillo.  Then, I found out last
+night that <A href=http://dillo-win32.sourceforge.net/dillo/status.php>the
+Windows port of Dillo is frozen</A>.  This in mind, I revised my web design
+to better accommodate Dillo.
+
+<p>
+
+The only CSS that Dillo has a problem with is the complicated CSS on
+<A href=/links.html>my site map page</A> that Internet Explorer 6 and 7
+also have a problem with.  Since this CSS is only used on 
+<A href=/links.html>two</A> <A href=/resume/>pages</A>, I have split off
+the mainstream CSS that Dillo does not have
+a significant problem rendering; While Dillo doesn't support a lot of
+this CSS, such as <tt>float:</tt>, <tt>display: none</tt>, 
+<tt>display: table</tt>, or <tt>background-image:</tt>, the site still
+reasonably degrades and remains attractive.
+
+<p>
+
+Unfortunately, the CSS used only on the site map page looks really
+bad in any browser that doesn't pass the <A 
+href=http://acid2.acidtests.org>Acid 2 test</A>.  Indeed, I use a combination
+of the <A href=http://www.albin.net/css/owen-hack>Owen hack</A> and
+the <A 
+href=http://www.javascriptkit.com/dhtmltutors/csshacks2.shtml>html&gt;/**/body
+hack</A> to hide most of this CSS from Internet Explorer 6 and 7.
+To reduce loading times for most pages without this CSS, it is now
+in <A href=../linkbox.css>a separate file</A>.  While Dillo doesn't
+render Acid 2, it ignores CSS selectors and parses pretty much everything.
+So, I added another
+<A href=../dillo-win32.css>bunch of CSS</A> which only Dillo sees, which
+"corrects" the CSS Dillo doesn't properly render so the page looks
+reasonable.  
+
+<p>
+
+Here is what the header of my site list page looks like:
+
+<p>
+
+<i>We have a special style sheet for small-screen devices, such as
+smart phones</i>
+
+<p>
+
+<tt>
+&lt;link rel="stylesheet" type="text/css" href="samiam_smartphone.css"<br>
+      media="only screen and (max-device-width: 640px)" /&gt;<br>
+</tt>
+
+<p>
+
+<i>We have another stylesheet for modern mainstream browsers.  We
+use the "only screen" instead of just "screen" so that older versions
+of Netscape, Opera, Firefox, and so on do not load the CSS at all</i>
+
+<p>
+
+<tt>
+&lt;link rel="stylesheet" type="text/css"<br>
+ media="only screen and (min-device-width: 641px)"<br>
+ title="Blue Sky (default)" href="samiam_b5.css" /&gt;<br>
+</tt>
+
+<p>
+
+<i>Load the special CSS used for the boxes on the the 
+<A href=../links.html>site map page</A></i>
+
+<p>
+
+<tt>
+&lt;link rel="stylesheet" type="text/css"<br>
+ media="only screen and (min-device-width: 0)"<br>
+ href="linkbox.css" /&gt;<br>
+</tt>
+
+<p>
+
+<i>Have Dillo, and only Dillo (or any other browser which doesn't understand
+media queries in CSS), load some CSS to hide the CSS it can't effectively
+render in linkbox.css.  This is my "Dillo-Win32 hack".</i>
+
+<p>
+
+<tt>
+&lt;link rel="stylesheet" type="text/css"<br>
+ media="only screen and <b>(dillo-hack: 1)</b>"<br>
+ href="dillo-win32.css" /&gt;<br>
+</tt>
+
+<p>
+
+<i>Tell small-screen browsers that, yes, I have tailored CSS for
+a small screen, and there is no need to try and scale the page</i>
+
+<p>
+
+<tt>
+&lt;meta name="viewport"<br>
+content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"<br>
+&gt;<br>
+</tt>
+
+<p>
+
+<i>Since older versions of Internet Explorer still have a large market
+share, I use IE-specific code to load the CSS so the web site looks 
+attractive in these older browsers.  In the CSS file, 
+there are a number of selector hacks
+to hide the CSS IE6 and IE7 can't effectively render from these browsers.</i>
+
+<p>
+
+<tt>
+&lt;!--[if lt IE 9]&gt;<br>
+&lt;link rel="stylesheet" type="text/css" href="samiam_b5.css" media="all" /&gt;<br>
+&lt;link rel="stylesheet" type="text/css" href="linkbox.css" media="all"  /&gt;<br>
+&lt;![endif]--&gt;</tt><p>
+
+
+<p>
+
+In summary:
+
+<ul>
+<li>Smart phones get <A href=../screenshots/index-2011-on-mobile.html>a
+simple design that works well on a small screen</A>
+<li>Modern desktop web browsers get a nice-looking design that works for
+anything from a netbook-sized screen up to a super-HD screen.
+<li>Users of rare older browsers (Netscape, older Firefox, ancient Opera
+releases with ads, etc.) will usually get a version of this site
+without any CSS which, while not attractive, is perfectly usable.
+<li>The site looks remarkably good on text-only browsers like Links
+<li>The CSS gracefully degrades for users of Internet Explorer 6-8
+<li>Dillo-win32 users get a reasonably nice-looking site.
+</ul>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,107 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>RadioGatún[64], etc.</h1>
+<h2>November 18, 2013</h2>
+In this blog, I discuss Deadwood’s RadioGatún[64] support, 
+MaraDNS’s cost, and getting Unicode characters in Xterm when using
+CentOS 6.
+
+<p>
+
+<A name=Deadwood_now_can_use_RadioGatn64></A><A name=DeadwoodnowcanuseRadioGatn64></A><span class=moyet>==</span><span class=blogtitle><b>Deadwood now can use RadioGatún[64]</b></span><span class=moyet>==</span>
+
+<p>
+
+I have updated Deadwood to optionally use RadioGatún[64]; the default
+is still to use  
+<a href="http://samiam.org/rg32">RadioGatún[32]</a>.
+
+<p>
+
+On 64-bit systems, not surprisingly, the 64-bit version of RadioGatún
+is about 45% faster than the 32-bit version. What did surprise me is
+that, on 32-bit systems, the 64-bit version is about 5% faster than
+the 32-bit version. While the 64-bit version needs more operations on
+a 32-bit CPU, these operations are done only half the time; one gets an
+overall performance boost.
+
+<p>
+
+One advantage the 32-bit version does have is that its code is about 33%
+smaller (600-700 bytes smaller) than the 64-bit code on 32-bit systems.
+
+<p>
+
+RadioGatún, unlike ARX (add-rotate-exclusive or) ciphers, only performs
+bitwise rotations, exclusive or, and bitwise or operations, so it does not
+have the performance penalty running the 64-bit version on a 32-bit system
+that ARX ciphers have. 
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<A name=MaraDNS_cost></A><A name=MaraDNScost></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS’ cost</b></span><span class=moyet>==</span>
+
+<p>
+
+Using the 
+<a href="http://csse.usc.edu/tools/COCOMOII.php">COCOMO II - Constructive Cost Model</a>
+and my take-home pay at the time
+I started developing MaraDNS (which is less than what I actually cost my
+then-employer), MaraDNS is worth about two million dollars (US currency). I
+have freely donated all this effort to the Internet for anyone to download and
+use. 
+
+<p>
+
+I devoted a decade of my life and $2 million worth of software development
+time making MaraDNS.  
+
+<p>
+
+<A name=Xterm_7x14_Unicode_font></A><A name=Xterm7x14Unicodefont></A><span class=moyet>==</span><span class=blogtitle><b>Xterm 7x14 Unicode font</b></span><span class=moyet>==</span>
+
+<p>
+
+If I do the following in CentOS 6:
+
+<p>
+
+<tt>xterm -fn 7x14</tt><br>
+
+<p>
+
+I get almost no Unicode characters, but if I do this incantation:
+
+<p>
+
+<tt>xterm -fn -misc-fixed-medium-r-normal--14-130-75-75-c-70-iso10646-1</tt><br>
+
+<p>
+
+I get reasonably good Unicode BMP coverage (including smart quotes).
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

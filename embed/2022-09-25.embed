@@ -1,0 +1,112 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>A eulogy for djbdns</h1>
+<h2>September 25, 2002</h2>
+This blog is an example of how outspoken, confrontational people have a hard
+time doing actual productive work.
+
+<p>
+
+<A name=The_rise_and_fall_of_djbdns></A><A name=Theriseandfallofdjbdns></A><span class=moyet>==</span><span class=blogtitle><b>The rise and fall of djbdns</b></span><span class=moyet>==</span>
+
+<p>
+
+djbdns is (was, really, here in 2022) a DNS server which was very popular
+back in 2001, when I started developing MaraDNS.  It has not been updated
+since 2001.
+
+<p>
+
+One of the things I find incredibly ironic is that, here, over 20
+years after DJB’s final update to djbdns, I’m the only one who is
+<a href="https://maradns.samiam.org/ndjbdns/">updating its code</a>. And, I am
+no djbdns advocate: I started <a href="https://maradns.samiam.org/">MaraDNS</a>
+simply because, until 2007, djbdns didn’t have an open source license,
+BIND had a lot of security issues, and there plain simply wasn’t any
+other DNS server out there. The djbdns crowd was not happy; one of my
+first emails I got after starting MaraDNS was a flame from a djbdns
+user criticizing me for making MaraDNS because djbdns was good enough,
+in his point of view.
+
+<p>
+
+And, indeed, there was a lot of noise 10-20 years ago about how djbdns
+was the one true DNS server, better than all others because it had
+no security holes. They made a lot of noise online, flooding online
+discussion boards whenever the subject of a DNS server came up. A few
+of them are still on ycombinator, still criticizing anything that’s
+not djbdns—the excellent KnotDNS got a cold reception from them there.
+
+<p>
+
+Despite all of the noise these loudmouths made about djbdns, very few
+stepped up to plate to actually maintain djbdns’s code. You would
+think, with the number of poster loudly proclaiming the virtues of
+djbdns, the number of people who made entire websites shrines to djbdns
+(not to mention qmail), and so on, at least one of them would still be
+up to plate, maintaining djbdns.
+
+<p>
+
+No. That didn’t happen. The only one still here, still maintaining
+djbdns is me, and I made a competitor to djbdns (which has been flamed
+by multiple djbdns “advocates”). Not one person who went to so much
+effort to troll and flame other DNS servers had the basic competence
+and persistence to actually make and maintain code.
+
+<p>
+
+Years after the BIND-and-djbdns flame wars have died out everywhere
+except with the aging crowd of Ycombinator desperately trying to recreate
+a rose-tinted vision of the past (and even here the djbdns advocates
+are slowly conceding djbdns isn’t really usable here in the 2020s),
+MaraDNS is still being maintained. I have given up on making her a general
+purpose recursive DNS server (use BIND, Unbound, or Knot Resolver for
+that), although it will still work as a recursor with over 99% of sites,
+as long as min_ttl is used so amazon.com is usable. However, MaraDNS is
+still a general-purpose authoritative nameserver, and it is (via Deadwood)
+a usable caching resolver (useful for pi-hole type stuff).
+
+<p>
+
+Point being, people who make a lot of noise and spread a lot of
+negative energy online seem to not be very good at actually creating
+and maintaining something tangible like a software project.
+
+<p>
+
+<i>Edit:  There may be
+<a href="https://www.openwall.com/lists/oss-security/2020/06/01/1">other unpatched
+security holes</a> in djbdns.  Since they do not have a CVE number,
+I am ignoring them.</i>
+
+<p>
+
+<A name=Chess_update></A><A name=Chessupdate></A><span class=moyet>==</span><span class=blogtitle><b>Chess update</b></span><span class=moyet>==</span>
+
+<p>
+
+I am taking a minor break from being actively involved in the online chess
+community.  People should not be making unfounded negative accusations
+without evidence, and the current controversy, which I have discussed
+enough in the last two blog entries, has not died down in the least.
+
+<p>
+
+Hopefully things will get back to normal again; until then, I need
+some space from that kind of online negativity.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

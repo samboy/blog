@@ -1,0 +1,60 @@
+<h1>Webkit @font-face bug</h1>
+
+<h2>June 5, 2011</h2>
+
+<i>2014 update: This bug has been fixed for a while</i><p>
+
+As I was testing the printing of my web page this morning, I discovered
+that Webkit (the HTML rendering engine used by the Safari and Chrome
+browsers) has a nasty <tt>@font-face</tt> bug: It can not correctly
+print pages that use a custom font.
+
+<p>
+
+The problem is that the character mapping of the font gets screwed up
+when sent to the printer, making the text gibberish.  I am seeing this 
+problem in Windows 7 using the Safari browser.
+
+<p>
+
+My solution is to add something like this to the bottom of my printing
+CSS:
+
+<pre>
+@media print and (-webkit-min-device-pixel-ratio:0) {
+	h1 { font-family: sans-serif; }
+	h2 { font-family: sans-serif; }
+	h3 { font-family: sans-serif; }
+	.blogtitle { font-family: sans-serif; }
+	/* Any other classes or tags that use the custom font get the
+	 * same treatment */
+}
+</pre>
+
+The first line of the above CSS tells browsers "ignore this CSS if you are
+not Webkit"; the rest of the CSS tells Webkit "never mind the custom font,
+just use an ordinary sans-serif font".  I'm not a big fan of CSS hacks like
+<tt>-webkit-min-device-pixel-ratio</tt>, but I figure by the time Webkit
+no longer recognizes this tag, they will have fixed their <tt>@font-face</tt>
+printing bug.
+
+<p>
+
+While discussing <tt>@font-face</tt> issues, another issue is that
+<A href=http://remysharp.com/2009/06/23/safaris-problem-with-font-face/>some
+browsers don't show anything while the font is loading</A>.  This is an 
+issue for people still in dial-up hell and one I have kept in mind.  My
+solution is to only use one custom font (at one single weight and style); 
+I have also edited the font so that it only has characters in languages I 
+personally know.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

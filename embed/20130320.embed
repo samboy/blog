@@ -1,0 +1,81 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>March 20, 2013</h2>
+
+I have updated Deadwood to fix a long-standing bug resolving host names
+that only pops up once in a blue moon.
+
+<p>
+
+I discovered that the host name “whatever.scalzi.com” was not resolving with
+Deadwood.  After spending an hour or so looking at the issue, I discovered
+an off-by-one bug.
+
+<p>One of the sanity tests performed when making
+an incomplete CNAME chain has a subtle bug.
+The sanity test in question makes sure a CNAME referral has records in the
+AN section of the reply before gluing together incomplete CNAME referrals
+with the records the CNAMEs point to.
+
+<p>
+The bug only manifested itself when an incomplete
+CNAME chain has its last DNS record start 256 (or 512, or 768—at this point
+in the code, we’re looking at the uncompressed form of the packet) bytes in 
+to the packet, and would cause the sanity test to incorrectly fail.
+
+<p>
+Since this test otherwise incorrectly passed, it remains an open question
+whether this bug fix will cause other hostnames to not correctly resolve.
+I will continue to perform dogfood testing with Deadwood to see if any
+other problems pop up.
+
+<p>
+
+The fix is a <A href=
+http://maradns.com/deadwood/browse-source/head/update/3.2.04/deadwood-3.2.03-whatever.scalzi.com-fix.patch
+>one-byte change to the code</A>.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<p>
+Note that I found and fixed this bug before the 20th; while I normally
+do not work on MaraDNS or Deadwood before the 20th, this particular bug
+was annoying me enough that I fixed it right away.
+
+<p>
+I plan to work on MaraDNS/Deadwood again one day next month, after the 20th,
+unless a critical security bug with a CVE number is found.
+
+<p>
+
+As an aside, I am not a big fan of Scalzi’s writings.  His “<A
+href=
+http://whatever.scalzi.com/2012/08/09/an-incomplete-guide-to-not-creeping/
+>An Incomplete Guide to Not Creeping</A>” article creeps me out, and has
+the same issues as those <A href=20130307.html>“Creeper cards” I recently
+blogged about</A>.
+
+<p>
+
+<i>2016 update: Keep in mind that a lot of stuff Pick up artists / misogynists
+say to justify their predatory behavior towards women is
+<a href="/blog/2016-10-08.html#Addendum">pure BS</a></i>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,32 @@
+<h1>Deadwood update</h1>
+
+<h2>January 15, 2011</h2>
+
+I made a mistake in applying Yarin's plain diff patch against Deadwood the
+other day, resulting in a program that would not compile.  I have now fixed
+this, and duende, as a result, now has a "pid" optional argument.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<A href=http://maradns.org/deadwood/snap/>http://maradns.org/deadwood/snap</A>
+
+<p>
+
+There's a reason I prefer "diff -u" patches over plain "diff" patches--it 
+makes it harder to have a mistake.
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

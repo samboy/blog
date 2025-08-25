@@ -1,0 +1,140 @@
+<h1>djbdns 1.05: False security</h1>
+
+<h2>January 3, 2011</h2>
+
+I would like to start off this blog posting by pointing out that djbdns'
+dnscache is an excellent tiny DNS caching solution for *NIX systems.
+It has a very small footprint and was the pioneer in innovative techniques
+to improve DNS security (notably source port randomization).
+
+<p>
+
+One issue is that it hasn't been maintained in a decade; one has to use an
+unofficial fork of the code which updates it for the 21st century (One good
+fork is <s><A href=http://sourceforge.net/projects/zinq/files/>Zinq</A></s>
+<A href=http://pjp.dgplug.org/djbdns/index.html>N-DjbDNS</A>).
+
+<p>
+
+This is not the most serious issue with djbdns.  The main issue with djbdns
+isn't an issue with djbdns <i>per se</i> but an issue with some of
+its userbase.  A number of users are still using an unpatched copy of
+djbdns-1.05, released a decade ago because they mistakingly believe the
+software is perfectly secure.
+
+<p>
+
+This myth is still told on online discussion forums; for
+example, just last year two posters on Slashdot (which has
+not been a very good place to post anything for years, but
+that is another rant for another day) spouted that djbdns is (<A
+href=http://tech.slashdot.org/comments.pl?sid=1589160&cid=31550996>nearly</A>)
+<A
+href=http://tech.slashdot.org/comments.pl?sid=1589160&cid=31547474>completely</A>
+bug-free without anyone posting a follow-up correcting their mistake.
+
+<p>
+
+This is <i>very</i> dangerous.  People spouting on public forums about
+how djbdns is magically 100% perfectly secure and never need patching
+need to -- how do I say this -- pull their head out a place where the
+sun doesn't shine.
+
+<p>
+
+A stock install of djbdns-1.05 has security problems.  Three, to be exact.
+Two of them can be resolved with simple, small patches:
+
+<pre>
+*** dnscache.c.orig     Sun Feb 11 13:11:45 2001
+--- dnscache.c  Tue Mar 18 17:22:03 2003
+***************
+*** 1,4 ****
+--- 1,5 ----
+  #include &lt;unistd.h&gt;
++ #include &lt;signal.h&gt;
+  #include "env.h"
+  #include "exit.h"
+  #include "scan.h"
+***************
+*** 391,396 ****
+--- 392,398 ----
+    char *x;
+    unsigned long cachesize;
+  
++   signal(SIGPIPE, SIG_IGN);
+    x = env_get("IP");
+    if (!x)
+      strerr_die2x(111,FATAL,"$IP not set");
+</pre>
+
+Patch #2:
+
+<pre>
+--- response.c.orig     2009-02-24 21:04:06.000000000 -0800
++++ response.c  2009-02-24 21:04:25.000000000 -0800
+@@ -34,7 +34,7 @@
+         uint16_pack_big(buf,49152 + name_ptr[i]);
+         return response_addbytes(buf,2);
+       }
+-    if (dlen &lt;= 128)
++    if ((dlen &lt;= 128) && (response_len &lt; 16384))
+       if (name_num &lt; NAMES) {
+        byte_copy(name[name_num],dlen,d);
+        name_ptr[name_num] = response_len;
+</pre>
+
+The third one, however, requires some fundamental design changes to
+properly address; <A href=http://your.org/djbdns/>this webpage has
+more details</A>.
+
+<p>
+
+Personally, my solution to this cache spoofing issue with djbdns is to
+use <A href=http://maradns.org/deadwood/>deadwood</A> (MaraDNS 2.0's
+recursive resolver) instead; but I am a little biased.
+
+<p>
+
+djbdns is an excellent program.  I'm not denying that.  But it <i>does</i>
+have security holes and people need to stop claiming otherwise.
+
+<p>
+
+<b>Update</b> (January 4, 2011):
+
+<p>
+
+To give credit where credit is due, the first patch above comes from
+Mark Delany in <A href=http://marc.info/?l=djbdns&m=104804013229536&w=2>this
+mailing list posting</A>; the second patch above comes from DJB himself
+in <A href=http://article.gmane.org/gmane.network.djbdns/13864>this 
+posting</A>.
+
+<p>
+
+I also forgot about the large packet compression pointer bug, which 
+also has security consequences.  More information is
+<A href=http://marc.info/?l=djbdns&m=123554945710038&w=2>in this
+mailing list posting</A>.
+
+<p>
+
+<i>Updated in 2014 to point to <A href=http://pjp.dgplug.org/djbdns/index.html
+>N-DjbDNS</A> instead of the now-dead Zinq.</i><p><i>
+See also: <A href=http://samiam.org/blog/20120711.html>Finally,
+a CVE-2012-1911 patch</A> and <A 
+href=http://samiam.org/blog/20131006.html#Yet_another_DjbDNS_security_hole
+>Yet another DjbDNS security hole</A></i>
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

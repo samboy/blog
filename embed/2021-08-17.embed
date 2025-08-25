@@ -1,0 +1,104 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Haircut-100.jpg width=224 height=126>
+</div>
+
+<h1>Afghanistan</h1>
+<h2>August 17, 2021</h2>
+In this blog, I briefly share my thoughts about Afghanistan, now that we
+are leaving there after 20 years, and announce a new MaraDNS release.
+
+<p>
+
+<A name=Afghanistan></A><A name=Afghanistan></A><span class=moyet>==</span><span class=blogtitle><b>Afghanistan</b></span><span class=moyet>==</span>
+
+<p>
+
+I think we made the right decision intervening in 2001 to try and get
+rid of the Taliban. The Taliban has been a horrible theocratic government
+which has a history of hideously oppressing women, and based on the fact
+Afghanistan 25 years before our 2001 invasion was a free country adopting
+western values, it was reasonable to think we could do that again.
+
+<p>
+
+Additionally, the government in Afghanistan was supporting 
+<a href="https://www.samiam.org/screenshots/2001webpage.html">a militant group who flew planes in to buildings</a>, causing massive destruction and the
+deaths of thousands of Americans. So we needed a toe hold in Afghanistan
+to ensure that those kinds of attacks would not happen again. Once we
+eliminated the mastermind of that 9/11 attack, that is when we should
+had left Afghanistan. Nation building works a lot better when the nation
+in question has had a long history of being a free and prosperous nation
+(e.g. Germany and Japan).
+
+<p>
+
+<A name=MaraDNS_350021></A><A name=MaraDNS350021></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0021</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS 3.5.0021 is a security update for MaraDNS.  
+This issue only affects the relatively new coLunacyDNS server (and 
+actually may not affect it); it does <i>not</i> affect MaraDNS and it 
+does <i>not</i> affect Deadwood.  The coLunacyDNS server is a 
+separate server from MaraDNS that uses Lua for its configuration; the
+majority of MaraDNS users are not using this relatively new program,
+and there is no way to use coLunacyDNS just by using the MaraDNS
+authoritative or Deadwood recursive services.  
+
+<p>
+
+In other words, unless you <i>know</i> that you are using coLunacyDNS,
+this security issue does not affect you.
+
+<p>
+
+I looked at the CVE database to see if there were any security issues with
+my fork of Lua (named “Lunacy”) that I use in coLunacyDNS; after some research, 
+<a href="http://lua-users.org/lists/lua-l/2021-07/msg00106.html">I determined that
+only one issue affects the version of Luancy in question</a>.
+So, I applied a one-line patch to fix that issue, then made new releases
+of <a href="https://maradns.samiam.org/lunacy">Lunacy</a> and 
+<a href="https://maradns.samiam.org/changelog.html">MaraDNS</a> to update
+the relevant code.
+
+<p>
+
+As it turns out, the Lunacy code is compiled such that the
+exploit scripts which are supposed to crash the unpatched Lua code
+<i>actually do not crash Lunacy</i>.  So, there is a significant chance
+this security issue could never be exploited.  But since this issue
+<i>does</i> have a CVE number, and since there is a patch to fix the
+issue, I have made the update.
+
+<p>
+
+Download MaraDNS 3.5.0021 here:
+
+<p>
+
+<blockquote>
+<A href="https://maradns.samiam.org/download.html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+
+<p>
+
+
+<p>
+
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,99 @@
+<h1>Round-up</h1>
+
+<h2>December 16, 2011</h2>
+
+Today's blog discusses giving modern CSS to IE8, my site's browser usage
+stats, and Dell leaving the netbook market.
+
+<p>
+
+<div class=blogtitle>
+<b>css3pie: Improves CSS for older Internet Explorer releases</b>
+</div><br>
+
+I discovered a tool today called <A href=http://css3pie.com>css3pie</A> which 
+gives older releases of Internet Explorer better CSS3 compatibility.  It
+works really great; my site now gives Internet Explorer 8 users the complete
+design instead of a degraded version of the page.
+
+<p>
+
+The only issue it has on this site is that there is a "flash" for
+a couple of seconds on netbooks, during which the image of me at the
+top is a solid color instead of the picture.  This isn't an issue on
+mainstream computers, just slower netbooks.
+
+<p>
+
+I have decided to only use css3pie to shoehorn in modern CSS for 
+Internet Explorer 8 users; there's a greater chance IE7 and IE6 users
+are using older computers that are really too slow to be using fancy
+javascript to give them modern browser CSS.  I'll continue to give 
+them the degraded design that looks good in IE7 and is perfectly
+usable in IE6.
+
+<p>
+
+<div class=blogtitle>
+<b>Browser usage stats</b>
+</div><br>
+
+It looks like most people going to my web site are using modern browsers to
+access its content.  Here are recent stats:
+
+<p>
+Webkit (Safari and Chrome): 31.2%<br>
+Firefox: 42.1%<br>
+Opera: 4.9%<br>
+IE: 18.9% (IE6 2.47% IE7 3.43% IE8 8.99% IE9 4.24%)<p>
+
+(The numbers add up to 97%; the other 3% are mainly robots crawling the
+site and what not.)
+
+<p>
+
+With the css3pie update, only 6% of users are getting a degraded version of 
+the web site; everyone else is getting the current design.  This minority
+is getting a web site with a perfectly usable (and even attractive for
+the 3.5% or so using IE7), albeit degraded design.
+
+<p>
+
+<div class=blogtitle>
+<b>Further shrinking of the netbook market</b>
+</div><br>
+
+Not only is <A 
+href=http://www.gizmosion.com/technews/samsung-is-leaving-netbook-business>Samsung 
+pulling out of the netbook market</A>, but <A
+href=http://www.theverge.com/2011/12/15/2639138/dell-quits-netbooks>Dell
+has (mostly) stopped selling netbooks</A>.  With the netbook fad fading
+away, it looks like the companies who merely rode on the bandwagon are
+moving on.  
+
+<p>
+
+The netbook itself isn't going anywhere; ASUS still
+plans on releasing the 1025C and 1025CE netbooks which will use Intel's
+next-generation Atom CPUs, albeit not <A 
+href=http://news.softpedia.com/news/Asus-Eee-PC-1025C-and-1025CE-Won-t-Make-It-for-Christmas-Delayed-to-2012-236591.shtml>until
+next year</A>.
+
+<p>
+
+Personally, I think Dell is making a mistake leaving the low-end netbook
+market, just as they made a mistake giving up on the Adamo line of 
+ultrathin notebooks before they had a chance to catch on.  If Dell had
+not given up on the Adamo, they would now have a head-start with the
+current "ultrabook" trend.  
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

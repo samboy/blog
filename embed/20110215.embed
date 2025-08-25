@@ -1,0 +1,31 @@
+<h1>New MaraDNS snapshot</h1>
+
+<h2>February 15, 2011</h2>
+
+A while ago, Nino <A 
+href=http://woodlane.webconquest.com/pipermail/list/2010-November/000715.html>pointed
+out on the mailing list</A> that MaraDNS is not <A 
+href=http://www.faqs.org/rfc/rfc2317.txt>RFC2317</A> compliant because 
+slashes are not allowed in hostnames.  I have fixed this issue and slashes
+are allowed in hostnames as long as they are not the first character of a 
+hostname.  
+
+<p>
+
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

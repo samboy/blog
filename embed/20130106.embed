@@ -1,0 +1,39 @@
+<h1>samiam.org on IPv6</h1>
+
+<h2>January 6, 2013</h2>
+
+With the inevitable transition to IPv6 looming, and with IPv6 support on
+my new BuyVM node, I am starting to add IPv6 support to my web pages.  
+
+<p>
+
+Since IPv6 isn't quite as reliable as IPv4 today, and since most of my
+nodes do not have IPv6 yet, I am using the "ipv6" host name.
+For people who have IPv6, my web pages can be seen on IPv6 using the
+following URLs:
+
+<blockquote>
+<A href=http://ipv6.samiam.org/>http://ipv6.samiam.org/</A><br>
+<A href=http://ipv6.samiam.org/blog/>http://ipv6.samiam.org/blog/</A><br>
+<A href=http://ipv6.maradns.com/>http://ipv6.maradns.com/</A><br>
+<A href=http://ipv6.maradns.org/>http://ipv6.maradns.org/</A>
+</blockquote>
+
+Once I have more nodes with IPv6 support, I will add IPv6 IPs for
+the "www" and bare names. 
+
+<p>
+
+<i>Update: <A href=20130121.html#ipv6>IPv6 update</A></i>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

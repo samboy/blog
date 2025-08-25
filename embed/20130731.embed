@@ -1,0 +1,107 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>RSS and Zealots</h1>
+<h2>July 31, 2013</h2>
+In this blog entry, I discuss the RSS feed I have added to this blog (as
+well as an RSS feed for just MaraDNS blog entries), as well as take a 
+brief look at Reza Aslan’s book
+<i>Zealot</i>.
+
+<p>
+
+<A name=RSS_Feed></A><A name=RSSFeed></A><span class=moyet>==</span><span class=blogtitle><b>RSS Feed</b></span><span class=moyet>==</span>
+
+<p>
+
+While 
+<a href="http://googlereader.blogspot.com/2013/07/a-final-farewell.html">RSS is</a> 
+<a href="http://nick.typepad.com/blog/2013/03/the-end-of-feeddemon.html">slowly</a> 
+<a href="http://nick.typepad.com/blog/2013/03/my-plan-for-feeddemon.html">dying</a>, 
+I have added an RSS feed for my personal blog:
+
+<p>
+
+<blockquote>
+<A href="http://www.samiam.org/blog/blog.rss">http://www.samiam.org/blog/blog.rss</A>
+</blockquote>
+
+As well as a feed for just MaraDNS blog entries:
+
+<p>
+
+<blockquote>
+<A href="http://www.samiam.org/blog/maradns.rss">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
+</blockquote>
+
+These links are in the corresponding headers in the home pages for
+samiam.org and maradns.org for easy import in to RSS readers.
+
+<p>
+
+For the occasional RSS reader which demands anally-compliant RSS, I have
+the following feeds which validate:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/blog_strict.rss">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>blog_<![if gt IE 6]>&#8203;<![endif]><wbr>strict.<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
+
+<p>
+
+<A href="http://samiam.org/blog/maradns_strict.rss">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns_<![if gt IE 6]>&#8203;<![endif]><wbr>strict.<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
+</blockquote>
+
+Unlike the obsolete Gopher service
+<a href="http://www.samiam.org/blog/20121130.html">which I shut down</a>, the RSS feed
+generator is completely automated.  Now that I have written the script to
+update it, it will always be current whenever I add a new blog entry.
+
+<p>
+
+Note that only the first paragraph of a given blog entry is available via RSS;
+people who want to read more will have to click on the link and go to my
+webpage, where I have unobtrusive text ads on the right which help defray the
+costs of hosting my web pages.  Also note that RSS entries are not available
+for the microblog (too much trouble for what is a dying service).
+
+<p>
+
+<A name=Zealot_by_Reza_Aslan></A><A name=ZealotbyRezaAslan></A><span class=moyet>==</span><span class=blogtitle><b>Zealot by Reza Aslan</b></span><span class=moyet>==</span>
+
+<p>
+
+Readers of my blog know that
+<a href="http://samiam.org/blog/20120307.html">Christian fundamentalists annoy me</a>; 
+I found the way the right-wing Fox News attacked Reza Aslan for being a
+Muslim writing a book about Christianity annoying, especially since they didn’t
+<a href="http://www.buzzfeed.com/andrewkaczynski/fox-news-host-never-asked-baptist-college-professor-why-he-w">criticize a Christian for writing a book about Islam</a>.
+
+<p>
+
+That said, I think there’s something a bit dishonest about
+a book that claims that, not only were the Gospel writers lying through 
+their teeth, but also that
+<a href="http://religion.blogs.cnn.com/2013/07/31/7-things-reza-aslan-actually-says-about-jesus/">Jesus was a militant</a>, especially in light of the fact that Muhammad (the
+founder of Islam) was, in fact, the militant leader of Medina which was 
+at war with then-pagan Mecca.
+
+<p>
+
+The fact of the matter is that the only records we have of Jesus’ life
+come from Christian sources.  If we can’t trust those sources, reconstructing
+Jesus’ life is little more than guesswork.
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,159 @@
+<h1>Tuning nginx + php-fastcgi</h1>
+
+<h2>July 2, 2011</h2>
+
+<i>This article talks about the dark art of making a webpage with a lot
+of visitors use a minimum of server resources</i>.
+
+<p>
+
+Nginx is a web server that is <A href=http://blog.webfaction.com/a-little-holiday-present>much more
+efficient than Apache</A> serving static pages.  
+
+<p>
+
+However, one blogger has pointed out that once we add dynamic PHP
+content, <A href=http://whatan00b.com/php-apps-apache-vs-nginx>nginx + php-fastcgi</A> is about as
+fast and uses as much memory as Apache.
+
+<p>
+
+That is only true with the default settings for php-fastcgi.
+
+<p>
+
+In truth, nginx can be much more lightweight than the equivalent 
+Apache setup.  There are two important variables when tuning
+php-fastcgi: <tt>PHP_FCGI_CHILDREN</tt> and 
+<tt>PHP_FCGI_MAX_REQUESTS</tt>
+
+<p>
+
+<b class=blogtitle>PHP_FCGI_CHILDREN</b>
+
+<p>
+
+<tt>PHP_FCGI_CHILDREN</tt> determines the number of processes php-fastcgi
+spawns.  This affects the number of PHP pages that can be processed at the
+same time.  If this has a low value like 4, then the server will use less
+memory but will slow down if the server gets a lot of PHP requests.
+
+<p>
+
+To use a rough analogy, <tt>PHP_FCGI_CHILDREN</tt> is akin to the
+number of tellers in a bank.  If there is no one using the bank, then
+a customer will immediately get service even if there is only a single
+teller.  On the other hand, if there are a lot of people in the bank,
+having more tellers lowers the amount of time one has to wait before
+getting service at the bank.
+Just as it costs the bank more money to have more tellers, it costs
+our server more memory to have more <tt>PHP_FCGI_CHILDREN</tt>.  
+
+<p>
+
+Here's another way of looking at it: If a given PHP script takes 100 
+milliseconds (1/10 of a second) to process a request, we can process 
+10 PHP queries a second if <tt>PHP_FCGI_CHILDREN</tt> has a value of 1,
+40 PHP queries a second if <tt>PHP_FCGI_CHILDREN</tt> has a value of 4,
+and 320 PHP queries a second if <tt>PHP_FCGI_CHILDREN</tt> has a value 
+of 32.
+
+<p>
+
+Note that this <i>only</i> affects dynamic PHP performance.  Static HTML
+pages will always be served quickly regardless of one's 
+<tt>PHP_FCGI_CHILDREN</tt> value.
+
+<p>
+
+<b class=blogtitle>PHP_FCGI_MAX_REQUESTS</b>
+
+<p>
+
+<tt>PHP_FCGI_MAX_REQUESTS</tt> determines the number of times a given
+php-fastcgi process will process PHP requests before terminating 
+and being replaced by another php-fastcgi process.
+
+<p>
+
+To go back to our bank teller analogy, <tt>PHP_FCGI_MAX_REQUESTS</tt> is
+how long a teller's shift is before being replaced by another teller.  Just
+like a bank, it is less expensive to give a single teller a shorter shift
+(we don't need to pay them overtime); just like a bank, when we switch 
+tellers, service at the bank slows down because it takes time to swap 
+cash drawers and what not.
+
+<p>
+
+Likewise, a given PHP process' memory usage increases over time; sometimes
+a PHP script will leak memory.  By setting <tt>PHP_FCGI_MAX_REQUESTS</tt>
+to a fairly low value, we lower the memory usage of php-fastcgi, at the
+expense of there being more slight delays when a php-fastcgi
+process is terminated then respawned.
+
+<p>
+
+Unlike our hypothetical bank teller, <tt>PHP_FCGI_MAX_REQUESTS</tt>
+switches out processes after the specified number of requests are made.
+If <tt>PHP_FCGI_MAX_REQUESTS</tt> has a value of 128, for example, 
+after a single process processes 128 PHP page loads, the process is 
+terminated and replaced by another php-fastcgi process.
+
+<p>
+
+Note that, on Windows systems, there is a bug where a PHP process
+may not properly respawn after serving <tt>PHP_FCGI_MAX_REQUESTS</tt>
+requests.  This is a non-issue on low-end Linux OpenVZ servers.
+
+<p>
+
+<b class=blogtitle>Concurrency</b>
+
+<p>
+
+There is one "feature" to watch out for in a nginx + fastcgi setup.
+A given PHP script will only run once for a given IP.  So, if the same
+IP loads index.php for a website twice at the same time, index.php
+will be served sequentially: The second index.php load will not be
+processed until the first index.php load is complete.
+
+<p>
+
+This does not happen if two different IPs ask for index.php at the
+same time (unless we have more PHP requests than 
+<tt>PHP_FCGI_CHILDREN</tt>), nor does it happen if the same IP asks
+for two different PHP pages at the same time.
+
+<p>
+
+This may be an issue in some NAT setups.
+
+<p>
+
+<b class=blogtitle>Conclusion</b>
+
+<p>
+
+On this website, I have set <tt>PHP_FCGI_CHILDREN</tt> to have a value of
+4 and <tt>PHP_FCGI_MAX_REQUESTS</tt> to have a value of 128.  Since
+this site is mostly a static HTML site, this does not significantly
+impact performance, while greatly reducing the amount of memory
+used to serve web pages.
+
+<p>
+
+While low-end OpenVZ virtual servers are inexpensive, they require one
+to understand how to tune a web server to get good performance while
+minimizing memory usage.  I hope this article has given some
+helpful pointers.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

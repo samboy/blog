@@ -1,0 +1,48 @@
+<h1>MaraDNS update</h1>
+
+<h2>October 9, 2011</h2>
+
+<A href=http://woodlane.webconquest.com/pipermail/list/2011-October/000943.html>Karim
+Malhas has reported</A> a bug with MaraDNS' csv2 parser when using the
+<tt>/read</tt> directive.
+
+<p>
+
+I was able to make some time this morning to fix the bug.  
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood without sponsorship again
+one day next month, before the 15th; if I get some sponsorship, I will
+work on MaraDNS again sooner.
+
+<p>
+
+<b>Update:</b> Harlan was confused about why Deadwood was not working
+because he had a <tt>bind_address</tt> not in his <tt>recusrive_acl</tt>.
+In my process of making Deadwood more anal so people can see problems 
+before complaining on the list, Deadwood now exits with a fatal error
+explaining what is happening if this is attempted.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

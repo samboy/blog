@@ -1,0 +1,56 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS security update</h1>
+
+<h2>December 2, 2013</h2>
+
+While looking over the source code to Deadwood, I discovered that
+Deadwood 3 releases before Deadwood-3.2.03d have a security
+issue caused by a programming error I made.
+
+<p>
+Under certain exceptional circumstances, it may have been possible to
+perform a blind spoofing attack against unpatched releases of Deadwood.
+The IP performing the blind spoofing attack needs to appear to have
+permission to perform full recursion with Deadwood in order to carry
+out the attack.
+
+<p>
+Upgrading will fix the bug.  Then again, administrators who already
+perform good practices, making sure that only authorized IPs can use
+Deadwood recursively (pretty much mandatory in light of DNS amplification
+attacks) will only be affected by this bug if either a machine with an
+authorized IP is compromised, or if it is possible for the attacker to
+send the Deadwood server a packet with a spoofed IP.
+
+<p>
+This update was released today.  MaraDNS 2.0.07d,
+Deadwood 3.2.03d, and MaraDNS 1.4.13 are patched against this bug.  
+Deadwood 2.3.08 is not affected by this bug.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download.html>http://www.maradns.org/download.html</A><br>
+<A href=http://www.maradns.org/deadwood/stable/>http://www.maradns.org/deadwood/stable/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A
+href="/comments-closed.html">go to the forum</A>
+(<A
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

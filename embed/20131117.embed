@@ -1,0 +1,135 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>An ode to Netbooks</h1>
+<h2>November 17, 2013</h2>
+In an alternate universe, all of the major tech news sites would be
+excited about Intel’s new
+<a href="http://ark.intel.com/products/78475/Intel-Atom-Processor-E3845-2M-Cache-1_91-GHz">Atom E3845 processor</a>
+and Toshiba, Lenovo, Dell, HP, ASUS, Acer, and other computer makers would
+be rushing to make new Netbook models using Intel’s latest Atom chip.
+
+<p>
+
+People would be talking about its four cores, its adoption of VT-x and
+AES instructions, its support for up to eight gigabytes of memory, its
+remarkable speed (faster than the core 2 duo machine I use as my home
+Linux server), and how Netbooks keep getting better and better.
+
+<p>
+
+That never happened.  When the Atom E3845 came out, hardly anyone noticed.
+No major headlines in tech sites.  No 
+<a href="http://hardware.slashdot.org/story/09/12/21/1426226/">articles with 165 comments</a>.  
+No inquiries about when Linux will run on it.  And, worst of all, no Netbook
+computers that sport this CPU.  The cloest we will come is a 
+<a href="http://news.softpedia.com/news/Intel-Bay-Trail-Chromebook-Coming-with-Atom-E3845-CPU-and-2GB-RAM-396911.shtml">“Bay Trail” Chromebook</a>.
+The new Atom chip, while 
+vastly superior to anything that was actually used in a Netbook, was received
+with a collective yawn.
+
+<p>
+
+<a href="http://samiam.org/blog/20130217.html">When I last discussed Netbooks</a>, I 
+admitted that they were no longer being made in the US, but were still 
+available overseas.  Netbooks are drying up even in overseas markets.
+The Lenovo S110?  It was available in India in January, but no more.
+
+<p>
+
+A lot of former Netbook makers are now making “Chromebooks”.
+A Chromebook is a low-cost notebook that is designed to run only a web
+browser.
+
+<p>
+
+<A name=The_Chromebook_No_Netbook_replacement></A><A name=TheChromebookNoNetbookreplacement></A><span class=moyet>==</span><span class=blogtitle><b>The Chromebook: No Netbook replacement</b></span><span class=moyet>==</span>
+
+<p>
+
+In some ways, the Chromebooks are what the Netbooks originally
+were until computer makers started putting Windows XP and later on
+Windows 7 Starter in Netbooks, along with 160-250 gig hard disks.
+Indeed, the latest Intel Atom E3845 is already in a prototype Intel
+Chromebook which will undoubtedly be available to end-users soon.
+
+<p>
+
+My issue with the Chromebooks is that attempts to mass market dumb terminals
+to end users have been done for a long time (anyone else remember the 
+short-lived Sun Java Station that came out during the height of the dot-com
+boom and was dead by the time the dot-com party ended?) and none of them
+have succeeded.  
+
+<p>
+
+Acer had the right idea with the original C7 Chromebook which had a
+320 gigabyte hard disk, but cost only $200.  Alas, that C7 has been
+replaced with the C710 which, like all other Chromebooks, has only a 
+16 gigabyte solid state drive.
+
+<p>
+
+Chromebooks are, by design, a one trick pony.  If you use a web browser and absolutely
+nothing else, it’s a great option.  Heck, some adventurous hackers have
+<a href="http://www.simonmweber.com/2013/04/20/development-on-a-chromebook-an-opinionated-guide.html">gotten a whole lot more running on a Chromebook</a>, but, even
+so, 16 gigs of hard disk space means cool useful things a computer like this
+could do — such as virtualization or a music library — are not really
+possible.
+
+<p>
+
+Chromebook’s failure to replace Windows Netbooks does not mean fans
+of small sub-notebooks are out in the cold.
+
+<p>
+
+<A name=Options_for_Netbook_users></A><A name=OptionsforNetbookusers></A><span class=moyet>==</span><span class=blogtitle><b>Options for Netbook users</b></span><span class=moyet>==</span>
+
+<p>
+
+While 10 inch computers are fairly hard to find, Acer makes 11-inch
+models that are the spiritual successor to the Netbooks of 2009 and
+2010, such as the
+AO-756 series or the Acer
+<a href="http://www.amazon.com/Acer-Aspire-V5-131-2629-Laptop-Black/dp/B00CU2K6MS">V5-131 sub-notebook</a>.
+
+<p>
+
+If I were in the market for something to replace my aging Netbooks, I would
+probably get one of these low-end Acers.
+
+<p>
+
+Netbooks were one of the better technologies to pop up in the ‘oughts (first
+2000s decade); it’s sad they only lasted a couple of years.
+<p>
+
+<A name=See_also></A><A name=Seealso></A><span class=moyet>==</span><span class=blogtitle><b>See also</b></span><span class=moyet>==</span>
+
+<ul>
+<li><A href=20110516.html>Low-end Netbooks</A>
+<li><A href=20110518.html>Android SDK on a Netbook</A>
+<li><A href=20110520.html>Atom Supercomputer</A>
+<li><A href=20110622.html>Lenovo S-100</A>
+<li><A href=20110716.html>Scientific Linux 6 on a S10-3</A> (As an aside,
+	there is a bug where the Lenovo S10-3 refuses to boot if I update
+	the CentOS 6/SL6 kernel)
+<li><A href=20130217.html>Netbooks in 2013</A>
+</ul>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

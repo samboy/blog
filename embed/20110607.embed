@@ -1,0 +1,114 @@
+<!--{TAGS:G,L}-->
+<h1>Round-up</h1>
+
+<h2>June 7, 2011</h2>
+
+In today's blog entry, I discuss pasting in X, Windows 8, and the
+System76 Netbook.
+
+<p>
+<b class=blogtitle>X middle-click pasting</b>
+<p>
+
+The "normal" way to do middle-click pasting in X is to click on the
+middle mouse button.  This doesn't work very well with the two-button
+mice, so there is an option to have clicking on
+both the left and right button at the same time simulate a middle
+button click.  This mouse click chording, alas, doesn't work very will with
+touchpads where it's impossible to click both the left and right button
+at the same time.  
+
+<p>
+
+With such touchpads, the solution is to hit "Shift + Insert", which functions
+like a middle mouse click in X.  I wish I knew this trick six months ago.
+
+<p>
+<b class=blogtitle>Windows 8</b>
+<p>
+
+Ever since Microsoft released Windows 95, the Windows user interface has
+basically been the same: A start button in the lower left corner, a taskbar
+to the right of the start button, and a clock as well as a "system tray folder" 
+on the lower right corner.  Aero, Windows 7's interface, has this same
+basic paradigm.
+
+<p>
+
+Microsoft wants to move away from this paradigm with Windows 8.  With the rise
+of smartphones and the iPad making tablets friendly, Microsoft is following the
+trends by making their Windows 8 interface more like a touch screen interface.
+
+<p>
+
+I do not think smartphone-based and tablet-based computing is going to
+displace desktop computing, for the simple reason that tablets and smartphones
+are for consuming, not creating content.  I can read an ebook just as well
+on a tablet as I can on a computer with a keyboard; I can <i>not</i> write
+this blog entry on a tablet as effectively as I can on the Lenovo S10-3
+netbook I'm using right now.
+
+<p>
+<b class=blogtitle>System76</b>
+<p>
+
+<A href=http://system76.com>System76</A> makes a netbook called the
+<A 
+href=http://www.system76.com/product_info.php?cPath=28&products_id=105>Starling</A>.
+This is a Linux-based netbook which comes with a dual-core Intel N570 chip.
+With a six-cell battery, this computer costs some $444.00--quite a bit
+more than getting an <A 
+href=http://www.amazon.com/ASUS-1015PX-MU17-WT-10-1-Inch-Netbook-White/dp/tech-data/B004SUO3W4>ASUS
+1015PX netbook</A> with similar specs for about $340 (the system costs
+$320, but a 2GB memory expansion costs $20 more).  
+
+<p>
+
+So, what do you get for $100 more with the System76 Starling?  First of all,
+it appears to weigh less than the ASUS 1015PX; the ASUS 1015PX is 2.8
+pounds with a six-cell battery, which the Starling is 2.0 pounds.
+
+<p>
+
+To be honest, I'm a skeptical about the stated 2.0-pound weight
+of the Starling System76.  The lightest mainstream 10-inch netbooks out
+there weight about 2.4 pounds with a three-cell battery.  
+
+<p>
+
+Considering that ASUS had to remove the hard disk, as well as having only
+two USB ports and a single audio jack, to make their X101 weight 2.1
+pounds (still more than System76's claimed weight), and considering
+that System76 is not marketing this as a special ultra-light netbook,
+but as a Linux-compatible Netbook, the 2.0-pound reported weight of the
+Starling may well be, say, its weight without a battery.
+
+<p>
+
+Since System76 doesn't have to deal with Windows 7 Starter's
+limitations, the system comes with 2GB of memory already installed.  Indeed,
+if desired, it's possible to get a 600GB solid-state drive (SSD) for
+the Starling--at the right price.
+
+<p>
+
+This looks to be a very good system to have to have for someone who
+wants to have a Linux system without having to bother with installing
+Linux and hoping their drivers are compatible.  For example, while Linux
+works nicely on my Lenovo Netbook, I tried two different WiFi cards; neither
+supports being in "Master"/"Access point" mode for using the computer as
+a WiFi hotspot, even though the underlying chipsets support this.  If
+a System76 Starling Netbook had this issue, or any other Linux-compatibility
+issue, I could call up their
+technical support line and get more than "I don't support Linux" from them.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

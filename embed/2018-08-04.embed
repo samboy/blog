@@ -1,0 +1,86 @@
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<style>
+tt { background: #cae6c7; border: 1px solid #cae6c7; }
+</style>
+
+<h1>Password security</h1>
+<h2>August 4, 2018</h2>
+This blog is about making secure password for websites.
+
+<p>
+
+<A name=The_problem_with_website_passwords></A><A name=Theproblemwithwebsitepasswords></A><span class=moyet>==</span><span class=blogtitle><b>The problem with website passwords</b></span><span class=moyet>==</span>
+
+<p>
+
+Let me start up with a well-known webcomic about password security:
+<a href="https://xkcd.com/936/">https://xkcd.com/936/</a>
+
+<p>
+
+Making people have mixed case or punctuation in their password does
+not increase password security that much. However, it makes password
+management a pain. For example: While most sites accept the underscore
+(<tt>_</tt>&nbsp;symbol) as a “punctuation” character, allowing a suffix like <tt>_Aa9</tt>
+to work with most password site rules, some do not.  Southwest, for
+example, does not even 
+<i>allow</i> a <tt>_</tt> in a password, so we need special “for
+Southwest, use <tt>:</tt> instead of <tt>_</tt> for punctuation” rule.
+
+<p>
+
+The password <tt>hlrehcv5kn4o545v</tt> has (or had, until I posted this)
+a good deal more security than <tt>Password1!</tt> (the first has 80 bits of
+entropy; the largest attacks I have seen, requiring entire datacenters
+filled with computers, can crack 64 bits; the second has at best 28 bits
+of security), but many sites consider the first password insecure and
+the second password secure.
+
+<p>
+
+<A name=My_solution_PassGen></A><A name=MysolutionPassGen></A><span class=moyet>==</span><span class=blogtitle><b>My solution: PassGen</b></span><span class=moyet>==</span>
+
+<p>
+
+My solution to the issue of countless sites, each with their own
+password rules, is to have a single password manager.  This password
+manager uses a secure hash and stream cipher to, based on the contents
+of a secret master password, generate a unique password for each site
+one has to log in to.
+
+<p>
+
+<a href="https://github.com/samboy/PassGen">I have a GitHub repo of the code</a>,
+available for either browsing online or downloading.  The entire system,
+including the small (obfuscated) C program that runs the underlying
+cryptographic algorithm, is in a single 
+<a href="https://github.com/samboy/PassGen/blob/2018-08-04/pwgen.sh">two page shell script</a>.
+
+<p>
+
+I have been using a form of this tool for well over a decade and it
+has protected me from having my password compromised on one site (Hello,
+LinkedIn!) affecting passwords on other sites.
+
+<p>
+
+The main problem with this system is that one needs to know how to write
+a UNIX Shell script (Bash script, as it’s commonly called these days) to
+edit the code to work with arbitrary password rules.  But, for shell
+script coders, it’s an simple standalone tool for password management.
+
+<p>
+
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

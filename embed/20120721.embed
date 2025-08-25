@@ -1,0 +1,60 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>July 21, 2012</h2>
+
+<div class=blogtitle>
+<b>Deadwood update</b>
+</div><br>
+
+I have updated the patch resolving the problem Deadwood had with 
+es-us.noticias.yahoo.com last month so that, should a similar issue pop up
+in the future, Deadwood logs messages (starting at log level 100) describing
+the issue.  In addition, in light of Rich Felker's concerns a couple of
+months ago with MaraDNS' handling of malloc() I have replaced all calls to 
+"malloc()" in the code with "dw_malloc()", which is simply a macro that
+is replaced with "malloc()".  
+
+<p>
+
+Doing this would make it easier for one to replace malloc() in Deadwood
+with something that more gracefully handles malloc() failures, such
+as blocking Deadwood until malloc() succeeds again, or by having malloc()
+failures terminate Deadwood and wrapping Deadwood in a script that
+restarts it when terminated.  Since I am in debug, not develop mode,
+I have no plans to implement this kind of code myself.  Deadwood was written
+for Linux and Windows; Linux does not, by default, have malloc() fail;
+it simply terminates processes that use too much memory.
+
+<p>
+
+For the record: MaraDNS terminates upon a malloc() failure.  Deadwood's
+behavior is undefined should malloc() fail.  If anyone is using MaraDNS 
+in an environment where a kernel allows malloc() to return a NULL pointer,
+it is best to wrap MaraDNS in a script that restarts it when it terminates.  
+If using Deadwood in an environment where malloc() may return NULL, please
+replace the dw_malloc() macro with a function that can properly handle
+a malloc() failure.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood again one day next month in August,
+after the 20th, unless a critical security bug with a CVE number is found.
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

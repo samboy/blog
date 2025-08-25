@@ -1,0 +1,118 @@
+<!--{TAGS:M,O}-->
+
+<div class=blogpic>
+<img src=pics/2015-1-120.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS 1 plans</h1>
+<h2>June 12, 2015</h2>
+I explain why I am going to keep a MaraDNS 1 download on MaraDNS’s 
+webpage after its end of life. And, oh, I have made a minor 
+<a href="http://samiam.org/obhack">ObHack</a> update.
+
+<p>
+
+<A name=Sourceforge_Betrayed_trust></A><A name=SourceforgeBetrayedtrust></A><span class=moyet>==</span><span class=blogtitle><b>Sourceforge: Betrayed trust</b></span><span class=moyet>==</span>
+
+<p>
+
+For years, I knew I could download something from Sourceforge knowing
+that I didn’t need to worry about Sourceforge adding adware or other
+unwanted programs to the download.  
+
+<p>
+
+Sourceforce, alas
+<a href="http://arstechnica.com/information-technology/2015/05/sourceforge-grabs-gimp-for-windows-account-wraps-installer-in-bundle-pushing-adware/">has started bundling adware with their downloads</a>.
+Not only does this break the trust Sourceforge had with users 
+downloading software from their site, but also it was an attempt to
+cash in on other people’s hard work.
+
+<p>
+
+That in mind, I will no longer upload MaraDNS updates to Sourceforge.
+MaraDNS 2.0.11 will be the last version of MaraDNS uploaded there.  The
+Sourceforge MaraDNS page from now on is merely an archive of old
+MaraDNS releases.
+
+<p>
+
+I suggest for anyone who downloads and old MaraDNS release from Sourceforge to 
+<a href="http://samiam.org/blog/2015-05-27.html#Trusting_MaraDNS_GPG_key">check the GPG signature</a>
+to make sure Sourceforge has not altered it.
+
+<p>
+
+<i>2019 update</i> I have forgiven Sourceforge because they have been under new
+management for three years, and 
+<a href=https://sourceforge.net/blog/sourceforge-acquisition-and-future-plans/
+>have stopped making trojan binaries</a>.
+
+<p>
+
+<A name=MaraDNS_1_will_remain_available_on_my_page></A><A name=MaraDNS1willremainavailableonmypage></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 1 will remain available on my page</b></span><span class=moyet>==</span>
+
+<p>
+
+While I normally remove older MaraDNS releases from my page, I will keep
+a copy of the final release of
+<a href="http://maradns.samiam.org/download/1.4/">MaraDNS 1.4</a>
+up to stop people from going to Sourceforge or other shady download
+sites to get MaraDNS 1.  I have also updated the Windows MaraDNS 1.4
+binary to use the latest version of Deadwood (the only change to 
+non-Deadwood MaraDNS 1.4 since 1.4.12 is to decrease max_glueless_level).
+
+<p>
+
+Come father’s day (June 21), I will add a note that this version of
+MaraDNS is not supported
+<i>at all</i>, including no support for any critical security bugs found.
+
+<p>
+
+I will now need to ask anyone requesting MaraDNS support which version
+of MaraDNS they are using, but it’s important that a trustable download
+of MaraDNS 1 remains available.
+
+<p>
+
+<A name=ObHack_update></A><A name=ObHackupdate></A><span class=moyet>==</span><span class=blogtitle><b>ObHack update</b></span><span class=moyet>==</span>
+
+<p>
+
+When I made my final version of ObHack, I also made a version of FreeDoom
+with the levels replaced by ObHack-generated levels, so people could
+get a feel of what the randomly generated levels were like without needing
+to run the program.
+
+<p>
+
+Unfortunately, I subsequently learned that
+<a href="http://www.doomworld.com/vb/post/788830">some of the music in FreeDoom was plagiarized</a>.  In addition, the ugly Zomebieman and Shotgun Guy sprites have
+<i>finally</i> been updated to look really nice, and I have modified the 
+title screen to make it clear this is an unofficial version using random
+maps.
+
+<p>
+
+The updated download is here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/obhack">http://samiam.org/obhack</A>
+</blockquote>
+
+Scroll down to where it says “FreeDoom 0.7 using ObHack-generated maps” 
+to download it.
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

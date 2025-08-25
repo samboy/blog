@@ -1,0 +1,58 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood 3.0.05 released</h1>
+
+<h2>November 10, 2011</h2>
+
+My funding drive for November 2011 has so far been very successful.
+Because of the generous donations from Bradley D. Thornton and AngelD,
+I will be able to release updates for Deadwood, MaraDNS 2.0, and MaraDNS
+1.4 this month.
+
+<p>
+
+In the 3.0.04 release of Deadwood, I rewrote the code to handle reject_aaaa
+(a parameter that disables IPv6 lookups; useful for IPv4-only networks).  
+The new code did not have the RA bit set; unfortunately, Linux's rather
+anal DNS stub resolver rejects replies with RA set, causing reject_aaaa and
+the new reject_ptr parameter (which disables reverse DNS lookups) to break
+resolution in Linux.
+
+<p>
+
+I have updated the code so that RA is now set when sending out an 
+reject_aaaa or reject_ptr reply.
+
+<p>
+
+In addition, I have fixed the Windows release to have the mkSecretTxt.exe 
+program (needed the first time Deadwood is run) again.
+
+<p>
+
+As an aside, if the Windows release complains there is a problem creating
+the Deadwood service, please ensure that the Deadwood service is stopped,
+and that the previous version of Deadwood is disabled with 
+"Deadwood.exe --remove".
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/stable/>http://www.maradns.org/deadwood/stable/</A>
+</blockquote>
+
+Again, thank you for your generous sponsorship.  If the sponsorship continues
+next month, I will begin to implement split horizon DNS for MaraDNS.  
+As always, please only give if you can readily afford to.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

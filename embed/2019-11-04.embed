@@ -1,0 +1,163 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>November round up</h1>
+<h2>November 4, 2019</h2>
+I discuss my MaraDNS plans, getting good service at the local DMV,
+politics, and debunk some “facts” about female sexuality making the
+rounds in some places on the Internet.
+
+<p>
+
+<A name=MaraDNS_plans></A><A name=MaraDNSplans></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS plans</b></span><span class=moyet>==</span>
+
+<p>
+
+I have released MaraDNS 3.4.01.  This is my planned final release for the
+2010s; I plan on releasing MaraDNS 3.4.02 in early 2020:
+
+<p>
+
+<ul>
+<li> Update Windows documentation in Deadwood source tarball.
+<li> Add Russian translation to MaraDNS tarball release.
+<li> Fix regression tests in MaraDNS 3.4.02. Some tests failed; I released
+  MaraDNS 3.4.01 after confirming the issues were with the tests and
+  <i>not</i> MaraDNS’s code.
+<li> Fix the unused <tt>asktest.c</tt> file so that it correctly closes the
+  comment on line 63.
+</ul>
+
+<p>
+
+After that, I will consider MaraDNS 3.5.01.  I am thinking I may have
+time to make a proper Docker container for MaraDNS, have it so 
+<a href="https://github.com/samboy/MaraDNS/issues/63">there is only one source of truth for MaraDNS’s files</a>, and make the officially supported platforms
+for MaraDNS Windows 10 and a CentOS 8 Docker container.
+
+<p>
+
+<A name=California_DMV_Good_service></A><A name=CaliforniaDMVGoodservice></A><span class=moyet>==</span><span class=blogtitle><b>California DMV: Good service</b></span><span class=moyet>==</span>
+
+<p>
+
+Last night, I was telling a friend that I need to get my driver’s license
+updated with one of the new “Real ID” licenses which can be used to board
+airplanes.  She told me she had to wait <i>six hours</i> at the local
+DMV to get her Real ID license.
+
+<p>
+
+Last night I carefully prepared all of my paperwork as directed on 
+<a href="https://realid.dmv.ca.gov/">California’s Real ID web page</a>, and made
+sure to bring my computer with an extra battery as well as a lunch
+to eat while waiting to be serviced.  I arrived as early as I could in
+the morning, getting there just before 8am.
+
+<p>
+
+As it turned out, I only had to wait about 10 minutes, and was out of
+the DMV within 30 minutes of coming in the office with all of the
+paperwork done. 
+
+<p>
+
+I was so pleased with the service, I even gave the DMV a tip.
+
+<p>
+
+<A name=Politics></A><A name=Politics></A><span class=moyet>==</span><span class=blogtitle><b>Politics</b></span><span class=moyet>==</span>
+
+<p>
+
+The New York Times has been quite negative about Warren lately.  They
+<a href="https://www.nytimes.com/2019/11/01/upshot/elizabeth-warrens-medicare-for-all-math.html">doubt we can pay for Medicare for all</a>, 
+<a href="https://www.nytimes.com/interactive/2019/11/01/opinion/2020-election-democrats.html">feel Democrats have a better chance of winning by being more moderate</a>,
+and even
+<a href="https://www.nytimes.com/2019/11/04/upshot/one-year-from-election-trump-trails-biden-but-leads-warren-in-battlegrounds.html">have a survey showing that Biden, but not Warren nor Sanders, can beat Trump</a>.
+
+<p>
+
+Personally, I support Warren and I support her policies.  Income inequality
+has been going up, and the moderate policies of Clinton and Obama have 
+not stopped that increasing disparity.  But I would rather have Biden than
+Trump in the White House, so would vote for him in the primary if I am
+convinced he has a better shot at the White House than Warren.
+
+<p>
+
+While I think Nate Cohn does pretty good surveys for The New York Times,
+he also felt Trump only had a 16% chance of winning.  I want to see what
+<a href="https://fivethirtyeight.com/">Nate Silver</a> thinks of Biden’s chances vs.
+Warren’s chances before making a decision.
+
+<p>
+
+Speaking of politics, I have recently been in touch with a couple of
+college buddies from three decades ago.  I was pretty fanatical about
+Jesus at the time, and these people were believers.  However, their
+conversations were about who were “real” Christians and who were
+members of “cults” (Read: Any other religion or belief system).
+When I mentioned I was interested in the Catholic church, one of them
+gave me a pamphlet about how Catholics commit idolatry by “worshiping
+Mary”.
+
+<p>
+
+I found out that they are, in this day and age, Trump supporters.  I was
+not surprised, but I also unfriended them.
+
+<p>
+
+<A name=The_hypergamy_lie></A><A name=Thehypergamylie></A><span class=moyet>==</span><span class=blogtitle><b>The “hypergamy” lie</b></span><span class=moyet>==</span>
+
+<p>
+
+“Hypergamy” has a special meaning among the misogynistic manosphere
+part of the
+Internet. It’s this belief that women don’t want long term commitment;
+instead women want to only have sex with the most “Alpha” man they
+can find, and don’t care if they have to share that man with other
+women. If a woman marries a “beta” (a man who is not “alpha” and
+not desirable to women)—keep in mind, in the delusions of the “red
+pill” guys, women only marry “beta”s once they are in their 30s
+and are losing their beauty—she really only wants to have sex with
+“alpha” men, especially when she is fertile.
+
+<p>
+
+The manosphere even had a little bit of science to back this up: There
+was a paper published a while ago showing that women preferred to have sex
+with “alpha” men instead of their “beta” husbands when they were
+ovulating. The misogynists took this one study and instantly concluded all
+married women are secretly sleeping with “alpha” men on the side (even
+though the study said no such thing). However, 
+<a href="https://slate.com/technology/2018/10/ovulation-research-women-replication-crisis.html">the science was tenuous and was just refuted last year</a> (they couldn’t replicate the results).
+
+<p>
+
+Another data point is a 
+<a href="https://www.nytimes.com/2016/04/12/science/extra-marital-paternity-less-common-than-assumed-scientists-find.html"> New York Times article from 2016</a>, which shows that women cheating on their
+husbands and making the raise another father’s kids is essentially a
+fiction. However, it’s interesting, looking at the comments of that
+NYT story, the number of men who want to believe this lie.
+
+<p>
+
+It comes down to this: It is a common sexual fantasy among men to have
+a large number of women at their sexual beck and call. Because of this
+fantasy, men have created an imaginary world where this is what women
+want, forget about facts.
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

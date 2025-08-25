@@ -1,0 +1,176 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Haircut-100.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS updates</h1>
+<h2>November 29, 2022</h2>
+I have been making a lot of MaraDNS updates this last week.  Let’s
+go over them.
+
+<p>
+
+<A name=Y2038></A><A name=Y2038></A><span class=moyet>==</span><span class=blogtitle><b>Y2038</b></span><span class=moyet>==</span>
+
+<p>
+
+A couple of years ago, I removed <tt>maradns.exe</tt> from MaraDNS’s
+download files because it had some Y2038 issues.  <tt>maradns.exe</tt>
+is back because I finally got a chance to go over the source code and 
+clean up a few lingering Y2038 issues.
+
+<p>
+
+Some features which require underlying libraries to work past Y2038,
+such as localized timestamps for SOA serial numbers and timestamps,
+are simply disabled on systems with a 32-bit <tt>time_t</tt>.  It’s
+better for stuff like that to be disabled than to have it do
+something broken at Y2038.  Users with a 64-bit <tt>time_t</tt> are
+not affected by these changes.
+
+<p>
+
+I have made other code Y2038 compliant on systems which still use a 32-bit
+<tt>time_t</tt> by moving the 136-year long window from 1901 to 2038 to
+another range of dates.  Current timestamps should be good until sometime
+in 2156; timestamps for when zone files have been changed (to generate
+synthetic SOA serial numbers) should be good until sometime in 2136.
+While localtime functions (log timestamps, localized time SOA serial
+numbers) are disabled in the 32-bit Windows <tt>maradns.exe</tt> build,
+it uses Y2038 compliant native Win32 calls to find a file timestamp to
+generate a synthetic SOA serial number.
+
+<p>
+
+There is <i>only</i> a 136-year long window on systems with a 32-bit
+<tt>time_t</tt>; the majority of current real-world systems which
+use a 64-bit time_t will not have timestamp issues comes 2136, 2156,
+or whatever.  There <i>is</i> an issue with synthetic SOA serial numbers
+wrapping back to 0 come 2841, so anyone using MaraDNS in the 2800s should
+be sure that replica (“slave”) DNS servers do not expect a SOA serial
+to increment, only change.
+
+<p>
+
+I should note that synthetic SOA serial numbers are not used in zone
+files with a SOA record in them—that’s another solution come
+2800 or so (mid-2136 if one insists on still having a 32-bit 
+<tt>time_t</tt>).
+
+<p>
+
+These fixes are important enough that I have backported them to the
+3.4 branch of MaraDNS.
+
+<p>
+
+<A name=RFC8482></A><A name=RFC8482></A><span class=moyet>==</span><span class=blogtitle><b>RFC8482</b></span><span class=moyet>==</span>
+
+<p>
+
+While MaraDNS generally does not follow RFCs which came out after
+2010, there is one very useful RFC from 2019 with security implications:
+<a href="https://blog.cloudflare.com/rfc8482-saying-goodbye-to-any/">RFC8482</a>.
+DNS has supported for a long time ANY records, but they are a moderate
+pain to implement.  I implemented ANY records back in 2001
+since an RFC-compliant DNS server needed to support them.
+
+<p>
+
+The <i>only</i> real world use case for ANY records is from Qmail
+supporting them because of a bug in Bind 4.9.3, released back in 1996.
+<a href="https://news.ycombinator.com/item?id=19402594">RFC8482 has been carefully
+designed to handle the Qmail corner case</a>, and there is no other
+real-world use case for ANY.  On the other hand, ANY has been abused by
+bad actors in denial of service attacks.
+
+<p>
+
+While the security implications for ANY are limited with MaraDNS (which
+does not have large packet support), there <i>are</i> security issues
+so I now consider having RFC8482 support essential.  Indeed, it’s 
+important enough I have backported RFC8482 support to the 3.4 branch
+of MaraDNS.
+
+<p>
+
+<A name=Updating_make_install></A><A name=Updatingmakeinstall></A><span class=moyet>==</span><span class=blogtitle><b>Updating “make install”</b></span><span class=moyet>==</span>
+
+<p>
+
+<a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1024561">The Debian
+port of MaraDNS has not been maintained for a while</a>.  That in mind,
+since I use MaraDNS in Ubuntu 22.04 (note: Ubuntu is derived from Debian),
+and since the RFC8482 issue is serious enough to merit updating MaraDNS,
+it’s time for me to maintain MaraDNS for modern Linux distributions
+again.
+
+<p>
+
+That in mind, I spent all weekend researching <tt>systemd</tt> and have
+updated MaraDNS to have a proper unit file for systemd.  Systemd is a
+<i>lot</i> better than many other init systems because, not only does
+it have full daemonization support (it does what <tt>duende</tt> did
+back in the <tt>sysvinit</tt> days), it also allows old <tt>sysvinit</tt>
+scripts to run.
+
+<p>
+
+Now, when running <tt>make install</tt> in MaraDNS, it will do the
+right thing in Ubuntu 22.04: It will install <tt>systemd</tt> unit files
+and enable the services with systemd.
+
+<p>
+
+In addition, “make install” will now install coLunacyDNS (a new
+Lua-based DNS server which uses Lua scripts to make custom DNS replies)
+as well as Lunacy (my personal fork of Lua 5.1 which I use for MaraDNS
+testing and for converting MaraDNS’s documents in to HTML pages, man
+pages, and plain text files).
+
+<p>
+
+Since I am a Ubuntu 22.04 user, I can only guarantee that “make
+install” will work with Ubuntu 22.04.  People using other distributions
+are on their own, but I will keep <tt>duende</tt> and the old 
+<tt>sysvinit</tt> init files around.  I have even hacked them to work
+with OpenRC—note I am not actively supporting OpenRC because I
+only use Alpine Linux for MaraDNS unit/regression testing.
+
+<p>
+
+While discussing distributions, a shout out to Tomasz Torcz who
+maintains <a href="https://packages.fedoraproject.org/pkgs/maradns/maradns/">a
+current port of MaraDNS</a> for Fedora core; this is the only 
+distro-specific port of MaraDNS I know of which is still actively
+maintained.
+
+<p>
+
+<A name=Getting_MaraDNS></A><A name=GettingMaraDNS></A><span class=moyet>==</span><span class=blogtitle><b>Getting MaraDNS</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS, as always, is available here:
+
+<p>
+
+<blockquote>
+<A href="https://maradns.samiam.org/download.html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

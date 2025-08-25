@@ -1,0 +1,35 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS update</h1>
+
+<h2>May 21, 2012</h2>
+
+<div class=blogtitle>
+<b>MaraDNS update</b>
+</div><br>
+
+I am in the slow process of updating MaraDNS for RHEL6-based Linux distros
+(CentOS6 and Scientific Linux 6). It will probably take me a couple of
+months to finish this process.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood again one day next month, after the 20th,
+unless a critical security bug is found.
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

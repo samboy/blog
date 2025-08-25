@@ -1,0 +1,82 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/2024-05-01.jpg width=224 height=126>
+</div>
+
+<h1>Moving to México</h1>
+<h2>July 31, 2025</h2>
+I have moved to México so that my daughter has a chance to learn Spanish
+and become fully bilingual, and so that she can get to know the mother’s
+side of her family better. To celebrate our move, I have upated the 
+font on my website.
+
+<p>
+
+<A name=The_font_update></A><A name=Thefontupdate></A><span class=moyet>==</span><span class=blogtitle><b>The font update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have moved the website from using Bitstream Charter/Charis SIL for 
+the body text to using Roboto Serif. This is a new font for the 2020s,
+having been released in 2022. I have minimized its size by subsetting
+the font to only have ASCII, some limited extended punctuation (smart
+quotes, etc.), and Spanish language letters.
+
+<p>
+
+To my eyes, Roboto Serif invokes something from the mid 20th century.
+It looks more like a slab serif than a traditional serif at the weight
+and grading I use for the body text, and while a modern typeface,
+has a look which feels like a rose tinted view of life in the 1950s or
+1960s.
+
+<p>
+
+The website continues to use Source Sans for the headings; I have been using
+Source Sans since 2012 so having this font on the webpage is 
+now a tradition I would like to keep, to honor the past while looking
+forward towards the future.
+
+<p>
+
+In addition, Internet Explorer is no longer on Windows 11 <i>at all</i>,
+so there is no need to continue using larger WOFF files for the fonts.
+All fonts are in WOFF2 format; if someone (heaven forbid) comes to this
+website with an ancient browser (IE, etc.) which only supports WOFF but
+not WOFF2, they will use one of the fallback fonts in the font stacks
+I have made.
+
+<p>
+
+The new combined CSS file with fonts is only 83,649 bytes in size.
+The older combined CSS file for the fonts is 116,472 bytes long.
+
+<p>
+
+The files which make up this typeface are here:
+
+<p>
+
+<blockquote>
+<A href="https://samiam.org/fonts/Kilroy8/">https://samiam.org/fonts/Kilroy8/</A>
+</blockquote>
+
+In addition, a version of this font for desktop (word processor, etc.) use
+is here:
+
+<p>
+
+<blockquote>
+<A href="https://samiam.org/fonts/KilroyA/">https://samiam.org/fonts/KilroyA/</A>
+</blockquote>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

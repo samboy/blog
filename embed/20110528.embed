@@ -1,0 +1,64 @@
+<h1>Embedding web fonts</h1>
+
+<h2>May 28, 2011</h2>
+
+For years, web designers have been forced to select from a very limited
+number of fonts for their web designs.  No longer; it is now possible to
+put in arbitrary fonts in one's web page.
+
+<p>
+
+For example:
+
+<p>
+<style>
+@font-face {
+    font-family: 'FooBar';
+    src: url('/fonts/webpage-2014-07-18/UserSmallCaps.woff') format('woff');
+}
+.ChortleR { font-family: FooBar, sans-serif; }
+</style>
+
+<h1 class=ChortleR>This is a heading</h1>
+
+<p class=ChortleR>This is what some text looks like with a non-standard
+font.  This may or may not be readable in your browser</p>
+
+<p>
+
+So the raw technology for embedding custom fonts is now availble.  
+So, that leaves with the next challenge: Finding fonts that look really
+great at the screen at all resolutions, using both Clear Type and classic
+font rendering technology (read: a font with "delta hinting", a technology
+that is very labor-intensive to add to a font).  Ideally, a font with an
+open-source license (read: the "SIL" font license).
+
+<p>
+
+Looking at the <A href=http://google.com/webfonts>Google web fonts</A>, there
+are a lot of really beautiful fonts, but the only one I have seen whose delta hinting
+I am happy with is the monospace <A href="http://www.google.com/webfonts/family?family=Cousine">Cousine
+font</A> (this font also goes by the name "Liberation Mono").  What I haven't
+found is a font that can replace Verdana.
+
+<p>
+
+That said, the open-source <A href=http://ebensorkin.wordpress.com/>Merriweather</A>
+font has a lot of promise; this would be a perfect font with really good
+delta hinting (as well as italics).  Since it <i>is</i> open source, anyone can delta hint it--or
+pay the designer to do the hard work.
+
+<p>
+<i>This problem was solved when Windows XP hit end of life in 2014; anything
+post-XP doesn’t need delta hinting to look good on the screen</i><p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing).  The "Chortle" font
+used in the above example is an open-source font; <A 
+href=http://samiam.org/fonts/Chortle>license details are available</A>.</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

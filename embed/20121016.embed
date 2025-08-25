@@ -1,0 +1,136 @@
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Tonight's election prediction</h1>
+
+<h2>October 16, 2012</h2>
+
+I am using Huffpost's numbers for today (pre-debate) for tonight's election 
+prediction.  These numbers much more strongly favor Obama than either
+of the two other numbers I am using.  Simon Jackman has an article that
+explains
+<A href=
+http://www.huffingtonpost.com/simon-jackman/modelbased-poll-averaging_b_1883525.html
+>the model used</A> to make these numbers.
+
+<p>
+<div class=blogtitle>
+<b>My simulation with Huffpost's numbers</b>
+</div><br>
+
+Using a strong random number generator (described in 
+<A href=20121015.html>yesterday's blog</A>), I simulated the presidential
+election 100,000 times.  The simulated results for today's
+Huffpost numbers are as follows:
+
+<P>
+<pre>
+<b>Chance of winning election</b>
+Obama  96.7%
+Romney  3.2%
+Tie     0.2%
+</pre>
+
+<A name=state> </A>
+<p>
+<div class=blogtitle>
+<b>By State</b>
+</div><br>
+
+Here are some raw numbers showing how much influence a given state
+has on the election results.  What I have done is look at all of the
+cases in the model where a given state is won by a given candidate,
+and compare how winning or losing the states affects their chances
+of being in the White House next year this time:
+
+<pre>
+<b>Obama gets CO</b>
+Romney   1.72988%
+Tie      0.10658%
+Obama    98.1635%
+<b>Romney gets CO</b>
+Romney   5.41102%
+Tie      0.225566%
+Obama    94.3634%
+
+<b>Obama gets FL</b>
+Romney   0.00313372%
+Obama    99.9969%
+<b>Romney gets FL</b>
+Romney   4.64833%
+Tie      0.224706%
+Obama    95.127%
+
+<b>Obama gets NH</b>
+Romney   2.34891%
+Tie      0.153086%
+Obama    97.498%
+<b>Romney gets NH</b>
+Romney   4.54009%
+Tie      0.152856%
+Obama    95.3071%
+
+<b>Obama gets NV</b>
+Romney   2.49987%
+Tie      0.118921%
+Obama    97.3812%
+<b>Romney gets NV</b>
+Romney   5.67856%
+Tie      0.281542%
+Obama    94.0399%
+
+<b>Obama gets OH</b>
+Romney   0.894281%
+Tie      0.100098%
+Obama    99.0056%
+<b>Romney gets OH</b>
+Romney   25.8884%
+Tie      0.682143%
+Obama    73.4294%
+</pre>
+
+The most interesting thing for me is that the model has only one path to 
+victory for Romney if Obama is able to get Florida.  I have made
+a map of Romney's one and only 1-in-100,000 (according
+to Huffpost) path to victory for Romney without Florida, which can be seen 
+here:
+
+<blockquote>
+<A href=http://elections.huffingtonpost.com/2012/custom-presidential-election-map#nkadmnjannjkjenjn>http://elections.huffingtonpost.com/2012/custom-presidential-election-map#nkadmnjannjkjenjn</A>
+</blockquote>
+
+Then again, Huffpost's model says that Obama right now only has a 32%
+chance of getting Florida (Nate Silver and Nerd Wallet give Obama a slightly
+higher chance of getting Florida, but they both give Obama a lower chance of
+winning the election).
+
+<A name=rg32> </A>
+<p>
+<div class=blogtitle>
+<b>A note on the random number generator</b>
+</div><br>
+
+The random number generator rolls a 1000-sided dice by grabbing two 
+bytes from RadioGatun[32]'s bitstream.  This gives us a number between
+0 and 65535; should the number be 65000 or higher, the program discards
+the roll and tries again.
+
+<p>
+
+Once it gets a good roll, it takes the low three digits of the random
+number to get a number between 0 and 999.  For example, if the number
+is 45,737, the program uses the number "737" for the dice roll.  If
+Obama's chance-in-1000 of getting a state is lower than the roll, Obama
+gets the state, otherwise Romney gets it.  Using the 737 example and Florida,
+since Obama has a 32% chance at Florida in Huffpost's model, Obama won't
+get Florida since he needs a 319 or lower to get it.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

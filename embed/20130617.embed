@@ -1,0 +1,263 @@
+<div class=blogpic>
+<img src=pics/pitfall.jpg width=160 height=120>
+</div>
+
+<h1>Alternate Pitfall maps</h1>
+<h2>June 16, 2013</h2>
+This blog entry is my final look at Pitfall’s map generator.  In this
+entry, I look at possible variant Pitfall maps.
+This is the final installment of a series with
+<a href="http://samiam.org/blog/20130606.html">four</a>
+<a href="http://samiam.org/blog/20130608.html">previous</a>
+<a href="http://samiam.org/blog/20130612.html">blog</a>
+<a href="http://samiam.org/blog/20130616.html">entries</a>. 
+
+<p>
+
+<A name=ARX_More_compact_than_an_LFSR></A><A name=ARXMorecompactthananLFSR></A><span class=moyet>==</span><span class=blogtitle><b>ARX: More compact than an LFSR</b></span><span class=moyet>==</span>
+
+<p>
+
+A lot of modern cryptographic research looks at a type of operation called
+“add-rotate-xor” (where “xor” means “exclusive or”), or ARX for short.  For 
+example, the SHA-3 finalists Skein and Blake are both “ARX” ciphers.
+
+<p>
+
+Since the 6502 supports both modulo addition and xor (with the mnemonic
+“EOR”), as well as one-bit rotates, we can compactly implement an 8-bit 
+ARX in 6502.  
+
+<p>
+
+The one I tried out is like this for the forward function:
+
+<p>
+
+<tt>uint8_t xar(uint8_t r, uint8_t a, uint8_t b) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>int y;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>for(y = 0; y &lt; 3; y++) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// 12 bytes in 6502 </font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>r ^= b; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// lda r ; eor <font color=#008700>#b</font></font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>r += a; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// clc; adc <font color=#008700>#a; sta r</font></font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>r = (r &lt;&lt; 1) | (r &gt;&gt; 7); <font color=#008700>// asl ; rol r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return r;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+And like this for the inverse function:
+
+<p>
+
+<tt>uint8_t rsx(uint8_t r, uint8_t a, uint8_t b) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>int y;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>for(y = 0; y &lt; 3; y++) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// 14 bytes in 6502</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>r = (r &gt;&gt; 1) | (r &lt;&lt; 7); <font color=#008700>// lda r; lsr ; ror r ; lda r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>r -= a; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// sec; sbc <font color=#008700>#a</font></font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>r ^= b; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// eor <font color=#008700>#b ; sta r</font></font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return r; </tt><br>
+<tt>}</tt><br>
+
+<p>
+
+There are some 40 different possible values for a and b that give us a full
+permutation: All 256 possible 8-bit values are seen.  The constants
+I used for my alternate 256-location Pitfall map are, in decimal (a=3;b=11).  
+I carefully tweaked the map to be solvable in about the same amount
+of time as the original Pitfall map.
+
+<p>
+
+Not only are there 40 possible 256-location jungles, there are a total
+of 2,176 different possible (a,b) values where:
+
+<p>
+
+<ul>
+<li> One can grab all 32 treasures
+<li> The default player’s start is can reach these 32 treasures
+</ul>
+
+<p>
+
+Note that the above code runs the ARX loop three times; this is because
+my experiements show that a single ARX iteration doesn’t make a sufficiently
+random-looking map (the “diffusion” is poor).  Some of the map lengths,
+such as 255, will need to use a different number of iterations besides
+three (since 255 is 3 * 5 * 17).  The most number of times this
+loop would have to be run is can be as high as seven for the 16 240-length 
+maps; fortunately, there appear to be enough cycles leftover during the 
+vertical blank to do this (and even enough cycles to run it 21 times for
+the underground passages in the 16 240-length maps).
+
+<p>
+
+<A name=An_easier_Pitfall_variant></A><A name=AneasierPitfallvariant></A><span class=moyet>==</span><span class=blogtitle><b>An easier Pitfall variant</b></span><span class=moyet>==</span>
+
+<p>
+
+The smallest jungles using this ARX generation technique with all
+treasures are 125 locations in size—under half the size of Pitfall’s
+original jungle.  One of these values, again in decimal, is (a=16,
+b=10). I have made a special easier training version of Pitfall where
+the jungle is replaced with this smaller, easier 125-location jungle.
+
+<p>
+
+I have increased the player’s time limit from 20 to 60 minutes in this
+jungle, have given the player 60 instead of three lives (the player just
+loses a minute of time every time they die; if they die with under a
+minute left, the game ends), and have removed all of the underground
+walls.
+
+<p>
+
+Since the main map is only 125 locations in size, I looked more closely
+at the random number generator when given (a=16, b=10) and discovered
+there are 19 other jungles available, albeit without treasure, with
+these constants; one can enter one of those jungles by simply changing
+the location Harry is in.
+
+<p>
+
+I have taken one of those 19 jungles and have converted it in to a
+one-minute challenge course for Harry to run through.  This other map
+can be entered by hitting “game Select”. It places Harry in a small
+training course suitable for practicing movement and jumping. The goal
+is to get to the right end of the course within a minute. This training
+course discourages bad habits by being more deadly: Touching a log or
+falling down ends the run. Harry is not allowed to run left from the
+starting line; no underground shortcuts may be used or the player has
+to start over.
+
+<p>
+
+These changes do not affect the gameplay of the main jungle.  Along with
+the other easier jungle, this allows people to train for Pitfall with
+either a medium sized easy-to-play jungle, or a small very difficult to
+play jungle.
+
+<p>
+
+The way I was able to pull off these changes is because removing the code
+to process underground walls gave me just enough room to implement this
+obstacle course.
+
+<p>
+
+These files can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/pitfall">http://samiam.org/pitfall</A>
+</blockquote>
+
+<A name=Galois_LFSR></A><A name=GaloisLFSR></A><span class=moyet>==</span><span class=blogtitle><b>Galois LFSR</b></span><span class=moyet>==</span>
+
+<p>
+
+Thomas Jentzsch pointed out to me that we can even more compactly 
+represent a LFSR in 6502 by using a “Galois” LFSR instead of the “Fibonacci”
+LFSR that David Crane used for Pitfall.  This is extremely compact in 
+6502:
+
+<p>
+
+<tt>&nbsp;<span class=pc>&nbsp;</span>lda random </tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>lsr </tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>bcc .skipEor </tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>eor <font color=#008700>#$d4 </font></tt><br>
+<tt>.skipEor: </tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>sta random </tt><br>
+
+<p>
+
+Its inverse is equally compact:
+
+<p>
+
+<tt>&nbsp;<span class=pc>&nbsp;</span>lda random</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>asl</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>bcc .skipEor</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>eor <font color=#008700>#$a9</font></tt><br>
+<tt>.skipEor:</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>sta random</tt><br>
+
+<p>
+
+Code that can run both the forward and inverse Galois 8-bit LFSR in C:
+
+<p>
+
+<tt>uint8_t lfsr(uint8_t random, int taps, int direction) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>uint8_t c;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>if(direction == 0) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = random &amp; 1; random &gt;&gt;= 1; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>} else {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = random &amp; 0x80; random &lt;&lt;= 1; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>taps &lt;&lt;= 1;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>taps |= 1;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>if(c != 0) { <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>random ^= taps;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return random;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+Valid “taps” values are: 0x8e, 0x95, 0x96, 0xa6, 0xaf, 0xb1, 0xb2, 0xb4, 
+0xb8, 0xc3, 0xc6, 0xd4, 0xe1, 0xe7, 0xf3, and 0xfa.  I chose 0xd4 because
+it appears to generate a jungle that can be finished in 20 minutes, just
+like the original Pitfall jungle.
+
+<p>
+
+<A name=A_comparison_of_RNG_techniques></A><A name=AcomparisonofRNGtechniques></A><span class=moyet>==</span><span class=blogtitle><b>A comparison of RNG techniques</b></span><span class=moyet>==</span>
+
+<p>
+
+David Crane’s code used up 31 bytes total, for both the forward and
+inverse LFSR.  The ARX code uses 26 bytes, five bytes smaller, and has
+many more solvable jungles than the LFSR code.  A Galois LSFR is the
+most compact, using only 18 bytes.
+
+<p>
+
+ARX number generators as well as Galois LFSRs are random number generation
+techniques unknown to David Crane when he developed Pitfall (to be fair
+to Crane, ARX did not become popular until the mid-’00s, and Galois
+LFSRs probably were not widely used back then); they allow Pitfall
+to have some interesting alternate jungle maps.
+
+<p>
+
+<A name=Downloads></A><A name=Downloads></A><span class=moyet>==</span><span class=blogtitle><b>Downloads</b></span><span class=moyet>==</span>
+
+<p>
+
+I will mention one more time a couple of downloads for alternate Pitfall 
+maps:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/pitfall/">http://samiam.org/pitfall/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

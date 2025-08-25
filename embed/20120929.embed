@@ -1,0 +1,187 @@
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Slashdot: A final look</h1>
+
+<h2>September 29, 2012</h2>
+
+In today's blog, I wrap my series on Slashdot which I have written about in <A 
+href=20120903.html>two previous</A> <A 
+href=20120907.html#slashdot>blog entries</A>.
+
+<A name=decline> </A>
+<p>
+<div class=blogtitle>
+<b>The decline of Slashdot</b>
+</div><br>
+
+Once upon a time, famous people posted to Slashdot.  
+<A href=http://slashdot.org/~John+Carmack/comments>John Carmack</A> and
+<A href=http://slashdot.org/~CleverNickName/journal>Wil Wheaton</A>, to
+name just two, were regular posters there.
+
+<p>
+
+No longer.  Carmack hasn't posted anything to Slashdot for over four years;
+Wheaton has only posted a single journal to Slashdot in the last three
+years. 
+
+<p>
+
+I have <A href=20120907.html#slashdot>already mentioned</A> that one 
+reason for Slashdot's decline is that it started catering to the 
+immature pro-piracy crowd.  There are a number of other reasons why
+Slashdot became less appealing:
+
+<ul>
+<li>The flame wars.  Just like <A href=20110111.html>Usenet</A>, 
+    once Slashdot starting getting popular, it attracted the kinds
+    of <A href=20110512.html>Internet loudmouths</A> that make an
+    online community unpleasant for everyone else.<p>
+<li>Beating the dead horse of Linux vs. Windows on the desktop.  The
+    Slashdot editors never let go of the 1990s Linux vs. Windows on the
+    desktop war which Microsoft <A href=old-200904-Linux-lost-2002.html>won 
+    in 2002</A>.  To sound like a cynical Slashdot poster: 1997 called and
+    wants their "Micro$oft Windoze sucks" post back.<p>
+<li>Becoming more political.  Slashdot started off concentrating on the
+    Linux-vs-Windows desktop war and cool little geek projects (making
+    a computer case that looks like an old Atari 800, etc.)  Over the
+    years Slashdot focused less on "News for Nerds" and slowing became
+    more and more a ticker for news stories I already saw on other websites
+    a day or two before it made Slashdot; more and more political stories
+    started to get posted on Slashdot.
+    <p>
+    For a website that makes money from page views and ad clicks, it makes
+    a lot of sense to post an inflammatory political article and watch the
+    inevitable flame war start.  But that was not good for Slashdot's 
+    community.
+</ul>
+
+These factors, among others, have contributed to Slashdot's slow decline.
+
+<A name=movingon> </A>
+<p>
+<div class=blogtitle>
+<b>Moving on</b>
+</div><br>
+
+Some geeks have decided that Slashdot's problems could be resolved by going
+to a different geek-friendly web site.  The progression usually has been
+like this:
+
+<ul>
+<li>Slashdot was one of the first web-based geek friendly online communities.
+    <p>
+<li>Some people went from Slashdot to <A 
+    href=http://www.kuro5hin.org/>Kuro5hin</A>.  Kuro5hin's problem is 
+    that it ended up requiring people to pay to be able to post there,
+    which is a big no-no among the "freetard" geeks who think everything
+    on the Internet should be free.  It ended up getting taken over
+    by the kind of demented "trolls" who used to plague Slashdot with
+    Goatse pics and who say stuff they don't really believe just to
+    get negative attention.  It's a stagnant community; the last article 
+    to make front page is from nearly half a year ago.<p>
+<li>People then moved from Slashdot (or possibly Kuro5hin) to <A 
+    href=http://digg.com>Digg</A>.  Digg suffered from the "disagree, 
+    down-vote" problem for a long time before the site revamped their
+    comment system.<p>
+<li>People then moved from Digg to <A href=http://reddit.com>Reddit</A>.
+    I have never been an active member of this community, so I can not
+    comment on how good this site is, but it appears to appeal to a
+    more immature user base than Slashdot or Digg ever did.<p>
+<li>People then supposedly moved from Reddit to <A 
+    href=http://news.ycombinator.com/>Hacker News</A>.  Again, I have
+    not had a chance to fully evaluate this community, but I suspect it
+    has many of the problems Slashdot has, and, unlike Slashdot, discourages
+    long comments.
+</ul>
+
+For me, jumping from community to community like this isn't the solution
+to the underlying problems these kinds of communities have.  One
+fundamental issue with geek-friendly sites is that a lot of people
+with the kind of mind needed to be a good computer programmer do not have
+very good social skills and often times lack empathy or compassion for
+other people's feelings.  Also, sites that predominantly use anonymous
+identities -- something all of five site I listed do -- tend to bring
+out the worse in people.
+<p>
+
+In contrast to these "geek-friendly" communities, Facebook is successful 
+because:
+
+<ul>
+<li>It discourages anonymity.<p>
+<li>It allows people to fine-tune how public or private their posts
+    are.<p>
+<li>It has <A href=20111222.html>killfiles</A>, something lacking with
+    most web-based communities.<p>
+</ul>
+
+<p>
+<A name=death> </A>
+<p>
+<div class=blogtitle>
+<b>The death of Slashdot</b>
+</div><br>
+
+Now that <A
+href=http://finance.yahoo.com/news/dice-holdings-buys-geeknet-websites-125531940.html>Slashdot
+has been bought out</A>, its days are numbered.  There just is no money
+to be made pandering to a community of grouchy cynical users who think
+everything on the Internet should be free.
+
+<p>
+
+It's interesting that Slashdot, Sourceforge, and a couple of other
+non-notable sites, combined, were worth only 20 million dollars.
+<A href=http://www.alexa.com/siteinfo/slashdot.org>Alexa's stats for
+Slashdot</A> are very telling and probably explain why they were eager to
+sell the site for so little: Ever since mid-2011, Slashdot's Alexa rank
+has been in a steady decline.  It had an Alexa rank of 1,100 or so in
+the first quarter of 2011 -- in other words, it was roughly the 1100th
+most popular site on the Internet.  Right now its Alexa rank is higher
+than 2000; nearly 1,000 sites have become more popular than Slashdot in
+the last 18 months or so.
+
+<p>
+
+Slashdot is in the same death spiral that Usenet has been in since the
+late 1990s: It is losing users, its user base is becoming older, and it
+is not getting enough new users to replace the users it's losing, much
+less grow.  
+
+<A name=wrapup> </A>
+<p>
+<div class=blogtitle>
+<b>My final thoughts on Slashdot</b>
+</div><br>
+
+While I am no longer an active part of Slashdot's community, I will
+continue lurking there.  Slashdot is best when it talks about technology
+and working in the technology industry; the comments from experienced
+middle-aged IT workers and managers are still very enjoyable to read.
+
+<p>
+
+Slashdot is a place with a lot of nostalgia.  It reminds me of a job I
+had in Mountain View, back when SGI and Sun were still around and when it
+was Netscape (not Google) who rented the most office space in that town,
+getting paid too much to do too little work for a tiny consulting company.
+I would sit at our Linux server and use it to read Slashdot when our
+company didn't have enough contracts to keep us busy.  That company, like 
+many others, did not survive the dot-com washout.
+
+<p>
+
+The world has moved on it's time for me to look beyond 
+Slashdot and other time-wasting sites on the Internet.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

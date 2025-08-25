@@ -1,0 +1,159 @@
+<!--{TAGS:G,L}-->
+<h1>The AMD E-350</h1>
+
+<h2>April 22, 2011</h2>
+
+At the beginning of this year, AMD introduced a new Zacate E-350 chip (as
+well as a lower-priced E-240 chip, which we will not look at).  The
+first computers this chip was seen in were 11-inch "notbooks"; computers
+slightly larger, more expensive, and faster than the 10-inch netbooks
+which were very popular until the iPad was released.  
+
+<p>
+
+Indeed, the Zacate E-350 is in, among others, the following 11-inch "notbooks":
+
+<ul>
+<li><A href=http://www.sonystyle.com/webapp/wcs/stores/servlet/ProductDisplay?catalogId=10551&storeId=10151&langId=-1&productId=8198552921666292999#additionalImage1%22>Sony 
+Vaio Y series</A>
+
+<li><A href=http://shop.lenovo.com/us/products/professional-grade/thinkpad/x-series/x120e/index.html>Lenovo
+ThinkPad x120e</A>
+
+<li><A href=http://www.shopping.hp.com/webapp/series/category/notebooks/dm1z_series/3/computer_store>HP
+dm1z</A>
+
+</ul>
+
+In terms of feel, typing on an 11-inch notbook is a more pleasant experience
+than any of the keyboards the 10-inch netbooks have (I should note that the
+Lenovo s10-3 had an excellent keyboard until they changed suppliers from
+Alps to Chicony).  The screen on notbooks is usually 1366x768 instead 
+of the 1024x600 display most common with netbooks; this allows notbooks
+to play games that need a 1024x768 screen (such as Civilization 3) and
+enables Linux developers have two terminals side-by-side at a legible
+font size.
+
+<p>
+
+In addition to the notbooks, unlike the Atom, the E-350 is readily available
+in larger notebooks.  To name just one model, the 
+<A 
+href=http://us.toshiba.com/computers/laptops/satellite/C650/>Toshiba Satellite
+C650D</A> lineup includes an E-350 based 15.6" laptop with a DVD player/writer and
+a webcam/microphone for just under $400.  There are also E-350 based
+motherboards for people who prefer to build their own computers.
+
+<h3>Zacate E-350 performance</h3>
+
+<p>
+
+Looking at the <A href=http://www.cpubenchmark.net/cpu_list.php>Passmark list
+of CPU benchmarks</A>, the Zacate E-350 non-GPU performance is nominally 
+(about 15%) faster than a dual-core Atom [1].  Where it smokes the Atom is
+with GPU (graphics) performance.  It is about three times as fast as Atom's
+built-on GPU, and nearly twice as fast as the ION GPU included with some
+high-end netbooks. 
+
+<p>
+
+In terms of gaming--probably the most common way of using a computer
+where lower performance is noticed--<A 
+href=http://www.anandtech.com/show/4218/amds-brazo-e350-msi-x370-sony-vaio-yb/6>cutting-edge
+games from five years ago are perfectly playable on an E-350 system</A>. In
+contrast, an Intel Atom system with the 3150 chipset can only really play
+hi-end games from 10 years ago [3].
+
+<p>
+
+The improved GPU also results in better video playback.  Unlike the Intel
+Atom, <A href=http://techreport.com/articles.x/20401/18>the E-350 can
+smoothly play 1080p Flash videos</A>. [4]
+
+<p>
+
+Before concluding the performance section, I should note that the Zacate
+E-350 does not have the memory limitations that Atoms have.  The Atom
+N455, for example, does not support having over 2Gb of memory, but 
+users of the E-350 based Thinkpad x120e have reported expanding the memory to
+8Gb without problem.
+
+<h3>E-350 and battery life</h3>
+
+One worry I had was the the E-350's higher TDP (18 instead of the
+Atom's 6.6 watts) would significantly impact battery life.  In real-world
+use, the impact is reasonably small.  <A href=http://laptopmag.com>LAPTOP 
+magazine</A> saw the E-350 based <A 
+href=http://www.laptopmag.com/review/laptops/lenovo-thinkpad-x120e.aspx?page=4>x120e
+last for 6:05</A> using a 57 Whr battery; the Atom N455 based S10-3 from
+Lenovo <A 
+href=http://www.laptopmag.com/review/laptops/lenovo-ideapad-s10-3.aspx?page=2>lasted
+6:55</A> using a 49 Whr battery.  
+
+<p>
+
+To make this as much of an apples-to-apples comparison as possible,  
+Lenovo's E-350 system lasts 6.4 minutes per watt-hour of battery charge,
+and their Atom N455 system lasts just under 8.5 minutes per watt-hour. 
+
+<p>
+
+So, the E-350 uses 30% more energy than a single-core Atom processor.
+
+<h3>Conclusion</h3>
+
+The AMD E-350 fits a nice sweet spot between the Intel Atom and 
+"mainstream" processors.  It resolves most of the performance 
+annoyances some users have had with Atoms--HD video playback is possible
+and gaming performance is considerably better--with only a minimal impact
+on price and battery life.
+
+<p>
+
+I eagerly await Intel's release of their next-generation Cedar Trail
+Atoms to see if they will have a higher-performance model that competes
+with the Zacate E-350.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<h3>Footnotes</h3>
+
+[1] The dual core Atom N570 has a Passmark score of 620; the E-350 has a 
+    score of 743.
+
+<p>
+
+[2] The GMA 3150--Atom's GPU--has a Passmark score of 69.  The Radeon 6310,
+    AMD E-350's GPU--has a Passmark score of 205.  An ION has a Passmark 
+    score of 118.
+
+<p>
+
+[3] For example, <a href=http://www.linux-netbook.com/video/firefox-and-quake-iii-arena-on-acer-aspire-one>Quake
+    3 from late 1999 runs fine on a netbook</A>, but <a 
+href=http://www.geardiary.com/2010/02/01/the-netbook-gamer-neverwinter-nights-2002-rpg/>Neverwinter
+    Nights from 2002 is barely playable</A> [3a] on a typical netbook system.
+
+<p>
+
+[3a] To cut to the chase: "there were many times when I was thankful for
+    the turn-based nature of the game, since things like number of enemies
+    and area-of-effect spells tend to bog things down considerably."
+
+<p>
+
+[4] The linked article was written before the mainline Flash release had
+    AMD HD acceleration support, an issue that <a 
+href=http://www.netbooknews.com/19484/flash-player-10-2-released-with-amd-fusion-support/>has
+    since been resolved</a>.
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

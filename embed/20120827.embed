@@ -1,0 +1,31 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS update</h1>
+
+<h2>August 27, 2012</h2>
+
+<div class=blogtitle>
+<b>MaraDNS non-update</b>
+</div><br>
+
+I have made a new snapshot of MaraDNS 2.0 here; this is a non-update.  
+The only change I have made is to my mqhash password generating utility;
+MaraDNS is unchanged (and won't be changed until late September barring
+a security hole with a CVE number).
+
+<p>
+
+Look here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,159 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Purple.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS 3.5.0015</h1>
+<h2>August 29, 2020</h2>
+I have released MaraDNS 3.5.0015, with coLunacyDNS declared stable.
+<i>523 words</i>
+
+<p>
+
+<A name=Making_coLunacyDNS_stable></A><A name=MakingcoLunacyDNSstable></A><span class=moyet>==</span><span class=blogtitle><b>Making coLunacyDNS stable</b></span><span class=moyet>==</span>
+
+<p>
+
+To declare coLunacyDNS stable, I first had to declare it feature
+complete: I will add no more features to coLunacyDNS (for now). 
+Instead, I tested coLunacyDNS to make it stable.
+
+<p>
+
+So, I began testing coLunacyDNS, with a handful of informal tests
+to make sure it ran correctly.  It did.  But, then, I asked myself
+this: How can I see how many of coLunacyDNS’s lines we are running
+to make sure we are testing <i>all</i> of the code?
+
+<p>
+
+<A name=gcov></A><A name=gcov></A><span class=moyet>==</span><span class=blogtitle><b>gcov</b></span><span class=moyet>==</span>
+
+<p>
+
+The tool to use with C language programs to see which lines we are
+testing against is <i>gcov</i>.  There was no need for me to find
+and install gcov; it was included when I installed GCC on my CentOS
+8 development system.
+
+<p>
+
+Some points about gcov:
+
+<p>
+
+<ul>
+<li> To run gcov, we need to add the flags <tt>-fprofile-arcs -ftest-coverage</tt>
+  when compiling our programs.
+<li> Only the files which we wish to measure test coverage for need to be
+  compiled with these special flags.  gcov will still happily measure test
+  coverage, even if it uses libraries or routines not being measured.
+<li> We only need to run gcov once after running all of the tests, 
+  unless we wish to see a running tally of test coverage.  
+<li> If a program is terminated abnormally (yes, SIGTERM is abnormal 
+  termination), then we will not get updated coverage results for the
+  program.  I had to alter the coLunacyDNS program to, when compiled in
+  special test mode, have SIGALRM signal the coLunacyDNS service to
+  break its main loop and terminate normally.
+<li> The files which gcov uses to tally results have the names (in CentOS 8)
+  <tt>.gcda</tt> and <tt>.gcno</tt>.  The process running the compiled
+  program needs to be able to write to those files for test coverage to
+  be updated.
+</ul>
+
+<p>
+
+Here’s a simple example of gcov in action:
+
+<p>
+
+<tt>$ cat &gt; foo.c</tt><br>
+<tt>#include &lt;stdio.h&gt;</tt><br>
+<tt>int main() {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>puts("Hello, world!");</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span>return 0;</tt><br>
+<tt>}</tt><br>
+<tt>$ gcc -o foo foo.c -fprofile-arcs -ftest-coverage</tt><br>
+<tt>$ ./foo</tt><br>
+<tt>Hello, world!</tt><br>
+<tt>$ gcov foo.c</tt><br>
+<tt>File 'foo.c'</tt><br>
+<tt>Lines executed:100.00% of 3</tt><br>
+<tt>Creating 'foo.c.gcov'</tt><br>
+<tt>$ cat foo.c.gcov</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>-: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>0:Source:foo.c</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>-: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>0:Graph:foo.gcno</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>-: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>0:Data:foo.gcda</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>-: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>0:Runs:1</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>-: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>0:Programs:1</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>-: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>1:#include &lt;stdio.h&gt;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>-: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>2:</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>1: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>3:int main() {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>1: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>4: <span class=pc>&nbsp;</span>puts("Hello, world!");</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>1: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>5: <span class=pc>&nbsp;</span>return 0;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>-: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>6:}</tt><br>
+
+<p>
+
+If a line is not run, the <tt>.gcov</tt> file will have something that
+looks like this:
+
+<p>
+
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>#####: <span class=pc>&nbsp;</span>123: <span class=pc>&nbsp;</span>foo = bar;</tt><br>
+
+<p>
+
+<A name=coLunacyDNSs_test_coverage></A><A name=coLunacyDNSstestcoverage></A><span class=moyet>==</span><span class=blogtitle><b>coLunacyDNS’s test coverage</b></span><span class=moyet>==</span>
+
+<p>
+
+As of the MaraDNS 3.5.0015 release, coLunacyDNS has 92.73% test
+coverage.  Some notes:
+
+<p>
+
+<ul>
+<li> I compile coLunacyDNS in a special test mode when running the 
+  coverage tests.
+<li> Certain sanity and security tests which should be in the production
+  code can not be readily run via a test (e.g. code which initializes
+  the random number generator if not initialized, but the C code has
+  already set it up), so I use <tt>#ifdef GCOV</tt> to hide those
+  sanity tests in test mode.
+<li> <tt>#ifdef GCOV</tt> also adds the ability to run some code which
+  can not be easily tested for (e.g. certain kinds of socket errors).
+</ul>
+
+<p>
+
+My goal is to get 100% test coverage, provided I <tt>#ifdef</tt> out
+code which can not be readily tested.
+
+<p>
+
+<A name=Getting_MaraDNS></A><A name=GettingMaraDNS></A><span class=moyet>==</span><span class=blogtitle><b>Getting MaraDNS</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS is available, as always, on its download page:
+
+<p>
+
+<blockquote>
+<A href="https://maradns.samiam.org/download.html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

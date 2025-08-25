@@ -1,0 +1,145 @@
+<!--{TAGS:M}-->
+
+<h1>DNS security comparison</h1>
+
+<h2>March 21, 2012</h2>
+
+<div class=blogtitle>
+<b>DNS security comparison</b>
+</div><br>
+
+I have compared the CVE history of four of the "big five" DNS servers
+out there and published my findings:
+
+<p>
+
+<blockquote>
+<A href=http://www.maradns.org/DNS.security.comparison.txt>http://www.maradns.org/DNS.security.comparison.txt</A>
+</blockquote>
+
+To summarize, MaraDNS was not as secure as I wanted it to be in 2002.
+Attacks against MaraDNS started popping up in 2007 and since then about
+one attack a year significant enough to merit a CVE report is discovered.
+Nothing more dangerous than denial of service has ever been discovered
+[<A href=#1>1</A>]
+
+<p>
+
+Unbound has a really good security history; better than MaraDNS.  This is
+impressive in light of the fact that Unbound does a good deal more than
+MaraDNS; two of the CVE reports are about NSEC3 records, which neither
+MaraDNS nor Deadwood support.
+
+<p>
+
+NSD has a perfect security record (no CVE reports) so far.  
+
+<p>
+
+Deadwood, MaraDNS 2.0's resolver, also has a perfect security record (no
+CVE reports)--but there is at least <A href=20120311.html>one security
+bug</A> in older Deadwood releases which deserves a CVE report.
+
+<p>
+<div class=blogtitle>
+<b>Desperately seeking a DjbDNS maintainer</b>
+</div><br>
+
+In light of <A href=20120314.html>my recent rant on DjbDNS being
+unmaintained</A>, I have been contacting known DjbDNS advocates to see
+if anyone is willing to maintain a fork of DjbDNS.  So far, no one is
+interested, and more than one of these advocates has been downright rude
+with me.
+
+<p>
+
+Note to self: Don't try to find a maintainer for DjbDNS.  Anyone still
+interested in DjbDNS does not appear to be willing to acknowledge and
+take responsibility for its bugs.  It's a shame too, since DjbDNS is
+becoming more and more irrelevant every day it's not actively maintained.
+
+<A name=future> </A>
+<p>
+<div class=blogtitle>
+<b>MaraDNS' future</b>
+</div><br>
+
+In light of DNSSEC and the fact I'm no longer in a position to actively
+develop MaraDNS, I am no longer going to even pretend MaraDNS is secure.
+I still fix security bugs and one should be OK as long as one stays
+current; even if someone doesn't, there is no real chance people
+will be able to break in to a system because it is running MaraDNS.
+
+<p>
+
+I'm pretty sure I have done a better job with Deadwood than with
+MaraDNS 1 with regards to security.  Time will be the judge;
+it took five years after MaraDNS 1.0.00 was released for security
+bugs to start being reported; right now it's been a year and a half
+since Deadwood 3.0.01 came out (the first stable fully recursive
+release).
+
+<p>
+
+As I have said before, I'm really happy with what I have accomplished
+with MaraDNS.  It's my mark on the world; it's my <A href=
+http://en.wikipedia.org/wiki/MaraDNS>Wikipedia page</A> and my
+<A href=http://www.zdnet.com/blog/security/how-opendns-powerdns-and-maradns-remained-unaffected-by-the-dns-cache-poisoning-vulnerability/1562>15 minutes</A>
+<A href=http://www.amazon.com/Alternative-DNS-Servers-Deployment-Back-Ends/dp/0954452992
+>of fame</A>.  I would not have the job I have today if it were 
+not for MaraDNS.
+
+<p>
+
+All things have a beginning and an end.  MaraDNS helped add diversity to
+the DNS server space when <A
+href=http://old.lwn.net/2001/0208/>there were not enough open-source
+DNS servers out there</A>, and it kept my skills relevant while teaching
+English in Mexico.
+
+<p>
+
+Deadwood is what MaraDNS 1 should have been.  It's too bad I never had
+a chance to better merge it with MaraDNS' authoritative half.
+
+<p>
+
+When IPv6 finally really comes along, I might make the relevant updates
+to Deadwood to make sure it works well on an IPv6 network.  I have no
+plans to add DNSSEC support; use Unbound or BIND instead if this is
+needed.
+
+<p>
+
+Deadwood still fills the need for a really tiny DNS server which is
+useful in places where Unbound is too big, such as low-cost routers.
+When that $20 router at Wal*Mart becomes powerful enough to run Unbound
+without breaking a sweat--it's only a matter of time before we get
+there--I'm not really sure what niche Deadwood or MaraDNS will fill.
+
+<p>
+
+It doesn't really matter.  By the time that happens, I should be too
+busy raising kids and bringing the bacon home to worry about whether
+anyone still uses MaraDNS or Deadwood any more.
+
+<p>
+<div class=blogtitle>
+<b>Footnote</b>
+</div><br>
+
+<A name=1> </A>
+[1] I understand that CVE-2011-0520 is a buffer overflow.  However, the
+    impact is denial of service since an attacker could not control the 
+    contents of the overflown buffer.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

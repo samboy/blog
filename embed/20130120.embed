@@ -1,0 +1,56 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS update</h1>
+
+<h2>January 20, 2013</h2>
+
+<div class=blogtitle>
+<b>MaraDNS update</b>
+</div><br>
+
+I have released MaraDNS 2.0.07.  This release updates Deadwood to 3.2.03
+and MaraDNS to run in any RedHat Enterprise Linux 6 clone.  The supported
+OSes for MaraDNS are now any RHEL6 clone and Windows 7.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/2.0.07/>http://www.maradns.org/download/2.0/2.0.07/</A>
+</blockquote>
+
+<p>
+<div class=blogtitle>
+<b>BuyVM is moving to Vegas</b>
+</div><br>
+
+One of my providers, BuyVM, is moving its servers to Vegas right now.  
+Because of this, I will not be able to update this node until it is
+online again.  There is a small chance that people going to the MaraDNS
+web page will only see the outdated 2.0.06 download between the time
+the node goes online again and I update said node.
+
+<p>
+
+I understand BuyVM wants to get better download speeds from Fiberhub, but
+the move is a little annoying for me because I already have an AlienVPS
+node in Fiberhub.  The issue is that entire colos can and do go down:
+The New York colo with one of my nodes went down when Hurricane Sandy
+hit the east coast.  
+
+<p>
+
+<i>Evening update: The BuyVM node is back up again and all files have been 
+synchronized</i>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

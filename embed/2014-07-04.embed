@@ -1,0 +1,314 @@
+<div class=blogpic>
+<img src=pics/Sam-with-Citlalli-blog.jpg width=120 height=120>
+</div>
+
+<h1>Bitstream Charter and more</h1>
+<h2>July 4, 2014</h2>
+In today’s blog, I discuss the typeface update for my web site, the band 
+Orchestral Manoeuvres in the Dark (OMD),
+and post a rant about Google’s long-dead (and rightly so) SideWiki service.
+But first...
+
+<p>
+
+<A name=Happy_Independence_Day></A><A name=HappyIndependenceDay></A><span class=moyet>==</span><span class=blogtitle><b>Happy Independence Day!</b></span><span class=moyet>==</span>
+
+<p>
+
+I would like to wish my fellow Americans a happy Independence Day as we
+celebrate my nation’s 238<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px">th</sup> anniversary.  My prayers are with
+those suffering the effects of Hurricane Andrew, but I hope everyone has
+a safe enjoyable day today.  Drinking and enjoying today’s festivities
+is OK, but remember: <i>Do not drink and drive</i>.  One’s freedom to
+drink ends when risking innocent people’s lives.
+
+<p>
+
+<A name=The_typeface_facelift></A><A name=Thetypefacefacelift></A><span class=moyet>==</span><span class=blogtitle><b>The typeface facelift</b></span><span class=moyet>==</span>
+
+<p>
+
+I have just praised Bitstream Charter in
+<a href="http://samiam.org/blog/2014-06-21.html">my last blog entry</a>, and now
+that it is the font I use for body text on my web page, let me praise it 
+again.
+
+<p>
+
+Anyone with even a cursory knowledge of typefaces knows about Georgia,
+a beautiful serif font that is installed on nearly every computer (not
+to mention iPhone) on the planet and is one of the most widely read
+fonts in the world.  Georgia, of course, was made by Matthew Carter.
+
+<p>
+
+Not as well known as Georgia is Bitstream Charter, a typeface Carter made
+back in 1987.  Matthew Carter is a font designer whose genius shines the
+most when he is faced with a unique challenge.  The challenges Carter faced 
+when making Bitstream Charter was to make a font that looked good on the
+then-300dpi laser printers of that era, and to make a serif font with a 
+<a href="http://www.myfonts.com/newsletters/cc/201310.html">very small file size</a> that
+could fit in the very limited space of the rendering engine Carter was
+using at the time; while the limited size issue Carter designed Charter
+to work around was solved by the time Carter finished the design, the
+font is still one of the most compact fonts out there: My WOFF conversion
+of Charter, in two font faces (Roman and 
+<i>italic</i>), takes up only 33,244 bytes of space.
+
+<p>
+
+While older than Georgia, Bitstream Charter looks more modern and
+fresh to my eyes.  Its serifs are more angular and crisp; I prefer its
+tabular lining numbers over the old-style numbers Robert Norton hoisted
+upon Georgia at the last minute.  Since Charter was a font made for the
+printer instead of the extremely limited resolution screens of the 1990s,
+its italic is a true italic, lighter and more compact than the non-italic
+“Roman” form, and with flourishes such as a very stylized
+<i>z</i> that Georgia does not have.
+
+<p>
+
+While Carter claims he doesn’t have a style to his font design, to
+my eyes Georgia and Charter have a similar feel to them.  They have
+the very same X-height, the “Q”s are very similar, and the metrics
+are almost the same in the non-italic form.
+
+<p>
+
+Web font rendering technology in the mid-2010s has finally caught
+up to the point it can render a font made for a 1987 laser printer.
+I only felt the need to reduce the size of the serifs in the “E” and
+“F” with the Roman font (as well as raising where the underline is
+placed) to make it a screen font for today’s web pages — as well as
+remaining a beautiful font when printed out.
+
+<p>
+
+Since Bitstream very generously
+<a href="https://groups.google.com/forum/#!original/comp.archives/hvSuh44FulU/ej4qJK_Sq7UJ">donated the four basic forms of Bitstream Charter</a> to the X Consortium back in
+1992 under very liberal licensing terms, it can be legally downloaded,
+modified, and used for free.  Professional graphic designers, of course,
+are better off using one of the commercial versions of Charter:
+
+<p>
+
+<blockquote>
+<A href="http://www.myfonts.com/fonts/bitstream/charter-bt-pro/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>myfonts.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>bitstream/<![if gt IE 6]>&#8203;<![endif]><wbr>charter-<![if gt IE 6]>&#8203;<![endif]><wbr>bt-<![if gt IE 6]>&#8203;<![endif]><wbr>pro/</A>
+</blockquote>
+
+<blockquote>
+<A href="http://www.myfonts.com/fonts/linotype/itc-charter/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>myfonts.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>linotype/<![if gt IE 6]>&#8203;<![endif]><wbr>itc-<![if gt IE 6]>&#8203;<![endif]><wbr>charter/</A>
+</blockquote>
+
+<blockquote>
+<A href="http://www.myfonts.com/fonts/itc/charter/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>myfonts.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>itc/<![if gt IE 6]>&#8203;<![endif]><wbr>charter/</A>
+</blockquote>
+
+<blockquote>
+<A href="http://www.fonts.com/font/paratype/itc-charter-multilingual">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>fonts.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>font/<![if gt IE 6]>&#8203;<![endif]><wbr>paratype/<![if gt IE 6]>&#8203;<![endif]><wbr>itc-<![if gt IE 6]>&#8203;<![endif]><wbr>charter-<![if gt IE 6]>&#8203;<![endif]><wbr>multilingual</A>
+</blockquote>
+
+Charter has been used in a number of places.  My older Shirt Pocket
+New Testaments from the International Bible Society are typeset in
+Bitstream Charter; they are the most readable small Bibles I have used.
+There is a greatly expanded Charter variant that is also free, Charis:
+
+<p>
+
+<blockquote>
+<A href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=charissilfont">http://<![if gt IE 6]>&#8203;<![endif]><wbr>scripts.<![if gt IE 6]>&#8203;<![endif]><wbr>sil.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>cms/<![if gt IE 6]>&#8203;<![endif]><wbr>scripts/<![if gt IE 6]>&#8203;<![endif]><wbr>page.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>site_<![if gt IE 6]>&#8203;<![endif]><wbr>id=<![if gt IE 6]>&#8203;<![endif]><wbr>nrsi&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>id=<![if gt IE 6]>&#8203;<![endif]><wbr>charissilfont</A>
+</blockquote>
+
+When I lived in México, I printed my English lessons in a Charis variant
+which my students loved.
+
+<p>
+
+Bitstream Charter is what you get when the same font designer who gave
+us Georgia is asked to make a more modern-looking serif font that 
+renders well with today’s font hinting technologies, that fits in as
+little space as possible (to minimize web page load time), that
+has a more traditional italic form than Georgia’s pseudo-oblique italics,
+and is a fully free font with a generous open-source license.
+
+<p>
+
+I understand why Matthew Butterick feels that
+<a href="http://practicaltypography.com/charter.html">Bitstream Charter is one of the very best free fonts out there</a>.
+
+<p>
+
+For people who are interested in variants of the Free version of Charter,
+I have a number of downloads here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/Charter/">http://samiam.org/fonts/Charter/</A>
+</blockquote>
+
+<A name=Why_I_changed_the_typeface></A><A name=WhyIchangedthetypeface></A><span class=moyet>==</span><span class=blogtitle><b>Why I changed the typeface</b></span><span class=moyet>==</span>
+
+<p>
+
+Since I mentioned I was waiting for Windows XP holdouts to upgrade
+in my 
+<a href="http://samiam.org/blog/2014-06-21.html">last blog entry</a>, I should
+explain why I changed my mind.  When I looked at my server logs, under
+2% of visitors to my site in 2014 have used the only browser (Chrome
+in Windows XP) that might not be able to effectively render a modern
+web font.  Chrome users who haven’t enabled Clear Type are free to
+read this site in another browser, or turn on Clear Type in their system.
+
+<p>
+
+I am not going to hold back the design of this webpage from using the
+latest technology of the mid-2010s on account of 
+<i>at most</i> 2% of my visitors.  
+
+<p>
+
+<A name=Why_SideWiki_sucked></A><A name=WhySideWikisucked></A><span class=moyet>==</span><span class=blogtitle><b>Why SideWiki sucked</b></span><span class=moyet>==</span>
+
+<p>
+
+Google’s now-dead SideWiki was an attempt by Google to put
+their own content on every single page on the Internet.  SideWiki
+was a browser extension that added, to the left of every web
+page, a section where anyone on the Internet could comment on
+the web page or anything else; the comments were visible to anyone
+else on the internet who visited that web page and had SideWiki
+installed.
+
+<p>
+
+Google introduced it in the fall of 2009.  It, thankfully, did not last
+very long.  In under two years, Google already announced its termination;
+it was removed (including having all comments deleted) before the end
+of 2011.
+
+<p>
+
+SideWiki was not the first attempt to add a place for comments on every
+single web page.  There has also been, over the years, Third Voice,
+Diigo, Fleck, ShiftSpace, Stickis, and Trailfire, to name just a few.
+Like SideWiki, all of them are either out of business or no longer actively
+marketing web annotations.
+
+<p>
+
+What Google did was more menacing.  They made SideWiki part of
+their popular toolbar; they leveraged the userbase of another unrelated
+product to hoist SideWiki upon web pages. People who didn't know what
+SideWiki was were suddenly under the impression that webpages now had
+a comment bar on the left hand side.
+
+<p>
+
+They never even implemented a way for webmasters to opt out of it,
+despite repeated requests for them to do so.
+
+<p>
+
+SideWiki was a haven for spammers, trolls, crackpots and pretty much
+no one else. Here is some of the documented abuse SideWiki was forcing
+webmasters to put up with:
+
+<p>
+
+<blockquote>
+<A href="https://archive.is/7BN3Z">http://<![if gt IE 6]>&#8203;<![endif]><wbr>marketersboard.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>google-<![if gt IE 6]>&#8203;<![endif]><wbr>sidewiki-<![if gt IE 6]>&#8203;<![endif]><wbr>controversy/</A>
+</blockquote>
+
+Also, here is Jeff Jarvis’ well articulated criticism of SideWiki:
+
+<p>
+
+<blockquote>
+<A href="http://buzzmachine.com/2009/09/23/google-sidewiki-danger/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>buzzmachine.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2009/<![if gt IE 6]>&#8203;<![endif]><wbr>09/<![if gt IE 6]>&#8203;<![endif]><wbr>23/<![if gt IE 6]>&#8203;<![endif]><wbr>google-<![if gt IE 6]>&#8203;<![endif]><wbr>sidewiki-<![if gt IE 6]>&#8203;<![endif]><wbr>danger/</A>
+</blockquote>
+
+Remember: Freedom of speech does not guarantee one a printing press —
+or, in the case of SideWiki, the ability to vandalize other people’s
+printing presses.  Based on the precedence in the related
+<i>Washingtonpost.newsweek Interactive Company, LLC, et al. v. The Gator Corporation</i>
+case, I think there would have been legal sanctions imposed against
+Google for SideWiki (such as enjoining them to allow web sites to opt
+out via a special HTTP header) had it actually caught on.
+
+<p>
+
+<A name=A_SideWiki_alternative></A><A name=ASideWikialternative></A><span class=moyet>==</span><span class=blogtitle><b>A SideWiki alternative</b></span><span class=moyet>==</span>
+
+<p>
+
+One of the few good features SideWiki offered was the ability to warn
+people about online scams.  This feature, however, is better served
+with the 
+<a href="http://www.mywot.com">Web of Trust</a> browser plugin.
+Web of Trust rates sites for whether they can be trusted and
+whether they are safe for children.
+
+<p>
+
+Web of Trust is available for all major browsers, and, unlike SideWiki,
+does not attract trolls and crackpots, nor does it pretend to be part
+of the website the way SideWiki did.
+
+<p>
+
+<A name=Orchestral_Manoeuvres_in_the_Dark></A><A name=OrchestralManoeuvresintheDark></A><span class=moyet>==</span><span class=blogtitle><b>Orchestral Manoeuvres in the Dark</b></span><span class=moyet>==</span>
+
+<p>
+
+I have always been a fan of Orchestral Maneuvers in the Dark (OMD), especially
+their more peppy music (“Enola Gay”, “Locomotion”, “Tesla Girls”, “So in
+Love”, and their biggest US hit, “If You Leave”), and even once had their
+album “Crush” on vinyl. 
+
+<p>
+
+Then again, I never cared for “Joan of Arc” (too brooding for my tastes).
+
+<p>
+
+The Mexican Radio my wife and I listen to has “Enola Gay”, “Secret” (which
+didn't even break top 40 in the US — strange how “So In Love” from the same
+album is forgotten there and this song which was only an album track here
+ended up being a big hit there), and “If You Leave” in heavy rotation every
+weekend when they play oldies.
+
+<p>
+
+Some trivia: OMD’s lead singer Andy McCluskey formed the British girl band
+Atomic Kitten and co-wrote their only original #1 song “Whole Again”. This is
+the only #1 hit penned by an OMD member — and they needed the Tesla Girls to
+sing it for them to hit that spot.
+
+<p>
+
+They recently reformed and are coming out with new albums. Here’s a really
+good NYT piece on them from last year:
+
+<p>
+
+<blockquote>
+<A href="http://www.nytimes.com/2013/05/12/magazine/omds-plot-against-rock.html?pagewanted=all&amp;_r=1&amp;">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>nytimes.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>05/<![if gt IE 6]>&#8203;<![endif]><wbr>12/<![if gt IE 6]>&#8203;<![endif]><wbr>magazine/<![if gt IE 6]>&#8203;<![endif]><wbr>omds-<![if gt IE 6]>&#8203;<![endif]><wbr>plot-<![if gt IE 6]>&#8203;<![endif]><wbr>against-<![if gt IE 6]>&#8203;<![endif]><wbr>rock.<![if gt IE 6]>&#8203;<![endif]><wbr>html?<![if gt IE 6]>&#8203;<![endif]><wbr>pagewanted=<![if gt IE 6]>&#8203;<![endif]><wbr>all&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;_<![if gt IE 6]>&#8203;<![endif]><wbr>r=<![if gt IE 6]>&#8203;<![endif]><wbr>1&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;</A>
+</blockquote>
+
+<p>
+
+<i>2016 edit: Fixing link rot with archive.is</i><p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,48 @@
+<!--{TAGS:L,M}-->
+<h1>Deadwood now installs</h1>
+
+<h2>February 17, 2011</h2>
+
+Last December, Mike Sands <A 
+href=http://woodlane.webconquest.com/pipermail/list/2010-December/000717.html>pointed
+out that the Deadwood install is not complete</A> when MaraDNS 2.0 is 
+installed with "make install" (while Deadwood was installed in 
+/usr/local/sbin/, the Deadwood man pages, default configuration, and
+system startup scripts were not installed).  I have updated the install
+scripts to fully install Deadwood (binary, man pages, config file, and
+startup script) when one types in "make install" in MaraDNS 2.0.
+
+<p>
+
+Note that the default dwood3rc file for Deadwood will not work on systems
+without a working 127.0.0.2 loopback IP (I believe some BSD systems do not
+have 127.0.0.2 for loopback); this IP is used so that 
+"make install" gives a user on CentOS 5.5 (and possibly other versions of
+Linux) a working MaraDNS and Deadwood configuration that works "out of the
+box" (MaraDNS listens on 127.0.0.1; Deadwood listens on 127.0.0.2).
+
+<p>
+
+I tested this configuration by setting up a special virtual machine to make
+sure "make install" does the right thing on a CentOS 5.5 system that never
+installed MaraDNS before.  In addition, I have updated "make uninstall" to
+fully uninstall "maradns.zoneserver" (as well as Deadwood).
+
+<p>
+
+The updated MaraDNS can be downloaded here:
+
+<blockquote>
+<a 
+href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</a>
+</blockquote>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,109 @@
+<!--{TAGS:L}-->
+<h1>A brief look at systemd</h1>
+
+<h2>January 21, 2013</h2>
+
+In today's blog, I look at systemd, the program that will replace init in
+Red Hat and CentOS 7, from the point of view of a software developer.
+
+<p>
+<div class=blogtitle>
+<b>The problem</b>
+</div><br>
+
+UNIX's traditional way of starting daemons -- usually called "System V init"
+-- is something of a hack.  SysVinit simply calls a bunch of shell scripts
+at system boot up time to start all of the processes.
+
+<p>
+
+This leaves process management to each program.  MaraDNS, for example, has
+three different 100-line shell scripts to manage the starting and stopping
+of MaraDNS processes, and a nearly 300-line C program (duende) which handles
+making MaraDNS a UNIX daemon ("service" in Windows' parlance) and logging
+MaraDNS' messages.
+
+<p>
+
+Much to Nicholas Bamber's annoyance, the way daemons are managed on 
+Red Hat/CentOS 6 (the system I develop MaraDNS on) is somewhat different
+than the way Debian (the system Nicholas ports MaraDNS to) handles 
+processes, which makes the port more difficult than it should be.
+
+<p>
+
+SysVInit has other annoyances.  For example, a single daemon that, for
+whatever reason, takes a while to start up will slow down the boot process for
+the entire system.  Sendmail is notorious for sometimes taking minutes
+to start up; it's a very frustrating experience watching a system boot 
+stall until Sendmail is finally running.
+
+<p>
+<div class=blogtitle>
+<b>Some old solutions</b>
+</div><br>
+
+Software developers have been coming up with different ways to move beyond
+the limitations of SysVInit.  DJB developed daemontools, Python developers
+developed supervisord, I developed duende, and so on.  
+
+<p>
+
+Pretty soon, a UNIX server can be running a number of different
+"daemonizing" programs that all do more or less the same thing: Starting,
+stopping, restarting, and logging processes.
+
+<p>
+
+This kind of fragmentation is a headache for system administrators, who
+now have to learn multiple ways of handling processes on their system.
+It also means that each "home grown" solution will not be as well-developed
+as a single unified solution.  Duende, for example, only respawns a 
+terminated process under certain circumstances which are hard-wired in
+its C source code.
+
+<p>
+<div class=blogtitle>
+<b>systemd</b>
+</div><br>
+
+This brings us to systemd.  Systemd is a single unified daemon which 
+replaces init on new Linux systems.  It will allow me to replace 3
+100-line shell scripts and a 300-line "daemonizing" program (which spawns
+three processes per daemon) with a single configuration file about
+a dozen lines long.  
+
+<p>
+
+It replaces a menagerie of different daemonizers with a single clean, 
+elegant, centrally maintained init replacement.  It will make it easier
+for me to maintain MaraDNS, because I will be able to concentrate on the
+central daemon that processes DNS queries instead of worrying about how
+its daemonization is handled in a given Linux distribution.
+
+<p>
+
+Systemd is a much-needed step forward for Linux servers.  I am glad Red 
+Hat is making this transition.
+
+<A name=ipv6> </A>
+<p>
+<div class=blogtitle>
+<b>IPv6 update</b>
+</div><br>
+
+While my BuyVM node is now happily in Nevada, IPv6 doesn't route on this
+node yet.  My web pages are currently only accessible on IPv4.  I will
+keep readers updated. <i>Update: <A href=20130124.html>IPv6 is good</A></i>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

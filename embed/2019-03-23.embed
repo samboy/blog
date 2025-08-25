@@ -1,0 +1,110 @@
+<!--{TAGS:M,P}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>March 2019 round up</h1>
+<h2>March 23, 2009</h2>
+In this blog, I discuss DNS security and my open source work this month (both
+with MaraDNS and with my Prosperity 7 Puzzles).
+
+<p>
+
+<A name=DNS_security_thoughts></A><A name=DNSsecuritythoughts></A><span class=moyet>==</span><span class=blogtitle><b>DNS security thoughts</b></span><span class=moyet>==</span>
+
+<p>
+
+There have been a few high-profile attacks which have been somewhat incorrectly called “DNS” attacks.  The problem is not with DNS; the problem is with how some organizations handle their DNS.
+
+<p>
+
+The majority of attacks are 
+<i>not</i> a weakness with DNS 
+<i>per se</i>
+as much as they are an attack against whatever web control panel controls DNS records. For institutions that still know how to edit a zone file [1] by hand, and who run their DNS from their own well protected servers (ideally, only port 53—that’s the DNS port—visible to the internet, and only port 22—that’s the SSH port—available behind the firewall), this is not a problem.
+
+<p>
+
+As long as companies do not use GoDaddy or some other web control panel to manage their DNS, they should be fine.
+
+<p>
+
+Now, in terms of the DNS server to use, if security is important, I would use either Knot DNS or NlLab’s NSD server.[2] They both support DNSsec and they both have good security histories.[3] While the majority of these “DNS” attacks would not had been helped by DNSsec, it does protect against the unusual case of a rogue router rewriting DNS answers for people not using HTTPS to connect to a web page.[4]
+
+<p>
+
+If a big institution has to use a web control panel for DNS record handling, please use non-SMS two factor authentication.[5]
+
+<p>
+
+<i>Footnotes</i>
+
+<p>
+
+[1] “zone file” is the file used by DNS servers to determine which IPs are associated with names. Here’s how one looks when using my particular DNS server: <A href="https://github.com/samboy/MaraDNS/issues/55">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>issues/<![if gt IE 6]>&#8203;<![endif]><wbr>55</A> )
+
+<p>
+
+[2] Note that I did not list my own MaraDNS here; MaraDNS does not have DNSsec.  Nor does DjbDNS, although there are 
+<a href="https://www.tinydnssec.org/install.html">patches which add DNSsec support</a>.  Personally, instead of using patches from multiple third parties, it makes more sense to just use a DNS server with built-in DNSsec support.
+
+<p>
+
+[3] There is not a single DNS server out there without at least one security hole which has needed to be patched, but these two do not require constant updates.
+
+<p>
+
+[4] HTTPS, which the majority of internet traffic uses, has the same protections which DNSsec offers.
+
+<p>
+
+[5] SMS based two-factor authentication can be defeated with forged documents and a visit to one’s cell phone provider.
+
+<p>
+
+<A name=My_open_source_work_this_month></A><A name=Myopensourceworkthismonth></A><span class=moyet>==</span><span class=blogtitle><b>My open source work this month</b></span><span class=moyet>==</span>
+
+<p>
+
+I have made an update to MaraDNS’s documentation based on a 
+<a href="https://github.com/samboy/MaraDNS/issues/55">support request</a> which I couldn’t answer with a simple “RTFM; here’s the relevant documentation”.  
+
+<p>
+
+I am also updating how I number MaraDNS.  Back in the 1990s, software 
+companies would update the version number of their program to look as
+mature and stable as competitors.  Microsoft Word for Windows jumped from
+version 2.0 to version 6.0; Slackware Linux 
+<a href="http://www.slackware.com/faq/do_faq.php?faq=general#0">jumped from version 4 to version 7</a>.  
+
+<p>
+
+This is not why I am jumping MaraDNS’s version number.  MaraDNS has
+two components, MaraDNS and Deadwood, with different version numbers.
+MaraDNS is currently at 2.0.17; Deadwood is at 3.3.02.  I will make the
+next MaraDNS 3.3.03 so that both MaraDNS and Deadwood have the same version
+number.
+
+<p>
+
+In addition to MaraDNS, I have gone back to my 
+<a href="https://samiam.org/blog/P.html">Prosperity 7 Puzzles</a> which I have not looked at since 2011.  I have taken 
+the code I used to make these puzzles (both the original 2007 GPL Java 
+applet and my HTML and CSS to display the puzzle on a web page) and updated 
+it to include scripts for automatically generating puzzles (requiring me to 
+modify the old 2007 Java to be able to run in batch mode) and making PDFs 
+from those generated puzzles.  The code is available on 
+<a href="https://github.com/samboy/Sudoku7">GitHub</a> as well
+as 
+<a href="https://samiam.org/software/Sudoku7-2019-03-28.tar.xz">locally</a>.
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

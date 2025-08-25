@@ -1,0 +1,48 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS: All looks good</h1>
+<h2>August 20, 2013</h2>
+I have been using MaraDNS-2.0.07c (Deadwood 3.2.03c) for a month now
+and it is working really nicely; I haven't found a single DNS name out
+there which this release can’t solve after a month of “dogfood”
+testing.
+
+<p>
+
+My plan is to make MaraDNS-2.0.07c the stable release in another month
+if I continue to not encounter problems.  I encourage users to use this
+release and report on the mailing list any DNS names which resolve with
+another DNS server but not with Deadwood 3.2.03c.
+
+<p>
+
+Downloads:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.org/download/2.0/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<blockquote>
+<A href="http://maradns.org/deadwood/snap/">http://maradns.org/deadwood/snap/</A>
+</blockquote>
+
+
+<p>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

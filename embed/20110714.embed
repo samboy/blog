@@ -1,0 +1,25 @@
+<h1>Deadwood bug</h1>
+
+<h2>July 14, 2011</h2>
+
+I have discovered a bug blocking the 3.0.03 release of Deadwood:
+<tt>answers.yahoo.com</tt> does not correctly resolve in Deadwood.  I
+have a pretty good idea what's wrong--this looks to be not too different
+from the <tt>urbandictionary.com</tt> problem Deadwood had a few months
+ago, and hopefully fixing it will be a small patch.
+
+<p>
+
+I will look at this issue on July 22, 2011, my next scheduled day for
+working on MaraDNS/Deadwood.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

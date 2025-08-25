@@ -1,0 +1,72 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS updates</h1>
+<h2>April 27, 2020</h2>
+I am going over some recent MaraDNS releases in this blog.
+
+<p>
+
+<A name=MaraDNS_350002></A><A name=MaraDNS350002></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0002</b></span><span class=moyet>==</span>
+
+<p>
+
+In this release, I finally added a feature someone wanted a number of
+years ago: The Windows port of MaraDNS no longer needs a “secret.txt”
+file to start up.  Instead, the Windows service directly calls
+“CryptGenRandom()” to get entropy.  This makes the Windows port
+of Deadwood easier to install and use.
+
+<p>
+
+This release was made on February 3, 2020.
+
+<p>
+
+<A name=MaraDNS_350003></A><A name=MaraDNS350003></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0003</b></span><span class=moyet>==</span>
+
+<p>
+
+In this release, I added support for large blacklists (up to 500,000
+entries).  While I went to some effort to reduce memory usage of 
+large blacklists, in order to keep the code simple and fast, each 
+black list entry takes about a kilobyte of memory.  Typical “Pi
+Hole” anti spam blacklists have about 60,000 entries, so we need
+about 60 megabytes of memory to run a blacklist of this size.
+
+<p>
+
+I personally find the black lists useful for keeping me away from
+“time sink” websites like Twitter.
+
+<p>
+
+This release was made on April 16, 2020.
+
+<p>
+
+<A name=MaraDNS_350004></A><A name=MaraDNS350004></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0004</b></span><span class=moyet>==</span>
+
+<p>
+
+In this release, I made MaraDNS easier to use by no longer forcing
+the use to change the value of “maximum_cache_elements”, and have made
+some progress updating the documentation.
+
+<p>
+
+This release was made on April 18, 2020.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

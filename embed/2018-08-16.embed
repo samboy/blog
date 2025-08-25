@@ -1,0 +1,61 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>MaraDNS 2.0.16 released</h1>
+<h2>August 16, 2018</h2>
+I have released MaraDNS 2.0.16.  This is a very minor security update.
+
+<p>
+
+<A name=The_issue></A><A name=Theissue></A><span class=moyet>==</span><span class=blogtitle><b>The issue</b></span><span class=moyet>==</span>
+
+<p>
+
+Security fix: There was a theoretical issue with the cryptographic
+code in Deadwood, where a standards-compliant compiler might not
+generate correct secure random numbers (used for the query ID and 
+query source port).  I can not find a compiler which actually
+generates insecure code (I tested against gcc 3.2.3, gcc 4.8.5, gcc 
+7.3.0, clang 3.4.2, and clang 5.0.1), but in the interest of caution, 
+I am making a security update, and have added tests to make sure this 
+bug does not manifest itself when run against multiple compilers and 
+compile flags (it's only an issue with -O2 and -O3 in clang using a 
+different implementation of RadioGatún[32]).
+
+<p>
+
+<A name=Getting_the_update></A><A name=Gettingtheupdate></A><span class=moyet>==</span><span class=blogtitle><b>Getting the update</b></span><span class=moyet>==</span>
+
+<p>
+
+Lots of places to get the update:
+
+<p>
+
+<ul>
+<li> <A href="https://maradns.samiam.org/download.html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="https://github.com/samboy/MaraDNS">https://github.com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/MaraDNS</A>
+<li> <A href="https://sourceforge.net/projects/maradns/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/</A>
+</ul>
+
+<p>
+
+
+<p>
+
+
+<p>
+
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

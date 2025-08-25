@@ -1,0 +1,100 @@
+<!--{TAGS:L}-->
+
+<h1>TinyVZ security update</h1>
+
+<h2>August 23, 2011</h2>
+
+A discussion with Solar Designer (yes, <i>that</i> Solar Designer) on 
+the <A href=http://openvz.org/pipermail/users/2011-August/thread.html>OpenVZ mailing list</A> has inspired me to 
+check all of the software in TinyVZ against the CVE database of security
+vulnerabilities.  I discovered one issue that needed patching:
+CVE-2010-0001, which affects the gzip Busybox applet in TinyVZ.
+
+<p>
+
+That in mind, I have released TinyVZ 0.7.02 with this issue fixed.
+
+<p>
+
+The only unpaid support I supply for TinyVZ at this time is to fix
+security problems with a CVE vulnerability number that affect compiled
+programs outside of the <tt>/build</tt> tree. CVE 2010-0001 has been patched;
+other CVE issues have not been patched because they do not appear to
+be serious security issues that affect TinyVZ. Details are in the file
+<tt>build/CVE</tt> inside of the container.
+
+<p>
+
+After patching TinyVZ to fix this security issue, and making the TinyVZ
+0.7.02 tarball, I discovered a bug in the script 
+<tt>/sbin/add_ip.sh</tt> (inside of the
+container) causing the same IP to be added multiple times to 
+<tt>/etc/iplist</tt>.  This bug is not serious enough to merit a new 
+release of TinyVZ; people who wish to not have this bug can use the following
+revised <tt>add_ip.sh</tt> file (changes to fix bug are in bold):
+
+<pre>
+#!/bin/sh
+
+# Copyright 2011 Sam Trenholme.
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+# POSIX-compatible script for adding an IP to the TinyVZ container
+
+for ip in $IP_ADDR ; do
+<b>	if ! grep $ip /etc/iplist &gt; /dev/null ; then</b>
+		echo IPLIST=\$IPLIST\" $ip\" &gt;&gt; /etc/iplist
+<b>	fi</b>
+done
+
+# Reset all IPs
+ifconfig venet0 down
+
+. /etc/iplist
+
+NUMBER=0
+for IP in $IPLIST ; do
+	if [ $NUMBER -gt 0 ] ; then
+		ifconfig venet0:$NUMBER $IP
+	else
+		ifconfig venet0 $IP
+	fi
+	NUMBER=$( expr $NUMBER + 1 )
+done
+</pre>
+
+TinyVZ can be downloaded here:
+
+<blockquote>
+<A href=http://samiam.org/TinyVZ/>http://samiam.org/TinyVZ</A>
+</blockquote>
+
+<p>
+
+As an aside, Solar Designer has his own highly secure Linux
+distribution called <A href=http://openwall.com/>Openwall</A> which is
+worth checking out; it has an <A href=http://mirrors.kernel.org/openwall/Owl/current/vztemplate/>OpenVZ template</A>
+and <A href=http://openwall.info/wiki/Owl/upgrade>can be updated</A>.
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

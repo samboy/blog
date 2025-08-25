@@ -1,0 +1,132 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/VoteHere.jpg width=224 height=126>
+</div>
+
+<h1>The midterms</h1>
+<h2>November 18, 2022</h2>
+This blog is about the midterms.  I also have made a new MaraDNS release.
+
+<p>
+
+<A name=The_midterms_2010_versus_2022></A><A name=Themidterms2010versus2022></A><span class=moyet>==</span><span class=blogtitle><b>The midterms: 2010 versus 2022</b></span><span class=moyet>==</span>
+
+<p>
+
+The Republicans got their butts kicked in the 2022 midterms.
+What happened?
+
+<p>
+
+The closest midterm to compare 2022 to is 2010.  Back in 2010, we
+had a Democratic president, a Democratic senate, and a Democratic house.
+We also had a weak economy.
+
+<p>
+
+It was a very red bloodbath: Republicans gained 63 seats in the house,
+and six seats in the senate.  They retained control of one or more
+legislative house throughout the 2010s.
+
+<p>
+
+Compare this to 2022: We have a Democratic president.  A Democratic
+senate.  A Democratic house.  And a weak economy.  Based on just the
+fundamentals, the Democrats should had lost both legislative houses.
+
+<p>
+
+That didn’t happen.
+
+<p>
+
+While votes are still being counted, it looks like the Republicans will
+have only a very small majority in the house.
+
+<p>
+
+Democrats are most likely going to <i>gain</i> a seat in the senate
+when all is said and done.
+
+<p>
+
+<A name=What_happened></A><A name=Whathappened></A><span class=moyet>==</span><span class=blogtitle><b>What happened?</b></span><span class=moyet>==</span>
+
+<p>
+
+While there are a lot of factors which affects how people will vote,
+If I had to pin the results down to one issue, it would be
+<a href="2022-06-25.html">abortion</a>.
+
+<p>
+
+In 2018 we had the blue wave giving the house back to the Democrats.
+The main issue which persuaded people was <a href="2014-08-07.html">healthcare</a>.
+At the time, Republicans got very close to taking away healthcare from
+millions of Americans.  It was only the now-deceased John McCain who
+saved the Affordable Care Act (ACA).
+
+<p>
+
+Republicans learned their lesson in 2018.  They very quickly stopped
+talking about “repealing Obamacare” (their then-name for the ACA)
+once the 2018 results showed it didn’t resonate with voters.
+
+<p>
+
+I am not seeing the same kind of self-reflection the Republican party
+had after their 2018 defeat here in 2022.  This may change come next
+year; we will see.
+
+<p>
+
+Abortion, of course, wasn’t the only issue.  <a href="2022-09-02.html">Republicans
+who did not support democracy</a> almost all lost their elections in this
+midterm.
+
+<p>
+
+<A name=A_MaraDNS_update></A><A name=AMaraDNSupdate></A><span class=moyet>==</span><span class=blogtitle><b>A MaraDNS update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have released <a href="https://maradns.samiam.org/">MaraDNS</a> 3.5.0028 
+this week.  The updates I have been making this month have been, by
+and large, to fix up a small number of 
+<a href="https://en.wikipedia.org/wiki/Year_2038_problem">Y2038</a> issues which 
+were present in the code.  MaraDNS has been Y2038 compliant for a while, 
+but there were a couple of non-critical things which would had broken 
+come Y2038 on systems with a 32-bit <tt>time_t</tt>.
+
+<p>
+
+Full details are over at <a href="https://maradns.samiam.org/Y2038.html">the
+MaraDNS Y2038 statement</a> page.
+
+<p>
+
+<A name=Appendix_Im_moving_to_Mastodon></A><A name=AppendixImmovingtoMastodon></A><span class=moyet>==</span><span class=blogtitle><b>Appendix: I’m moving to Mastodon</b></span><span class=moyet>==</span>
+
+<p>
+
+With Twitter’s future so uncertain, I am moving my social media from
+Twitter to Mastodon.  My new social media URL is:
+
+<p>
+
+<blockquote>
+<A href="https://mstdn.social/@Samboy">https://mstdn.social/@Samboy</A>
+</blockquote>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

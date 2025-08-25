@@ -1,0 +1,499 @@
+<!--{TAGS:L,M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Postfix + Mailman in CentOS 6</h1>
+<h2>March 23, 2014</h2>
+This blog describes how I have configured Postfix to work in CentOS 6 to
+receive email, and how I set up Mailman.  It includes information on
+getting Nginx to display Mailman's web interface.
+
+<p>
+
+<A name=Mail_transport_agent></A><A name=Mailtransportagent></A><span class=moyet>==</span><span class=blogtitle><b>Mail transport agent</b></span><span class=moyet>==</span>
+
+<p>
+
+A mail transport agent (MTA) is a program that sends and receives email.
+
+<p>
+
+There are a number of mail transport agents out there: 
+Smail (last updated 2005), Qmail (last updated
+1998), netqmail (last updated 2005), 
+<a href="http://www.courier-mta.org/">Courier</a> (currently maintained),
+<a href="http://www.exim.org/">Exim</a> (currently maintained),
+Sendmail (CentOS package available), and Postfix (CentOS package
+available).
+
+<p>
+
+I chose Postfix becuase
+
+<p>
+
+<ul>
+<li> It is included with CentOS.  This saves me from the bother of having a 
+  package which I have to track security updates for.
+</ul>
+
+<p>
+
+<ul>
+<li> It is more streamlined than Sendmail, the other MTA included with
+  Postfix
+</ul>
+
+<p>
+
+<A name=Installing_Postfix></A><A name=InstallingPostfix></A><span class=moyet>==</span><span class=blogtitle><b>Installing Postfix</b></span><span class=moyet>==</span>
+
+<p>
+
+As root:
+
+<p>
+
+<tt>yum -y install postfix</tt><br>
+<tt>chkconfig --levels 2345 postfix on</tt><br>
+<tt>service postfix start</tt><br>
+
+<p>
+
+<A name=After_installing_Postfix></A><A name=AfterinstallingPostfix></A><span class=moyet>==</span><span class=blogtitle><b>After installing Postfix</b></span><span class=moyet>==</span>
+
+<p>
+
+After installing Postfix, I edited /etc/postfix/main.cf
+
+<p>
+
+<ul>
+<li> inet_interfaces = server.example.com, localhost
+</ul>
+
+<p>
+
+<ul>
+<li> inet_protocols = ipv4
+</ul>
+
+<p>
+
+<ul>
+<li> mydestination = $myhostname, localhost.$mydomain, localhost, example.com,
+  server.example.com
+</ul>
+
+<p>
+
+<ul>
+<li> recipient_delimiter = - 
+</ul>
+
+<p>
+
+The reason I changed the recipient_delimiter is because a lot of web sites
+out there will 
+<i>not</i>
+accept an email address with a + in it, but have no problem with email
+addresses with a '-'.  
+
+<p>
+
+Change server.example.com in to the name of the machine running the
+Postfix server.
+
+<p>
+
+Note that it is not possible to run a SMTP server on most home internet
+conections without complicated configurations, since ISPs have had to 
+block outgoing SMTP because of spam abuse.
+
+<p>
+
+<A name=Adding_an_alias></A><A name=Addinganalias></A><span class=moyet>==</span><span class=blogtitle><b>Adding an alias</b></span><span class=moyet>==</span>
+
+<p>
+
+An alias is another name for a given email address.  For example, to allow
+mail sent to foo@example.com to be delivered to bar's account, edit
+/etc/aliases, adding the following line:
+
+<p>
+
+<tt>foo: bar</tt><br>
+
+<p>
+
+Next, do this as root:
+
+<p>
+
+<tt>newaliases</tt><br>
+
+<p>
+
+Now, all mail sent to foo@example.com will be forwarded to bar@example.com
+
+<p>
+
+<A name=Adding_an_alias_that_uses_delimiter></A><A name=Addinganaliasthatusesdelimiter></A><span class=moyet>==</span><span class=blogtitle><b>Adding an alias that uses delimiter</b></span><span class=moyet>==</span>
+
+<p>
+
+To add an alias with virtual address support (foo-anything@example.com
+is delivered to foo@example.com), it's necessary to set up a virtual
+host.  Here is what /etc/postfix/virtual looks like:
+
+<p>
+
+<tt>foo@example.com	bar</tt><br>
+
+<p>
+
+Once that is set up, do this as root:
+
+<p>
+
+<tt>postmap /etc/postfix/virtual</tt><br>
+
+<p>
+
+Make sure virtual support is in the main.cf file.  The lines look like
+this:
+
+<p>
+
+<tt>virtual_maps = hash:/etc/postfix/virtual</tt><br>
+<tt>virtual_mailbox_base = /var/mail</tt><br>
+
+<p>
+
+<A name=Dont_be_a_spammer></A><A name=Dontbeaspammer></A><span class=moyet>==</span><span class=blogtitle><b>Don't be a spammer!</b></span><span class=moyet>==</span>
+
+<p>
+
+Now that basic email works, the next step was to install mailman,
+a mailing list manager, in my VPS.
+
+<p>
+
+First of all, before installing mailman, 
+<i>make sure your hosting provider's AUP allows mailing lists</i>.
+Since I use inexpensive $15/year nodes, not all of them allow
+mailing lists. 
+
+<p>
+
+It is best to use an ISP whose AUP explicitly allows mailing list
+software to be run.  For example, while I am very happy with the 
+service I have gotten
+with my node on Crissic, it is 
+<i>not</i> 
+a node for running any kind of
+mailing list.  Even though Crissic's AUP allows me to send 400 emails
+a day (less than the amount of traffic my one list generates), their
+spam filters stopped me from sending any and all email after I sent
+only 136 mails.
+
+<p>
+
+Their support department explained to me that the issue was that Mailman
+sends too many emails at once, which triggers their spam filters.  The
+way to not trigger those filters is to rate limit outgoing email.
+Unfortunately, neither Postfix nor Mailman appear to have a global
+sending rate limit.  While Postfix can rate limit how mach a single email or
+mail server gets email via <tt>destination_concurrency_limit</tt>,
+<tt>destination_rate_delay</tt>, and 
+<tt>extra_recipient_limit</tt>, Postfix needs a third party module like 
+<A href=http://wiki.policyd.org/quotas>Policyd</A> to have a global
+quota.
+
+<p>
+
+BuyVM, on the other hand, allows me to run a mailing list, but
+<a href="https://my.frantech.ca/aup.php#2.2">their AUP requires me to get 
+permission via a support ticket first</a>.  After opening up a ticket
+asking to run my low-traffic mailing list, I almost immediately got a
+reply approving the request (even though I sent the request late Saturday
+night).
+
+<p>
+
+It's 
+<i>very</i> important to make sure anyone and everyone on your mailing
+list has 
+<i>opted in</i> to the mailing list.  This means: They sent an email to
+the mailing list manager which then subscribed them; they gave explicit
+consent to receive email from the list.
+
+<p>
+
+<A name=Installing_mailman></A><A name=Installingmailman></A><span class=moyet>==</span><span class=blogtitle><b>Installing mailman</b></span><span class=moyet>==</span>
+
+<p>
+
+There is one, and only one mailing list package included with CentOS:
+Mailman.  The issue is, since I use Nginx and Postfix, installing
+mailman is somewhat difficult.  Partial instructions are here:
+
+<p>
+
+<blockquote>
+<A href="http://black-pixel.net/mailman-with-postfix-and-nginx-on-centos-6.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>black-<![if gt IE 6]>&#8203;<![endif]><wbr>pixel.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman-<![if gt IE 6]>&#8203;<![endif]><wbr>with-<![if gt IE 6]>&#8203;<![endif]><wbr>postfix-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>nginx-<![if gt IE 6]>&#8203;<![endif]><wbr>on-<![if gt IE 6]>&#8203;<![endif]><wbr>centos-<![if gt IE 6]>&#8203;<![endif]><wbr>6.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+I will recap those instructions, filling in holes as needed.
+
+<p>
+
+<A name=fcgiwrap_for_CentOS_6></A><A name=fcgiwrapforCentOS6></A><span class=moyet>==</span><span class=blogtitle><b>fcgiwrap for CentOS 6</b></span><span class=moyet>==</span>
+
+<p>
+
+That page does not include instructions on giving CentOS 6 fastcgi
+cgi-bin support (fcgiwrap), so I have forked fcgiwrap to port it
+to CentOS 6:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/fcgiwrap">https://github.com/samboy/fcgiwrap</A>
+</blockquote>
+
+To install that package, as root:
+
+<p>
+
+<tt>yum -y install git</tt><br>
+
+<p>
+
+Follow this by, as 
+<i>non</i>-root (user):
+
+<p>
+
+<tt>git clone https://github.com/samboy/fcgiwrap</tt><br>
+
+<p>
+
+Read the README file in the fcgiwrap directory for instructions on
+compiling and installing fcgiwrap in CentOS 6.  Unlike other
+packages, EPEL is
+<i>not</i>
+needed to use fcgiwrap.
+
+<p>
+
+<A name=postfixtomailmanpy_for_CentOS_6></A><A name=postfixtomailmanpyforCentOS6></A><span class=moyet>==</span><span class=blogtitle><b>postfix-to-mailman.py for CentOS 6</b></span><span class=moyet>==</span>
+
+<p>
+
+In addition, here is postfix-to-mailman.py for
+CentOS 6:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/software/postfix-to-mailman-centos.py">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>software/<![if gt IE 6]>&#8203;<![endif]><wbr>postfix-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>mailman-<![if gt IE 6]>&#8203;<![endif]><wbr>centos.<![if gt IE 6]>&#8203;<![endif]><wbr>py</A>
+</blockquote>
+
+But, as it turns out, my particular mailman setup doesn't use it (I
+just edit aliases by hand to add a new mailinst list), so this
+script has not been fully tested, but starts up.
+
+<p>
+
+<A name=Nginx_and_mailman></A><A name=Nginxandmailman></A><span class=moyet>==</span><span class=blogtitle><b>Nginx and mailman</b></span><span class=moyet>==</span>
+
+<p>
+
+Here are the relevant lines from my Nginx configuration:
+
+<p>
+
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700># Mailman mailing list web interface</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>server {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>listen <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>[::]:80;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>listen <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>[::]:443 ssl;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>ssl_certificate /usr/local/nginx/server.crt;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>ssl_certificate_key /usr/local/nginx/server.key;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>server_name <span class=pc>&nbsp;</span>mailman.example.com;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location / {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>root <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>html/;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>index <span class=pc>&nbsp;</span>index.html index.htm index.php;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location ~ \.php$ {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>root <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>html/samiam.org/;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_pass <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>unix:/tmp/php.socket;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_index <span class=pc>&nbsp;</span>index.php;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>include <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_params;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location /mailman/cgi-bin {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>root /usr/lib;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_split_path_info (^/mailman/cgi-bin/[^/]*)(.*)$;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>include /usr/local/nginx/conf/fastcgi_params;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_param PATH_INFO $fastcgi_path_info;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_intercept_errors on;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_pass <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>unix:/var/run/fcgiwrap.socket;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location /icons {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>alias /usr/lib/mailman/icons/;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location /images/mailman {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>alias /usr/lib/mailman/icons/;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location /pipermail {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>alias /var/lib/mailman/archives/public;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>autoindex on;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
+
+<p>
+
+Note two different values for fastcgi_pass.  The PHP scripts are 
+passed to a fastcgi socket started using this code (run as "nobody"):
+
+<p>
+
+<tt><font color=#008700>#!/bin/bash</font></tt><br>
+<tt>if id | grep root &gt; /dev/null ; then</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>echo Do not run this as root</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>exit</tt><br>
+<tt>fi</tt><br>
+<tt>BIND=/tmp/php.socket</tt><br>
+<tt>USER=nobody</tt><br>
+<tt>PHP_CGI=/usr/bin/php-cgi</tt><br>
+<tt>export USER=nobody</tt><br>
+<tt>export PATH=/usr/bin</tt><br>
+<tt>nohup php-cgi -b $BIND &amp;</tt><br>
+
+<p>
+
+The mailman CGI scripts are passed to fcgiwrap; its installation is
+described above.
+
+<p>
+
+<A name=Configuring_Postfix_for_Mailman></A><A name=ConfiguringPostfixforMailman></A><span class=moyet>==</span><span class=blogtitle><b>Configuring Postfix for Mailman</b></span><span class=moyet>==</span>
+
+<p>
+
+Postfix doesn't need a lot of configuration for Mailman, as long as
+new lists are being generated from the command line.
+
+<p>
+
+It's important to edit /usr/lib/mailman/Mailman/Defaults.py to have
+lines that look like this:
+
+<p>
+
+<tt>DEFAULT_EMAIL_HOST = 'mailman.example.com'</tt><br>
+<tt>DEFAULT_URL_HOST = 'mailman.example.com'</tt><br>
+<tt>DEFAULT_URL_PATTERN = 'https://%s/mailman/cgi-bin/'</tt><br>
+
+<p>
+
+And edit /usr/lib/mailman/Mailman/mm_cfg.py to have lines like
+this:
+
+<p>
+
+<tt>DEFAULT_URL_HOST <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>= 'mailman.example.com'</tt><br>
+<tt>DEFAULT_EMAIL_HOST = 'mailman.example.com'</tt><br>
+
+<p>
+
+This should be done 
+<i>before</i>
+making any mailing lists for Mailman.
+
+<p>
+
+<A name=Make_a_new_list_in_Mailman></A><A name=MakeanewlistinMailman></A><span class=moyet>==</span><span class=blogtitle><b>Make a new list in Mailman</b></span><span class=moyet>==</span>
+
+<p>
+
+<tt>cd /usr/lib/mailman/bin</tt><br>
+<tt>su</tt><br>
+<tt>./newlist</tt><br>
+
+<p>
+
+It will ask you the name of the list, the 
+<i>email</i> of the person who runs the list, as well as for an initial
+password.
+
+<p>
+
+Once the list is made, the command will output lines like this:
+
+<p>
+
+<tt><font color=#008700>## foo mailing list </font></tt><br>
+<tt>foo: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman post foo"</tt><br>
+<tt>foo-admin: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman admin foo"</tt><br>
+<tt>foo-bounces: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman bounces foo"</tt><br>
+<tt>foo-confirm: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman confirm foo"</tt><br>
+<tt>foo-join: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman join foo"</tt><br>
+<tt>foo-leave: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman leave foo"</tt><br>
+<tt>foo-owner: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman owner foo"</tt><br>
+<tt>foo-request: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman request foo"</tt><br>
+<tt>foo-subscribe: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman subscribe foo"</tt><br>
+<tt>foo-unsubscribe: <span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman unsubscribe foo"</tt><br>
+
+<p>
+
+These lines need to be added to /etc/aliases.  Once added the
+newaliases command needs to be run.
+
+<p>
+
+Note that mailman will refuse to start up unless a list with the
+name 'mailman' is created.
+
+<p>
+
+<A name=Starting_Postfix_and_Mailman></A><A name=StartingPostfixandMailman></A><span class=moyet>==</span><span class=blogtitle><b>Starting Postfix and Mailman</b></span><span class=moyet>==</span>
+
+<p>
+
+To start the Postfix and Mailman services:
+
+<p>
+
+<tt>service postfix start</tt><br>
+<tt>service mailman start</tt><br>
+
+<p>
+
+To have these services run when the system is started:
+
+<p>
+
+<tt>chkconfig --levels 2345 postfix on</tt><br>
+<tt>chkconfig --levels 2345 mailman on</tt><br>
+
+<p>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,112 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/Easter1.jpg width=224 height=126>
+</div>
+
+<h1>Happy Easter!</h1>
+<h2>April 17, 2022</h2>
+Happy Easter!  This blog is about my current thoughts on Chess variants, 
+and about some free Chess diagram fonts I have made.
+
+<p>
+
+<A name=Happy_Easter></A><A name=HappyEaster></A><span class=moyet>==</span><span class=blogtitle><b>Happy Easter!</b></span><span class=moyet>==</span>
+
+<p>
+
+Happy Easter!  Lent has been very successful this year: I have been
+able to reduce my social media usage and am engaging in more live
+social gatherings again.  With the <a href="/COVID-19">COVID pandemic no
+longer a pressing concern</a> I have been transitioning from online
+socialization to live person social gatherings.  
+
+<p>
+
+As just one of many examples, I am now going back to live church
+services again.
+
+<p>
+
+<A name=Public_domain_chess_diagram_fonts></A><A name=Publicdomainchessdiagramfonts></A><span class=moyet>==</span><span class=blogtitle><b>Public domain chess diagram fonts</b></span><span class=moyet>==</span>
+
+<p>
+
+A chess diagram font is a font one uses to make a diagram of
+a chess position.  These are used to illustrate positions in
+chess games, as well as for chess mating problems.
+
+<p>
+
+I have been annoyed that there isn’t an OFL licensed or public 
+domain chess diagram font out there.  I finally took the bull
+by the horns and both made my open public domain chess piece
+diagrams, as well as finding two sources for public domain
+vector chess piece diagrams, and now have three different
+public domain chess diagram fonts.
+
+<p>
+
+The fonts are available for download at the following locations:
+
+<p>
+
+<blockquote>
+<A href="https://samiam.org/schoolbook/fonts/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>schoolbook/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/</A>
+</blockquote>
+
+<blockquote>
+<A href="https://github.com/samboy/ChessGraphics">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>Chess<![if gt IE 6]>&#8203;<![endif]><wbr>Graphics</A>
+</blockquote>
+
+<A name=Chess_variants></A><A name=Chessvariants></A><span class=moyet>==</span><span class=blogtitle><b>Chess variants</b></span><span class=moyet>==</span>
+
+<p>
+
+It’s an exciting time for chess variant enthusiasts:
+
+<p>
+
+<ul>
+<li> With Chess960 now played in official FIDE tournaments, and with millions
+  of games of this variant played online, chess variants are <i>finally</i> 
+  mainstream.  Bobby Fischer’s lasting legacy will be, as much as his
+  chess, the increment chess clock and the Chess960 variant.
+<li> Fairy Stockfish is fully open source and can play many variants better
+  than any human.
+<li> I have, 28 years later, fully implemented an idea I had for a chess
+  variant back in 1994.
+</ul>
+
+<p>
+
+The idea I had in 1994 was to implement a chess variant on a particular
+demi-regular tiling of squares and triangles that Wikipedia calls a
+<a href="https://en.wikipedia.org/wiki/33344-33434_tiling">33344-33434 tiling</a>.
+
+<p>
+
+I have finally formalized the rules for this variant, and have even made
+a Zillions of Games rules file for it.  While Zillions is closed source 
+and proprietary, it is the only chess variant engine I know of that is
+flexible enough to be able to play chess on any arbitrary tiling.
+
+<p>
+
+The variant can be looked at and the Zillions rules downloaded here:
+
+<p>
+
+<blockquote>
+<A href="https://samiam.org/schoolbook/">https://samiam.org/schoolbook/</A>
+</blockquote>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

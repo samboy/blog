@@ -1,0 +1,72 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood 3.1.01 released</h1>
+
+<h2>November 27, 2011</h2>
+
+While everyone else in the USA has been celebrating Thanksgiving, I have
+been taking advantage of the days off from my day job to implement something
+in Deadwood that I didn't have a chance to implement before.  I would
+like to thank Nicholas Bamber, again, for his sponsorship that makes this
+work possible.
+
+<p>
+
+One issue Deadwood 3.0 has had is that it doesn't use cached incomplete
+CNAME referrals.  Let me explain...
+
+<p>
+
+When trying to resolve, say, <A href=http://news.yahoo.com>news.yahoo.com</A>,
+we end up getting a reply like this: "news.yahoo.com's name is actually
+some-horrible-really-long-name.yahoodns.net, and I am not going to tell
+you where to find some-horrible-really-long-name.yahoodns.net".  So,
+Deadwood has to go to all of the effort to locate this really long
+horrible name.
+
+<p>
+
+Now, 15 minutes later, once news.yahoo.com has expired from the cache, let
+us suppose someone else asks for news.yahoo.com.  While Deadwood, in fact,
+notes that news.yahoo.com really uses some other name, Deadwood 3 does not
+actually use this information and has to start over to find news.yahoo.com.
+
+<p>
+
+Deadwood 3.1.01 fixes all this.  Deadwood will now use an incomplete
+CNAME record that is in its cache to speed up solving these kinds of
+difficult-to-resolve CNAME chains.  Since Deadwood has always cached these
+records, this change to the code doesn't even change the binary format
+for Deadwood's cache file.
+
+<p>
+
+Since this required re-factoring quite a bit of Deadwood's recursive resolver,
+it was rather difficult to implement.  Also, due to the amount of code
+rewritten, this is a testing release.  Please only use this release if you
+are willing to <A 
+href=http://maradns.org/faq.html#subscribe>subscribe to the MaraDNS mailing
+list</A> to report bugs.
+It can be downloaded here: 
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/testing/>http://www.maradns.org/deadwood/testing/</A>
+</blockquote>
+
+<p>
+
+<b>Update</b>: Last minute testing discovered a crash in Deadwood 3.1.01
+(there were cases when a pointer would be uninitialized, causing Deadwood
+to segfault when dereferencing the pointer); I have released Deadwood 3.1.02
+with this fixed.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

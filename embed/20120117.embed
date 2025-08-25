@@ -1,0 +1,36 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>January 17, 2012</h2>
+
+I have been updating the Deadwood documentation a little.  In addition,
+I introduced a bug in the snapshot branch of Deadwood where cache
+entries with a timestamp before March 20, 1979 stored to disk would
+never expire.  
+
+<p>
+
+I have fixed this bug; users of the snapshot branch of
+Deadwood will need to delete any cache files on disk (such as
+dw_cache or dw_cache_bin) before upgrading to the latest snapshot.
+This bug does not impact users of the stable or testing version
+of Deadwood.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

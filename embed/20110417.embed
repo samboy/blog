@@ -1,0 +1,60 @@
+<h1>IE6 end of life</h1>
+<h2>April 17, 2011</h2>
+
+Now that <A href=http://ie6countdown.com>Microsoft has a site
+telling people to no longer use Internet Explorer 6</A>, it is time to
+say enough is enough.
+
+<p>
+
+Back when I designed the <A href=http://samiam.org/samiam_b2.css>CSS for
+this site</A>, some five years ago, I went to a lot of contortions to
+make the website IE6 compatible.  Indeed, whenever I did the site
+design for a web page, about 20-50% of the work involved making
+the site work in IE6.
+
+<p>
+
+A year ago, when I was doing a web design gig, a posted 
+<A 
+href=http://maradns.blogspot.com/2010/03/every-htmlcss-coders-dream.html>three</A>
+<A
+href=http://maradns.blogspot.com/2010/03/more-on-why-ie6-still-lingers.html>blog</A>
+<A 
+href=http://maradns.blogspot.com/2010/03/workaround-for-yet-another-ie6-bug.html>entries</A>
+about the issues getting web pages to work in IE6.  
+
+<p>
+
+Enough is enough.  IE6 usage in the United State, Europe, and Latin America
+is below 5%.  Google no longer tries to make their sites IE6-compatible.
+Going to YouTube in IE6 causes one to see a notice that their browser is
+outdated.  It would appear C|Net is doing the same.
+
+<p>
+
+While older web page designs will remain IE6 compatible, I will not make
+any revisions backwards-compatible.  I am in the process of starting 
+to have warnings (courtesy Microsoft) to upgrade from IE6 on my webpages.
+
+<p>
+
+IE6 was the state of the art of standards compliance when it came out.
+But that was ten years ago.  We are in the 2010s and it's time to move on.
+
+<p>
+
+P.S. For people with older computers which can not run newer versions
+of Internet Explorer, <A href=http://www.opera.com>Opera</A> is a 
+lightweight browser with support for modern web standards.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

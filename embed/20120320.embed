@@ -1,0 +1,111 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>March 20, 2012</h2>
+
+In today's blog entry, I describe this month's Deadwood update, as well as
+discuss why IPv6 should have NAT66 support.
+
+<p>
+<div class=blogtitle>
+<b>Deadwood update</b>
+</div><br>
+
+When looking at the source code of <A
+href=http://maradns.org/deadwood/browse-source/head/src/DwCompress.c
+>DwCompress.c</A>, I discovered that input validation was not always
+done.  I have <A href=
+http://maradns.org/deadwood/browse-source/head/update/3.2.03/deadwood-3.2.02-more_compress_validation.patch
+>updated DwCompress.c</A> to have more input validation.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood again one day next month, after the 20th,
+unless a critical security bug is found.
+
+<p>
+<div class=blogtitle>
+<b>NAT66 will be needed</b>
+</div><br>
+
+There is a religious belief among some proponents of IPv6 (a proposed
+method of increasing the network numbers the internet has, which we will
+undoubtedly make standard during the 2010s because we're running out of 
+numbers in the current internet) that NAT--the
+process of converting a single routable IP like 199.167.196.104 in to 
+multiple local private IPs like 192.168.1.196--should never be done.
+
+<p>
+
+Indeed, the expansion of IPs that IPv6 gives us removes one reason to
+have NAT.  But people who dismiss NAT as being "evil" ignore some of
+the other benefits of NAT:
+
+<ul>
+
+<li>NAT causes a network to have a built-in firewall.  Yes, it is
+    possible to have a firewall without NAT.  However, NAT's natural
+    default configuration is one where computers on an internal 
+    network are invisible from the big bad internet.<p>
+
+<li>NAT hides the network topology from external attackers.<p>
+
+<li>NAT allows one to add as many IPs as needed to one's internal network
+    without needing to get IPs from one's ISP.  Anti-NAT fanatics claim
+    that ISPs will always give customers a generous number of ISPs
+    (keep in mind that a /96 in IPv6 is as big as all of today's
+    internet; IPv6 is <i>huge</i>); these
+    claims ignore the fact that, without NAT, you can only have a large
+    internal network if your ISP lets you.  Indeed, low-cost hosting
+    providers with IPv6 today sometimes <A 
+    href=http://www.spotvps.com
+    >only give their customers 16 IPv6 IPs</A>.<p>
+
+<li>NAT allows one to change ISPs or use multiple ISPs at the same time
+    without needing to revise the numbering of their internal network.
+    Changing IPs on even a small network is non-trivial; I had to spend
+    a good part of Sunday afternoon revising my home network to use a
+    /16 (65,000 IPs) instead of a /24 (256 IPs), and this network only has
+    a handful of computers on it.  (Since you asked: I use a lot of virtual
+    machines for my work and it's logistically simpler to give each computer
+    their own /24 than to split up a single /24).<p>
+
+</ul>
+
+I am not ignoring the disadvantages of NAT: It makes peer-to-peer 
+applications, such as Skype, harder to implement.  However, implementing
+peer-to-peer through NAT is a solved problem, and making services
+on an internal network available to the external internet is trivial 
+with most NAT firewalls.
+
+<p>
+
+<A href=http://lwn.net>LWN</A> recently had an <A 
+href=http://lwn.net/Articles/452293/>interesting discussion about IPv6
+and NAT</A>.
+
+<p>
+
+(NAT44, for the record, is the technology used in most of today's internet,
+allowing a single IPv4 IP to represent a number of internal machines on a
+network.  I remember when NAT44 was called "IP masquerade".  NAT66 is the
+technology to allow a small pool of IPv6 IPs to represent a large number
+of internal machines on a network.  NAT64 and NAT46 are something else 
+entirely.)
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,55 @@
+<!--{TAGS:L}-->
+
+<h1>TinyVZ update</h1>
+
+<h2>August 16, 2011</h2>
+
+I'm still hacking away at TinyVZ.  
+
+<p>
+
+Working with Busybox can be really frustrating.  I tried to update
+the system to Busybox 1.19; that did not work.  The issue is that
+Busybox 1.19 expects the build toolchain to have a full-blown printf()
+that can take a large number of arguments; unfortunately, the printf()
+included with older releases of uClibc can only accept 9 arguments or 
+less.  
+
+<p>
+
+So I would have to update uClibc to compile a newer release of Busybox.
+Which is non-trivial, since I would <i>probably</i> need to cross-compile
+the newer uClibc, as well as the entire core GNU build toolchain (make,
+binutils, and gcc), as well as Busybox to update everything.  Since
+this is a "for fun and for free" project, that is just too much work for
+what I getting paid ($0.00), so I'm not going to bother.
+
+<p>
+
+What I have done, however, is update Busybox's "passwd" app to have a "-s"
+option that allows a password to be read from stdin.  This will make it
+possible to make the relevant shell scripts vzctl uses to reset passwords.
+
+<p>
+
+In addition, I have renamed this custom Busybox "TinyVZ" instead of "Moam-CD",
+fixed the install of uClibc so we have symlinks, not copies, of the relevant
+library aliases, and am updating the files in /etc so I can write vzctl
+scripts to add and remove IPs, as well as reset the hostname.
+
+<p>
+
+It can be downloaded here:
+
+<blockquote>
+<a href=http://samiam.org/TinyVZ/>http://samiam.org/TinyVZ/</a>
+</blockquote>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,135 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Microblogs January 2014</h1>
+<h2>January 22, 2014</h2>
+Here are the microblogs I posted between January 8 and 22, 2014.
+
+<p>
+
+<A name=Death_of_the_web></A><A name=Deathoftheweb></A><span class=moyet>==</span><span class=blogtitle><b>Death of the web?</b></span><span class=moyet>==</span>
+
+<p>
+
+Wired has an interesting article about the possible death of the web:
+
+<p>
+
+<blockquote>
+<A href="http://www.wired.com/business/2014/01/death-pc-also-mean-end-web/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>wired.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>business/<![if gt IE 6]>&#8203;<![endif]><wbr>2014/<![if gt IE 6]>&#8203;<![endif]><wbr>01/<![if gt IE 6]>&#8203;<![endif]><wbr>death-<![if gt IE 6]>&#8203;<![endif]><wbr>pc-<![if gt IE 6]>&#8203;<![endif]><wbr>also-<![if gt IE 6]>&#8203;<![endif]><wbr>mean-<![if gt IE 6]>&#8203;<![endif]><wbr>end-<![if gt IE 6]>&#8203;<![endif]><wbr>web/</A>
+</blockquote>
+
+The problem with today’s web is that the underlying code for web pages has become a mutant monster.
+
+<p>
+
+Back in 1994, one could make a compelling web page with just &lt;h1&gt;, &lt;h2&gt;, &lt;b&gt;, &lt;i&gt;, &lt;p&gt;, a couple of &lt;a href=whereever.html&gt;s, possibly even an &lt;img src=whatever.gif&gt;.  Then the dot-com party started and it quickly became much more complicated: Plugins, CSS (with a completely different syntax than HTML), using &lt;table&gt; for layout, proprietary HTML tags, Java applets (which started slowly dying because of the browser wars), SSL, Javascript (unrelated to Java), Flash (which is finally slowly dying), IE6 hacks, HTML5, web fonts, and so on.  
+
+<p>
+
+Somewhere along the way, the web became far too complicated for anything less than a multi-million dollar company to make something to render it (as observed by Opera 
+<a href="https://web.archive.org/web/20141218070943/https://www.webmonkey.com/2013/02/presto-is-dead-long-live-opera/">throwing in the towel</a> and no longer making their own web rendering engine), much less something possible to implement by a hobbyist programmers in their spare time (try browsing the modern web in
+<a href="http://samiam.org/software/dillo/">Dillo</a>).
+
+<p>
+
+It has also gotten worse for webmasters: Back in the early oughts, it took me at most a week to design my 
+<a href="http://samiam.org/screenshots/2001webpage.html">then-webpage</a>.  In the mid-oughts, it took me a couple of weeks to design 
+<a href="http://samiam.org/screenshots/index-2006-design.html">the webpage I had</a>, the lion’s share of the work being getting the page to look decent in Internet Explorer 6.  The current design took about two months of work to make (over nearly two years, off an on), the lion’s share of the work “under the hood” (getting it to look decent in various Internet Explorer versions out there, working around other various browser bugs, editing its webfont in Fontforge so it would render decently with multiple font rendering technologies, having it be readable on small screen mobile devices—which required redoing some of the Internet Explorer hacks, etc.)
+
+<p>
+
+There is a lot of appeal with not having to target the web.  An app only has to run on iThings and Android devices (with possibly a Windows and Mac port if the app is a runaway success), cutting down on development expense.  I can see why many developers want to avoid putting something on the web.
+
+<p>
+
+<i>Posted Jan 14 2014</i>
+
+<p>
+
+<A name=MaraDNS_and_clang></A><A name=MaraDNSandclang></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS and clang</b></span><span class=moyet>==</span>
+
+<p>
+
+The
+<i>only</i>
+warning clang emits when compiling MaraDNS is a bunch of warnings where the code does a comparison like this:
+
+<p>
+
+<tt>if(some_unsigned_var &gt; max || some_unsigned_var &lt; 0)</tt><br>
+
+<p>
+
+I don't see the point in removing all those sanity checks (I would rather have a sanity check like that with an unsigned variable than
+<i>not</i>
+have the sanity check with a signed variable)
+
+<p>
+
+
+<p>
+
+<i>Posted Jan 12 2014</i>
+
+<p>
+
+<A name=MaraDNSDeadwood_and_Cppcheck></A><A name=MaraDNSDeadwoodandCppcheck></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS/Deadwood and Cppcheck</b></span><span class=moyet>==</span>
+
+<p>
+
+I just learned about 
+<a href="http://cppcheck.sourceforge.net/">Cppcheck</a>, which, like Valgrind, is a useful tool for finding errors in C programs.  I ran Cppcheck against Deadwood and MaraDNS and have made a few updates:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download/2.0/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+MaraDNS came out remarkably clean; while there were a couple of memory leaks in Deadwood, 
+<a href="http://maradns.samiam.org/deadwood/browse-source/head/update/3.2.05/deadwood-3.2.04-cppcheck.patch">none of the leaks are a security concern</a> (the issues are along the lines of “memory leak if malloc() fails here”, “null pointer dereference if malloc() fails”, or even one case of “memory leak if a string over 16 megabytes in size is requested”).  
+
+<p>
+
+The Cppcheck updates for authoritative MaraDNS will be part of the 2.0.08 release later this month, and the Cppcheck updates for Deadwood will be part of Deadwood 3.2.05 released near the end of this year (barring a CVE-worthy security hole).
+
+<p>
+
+<i>Posted Jan 09 2014</i>
+
+<p>
+
+<A name=20132014_archive></A><A name=20132014archive></A><span class=moyet>==</span><span class=blogtitle><b>2013-2014 archive</b></span><span class=moyet>==</span>
+
+<p>
+
+I have archived the microblogs posted between mid-2013 and January 8, 2014:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/2014-01-08.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>2014-<![if gt IE 6]>&#8203;<![endif]><wbr>01-<![if gt IE 6]>&#8203;<![endif]><wbr>08.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

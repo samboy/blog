@@ -1,0 +1,131 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS can redirect domains</h1>
+
+<h2>November 28, 2011</h2>
+
+Phil Harlow had an interesting problem which MaraDNS beautifully solves.
+He wants to have all hostnames resolve normally, but control the
+resolution of one particular host name.
+
+<p>
+
+Deadwood has a far cleaner code base and is more enterprise-ready than
+MaraDNS 1's recursive resolver, but it can not do this easily.  As I
+explained to Phil:
+
+<blockquote>
+To do this will require running MaraDNS 2.0 (or better, MicroDNS:
+<A 
+href=http://samiam.org/software/microdns.html>http://samiam.org/software/microdns.html</A>) 
+on one IP while running Deadwood on another IP.  Deadwood is strictly
+a caching DNS server and my free time ran out before I could merge it
+with MaraDNS' authoritative code.
+<P>
+Do you have a setup where you can run two different DNS servers on two
+different IPs?  Even if you only have one Windows machine, you can
+install Linux in Virtual Box or VMWare and use "bridged networking" to
+give your machine a second IP.
+</blockquote>
+
+Phil did not have a setup where he could easily run two different servers
+on two different IPs, so I explained to him that MaraDNS 1 can do this.  Of
+course, MaraDNS 1.0 has a number of disadvantages -- there is a reason
+I spent three years writing Deadwood, after all.  As I explained to him:
+
+<blockquote>
+<p>
+The old MaraDNS code became <A href=http://slashdot.org/comments.pl?sid=2531162&cid=38090630>too 
+messy to readily maintain</A>, so I had to completely rewrite the code.
+The new code is good, but multiple IPs are currently needed to have
+certain domains give certain replies.
+<p>
+[...]
+<p>
+MaraDNS 1's recursive resolver is very much
+deprecated and is no longer being actively developed.
+<p>
+[...]
+<p>
+Mara v1 will work fine on newer networks (DNS hasn't changed very
+much) -- it won't work once IPv6 takes over, but that's a couple of
+years over the horizon.  It will do what you need -- its problem is
+that it isn't the best solution for enterprise-class servers.
+<p>
+[...]
+<p>
+Yes, it will work with Windows 7 ; just be sure to open the firewall
+when prompted.  Also, MaraDNS 1 will happily answer questions about
+IPv6 records as long as upstream_servers, not root_servers is used --
+but uses IPv4 to answer the questions.
+</blockquote>
+
+So, on to the solution:
+
+<ul>
+<li>Download the Windows binary of <A 
+    href=http://maradns.org/download/1.4/1.4.07/>MaraDNS 1.4.07</A>
+<p>
+<li>Explode the maradns-1-4-07-win32.zip file in some directory
+<p>
+<li>In the maradns-1-4-07-win32 directory, have the file mararc have
+    these contents:
+<pre>
+# Win32-specific MaraRC file; this makes a basic recursive DNS
+# server.
+
+ipv4_bind_addresses = "127.0.0.1"
+recursive_acl = "127.0.0.1/8"
+timestamp_type = 2
+upstream_servers = {}
+upstream_servers["."] = "8.8.8.8, 8.8.4.4"
+csv2 = {}
+csv2["example.com."] = "db.example.com"
+</pre>
+<p>
+Yes, the example.com above is not a typo.  Even though the record we are
+changing is in another domain, the above will work in MaraDNS 1 --
+MaraDNS accepts out-of-bailiwick entries in zone files like this (it
+changes the AA bit, but that's fine for this purpose).  
+<p>
+<li>Use mkSecretTxt.exe to make a random file with the name "secret.txt"
+<p>
+<li>Have the file db.example.com with a line like this:
+<p>
+<tt><b>somename.maradns.</b> <b>10.1.2.3</b></tt>
+<li>Replace <b>somename.maradns.</b> with the host name that needs to 
+    resolve to a particular IP; replace <b>10.1.2.3</b> with the IP 
+    somename.maradns. should resolve to.
+<p>
+<li>Start maradns:
+<p>
+<tt>maradns -f mararc</tt>
+<p>
+<li>If prompted, allow MaraDNS to punch a hole in Windows' firewall.
+<p>
+<li>It is possible to make MaraDNS a service; see the file service.html  
+    included with MaraDNS for details.  I have <A 
+href=http://maradns.org/download/non-maradns/>copy of srvany.zip</A> 
+available for download (license unknown; to the extent of my knowledge I
+am not violating copyright making this available for download).
+<p>
+</ul>
+
+
+Please note that following these directions is best done from a "cmd" 
+prompt; Start->Run->"cmd" in Windows XP or "cmd" in Windows 7.  Also
+note that MaraDNS can run as a non-admin user.  And, finally, the 
+upstream servers are Google's public DNS servers.
+
+<p>
+
+<i>I would like to thank Phil Harlow for his donation that made this 
+blog entry possible.
+To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

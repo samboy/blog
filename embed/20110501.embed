@@ -1,0 +1,35 @@
+<h1>Firefox and Javascript</h1>
+
+<h2>May 1, 2011</h2>
+
+Since my current gig is having me do a lot of heavy Javascript programming,
+I have installed all of the "Big 5" browsers on my netbook (Opera, Safari,
+Chrome, Internet Explorer, and Firefox).  
+
+<p>
+
+After making a page with a lot of heavy Javascript, I discovered that 
+Firefox is the slowest web browser for rendering Javascript.  In more
+detail, I have some complicated javascript that modifies the DOM of
+a document.  Firefox takes some 20 seconds to do a full run; MSIE 9
+can do it in about nine seconds.  The other three are lightning fast;
+Chrome can do it in about three seconds, Safari in two seconds, and Opera
+only takes about 1.5 seconds to run the same Javascript.
+
+<p>
+
+The main thing I like about Firefox is that it has a lot of add-ons and
+the ability to force all pages to be rendered using Verdana; then again,
+I like Opera because it looks to be the most lightweight browser to support
+modern web standards, as well as the fastest Javascript performance.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

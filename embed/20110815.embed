@@ -1,0 +1,127 @@
+<!--{TAGS:L}-->
+
+<h1>Tiny OpenVZ template</h1>
+
+<h2>August 15, 2011</h2>
+
+One issue I have had with <A href=http://wiki.openvz.org/Main_Page>OpenVZ</A> is that
+there is not a small template based on Busybox out there.  So, in the
+spirit of open source, I solved this problem by making my own tiny
+OpenVZ template based on <A href=http://busybox.net/about.html>Busybox</A> and
+<A href=http://uclibc.org/about.html>uClibc</A>.
+
+<p>
+
+TinyVZ is a tiny OpenVZ template.  This allows OpenVZ users to have a
+container that uses far fewer resources than container built from a
+traditional Linux distribution.  The goals are to have a system
+that uses less memory and disk space than other OpenVZ templates.
+
+<p>
+
+This OpenVZ template is fully GPL compliant.  Not only does it include
+the source code, but I spent all weekend burning the midnight oil to make
+the system <i>self-hosting</i>: It is possible to compile every program
+that makes up the system inside of the container.  I even have a script
+that will (given enough time) compile all of the bits and clone the entire
+TinyVZ tree in a subdirectory.
+
+<p>
+
+The system includes the following packages:
+
+<ul>
+<li>binutils 
+<li>busybox
+<li>gcc
+<li>make
+<li>maradns
+<li>uClibc
+</ul>
+
+This Linux distribution is based on some work I did back in 2007 making
+a miniature Linux system that fits on a business card CD.  Since this is 
+based on work from a few years ago, the programs and libraries are older
+releases (this is also why a lot of files refer to this system as "Moam CD").  
+Updating the system's toolchain is left as an exercise to the
+reader.  Yes, I did check, and there does not appear to be any glaring
+security holes with this setup; and, yes, the version of uClibc is recent 
+enough to support the changes made to daylight savings time in 2005.
+
+<p>
+
+This is a work in progress.  Right now, the system is for hard
+core UNIX/Linux gurus: The only editor is a miniature version of vi
+included with Busybox (actually, I also compiled in
+Busybox's version of the "ed" editor, for those who feel vi pampers the
+user too much); all configuration is done by editing text files.
+While the system is a self-hosting OpenVZ template, it appears that the
+relevant OpenVZ shell scripts for setting up networking and other relevant
+configurations are not POSIX compliant, breaking in Busybox's /bin/sh.
+In addition, the compiler can only compile C programs, and can not
+compile C++ programs.  Adding C++ support is also left as an exercise
+for the reader.
+
+<p>
+
+While the vzctl program can not make this container reset its IP or
+hostname, it is possible to edit the file <tt>/etc/sysinit.sh</tt> to
+have it use the IP assigned to it by OpenVZ:
+
+<pre>
+#!/bin/sh
+
+IP=192.168.1.163
+HOSTNAME=nightfly
+hostname $HOSTNAME
+
+mkdir /proc
+mount /proc
+mount /dev/pts
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin
+export PATH
+
+ifconfig lo 127.0.0.1
+ifconfig venet0 $IP
+route add -net 127.0.0.0 dev lo
+route add -net 0.0.0.0 dev venet0
+
+# MaraDNS (Deadwood)
+duende Deadwood
+</pre>
+
+This script is one that I am using on a tiny little DNS "toaster" OpenVZ
+container.  By getting rid of the entire compiler toolchain (all of 
+/usr/lib, the binutils in /usr/bin, the header files in /usr/include
+and /usr/src, the gcc library in /lib, the source code in /build, etc.), 
+I was able to get this container to use under two megabytes of space.  
+
+<p>
+
+I am including a 40-megabyte tarball of this OpenVZ template.
+This may be used either as an OpenVZ template or as a chroot()
+environment.  <b>IMPORTANT</b> <i>Create a directory for
+exploding this tarball before opening it up</i>:
+
+<pre>
+        mkdir TinyVZ-0.5
+        cd TinyVZ-0.5
+        tar xvJf ../TinyVZ-0.5-self-hosting.tar.xz
+        chroot . sh
+</pre>
+
+It can be downloaded here:
+
+<blockquote>
+<a href=http://samiam.org/TinyVZ/>http://samiam.org/TinyVZ/</a>
+</blockquote>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

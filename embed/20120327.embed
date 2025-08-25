@@ -1,0 +1,145 @@
+<h1>The mythical $15/year VPS</h1>
+
+<h2>March 27, 2012</h2>
+
+In this blog, I briefly go over low-cost VMs, discuss the non-availability
+of BuyVM's nodes, and give updated reviews of my VPS providers.
+
+<p>
+
+As I have <A href=20110614.html>blogged about before</A>, it is now
+possible to order a basic virtual machine for under $20 a year.  
+Indeed, this blog is hosted on a network of four such machines with
+failover set up.
+
+<p>
+<div class=blogtitle>
+<b>BuyVM.net: Pretty much mythical</b>
+</div><br>
+
+When going to web forums, such as <A href=http://webhostingtalk.com>WHT</A>
+and asking about who supplies a good low-cost virtual machine, one 
+name that constantly comes up is BuyVM.net.  Unfortunately, it is
+practically impossible to get a $15/year account with them.
+
+<p>
+To wit: Some stock of these $15/year 128 megabyte accounts opened up in
+the wee hours of the night today; I woke up at an ungodly hour, stock opened
+up, I ordered a 128/256 VPS, hit "complete order", and it never went to
+the Paypal page to complete the order. I did get a message that the order
+was completed, and that a confirmation email was sent, but I never got
+an email and there is no record of me getting an account anywhere in
+Frantech's system.
+
+<p>
+Stock ran out within five minutes; I did try going back to buyvm.net to
+see if I could get stock again.
+
+<p>
+For all intents and purposes, it is impossible to get a basic buyvm.net
+account. This is 10 times worse than the special at Fry's that runs out
+within an hour. I'm not going to try again; a responsible company is one
+that has product available for customers in sufficient quantity so that
+there is at least, say, a one hour window to order stock.
+
+<!-- I have a new rule: No staircase posting.  If someone disagrees with
+     me, I'll let them have their say without trying to refute their
+     position unless it's a clearly incorrect assertion like
+     "DjbDNS has never had any security problems"
+<p>
+(An anonymous identity who says they were able to get an account during
+this morning's rush points out that a responsible VPS provider
+doesn't oversell their stock.  I agree; indeed, 123systems does have
+their $10/year nodes run out of stock and it takes them a day or two,
+sometimes a couple of weeks, to get more stock.  There is a balance between
+not overselling stock and only having stock for at most ten minutes every
+six months.)
+-->
+
+<p>
+
+<i>Update: I was finally able to get a BuyVM node <A href=20130101.html>many
+months later</A></i>
+
+<p>
+<div class=blogtitle>
+<b>123systems.net: Very good service</b>
+</div><br>
+
+I mentioned, <A href=20120205.html>in an earlier blog posting</A>, that
+it is difficult to update CentOS on a basic 128/128 123systems.net
+account.  Indeed, it is, but the procedure is pretty routine once
+I figured it out:
+
+<ul>
+<li><tt>yum install strace</tt>
+<li><tt>yum -y update</tt> <i>This will crash</i>
+<li><tt>cd /var/cache/yum/base/packages/</tt>
+<li><tt>for a in *rpm ; do strace rpm --upgrade $a --nodeps; done</tt>
+<li><tt>cd /var/cache/yum/updates/packages/</tt>
+<li><tt>for a in *rpm ; do strace rpm --upgrade $a --nodeps; done</tt>
+<li><tt>"yum -y update"</tt> <i>This should now report everything as up to 
+    date</i>
+<li>Should the <tt>rpm</tt> process freeze while trying to do this, restart
+    the OpenVZ container via the "reboot" command and try again
+</ul>
+
+And, indeed, 123systems just opened up some more 128/128 stock and
+people can get a good VPS for less than the cost of an impossible-to-get
+buyvm.net account; I have gotten very good service and am very happy with 
+my 123systems node.
+
+<p>
+<div class=blogtitle>
+<b>FastVPS.co: Moving to Chicago</b>
+</div><br>
+
+My node with FastVPS.co moved everyone to Chicago this weekend; there
+were a lot of issues with my node with them in Kansas city being very
+slow to the point of frequently being unusable (It would serve pages via
+nginx and domains via MaraDNS, but logging in to perform rsync updates
+would often not work).  So far, things look better with the Chicago node
+and I hope they don't start having the slowdown issues they had in Kansas 
+City.
+
+<p>
+<div class=blogtitle>
+<b>AlienVPS: Good, fast node with downtime issues</b>
+</div><br>
+
+I have two nodes with AlienVPS; both nodes run really great when they
+are up.  As reported on WHT, they are fairly frequently down.  Roughly
+speaking, one of my two nodes with them is down for a couple of
+hours every two weeks or so.  It's very rare that both of my nodes
+with them are down at the same time.
+
+<p>
+
+Because of how my domains are set up, this is a non-issue with me; 
+every time one of the nodes with AlienVPS goes down, DNS failover
+kicks in and traffic is redirected to another one of my low-cost
+nodes.  
+
+<P>
+
+In order to still be able to work when a node goes down, I do
+all of my work on a VPS on my home computer and use rsync over SSH to
+transfer the files over.
+
+<p>
+
+See also: 
+<A href=20110614.html>Dirt cheap Linux hosting</A> -
+<A href=20120203.html>Adios cripperz.sg</A> -
+<A href=20120205.html>A brief review of my VPS hosts</A>
+  
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

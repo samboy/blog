@@ -1,0 +1,86 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>November 29, 2011</h2>
+
+<div class=blogtitle>
+<b>Better timestamps</b>
+</div><br>
+
+I mentioned <A href=20111113.html>in a recent blog entry</A> my plans
+to implement sub-second finer timestamps for Deadwood's time stamps.
+This uses the POSIX-compliant <tt>clock_gettime()</tt> call in Linux
+and the <tt>GetSystemTimeAsFileTime()</tt> call in Windows.  For systems
+without <tt>clock_gettime()</tt> (cough Mac OS X cough), it is possible to 
+use the one-second resolution <tt>time()</tt> by defining 
+<tt>FALLBACK_TIME</tt> before compiling Deadwood, like this:
+
+<blockquote>
+<tt>cd src/ ; export FLAGS='-O3 -DFALLBACK_TIME' ; make</tt>
+</blockquote>
+
+The advantage of using finer timestamps is that it allows me to safely
+lower the default timeout to only one second, which will speed up
+resolution in cases where a DNS server is not responding.
+
+<p>
+
+Since Deadwood has already set aside the lower eight bits of the timestamp
+for sub-second timestamps, I was able to implement this without changing
+Deadwood's cache binary format.
+
+<p>
+
+This change concludes the adding of features to speed up Deadwood that
+Nicholas Bamber very generously sponsored.  I still plan on fixing bugs
+with the newly added features, as well as fixing other bugs in Deadwood
+and MaraDNS.
+
+<p>
+
+<div class=blogtitle>
+<b>Deadwood is faster</b>
+</div><br>
+
+One issue earlier releases of Deadwood had is that they were sometimes
+rather slow in resolving some domain names.  I've done a lot of work this
+last year improving handling of the corner cases that slowed resolution
+down; fixes such as the "truncation hack", the "urbandictionary hack",
+as well as many other bug fixes have greatly reduced the chance of an
+unusual DNS packet delaying Deadwood's resolution of a host.
+
+<p>
+
+Along with the 3.1 improvements in handling cached incomplete CNAMEs and
+the improved Deadwood timestamps, the code is now faster.
+
+<p>
+
+My own "dog food" testing of the latest Deadwood snapshot feels more
+snappy than older 3.0 releases of Deadwood.  Now that Deadwood appears
+to be able to resolve domains correctly, I have been able to concentrate
+a little on speeding things up.
+
+<p>
+
+<div class=blogtitle>
+<b>Getting it</b>
+</div><br>
+
+The latest development snapshot can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,99 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS update</h1>
+
+<h2>August 23, 2012</h2>
+
+<div class=blogtitle>
+<b>MaraDNS update</b>
+</div><br>
+
+I have finished up porting all of MaraDNS 2.0's SQA tests to work in
+CentOS 6 (RHEL6/Oracle Linux 6/Scientific Linux 6).  MaraDNS 2.0 is
+now fully RHEL6 compatible.
+
+<p>
+
+There is a bug somewhere in CentOS 6 that causes Valgrind to report a
+24-byte fixed-size leak when MaraDNS is compiled with '-O2'; since the
+leak goes away when MaraDNS is compiled with '-g', it's an error with
+the compiler and/or Valgrind.
+
+<p>
+
+I'm not going to waste time chasing ghosts that change with different
+compiler flags.
+
+<p>
+
+I have added a couple of documents to the MaraDNS tarball:
+TESTING.PROCEDURE, which describes how to compile and run MaraDNS so it
+passes all SQA regressions in CentOS 6, as well as README.malloc, which
+spells out how MaraDNS and Deadwood act on systems where malloc() fails.
+If anyone wishes MaraDNS/Deadwood to handle malloc differently, show
+me the money and we will talk.  I would need a five-figure sum (in US
+dollars or Euros) on the table to even consider looking at the issue.
+
+<p>
+<div class=blogtitle>
+<b>OS Support</b>
+</div><br>
+
+The version of Linux that MaraDNS officially supports has been under
+a lot of flux.  Last year, <A href=20110319.html>CentOS was really
+slow with security updates so I moved over to Scientific Linux</A>.  
+This year, CentOS has finally caught up and Scientific continues to have
+issues with routine security updates breaking things (I had an issue
+last year where a security-only update broke wireless networking; just
+this week a security-only update in Scientific Linux broke X on one of
+my virtual machines).  If CentOS ever lags with security updates again, 
+<A href=20120731.html>I will try out Oracle Linux</A>.
+
+<p>
+
+The point being, the next MaraDNS release is supported on any
+RHEL6-compatible clone of Linux.  Right now, I develop it on CentOS 6,
+but that can become Oracle Linux 6 or Scientific Linux 6 depending on
+which RHEL clone is most up-to-date with security fixes.
+
+<p>
+
+I am no longer using Windows XP and will change the official version of
+Windows supported to be Windows 7 when I make my Deadwood release next
+month.
+
+<p>
+
+I have updated the operating systems MaraDNS supports in 2012; I will not
+update them again until 2017 (both RHEL6 and Windows 7 will be supported
+by their vendors until 2020).
+
+<p>
+<div class=blogtitle>
+<b>Current plans</b>
+</div><br>
+
+Now that both MaraDNS and Deadwood have been updated for CentOS 6, my
+plan is to release a new Deadwood release in September, followed by
+a new MaraDNS release in October.
+
+<p>
+
+I plan to work on MaraDNS/Deadwood again one day next month (September), 
+after the 20th, unless a critical security bug with a CVE number is found.
+
+<p>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://samiam.org/blog/20120823.html" data-num-posts="7" data-width="600"></div>
+
+<A href=/blog/>Blog index</A>
+
+</div>

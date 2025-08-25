@@ -1,0 +1,75 @@
+<!--{TAGS:M}-->
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Deadwood 3.2.03 released</h1>
+
+<h2>December 20, 2012</h2>
+
+Deadwood has been updated.  This is a bugfix-only release relative to
+Deadwood 3.2.02.  The main change that will affect end-users is that
+Deadwood no longer uses the cache file if it's older than the dwood3rc
+file.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/stable/>http://www.maradns.org/deadwood/stable/</A>
+</blockquote>
+
+Here is a full changelog:
+
+<ul>
+<li>Added a whole bunch of security validation to DwCompress.c
+    (always make sure offsets are within bounds)
+<li>Deadwood now compiles with IPv6 support again
+<li>We now handle EasyDNS' bad truncation in a reasonable manner
+<li>Added new SQA test for es-us.noticias.yahoo.com issue in May/June 2012
+<li>Replaced "malloc" with "dw_malloc" wrapper (make it a little easier for 
+    embedded devs)
+<li>Updated INSTALL.txt (Windows 7; Deadwood's malloc use)
+<li>There is now a compile-time flag (-DSHOWPACKET) to see every single 
+    packet Deadwood receives (for debugging)
+<li>If /etc/deadwood is missing, we now tell them what the missing directory 
+    is
+<li>Made the underlying RNG a little faster and about 50 bytes smaller (I 
+    like keeping the Windows binary under 65,536 bytes in size)
+<li>Documented the difference between a string, numeric, and dictionary
+    parameter
+<li>If the Deadwood cache file is older than the dwood3rc file, do not load
+    the cache
+<li>SQA update: Netstat changed, breaking one of the SQA tests.  These SQA
+    tests have been updated to pass again (and <i>should</i> work when run
+    against an older netstat)
+<li>SQA update: Sometimes the ttl ages one second, which made one of the
+    tests sometimes fail.  
+<li>OS Update: The supported OSes for Deadwood are now CentOS/RedHat 6 and
+    Windows 7
+</ul>
+
+Since it took a while to update things to get all of the SQA tests
+to pass, I am going to implement a policy to, every fourth month, not
+fix bugs or update documentation in Deadwood, but make sure that none
+of CentOS/RedHat 6's security updates have broken any of Deadwood's
+SQA tests.  It would be nice if a routine security update did not say,
+as happened this time, change netstat's output, but it's very hard to
+force core system tools or the kernel not to change their behavior at
+all when the code is entirely open-source.  Sometimes, you do get what
+you paid nothing for.
+
+<p>
+
+Speaking of open-source economics, I will not work on MaraDNS/Deadwood again 
+until one day next month, after the 20th, unless a critical security bug 
+with a CVE number is found.  
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

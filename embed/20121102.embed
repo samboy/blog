@@ -1,0 +1,191 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Deadwood and SHA-3</h1>
+
+<h2>November 2, 2012</h2>
+
+In today's blog, I discuss the possibility of updating Deadwood's underlying
+cryptographic primitive, as well as post an updated election prediction.
+
+<p>
+<div class=blogtitle>
+<b>What I chose</b>
+</div><br>
+
+Back in 2007, when I began working on Deadwood, the only real
+interesting algorithm for me was an oddball cryptographic primitive
+called "Radio Gatun" (RadioGatun[32], which I also call RG32, to be exact).  
+This primitive not only generates a secure stream
+of pseudo-random numbers, but also "compresses" entropy from a variety
+of sources.  All in under two kilobytes of code.
+
+<p>
+
+In 2007, RG32 was the best cryptographic primitive to use
+for Deadwood's random number generator.   But things started changing
+in 2008.
+
+<p>
+<div class=blogtitle>
+<b>SHA-3</b>
+</div><br>
+
+My favorite SHA-3 candidate has always been Radio Gatun's direct
+successor, Keccak.  Back in 2008, I wrote that "Keccak looks promising":
+
+<blockquote>
+<A href=
+http://samiam.org/blog/old-20081217-rg32.html
+>http://samiam.org/blog/old-20081217-rg32.html</A>
+</blockquote>
+
+By 2010, <A href=20121101.html>as I pointed out yesterday</A>, my praise for 
+Keccak became less guarded:
+
+<blockquote>
+	If I were to use one of the SHA-3 submissions for Deadwood’s
+	PRNG, I would use Keccak. Like Skein, it can output a stream of
+	infinite length from any input of any length. Unlike Skein, it
+	is more 32-bit compatible; not only is there a 32-bit “reduced
+	word length” variant officially blessed by the algorithm’s
+	creators, but also 64-bit Keccak more easily scales down to
+	32-bits than Skein, since the only operations done are permutes,
+	rotates, and exclusive ORs.
+
+<p><A href=
+http://samiam.org/blog/old-20100912-openwrt.html
+>http://samiam.org/blog/old-20100912-openwrt.html</A>
+</blockquote>
+
+Now that Keccak has won and is now SHA-3, it's time to seriously consider
+upgrading.  The main advantage of Keccak over RG32 is that, now that
+it is the new hashing standard, cryptographic researchers will concentrate 
+on finding weaknesses in it.  In addition, it is more flexible in a lot of
+ways than RG32--it is possible, for example, to simply increase
+the rounds (or, likewise, increase its "capacity") should any weakness be
+found in it.
+
+<p>
+<div class=blogtitle>
+<b>Making the transition</b>
+</div><br>
+
+Since I only actively develop MaraDNS and/or Deadwood one day each month,
+it is going to take me a while to get around to updating Deadwood's
+cryptographic primitive.  Since RG32 <i>is</i> the direct
+ancestor to SHA-3, it should be a secure stream cipher (and probably a
+secure hash [<A href=#footnote>1</A>]) for the foreseeable future.
+
+<p>
+
+In addition to the time needed to implement SHA-3 as Deadwood's random
+number generator, another factor is an ascetic one: Right now, Deadwood's
+Windows binary is 65,024 bytes in size.  I want to keep it under 65,536 
+bytes in size for as long as I can.  Since Keccak is somewhat more 
+complicated than RG32, changing the cryptographic primitive will
+probably finally make Deadwood over 65,536 bytes in size once and for
+all.
+
+<p>
+
+Like making sure Deadwood works in IPv6, this is a low-priority "wish list"
+feature, but one I hope to have time to eventually implement.
+
+<A name=election> </A>
+<p>
+<div class=blogtitle>
+<b>Updated election prediction</b>
+</div><br>
+
+With only four days to go until my birthday and the presidental election, 
+here is my updated prediction, again based on Nate Silver's model:
+
+<pre>
+<b>Overall</b>
+Romney    3.72%
+Tie       0.27%
+Obama    96.01%
+
+<b>Obama gets OH</b>
+Romney    1.11%
+Tie       0.13%
+Obama    98.76%
+<b>Romney gets OH</b>
+Romney   14.28%
+Tie       0.86%
+Obama    84.86%
+<b>Obama gets FL</b>
+Romney    0.05%
+Tie       0.00%
+Obama    99.94%
+<b>Romney gets FL</b>
+Romney    6.67%
+Tie       0.49%
+Obama    92.84%
+<b>Obama gets VA</b>
+Romney    1.42%
+Tie       0.24%
+Obama    98.35%
+<b>Romney gets VA</b>
+Romney    8.21%
+Tie       0.34%
+Obama    91.45%
+<b>Romney gets FL and VA</b>
+Romney   14.75%
+Tie       0.62%
+Obama    84.63%
+<b>Obama gets FL and/or VA</b>
+Romney    1.18%
+Tie       0.19%
+Obama    98.63%
+
+Obama EVs
+240-249   0.2%
+250-259   0.9%
+260-269   2.9%
+270-279   7.6%
+280-289  13.6%
+290-299  19.8%
+300-309  16.9%
+310-319  15.8%
+320-329  11.0%
+330-339   8.4%
+340-349   2.7%
+350-359   0.1%
+</pre>
+
+<A name=footnote> </A>
+<p>
+<div class=blogtitle>
+<b>Footnote</b>
+</div><br>
+
+[1] RadioGatun's predecessor, Panama, has been around for over a decade
+    and, while broken as a hash function, is still a secure stream cipher.
+    While there have been some cryptographic analysis of RadioGatun, and
+    while one of RadioGatun's designer admits that "experiments did not
+    inspire confidence in RadioGatun", resulting in fairly significant tweaks
+    between RG32 and SHA-3, there is no attack, theoretical or
+    otherwise, against unmodified RG32 better than 2 ^ 352.
+    It is my personal opinion that RG32 will probably always be secure enough
+    to make a 512-bit hash (2 ^ 256 collision, 2 ^ 512 preimage), and will 
+    almost certainly always be secure enough for a 256-bit hash (2 ^ 128
+    collision, 2 ^ 256 preimage).  I also 
+    understand that its low algebraic degree puts "hairline cracks" in its 
+    design; its direct successor SHA-3 is probably better for new 
+    deployments of a secure cryptographic hash and/or stream cipher.
+<p>
+    If anyone knows of an attack against RG32 better than 2 ^ 352, <A 
+    href=../mailme.php>please email me</A>.
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,45 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>January 25, 2012</h2>
+
+I have been improving Deadwood's resolution of domains with a bugfix as
+well as a new SQA test.
+
+<p>
+
+The other night, I discovered that the recent changes to the CNAME
+chasing as well as the LRU hash code made it impossible to resolve one
+particular domain.  I have fixed this bug.
+
+<p>
+
+In addition, I have added a new SQA test (which isn't an automated
+regression but a test run by hand) that checks to see which domains in
+an older list of the Alexa top 500 (now top 497) do not resolve.
+
+<p>
+
+Running this test several times and seeing which domains do not resolve
+has resulted in me tuning Deadwood to have a default <tt>num_retries</tt>
+of 5 instead of 2.  This greatly reduces the number of non-resolving
+domains in the Alexa list starting with an empty cache.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,125 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/2020-08-1.jpg width=224 height=126>
+</div>
+
+<h1>The one true language</h1>
+<h2>April 1, 2021</h2>
+Lunacy is the one true programming language.  April fools!
+
+<p>
+
+<A name=Lunacy></A><A name=Lunacy></A><span class=moyet>==</span><span class=blogtitle><b>Lunacy</b></span><span class=moyet>==</span>
+
+<p>
+
+April fools, because the idea of the one true programming language is
+a foolish idea.  The best programming language to use is the one
+your peers are using, or the one the project has already been written
+in.  The best tool for the job.
+
+<p>
+
+That said, I have <i>finally</i> found a programming language which
+nicely fills the gap between Sed/AWK and the “big” languages like
+Python/Perl/PHP/Java: Lunacy, which is my personal “Lua with batteries”
+language.  This is a fork of Lua 5.1 (to save some size) with a 
+number of useful third party libraries built in to the code.  
+
+<p>
+
+<A name=_Lua_No_batteries_></A><A name=LuaNobatteries></A><span class=moyet>==</span><span class=blogtitle><b> Lua: No batteries </b></span><span class=moyet>==</span>
+
+<p>
+
+Lua’s main issue is that it is a bare-bones language optimized to be
+as small as possible.  
+
+<p>
+
+That in mind, things like dictionary sorting, <tt>copy.deepcopy</tt>,
+and even regular expression splitting take up more code.  Let’s look
+at what an AWK-like script looks like in Lua:
+
+<p>
+
+<pre>
+-- Code is public domain
+function pStrSplit(s, splitOn)
+  if not splitOn then splitOn = "," end
+  local place = true
+  local out = {}
+  local mark
+  local last = 1
+  while place do
+    place, mark = string.find(s, splitOn, last, false)
+    if place then
+      table.insert(out,string.sub(s, last, place - 1))
+      last = mark + 1
+    end
+  end
+  table.insert(out,string.sub(s, last, -1))
+  return out
+end
+
+l = io.read()
+while l do
+  f = pStrSplit(l,"%s+") -- AWK-style split: f[1] is $1, etc.
+  -- process as needed
+  print(l)
+  l = io.read()
+end
+-- END public domain code
+</pre>
+
+<p>
+
+Here, we needed to add a Lua function which does regular expression
+string splitting, since while Lua has some regular expression
+support, it doesn’t have a <tt>split()</tt> operation.
+
+<p>
+
+<A name=_Lunacy_Lua_with_batteries_></A><A name=LunacyLuawithbatteries></A><span class=moyet>==</span><span class=blogtitle><b> Lunacy: Lua with batteries </b></span><span class=moyet>==</span>
+
+<p>
+
+Lunacy, my personal fork of Lua 5.1, does include a number of
+batteries:
+
+<p>
+
+<ul>
+<li> Secure hash compression
+<li> Strong random number generation
+<li> A subset of Luafilesystem
+<li> Most of bit32 for bitwise operations
+<li> Desktop calculator support
+<li> Better sub-process support (two-way pipes)
+<li> LUAstuff folder with other batteries implemented in Lua: Sorted 
+  table iterators, regular expression splitting, copying files, etc.
+</ul>
+
+<p>
+
+Lunacy is available for download at 
+<a href="https://github.com/samboy/lunacy">GitHub</a> and
+<a href="https://git.sr.ht/~samiam/Lunacy">Sourcehut</a>.  It’s also possible
+to download the
+<a href="https://samiam.org/software/lunacy-2021-03-22.tar.xz">source code</a> and
+<a href="https://samiam.org/software/lunacy-dist-2021-03-22.7z">Windows binary</a>
+locally.  Note that
+<a href="https://www.7-zip.org/">7-zip</a> is needed to unpack the Windows binary.
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

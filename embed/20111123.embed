@@ -1,0 +1,71 @@
+<!--{TAGS:M}-->
+
+<h1>Thanksgiving thoughts</h1>
+
+<h2>November 23, 2011</h2>
+
+<div class=blogtitle>
+<b>MaraDNS</b>
+</div><br>
+
+<A href=http://maradns.org/sponsors.html>Funding received</A> from my <A 
+href=http://samiam.org/blog/20111108.html>November
+2011 fund drive</A> is being used to improve Deadwood (MaraDNS 2's recursive
+resolver). 
+
+<p> 
+Right now, I am working on improving Deadwood's handling of incomplete
+CNAME records.  This is to speed up Deadwood's resolving of records
+where an incomplete CNAME with a long TTL points to a record with a
+short TTL.
+
+<p>
+Once that is done, I will update Deadwood to use more precise timestamps,
+so that Deadwood can more quickly resolve domains with non-responsive DNS
+servers.
+
+<p>
+My work so far can be looked at here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<div class=blogtitle>
+<b>Web site update</b>
+</div><br>
+
+I finally had a chance to see how my web site looks in the iPhone and 
+the iPad.  The site was remarkably readable, and the ads on the right
+hand side aren't a problem.  The only real issue is that the text 
+is a little small on the iPhone; I have updated the CSS for mobile browsers
+to make the text larger.
+
+<p>
+
+Newer mobile devices render the site well enough that I won't have to do
+an overhaul of its design in 2012; while the text ads are sometimes too small
+to be readable (without a pinch zoom), my contract with Google doesn't
+require me to make the text readable on all platforms.  It only requires me
+to keep the ads visible, which they are.
+
+<div class=blogtitle>
+<b>Errata</b>
+</div><br>
+
+In <A href=20111104.html>an older blog entry</A>, I incorrectly state that
+divorces will start happening after the second adultery.  They won't
+because, after the second adultery happens, each adultery victim will think
+that the other adultery victim thinks that 
+there are no adulteries in the village.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

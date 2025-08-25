@@ -1,0 +1,101 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2016-08-blog.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS 2.0.14 release</h1>
+<h2>June 10, 2017</h2>
+MaraDNS 2.0.14 has been released today. This is a non-security bugfix
+release.
+
+<p>
+
+<A name=changes></A><span class=moyet>==</span><span class=blogtitle><b>What changed</b></span><span class=moyet>==</span>
+
+<p>
+
+The only thing I have changed in the maradns binary is to update its
+version number to 2.0.14.  However, I have updated Deadwood, the recursive
+server, to version 3.2.10, and that has a few updates:
+
+<p>
+
+<ul>
+<li> h.root-servers.net IP updated
+<li> Slow down issue with mixed case queries fixed
+<li> We allow names to start with an underscore
+<li> Documentation updates
+</ul>
+
+<p>
+
+I have also verified that MaraDNS and Deadwood run in Windows 10.
+
+<p>
+
+It can be downloaded <a href=http://maradns.samiam.org/download.html>at
+the usual place</a>.
+
+<p>
+
+<A name=Learning_React></A><A name=LearningReact></A><span class=moyet>==</span><span class=blogtitle><b>Learning React</b></span><span class=moyet>==</span>
+
+<p>
+
+Google Trends shows that the React Javascript framework is gaining in
+popularity.  Not only are there a lot of excellent articles about React at
+Medium, but also it is gaining in popularity according to Google trends:
+
+<p>
+<img src="pics/AngularYellow-ReactBlue-EmberRed.png" style="width:90%">
+
+<p>
+
+In this image, the blue line is React JS, which is very popular and
+gaining.  The yellow line is AngularJS, which is still quite popular
+but starting to wane.  The red line barely visible at the bottom of
+the graph is Ember.js, a Javascript framework
+which never caught on; what little popularity it had is declining.
+
+<p>
+
+I believe the reason why Ember never caught on is because:
+
+<p>
+
+<ul>
+<li> It has too steep of a learning curve. Many shops can not afford a month
+  of downtime while their development team learns Ember’s quirks.
+<li> It never had a stable API, but constantly changed.  You had to either
+  constantly update your code or use an outdated version of Ember.
+<li> Likewise, since the API was not stable, people looking for answers to
+  Ember problems on Stack Overflow would find outdated answers.
+</ul>
+
+<p>
+
+React, on the other hand, looks to be easier to learn and more flexible
+to boot. I am going through 
+<a href="https://facebook.github.io/react/tutorial/tutorial.html"
+>Facebook’s excellent React tutorial</a> and am pleased React can work
+with non-Javascript sites (think accessibility for visually disabled people)
+using the <a href="https://github.com/gatsbyjs/gatsby">Gatsby framework</a>.
+
+<p>
+
+<p>
+
+<i>The screenshot from Google Trends is provided here for commentary;
+   While Google may be the copyright owner of this screenshot, its use
+   falls under fair use.</i><p>
+ 
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

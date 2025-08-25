@@ -1,0 +1,95 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>Deadwood 3.3.02</h1>
+<h2>February 23, 2019</h2>
+I have released Deadwood 3.3.02, a new development unstable update
+to MaraDNS’s recursive resolver.
+
+<p>
+
+<A name=Bogus_IPv6_addresses></A><A name=BogusIPv6addresses></A><span class=moyet>==</span><span class=blogtitle><b>Bogus IPv6 addresses</b></span><span class=moyet>==</span>
+
+<p>
+
+Just as 
+<a href="https://samiam.org/blog/2019-02-11.html">Deadwood 3.3.01 added ip4</a>,
+Deadwood 3.3.01 adds ip6: The ability to set the IPv6 IPs for
+a given domain name.  
+
+<p>
+
+We don't use standard notation for IPv6 addresses.  Instead, we
+we use 32-character hex addresses (case insensitive); to make
+it easier to count long strings of "0"s, the "_" acts like a 0:
+
+<p>
+
+<tt>ip6 = {}</tt><br>
+<tt>ip6["maradns.foo."] = "fd4d617261444e530000000000001234"</tt><br>
+<tt>ip6["kabah.foo."] = "FD4D617261444E53__00__00__002345"</tt><br>
+
+<p>
+
+
+<p>
+
+With these lines, whenever we ask Deadwood for the IP for “maradns.foo”,
+we get the ipv6 answer fd4d:6172:6144:4e53::1234, regardless of the IP 
+this domain may actually have.  Likewise, when we ask for “kabah.foo”, we 
+get the ipv6 answer fd4d:6172:6144:4e53::2345.
+
+<p>
+
+
+<p>
+
+<A name=Limitations></A><A name=Limitations></A><span class=moyet>==</span><span class=blogtitle><b>Limitations</b></span><span class=moyet>==</span>
+
+<p>
+
+There are a number of limitations with this feature:
+
+<p>
+
+<ul>
+<li> A given hostname can only have a single IP.
+<li> Since Deadwood uses a fairly large amount of memory to store these
+  entries, we can only store 20,000 entries.  
+<li> The feature is currently unstable: I have not thoroughly tested this
+  code.
+</ul>
+
+<p>
+
+<A name=Getting_Deadwood_3302></A><A name=GettingDeadwood3302></A><span class=moyet>==</span><span class=blogtitle><b>Getting Deadwood 3.3.02</b></span><span class=moyet>==</span>
+
+<p>
+
+Both the source code and Windows binaries of Deadwood 3.3.02 are available:
+
+<p>
+
+<ul>
+<li> <A href="https://maradns.samiam.org/deadwood/snap/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+<li> <A href="https://sourceforge.net/projects/maradns/files/Deadwood/3.3.02/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>02/</A>
+</ul>
+
+<p>
+
+As always, MaraDNS is a free open-source download, and I was not
+compensated for developing this feature (but donations are always
+welcome).
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

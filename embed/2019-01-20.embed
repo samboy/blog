@@ -1,0 +1,51 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>MaraDNS 2.0.17 released</h1>
+<h2>January 20, 2019</h2>
+I have updated both MaraDNS and Deadwood in today’s release of MaraDNS.
+This is a bugfix-only release; no security updates were made.
+
+<p>
+
+<A name=Details></A><A name=Details></A><span class=moyet>==</span><span class=blogtitle><b>Details</b></span><span class=moyet>==</span>
+
+<p>
+
+Deadwood has been updated to 3.2.14 as described in
+<a href="https://samiam.org/blog/2019-01-19.html">yesterday’s blog entry</a>.
+MaraDNS has been updated to double the default amount of memory
+allowed to be used while MaraDNS is running.  
+<a href="https://github.com/samboy/MaraDNS/issues/52">More information is in the GitHub ticket</a>.
+
+<p>
+
+<A name=Getting_the_updated_version></A><A name=Gettingtheupdatedversion></A><span class=moyet>==</span><span class=blogtitle><b>Getting the updated version</b></span><span class=moyet>==</span>
+
+<p>
+
+<ul>
+<li> <A href="https://maradns.samiam.org/download/2.0/2.0.17/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>17/</A>
+<li> <A href="https://sourceforge.net/projects/maradns/files/MaraDNS/2.0.17/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>17/</A>
+</ul>
+
+<p>
+
+<A name=Next></A><A name=Next></A><span class=moyet>==</span><span class=blogtitle><b>Next</b></span><span class=moyet>==</span>
+
+<p>
+
+Now that I have fixed a couple of bugs, I will work on adding features.
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,37 @@
+<!--{TAGS:M}-->
+
+<h1>Server Fault Fail</h1>
+
+<h2>August 15, 2012</h2>
+
+Over at Server Fault, someone resurrected a years-dead thread by
+<A href=http://serverfault.com/questions/32683/djbdns-vs-bind>claiming</A>
+that "MaraDNS is no longer maintained by the author".  Can you say fail?
+
+<p>
+
+The truth of that matter is that I still maintain MaraDNS, pretty
+diligently once a month for an hour or two.  That gives me enough time to
+fix security and other bugs, and update MaraDNS to run on newer versions
+of Linux -- my project right now is to update MaraDNS to fully run in
+CentOS/Oracle/Scientific Linux 6.
+
+<p>
+
+It would have been far more accurate to say "new features are no longer
+being added to MaraDNS" -- which, barring me winning the lottery or otherwise
+becoming independently wealthy, is true.  Please, guys, check what you
+say before spouting off on public forums.
+
+<p>
+
+<i>2014 update: I finally became an active member of the Server Fault
+community and posted a correction in response to the comment in question.</i>
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,142 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/graph-2020-05.jpg width=224 height=126>
+</div>
+
+<h1>COVID-19 and CHAZ</h1>
+<h2>June 13, 2020</h2>
+I discuss COVID-19 growth in San Diego and Seattle’s “CHAZ” experiment to
+have an area downtown with no police. <i>396 words</i>
+
+<p>
+
+<A name=COVID19_Update_for_20200613></A><A name=COVID19Updatefor20200613></A><span class=moyet>==</span><span class=blogtitle><b>COVID-19: Update for 2020-06-13</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/COVID-19-2020-06-13.png" alt="">
+<br class=nomobile>
+<i>COVID-19’s doubling time in San Diego</i>
+<p>
+
+<p>
+
+Right now with the COVID-19 illness, we continue to not have exponential
+growth of cases here in San Diego country, as shown in this 
+graph,<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote1">1</a></sup>
+but the protests appear to have had an effect.
+
+<p>
+
+Here, the higher the lines are, the better we are doing (the slower
+COVID-19 is spreading). The blue (darker) line is “if we maintain the
+growth we had on a given day (7-day average), how long would doubling
+take?” and the orange (lighter) line is “how many days ago did we
+have half the number of cases we had on this day?”.
+
+<p>
+
+As we can see, last week the blue line went down: Most likely, those
+George Floyd protests did increase COVID-19 growth. However, with the
+protests dying down the blue line is going up again.
+
+<p>
+
+Hair cut places are open again. School daycare is opening up again next
+week. We will see how that affects growth.
+
+<p>
+
+<A name=There_is_a_police_free_area_in_Seattle></A><A name=ThereisapolicefreeareainSeattle></A><span class=moyet>==</span><span class=blogtitle><b>There is a police free area in Seattle</b></span><span class=moyet>==</span>
+
+<p>
+
+There is now, in the heart of downtown Seattle, an area with no police
+intervention being done.  It’s called the “Capitol Hill Autonomous Zone”
+or CHAZ.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote2">2</a></sup>  While the area has been police-free for a few days,
+the place seems fairly peaceful and free of violence.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote3">3</a></sup>
+
+<p>
+
+The right wing has been claiming there have been attempts to extort
+businesses in the police-free zone for money,<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote4">4</a></sup> but those
+claims appear to be false;<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote5">5</a></sup> we know that the right wing media
+has been manipulating evidence to make the area look worse than it actually
+is.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote6">6</a></sup>
+
+<p>
+
+I can tell you this much: This police-free zone is doing a lot better than
+Science Fiction authors predicted it would.  Larry Niven’s classic 1972
+story “<a href="http://www.larryniven.net/stories/cloak_of_anarchy.shtml">Cloak
+of Anarchy</a>” had things descend in to senseless violence within nine
+hours after police presence was removed.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote7">7</a></sup>  The movie
+“Class of 1999”, which predicted a police-free zone in Seattle back in 
+1990, also has overwhelming violence.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote8">8</a></sup>
+
+<p>
+
+If this area were to remain police-free, my guess is that would eventually
+end up like a third world country, with houses and businesses needing
+to be barricaded with high fences to protect themselves.  When I
+lived in Mexico, each house was like a little fortress, with a high
+wall surrounding it, and doors to the outside that locked whenever you
+closed them.  I am sure police will return to this CHAZ area
+long before that would happen.
+
+<p>
+
+<A name=Footnotes></A><A name=Footnotes></A><span class=moyet>==</span><span class=blogtitle><b>Footnotes</b></span><span class=moyet>==</span>
+
+<p>
+
+<ol>
+<a name="Footnote1"> </a><li>The COVID-19 data comes from The New York Times, over at
+<A href="https://github.com/nytimes/covid-19-data">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>nytimes/<![if gt IE 6]>&#8203;<![endif]><wbr>covid-<![if gt IE 6]>&#8203;<![endif]><wbr>19-<![if gt IE 6]>&#8203;<![endif]><wbr>data</A>  I process the data to get 
+doubling time figures, both actual and predicted; that code can be
+seen at <A href="https://github.com/samboy/covid-19-html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>covid-<![if gt IE 6]>&#8203;<![endif]><wbr>19-<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>  While facts can not
+be copyrighted, The New York Times claims copyright on their COVID-19
+data.
+<a name="Footnote2"> </a><li>“<a href="https://www.nytimes.com/2020/06/11/us/seattle-autonomous-zone.html">Free 
+Food, Free Speech and Free of Police: Inside Seattle’s ‘Autonomous Zone’</a>”
+by Mike Baker, published by The New York Times
+<a name="Footnote3"> </a><li>“<a href="https://www.usatoday.com/story/news/nation/2020/06/12/seattle-protest-chaz-capitol-hill-autonomous-zone-police-free/3173968001/">CHAZ, 
+a ‘no Cop Co-op’: Here’s what Seattle's Capitol Hill Autonomous Zone 
+looks like</a>” by Ryan W. Miller, published by USA Today
+<a name="Footnote4"> </a><li>“<a href="https://www.foxnews.com/us/seattle-protests-armed-guards-local-businesses-extortion">Seattle 
+‘autonomous zone’ has armed guards, local businesses being threatened 
+with extortion, police say</a>” by Vandana Rambaran, published by Fox News
+<a name="Footnote5"> </a><li>“<a href="https://heavy.com/news/2020/06/seattle-capitol-hill-autonomous-zone-chaz-extortion/">No 
+Evidence of Capitol Hill Autonomous Zone (CHAZ) Businesses Being Extorted</a>”
+published by heavy.com
+<a name="Footnote6"> </a><li>“<a href="https://www.washingtonpost.com/politics/2020/06/13/fox-news-removes-manipulated-images-coverage-seattle-protests/">Fox 
+News removes manipulated images from coverage of Seattle protests</a>” by
+Isaac Stanley-Becker published by The Washington Post
+<a name="Footnote7"> </a><li>“<a href="http://www.larryniven.net/stories/cloak_of_anarchy.shtml">Cloak
+of Anarchy</a>” by Larry Niven.  Originally published in the March
+1972 issue of <i>Analog Science Fiction and Fact</i>.
+<a name="Footnote8"> </a><li><a href="https://www.washingtonpost.com/wp-srv/style/longterm/movies/videos/classof1999rharrington_a0aaeb.htm">“Class
+of 1999” movie review</a> by Richard Harrington, published by Washington Post
+
+<p>
+
+</ol>
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

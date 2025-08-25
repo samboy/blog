@@ -1,0 +1,58 @@
+<div class=blogpic>
+<img src=pics/Git-SHA1.jpg width=160 height=120>
+</div>
+
+<h1>Why is Git still using SHA-1</h1>
+
+<h2>October 4, 2012</h2>
+
+Back in 2008, <A 
+href=http://www.zdnet.com/blog/security/how-opendns-powerdns-and-maradns-remained-unaffected-by-the-dns-cache-poisoning-vulnerability/1562
+>Dancho Danchev praised MaraDNS</A>, my DNS implementation, for being secure.  
+At the time, there was a nasty attack against DNS implementations making the 
+rounds.  MaraDNS was immune because, back in 2001, I listened to what
+<A href=http://web.archive.org/web/20010208185642/http://cr.yp.to/djbdns/forgery.html
+>DJB had to say</A>.
+
+<p>
+
+DJB has just posted the following on the SHA-3 mailing list:
+
+<blockquote>
+the details of the original MD5 collision attack turned out
+to be a terrifying indictment of the structure of MD5, and the details
+of the SHA-1 attack are similarly scary
+</blockquote>
+
+<p>
+
+An anonymous poster on <A href=20120929.html>Slashdot</A> posted back
+in 2009 <A href=http://it.slashdot.org/comments.pl?sid=1905932&cid=34520692>a
+plausible attack scenario</A> with Git using collisions in SHA-1.
+There was also <A href=
+http://blogs.igalia.com/berto/2009/01/27/git-and-the-security-of-sha-1/
+>some mumbling</A> in the blogosphere back then for GIT to update its 
+underlying cryptographic primitive.
+
+<p>
+
+The bottom line is this: It is high time for Git to move on beyond
+SHA-1.  Ideally, Git should store hashes in an "algorithm:hash" format,
+and support all four variants of both SHA-2 and now SHA-3.
+
+<p>
+
+<i>The above picture contains an image from the </i>Star Trek: The Next 
+Generation<i> episode "M&eacute;nage &agrave; Troi", copyright 1990
+CBS Studios.  I believe this use of the image qualifies as fair use,
+since it is only a very low-resolution single frame, and its use does
+not harm (indeed it may even help) the market for the original work.</i>
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

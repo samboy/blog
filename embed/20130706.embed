@@ -1,0 +1,45 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood Update</h1>
+<h2>July 6, 2013</h2>
+I have updated Deadwood; Deadwood has always had a limit of 20,000
+fixed upstream servers.  While this does not affect normal usage of
+Deadwood, people trying to have a huge blacklist in Deadwood would
+be unable to resolve any domains.
+
+<p>
+
+The workaround is to make this silent limit more visible; Deadwood will
+now complain with a fatal error if there are more than about 20,000
+upstream/blacklist entries in one’s dwood3rc file.
+
+<p>
+
+Note that this does not affect the total number of NS referral cache entries
+that Deadwood can handle, only the user-defined upstream servers.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://www.maradns.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+This is an out of band update; while I do not actively work on new features
+I still fix serious bugs (or, in this case, what 
+<i>looked</i>
+like a serious bug at first glance) when I become aware of them.
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

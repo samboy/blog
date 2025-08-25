@@ -1,0 +1,110 @@
+<div class=blogpic>
+<img src=pics/2016-08-blog.jpg width=120 height=120>
+</div>
+
+<h1>Trumpcare’s defeat</h1>
+<h2>April 3 2017</h2>
+This blog is about “Trumpcare”, the fact that CDs give perfect sound,
+and more about my DEH-X1900UB car stereo.
+
+<p>
+
+<A name=The_defeat_of_Trumpcare></A><A name=ThedefeatofTrumpcare></A><span class=moyet>==</span><span class=blogtitle><b>The defeat of Trumpcare</b></span><span class=moyet>==</span>
+
+<p>
+
+I do not consider the defeat of Trumpcare a defeat of conservative 
+values.  I consider the defeat of Trumpcare and the continuation of
+Obamacare a 
+<i>victory</i> for conservative family values.  It was, after all,
+Republicans who had the power to abolish Obamacare, and conservative
+Republicans who ultimately decided that a bill that would have
+<a href="http://www.vox.com/policy-and-politics/2017/3/14/14921962/ahca-mortality-gun-homicides">killed 24,000 people a year</a>
+was not a good idea.
+
+<p>
+
+Hopefully, this debacle will help the Republican party return to truly
+conservative values.
+
+<p>
+
+<A name=CD_Perfect_sound_forever></A><A name=CDPerfectsoundforever></A><span class=moyet>==</span><span class=blogtitle><b>CD: Perfect sound forever</b></span><span class=moyet>==</span>
+
+<p>
+
+<a href="https://www.macobserver.com/tmo/article/digital-music-16-bit-44-khz-explained">Here is one good article showing that CDs sound perfect</a>
+and
+<a href="https://archive.md/sYerA">here is another article making the same point</a>.
+
+<p>
+
+Now, every now and there there appears a 
+<a href="http://www.aes.org/e-lib/browse.cfm?elib=15398">paper</a>
+that claims
+<a href="http://www.aes.org/e-lib/online/browse.cfm?elib=17497">people can</a>
+hear the difference between CD quality and high resolution audio in a
+blind listening test.  Every time one of those comes up, I get skeptical;
+extraordinary claims require extraordinary evidence and there are a lot
+of ways sound can vary if a test is not properly calibrated.  For example:
+
+<p>
+
+<ul>
+<li> Was the volume level between the CD quality audio and the high resolution
+  audio calibrated to be exactly the same?
+<li> Was the process of converting the high resolution audio to CD quality 
+  audio done the same way it would be done in the real world, or was
+  it intentionally crippled? (The second paper I link to from 2014, 
+  the “Meridian paper” crippled the CD audio by using “rectangular 
+  dither.”)
+<li> Does the amplifier, speakers, or headphones suffer from inter-modulation
+  distortion, where frequencies too high for humans to hear are converted
+  in to lower frequency sounds?
+<li> Was the study a true double blind study, where neither the listener nor
+  the person conducting the study knew which sound was the high resolution
+  sound?
+</ul>
+
+<p>
+
+<A name=_DEHX1900UB_redux_></A><A name=DEHX1900UBredux></A><span class=moyet>==</span><span class=blogtitle><b> DEH-X1900UB redux </b></span><span class=moyet>==</span>
+
+<p>
+
+Now that I have had my DEH-X1900UB car stereo for over a couple of months,
+some more thoughts:
+
+<p>
+
+<ul>
+<li> “Random”, by default, will randomly play any song anywhere on the
+  mp3 CD/USB stick, which makes little sense to me.  It’s possible to 
+  shuffle a single album by selecting both “Repeat folder” and “random”
+  at the same time, but this is buggy: When the folder is changed, repeat
+  is disabled but random is not disabled, causing the next track to be
+  from any folder unless I remember to either turn on “repeat folder” or
+  turn off “random” when changing albums.
+<li> It’s possible to attach a 128 gigabyte USB memory to the unit, as long
+  as the unit is formatted with the FAT32 filesystem (I need to point out
+  here that Windows can format arbitrarily large filesystems as FAT32 
+  without any third party utilities).  The issue is that it’s difficult to
+  navigate more than 50 folders or so because the DEH-X1900UB only has two
+  buttons to change folders.  
+</ul>
+
+<p>
+
+<i>I next disucss the DEH-X1900UB car stereo in a
+<a href="2021-11-07.html#DEHX1900UB_Setting_the_time">2021 blog entry</a>.</i>
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

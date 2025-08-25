@@ -1,0 +1,66 @@
+<!--{TAGS:M}-->
+
+<h1>New Deadwood snapshot</h1>
+
+<h2>November 19, 2011</h2>
+
+I am beginning the work of having Deadwood check for a CNAME record
+in the cache before sending a query upstream.  This should make the program
+resolve names in what I call "Akamai hell" -- host names with a lot of
+incomplete (glueless) CNAME records which have to be chased -- resolve
+more quickly.
+
+<p>
+
+This work is a little tricky -- the code I have to change was written
+to make a simple non-recursive DNS cache -- and progressing slowly.  However,
+in the process of writing this code, I figured out a way to make the
+Deadwood binary noticeably smaller, by making a frequently called inline
+sequence its own function.  
+
+<p>
+
+This code size optimization is useful for embedded applications of Deadwood;
+one of my goals is to keep the Deadwood Windows binary under 65,536 bytes in 
+size.  This optimization reduces the size of the Deadwood binary from
+65,536 bytes to 61,952 bytes in size, and allows the tiny version of the
+binary to have filter_rfc1918 functionality again.
+
+<p>
+
+With this change, there is now 3,584 bytes to play with, which should be 
+enough space to add all of the code I will add to handle CNAME chains better
+and for some other speed optimizations.
+
+<p>
+
+To compile a smaller binary, be sure TINY_BINARY is defined; this removes
+some of the parsing rules used for minimizing the amount of support emails 
+the list gets.
+
+<p>
+
+I have, in addition to the source code, the tiny Windows binary.
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+As an aside, I have broken my promise not to post to Slashdot again in
+order to get the word for MaraDNS out there.  It's amazing the number of
+<A href=http://slashdot.org/comments.pl?sid=2531162&cid=38089178>djbdns</A>
+<A href=http://slashdot.org/comments.pl?sid=2531162&cid=38091416>users</A>
+who still believe the myth that djbdns is magically completely secure 
+and never needs patching.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

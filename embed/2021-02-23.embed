@@ -1,0 +1,76 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Chess10x10.jpg width=224 height=126>
+</div>
+
+<h1>Online Chess</h1>
+<h2>February 23, 2021</h2>
+I list websites for playing Chess online.  Also, MaraDNS 3.5.0018 was 
+released a couple of months ago.
+
+<p>
+
+<A name=Online_Chess></A><A name=OnlineChess></A><span class=moyet>==</span><span class=blogtitle><b>Online Chess</b></span><span class=moyet>==</span>
+
+<p>
+
+There are a number of places where one can play free online Chess or Chess
+variants.  I will only list places which are free to play and support
+correspondence Chess:
+
+<p>
+
+<ul>
+<li> <A href="https://lichess.org/">https://lichess.org/</A>  Geared towards normal Chess, but it has a few 8x8
+  variants.  The site is fully free and open source, and includes a
+  full featured opening explorer.
+<li> <A href="https://lishogi.org/">https://lishogi.org/</A>  Like Lichess, but for Shogi.  No Shogi variant 
+  support yet.
+<li> <A href="https://lidraughts.org/">https://lidraughts.org/</A>  While they do not support Chess, this site is
+  like Lichess, but for a number of Checkers variants.
+<li> <A href="https://greenchess.net/">https://greenchess.net/</A>  This website is not open source,
+  but is free to play.  It only supports variants of “normal” modern
+  western Chess, but it has a number of variants, including ones which
+  do not use a square board.
+<li> <A rel="nofollow" href="https://brainking.com/">https://brainking.com/</A>  Correspondence games; a number of Chess variants 
+  are supported (Embassy Chess, Grand Chess, Chinese Chess, etc.).  Not
+  open source, but free to play up to 20 games at once.  Note that
+  the web design is dated looking, and the text includes a lot of SEO links
+  for online gambling sites.
+<li> <A rel="nofollow" href="http://www.gamerz.net/pbmserv/">http://www.gamerz.net/pbmserv/</A>  Not open source, but a server 
+  which has been around for a long time which supports a number of
+  Chess variants and other games.  Games are played via email and use
+  ASCII graphics (I suggest owning a real board). The text, like Brainking,
+  has a lot of SEO links for online gaming; this might be needed to keep 
+  the site online.
+</ul>
+
+<p>
+
+For anyone who wishes to play me online, my Lichess handle is
+<a href="https://lichess.org/@/Goldrider">Goldrider</a>.  There currently
+is a queue before I will start a new game; send me a message there 
+and I will gladly put you on my waiting list and play you once I
+finish a game.
+
+<p>
+
+<A name=MaraDNS_350018></A><A name=MaraDNS350018></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0018</b></span><span class=moyet>==</span>
+
+<p>
+
+I released MaraDNS 3.5.0018 a couple of months ago.  The main update
+from 3.5.0017 is that this version is now using Ubuntu 20.04 instead
+of CentOS 8 for testing and development.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

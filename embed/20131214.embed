@@ -1,0 +1,117 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>More font updates</h1>
+<h2>December 14, 2013</h2>
+Yesterday, I 
+<a href="http://samiam.org/blog/20131213.html">mentioned</a>
+that I was having technical problems with the Windows bitmap conversion
+of 
+<a href="http://samiam.org/fonts/terminal/WTerm/">WTerm</a>, forcing me to rename
+the font WTm.  I have fixed this problem.  I also discuss the Cousine 
+font losing its delta hinting.
+
+<p>
+
+<A name=The_problem_with_WTm></A><A name=TheproblemwithWTm></A><span class=moyet>==</span><span class=blogtitle><b>The problem with WTm</b></span><span class=moyet>==</span>
+
+<p>
+
+The problem is that Windows .fon files are not fully documented, and the
+open-source tool I was using to convert the fonts was having issues making
+the font one MSYS would recognize.  After hours of trying different things
+Fontforge finally made a MSYS-capable .fon file by having three fonts in 
+the file, only one of which I used.  The font name was one-letter long; I
+changed it to a three-letter name by using a binary editor.
+
+<p>
+
+<A name=Fixing_WTm></A><A name=FixingWTm></A><span class=moyet>==</span><span class=blogtitle><b>Fixing WTm</b></span><span class=moyet>==</span>
+
+<p>
+
+Simon Tatham, the same guy who wrote the PuTTY client I am using to write
+this blog, also wrote 
+<a href="http://www.chiark.greenend.org.uk/~sgtatham/fonts/">his own .fon generation scripts in Python.  His scripts
+</a>were able to take the hacked-together .fon file and convert it in to
+a .fon file with the correct font name (WTermA, to distinguish it from the
+scalable WTerm font).  The resulting file is smaller since it now only
+has one font in it.
+
+<p>
+
+I have made a local mirror of his scripts and fonts (which, being bitmap
+fonts, are public domain in the US):
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/terminal/Simon-Tatham/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>Simon-<![if gt IE 6]>&#8203;<![endif]><wbr>Tatham/</A>
+</blockquote>
+
+<A name=Download_and_using_WTermA></A><A name=DownloadandusingWTermA></A><span class=moyet>==</span><span class=blogtitle><b>Download and using WTermA</b></span><span class=moyet>==</span>
+
+<p>
+
+WTermA, the updated and fixed WTm, is available here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/terminal/WTerm/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>WTerm/</A>
+</blockquote>
+
+It has the file name WTermA.fon.  To use this file, download it, then click
+on it in Windows to install the font.  After installing the font, it can 
+be used in MSYS by modifying msys.bat to look like this:
+
+<p>
+
+<tt>start rxvt -backspacekey -sl 2500 -fg #00c000 -bg #000000 -sr -fn WTermA -tn msys -geometry 80x25+15+15 -e /bin/sh --login -i</tt><br>
+
+<p>
+
+<A name=Cousine_lost_its_delta_hinting></A><A name=Cousinelostitsdeltahinting></A><span class=moyet>==</span><span class=blogtitle><b>Cousine lost its delta hinting</b></span><span class=moyet>==</span>
+
+<p>
+
+One of the hardest parts of making a font is giving it good hinting. 
+This is a tedious, time consuming process.  As a result, very few open-source
+fonts include delta hints.
+
+<p>
+
+The best-looking open source with delta hinting has been the monospace
+OFL-licensed Cousine.  When I downloaded the new Cousine today, it was
+a shock to discover that, when Google changed its license from the OFL
+to the Apache license, the updated font no longer has delta hinting.
+
+<p>
+
+That in mind, I have mirrored a copy of the older Cousine with delta
+hinting, which can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/terminal/WTerm/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>WTerm/</A>
+</blockquote>
+
+While retina displays will become universal in a decade or so, until then
+delta hinting is a technology that allows for crisp, readable fonts on
+today’s displays.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,74 @@
+<div class=blogpic>
+<img src=pics/2016-08-blog.jpg width=120 height=120>
+</div>
+
+<h1>Cakewalk Sonar</h1>
+<h2>March 11, 2017</h2>
+I have purchased Cakewalk Sonar and will slowly make the transition
+away from hardware and towards software.  However, a note about Sonar’s
+copy protection.
+
+<p>
+
+<A name=Sonar_Now_copy_protected></A><A name=SonarNowcopyprotected></A><span class=moyet>==</span><span class=blogtitle><b>Sonar: Now copy protected</b></span><span class=moyet>==</span>
+
+<p>
+
+Cakewalk Sonar is one of many computer programs people can use to make
+music.  Just as word processors have made typewriters by and large 
+obsolete, this kind of “Digital Audio Workstation” (DAW) software is
+making traditional tape-based music production obsolete.
+
+<p>
+
+I chose Cakewalk Sonar as the DAW I will learn how to
+use. While the Cakewalk vs. Ableton vs. Pro Tools vs. Cubase vs.
+Reason vs. Studio One vs. Ardour vs. Reaper vs. etc. debate is one
+which will never 
+<a href="https://www.slant.co/topics/1835/~daw">have a definitive answer</a>, I chose Sonar because it
+only had serial number copy protection.
+
+<p>
+
+“Had” being the operative word here.  Starting in 2015, Cakewalk Sonar
+<a href="http://forum.cakewalk.com/Sonar-now-challengeresponse-activation-m3146749.aspx">started using basic challenge-response copy protection</a>.
+The key word here is basic — Cakewalk didn’t actually try to make the
+challenge response algorithm hard to crack, and, indeed, there
+are programs which, given only a challenge, generate a response. 
+
+<p>
+
+It’s unfortunate that Cakewalk has made installing their software on
+new computers reliant on their key generation servers remaining online,
+or using programs that are in a legal gray area to generate a response
+code. While Cakewalk has promised that the key generation servers are
+in escrow and will not go offline, I doubt I would be able to generate
+a response code 30 years from now — and, yes, I do have gear I have
+owned for more than 30 years in my studio which I still actively use in
+my music.
+
+<p>
+
+Looking back, Reaper, which does not have copy protection at all, might
+have been a better choice.  But, unlike Reaper, Cakewalk includes a
+selection of nice instruments, and it is probably easier to use.
+
+<p>
+
+Hopefully, I will have time to learn how to use Sonar (I also need to 
+update my audio interface to one with MIDI). Until then, I
+am comfortable with the old school tape based (these days, “tape” is a
+Tascam DP-32SD Portastudio, which uses a SD card but acts like an
+old school multitrack tape recorder) and hardware way of making
+electronic music.
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,76 @@
+<h1>MaraDNS; the PROTECT act</h1>
+
+<h2>May 27, 2011</h2>
+
+As I <A href=20110513.html>blogged about two weeks ago</A>, I would not
+make any updates to MaraDNS today unless users posted bugs or support
+concerns.  That didn't happen, so there's no need to work on MaraDNS 
+today.
+
+<p>
+
+The next day I plan to work on MaraDNS/Deadwood is two weeks from today:
+June 10, 2011.  If there are no reported bugs, I will update Deadwood
+to version 3.0.03.
+
+<p>
+<hr>
+<p>
+
+Some DNS experts have <A 
+href=http://www.circleid.com/posts/20110525_experts_urge_congress_to_reject_proposed_dns_filtering_protect_ip/>written
+a paper</A> pointing out their issues with the <A 
+href=http://leahy.senate.gov/imo/media/doc/BillText-PROTECTIPAct.pdf>PROTECT
+IP act</A>.  
+
+<p>
+
+As a DNS expert and implementer, I do not feel the clauses in the PROTECT IP
+act are too onerous.  The PROTECT IP act only requires a DNS operator to
+disable resolution of a domain <i>if they are served with papers ordering
+them to disable the domain</i>.  As it turns out, <A 
+href=http://maradns.org/deadwood/doc/FAQ.txt>this is easy enough to do
+in Deadwood</A>, and most users of Deadwood would not be served with papers.
+
+<p>
+
+This does not affect Deadwood nor MaraDNS, but I should point out that
+because of how DJBdns' dnscache is written, blacklisting a large number 
+of domains without killing performance requires changes being made to that
+source code.
+
+<p>
+
+In terms of DNSSEC, one way to allow this would be to have a second "root
+key" that can sign PROTECT-IP blacklisted domains.
+
+<p>
+
+In terms of issues with piracy, I have mixed feelings.  I do not think
+pirating content is always morally wrong (for example, downloading
+the electronic version of a book one purchased, or the no-CD version
+of a video game one owns), but I do find the entitlement mentality that
+many users of the internet have very irritating; ultimately, there is
+no such thing as a free lunch (TINSTAAFL).  Indeed, I came to a point
+where I needed to stop non-bugfix MaraDNS development because I realized
+I was working too hard on MaraDNS for me to continue doing it without
+getting paid.
+
+<p>
+
+Speaking of which, I haven't gotten a single donation since allowing
+MaraDNS users to donate again two weeks ago.  If you find MaraDNS useful, 
+and can afford to pass me a few dollars, I would love it if you would
+made a donation; the click to donate button is on the <A 
+href=http://maradns.org>MaraDNS home page</A>.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

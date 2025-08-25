@@ -1,0 +1,104 @@
+<!--{TAGS:M}-->
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Why use MaraDNS?</h1>
+
+<h2>October 6, 2012</h2>
+
+<i>I had a friend of mine recently ask me why MaraDNS is a DNS server 
+worth using.  I gave him this reply.</i>
+
+<p>
+
+MaraDNS is a good solution where you need a currently supported
+cross-platform recursive DNS server with a small binary footprint
+(under 64k!) and a relatively small memory footprint (about 2-4 megs
+with the default settings). As an authoritative server, MaraDNS is
+a good solution if you have relatively few reasonably static domains
+(IPs don't change very often) and need a DNS server that very quickly
+fetches records from memory.
+
+<p>
+
+MaraDNS makes a lot of sense on low-end low-cost servers (where any file
+open or fork() is dog-slow) and on systems where the DNS server is best
+small. MaraDNS also can make sense for embedded systems (OpenWRT, etc.),
+but keep in mind that its constant malloc()s and free()s of memory is
+not ideal with some low-end embedded toolkits.
+
+<p>
+
+MaraDNS as an authoritative server is a mature product with over a decade
+of real-world use. Deadwood, the newer recursive server, is younger:
+It has existed in some form for five years but has only been fully
+recursive for two; it has had a fair amount of testing in that time frame.
+
+<p>
+
+MaraDNS doesn't make sense if you need DNSSEC, full zone transfers, EDNS,
+or other newer DNS features. MaraDNS doesn't make sense if you need
+a server that developers are still adding features to: It is a mature
+and, barring a large inflow of cash or another open-source developer
+willing to step up to plate, a finished product.  
+
+<p>
+
+<p>
+<div class=blogtitle>
+<b>Deadwood turned five yesterday</b>
+</div><br>
+
+I just realized that <A href=old-200710-groundbreaking-of-deadwood-project.html
+>Deadwood turned five yesterday</A>; it now has been over five years since
+the groundbreaking of the Deadwood project.  The reason I started the project
+is because I wrote MaraDNS' original code too quickly and without knowing
+all of the corner cases to handle correctly in order to resolve most names 
+on the Internet.
+
+<p>
+
+The result of both having to add a bunch of features to handle corner cases in
+MaraDNS' code and trying to get a working recursive DNS server out there
+quickly was guacamole code.  The code was messy and nigh-to-unmaintainable
+by the time I was done -- Franky and I spent months chasing down all of
+the memory leaks before making the 1.0 release over a decade ago.
+
+<p>
+
+My plan was always to make a "prototype" recursive DNS server so I could
+fully understand how DNS works before making the real recursive server. 
+This is why MaraDNS 1.0 used threads: It made implementing recursion that
+much easier.
+
+<p>
+
+Deadwood, MaraDNS 2.0's recursive resolver, is a project I probably should
+have started 10 instead of five years ago.  If everything had been on
+schedule, it would have taken me about 18 months, not three years, to get
+the 1.0 release out the door after I started Deadwood.  We could have
+had MaraDNS 2.0 in 2004.
+
+<p>
+
+That didn't happen because of open source economics:  Since no one was
+paying me to write this software, I just did not have the motivation
+to develop it more quickly.  Indeed, the only reason I finished
+up Deadwood's recursion was because I made a promise to myself to have
+new recursive code out the door before putting MaraDNS on the back burner.
+
+<p>
+
+Making MaraDNS and Deadwood has been a lot of fun.  It would be wonderful
+to be in an economic position to be able to actively develop open
+source again.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

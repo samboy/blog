@@ -1,0 +1,135 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2016-1-120.jpg width=120 height=120>
+</div>
+
+<h1>New single released</h1>
+<h2>July 21, 2016</h2>
+I have released a new single this month. Also, some thoughts on current
+events and MaraDNS.
+
+<p>
+
+<A name=New_single_released></A><A name=Newsinglereleased></A><span class=moyet>==</span><span class=blogtitle><b>New single released</b></span><span class=moyet>==</span>
+
+<p>
+
+I have released another single from my slowly developing album (as a 
+single parent with a full time job, it’s going to take time to finish
+the album). It’s called “Foggy Beach Party” and it’s available to listen
+to or buy on my Bandcamp page:
+
+<p>
+
+<blockquote>
+<A href="https://caulixtla.bandcamp.com/album/foggy-beach-party">https://<![if gt IE 6]>&#8203;<![endif]><wbr>caulixtla.<![if gt IE 6]>&#8203;<![endif]><wbr>bandcamp.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>album/<![if gt IE 6]>&#8203;<![endif]><wbr>foggy-<![if gt IE 6]>&#8203;<![endif]><wbr>beach-<![if gt IE 6]>&#8203;<![endif]><wbr>party</A>
+</blockquote>
+
+The A-side of this single, “Foggy Beach Party”, is a mid-tempo dance
+number which also has a nice ambient feel to it. The B-side, “Clouds”,
+is a purely ambient song.
+
+<p>
+
+<A name=Race_doesnt_matter_to_kids></A><A name=Racedoesntmattertokids></A><span class=moyet>==</span><span class=blogtitle><b>Race doesn’t matter to kids</b></span><span class=moyet>==</span>
+
+<p>
+
+This month, the week after the Dallas shootings, and just before the
+Baton Rogue shootings, my daughter — white
+latina — had a positive experience playing in the park with some
+black and Asian children. Indeed, I was the only non-latino white at
+the park’s playground. Was there any conflict or name calling? No,
+just some kids sharing the park in a friendly, civilized manner.
+
+<p>
+
+It’s a shame that multiple races of kids playing in the park together
+are more mature than the click bait articles and hideous comment sections
+which constitute modern journalism. The forces which want a race war
+are not winning here — Martin Luther King’s dream of little black
+kids and little white kids being together is very much a reality.
+
+<p>
+
+Then again, I live in a state where the Republican party pulled out the
+racism card two decades ago in an attempt to energize their base. It
+didn’t work — and now they have no power at all in state level
+politics.
+
+<p>
+
+<A name=MaraDNS_Not_chasing_moving_goalposts></A><A name=MaraDNSNotchasingmovinggoalposts></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS: Not chasing moving goalposts</b></span><span class=moyet>==</span>
+
+<p>
+
+<i>MaraDNS is an open-source project I did in the first 2000s decade to keep my skills current while I lived in Mexico.</i>
+
+<p>
+
+Summary: Some domains don’t resolve when using Deadwood as a fully
+recursive resolver, and I don’t have time to fix the issue.
+
+<p>
+
+When I originally wrote MaraDNS, in 2001, I went to a lot of effort to
+have it handle CNAME glue the same way legacy versions of BIND handled
+it, without the resulting security problems BIND had.
+
+<p>
+
+When I rewrote that code for Deadwood in 2010, I used the same algorithm.
+
+<p>
+
+Let’s look at a real world example, cdn.kraftmusic.com:
+
+<p>
+
+<tt>cdn.kraftmusic.com. CNAME kraftmusic.kraftmusic.netdna-cdn.com.</tt><br>
+
+<p>
+
+<tt>kraftmusic.kraftmusic.netdna-cdn.com. A 141.8.225.31</tt><br>
+
+<p>
+
+MaraDNS looks at this, and stores, in the slot for “cdn.kraftmusic.com”,
+the IP 141.8.225.31.  However, the people serving DNS records for
+Kraftmusic.com have an out of date IP for their CNAME glue.  Here’s
+the real IP from one of the nameservers for netdna-cdn.com:
+
+<p>
+
+<tt>kraftmusic.kraftmusic.netdna-cdn.com. A 94.46.159.2</tt><br>
+
+<p>
+
+Like the issue of CNAMEs being combined with other records,
+<a href="http://samiam.org/blog/2015-02-11.html">I have no plans to fix this issue</a>, for pretty much the same reasons.  I might change my 
+stance in five years when my child is a little older, but, ever since
+I became a single parent, I have not had time to play the “let’s
+update Deadwood to resolve every single corner case bug-for-bug the way
+BIND does” game without getting paid for my work.
+
+<p>
+
+I encourage aspiring programmers to fork MaraDNS and fix this issue
+themselves. Use The Source Luke (UTSL).  However, please don’t call 
+your forks “MaraDNS.”
+
+<p>
+
+<i>2022 update: I finally fixed this bug in MaraDNS-3.5.0023</i>
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

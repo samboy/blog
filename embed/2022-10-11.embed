@@ -1,0 +1,128 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Lansbury.jpg width=224 height=126>
+</div>
+
+<h1>Angela Lansbury</h1>
+<h2>October 11, 2022</h2>
+The great Angela Lansbury has died today.
+
+<p>
+
+<A name=Angela_Lansbury_RIP></A><A name=AngelaLansburyRIP></A><span class=moyet>==</span><span class=blogtitle><b>Angela Lansbury R.I.P.</b></span><span class=moyet>==</span>
+
+<p>
+
+Angela Lansbury, after having lived a full life, has died at the age of 
+96.  While well known for her role in <i>Murder, She Wrote</i>,
+my favorite role and song of hers is “<a href="https://www.youtube.com/watch?v=xDUhINW3SPs&amp;t=60s">Tale
+As Old As Time</a>” from the 1991 animated version of <i>Beauty and the
+Beast</i>.  
+
+<p>
+
+Angela was able to overcome the very unfortunate stereotype of a female
+performer supposedly no longer being viable once she ages.  The role she
+is most famous for in my daughter’s world—the teapot in the animated
+<i>Beauty and the Beast</i>—was one that she performed when she was 
+60 years old.
+
+<p>
+
+While the song “Tale As Old As Time” was re-performed for the 2017
+live action version of <i>Beauty and the Beast</i>, I always have 
+preferred Lansbury’s version.
+
+<p>
+
+Rest in peace, Angela, and thank you for the wonderful acting
+and music.
+
+<p>
+
+<A name=MaraDNS_update></A><A name=MaraDNSupdate></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS update</b></span><span class=moyet>==</span>
+
+<p>
+
+There is a long standing bug where Deadwood would incorrectly resolve
+CNAMES under certain limited circumstances.
+
+<p>
+
+Deadwood has for a long time allowed out of bailiwick answers in a CNAME
+chain, since:
+
+<p>
+
+<ul>
+<li> They are not a security threat
+<li> They sometimes allow answers to be solved more quickly
+</ul>
+
+<p>
+
+Let us suppose we have this:
+
+<p>
+
+<pre>
+blog.foo. CNAME blog.new-isp.foo.
+blog.new-isp.foo. A 10.1.2.3
+</pre>
+
+<p>
+
+If the real answer is 10.1.2.3, this allows Deadwood to solve
+the query as soon as it sees this CNAME chain.  It’s not a security
+hole because Deadwood only stores the entry as the answer for
+“blog.foo.” 
+
+<p>
+
+But if the real answer for blog.new-isp.foo were something different,
+say 10.9.8.7, then Deadwood would had returned the wrong IP for the blog.
+This isn’t a security problem, but it’s an issue because most DNS
+servers would discard the CNAME glue while Deadwood accepted it.
+
+<p>
+
+This bug was filed in 2015.  I said, at the time, that I could
+not fix it because I was a single parent working a
+full time job.  Now that I am semi-retired since it’s hard to find
+an employer in the tech sector willing to work around the needs of a
+now full time single parent, I finally had time to fix this tonight.
+
+<p>
+
+I have also created a test to verify this bug is fixed.  Indeed,
+I followed test driven development: I made the test, then updated
+the code so the test would pass.
+
+<p>
+
+The code can be downloaded from the Git tree for MaraDNS:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+</blockquote>
+
+<i>Angela Lansbury photo by Alan Light obtained from the
+<a href="https://commons.wikimedia.org/wiki/File:Bea_Arthur,_Angela_Lansbury_(2086961032).jpg">Wikimedia
+commons</a></i>
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

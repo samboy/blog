@@ -1,0 +1,84 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS 3.5.0001</h1>
+<h2>January 25, 2020</h2>
+I have released MaraDNS 3.5.0001.  This is a stable update to MaraDNS.
+
+<p>
+
+<A name=One_Source_of_Truth></A><A name=OneSourceofTruth></A><span class=moyet>==</span><span class=blogtitle><b>One Source of Truth</b></span><span class=moyet>==</span>
+
+<p>
+
+For a few years, we had multiple “sources of truth” for MaraDNS’s 
+files:
+
+<p>
+
+<ul>
+<li> The Deadwood source code tarball
+<li> The Deadwood Windows zipfile
+<li> The MaraDNS source code tarball
+<li> The MaraDNS Windows zipfile
+<li> The Git tree of MaraDNS
+</ul>
+
+<p>
+
+It used to be, when I made a new release of MaraDNS, I had to change one
+of the sources of truth (make a Git check in, or make a patch by hand)
+the apply the change to the other sources of truth. There was also a
+disconnect between the files in the Windows zipfiles and the same files
+in the tarballs and Git tree.
+
+<p>
+
+That came from the fact that the MaraDNS code base was over 13 years old
+before I added it to GitHub, and I used to use both Git and the pre-Git
+way of updating files with MaraDNS’s releases.
+
+<p>
+
+This release has a more “continuous integration” approach to MaraDNS.
+
+<p>
+
+<i>All</i> of the files now come directly from the Git tree.
+I have made three scripts to convert a given version of the Git tree
+in to a release of MaraDNS:
+
+<p>
+
+<ul>
+<li> I have one script which pulls MaraDNS from GitHub and runs a large 
+  number of automated tests to reduce the chance a new release has
+  introduced a new bug.
+<li> I have another script which pulls MaraDNS from GitHub, allows me to
+  compile the code for Windows, then uploads to GitHub the updated 
+  Windows binaries.
+<li> I have a third script which pulls MaraDNS from GitHub and makes both
+  the source code tarball (which now has the entire Git history going 
+  back to 2014) and the Windows zipfile.
+</ul>
+
+<p>
+
+This process automates most of the process of making a new release of
+MaraDNS, allowing me to more quickly test and release new MaraDNS versions.
+
+<p>
+
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

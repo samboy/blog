@@ -1,0 +1,121 @@
+<h1>Web typography</h1>
+
+<h2>July 19, 2011</h2>
+
+<i>2014 update: A combination of Windows XP hitting end-of-life, 
+ttfautohint, and new open-source font releases has made it possible
+for me to have my web site use 100% open source typography (Modified
+Bitstream Charter for the serif body text, and Source Sans Pro for
+the sans-serif headings).  Also: PT Serif looks a </i>lot<i> nicer
+when using modern font hinting technologies.</i><p>
+
+As I have noted in <A href=20110528.html>an earlier blog entry</A>, is is
+now possible to put just about any font in a web page.  And, indeed, <A
+href=http://google.com/webfonts>Google has a large number of open-source
+fonts</A> to choose from.  All of these free fonts have the same problem:
+None of them are suitable for body text with current computers.  
+
+<p>
+
+Sure, a number of them are very attractive at 10pt or 12pt using
+modern computers with Clear Type or other cutting-edge on-screen
+hinting capability.  Unfortunately, there is still a significant number
+of computers without advanced on-screen hinting.  Not only are there
+the Windows XP users who haven't downloaded the XP Clear Type update,
+but there are also Linux users who do not have cutting-edge on-screen
+font auto-hinting.
+
+<p>
+
+Until Clear Type or another equivalent technology is universal across
+desktops, a webpage's body text needs to use a font with full delta hinting.
+There are not that many open-source fonts with full delta hinting; the
+only ones I can think of are the PT font series (PT Sans, PT Serif, but
+PT Sans Caption alas doesn't delta-hint), the Ubuntu font, and Cousine
+(a.k.a Liberation Mono).  And, oh, Arvo also has delta hinting, but not
+at the font size I like to use for text.
+
+<p>
+
+Ubuntu is a beautiful font, and readily readable, even at body text
+sizes.  Indeed, a modified version of it (to reduce loading times) is
+used as the non-body-text font on my webpage.
+However, <A href=20110601.html>as I have noted before</A>, this
+is a branding font so its look is a little too distinctive for me to
+be comfortable using it for body text.  It is, roughly speaking, an
+open-source font that fills the niche of Trebuchet.  In fact, on
+places on my webpage where I can't use Ubuntu on IE8 because of a
+<A href=20110619.html>bug it has</A>, I use Trebuchet.
+
+<p>
+
+The PT series of fonts are attractive, but even though they are fully
+delta hinted, they were not designed with the screen in mind.  PT Sans 
+roughly fills the same niche as Arial: A font that works best when trying 
+to fit as much readable text in as little of a space, but not as readable
+as a true screen font.  Indeed, I feel PT Sans narrow to be the best
+open source font for condensed text.
+
+<p>
+
+PT Serif, coming from Russia, has, to western eyes, a very distinct look
+to it that is not entirely satisfactory, reminding one of dusty old books in
+a dusty old library.  It's perfectly readable, but very stiff.  It doesn't
+have the soft charm of, say, Matthew Carter's serif fonts like Georgia and
+Bitstream Charter.  And, like PT Sans, it's not really a screen font the
+way Georgia is.
+
+<p>
+
+Cousine (Liberation Mono) is yes a very attractive on-screen font,
+but its web utility is limited since it <i>is</i> a monospace font.
+
+<p>
+
+What is missing is a true open-source replacement for Verdana.  Verdana
+is the king of on-screen readability.  The closest font in the open-source
+world is Bitstream Vera (or its derivative DejaVu), which would be perfect 
+except for two problems.  One: Its "I" (upper case i) is identical to 
+its "l" (lower case L); I call this the "PayPaI problem".  Two: It does
+not have full delta hinting.
+
+<p>
+
+If someone were to take the time to fix these issues in Vera/DejaVu,
+the open source world of typography would finally have a really great
+font for on-screen text.  Any volunteers out there?
+
+<p>
+
+Perhaps RedHat will hire Matthew Carter to come out with a "Liberation 
+screen sans" with Verdana's metrics and onscreen readability.  Or maybe
+another patron of open source will foot the bill for a true onscreen
+font for body text.
+
+<p>
+
+In the meantime, because Microsoft gave away Verdana and the rest of their
+web core fonts for years with a license that allows redistribution, Linux
+users can legally download and install Verdana on their computer, and
+it appears that about 65% of Linux users have done just that.  
+Windows and Mac users, naturally, all have Verdana.
+
+<p>
+
+Of course, with Windows XP approaching its end of life and being
+replaced by Windows 7, and with Linux's font auto-hinting very slowly but
+surely improving, most likely the need for a fully delta hinted font
+for onscreen text will become a non-issue a few years down the road.
+But that is the future; using a non-delta-hinted font for onscreen body
+text is still not possible in a 2011 cross-platform web page design.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,40 @@
+<h1>Deadwood 2.3.07 released</h1>
+
+<h2>March 4, 2011</h2>
+
+<p>
+
+As described in <A href=20110218c.html>the MaraDNS schedule</A>, this is a day
+I have set aside to spend some time baby-sitting Mara.  Since no bugs have 
+been reported since the last MaraDNS update, I backported a potential memory
+leak fix from the 3.0 to the 2.3 "tiny" branch of Deadwood.
+
+<p>
+
+The "tiny" branch of Deadwood is an older release of Deadwood that doesn't
+have full recursion; its binary is half the size of Deadwood 3's binary.
+
+<p>
+
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/tiny/>http://www.maradns.org/deadwood/tiny/</A>
+</blockquote>
+
+<p>
+
+My next planned day to work on MaraDNS is two weeks from today: March 18,
+2011.
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

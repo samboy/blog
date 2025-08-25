@@ -1,0 +1,88 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS and DOS attacks</h1>
+<h2>October 22, 2013</h2>
+This blog post is a small HOWTO showing how to stop MaraDNS from taking
+part in a distributed denial of service attack.
+
+<p>
+
+<A name=The_problem></A><A name=Theproblem></A><span class=moyet>==</span><span class=blogtitle><b>The problem</b></span><span class=moyet>==</span>
+
+<p>
+
+Earlier this year, there was a 
+<a href="http://www.techrepublic.com/blog/it-security/ddos-strike-on-spamhaus-highlights-need-to-close-dns-open-resolvers/">huge denial of service attack</a>
+that used DNS packets.
+
+<p>
+
+The reason DNS was used is because it is fairly easy to use DNS to make
+a fairly small packet a really large packet to send to the victim.  This
+is especially true when using a technology called EDNS which MaraDNS
+does not support.
+
+<p>
+
+<A name=The_solution></A><A name=Thesolution></A><span class=moyet>==</span><span class=blogtitle><b>The solution</b></span><span class=moyet>==</span>
+
+<p>
+
+When this attack was big news, I mentioned that
+<a href="http://woodlane.webconquest.com/pipermail/list/2013-March/001157.html">I do not have time to implement rate limiting</a>.
+However, CentOS 6 does support rate limiting at the firewall level.  
+While 
+<a href="http://blog.solidshellsecurity.com/2013/05/31/dns-protection-iptables/">some of the incantations on the Internet</a> 
+do not work in CentOS, the following iptables commands allow a given IP to
+only send MaraDNS/Deadwood 20 DNS queries every four seconds:
+
+<p>
+
+<tt>iptables -A INPUT -p udp --dport 53 -m state --state NEW -m recent --set --name DDOS --rsource</tt><br>
+
+<p>
+
+<tt>iptables -A INPUT -p udp --dport 53 -m state --state NEW -m recent --update --seconds 4 --hitcount 20 --name DDOS --rsource -j DROP</tt><br>
+
+<p>
+
+To verify they are applied:
+
+<p>
+
+<tt>iptables --list</tt><br>
+
+<p>
+
+To save these commands in CentOS so they are applied at system boot time:
+
+<p>
+
+<tt>iptables-save &gt; /etc/sysconfig/iptables</tt><br>
+
+<p>
+
+<A name=Disclaimer></A><A name=Disclaimer></A><span class=moyet>==</span><span class=blogtitle><b>Disclaimer</b></span><span class=moyet>==</span>
+
+<p>
+
+These incantations work in CentOS 6 but may or may not work in other
+versions of Linux.  I do not support non-CentOS Linux installs of MaraDNS.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

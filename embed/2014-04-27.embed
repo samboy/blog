@@ -1,0 +1,107 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/Sam-with-Citlalli-blog.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS Update</h1>
+<h2>April 27, 2014</h2>
+I have updated MaraDNS to have DNS-over-TCP work in Windows.
+
+<p>
+
+<A name=MaraDNS_update></A><A name=MaraDNSupdate></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS update</b></span><span class=moyet>==</span>
+
+<p>
+
+For a while now, the "zoneserver" DNS-over-TCP daemon would compile
+in Windows (as long as 
+<a href="http://cygwin.com">Cygwin</a>
+was installed), but would not run.
+
+<p>
+
+I have fixed this bug.  It's now possible to have DNS-over-TCP using
+MaraDNS in Windows.  
+
+<p>
+
+<A name=Downloading_this_update></A><A name=Downloadingthisupdate></A><span class=moyet>==</span><span class=blogtitle><b>Downloading this update</b></span><span class=moyet>==</span>
+
+<p>
+
+The patch can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download/patches/2.0.10/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>patches/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>10/</A>
+</blockquote>
+
+The snapshot can be downloaded as a tarball (.tar.gz file) here:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS/releases/tag/2014-04-26.1">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>releases/<![if gt IE 6]>&#8203;<![endif]><wbr>tag/<![if gt IE 6]>&#8203;<![endif]><wbr>2014-<![if gt IE 6]>&#8203;<![endif]><wbr>04-<![if gt IE 6]>&#8203;<![endif]><wbr>26.<![if gt IE 6]>&#8203;<![endif]><wbr>1</A>
+</blockquote>
+
+<A name=Getting_DNSoverTCP_in_Windows></A><A name=GettingDNSoverTCPinWindows></A><span class=moyet>==</span><span class=blogtitle><b>Getting DNS-over-TCP in Windows</b></span><span class=moyet>==</span>
+
+<p>
+
+<ul>
+<li> Get Cygwin.  Be sure to have the gcc compiler.
+<li> Download the latest MaraDNS snapshot (see link above).
+<li> Compile it in Cygwin.
+<li> Read this documentation:
+</ul>
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/tutorial/dnstcp.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>tutorial/<![if gt IE 6]>&#8203;<![endif]><wbr>dnstcp.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<A name=Why_I_did_this></A><A name=WhyIdidthis></A><span class=moyet>==</span><span class=blogtitle><b>Why I did this</b></span><span class=moyet>==</span>
+
+<p>
+
+Last November, an anonymous user 
+<a href="/comments-closed.html">requested to have DNS-over-TCP</a>
+in the Windows MaraDNS port.  Nearly six months later, I finally got
+this to work.
+
+<p>
+
+<A name=MaraDNS_timeline></A><A name=MaraDNStimeline></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS timeline</b></span><span class=moyet>==</span>
+
+<p>
+
+Unless a security hole is found, updates to MaraDNS are pretty slow.  Since
+I have a six-month-old daughter, and since I am not getting paid to write
+this code, I have to put MaraDNS on the back burner.
+
+<p>
+
+My rough roadmap is to update the random prime generator in Windows.
+There currently exists a
+<a href="http://maradns.samiam.org/download/patches/3rd_party/RandPrime.patch">patch</a>
+by Tobias Frost to give Deadwood a random prime number for its hash
+compression code.  I will probably eventually update this code so that,
+in Windows, it will use CryptGenRandom() instead of random(), which will give
+the random prime number guaranteed strong entropy.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

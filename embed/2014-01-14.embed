@@ -1,0 +1,44 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS 2.0.08</h1>
+<h2>January 14, 2014</h2>
+I have released MaraDNS 2.0.08:
+
+<p>
+
+<ul>
+<li> Deadwood updated to 3.2.04
+<li> Make DNS packet compression case-insensitive
+<li> Attach IPv6 glue to NS and MX records when MaraDNS is compiled for IPv6
+<li> Remove warning when MaraDNS is compiled for IPv6
+<li> Remove warning when compiling getzone.c 
+</ul>
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

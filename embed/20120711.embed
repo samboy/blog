@@ -1,0 +1,28 @@
+<h1>Finally, a CVE-2012-1911 patch</h1>
+
+<h2>July 11, 2012</h2>
+
+After nearly five months, there is <A 
+href=http://marc.info/?l=djbdns&m=134190748729079&w=2>a patch for
+CVE-2012-1911</A>.  The patch has a big "this has seen very little testing. 
+Use at your own risk!" disclaimer, but at least some effort is <i>finally</i>
+being done by the DjbDNS community to fix this security problem.
+
+<p>
+
+See also:
+
+<A href=20120314.html>The Ghost Domain bug</A>
+<A href=20110103.html>djbdns: False security is dangerous</A>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

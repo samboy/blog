@@ -1,0 +1,32 @@
+<!--{TAGS:M}-->
+
+<h1>New Deadwood snapshot</h1>
+
+<h2>November 30, 2011</h2>
+
+In today's snapshot of Deadwood, I have fixed a bug where the CNAME of
+multi-link incomplete CNAME records would always be only 60 seconds long.
+The TTL is now whatever TTL we get upstream.
+
+<p>
+
+This should slightly speed up resolution of multi-link incomplete
+CNAME records.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

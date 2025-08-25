@@ -1,0 +1,49 @@
+<h1>MaraDNS update</h1>
+
+<h2>October 5, 2011</h2>
+
+I have fixed the following issues in today's release of MaraDNS:
+
+<ul>
+<li>
+<A href=http://woodlane.webconquest.com/pipermail/list/2011-September/000933.html>Nicholas
+Bamber pointed out</A> two issues with MaraDNS' documentation.  I have updated
+the script that updates MaraDNS to resolve these issues.
+
+<li>
+<A href=http://woodlane.webconquest.com/pipermail/list/2011-August/000929.html>AngelD
+discovered</A> that the zoneserver would not return all records if a zone file
+has a lot of FQDN4 records.  The bug took me about an hour to hunt down and 
+find:
+<p>
+The zoneserver uses a temporary buffer of records when sending them out. 
+This buffer is 30 records in size, which usually isn't a problem because
+the zoneserver only loads 20 records before sending the records down the
+wire and flushing the buffer.  However, since each FQDN4 (and FQDN6) record
+adds two records to the buffer, we only get the first 15 records before
+the buffer is full and some records get dropped.
+<p>
+The fix is simple: I expanded the buffer so that it now fits 64 records.
+</ul>
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+The next day I plan to work on MaraDNS/Deadwood without sponsorship
+is on one day next month, before the 15th.  In other words, I will volunteer
+one day to babysitting MaraDNS between November 1 and November 15.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

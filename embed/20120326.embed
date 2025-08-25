@@ -1,0 +1,45 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS: No DNSSEC</h1>
+
+<h2>March 26, 2012</h2>
+
+In 2001, having a secure DNS server meant running a DNS server
+did not expose you to remote root exploits.
+
+<p>
+
+Things have changed since then.  There are now five major DNS server
+projects and none of them have remote root exploits popping up
+every couple of months.
+
+<p>
+
+The new gold standard for security is DNSSEC.  BIND, NSD/Unbound,
+and the authoritative half of PowerDNS have DNSSEC support.  MaraDNS,
+on the other hand, does not.
+
+<p>
+
+I have nothing against DNSSEC; it's just that I no longer have the free
+time to spend months implementing DNSSEC "for fun and for free" and I
+seriously doubt anyone with deep pockets is going to show up to finance
+MaraDNS having DNSSEC.
+
+<p>
+
+That in mind, I have updated MaraDNS' tagline from "MaraDNS: A 
+security-aware DNS server" to "MaraDNS: A small open-source DNS server".
+I can't say MaraDNS is secure with a straight face any more.  Not in 2012
+without DNSSEC support.  
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

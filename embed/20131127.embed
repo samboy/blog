@@ -1,0 +1,45 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS RPM files</h1>
+<h2>November 27, 2013</h2>
+I have made CentOS-6 compatible RPM files for MaraDNS 2.0.07c.  
+
+<p>
+
+The spec file has been updated to integrate Deadwood; the default
+mararc file no longer uses recursion.
+
+<p>
+
+Note that the default configuration has MaraDNS listen on 127.0.0.1 and
+Deadwood listen on 127.0.0.2; /etc/mararc and /etc/dwood3rc should be
+updated by hand after installing the RPM.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download/2.0/2.0.07c">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>07<![if gt IE 6]>&#8203;<![endif]><wbr>c</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

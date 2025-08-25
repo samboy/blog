@@ -1,0 +1,49 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS and Paypal</h1>
+
+<h2>December 7, 2011</h2>
+
+On Facebook, my friend Sean Lynch posted a <A 
+href=http://www.regretsy.com/2011/12/05/cats-1-kids-0/>Paypal horror
+story of someone having their funds frozen for using the PayPal 
+"Donate" button</A>.  While I have had a PayPal donate button on my site <A
+href=http://web.archive.org/web/20061222065203/http://www.maradns.org/>for
+five years</A> without problem, I was unable to find the part of
+PayPal's terms and conditions that spells out under exactly what conditions 
+a Donate button is or is not allowed to be used (probably because 
+<A href=http://thegreengeeks.wordpress.com/2011/12/06/why-paypal-is-wrong-regarding-regretsy-according-to-their-own-policies/>their
+terms and conditions state no such thing</A>).
+
+<p>
+
+Doing a Google search yesterday morning, the only advice I could find 
+(I can't find the source today because the outcry over PayPal blocking
+Regretsy's funds is all over the blogosphere) was to not use the word 
+"Donate" when accepting PayPal funds, but to use a phrase like
+"Buy me a cup of coffee" instead.  Also, it appears that PayPal only
+holds funds like this when someone has a funding drive for a 
+traditional charitable cause (disaster relief, toys for tots, etc.) but
+is not a registered charity (presumably to stop people fraudulently
+representing themselves as a charity when they are not).
+
+<p>
+
+Since I don't want to deal with the headache of having my PayPal funds
+put on hold, I have replaced the <A 
+href=https://www.paypal.com/en_US/i/btn/x-click-but04.gif>PayPal
+donate image</A> with an image containing the words "Support MaraDNS
+development", and have removed the words "donate" and "donations" from
+<A href=http://maradns.org>MaraDNS' home page</A>.
+
+<p>
+
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

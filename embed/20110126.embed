@@ -1,0 +1,62 @@
+<h1>Goodbye MySpace</h1>
+<h2>January 26, 2011</h2>
+
+I haven't used my myspace account
+in a while; in April of 2010, I posted my last blog entry there and
+only logged in once more last year.  
+
+<p>
+
+While away from MySpace, they changed their privacy settings to make all
+of my old blog entries not readable.  This morning, I logged in to MySpace
+to get an old blog entry from back in 2006 with some useful information.
+
+<p>
+
+I could not get the blog entry.  Myspace now is far too much dog slow
+javascript and Web 2.0 bling.  There is no handy way to look up an old
+blog entry; I had to press "more" over and over again at the bottom to read
+older entries.  The process was so slow and tedious that I gave up when it 
+went back to mid-2008.
+
+<p>
+
+Fortunately, I made a backup of the myspace blog I had.  The files are in
+"mht" format; Firefox can read them using the "unmht" plugin, and 
+they should be compatible with other browsers.  The files can
+be looked at in the folder <A 
+href=myspace-blog-archive/>myspace-blog-archive</A>.  I will, over the
+next few months, re-post some of the more interesting MySpace blogs that
+I had.
+
+<p>
+
+Since I (and, yes, the rest of my circle of friends) have stopped using
+MySpace well over a year ago, I finally put the last nail in the coffin 
+and canceled that account tonight.  MySpace made the process difficult
+(you have to click on "I'm sure" about three times, check your email,
+and click on a link there, and click on "I'm sure" a couple more times)
+but I finally got through it and my account will be removed in the next
+few days.
+
+<p>
+
+And, oh, the useful information I wanted from the 2006 MySpace blog was
+some LAME settings for making a low-bandwidth spoken word MP3:
+
+<pre>
+lame --preset sw --resample 16 --lowpass 4 --highpass .1 --noshort \
+	file.wav file.mp3
+</pre>
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

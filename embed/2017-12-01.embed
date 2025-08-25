@@ -1,0 +1,138 @@
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>Font Update</h1>
+<h2>December 1, 2017</h2>
+I have updated the font on my websites.
+
+<p>
+
+<A name=Caulixtla2017_Bug_fix></A><A name=Caulixtla2017Bugfix></A><span class=moyet>==</span><span class=blogtitle><b>Caulixtla2017: Bug fix</b></span><span class=moyet>==</span>
+
+<p>
+
+I have replaced the fonts on my websites with Caulixtla2017.  This
+is a bugfix update to Caulixtla007 (the 2016 version of the 
+website font fix, which is itself a minor update to the 2014 version
+of this font mix); the changes are:
+
+<p>
+
+<ul>
+<li> I have re-hinted the bold version of the font with TTFautohint
+  1.1 instead of TTFautohint 1.5.  There is a bug with the newer
+  TTFautohint, where a page using the 1.5-hinted font will look
+  bad (the letters distort to the point of being almost unreadable) 
+  when put in a PDF file and printed with an HP Color LaserJet Pro
+  MFP M277dw.  By using the older 2014 version of TTFautohint, while
+  the fonts may look slightly worse on the screen in Windows, they 
+  look a lot better with at least one embedded PDF rendering engine.
+<li> I have added one character to the fonts: → (right arrow), because this
+  is quite useful in technical docs (e.g. “Go to Start → Control Panel 
+  → Network → Adapter settings”).
+</ul>
+
+<p>
+
+Caulixtla2017 is a unified name for a combination for Source Sans Pro
+Semibold (for the bold font), Bitstream Charter (for the regular and
+italic fonts), and even a bit of Source Serif Pro (for the infinity
+symbol in all three fonts).  I have been using this as my webpage font
+<a href="http://samiam.org/blog/2014-07-04.html">since 2014</a>, and have updated it
+in 2016 (updated hinting; using same font name for all three fonts to make
+it easier to convert documents to use this font set in word processors;
+making sure all three fonts were subsetted the exact same way).  I have
+now updated it in 2017; I plan on using this font at least until mid-2020,
+and probably longer than that.
+
+<p>
+
+The fonts can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/fonts/Caulixtla2017.zip">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>Caulixtla<![if gt IE 6]>&#8203;<![endif]><wbr>2017.<![if gt IE 6]>&#8203;<![endif]><wbr>zip</A>
+</blockquote>
+
+<A name=EOT_WOFF_WOFF2></A><A name=EOTWOFFWOFF2></A><span class=moyet>==</span><span class=blogtitle><b>EOT, WOFF, WOFF2</b></span><span class=moyet>==</span>
+
+<p>
+
+There are three primary formats for web fonts:
+
+<p>
+
+<ul>
+<li> EOT, for old versions of Internet Explorer (Internet Explorer 4-8)
+<li> WOFF, for slightly older modern browsers (Firefox and Chrome until
+  a couple years ago; Safari until this year; Internet Explorer 9-11;
+  Opera 12 for people who like the Presto engine)
+<li> WOFF2, for current browsers (Firefox, Chrome, Safari, and Microsoft 
+  Edge)
+</ul>
+
+<p>
+
+There is, of course, a good chart showing 
+<a href="https://caniuse.com/woff">browser WOFF support</a> and
+<a href="https://caniuse.com/woff2">browser WOFF2 support</a>.
+
+<p>
+
+(The was also briefly SVG webfonts in the late oughts, but that, for 
+ good reason, never caught on)
+
+<p>
+
+Yes, the zip file has EOT versions of the fonts.  While I no longer try
+to give Internet Explorer 8 users a full CSS experience with my web page,
+and while Microsoft Edge no longer supports EOT fonts, the number of people
+out there in who still use Windows XP online is shocking; two people in
+an extended group of friends still do this (and I told both of them to 
+<i>not</i> use Windows XP online unless you want to get hacked).  
+
+<p>
+
+Since making the 2016 version of my font, there’s a lot less reason to
+have a WOFF (instead of WOFF2) version of the fonts; Safari has finally
+added WOFF2 support so the only browsers which support WOFF but
+not WOFF2 are ones which have not been updated.  The only reason to
+use WOFF these days is for Internet Explorer 11 users who have not
+moved on to Microsoft Edge or another modern browser.
+
+<p>
+
+That said, I made both WOFF and WOFF2 web versions of the fonts.
+
+<p>
+
+Here are some links to EOT, WOFF, and WOFF2 conversion programs (no,
+I do not use an online service):
+
+<p>
+
+<ul>
+<li> <A href="https://github.com/bramstein/sfnt2woff-zopfli">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>bramstein/<![if gt IE 6]>&#8203;<![endif]><wbr>sfnt<![if gt IE 6]>&#8203;<![endif]><wbr>2<![if gt IE 6]>&#8203;<![endif]><wbr>woff-<![if gt IE 6]>&#8203;<![endif]><wbr>zopfli</A>
+<li> <A href="https://github.com/google/woff2">https://github.com/google/woff2</A>
+<li> <A href="http://eotfast.com">http://eotfast.com</A> (Windows only; compresses fonts) and 
+  <A href="https://www.w3.org/Tools/eot-utils/">https://www.w3.org/Tools/eot-utils/</A> (POSIX; does not compress)
+</ul>
+
+<p>
+
+Since there’s a bug in Fontforge where it moves the underline location
+when I import from a TTF file, I have also made the Fontforge source to
+the fonts available.
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,82 @@
+<h1>Mobile browsers</h1>
+
+<h2>May 14, 2011</h2>
+
+When I originally designed the HTML and CSS for this webpage, cell phone
+browsers were, at best, very slow and primitive.  Giving a cell phone
+alternate CSS was a simple matter of adding a line like this in the
+header of a web page:
+
+<p>
+
+<tt>&lt;link rel="stylesheet" type="text/css" media="handheld" 
+    href="handheld.css"&gt;</tt>
+
+<p>
+
+Well, with the introduction of the iPhone, Android, and other advanced
+cell phone browsers, the above tag was no longer supported.  This is
+because many webmasters made the CSS for handheld pages look very basic.
+<p>
+
+Because of limitations with CSS implementations in many mainstream browsers
+in the mid-2000s (can you say "Internet Explorer 6"), many designs (including
+my webpage) required the page to have a certain absolute size.  800x600
+was the smallest common size in the mid-2000s, so a webpage design that
+was 800 pixels wide was perfectly reasonable.
+
+<p>
+And that is exactly what I did with my website.
+
+<p>
+Unfortunately, iPhones and other cell phone browers using screens less than
+800 pixels wide decided to ignore <tt>@media handheld</tt> and tried to
+render a webpage 800 pixels wide on, say, a 320x480 screen.
+
+<p>
+I discovered this problem yesterday as I was setting up an Android development
+environment.  So, after doing some research, I now have CSS like this 
+in the top of my webpage:
+
+<p>
+<tt>
+&lt;link rel="stylesheet" type="text/css" href="cellphone.css"
+      media="only screen and (max-device-width: 799px)" /&gt;<br>
+&lt;link rel="stylesheet" type="text/css" 
+ media="only screen and (min-device-width: 800px)" 
+ title="Blue Sky (default)" href="computer.css" /&gt;<br>
+&lt;!--[if lt IE 9]&gt;<br>
+&lt;link rel="stylesheet" type="text/css" href="computer.css" media="all" 
+/&gt;<br>
+&lt;![endif]--&gt;
+</tt>
+<p>
+
+Since I had to update the static HTML of over 100 web pages (scripting
+languages like BASH and AWK make this reasonably easy), I also went
+to the liberty of adding some HTML that tells people to no longer use
+Internet Explorer 6 (courtesy Microsoft):
+
+<p>
+<tt>
+&lt;!--[if lt IE 7]&gt;<br>
+&lt;div style=' clear: both; height:
+59px; padding:0 0 0 15px; position: relative;'&gt; &lt;a
+href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"&gt;&lt;img
+src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"
+height="42" width="820" alt="You are using an outdated browser. For a
+faster, safer browsing experience, upgrade for free today." /&gt;
+&lt;/a&gt;&lt;/div&gt;<br>
+&lt;![endif]--&gt;
+</tt>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

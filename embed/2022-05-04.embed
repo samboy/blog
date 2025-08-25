@@ -1,0 +1,121 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/Chess10x10.jpg width=224 height=126>
+</div>
+
+<h1>Star Wars</h1>
+<h2>May 4, 2022</h2>
+May the 4<span style="font-size: 10pt; line-height: 0; vertical-align: 6px">th</span> be with you!  Also, I go over a short chess
+game.
+
+<p>
+
+<A name=May_the_4ordthord_be_with_you></A><A name=Maythe4ordthordbewithyou></A><span class=moyet>==</span><span class=blogtitle><b>May the 4<span style="font-size: 10pt; line-height: 0; vertical-align: 6px">th</span> be with you!</b></span><span class=moyet>==</span>
+
+<p>
+
+Today is Star Wars day, because of the word play with the expression
+“May the 4<span style="font-size: 10pt; line-height: 0; vertical-align: 6px">th</span> be with you”.
+
+<p>
+
+I have enjoyed all of the Star Wars movies, but my favorite remains
+<i>Return of The Jedi</i>, since it was the first movie I could fully
+understand when I saw it during its original release in the theaters.
+Of the prequel trilogy, I like <i>Revenge of the Sith</i> the most,
+and of the Disney batch of movies, I like <i>Rogue One</i> the most.
+
+<p>
+
+<A name=Legals_mate></A><A name=Legalsmate></A><span class=moyet>==</span><span class=blogtitle><b>Legal’s mate</b></span><span class=moyet>==</span>
+
+<p>
+
+Legall de Kermeur was the best chess player in the world from around 1730
+to 1755.  Since records of the moves played in chess games (game scores)
+were not readily kept in that era, only one of his many games is still
+extant, a very short and famous game, which I will describe here.
+
+<p>
+
+All chess diagrams are interactive.  Click on “<tt>&gt;</tt>” to see the next
+move, “<tt>&lt;</tt>” to go back a move.  In the first diagram, it is 
+also possible to click on “<tt>&lt;&lt;</tt>” to go to the beginning of a game, 
+and “<tt>&gt;&gt;</tt>” to see how the game ends.  “Reset” in the other 
+diagrams will move the game back to the position being illustrated.
+<a href="https://en.wikipedia.org/wiki/Algebraic_notation_(chess)">Alegbraic
+notation</a> is used to describe the chess moves made.
+
+<p>
+
+<script src="/blog/chess/jquery-1.12.4.min.js"></script><script>$.ajaxSetup({contents: {script: false}})</script><script src="/blog/chess/chessboard-0.3.0.min.js" type="text/javascript"></script><script src="/blog/chess/chess.js"></script><link href="/blog/chess/chessboard-0.3.0.min.css" rel="stylesheet"></link><script src="/blog/chess/chessgame.js"></script><div id="gameScore-box"></div><script type="text/javascript">runGame(
+"1. e4 e5 2. Nf3 d6 3. Bc4 Bg4 4. Nc3 g6? " +
+"5. Nxe5! Bxd1 6. Bxf7+ Ke7 7. Nd5# ",
+"White checkmates Black",
+"gameScore",
+0,
+0,0,0
+);</script>
+
+<p>
+
+Let’s look at this game.
+
+<p>
+
+<b class=s>1. e4 e5 2. Nf3 d6 3. Bc4 Bg4 4. Nc3 g6?</b>
+
+<p>
+
+<div id="board1-box"></div><script type="text/javascript">runGame(
+0,"White checkmates Black","board1",8,"Position after  4. g6?",0
+);</script>
+<noscript>
+<img src=pics/chess/2022-05-04-1.png><br>
+</noscript>
+
+<p>
+
+<b class=s>5. Nxe5! Bxd1</b>
+
+<p>
+
+<div id="board2-box"></div><script type="text/javascript">runGame(
+0,"White checkmates Black","board2",10,"White to move and mate",0,0
+);</script>
+<noscript>
+<img src=pics/chess/2022-05-04-2.png><br>
+White can now deliver mate
+</noscript>
+
+<p>
+
+<b class=s>6. Bxf7+ Ke6. 7. Nd5#</b>
+
+<p>
+
+<div id="board3-box"></div><script type="text/javascript">runGame(
+0,"White checkmates Black","board3",13,"Checkmate",0,0
+);</script>
+<noscript>
+<img src=pics/chess/2022-05-04-3.png><br>
+Checkmate
+</noscript>
+
+<p>
+
+<i>The code and graphics to make the chess game diagram come from a 
+variety of open source projects.  There is <a href="chess/COPYING.txt">a
+list of contributors and copyrights</a> for the hard working people
+who made these chess diagrams possible.  Also, the diagram code has a
+<a href="https://github.com/samboy/ChessDiagrams">GitHub page</a>.</i>
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

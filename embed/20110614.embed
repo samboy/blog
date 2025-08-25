@@ -1,0 +1,138 @@
+<!--{TAGS:L}-->
+<h1>Dirt cheap Linux hosting</h1>
+
+<h2>June 14, 2011</h2>
+
+It is now possible to have "root" access on a virtual machine
+with a high-speed internet connection and a static IPv4 IP for under
+$24 a year.  This kind of connection is called a "Virtual
+Private Server" (VPS).  Since one is "root" on the system, one
+can have (within the memory, disk space, and bandwidth limitations)
+an unlimited number of web pages, email addresses, or any other
+internet service (as long as it follows the provider's terms of service).
+
+<p>
+
+The low-cost offers I have seen have the following in common:
+
+<ul>
+
+<li>They use a type of virtual machine called an 
+    <A href=http://openvz.org>OpenVZ</A> virtual machine.  <A
+    href=http://en.wikipedia.org/wiki/OpenVZ>The Wikipedia</A> has a 
+    good description; to summarize, an OpenVZ guest must run Linux.
+
+<li>To manage the server, they usually use a "web panel" interface called
+    <A href=http://solusvm.com>SolusVM</A>.  This allows one to reset the
+    root password, "format and reinstall" the Linux distribution used,
+    and keep an eye on one's memory, disk usage, and network quota.
+
+<li>There are four relevant numbers that an OpenVZ account has: Its
+    normal memory usage, its "burst" memory usage (which I will explain
+    below), its hard disk space, and its monthly bandwidth.  
+
+</ul>
+
+One thing to be careful of is that most companies offering $20-a-year
+plans are new companies and may not last.  
+Another issue is that these kinds of offers are usually only offered
+by new providers to get their name out there.  
+
+<p>
+
+One place to look for these providers is at a website
+called <A href=http://www.webhostingtalk.com/forumdisplay.php?f=104>WHT</A>,
+or at <A href=http://budgetvps.posterous.com/tag/0199>BudgetVPS</A> (who
+have a special link for plans that cost $2 a month or less).
+
+<p>
+
+Some current providers of plans that costs $20 a year or less (prices 
+rounded to the nearest dollar):
+
+<ul>
+
+<li><A 
+href=https://www.alienlayer.com/clients/cart.php?a=confproduct&i=0>AlienVPS'
+"Abduction" plan</A>.  19 gigabytes hard disk, 192 megabytes of memory, 190
+gigabytes of bandwidth a month, for $19 a year.  Available at
+<A 
+href=https://www.alienlayer.com/clients/cart.php?a=add&pid=10>Las Vegas</A>
+and <A
+href=https://www.alienlayer.com/clients/cart.php?a=add&pid=52>New York</A>.
+
+<li><A
+href=http://client.cripperz.sg/cart.php?a=add&pid=1&promocode=WHT062011>CripperZ</A>.  10 gigabytes hard disk, 128 megabytes of memory (256 megabytes burst),
+300 gigabytes a month of transfer for $20 a year ($1 setup charge)
+
+<li><A 
+href=https://billing.fehosting.com/cart.php?gid=8>FEhosting</A>.  35 gigabytes
+of hard disk space, 256 megabytes of memory (512 megabytes burst), 500
+gigabytes a month of transfer for $20 a year.
+
+</ul>
+
+All providers provide a single IP; extra IPs cost more.
+
+<p>
+
+"Burst" memory usage is memory that can be allocated, but, if the server as
+a whole is low on memory, processes may be killed if more memory is being
+used than one's "normal" memory usage.
+
+<p>
+
+An OpenVZ guest doesn't allocate cached and buffer memory; this is 
+only seen on the host.  The only memory one sees when typing in <tt>free</tt>
+in an OpenVZ guest is memory used by <tt>malloc</tt> in one's processes.
+For example:
+
+<pre>
+$ free
+             total       used       free     shared    buffers     cached
+Mem:        262144      29376     232768          0          0          0
+-/+ buffers/cache:      29376     232768
+Swap:            0          0          0
+</pre>
+
+This is the output of <tt>free</tt> on an OpenVZ guest with 128 megabytes of
+"normal" memory and another 128 megabytes of "burst" memory.  Compare this 
+to <tt>free</tt> on a native Linux host:
+
+<pre>
+$ free
+             total       used       free     shared    buffers     cached
+Mem:        511516     489544      21972          0      62204     202884
+-/+ buffers/cache:     224456     287060
+Swap:      1048568       2476    1046092
+</pre>
+
+Here, we can see buffers being used, as well as cache and swap.
+
+<p>
+
+On an OpenVZ guest, memory usage is seen with <tt>free</tt>, disk usage is
+seen with <tt>df</tt>, and network usage can be seen with <tt>ifconfig</tt>
+(presumably, the ifconfig number is reset whenever the system is "rebooted",
+so it may not be an accurate number).
+
+<p>
+
+It is amazing how technology has made getting an internet presence very,
+<i>very</i> affordable.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<b>Errata</b>: BuyVM does intend to sell ultra-low-cost plans again; this
+article implied otherwise and has since been corrected.
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

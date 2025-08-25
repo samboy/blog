@@ -1,0 +1,79 @@
+<!--{TAGS:M}-->
+
+<h1>2011 Wrap-up</h1>
+
+<h2>December 24, 2011</h2>
+
+Now that the year is wrapping up, here is a look at what I accomplished with
+MaraDNS in 2011 and my future plans.
+
+<p>
+<div class=blogtitle>
+<b>MaraDNS in 2011</b>
+</div><br>
+
+Not counting the changes to Deadwood, in 2011 I made five different
+releases that fixed some 12 different bugs and added three new minor
+features to MaraDNS, as well as making revisions to the documentation.
+
+<p>
+<div class=blogtitle>
+<b>Deadwood in 2011</b>
+</div><br>
+
+In 2011, I applied 14 different bug fixes to Deadwood, added two new
+minor features (<tt>--pid</tt> for Duende and <tt>reject_ptr</tt>),
+added a lot of code to speed up Deadwood's resolution of host names,
+made Deadwood's parser more pedantic, and made documentation as well as
+SQA updates.
+
+<p>
+<div class=blogtitle>
+<b>Other 2011 accomplishments</b>
+</div><br>
+
+<A href=20111223.html>Yesterday</A>, I went over the 2011 accomplishments
+for my web page design.  In addition, I did a lot of cool stuff at my day
+job for Flight Lookup Services, managed to go the whole year without
+making a single edit to the Wikipedia, said a (hopefully) final goodbye
+to Usenet, and published some 143 blog entries which I hope you guys
+have enjoyed reading.
+
+<p>
+<div class=blogtitle>
+<b>Looking ahead</b>
+</div><br>
+
+I hope 2012 is a very prosperous year and that our economy finally 
+starts to significantly recover.
+
+<p>
+
+At this point, MaraDNS and Deadwood are finished.  I have no plans to
+add significant new features to either program.  Right now, I have
+received enough contributions to babysit the mailing list and fix
+non-critical bugs until mid-March.
+
+<p>
+
+I will, of course, fix critical bugs without sponsorship, but support
+above and beyond that depends on the amount of my users' contributions.
+
+<p>
+<div class=blogtitle>
+<b>Merry Christmas everyone</b>
+</div><br>
+
+I would like to wish everyone a very Merry Christmas and a Happy New Year.
+See you all in 2012!
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

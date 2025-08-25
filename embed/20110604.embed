@@ -1,0 +1,51 @@
+<!--{TAGS:L}-->
+<h1>Web page touch-up</h1>
+
+<h2>June 4, 2011</h2>
+
+You know, <A href=20110517.html>I thought I had the design to this
+web page done over two weeks ago</A>.  But then, <A href=20110528.embed>I
+discovered that it's now possible to embed fonts in web pages</A> and have
+it render in the majority of web browsers.  So, I touched up the webpage to
+utilize a custom font.
+
+<p>
+
+I have hopefully finished that up.  Testing of the custom font on Linux-based
+browsers revealed some rendering problems that I fixed by having only one
+(instead of two) versions of the custom font, and then tweaking the CSS
+to have the font look nice at all of the sizes I use for it.  This Linux
+fixup has the side effect of having the fonts look nicer in Windows 
+(especially the Safari browser).
+
+<p>
+
+I have also replaced the text saying "Sam Trenholme's webpage" at the
+top of each page with a transparent PNG image.  This is to work around
+an issue in Internet Explorer, which doesn't support CSS text shadows (not
+even in IE9).
+
+<p>
+
+I actually have both the text and the PNG image at the top; the PNG image
+is shown to users using desktop browsers, and the text is shown to mobile
+users.  Users of non-CSS-compliant browsers (Dillo and OffByOne) will see
+both; this is a non-issue since these browsers have almost no users.
+
+<p>
+
+So, hopefully, the web page redesign for 2011 is once and for all 
+<i>done</i>.  Indeed, things are getting busy at my day job so I won't 
+have time to work on the web page design for the foreseeable future.
+
+<p>
+
+<i>To post a comment about an entry, 
+<A href=/mailme.php>send me an email</A> and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

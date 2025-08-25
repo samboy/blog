@@ -1,0 +1,89 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2016-08-blog.jpg width=120 height=120>
+</div>
+
+<h1>“Ocean Path” album released</h1>
+<h2>December 6, 2016</h2>
+I have released my “Ocean Path” CD on Bandcamp and as a physical 
+replicated CD. Also, some minor MaraDNS updates.
+
+<p>
+
+<A name=Ocean_Path></A><A name=OceanPath></A><span class=moyet>==</span><span class=blogtitle><b>“Ocean Path”</b></span><span class=moyet>==</span>
+
+<p>
+
+<i>Ocean Path</i> is the name of the CD of music I have released this year.
+This album is nearly two years in the making; I started it near the
+beginning of 2015 and uploaded the master CD to Bandcamp a couple of 
+weeks ago.  It has over 50 minutes of music in nine different songs and
+is available to listen to or purchase here:
+
+<p>
+
+<blockquote>
+<A href="http://caulixtla.com/music">http://caulixtla.com/music</A>
+</blockquote>
+
+<A name=MaraDNS_updates></A><A name=MaraDNSupdates></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS updates</b></span><span class=moyet>==</span>
+
+<p>
+
+Last month, a security bug in MaraDNS was supposedly found.  After
+investigating the issue, I discovered that the issue actually isn’t
+a security issue in MaraDNS:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS/issues/33">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>issues/<![if gt IE 6]>&#8203;<![endif]><wbr>33</A>
+</blockquote>
+
+The original reporter has verified that the report was a false alarm, as
+can be seen in this thread:
+
+<p>
+
+<blockquote>
+<A href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=844121">https://<![if gt IE 6]>&#8203;<![endif]><wbr>bugs.<![if gt IE 6]>&#8203;<![endif]><wbr>debian.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>cgi-<![if gt IE 6]>&#8203;<![endif]><wbr>bin/<![if gt IE 6]>&#8203;<![endif]><wbr>bugreport.<![if gt IE 6]>&#8203;<![endif]><wbr>cgi?<![if gt IE 6]>&#8203;<![endif]><wbr>bug=<![if gt IE 6]>&#8203;<![endif]><wbr>844121</A>
+</blockquote>
+
+What is an issue, however, is that h.root-servers.net moved last year.
+I have finally updated the development snapshot of Deadwood, as well
+as the MaraDNS Git repo, with the new root server IP:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS/issues/34">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>issues/<![if gt IE 6]>&#8203;<![endif]><wbr>34</A>
+</blockquote>
+
+The updated tarball is here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+And the patch can be seen here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/browse-source/head/update/3.2.10/deadwood-3.2.09-rootServers.patch">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>browse-<![if gt IE 6]>&#8203;<![endif]><wbr>source/<![if gt IE 6]>&#8203;<![endif]><wbr>head/<![if gt IE 6]>&#8203;<![endif]><wbr>update/<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood-<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>09-<![if gt IE 6]>&#8203;<![endif]><wbr>root<![if gt IE 6]>&#8203;<![endif]><wbr>Servers.<![if gt IE 6]>&#8203;<![endif]><wbr>patch</A>
+</blockquote>
+
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

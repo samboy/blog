@@ -1,0 +1,83 @@
+<h1>Web font rendering</h1>
+
+<h2>February 3, 2013</h2>
+
+In today's blog, I will discuss web font rendering on Chrome, and the
+work arounds I use.
+
+<p>
+
+Web font rendering in Chrome, especially on Windows, is <A
+href=http://css-tricks.com/forums/discussion/14797/font-looks-bad-in-webkit-browsers/p1>less
+than ideal</A>.  Fortunately, there are some workarounds which can
+make a web font look acceptable on this browser:
+
+<ul>
+<li>Make sure to use a font that can be modified.  I personally will only
+    use an OFL web font on my page.  (If you edit an OFL font in any way, you
+    must change its name)
+<li>FontSquirrel.com has a <A 
+    href=http://www.fontsquirrel.com/fontface/generator>free web font 
+    generator</A> that usually will make a font look acceptable across 
+    browsers.
+<li>Another program that will make a font look even better on modern computers
+is <A href=http://www.freetype.org/ttfautohint/>TTFautohint</A>.  
+Unfortunately, this tool usually makes a font look worse on legacy Windows 
+XP systems without Clear Type.
+<li>Put <tt>font-weight: bold;</tt> in the @font-face part of the CSS so
+Firefox won't try to make a (usually ugly) faux-bold version of the font.
+<li>Some users use noscript or other tools which disable web font rendering.
+Make sure the page looks decent if the fonts are replaced by "web safe"
+fallback fonts.  In my particular case, the web font I use looks somewhat
+like Calibri, so I use that as the first fallback font, as well as Arial 
+as the secondary fallback font for
+Linux and Mac users who may not have Calibri [<A href=#f1>1</A>]
+<li>Printing pages with web fonts in Webkit browsers (Chrome, Safari) and 
+Gecko browsers (Firefox) doesn't work.  My workaround is to hide the web
+fonts from Webkit's printing CSS, and have old-school "web safe" fallback
+fonts for Gecko-based browsers.
+<li>A friend of mine pointed out that using Google's web font API can minimize
+Chrome's web font rendering problems.
+</ul>
+
+Since I wasn't 100% happy with how the numbers looked with Font Squirrel's
+hinting, I ended up using <A href=http://fontforge.org/>Font Forge</A> to 
+edit the font's numbers by hand.  It took me about a week to get the
+font to look decent across all browsers [<A href=#f2>2</A>].
+
+<p>
+
+<i>See also: <A href=20110528.html>Embedding web fonts</A>; 
+          <A href=20110606.html>Webkit @font-face bug</A>;
+	  <A href=20110719.html>Web typography (2011)</A>;
+          <A href=20120918.html>Web typography (2012)</A></i>
+<p>
+
+<p>
+<div class=blogtitle>
+<b>Footnotes</b>
+</div><br>
+
+<A name=f1> </A>
+1: I don't think there's a legal way to install Calibri in
+Linux, but it's <A href=http://corefonts.sourceforge.net/>legal to download
+the older Arial, Verdana, Georgia, Trebuchet, etc. in Linux</A>.
+
+<p>
+
+<A name=f2> </A>
+2: The web font's numbers look very slightly off in Linux, but
+since Linux is at most 1% of web users, and since the glitch is subtle,
+trying to fix it is not worth it for me.
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

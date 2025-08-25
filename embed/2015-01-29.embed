@@ -1,0 +1,42 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/With-Citlalli-Tightcrop-120.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS hotfix</h1>
+<h2>January 29, 2015</h2>
+Because the new NS tarpit security code did not always perform bounds
+checking, I have made a new hotfix release of MaraDNS and Deadwood.
+
+<p>
+
+Please update to MaraDNS 2.0.11 and/or Deadwood 3.2.07.  MaraDNS 1 
+downloads are disabled until I can update MaraDNS 1 to have Deadwood 
+3.2.07.
+
+<p>
+
+<A name=Where_to_download></A><A name=Wheretodownload></A><span class=moyet>==</span><span class=blogtitle><b>Where to download</b></span><span class=moyet>==</span>
+
+<p>
+
+<A href="http://maradns.samiam.org/download.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+<A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+
+<p>
+
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

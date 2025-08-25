@@ -1,0 +1,147 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/2020-05-blog.jpg width=224 height=126>
+</div>
+
+<h1>June round-up</h1>
+<h2>June 1, 2020</h2>
+For June, I post an update on the COVID-19 virus, discuss CentOS 8 support
+for OpenVZ, touch on the protests we are having, and have a minor
+MaraDNS update.
+
+<p>
+
+<A name=COVID19_update></A><A name=COVID19update></A><span class=moyet>==</span><span class=blogtitle><b>COVID-19 update</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/COVID-19-2020-06-01.png" alt="">
+<br class=nomobile>
+<i>COVID-19’s doubling time in San Diego</i>
+<p>
+
+<p>
+
+We have <i>finally</i> stopped having exponential growth with COVID-19
+cases in San Diego.  Indeed, society is starting to open up again; I can
+get my hair cut again (as long as I wear a mask and observe social 
+distancing) and childcare at my daughter’s school is scheduled to open
+up again in a little over two weeks.
+
+<p>
+
+While there are still some shortages at stores, essential items are
+readily available again.  I may have to buy a different brand of toilet
+paper, for example, but I can buy it again.
+
+<p>
+
+The important thing is to maintain social distance to keep the spread
+of the virus down, as well as keeping one’s hands clean and wearing
+a mask when shopping or otherwise interacting closely with strangers.
+
+<p>
+
+Large public gatherings should still be avoided.  Which leads me to
+the next topic.
+
+<p>
+
+<A name=The_George_Floyd_protests></A><A name=TheGeorgeFloydprotests></A><span class=moyet>==</span><span class=blogtitle><b>The George Floyd protests</b></span><span class=moyet>==</span>
+
+<p>
+
+<a href="https://www.theatlantic.com/ideas/archive/2020/05/arnold-schwarzenegger-america-needs-do-better/612442/">Arnold Schwarzenegger has done a far better job describing the reason for the George Floyd protests than I could had</a>.
+
+<p>
+
+When I think to myself “who are the most macho people out there”,
+I think of Arnold Schwarzenegger and 
+<a href="https://billphillipsnews.com/2015/01/05/a-new-look-at-bill-phillips-upper-body-workout/">Bill Phillips</a>.
+
+<p>
+
+So, I made a point to read closely what they have to write, because they,
+to me, define what it means to be a real man.
+
+<p>
+
+There is a notion out there that being “Macho” means oppressing the
+weak. Which is why reading 
+<a href="https://www.theatlantic.com/ideas/archive/2020/05/arnold-schwarzenegger-america-needs-do-better/612442/">this article from Arnie</a> was so enjoyable;
+it is the peak of masculinity: Having compassion for the oppressed
+and desiring to overcome oppression.
+
+<p>
+
+I do not feel comfortable going in to the streets to protest because of
+the COVID-19 crisis, but I do feel comfortable lifting some dumbbells
+I am blessed to have at home as a sign of solidarity of those who have
+been oppressed by our country’s prejudices and petty hatreds.
+
+<p>
+
+<A name=OpenVZ_Yes_there_is_CentOS_8_support></A><A name=OpenVZYesthereisCentOS8support></A><span class=moyet>==</span><span class=blogtitle><b>OpenVZ: Yes, there is CentOS 8 support</b></span><span class=moyet>==</span>
+
+<p>
+
+The OpenVZ nodes available at 
+<a href="https://ramnode.com/">RamNode</a>, as it turns out, fully support CentOS 8.
+However, since CentOS 8 is 64-bit, it requires more memory to run processes
+than 32-bit CentOS 6, which means it really needs a larger node than a
+128 megabyte one.  While RamNode still offers $15/year 128 megabyte nodes, 
+their next step up is a $42/year 1 gigabyte node.  It would be nice if
+they offered something in between for $25 a year, such as a 256mb or 512mb
+node.
+
+<p>
+
+Since I have <i>already</i> moved everything over to Dreamhost, I will
+leave it to Dreamhost to make sure the underlying operating system is
+up to date with security patches, and that things run smoothly.
+
+<p>
+
+<A name=MaraDNS_Mailing_list_archive_update></A><A name=MaraDNSMailinglistarchiveupdate></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS: Mailing list archive update</b></span><span class=moyet>==</span>
+
+<p>
+
+As I was moving files to the new node, I was able to find the archives
+for the third and final iteration of the MaraDNS mailing list.  They
+are available here:
+
+<p>
+
+<blockquote>
+<A href="https://maradns.samiam.org/2010s-mailing-list/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>2010<![if gt IE 6]>&#8203;<![endif]><wbr>s-<![if gt IE 6]>&#8203;<![endif]><wbr>mailing-<![if gt IE 6]>&#8203;<![endif]><wbr>list/</A>
+</blockquote>
+
+The mailing list is down, and it’s more bother than it’s worth to bring
+it up again one last time to send a “goodbye mailing list” message 
+to its subscribers.
+
+<p>
+
+I continue to work on MaraDNS; my current project is to make MaraDNS
+supported in Cygwin so that Windows users without access to Hyper-V can
+run both the authoritative and recursive parts of MaraDNS (not to mention
+MicroDNS).
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

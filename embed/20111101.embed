@@ -1,0 +1,39 @@
+<h1>Deadwood 3.0.04</h1>
+
+<h2>November 1, 2011</h2>
+
+I have released Deadwood 3.0.04 today.  This release fixes some bugs and
+has improved documentation.  Please read <A 
+href=http://maradns.org/deadwood/doc/UPDATE-guide>the update guide</A>
+and the <A 
+href=http://maradns.org/deadwood/doc/CHANGELOG>change log</A> for
+more information.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/stable/>http://www.maradns.org/deadwood/stable/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood without sponsorship again
+one day in December, before the 15th; if I get some sponsorship, I will
+work on MaraDNS and Deadwood again sooner.
+
+<p>
+
+My plans are to release the tcc version of Deadwood for Windows (which 
+includes a tiny compiler) and then to release MaraDNS 1.4.07; after that,
+I will work on the MaraDNS 2.0.04 release.  The amount of time this will
+take depends on how much sponsorship money I get.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

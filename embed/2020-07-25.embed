@@ -1,0 +1,157 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS 3.5.0008</h1>
+<h2>July 25, 2020</h2>
+I have released MaraDNS 3.5.0008.  This release adds a new program:
+mmLunacyDNS. <i>767 words</i>
+
+<p>
+
+<A name=MaraDNS_now_includes_Lua_support></A><A name=MaraDNSnowincludesLuasupport></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS now includes Lua support</b></span><span class=moyet>==</span>
+
+<p>
+
+Recently, someone expressed interest in having me compile microdns,
+a simple DNS server which always returns the same IP, regardless of
+the query sent to it, for Windows.  While I did not do that—microdns
+does not run as a Windows service, and it handles EDNS packets
+poorly—I have been thinking about how to offer “always give out
+the same IP” for Windows users.
+
+<p>
+
+As part of my work becoming familiar with Lua, after making a Lua
+library which can be called from C, I thought of this request when
+thinking of a C program which I could interface with Lua.  And
+that is how mmLunacyDNS was born.
+
+<p>
+
+The name is “mm” for “micro”; “Lunacy” is the name of my branch
+of Lua 5.1 used, and “DNS” is “domain name system”, the network
+protocol this program implements.
+
+<p>
+
+Fans of the Lua language are well aware that Lua 5.4 has recently
+come out, so why are we using an eight-year-old version of Lua?
+Lua 5.1 is the <i>lingua franca</i> of Lua versions; by forcing
+Lua 5.1 syntax in the scripts used, this gives me more flexibility
+to use other implementations of Lua.
+
+<p>
+
+<a href="https://github.com/yuin/gopher-lua">Gopher Lua</a>
+for the Go programming language implements Lua 5.1.  
+<a href="https://github.com/moonsharp-devs/moonsharp">Moonsharp</a>, a C#
+implementation of Lua, implements Lua 5.2.  So, sticking with an older
+Lua release allows one to implement this server in Go or C# without the
+scripts the server uses having to be rewritten.
+
+<p>
+
+More to the point, enterprise users who may find Lua too slow can 
+use <a href="https://github.com/LuaJIT/LuaJIT">LuaJIT</a>, which is almost as
+fast as native C code while allowing one to quickly implement features
+with Lua 5.1 code.  If I were to move to LuaJIT, there would still be
+no need for users to rewrite their scripts.
+
+<p>
+
+<A name=What_mmLunacyDNS_can_do></A><A name=WhatmmLunacyDNScando></A><span class=moyet>==</span><span class=blogtitle><b>What mmLunacyDNS can do</b></span><span class=moyet>==</span>
+
+<p>
+
+mmLunacyDNS is an IPv4 only DNS server which, after reading its
+Lua configuration file (the only configuration file it uses) to
+determine its IP to bind to, listens for DNS requests.  Once
+mmLunacyDNS gets a DNS request, it calls a Lua function in the
+configuration file, giving the function the name requested (with
+hex escaping as needed to avoid injection type attacks), the IP
+the request came from, and what type of DNS request it is (IPv4 IP, 
+email server, reverse DNS lookup request, IPv6 IP, etc.).  
+
+<p>
+
+With this information, the Lua script can either tell mmLunacyDNS
+to ignore the request, or to return an IP specified by the Lua
+script.  
+
+<p>
+
+To protect against malicious configuration files, Lua is sandboxed.
+While the <tt>math</tt>, <tt>string</tt>, and <tt>bit32</tt> libraries
+are available, all other libraries and top level functions are not
+available to the script.  To make up for <tt>print</tt> being gone,
+the Lua environment has <tt>mmDNS.log</tt> for logging information.
+
+<p>
+
+The Windows version of mmLunacyDNS can be started and stopped
+as a service.  The Linux/UNIX/BSD version of mmLunacyDNS does
+not have daemonization support, but I have set up its interface
+to allow one to be implemented in the future.
+
+<p>
+
+And, that’s all mmLunacyDNS can do.  It has no IPv6 support.
+It can only return a single IP per query.  It can not set the
+TTL of replies (they always have a 0 TTL).  It will not do your
+dishes for you either.
+
+<p>
+
+<A name=Other_changes></A><A name=Otherchanges></A><span class=moyet>==</span><span class=blogtitle><b>Other changes</b></span><span class=moyet>==</span>
+
+<p>
+
+The other change I have made is that Deadwood’s configuration
+file can now accept multiline comments:
+
+<p>
+
+<tt>_rem={}</tt><br>
+<tt>_rem={ #_rem --[=[</tt><br>
+<tt>"""</tt><br>
+<tt>&nbsp;We are now in a multi-line comment.</tt><br>
+<tt>&nbsp;This allows a long explanation to be</tt><br>
+<tt>&nbsp;in a Deadwood configuration file</tt><br>
+<tt>""" # ]=] </tt><br>
+<tt>}</tt><br>
+
+<p>
+
+The actual format is <tt>_rem={</tt> at the start of a line,
+which begins a multi-line comment.  The comment continues 
+until a <tt>}</tt> is seen.  The reason for this unusual format
+is that it allows a Deadwood configuration file to have multi-line
+comments in a form which are compatible with both Lua and Python,
+as can be seen in the above example.
+
+<p>
+
+If one is getting the impression that I’m thinking about maybe adding
+Lua support to Deadwood, there may be some truth to that.  I will not
+promise anything I do not deliver, but there is a possibility that Lua
+would help with some use cases.  For example, large block lists would
+take up less memory if implemented in Lua instead of the current method
+of placing them in Deadwood’s fast but memory inefficient DNS cache. 
+And, Lua would solve the request I sometimes get to allow DNS names
+to match against regular expressions: Lua includes an entire regex
+library.
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,282 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/Chess1.jpg width=224 height=126>
+</div>
+
+<h1>J. Polgar v. Carlsen 2022</h1>
+<h2>July 15, 2022</h2>
+This month, Judit Polgar played reigning World Chess Champion Magnus 
+Carlsen in a quick casual game of chess.
+
+<p>
+
+<A name=The_interactive_diagrams></A><A name=Theinteractivediagrams></A><span class=moyet>==</span><span class=blogtitle><b>The interactive diagrams</b></span><span class=moyet>==</span>
+
+<p>
+
+The diagrams here, when viewed on the world wide web, are interactive
+diagrams.  Click on “&gt;” below the diagram to advance the position
+one move; click on “&lt;” to go back one move.  Click on “reset” to 
+return to the position being discussed in the notes.
+
+<p>
+
+<A name=The_Game></A><A name=TheGame></A><span class=moyet>==</span><span class=blogtitle><b>The Game</b></span><span class=moyet>==</span>
+
+<p>
+
+On July 2<span style="font-size: 10pt; line-height: 0; vertical-align: 6px">nd</span>, 2022 during the candidate’s chess tournament
+in Spain, Grandmaster (and at one time world #8 player) Judit Polgar
+sees reigning World Chess Champion Magnus Carlsen in the park and they 
+play a casual (“Skittles”) game of chess as a crowd and camera crew 
+watch and record the event.  Polgar is White and Carlsen is Black
+in this game.  Both players had only three minutes to make all of 
+their moves.
+
+<p>
+
+<b class=s>1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6</b>
+
+<p>
+
+<script src="/blog/chess/jquery-1.12.4.min.js"></script><script>$.ajaxSetup({contents: {script: false}})</script><script src="/blog/chess/chessboard-0.3.0.min.js" type="text/javascript"></script><script src="/blog/chess/chess.js"></script><link href="/blog/chess/chessboard-0.3.0.min.css" rel="stylesheet"></link><script src="/blog/chess/chessgame.js"></script><div id="gameScore-box"></div><script type="text/javascript">runGame(
+"1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 Nc6 5.Nc3 Qc7 6.Be3 a6 7.Qd2 Nf6 " +
+"8.f3 Be7 9.O-O-O b5 10.g4 Nxd4 11.Bxd4 Bb7 12.e5 Nxg4 13.Rg1 Nh6 " +
+"14.Bd3 Bf8 15.Be4 Rc8? 16.Bb6! Bxe4 17.Bxc7 Bc6 18.Bd6 Nf5 19.Ne4 1-0",
+"Black resigns",
+"gameScore",
+8,
+"Position after 4... Nc6",
+0,0
+);</script>
+<noscript>
+<img src=pics/chess/2022-07-15-1.png><br>
+Position after 4... Nc6
+</noscript>
+
+<p>
+
+
+<p>
+
+It’s unusual for Carlsen to play the <i>Sicilian Taimanov</i> 
+(For people familiar with ECO codes: B48), but he has played it
+a couple of times in tournaments, both this year, one game as Black 
+against Grandelius and another game, again as Black, against
+candidates winner Nepomniachtchi in a rapid game.
+
+<p>
+
+Judit Polgar is no stranger to the Sicilian Taimanov, having played
+it with the Black pieces in a famous 1994 game against Shirov in 
+Argentina.
+
+<p>
+
+<b class=s>5. Nc3 Qc7 6. Be3 a6 7. Qd2 Nf6 8. f3 Be7 9. O-O-O b5 10. g4 Nxd4
+   11. Bxd4 Bb7 12. e5</b>
+
+<p>
+
+<div id="board1-box"></div><script type="text/javascript">runGame(
+0,"Black resigns","board1",23,"Position after 12. e5",0,0
+);</script>
+<noscript>
+<img src=pics/chess/2022-07-15-2.png><br>
+Position after 12. e5
+</noscript>
+
+<p>
+
+The usual moves to make here are Kb1 or g5, but Polgar played
+the novelty move e5 which has not been seen in master level play
+before.  
+
+<p>
+
+<b class=s>12... Nxg4 13. Rg1 Nh6</b>
+
+<p>
+
+<div id="board2-box"></div><script type="text/javascript">runGame(
+0,"Black resigns","board2",26,"Position after 13... Nh6",0,0
+);</script>
+<noscript>
+<img src=pics/chess/2022-07-15-3.png><br>
+Position after 13... Nh6
+</noscript>
+
+<p>
+
+White could not play 13. fxg3 because then Black’s bishop would
+had taken the rook on h1.
+
+<p>
+
+While 13... Bxf3 is technically Black’s best move here, there
+were a number of tactical complications Black would had been
+exposed to, such as 14. Bg2 Bxg2? 15. Qxg2 and now both
+Black’s a8 rook and g4 knight are under attack, causing
+him to lose a piece.
+
+<p>
+
+<b class=s>14. Bd3 Bf8</b>
+
+<p>
+
+Black is now forced to put his dark-squared bishop back on its
+home square.  Other moves are worse.  For example, if Black
+instead played 14... O-O?, Black would had been exposed
+to a mating attack:  
+
+<p>
+
+<div id="board3-box"></div><script type="text/javascript">runGame(
+"14... O-O? 15. Rxg7+ Kxg7 16. Rg1+ Ng4 17. Rxg4+ Kh8 18. Qh6 Bg5+ " +
+"19. Rxg5 Qxc3 20. Qg7#",
+"Checkmate","board3",0,"What if Black played 14... O-O?",
+"r3k2r/1bqpbppp/p3p2n/1p2P3/3B4/2NB1P2/PPPQ3P/2KR2R1 b kq - 3 14",
+"Analysis"
+);</script>
+<noscript>
+<img src=pics/chess/2022-07-15-4.png><br>
+14... O-O? would had exposed Black’s king
+</noscript>
+
+<p>
+
+<i>14... O-O? 15. Rxg7+ Kxg7 16. Rg1+ Ng4 17. Rxg4+ Kh8 18. Qh6 Bg5+
+19. Rxg5 Qxc3 20. Qg7#</i>  
+
+<p>
+
+Black can make other moves after 14... O-O?, but they all lead to
+checkmate.
+
+<p>
+
+Back to the game that was on the board, it continued as follows.
+
+<p>
+
+<b class=s>14... Bf8 15. Be4 Rc8?</b>
+
+<p>
+
+Rc8 was a blunder; White can now move and win:
+
+<p>
+
+<div id="board4-box"></div><script type="text/javascript">runGame(
+0,"Black resigns","board4",30,"White to move and win",0,0
+);</script>
+<noscript>
+<img src=pics/chess/2022-07-15-5.png><br>
+White to move and win
+</noscript>
+
+<p>
+
+<b class=s>16. Bb6!</b>
+
+<p>
+
+Black cannot save both his queen and king.  For example, if
+Black now plays 16... Qxb6??, White can mate with Qxd7#:
+
+<p>
+
+<div id="board5-box"></div><script type="text/javascript">runGame(
+"16. Qxb6?? Qxd7#",
+"Checkmate","board5",0,"What if Black played 16... Qxb6??",
+"2r1kb1r/1bqp1ppp/pB2p2n/1p2P3/4B3/2N2P2/PPPQ3P/2KR2R1 b k - 7 16",
+"Analysis"
+);</script>
+<noscript>
+<img src=pics/chess/2022-07-15-6.png><br>
+Playing 16... Qxb6?? would had led to mate
+</noscript>
+
+<p>
+
+Since there is no move which both puts his queen on a safe square and
+defends the d7 square, Magnus was forced to give up his queen.  Magnus
+and Grandmaster Anish Giri immediately saw that the position was lost
+for Black and exclaimed “Oh my God!”; the crowd quickly caught on and
+cheered for Judit’s 16. Bd6! move.
+
+<p>
+
+Magnus could had resigned at 
+this point, but, having a strong fighting spirit, 
+Magnus decided to continue on for a few more moves:
+
+<p>
+
+<div id="board6-box"></div><script type="text/javascript">runGame(
+0,"Black resigns","board6",31,"Position after 16. Bd6!",0,0
+);</script>
+<noscript>
+<img src=pics/chess/2022-07-15-7.png><br>
+Without his queen, Magnus resigns
+</noscript>
+
+<p>
+
+<b class=s>16... Bxe4 17. Bxc7 Bc6 18. Bd6 Nf5 19. Ne4 1-0</b>
+
+<p>
+
+And this is how Judit Polgar beat Magnus in only 19 moves.
+
+<p>
+
+<A name=See_also></A><A name=Seealso></A><span class=moyet>==</span><span class=blogtitle><b>See also</b></span><span class=moyet>==</span>
+
+<p>
+
+<ul>
+<li> <a href="https://www.chessgames.com/perl/chessgame?gid=2325478">The game on
+  chessgames.com</a>
+<li> <a href="https://lichess.org/rmJYnU6H">Computer analysis of game on Lichess</a>
+<li> <a href="https://lichess.org/@/Chess-Network/blog/magnus-carlsen-is-defeated-in-19-moves-by-judit-polgar/UCwDJWpd">Chess 
+  Network’s Lichess blog on the game</a>
+<li> <a href="https://www.youtube.com/watch?v=hvbZCRid5CY">Judit’s own
+  video commentary on this game</a>
+<li> <a href="https://www.youtube.com/watch?v=MlGhEySy6ZA">Gotham Chess’s video
+  commentary on this game</a>
+<li> <a href="https://www.youtube.com/watch?v=AcpGZF3PcB8">Agadmator’s video 
+  commentary</a>
+<li> <a href="https://www.youtube.com/watch?v=aFgqTdLLVCk">Chess Network video
+  commentary</a>
+<li> Reddit has <a href="https://www.reddit.com/r/chess/comments/vpvqhm/judith_polg%C3%A1r_and_magnus_carlsen_play_an/">two</a>
+  <a href="https://old.reddit.com/r/chess/comments/vqq8n1/the_polg%C3%A1r_vs_carlsen_game_from_an_other_camera/">discussion</a>
+  threads about this game.
+</ul>
+
+<p>
+
+<i>A one-page summary of this game is available as a
+   <a href="pdf/JPolgar-Carlsen-2022.pdf">PDF file</a></i>
+
+<p>
+
+<i>The code and graphics to make the chess game diagram come from a
+variety of open source projects.  There is <a href="chess/COPYING.txt">a
+list of contributors and copyrights</a> for the hard working people
+who made these chess diagrams possible.  Also, the diagram code has a
+<a href="https://github.com/samboy/ChessDiagrams">GitHub page</a>.</i>
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

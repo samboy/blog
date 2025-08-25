@@ -1,0 +1,88 @@
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Keccak: The best choice</h1>
+
+<h2>November 1, 2012</h2>
+
+In today's blog, I discuss the Keccak hash, and why it was the best
+choice for SHA-3.
+
+<p>
+<div class=blogtitle>
+<b>A brief history of SHA-3</b>
+</div><br>
+
+In late 2008, <A href=old-20081216-first-look-sha3.html>all of the SHA-3 
+candidates were released</A>.  There were a large number of them; two 
+of the four I liked the most became finalists: Keccak and Skein (the other 
+two, LUX and MeshHash, unfortunately had security problems).
+
+<p>
+
+As the SHA-3 process went on, I became more attached to Keccak over
+Skein.  Not only is Keccak the direct successor to RadioGatun, the
+algorithm Deadwood uses for secure random numbers, but also Skein
+runs like a dog on anything besides a 64-bit CPU.  
+
+<p>
+
+Indeed, back in 2010, I <A href=old-20100912-openwrt.html
+>expressed my preference</A> for Keccak over Skein:
+
+<blockquote>
+If I were to use one
+of the SHA-3 submissions for Deadwood&#8217;s PRNG, I would use <A
+href=http://keccak.noekeon.org/>Keccak</A>.  Like Skein, it can output
+a stream of infinite length from any input of any length.  Unlike Skein,
+it is more 32-bit compatible; not only is there a 32-bit &#8220;reduced
+word length&#8221; variant officially blessed by the algorithm&#8217;s
+creators, but also 64-bit Keccak more easily scales down to 32-bits
+than Skein, since the only operations done are permutes, rotates, and
+exclusive ORs.
+</blockquote>
+
+<p>
+<div class=blogtitle>
+<b>Keccak is the fastest SHA-3 finalist</b>
+</div><br>
+
+As the SHA-3 process was approaching a close, the consensus on the mailing
+list was that none of the SHA-3 finalists was significantly faster than
+SHA-2.  And, indeed, in software SHA-2 has better performance than all of
+the SHA-3 finalists (yes, Skein is faster on 64-bit systems, but it
+is a dog on anything else).
+
+<p>
+
+When the SHA-3 process was started, there were fears that SHA-2 would
+fall just like MD5 fell.  Fortunately, no significant cryptographic attacks
+have been mounted against SHA-2.  Coupled with the fact that none of the
+SHA-3 finalists have significantly better software performance than SHA-2,
+it was logical to choose the one algorithm which is head and shoulders
+faster than SHA-2 in hardware: Keccak.
+
+<p>
+
+While some of other SHA-3 finalists have better software performance
+than Keccak (Blake is remarkably fast, for example), Keccak still has good
+software performance.  Until dedicated instructions for Keccak are
+added to CPUs, a sure thing in light of the widespread AES instruction 
+support, applications where software performance is critical can continue
+to use SHA-2.
+
+<p>
+
+Since none of the SHA-3 finalists had better hardware and software
+performance than SHA-2, it made sense to choose the one algorithm that
+runs far better on dedicated hardware.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

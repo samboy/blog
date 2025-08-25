@@ -1,0 +1,41 @@
+<h1>Another Deadwood bug</h1>
+
+<h2>March 25, 2011</h2>
+
+A lot of the headache of making a recursive DNS server is dealing with
+misconfigured DNS servers.  Let's take the example of a DNS server 
+giving us an empty packet.  This can mean various things:
+
+<ul>
+<li><A href=http://maradns.blogspot.com/2010/09/new-deadwood-snapshot-better-handling.html>it
+can mean that there is no answer for the host name in question</A>
+<li>Or, <A
+href=http://maradns.blogspot.com/2010/09/new-deadwood-snapshot-better-heuristics.html>it
+can mean the DNS servers are misconfigured</A>
+</ul>
+
+Right now, one of the three DNS servers for <A 
+href=http://archive.org>archive.org</A> is broken: Any queries sent to it
+result in a REFUSED reply.
+
+<p>
+
+There are a number of ways of handling this better than Deadwood currently
+does.  What I will <i>probably</i> end up doing is giving these kinds of
+answers as low of a TTL as I can get away with.  
+
+<p>
+
+This will all be done on April 15.  This is a more important
+bug than the issue with AXFR-over-UDP which I mentioned yesterday.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,73 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Deadwood updates</h1>
+<h2>December 3, 2013</h2>
+I have updated Deadwood to resolve yet another corner case and updated
+TinyOVZ to have Deadwood 3.2.03d.
+
+<p>
+
+<A name=Deadwood_update></A><A name=Deadwoodupdate></A><span class=moyet>==</span><span class=blogtitle><b>Deadwood update</b></span><span class=moyet>==</span>
+
+<p>
+
+Because 
+<a href="http://www.oncetv-ipn.net">Canal Once</a> has misconfigured DNS servers
+and the .tv root servers do not return answers in the AN section, I have
+had to apply a
+<a href="http://maradns.samiam.org/deadwood/browse-source/head/update/3.2.04/deadwood-3.2.03-oncetv-ipn.net.patch">non-trivial patch</a>
+to get oncetv-ipn.net to resolve in Deadwood.
+
+<p>
+
+Since this patch is non-trivial, and since I have just updated Deadwood
+with a security patch, I will not make a Deadwood 3.2.03e release.  Instead,
+I will release Deadwood 3.2.04 fairly soon.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<A name=TinyOVZ_update></A><A name=TinyOVZupdate></A><span class=moyet>==</span><span class=blogtitle><b>TinyOVZ update</b></span><span class=moyet>==</span>
+
+<p>
+
+Not only have I renamed my Tiny OpenVZ template TinyOVZ (instead of its old
+name TinyVZ), I have also updated it to have Deadwood 3.2.03d.  In addition,
+I am beginning to add other services to TinyOVZ; right now it has a web
+server suitable for static files (sthttpd).
+
+<p>
+
+The release is TinyOVZ-0.7.04, and it’s available here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/TinyOVZ">http://samiam.org/TinyOVZ</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

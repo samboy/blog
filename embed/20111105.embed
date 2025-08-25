@@ -1,0 +1,72 @@
+<h1>The Galileo 7</h1>
+
+<h2>November 5, 2011</h2>
+
+There is a classic episode from the original Star Trek named <i>The Galileo
+Seven</i> where Spock discovers that acting in a perfectly logical way
+while assuming others are just as logical does not work in the real world.
+
+<p>
+
+Likewise, the type of thinking used to solve logic puzzles like the
+<A href=20111104.html>the village adultery puzzle</A> does not correspond
+to the thinking used to write a real-world program.  In the village
+adultery puzzle, the "correct" solution is found only when one buys the
+flawed assumption that all of the women are perfectly righteous as well as
+perfectly rational, and that each woman can safely assume all of the other
+women will think exactly like her.
+
+<p>
+
+With real people in the real world, this never actually happens. 
+
+<p>
+
+For example, when developing <A href=http://maradns.org/deadwood/>Deadwood</A>,
+if I were able to use the same thinking used to solve a Smullyan-style 
+puzzle, the program would have been finished years sooner than it really was.
+A lot of the testing and tuning of Deadwood is working around DNS
+servers whose behavior is 
+<A href=http://maradns.blogspot.com/2010/09/new-deadwood-snapshot-better-heuristics.html>anything</A>
+<A href=http://maradns.blogspot.com/2010/09/new-deadwood-snapshot-better-handling.html>but</A> 
+<A href=http://maradns.blogspot.com/2010/08/deadwood-snapshot-update-working-around.html>logical</A>.
+
+<p>
+
+While these kinds of logic puzzles are fun, and can be solved with a bit
+of thinking once the assumption that everyone acts perfectly logically and
+knows everyone else acts perfectly logically is understood, they have little
+real-world value.  When developing Deadwood, there were only a couple of
+times where I was able to come up with something really clever (the hash
+compression function and the prime number used to determine which DNS 
+server we should contact next, as well as surveying the cryptographic
+literature to find a good secure pseudo-random number generator).  Most
+of the coding was somewhat tedious detail work implementing small
+and simple versions of all of the libraries a recursive cache DNS server
+needs (the string libraries, the LRU used for storing cached records,
+associative array support, the DNS compression code, etc.)
+
+<p>
+
+Unfortunately, there is a somewhat incorrect idea that a good programmer
+is also trained to solve these kinds of logic puzzles.  Some companies
+will ask a question like this during the interview, and will not hire 
+someone who does not know how to solve such a puzzle.  
+
+<p>
+
+In today's job market, I realize that there is a small but distinct chance
+that someone will ask me a question like this during the interview, which
+is why I have gone to the effort to figure out how these puzzles are
+constructed and what logic to use to solve them.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

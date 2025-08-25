@@ -1,0 +1,50 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood snapshot</h1>
+
+<h2>November 13, 2011</h2>
+
+In today's snapshot of Deadwood, I have added a patch that fixes
+<A href=http://woodlane.webconquest.com/pipermail/list/2011-November/000980.html>an
+issue Deadwood has had with easyDNS' hosts</A>.  
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<div class=blogtitle>
+<b>Time stamps</b>
+</div><br>
+
+I'm also doing some research on getting a timestamp with fraction-of-a-second
+information.  The way to do it in POSIX is with <A 
+href=http://pubs.opengroup.org/onlinepubs/7908799/xsh/clock_getres.html>clock_gettime</A>;
+the way to do it in Windows is with <A
+href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms724397%28v=vs.85%29.aspx">GetSystemTimeAsFileTime</A>.
+While Mac OS X is a certified UNIX, as it turns out it doesn't have 
+clock_gettime; it uses something else called <A
+href=http://www.macresearch.org/tutorial_performance_and_time>mach_absolute_time</A>.
+
+<p>
+
+Since I don't have a Mac around, when and if I add support for more accurate
+timestamps, Deadwood will no longer be Mac compatible.  People who wish to
+use Deadwood on a Macintosh are welcome to buy me a <A
+href=http://www.bhphotovideo.com/c/product/815051-REG/Apple_Z0MG_0002_11_6_MacBook_Air_Notebook.html>fully
+decked out Core i7 11.6" Macbook Air</A> so I can do a proper port.  And,
+yes, it needs to be a Macbook Air, needs to be 11.6", and needs to have a
+core i7 chip.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

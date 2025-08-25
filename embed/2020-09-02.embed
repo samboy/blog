@@ -1,0 +1,136 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/2020-Election-Prediction-1.jpg width=224 height=126>
+</div>
+
+<h1>Election prediction #2</h1>
+<h2>September 2, 2020</h2>
+I post a second prediction for the 2020 election, and mention a new
+MaraDNS release.
+
+<p>
+
+<A name=My_second_prediction></A><A name=Mysecondprediction></A><span class=moyet>==</span><span class=blogtitle><b>My second prediction</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/2020-Election-Prediction-2.png" alt="">
+<br class=nomobile>
+<i>My second prediction for the November 3 presidential election</i>
+<p>
+
+<p>
+
+This prediction is very similar to the prediction I made
+<a href="https://www.samiam.org/blog/2020-07-02.html">two months ago</a>, the only
+difference being that I have some doubt that Wisconsin will flip to
+Biden on November 3.
+
+<p>
+
+Let’s look at this prediction in more detail.
+
+<p>
+
+<A name=Florida></A><A name=Florida></A><span class=moyet>==</span><span class=blogtitle><b>Florida</b></span><span class=moyet>==</span>
+
+<p>
+
+Without Florida, Trump will need to repeat his 2016 performance in the 
+Northern Rust Belt (PA/WI/MI/MN) to win, which looks unlikely.
+
+<p>
+
+So, let’s look at Florida’s polling.  Right now, 538 claims that
+<a href="https://projects.fivethirtyeight.com/2020-election-forecast/florida/">Biden
+has a 60% chance of getting Florida</a>.  I think they are being too
+conservative; I claim Biden has about an 80% chance because:
+
+<p>
+
+<ul>
+<li> The number of undecided voters is much lower in 2020 than it was with
+  2016 polls from this time; in late August of 2016, 
+  <a href="https://www.realclearpolitics.com/epolls/2016/president/fl/florida_trump_vs_clinton-5635.html">13.1% 
+  of Florida voters were undecided</a>, but right now, not only is Biden
+  leading Trump by 3.7% in Florida, but also <a href="https://www.realclearpolitics.com/epolls/2020/president/fl/florida_trump_vs_biden-6841.html">only
+  5.7% of voters are undecided</a>.
+<li> Older voters in Florida have seen the results of Trump’s poor handling
+  of the Coronavirus epidemic throughout the summer, and the resulting
+  11,000+ deaths.
+<li> Florida has just had, in a recent primary, <a href="https://www.heraldtribune.com/story/news/politics/state/2020/08/19/voter-turnout-pandemic-shaded-primary-high/5608297002/">the
+  highest voter turnout seen in 18 years</a>.  Higher turnout usually benefits
+  Democrats.
+</ul>
+
+<p>
+
+<A name=The_Rust_Belt></A><A name=TheRustBelt></A><span class=moyet>==</span><span class=blogtitle><b>The Rust Belt</b></span><span class=moyet>==</span>
+
+<p>
+
+When I say “The Rust Belt”, I am talking about Pennsylvania, Michigan,
+Wisconsin, and Minnesota.  Biden, if he gets Florida, needs only 
+Pennsylvania to win the election; if he can not get Pennsylvania, he
+can <i>also</i> win with Michigan and Minnesota.
+
+<p>
+
+Biden has a considerable advantage in the rust belt compared to Clinton
+in 2016: He does not have the problem with losing voters who were 
+disappointed in Sanders’s defeat which Clinton had.  2016 Sanders
+voters are behind Biden here in 2020, which is enough to win the entire
+northern rust belt.
+
+<p>
+
+The only way Trump can get the rust belt is by trying to make Biden
+responsible for <a href="https://www.nytimes.com/2020/08/26/us/kenosha-wisconsin-trump.html">the
+unrest caused by far-left protesters</a>; indeed, Biden polling numbers 
+have been going down in the rust belt after the Kenosha unrest.  There
+is a reason that Biden is <a href="https://reason.com/2020/08/31/joe-biden-riots-looting-protesters-blm-trump/">making
+sure voters know he condemns the riots</a>.
+
+<p>
+
+<A name=MaraDNS_350016></A><A name=MaraDNS350016></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0016</b></span><span class=moyet>==</span>
+
+<p>
+
+I have released MaraDNS 3.5.0016; in this release, <tt>coLunacyDNS</tt> now
+has 100% test coverage.*  I have fixed a couple of minor bugs; there
+was some incorrect behavior if <tt>processQuery</tt> returned bad data
+which I found and corrected in my testing.
+
+<p>
+
+MaraDNS can be downloaded on <a href="https://maradns.samiam.org/download.html">the
+MaraDNS web page</a> as well as 
+<a href="https://sourceforge.net/projects/maradns/files/MaraDNS/3.5.0016/">over 
+at Sourceforge</a>.
+
+<p>
+
+  *Some sanity tests which protect coLunacyDNS from security threats which
+can not be readily reproduced are disabled in testing mode.
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

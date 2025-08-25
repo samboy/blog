@@ -1,0 +1,58 @@
+<h1>IE8 @font-face bug</h1>
+
+<h2>June 19, 2011</h2>
+
+Since @font-face is a relatively new tag, there are a few bugs
+with its implementation in browsers.  I recently discovered that
+<A href=20110606.html>Webkit has an issue printing pages
+that use @font-face</A> and 
+discovered just yesterday that Internet Explorer 8 has a nasty bug with
+@font-face on a page that uses iframes.  In particular: 
+
+<p>
+
+<ul>
+<li>If a page uses @font-face in its CSS to have a custom font
+<li>And the page has an iframe which uses the same font
+<li>Then IE8 will sometimes incorrectly render the font in the parent
+    frame.
+</ul>
+
+This particular bug does not manifest itself if Internet Explorer 9 is 
+used in IE8 rendering mode; this bug is only visible when using the 
+native IE8 client to render the page.
+
+<p>
+
+The workaround is to not have a custom font in the iframe when using
+IE8 (another workaround would be to have the custom font <i>only</i>
+in the iframe).  Here is what the relevant HTML code in the iframe looks
+like:
+
+<pre>
+&lt;![if !(IE 8)]&gt;
+&lt;link rel="stylesheet" type="text/css" href="custom_font.css"&gt;
+&lt;![endif]&gt;
+&lt;!--[if IE 8]&gt;
+&lt;link rel="stylesheet" type="text/css" href="no_custom_font.css"&gt;
+&lt;![endif]--&gt;
+</pre>
+
+<p>
+<hr>
+<p>
+
+I now have a list of <A href=../low-cost-hosting.html>low cost hosting 
+providers</A>; this lists every single hosting provider providing an
+account with root access for $24 a year or less that I know about.  
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

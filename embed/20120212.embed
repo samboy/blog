@@ -1,0 +1,36 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS 2.0.05 released</h1>
+
+<h2>February 12, 2012</h2>
+
+I have released MaraDNS 2.0.05 today.  This release updates the recursive
+code to use Deadwood 3.2.01 and fixes <A 
+href=http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-5056
+>CVE-2011-5056</A>. 
+
+<p>
+
+All users of MaraDNS are encouraged to update to 2.0.05, unless one has
+a really compelling reason to still use a 1.4 release (MaraDNS 1.x users
+should be using 1.4.10).
+
+<p>
+
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download.html>http://www.maradns.org/download.html</A><br>
+<A href=http://sourceforge.net/projects/maradns>http://sourceforge.net/projects/maradns</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

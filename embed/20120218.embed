@@ -1,0 +1,75 @@
+<h1>Bulk polyhedral dice</h1>
+
+<h2>February 18, 2012</h2>
+
+<div class=blogtitle>
+<b>Buying dice</b>
+</div><br>
+
+After a 20-year hiatus, I am starting to play role playing games
+again.  When making characters, we discovered that no
+one in our party had dice.  So, I spent some time researching getting
+bulk polyhedral dice for the entire party, so we never will
+have to worry about dice again.  Some results: 
+<p>
+
+<ul>
+<li>The most common source for bulk dice is the <A 
+href=http://www.amazon.com/Chessex-Dice-Pound-Dice-Approximately/dp/B000X75BFE/
+>Chessex pound of dice bag</A>.
+<li>Other similar sources of bulk dice are the <A
+href=http://www.amazon.com/Jingle-Bones-Pound-Bulk-Stocking/dp/B001N23MKY/
+>Crystal Caste 1 pound stocking</A>, the <A
+href=http://www.amazon.com/Koplow-Games-16490-Polyhedral-Spotted/dp/B003I64ORI/
+>Koplow Games pound of polyhedral dice</A>, and Game Science's <A
+href=http://www.amazon.com/Pound-GameScience-Dice-Mix-Bag/dp/B004BQ5JWI/
+>pound of dice</A>.
+<li>The Ebay store <A href=http://myworld.ebay.com/brilliantstarcorp/
+>Brilliant Star Corp</A> is selling bulk dice at even better prices
+right now, including a <A
+href=http://www.ebay.com/itm/Jar-360-Assorted-Trans-Polyhedral-Dice-Wholesale-/370304159013?pt=LH_DefaultDomain_0&hash=item5637d90d25
+>jar of 360 translucent dice</A> for under $70 (including shipping).
+<li>Another Ebay store selling bulk dice at a really good price is <A
+href=http://stores.ebay.com/melendytrains>Melendy Trains</A>, who
+right now is selling <A 
+href=http://www.ebay.com/itm/ws/eBayISAPI.dll?ViewItem&item=350536549691
+>500 dice for $55</A> (including shipping).
+<li>While not as pretty as other dice, <A 
+href=http://www.eaieducation.com/Product/531346/Polyhedra_Dice_-_Set_of_150.aspx
+>EAI Education sells bulk polyhedral dice</A>.  
+<li>Likewise, <A
+href=http://www.enasco.com/product/TB21916T>Enasco sells polyhedral dice</A> 
+for a little more than EAI Education.
+<li>If you want to buy a <i>really</i> large quantity of dice,
+<A href=http://www.gameparts.net/polyhedral_dice.htm>Gameparts</A> sells
+in bulk.
+<li>One may be able to get a good low quote directly from <A 
+href=http://www.koplowgames.com/KoplowJpegs2012/2011-KOP_NoPrice_GL%20%28Page%2087%29.jpg
+>Koplow Games</A>
+</ul>
+
+<div class=blogtitle>
+<b>Geomyidae is crashing</b>
+</div><br>
+
+I have been having some issues with Geomyidae, the Gopher server I use,
+crashing.  I have recompiled with server with debugging symbols enabled 
+and have allowed it to dump core next time it crashes.  Hopefully, I 
+will be able to find and fix the issue.
+
+<p>
+
+Gopher is so 1990s, so I'm not making stability of my Gopher server
+a priority.  It's more important to me to know where the bug is in
+the Geomyidae daemon.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,42 @@
+<!--{TAGS:L}-->
+
+<h1>Scientific Linux 6 on a S10-3</h1>
+
+<h2>July 16, 2011</h2>
+
+I have installed Scientific Linux 6 on my Lenovo S10-3 netbook and everything
+<i>works</i>, albeit with some effort.  Some issues I had:
+
+<p>
+
+<ul>
+<li>Updating the kernel causes the system to crash at boot time.
+    The workaround is to use an older kernel that doesn't crash; right 
+    now I'm using <A href=http://openvz.org/>OpenVZ's</A> 
+    older 2.6.32-042test008 kernel.
+<li>The Broadcom wifi driver needs to be downloaded and installed from
+    Broadcom's web site.  I'm using a file called 
+<a href=http://www.broadcom.com/support/802.11/linux_sta.php><tt>hybrid-portsrc_x86_64-v5_100_82_38.tar.gz</tt></a>.
+    One gotcha is to make sure there are no spaces anywhere in the path 
+    to this file or it won't compile.  Networking is actually better in 
+    Linux than in Windows.
+<li>Some S10-3 computers have an Atheros wifi card instead of a Broadcom
+    one; this card also has Linux-compatible drivers.
+<li>Setting the screen brightness requires an incantation like
+    <tt>setpci -s 00:02.0  F4.B=ff</tt> (full brightness) or
+    <tt>setpci -s 00:02.0  F4.B=80</tt> (half brightness).
+<li>The 32-bit static Skype client works on the 64-bit kernel after
+    installing all of the 32-bit compatibility libs.
+<li>The system doesn't come with mp3 codecs, because of the patent issues.
+</ul>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

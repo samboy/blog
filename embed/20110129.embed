@@ -1,0 +1,113 @@
+<h1>MaraDNS & Deadwood update</h1>
+
+<h2>Security bugfix</h2>
+
+<h2>January 29, 2011</h2>
+
+In 2002, when I rewrote the compression code for MaraDNS for the first
+time, I made a mistake in allocating an array of integers, allocating
+it in bytes instead of sizeof(int) units.  The resulted in a buffer
+being too small, allowing it to be overwritten.
+
+<p>
+
+The impact of this programming error is that MaraDNS can be crashed by
+sending MaraDNS a single "packet of death".  Since the data placed in
+the overwritten array can not be remotely controlled (it is a list of
+increasing integers), there is no way to increase privileges
+exploiting this bug.
+
+<p>
+
+The patch below resolves this issue by allocating in sizeof(int)
+units instead of byte-sized units for an integer array.  In addition,
+it uses a smaller array because a DNS name can only have, at most, 128
+labels.
+
+<p>
+
+In response to this bug, I have released MaraDNS 1.4.06 and 1.3.07.11.
+These releases are available here:
+
+<A href=http://maradns.org/download.html>http://maradns.org/download.html</A>
+
+<p>
+
+Since sourceforge.net has recently suffered a security breach, their
+file uploading feature is currently undergoing maintenance and new
+files currently can not be uploaded there.
+
+<p>
+
+I have not made a new release of MaraDNS 2.0 yet.  Yarin has
+contributed a number of patches, and I would like to integrate his
+patches before making a new MaraDNS 2.0 release; MaraDNS 2.0 users can
+use the supplied patch.
+
+<p>
+
+As an aside, I have become a better programmer since making this
+mistake back in 2002.  Deadwood, which is a complete rewrite of
+MaraDNS' recursive code, does not have this issue in its
+compression/decompression code.  Instead of using different data types
+in structures, Deadwood, by and large, uses special overflow-resistant
+strings to store most data.
+
+<p>
+
+In addition, I have released Deadwood 3.0.02; I have made the
+<tt>filter_rfc1035</tt> parameter more secure, fixed an issue resolving
+www.urbandictionary.com, and have plugged a potential memory leak.
+Deadwood can be looked at here:
+
+<p>
+
+<A href=http://maradns.org/deadwood/>http://maradns.org/deadwood/</A>
+
+<p>
+
+I would like to thank Mr. Witold Baryluk for pointing out this issue,
+taking the time to backtrace the bug, and for bringing it to my
+attention by posting to the MaraDNS mailing list.
+
+<p>
+
+Here is the patch:
+
+<div class=usenet>
+<pre>
+--- maradns-1.4.05/dns/Compress.c       2010-07-31 01:17:08.000000000 -0600
++++ maradns-1.4.06/dns/Compress.c       2011-01-28 18:28:46.000000000 -0700
+@@ -22,7 +22,7 @@
+ #include "functions_dns.h"
+
+ /* Maximum allowed number of dlabel points */
+-#define MAX_DLABEL_POINTS 512
++#define MAX_DLABEL_POINTS 160
+
+ /* Maximum allowed length of compressed string; this is 4096 for TCP
+  * packets */
+@@ -87,7 +87,8 @@
+         js_dealloc(new);
+         return 0;
+         }
+-    if((new->dlabel_points = js_alloc(MAX_DLABEL_POINTS + 3,1)) == 0) {
++    if((new->dlabel_points = js_alloc(MAX_DLABEL_POINTS + 3,sizeof(int)))
++               == 0) {
+         js_destroy(new-&gt;compressed);
+         js_dealloc(new);
+         return 0;
+</pre>
+</div>
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

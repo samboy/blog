@@ -1,0 +1,103 @@
+<h1>My Gopher server</h1>
+
+<h2>February 6, 2012</h2>
+
+As a geek, I sometimes have an interest in technologies and forms of
+communication which have little or no real-world monetary value today.
+One of these technologies was Gopher, a short-lived hypertexting
+technology which briefly existed before the world wide web took over.
+
+<p>
+
+
+<div class=blogtitle>
+<b>How to use Gopher</b>
+</div><br>
+
+The simplest way to use Gopher today is to use the Firefox web browser
+along with the <A 
+href=https://addons.mozilla.org/en-US/firefox/addon/overbiteff/>Overbite
+Firefox plugin</A>.
+
+<p>
+
+To verify that Gopher is working, once Overbite is installed, go to
+<A href=gopher://gopher.samiam.org/>this Gopher link</A> to verify the
+Gopher protocol is supported by your browser.
+
+<p>
+
+<div class=blogtitle>
+<b>Setting up a Gopher server</b>
+</div><br>
+
+I use the <A href=gopher://gopher.r-36.net/1/geomyidae.gph>Geomyidae Gopher
+server</A> (<B>Warning</B>: Gopher link) as my Gopher server.  Once
+it is compiled and installed, here is the format of an index.gph
+file:
+
+<p>
+<tt>
+Here is some free-form text<br>
+tthis line needs two 't's at the beginning<br>
+<br>
+[0|Title of text document|/filename.txt|gopher.samiam.org|70]<br>
+[1|Gopher index location|/some_directory/|gopher.samiam.org|70]<br>
+[h|World wide web URL|URL:http://samiam.org|gopher.samiam.org|70]
+</tt>
+<p>
+
+Here, any line that doesn't start with a '[' or 't' is rendered as-is.  
+Text lines which start with 't' have the first 't' dropped.  Lines
+which start with '[' are Gopher hyperlinks.
+
+<p>
+
+The fields of a hyperlink are:
+
+<ul>
+<li>The type of hyperlink.  0 is a link to a text file, 1 is a link to 
+    another Gopher index of hyperlinks, and 'h' is a modern URL link.
+<li>The title of the hyperlink.  
+<li>The location the hyperlink is on.
+<li>The name of the server with the hyperlink.
+<li>The port the hyperlink is on
+</ul>
+
+Note that, with 'h' hyperlinks, the server and port number are 
+usually ignored, but should point to the gopher server serving the
+hyperlink (<i>Not</i> the server the link points to).
+
+<P>
+
+<div class=blogtitle>
+<b>My Gopher server</b>
+</div><br>
+
+As I alluded to above, I now have a Gopher server at
+<A href=gopher://gopher.samiam.org/>gopher://gopher.samiam.org/</A>.  
+It contains a mirror of my index page, as well as a text copy of
+this blog.  For people who do not want to install a Gopher client,
+<A 
+href=http://gopher.floodgap.com/gopher/gw?a=gopher%3A%2F%2Fgopher.samiam.org%2F>there
+are</A> <A
+href=http://gopherproxy.meulie.net/gopher.samiam.org/>at least</A>
+two different Gopher proxies available.
+
+<p>
+
+To be honest, I was never much of a Gopher user; by the time I got 
+on the Internet, the steamroller of HTML was in full force and Gopher
+was quickly going the way of bell bottoms.  However, it's an interesting
+technology which should not be completely forgotten.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

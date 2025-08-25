@@ -1,0 +1,107 @@
+<!--{TAGS:G}-->
+<div class=blogpic>
+<img src=pics/Asus_Eee_1005HA-small.jpg>
+</div>
+
+<h1>Low-end Netbooks</h1>
+
+<h2>May 16, 2011</h2>
+
+In this article I look at two low-cost netbooks from Acer and ASUS.  
+Both of these netbooks use the Intel Atom N455 processor.  The Intel
+Atom N455 is roughly equivalent in processing power to a high-end
+PC from 2002 or so; the graphics card is roughly equivalent to
+a good graphics card from 2000. 
+<p>
+
+The models I look at are readily visible when one does a search at
+<A href=http://bhphoto.com>B & H Photo</A> for a <A 
+href=http://www.bhphotovideo.com/c/search?Ns=p_PRICE_2|0&ci=16049&N=4289362924>low-cost
+netbook</A>.
+
+<p>
+
+The Acer Aspire One AOD255E is the lowest-cost netbook with the N455
+processor currently available.  To keep the cost down, they cut a lot
+of corners: Updating the memory from 1GB to 2GB is non-trivial and voids
+the warranty, the speaker is a single monophonic speaker, and
+the battery is a three-cell battery that only lasts about three hours.  This
+model is available in four colors: Black, red, aquamarine, and brown.
+It is available at B & H Photo for only $240.  
+
+<p>
+
+Costing about $10 more is the ACER Eee PC 1001PXD-EU series.  Unlike
+the Acer, this series is only available in three colors: Black, white, and
+blue.  Unlike the Acer AOD255E, it is simple to replace the memory
+in this model (note that, unlike the Lenovo S10-3 and other netbooks,
+replacing the hard disk is non-trivial), and stereo speakers are
+available.
+
+<p>
+
+Unlike the Aspire One (which has a glossy screen), the Eee PC uses
+a matte screen.  The Aspire One beats out the ASUS 1001 when it comes
+to ports: While both models have an Analog VGA port, an Ethernet port,
+as well as a SD card reader, the Acer has three USB ports as well as 
+separate 1/8" headphone and microphone jacks; the ASUS has only two USB
+ports and a single combined microphone/speaker 1/8" jack.
+
+<p>
+
+The basic low-cost model of the Eee PC 1001PXD-EU only has a three-cell battery
+that lasts about three hours; a six-cell battery is available for $15-20
+more (depending on the model's color).  The three cell version costs only
+$250 at B & H Photo as well as <A href=http://amazon.com/>Amazon</A> right 
+now.
+
+<p>
+
+Peronsonally, I prefer the ASUS model.  While it costs more and has only
+two USB ports, this is more than compensated for by having the memory
+easily upgraded to 2GB--something that is essential to have clean
+multitasking.  Also, the matte screen should be easier to read outdoors.
+
+<p>
+<hr>
+<p>
+
+A lot of people point out that the Atom N455 is underpowered.  And, indeed,
+for some tasks like composing music, using AutoCAD, or video editing, a
+faster processor is desired.  But, on the other hand, the N455 can happily
+run virtual machines, browse the web (I did have to switch from Firefox to 
+Chrome to run Javascript-heavy pages at a decent speed), develop web 
+applications or compiled programs using UNIX-style makefiles, edit photos
+to post to Facebook or what not, and run a 
+number of applications at the same time as long as the memory is updated
+to 2GB.  
+
+<p>
+
+One annoying limitation of the N455 is that it does not accept
+more then 2GB of memory (The AMD C-30 and C-50, however, accept up
+to 4GB of memory).  For playing games on the web, solitaire, or other
+games included with Windows 7, the N455 is fine; however modern 
+graphics-heavy 3d games are a bit heavy for this processor.
+
+<p>
+<hr>
+<p>
+
+Before ending this article, I will point to a website which
+has excellent reviews of current netbook models: 
+<A href=http://netbooklive.com>netbooklive.com</A>.  Keep in mind,
+however, that this writer only quotes Amazon's prices for netbooks.
+
+<p>
+<i>The included picture is "<A 
+href=http://creativecommons.org/licenses/by/3.0>CC BY 3.0</A>" licensed.  
+Attribution: Ashley Pomeroy. 
+To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

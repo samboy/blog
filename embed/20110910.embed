@@ -1,0 +1,77 @@
+<h1>Open-source IMAP clients</h1>
+
+<h2>September 10, 2011</h2>
+
+For my work, I had to find a good open-source IMAP client that runs
+in Windows.  Here are some notes I took during my research:
+
+<p>
+
+<ul>
+
+<li><A href=http://www.claws-mail.org/>Claws mail</A>: Unstable code base;
+frequent crashes.  Puts a large number of half-complete draft messages
+in one's Gmail "sent" folder while composing a message.  Does not support IMAP
+servers without APPEND support.
+
+<li><A href=http://sylpheed.sraoss.jp/en/>Sylpheed</A>: Windows port
+does not have built-in spellchecker.
+
+<li><A href=http://mahogany.sourceforge.net/>Mahogany</A>: Dead codebase
+(no updates since 2006/2008).  No apparent support for IMAP-over-SSL.
+
+<li><A href=http://www.mulberrymail.com/>Mulberry mail</A>: No apparent
+support for alternate ports for IMAP-over-SSL and SMTP-over-SSL.
+
+<li><A href=http://www.washington.edu/alpine/>Alpine</A>: No apparent
+support for IMAP-over-SSL.
+
+<li><A href=http://www.mozilla.org/en-US/thunderbird/>Thunderbird</A>:
+Not very suitable for writing traditional 80-column fixed-width
+text emails.  Besides that, excellent (Automatic email configuration,
+IMAP-over-SSL, supports IMAP servers w/o APPEND, etc.)
+
+<li><A href=http://userbase.kde.org/KMail>KMail</A>: Did not try
+(Installing an entire desktop environment just to have an email client
+is overkill)
+
+</ul>
+
+<p>
+
+Thunderbird is the best email client to use in modern work environments
+where HTML-formatted email is the norm.  While it does have support for
+non-HTML mail, this support is limited.
+
+<p>
+
+Claws Mail will become an excellent email client for legacy 80-column
+monospace text email when and if the bugs are fixed.
+
+<p>
+
+Sylpheed may become a good email client, but it could really use Windows
+spell checking support.
+
+<p>
+
+<hr>
+
+<p>
+
+I have made a minor tweak to the CSS: With some video drivers, the CSS 
+elements are placed one pixel off left or right in Internet Explorer 9.
+This in mind, I have given all of the CSS layers used for the "dissolve
+border" background colors so the page still looks good when this IE9 bug
+is triggered.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

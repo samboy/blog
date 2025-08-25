@@ -1,0 +1,89 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS and Deadwood update</h1>
+<h2>May 23, 2013</h2>
+I have updated both MaraDNS and Deadwood.  Mainly Deadwood.
+
+<p>
+
+<A name=SQA_tests></A><A name=SQAtests></A><span class=moyet>==</span><span class=blogtitle><b>SQA tests</b></span><span class=moyet>==</span>
+
+<p>
+
+As I mentioned in 
+<a href="http://samiam.org/blog/20121220.html">a previous blog entry</a>,
+I will, once every few months do nothing more than make sure all of the
+tests run fine.  That is what I did this month; both MaraDNS and
+Deadwood pass all tests.
+
+<p>
+
+<A name=A_new_Deadwood_release></A><A name=AnewDeadwoodrelease></A><span class=moyet>==</span><span class=blogtitle><b>A new Deadwood release</b></span><span class=moyet>==</span>
+
+<p>
+
+I have been silently updating the version of Deadwood available at
+<A href="http://maradns.org/deadwood">http://maradns.org/deadwood</A> as well as the version bundled with
+MaraDNS.  Deadwood 3.2.03a is simply Deadwood 3.2.03 with a 
+<a href="http://samiam.org/blog/20130222.html">one-line bugfix patch</a>
+which I have been testing for the last three months; no problems have
+arisen so I am declaring this patch stable.
+
+<p>
+
+Currently the numbering is a little strange:
+
+<p>
+
+<ul>
+<li> MaraDNS 2.0.07a is MaraDNS 2.0.07 with the one-line Deadwood patch applied.
+<li> MaraDNS 2.0.07b is MaraDNS 2.0.07 with the one-line Deadwood patch, as well
+  as having the Windows Deadwood binary stripped (to keep it under 65,536
+  bytes—64k—in size)
+<li> Deadwood 3.2.03a is Deadwood 3.2.03 with the one-line patch
+<li> MaraDNS-20130523 is the latest release: It’s MaraDNS 2.0.07 with the 
+  one-line patch in Deadwood, as well as a copy of the actual patch
+  in deadwood-3.2.03a/update.  This is the version which passed all SQA
+  tests this morning.
+</ul>
+
+<p>
+
+If nothing else, in early 2014 I will release MaraDNS 2.0.08 and Deadwood
+3.2.04 with this patch.
+
+<p>
+
+MaraDNS-20130523 can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://www.maradns.org/download/2.0/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+Deadwood 3.2.03a is here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.org/deadwood/stable/">http://maradns.org/deadwood/stable/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood again one day in a couple of months
+unless a critical security bug with a CVE number is found.
+
+<p>
+
+<i>Update: When I wrote this blog 2.0.07, not 2.0.06, was the current MaraDNS release.</i>
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

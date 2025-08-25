@@ -1,0 +1,194 @@
+<h1>Prosperity 7 puzzle #4</h1>
+<h2>January 20, 2011</h2>
+
+<div class=p7p align=center>
+<style>
+.p7p table {
+	font-size: x-large;
+}
+.p7p td {
+        width: 1em;
+        height: 1em;
+        padding: .1em;
+        text-align: center;
+}
+.moyet {
+	display: none;
+}
+.a {
+        border-left: 3px solid black;
+        border-top: 3px solid black;
+}
+.b      {
+        border-left: 1px solid black;
+        border-top: 3px solid black;
+}
+.c      {
+        border-left: 1px solid black;
+        border-top: 3px solid black;
+        border-right: 3px solid black;
+}
+.d {
+        border-left: 3px solid black;
+        border-top: 1px solid black;
+}
+.e      {
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+}
+.f      {
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-right: 3px solid black;
+}
+.g      {
+        border-left: 1px solid black;
+        border-top: 3px solid black;
+        border-right: 3px solid black;
+}
+.h      {
+        border-left: 3px solid black;
+        border-top: 3px solid black;
+        border-right: 3px solid black;
+}
+.i      {
+	background-image: url('Black-dot.png');
+	background-position: left top;
+	background-repeat: no-repeat;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+}
+.j      {
+	background-image: url('Black-dot.png');
+	background-position: left top;
+	background-repeat: no-repeat;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+	border-right: 3px solid black;
+}
+.la     {
+        border-left: 3px solid black;
+        border-top: 1px solid black;
+        border-bottom: 3px solid black;
+}
+.lb     {
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 3px solid black;
+}
+.lc     {
+        border-left: 1px solid black;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+}
+.ld     {
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-right: 3px solid black;
+        border-bottom: 3px solid black;
+}
+</style>
+<span class=moyet>CSS needed to see this puzzle.  Yes, the
+CSS is compatible with IE6 and even Dillo 2</span>
+<table cellspacing=0>
+<tr>
+<td class=a>7</td>
+<td class=b>&nbsp;</td>
+<td class=b>3</td>
+<td class=a>&nbsp;</td>
+<td class=a>4</td>
+<td class=b>&nbsp;</td>
+<td class=c>2</td>
+<tr>
+<td class=d>&nbsp;</td>
+<td class=e>1</td>
+<td class=e>&nbsp;</td>
+<td class=d>&nbsp;</td>
+<td class=a>&nbsp;</td>
+<td class=d>3</td>
+<td class=f>&nbsp;</td>
+<tr>
+<td class=d>6</td>
+<td class=a>&nbsp;</td>
+<td class=b>&nbsp;</td>
+<td class=i>4</td>
+<td class=d>&nbsp;</td>
+<td class=d>&nbsp;</td>
+<td class=f>5</td>
+<tr>
+<td class=a>&nbsp;</td>
+<td class=i>&nbsp;</td>
+<td class=a>1</td>
+<td class=b>&nbsp;</td>
+<td class=i>7</td>
+<td class=a>&nbsp;</td>
+<td class=g>&nbsp;</td>
+<tr>
+<td class=a>5</td>
+<td class=b>&nbsp;</td>
+<td class=d>&nbsp;</td>
+<td class=a>6</td>
+<td class=b>&nbsp;</td>
+<td class=i>&nbsp;</td>
+<td class=h>3</td>
+<tr>
+<td class=d>&nbsp;</td>
+<td class=e>3</td>
+<td class=d>&nbsp;</td>
+<td class=d>&nbsp;</td>
+<td class=a>&nbsp;</td>
+<td class=b>4</td>
+<td class=j>&nbsp;</td>
+<tr>
+<td class=la>2</td>
+<td class=lb>&nbsp;</td>
+<td class=lc>6</td>
+<td class=la>&nbsp;</td>
+<td class=la>5</td>
+<td class=lb>&nbsp;</td>
+<td class=ld>1</td>
+<tr>
+</table>
+</div>
+
+<p>
+
+This puzzle is a variant of Sudoku I like to call "Prosperity 7".  In
+this Sudoku variant, the board is only 7x7, and only the numbers
+from 1 to 7 are used.  Neither 8 nor 9 are ever placed on this
+board.
+
+<p>
+
+The object of this puzzle is to place the numbers 1 through 7 in the
+blank spaces such that:
+
+<ul>
+<li>Each row only has one instance of each number between 1 and 7.  In
+    other words, no number is duplicated in a given row.
+
+<li>Each column only has one instance of each number between 1 and 7.  In
+    other words, no number is duplicated in a given column.
+
+<li>Each of the seven-square shapes bordered by thick lines have all
+    of the numbers between 1 and 7 precisely once.  
+
+</ul>
+
+I hope you enjoy this puzzle.  This puzzle was generated using this
+<A href=../sudoku/Sudoku-NPGeneratorV2_0_2.jar>open-source
+Sudoku generator</A>
+(<A href=../sudoku/Sudoku-NPGeneratorV2_0_2_src.jar>source code</A>), using
+<A href=../sudoku/Prosperity-7-template.xml>this template</A>.
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

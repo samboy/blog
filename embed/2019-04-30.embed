@@ -1,0 +1,71 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>Deadwood 3.3.03 released</h1>
+<h2>April 30, 2019</h2>
+This is just a note that I released Deadwood 3.3.03 earlier this
+month.
+
+<p>
+
+<A name=Download></A><A name=Download></A><span class=moyet>==</span><span class=blogtitle><b>Download</b></span><span class=moyet>==</span>
+
+<p>
+
+Deadwood 3.3.03 (both source code and Windows binaries) is available
+at <A href="https://maradns.samiam.org/deadwood/snap/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+
+<p>
+
+<A name=Changelog></A><A name=Changelog></A><span class=moyet>==</span><span class=blogtitle><b>Changelog</b></span><span class=moyet>==</span>
+
+<p>
+
+<ul>
+<li> Deadwood default changed to use quad9.net upstream servers instead of
+  ICANN root servers.
+<li> Compile-time option to use RadioGatun[64] instead of RadioGatun[32] added
+<li> Tests for the ip4 and ip6 parameters added
+<li> Valgrind-found issues fixed
+</ul>
+
+<p>
+
+The biggest change is that Deadwood 3.3.03 is updated to use the
+<A href="https://quad9.net">https://quad9.net</A> upstream DNS servers as the default.  If the old
+behavior of using the ICANN name servers as root servers is desired,
+add the following lines to one's dwoodrc file:
+
+<p>
+
+<tt>root_servers = {}</tt><br>
+<tt>root_servers["."]="198.41.0.4, 199.9.14.201, 192.33.4.12, 199.7.91.13,"</tt><br>
+<tt>root_servers["."]+="192.203.230.10, 192.5.5.241, 192.112.36.4, "</tt><br>
+<tt>root_servers["."]+="198.97.190.53, 192.36.148.17, 192.58.128.30, "</tt><br>
+<tt>root_servers["."]+="193.0.14.129, 199.7.83.42, 202.12.27.33"</tt><br>
+
+<p>
+
+PLEASE NOTE: The above list of IPs is current as of 2019-04-07, and
+was last changed in October of 2017.
+
+<p>
+
+Please go to <A href="https://root-servers.org">https://root-servers.org</A> to get an up-to-date list of root
+servers.
+
+<p>
+
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

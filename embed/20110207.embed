@@ -1,0 +1,39 @@
+<h1>MaraDNS outstanding bugs</h1>
+
+<h2>February 7, 2011</h2>
+
+Here is my backlog of MaraDNS bugs to fix:
+
+<ul>
+
+<li> There is an issue with maradns handling ANY queries that result in a
+DNS packet larger than 512 bytes in size. MaraDNS does not give a
+proper "truncated" reply, and it appears the tcp "zoneserver" program
+can't resolve these names either.
+
+<li> "make install" does not appear to install Deadwood in MaraDNS 2.0
+
+<li> Add support for RFC2317-style reverse zone mapping
+
+<li> Add the hostname and/or domain when a DDIP MX record is seen
+
+</ul>
+
+I currently do not have a time frame for when I will be able to look at
+these bugs.  I would like to thank the MaraDNS community for patiently
+waiting to get these bugs fixed; people who need these bugs fixed more
+quickly are free to submit patches to the MaraDNS mailing list (I <i>was</i>
+able to integrate everything with a patch submitted in to the 2.0.02 
+release).
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

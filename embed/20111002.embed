@@ -1,0 +1,80 @@
+<h1>Cloak of Darkness</h1>
+
+<h2>October 2, 2011</h2>
+
+<b class=blogtitle>Interactive fiction</b><p>
+
+Once upon a time, long long ago, the preferred method of playing 
+video games was to have the computer type out a description of
+your location, and then you would type a command, in simplified
+English, of what you wanted to do.
+
+<p>
+
+These kinds of games were called text adventures.  While the commercial
+market for text-only adventures died in the late 1980s, a number of
+enthusiasts have kept the text adventure market alive by making amateur
+text adventure games.  
+
+<p>
+
+The name for these types of video games has changed; they are now called
+"interactive fiction".
+
+<p>
+
+Since interactive fiction games have very little replay value, and since
+there is no money in this endeavor, a lot of volunteer effort has been
+to have these adventures be as easy to create as possible.
+
+<p><b class=blogtitle>Cloak of Darkness</b><p>
+
+One part of this effort is the <A 
+href=http://www.firthworks.com/roger/cloak>Cloak of Darkness</A> project
+to make a simple interactive fiction game available in as many different
+formats as possible.  For people familiar with the 
+"<A href=http://99-bottles-of-beer.net>99 Bottles of Beer</A>" project,
+this is the <s>text adventure</s> interactive fiction version of the
+same idea.
+
+<p>
+
+A few years ago, I made a version of this game in a long-obsolete format
+called "Scott Adams".  Let me explain...
+
+<p><b class=blogtitle>Scott Adams</b><p>
+
+Long before Dilbert, a programmer by the name of Scott Adams (different guy, 
+same name) figured out how
+to make text adventures available for home computers.  His solution was to 
+create a simple data format that described the adventure game one played,
+and then have a small interpreter read the data file and run the adventure.
+
+<p>
+
+This format was quite obtuse; it had to be run on the very primitive early
+home computers.  This format quickly became obsolete when a company called
+Infocom created, long before Java and .NET, a full fledged virtual machine
+for text adventures.
+
+<p><b class=blogtitle>My download</b><p>
+
+I made a "Scott Adams" version of Cloak of Darkness a few years
+ago, but deleted it when cleaning up my web site a couple of years ago.
+Alan Monroe asked for a copy of this file, so I have made it 
+available again:
+
+<blockquote>
+<A href=http://samiam.org/software/Cloak-Scott.zip>Cloak-Scott.zip</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

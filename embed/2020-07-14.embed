@@ -1,0 +1,168 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/graph-2020-05.jpg width=224 height=126>
+</div>
+
+<h1>COVID-19 Website</h1>
+<h2>July 14, 2020</h2>
+I have created an entire website showing COVID-19 growth rates.  This
+website is being updated every day. <i>617 words</i>
+
+<p>
+
+<A name=The_website></A><A name=Thewebsite></A><span class=moyet>==</span><span class=blogtitle><b>The website</b></span><span class=moyet>==</span>
+
+<p>
+
+The website is here:
+
+<p>
+
+<blockquote>
+<A href="https://www.samiam.org/COVID-19/">https://www.samiam.org/COVID-19/</A>
+</blockquote>
+
+The dashboard first shows a heat map of the United States; it shows
+which states are experiencing the most COVID-19 growth, with red
+indicating high growth and green indicating low growth.
+
+<p>
+
+Below this, I link to a graph showing the growth rate (doubling time,
+actually) for the US as a whole.  From
+<a href="https://www.samiam.org/COVID-19/USA.html">that page</a>, it is
+possible to go to a page for each state, such as
+<a href="https://www.samiam.org/COVID-19/California.html">California</a>
+or 
+<a href="https://www.samiam.org/COVID-19/Florida.html">Florida</a>.  In
+addition, we have a page for each and every county in the US, such
+as
+<a href="https://www.samiam.org/COVID-19/San%20Diego,California.html">San
+Diego county</a> or
+<a href="https://www.samiam.org/COVID-19/Miami-Dade,Florida.html">Miami-Dade
+county</a>.
+
+<p>
+
+In addition, while county-level graphs are not available, it is
+possible to look at 
+<a href="https://www.samiam.org/COVID-19/USA-deaths.html">overall deaths
+in the US</a>, as well as death rates for each state such as
+<a href="https://www.samiam.org/COVID-19/California-deaths.html">California</a>
+or
+<a href="https://www.samiam.org/COVID-19/Texas-deaths.html">Texas</a>.
+
+<p>
+
+Also included is case data for 
+“<a href="https://www.samiam.org/COVID-19/redStates.html">Red states</a>”
+(states where the governor is a Republican)<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote1">1</a></sup> and
+“<a href="https://www.samiam.org/COVID-19/blueStates.html">Blue states</a>”
+(states where a Democrat occupies the governor’s mansion), as
+well as
+<a href="https://www.samiam.org/COVID-19/redStates-deaths.html">“Red state”
+mortality data</a> and
+<a href="https://www.samiam.org/COVID-19/blueStates-deaths.html">“Blue state”
+mortality data</a>.
+
+<p>
+
+<a href="https://www.samiam.org/COVID-19/#Top10States">The page includes a list 
+of the states and counties experiencing the most growth</a>.
+
+<p>
+
+The entire site is very responsive (no Javascript is needed to load
+this site), is compatible with every mainstream browser since Internet 
+Explorer 9, works on cell phones (just tap on a graph to view and
+zoom the data), and uses a minimum of bandwidth.
+
+<p>
+
+<A name=Making_this_site></A><A name=Makingthissite></A><span class=moyet>==</span><span class=blogtitle><b>Making this site</b></span><span class=moyet>==</span>
+
+<p>
+
+The script used to make this site is open source and available on GitHub:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/covid-19-html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>covid-<![if gt IE 6]>&#8203;<![endif]><wbr>19-<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+The <a href="https://lua.org">Lua</a> language is used to generate this website;
+the Lua used is compatible with Lua 5.1 and also works with the current
+(5.4) version of Lua.  I have a 
+<a href="https://github.com/samboy/lunacy">fork of Lua 5.1</a> whose binary
+is only 120k in size.  Despite the binary being so small, the script
+generates the site in 90 seconds, including directions for Gnuplot to
+make each graph.  Gnuplot makes the graphs in about five minutes.
+
+<p>
+
+The reason I am using Lua is because my daughter is obsessed with 
+Roblox right now, which uses Lua as its scripting language for
+games.  While I have been programming in Lua for 13 years, I
+finally bought the Lua book and read it through to fully understand
+Lua’s view of the world.
+
+<p>
+
+<A name=My_thoughts_on_Lua></A><A name=MythoughtsonLua></A><span class=moyet>==</span><span class=blogtitle><b>My thoughts on Lua</b></span><span class=moyet>==</span>
+
+<p>
+
+I am quite impressed with Lua.  Not only is it tiny, but it is
+very fast and memory efficient.  It has <i>most</i> of the ability
+of the much larger Python, with a big caveat: In order to make
+the scripting engine as small as possible, things often times
+require more code in Lua than Python.  As one example,
+Lua does not include <tt>copy.deepcopy</tt>, but one can
+implement it in 17 lines of Lua code.
+
+<p>
+
+My workaround for Lua’s “batteries not included” design is making
+a <a href="https://github.com/samboy/LUAstuff">public
+domain repository of LUA functions</a> to cover common use cases
+Lua itself does not cover (sorted tables, deep table copying,
+printing a table’s contents, splitting a string, etc.)
+
+<p>
+
+Lua’s main advantage over Python is that it is an order of magnitude
+smaller than Python—my <a href="https://github.com/samboy/lunacy">own personal 
+fork of Lua</a> is only 120,832 bytes in size—and it’s far easier 
+to embed Lua in a C or C++ program than Python.
+
+<p>
+
+On a subjective level, its syntax is Pascal-style, a style which is not
+seen in many languages here in the 2020s.  I prefer its
+syntax over Python’s syntax: Whitespace is not significant in Lua.
+There have been multiple forks to give Lua more C-like syntax
+over the years, including
+<a href="https://github.com/mingodad/ljs">LJS, which is currently maintained</a>.
+
+<p>
+
+<A name=Footnote></A><A name=Footnote></A><span class=moyet>==</span><span class=blogtitle><b>Footnote</b></span><span class=moyet>==</span>
+
+<p>
+
+<ol>
+<a name="Footnote1"> </a><li>For the purposes of this data, Puerto Rico’s governor is
+considered a Republican, even though she was a Democrat until 2019.
+</ol>
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

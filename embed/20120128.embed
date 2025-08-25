@@ -1,0 +1,33 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>January 28, 2012</h2>
+
+The code <A href=20111129.html>to give Deadwood finer timestamps</A> has
+triggered a regression: For reasons I have not figured out yet, this
+code breaks Deadwood's DNS-over-TCP support.
+
+<p>
+
+If I compile Deadwood with the older coarse timestamps, the code passes
+this DNS-over-TCP SQA regression with flying colors.  
+
+<p>
+
+I do not feel comfortable releasing Deadwood 3.2 until this SQA regression
+passes again.  While DNS works really fine without DNS-over-TCP, and while
+Deadwood has DNS-over-TCP disabled by default, DNS-over-TCP is something
+that has been working in Deadwood for nearly three years, and I am not
+in the business of having new releases break things.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

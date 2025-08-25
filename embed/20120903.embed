@@ -1,0 +1,113 @@
+<h1>Slashdot</h1>
+
+<h2>September 3, 2012</h2>
+
+Slashdot has been a guilty pleasure of mine ever since it came out.  Indeed,
+I have a four-digit user ID on that site.  This blog entry is the first
+part of a (hopefully) multi-part series on my long-term love-and-hate
+relationship with that website.
+
+<p>
+<div class=blogtitle>
+<b>In the beginning</b>
+</div><br>
+
+Once upon a time, before computers were powerful enough to allow Microsoft
+to make a stable operating system, it made a lot of sense to use Linux as
+a desktop OS.  For people too young to remember the 1990s: Windows back
+then was really unstable.  Any application had the ability to crash the
+entire system or infect it with viruses.  
+
+<p>
+
+Linux, meanwhile, was much much more stable.  While it was possible to
+crash Linux, crashes were quite rare.  This stability came with a price:
+Linux was very difficult to set up.  For example, it took me about an
+hour to set up dialup networking in Windows 95; the same thing took me
+about two days to set up in Linux.
+
+<p>
+<div class=blogtitle>
+<b>Microsoft in the 1990s</b>
+</div><br>
+
+In addition to having a lot of stability issues, Windows also suffered
+from Microsoft's then monopolistic practices.  One of Microsoft's key
+strategies was to "embrace - extend - extinguish".  What they would do
+was take a technology whose market they would wish to control and implement
+the technology so it was 100% compatible with their competitor.  Then they
+would add Microsoft-specific extensions to the technology; people who
+wanted the extensions would have to use Microsoft's version of the product.
+
+<p>
+
+Pretty soon, the competitor would be caught in a catch-up death spiral,
+where they would madly try to implement whatever features Microsoft
+added to their version of the product, but always falling behind Microsoft.
+Pretty soon, Microsoft would buy out the company or the company would go
+bankrupt.
+
+<p>
+
+One example of this was Java: Microsoft made their own version of Java,
+which was compatible with Sun's implementation, but added Microsoft-specific
+features.  Programs using Microsoft's features would only compile and run
+on Windows.  
+
+<p>
+
+Another example was how Microsoft handled Netscape: When Netscape refused to
+be bought out on Microsoft's terms, Microsoft did everything in their power
+to kill Netscape.  One big reason why HTML and the web is such a mess today
+is because both Microsoft and Netscape were adding proprietary HTML tags to
+their browsers in an attempt to win the "browser wars".
+
+<p>
+
+It was not until Microsoft cheated by including their Internet Explorer 
+browser with Windows that they started getting significant leverage against
+Netscape.  This resulted in Microsoft being investigated by the United States
+Department of Justice for engaging in monopolistic practices.  Netscape
+could not survive this onslaught as a software company; they ended up
+having to open source their browser before throwing in the towel.  
+
+<p>
+<div class=blogtitle>
+<b>My early days at Slashdot</b>
+</div><br>
+
+I was disgusted with Microsoft's monopolistic practices and wanted
+something more stable than Windows 95.  So, I became quite a Linux fanatic
+and refused to dual boot.  A co-worker suggested, since I was so gung-ho
+about Linux, to check out Slashdot.  This was the environment I started
+reading and posting to Slashdot in.  
+
+<p>
+
+Pretty soon, I was getting a lot of my comments moderated up to +5, the
+highest level of moderation available for Slashdot postings, indicating
+a well-written post which the community really liked.  I was a very active
+member of the Slashdot community.
+
+<p>
+<div class=blogtitle>
+<b>To be continued</b>
+</div><br>
+
+When I get time to write in my blog again, I will continue this series
+with a blog entry about how I became disillusioned with Slashdot and
+started moving away from this online community.
+
+<p>
+
+<i>Continued in <A href=20120907.html#slashdot>Slashdot and the Napster 
+crowd</A></i>
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

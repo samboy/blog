@@ -1,0 +1,130 @@
+<h1>Logic riddles</h1>
+
+<h2>November 4, 2011</h2>
+
+There is a classic logic puzzle out there which is often not worded correctly.
+The puzzle is often worded like this:
+
+<blockquote>
+There is a small village with 1 priest and 7 heterosexual couples.
+In this village, all 7 men have committed adultery, and all women know
+it when anyone besides their husband has committed adultery.  The law
+of this village is that the penalty for adultery is immediate divorce.
+<p> 
+The priest knows about all the adultery that has happened because he has heard
+all confessions.  One Sunday morning, during his homily, he tells the entire
+village that there is at least one adulterer in the town.
+<p>
+What happens?
+</blockquote>
+
+The correct answer (for this wording) is that 
+<b>nothing happens</b>. 
+
+<p>
+
+In more detail, here are the seven wives and how many adulteries they
+know about:
+
+<div class=blogtable>
+<table>
+<tr><td>Name</td><td>Knows about # adulteries</td></tr>
+<tr><td>Alice</td><td>6</td></tr>
+<tr><td>Belinda</td><td>6</td></tr>
+<tr><td>Citlalli</td><td>6</td></tr>
+<tr><td>Dawn</td><td>6</td></tr>
+<tr><td>Esperanza</td><td>6</td></tr>
+<tr><td>Faith</td><td>6</td></tr>
+<tr><td>Grace</td><td>6</td></tr>
+<tr><td>Priest</td><td>7</td></tr>
+</table>
+</div>
+
+Now, when the priest says: "There is at least one adulterer in the
+town", the women look at each other, giggle, and think to themselves
+"Of course.  Indeed, there are six adulterers".  <i>The priest has merely
+shared information that everyone already knows</i>.
+
+<p>
+
+If there was only one unfaithful man, the wife would immediately know they
+were unfaithful and the divorce lawyers would get a call.  In the case
+of two or more unfaithful couples, nothing happens, except for a bad
+feeling about the moral decay of the village.
+
+<p>
+
+If the priest were to say "there are at least two unfaithful couples" in
+a town with two unfaithful couples, then there would be two divorces.
+If the priest were to say "there are two or more unfaithful couples" in 
+a town with three or more unfaithful couples, there would be no
+divorces.
+
+<p>
+
+Yes, there are logic puzzles out there where the correct answer is not
+the intuitive answer (You're on a game show.  There are three doors, only
+one of which hides a prize.  You choose a door.  The host opens a door without
+a prize, and tells you that you can change the door.  You, unintuitively,
+should always change the door).  This isn't one of them.
+
+<p>
+
+<b>Update</b> Looking more closely, it appears that the great
+<A href=http://raymondsmullyan.com>Raymond Smullyan</A> himself originally
+posed this puzzle.  That in mind, yes, the women will figure out 
+the adultery going around if:
+
+<ul>
+
+<li>All the women are righteous and honest, and therefore would immediately
+    file for divorce if they can show that their husband is unfaithful.
+
+<li>All the women know that every single other woman in the village is 
+    likewise righteous and honest.
+
+</ul>
+
+Of course, if this were true, the village can never have more than one
+married
+adulterer, unless all of the adultery happens at once in a single drunken 
+night.  Or the puzzle can work if the women will only divorce 
+their husbands for adultery when the priest calls upon his faithful to do 
+so.
+
+<p>
+
+This is akin to the "-gry" problem, worded like this:
+
+<blockquote>
+"Angry" and "hungry" are two words in the English language that end in
+"-gry". What is the third word.  This is a puzzle which requires you to
+read carefully.  So, what is the third word?
+</blockquote>
+
+The answer is "what" -- the first "What is the third word" is a statement,
+not a question.  Alas, people remember the question wrong and it becomes:
+
+<blockquote>
+"Angry" and "hungry" are two words that end in "-gry".  What is the third
+common English word that ends in "-gry"?
+</blockquote>
+
+The answer being that "angry" and "hungry" are the only words in modern
+English with a "-gry" ending.  
+
+<p>
+
+The point being: If a riddle like this is not correctly worded, the
+answer changes.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

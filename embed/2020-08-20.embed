@@ -1,0 +1,105 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/2020-08-1.jpg width=224 height=126>
+</div>
+
+<h1>PNY CS900 review</h1>
+<h2>August 20, 2020</h2>
+I review the low-cost PNY CS900 SATA SSD.  I also have a new MaraDNS 
+release. <i>452 words</i>
+
+<p>
+
+<A name=The_PNY_CS900_Cheap_Storage></A><A name=ThePNYCS900CheapStorage></A><span class=moyet>==</span><span class=blogtitle><b>The PNY CS900: Cheap Storage</b></span><span class=moyet>==</span>
+
+<p>
+
+The PNY CS900 is a low-cost SSD; the 240Gb (that’s decimal gigabytes,
+as I will detail later) model was only $26 last week and is $27 this
+week.
+
+<p>
+
+For $26, one should not expect a Samsung PRO series SSD.  This particular
+SSD uses a <a href="http://ssd.zol.com.cn/673/6732205_all.html">Phison PS3111
+(S11) controller</a>, and it doesn’t have any DRAM storage on
+the SSD itself.  This controller is the reason why the CS900 is only
+available up to 1Tb in size—that’s the PS3111’s limit.
+
+<p>
+
+The 240Gb PNY CS900 has, as claimed, over 240Gb of storage.  From the
+output of <tt>fdisk -l</tt>:
+
+<p>
+
+<tt>Disk /dev/sda: 223.6 GiB, 240057409536 bytes, 468862128 sectors</tt><br>
+
+<p>
+
+One may observe it has a little over 240 <i>decimal</i> gigabytes, but
+it has only 223.6 <i>binary</i> gigabytes.  If an operating system
+claims it only has 223 gigabytes of storage, this is simply because
+PNY is using a different definition of “gigabyte” than the OS uses.
+
+<p>
+
+There are anecdotal reports that the PS3111 is prone to failing.  Phison
+themselves point out 
+<a href="https://www.phison.com/en/company/newsroom/press-releases/general/584-phison-announces-ps3111-s11t,-industrial-grade-sata-iii-controller-for-embedded-and-client-ssd-solutions">the 
+chip has data reliability and data loss protection
+features</a>; PNY has a three-year warranty for these drives.  I personally,
+at $26, just got three of them for my two old laptops I wanted to 
+install Linux on, and have made sure any important data is on both
+laptops.  Should one of the drives fail, I can continue my work on the
+other laptop, while using my third spare drive to reinstall Linux.  
+Regular backups are <i>always</i> a good idea, and it’s better to use
+a low-cost drive and have a robust backup schedule than to use an
+expensive drive and not perform any backups.
+
+<p>
+
+In terms of speed, since I use these drives with Linux, and since Linux
+filesystems (I am using XFS) have write caching, the drives feel really 
+fast.  Phoronix <a href="https://www.phoronix.com/scan.php?page=article&amp;item=30usd-ssd-benchmarks&amp;num=4">ran
+a bunch of benchmarks, and this drive performs really well for its price
+point</a>.  
+
+<p>
+
+This is a <a href="https://linustechtips.com/main/topic/1092033-ssd-tier-list/">budget
+SSD which uses TLC NAND chips</a>.  It’s not the fastest, it’s not the
+biggest, it’s not the most reliable, but it’s pretty cheap and has been
+working quite nicely for me this last week.
+
+<p>
+
+<A name=MaraDNS_350013_and_350014></A><A name=MaraDNS350013and350014></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0013 and 3.5.0014</b></span><span class=moyet>==</span>
+
+<p>
+
+In MaraDNS 3.5.0013, I figured out how to have functioning IPv6 sockets
+in the toolchain I use to build Windows services.  So, coLunacyDNS now
+can bind to IPv6 addresses; it can not contact DNS servers via IPv6,
+but DNS clients can contact coLunacyDNS via IPv6, both in Windows
+and Linux/*NIX.
+
+<p>
+
+In MaraDNS 3.5.0014, I have again updated coLunacyDNS.  The example .lua
+files now all correctly return “not there” over DNS when we ask
+for a DNS record which does not exist; we also now handle all ANY
+queries by sending an RFC8482 response.
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

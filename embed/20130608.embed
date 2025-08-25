@@ -1,0 +1,161 @@
+<div class=blogpic>
+<img src=pics/pitfall.jpg width=160 height=120>
+</div>
+
+<h1>Pitfall redux</h1>
+<h2>June 8, 2013</h2>
+In this blog, I discuss Pitfall's random number generator by looking at
+8-bit 
+<i>linear feedback shift registers</i>
+(LFSRs) in general.  This continues a series started in the
+<a href="http://samiam.org/blog/20130606.html">last blog posted</a>.
+
+<p>
+
+<A name=Pitfall_uses_a_LFSR></A><A name=PitfallusesaLFSR></A><span class=moyet>==</span><span class=blogtitle><b>Pitfall uses a LFSR</b></span><span class=moyet>==</span>
+
+<p>
+
+In  
+<a href="http://samiam.org/blog/20130606.html">previous blog entry</a>, I mentioned
+that Pitfall uses a LFSR.  LFSR exist for every single power of two
+four or higher; since the Atari 2600’s CPU is an 8-bit CPU, Pitfall
+ended up using an 8-bit LFSR that looks like this in C:
+
+<p>
+
+<tt>uint8_t pitfall_lfsr(uint8_t random) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>uint8_t t; <font color=#008700>// temp</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>t = (random &gt;&gt; 7) ^ (random &gt;&gt; 5) ^ (random &gt;&gt; 4) ^ (random &gt;&gt; 3);</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>random &lt;&lt;= 1;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>random |= t &amp; 1;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return random;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+The values 3, 4, 5, and 7 chosen for the shifts were not chosen at random;
+while there are 128 possible 8-bit LFSRs (128 because tap 7 is always set
+in an 8-bit LFSR), only 16 of them have a period
+of 255.  In other words, only 16 different 8-bit LFSRs, when run 
+repeatedly, generate all 255 non-0 8-bit numbers.  
+
+<p>
+
+Of those 16 possible LFSRs, 12 of them have four “taps”; the other four 
+have six taps.  This detail
+is important when representing a LFSR in compact 6502 code—each tap takes
+two bytes of code to represent.  For example,
+the above LFSR, which Pitfall uses, has the following four taps:
+(3, 4, 5, 7).  This particular tap configuration, in lists of LFSRs,
+has the hexadecimal number “b8”, which looks like this in binary:
+
+<p>
+
+<tt>7 6 5 4 3 2 1 0</tt><br>
+<tt>1 0 1 1 1 0 0 0 </tt><br>
+
+<p>
+
+In the number “b8” (184 when represented in decimal—the numbers normally
+used by humans), the bits (3, 4, 5, 7) are set, which correspond to
+the taps seen above.
+
+<p>
+
+The 12 4-tap 8-bit LFSRs are, in hexadecimal: 8e, 95, 96, a6, b1, b2, b4,
+b8, c3, c6, d4, and e1.
+
+<p>
+
+Here is the number “b1”, in binary:
+
+<p>
+
+<tt>7 6 5 4 3 2 1 0</tt><br>
+<tt>1 0 1 1 0 0 0 1</tt><br>
+
+<p>
+
+And the function to implement the LFSR:
+
+<p>
+
+<tt>uint8_t b1_lfsr(uint8_t random) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>uint8_t t; <font color=#008700>// temp</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>t = (random &gt;&gt; 7) ^ (random &gt;&gt; 5) ^ (random &gt;&gt; 4) ^ random;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>random &lt;&lt;= 1;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>random |= t &amp; 1;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return random;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+<A name=The_inverse_LFSR></A><A name=TheinverseLFSR></A><span class=moyet>==</span><span class=blogtitle><b>The inverse LFSR</b></span><span class=moyet>==</span>
+
+<p>
+
+To calculate the inverse LFSR, do the following:
+
+<p>
+
+<ul>
+<li> Convert the shift after the taps from a left shift in to a right shift
+<li> Have the or (“|=”) operation affect the top, not bottom bit of the number
+<li> Convert the “7” tap in to a “0” tap; add 1 to all of the other taps
+</ul>
+
+<p>
+
+In a 
+<a href="http://samiam.org/blog/20130606.html">previous blog entry</a>, I showed both
+the forward and inverse LFSRs for Pitfall’s random number generator.
+Above is the forward LFSR for the “b1” tap configuration; the inverse
+is:
+
+<p>
+
+<tt>uint8_t inverse_b1_lfsr(uint8_t random) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>uint8_t t; <font color=#008700>// temp</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>t = (random &gt;&gt; 6) ^ (random &gt;&gt; 5) ^ (random &gt;&gt; 1) ^ random;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>random &gt;&gt;= 1;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>random |= t &lt;&lt; 7;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return random;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+Instead of the taps (0,4,5,7), the taps here are (1,5,6,0)—each tap 
+(except the “7” tap) is increased by 1; the “7” tap is converted in to
+a “0” tap.
+
+<p>
+
+<A name=A_final_note></A><A name=Afinalnote></A><span class=moyet>==</span><span class=blogtitle><b>A final note</b></span><span class=moyet>==</span>
+
+<p>
+
+If any LFSR is given a zero input, it will always output a zero; a
+full period 8-bit LFSR cycles through all 255 other 8-bit values.
+
+<p>
+
+<A name=More_to_come></A><A name=Moretocome></A><span class=moyet>==</span><span class=blogtitle><b>More to come</b></span><span class=moyet>==</span>
+
+<p>
+
+Now that I have looked at the various 8-bit LFSRs that exist, I will next 
+look at how a LFSR is implemented in 6502 assembly language, which will 
+explain why David Crane chose the “b8” LFSR.  All of this is in a
+<a href="http://samiam.org/blog/20130612.html">future blog entry</a>.
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

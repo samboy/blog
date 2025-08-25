@@ -1,0 +1,56 @@
+<h1>Adios cripperz.sg</h1>
+
+<h2>February 3, 2012</h2>
+
+One of the three nodes I have used for hosting my domains (samiam.org,
+maradns.org, etc.) was a low-cost VPS with cripperz.sg.  The good news is 
+that the domain was only supposedly $20/year with a $1 setup fee.  The
+bad news was that the machine was slow (a good deal slower than my $19/year
+AlienVPS nodes) and cripperz.sg fell off of the earth and was
+<A href=http://lowendstock.com/cripperz>marked deadpool</A> in late
+January.
+
+<p>
+
+My node with them was still up until yesterday around noon (Central time)
+then went belly-up, undoubtedly for good, since cripperz.sg stop resolving
+over a week ago on January 21.  So, instead of getting a VPS from them
+for $21 a year, I ended up paying $21 for over seven months.  It wasn't
+a bad server for $3 a month, and I did have warning it was going to
+go offline (which I should have heeded), so all is good.  I wish the 
+people at Cripperz the best.
+
+<p>
+
+Since I have redundant servers and DNS failover set up for my domains, 
+and since my node with Cripperz was always a backup node, there was no
+downtime.  Cripperz served me well keeping my web pages up when AlienVPS
+was having some minor issues keeping their servers running last fall.
+
+<p>
+
+To replace my Cripperz node, I chose one the cheapest VPS providers,
+namely <A href=http://fastvps.co>FastVPS</A>.  For only $12, I had within
+a couple of hours a new backup node for samiam.org up and running.
+It feels fast--it's a new server in the same datacenter as Cripperz's
+servers, but with a more powerful and less overloaded machine.
+
+<p>
+
+I so far am very happy with my node with FastVPS.  I am a little worried
+that they are offering so much for so little, but, considering there was
+over a week's warning Cripperz was going deadpool, and considering I have
+two other nodes up and running with AlienVPS, I should be fine even if 
+they can't keep their shop open.  The most I have to lose is $12 and 
+a couple of hours work moving my backup node yet again.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

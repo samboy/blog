@@ -1,0 +1,871 @@
+<h1>Microblogs April 2013 week 1</h1>
+
+<h2>April 7 2013</h2>
+
+This is an archive of my microblog postings for the first week of April,
+2013.
+
+<p>
+
+See also: <A href=20130330.html>March Microblogs</A>
+
+<p>
+
+<A name=DNS_security_comparison_update></A><A name=DNSsecuritycomparisonupdate></A><span class=moyet>==</span><span class=blogtitle><b>DNS security comparison update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have updated the DNS security comparison document in light of the
+patch finally made for PowerDNS’ CVE-2012-1193 security report, as well
+as clarifying in two parts of the document that only DJB’s recursive
+component has CVE security vulnerability issues:
+
+<p>
+
+<blockquote>
+<A href="http://www.maradns.org/DNS.security.comparison.txt">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>DNS.<![if gt IE 6]>&#8203;<![endif]><wbr>security.<![if gt IE 6]>&#8203;<![endif]><wbr>comparison.<![if gt IE 6]>&#8203;<![endif]><wbr>txt</A>
+</blockquote>
+
+<i>Posted Apr 07 2013</i>
+
+<p>
+
+<A name=Another_reason_why_I_really_like_Source_Sans_Pro></A><A name=AnotherreasonwhyIreallylikeSourceSansPro></A><span class=moyet>==</span><span class=blogtitle><b>Another reason why I really like Source Sans Pro</b></span><span class=moyet>==</span>
+
+<p>
+
+Another reason I really like Source Sans Pro is that it comes in six
+different weights.  Instead of being just “regular” and “bold”
+like most conventional fonts, Source Sans Pro comes in “extra-light”,
+“light”, “normal”, “semi-bold”, “bold”, and “black”.
+
+<p>
+
+With my inexpensive HP Desktop 1000 J110, fonts tend to be printed a
+little darker than they really are.  By using one level lighter in Source
+Sans (“light” instead of “normal”), the fonts, when printed,
+look somewhat normal again.
+
+<p>
+
+It’s a free (OFL) download:
+
+<p>
+
+<blockquote>
+<A href="http://sourceforge.net/projects/sourcesans.adobe/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>sourcesans.<![if gt IE 6]>&#8203;<![endif]><wbr>adobe/</A>
+</blockquote>
+
+Source Sans has a monospaced sister, Source Code Pro:
+
+<p>
+
+<blockquote>
+<A href="http://sourceforge.net/projects/sourcecodepro.adobe/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>sourcecodepro.<![if gt IE 6]>&#8203;<![endif]><wbr>adobe/</A>
+</blockquote>
+
+<i>Posted Apr 05 2013</i>
+
+<p>
+
+<A name=Now_I_can_autoupdate_when_I_last_edited_the_wiki></A><A name=NowIcanautoupdatewhenIlasteditedthewiki></A><span class=moyet>==</span><span class=blogtitle><b>Now I can auto-update when I last edited the wiki</b></span><span class=moyet>==</span>
+
+<p>
+
+This link purges the cache for my user page and allows it to have an
+updated “time since my last Wiki edit” value:
+
+<p>
+
+<blockquote>
+<A href="http://en.wikipedia.org/w/index.php?title=User:Samboy&amp;action=purge">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>w/<![if gt IE 6]>&#8203;<![endif]><wbr>index.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>title=<![if gt IE 6]>&#8203;<![endif]><wbr>User:<![if gt IE 6]>&#8203;<![endif]><wbr>Samboy&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>action=<![if gt IE 6]>&#8203;<![endif]><wbr>purge</A>
+</blockquote>
+
+<i>Posted Apr 05 2013</i>
+
+<p>
+
+<A name=Alternate_DNS_Servers_is_now_a_free_PDF></A><A name=AlternateDNSServersisnowafreePDF></A><span class=moyet>==</span><span class=blogtitle><b>“Alternate DNS Servers” is now a free PDF</b></span><span class=moyet>==</span>
+
+<p>
+
+A book which devotes an entire chapter to MaraDNS, “Alternative DNS Servers”,
+is available as a free PDF:
+
+<p>
+
+<blockquote>
+<A href="http://jpmens.net/2010/10/29/alternative-dns-servers-the-book-as-pdf/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>jpmens.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>2010/<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>29/<![if gt IE 6]>&#8203;<![endif]><wbr>alternative-<![if gt IE 6]>&#8203;<![endif]><wbr>dns-<![if gt IE 6]>&#8203;<![endif]><wbr>servers-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>book-<![if gt IE 6]>&#8203;<![endif]><wbr>as-<![if gt IE 6]>&#8203;<![endif]><wbr>pdf/</A>
+</blockquote>
+
+I would like to thank Jan-Piet Mens for this book and making it free (and 
+mentioning my big open-source project I did in the first 2000s decade in it), 
+and thank Mark Viking for the link (and for the 
+<a href="http://en.wikipedia.org/wiki/Wikipedia:Articles_for_deletion/MaraDNS">keep vote for MaraDNS</a>)
+
+<p>
+
+<i>Posted Apr 05 2013</i>
+
+<p>
+
+<A name=Are_Xbox_players_really_better_in_bed></A><A name=AreXboxplayersreallybetterinbed></A><span class=moyet>==</span><span class=blogtitle><b>Are Xbox players really better in bed?</b></span><span class=moyet>==</span>
+
+<p>
+
+This article says Xbox players are better in bed than other console
+gamers, as well as PC gamers:
+
+<p>
+
+<blockquote>
+<A href="http://metro.co.uk/2013/04/04/xbox-players-better-in-bed-than-playstation-and-wii-rivals-study-finds-3582709/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>metro.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>04/<![if gt IE 6]>&#8203;<![endif]><wbr>04/<![if gt IE 6]>&#8203;<![endif]><wbr>xbox-<![if gt IE 6]>&#8203;<![endif]><wbr>players-<![if gt IE 6]>&#8203;<![endif]><wbr>better-<![if gt IE 6]>&#8203;<![endif]><wbr>in-<![if gt IE 6]>&#8203;<![endif]><wbr>bed-<![if gt IE 6]>&#8203;<![endif]><wbr>than-<![if gt IE 6]>&#8203;<![endif]><wbr>playstation-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>wii-<![if gt IE 6]>&#8203;<![endif]><wbr>rivals-<![if gt IE 6]>&#8203;<![endif]><wbr>study-<![if gt IE 6]>&#8203;<![endif]><wbr>finds-<![if gt IE 6]>&#8203;<![endif]><wbr>3582709/</A>
+</blockquote>
+
+The article does not link to the original survey, so it’s hard to
+determine what level of statistical confidence these results really have.
+But, then again, I’m a PC gamer, who are considered the worst in bed
+according to the article.
+
+<p>
+
+<i>Posted Apr 05 2013</i>
+
+<p>
+
+<A name=The_Linux_name_is_toxic_to_endusers></A><A name=TheLinuxnameistoxictoendusers></A><span class=moyet>==</span><span class=blogtitle><b>The “Linux” name is toxic to end-users</b></span><span class=moyet>==</span>
+
+<p>
+
+You know, with 
+<a href="http://maradns.blogspot.com/2009/01/invasion-of-linux-fanboyz.html">the kind of hostility Linux advocates can have</a>, it’s no surprise the “Linux” name is toxic to end-users:
+
+<p>
+
+<blockquote>
+<A href="http://www.linuxadvocates.com/2013/04/the-linux-inside-stigma.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>linuxadvocates.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>04/<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>linux-<![if gt IE 6]>&#8203;<![endif]><wbr>inside-<![if gt IE 6]>&#8203;<![endif]><wbr>stigma.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+Of course, Linux can be a friendly end-user environment: Observe Android
+and the Chromebooks, as well as countless consumer gateway routers which
+use a Linux kernel.
+
+<p>
+
+<i>Posted Apr 05 2013</i>
+
+<p>
+
+<A name=Smaller_Paddles></A><A name=SmallerPaddles></A><span class=moyet>==</span><span class=blogtitle><b>Smaller Paddles</b></span><span class=moyet>==</span>
+
+<p>
+
+There is an episode of That 70’s show where Michael Kelso (Ashton
+Kutcher) and  Red Forman (Kurtwood Smith) attempt to modify a pong
+machine so it has smaller on-screen paddles.  Somebody recently modified
+a recreation of the original arcade version (which uses discrete digital
+logic) of Pong thusly:
+
+<p>
+
+<blockquote>
+<A href="http://hackaday.com/2013/01/28/tv-show-inspires-this-smaller-pong-paddles-hardware-hack/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>hackaday.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>01/<![if gt IE 6]>&#8203;<![endif]><wbr>28/<![if gt IE 6]>&#8203;<![endif]><wbr>tv-<![if gt IE 6]>&#8203;<![endif]><wbr>show-<![if gt IE 6]>&#8203;<![endif]><wbr>inspires-<![if gt IE 6]>&#8203;<![endif]><wbr>this-<![if gt IE 6]>&#8203;<![endif]><wbr>smaller-<![if gt IE 6]>&#8203;<![endif]><wbr>pong-<![if gt IE 6]>&#8203;<![endif]><wbr>paddles-<![if gt IE 6]>&#8203;<![endif]><wbr>hardware-<![if gt IE 6]>&#8203;<![endif]><wbr>hack/</A>
+</blockquote>
+
+Yes, Red and Kelso could have made this modification to even a chip-based
+pong machine; with home pong consoles using the GI AY-3-8500 chip,
+it was possible to specify the size of the paddles (“bat”s in the
+documentation) by sending a signal to pin 13 of the original AY-3-8500.
+They would have needed the documentation for the AY-3-3500 to pull it
+off, so maybe the episode omitted the scene where Red called up General
+Instrument to figure out how the chip worked...or maybe their neighbor
+Bob Pinciotti (Donna’s father) had a copy of the relevant schematics
+at his appliance store (not entirely implausible, since they may have
+sold pong machines)
+
+<p>
+
+Another possibility is that Red soldiered his own pong game: 
+<A href="http://www.pong-story.com/eaus0576.htm">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>pong-<![if gt IE 6]>&#8203;<![endif]><wbr>story.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>eaus<![if gt IE 6]>&#8203;<![endif]><wbr>0576.<![if gt IE 6]>&#8203;<![endif]><wbr>htm</A> 
+
+<p>
+
+<i>Posted Apr 05 2013</i>
+
+<p>
+
+<A name=Markdown_text></A><A name=Markdowntext></A><span class=moyet>==</span><span class=blogtitle><b>Markdown text</b></span><span class=moyet>==</span>
+
+<p>
+
+After inventing my own form of “it looks like an old-school Usenet
+posting but becomes HTML”, I discover it has already been done with
+a language called Markdown:
+
+<p>
+
+<blockquote>
+<A href="http://daringfireball.net/projects/markdown/syntax">http://<![if gt IE 6]>&#8203;<![endif]><wbr>daringfireball.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>markdown/<![if gt IE 6]>&#8203;<![endif]><wbr>syntax</A>
+</blockquote>
+
+Of course, I prefer my own take on “let’s make plain text HTML”,
+and it only took me a couple of days to implement.
+
+<p>
+
+<i>Posted Apr 05 2013</i>
+
+<p>
+
+<A name=PR_companies_influencing_Wikipedia_articles></A><A name=PRcompaniesinfluencingWikipediaarticles></A><span class=moyet>==</span><span class=blogtitle><b>PR companies influencing Wikipedia articles</b></span><span class=moyet>==</span>
+
+<p>
+
+This article about using PR to influence Wikipedia articles talks about
+the correct ethical way involved parties are supposed to influence
+articles:
+
+<p>
+
+<A href="http://motherboard.vice.com/blog/meet-the-pr-guru-who-wants-to-help-corporations-get-heard-on-wikipedia">http://<![if gt IE 6]>&#8203;<![endif]><wbr>motherboard.<![if gt IE 6]>&#8203;<![endif]><wbr>vice.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>meet-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>pr-<![if gt IE 6]>&#8203;<![endif]><wbr>guru-<![if gt IE 6]>&#8203;<![endif]><wbr>who-<![if gt IE 6]>&#8203;<![endif]><wbr>wants-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>help-<![if gt IE 6]>&#8203;<![endif]><wbr>corporations-<![if gt IE 6]>&#8203;<![endif]><wbr>get-<![if gt IE 6]>&#8203;<![endif]><wbr>heard-<![if gt IE 6]>&#8203;<![endif]><wbr>on-<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia</A>
+
+<p>
+
+I’m very mixed about this. The reason for 
+<a href="http://en.wikipedia.org/wiki/WP:COI">WP:COI</a> 
+is to keep articles more neutral, but, then again, it’s very frustrating for 
+me to be unable to edit the Wiki article about my main free software 
+contribution to the world: <A href="http://en.wikipedia.org/wiki/MaraDNS">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS</A> (The article 
+is pretty badly outdated right now; editors have ignored 
+<a href="http://en.wikipedia.org/wiki/Talk:MaraDNS#Let.27s_update_this_article">my plea on the talk page</a>
+to update the article).
+
+<p>
+
+As it turns out, I did update the MaraDNS Wikipedia article this year 
+<a href="http://en.wikipedia.org/w/index.php?title=MaraDNS&amp;diff=538036654&amp;oldid=526563607">to fix an objective factual error in the infobox</a>
+(after being out of date for over a year, I 
+<i>finally</i>
+updated MaraDNS’ version number); no editors have contested the edit.
+
+<p>
+
+I think there are PR firms out there who hide their affiliations. The fact 
+that Mitt Romney’s incident bullying a kid and cutting his hair never made 
+the Wikipedia article except as a footnote at 
+<A href="http://en.wikipedia.org/wiki/Mitt_Romney#cite_note-26">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Mitt_<![if gt IE 6]>&#8203;<![endif]><wbr>Romney#<![if gt IE 6]>&#8203;<![endif]><wbr>cite_<![if gt IE 6]>&#8203;<![endif]><wbr>note-<![if gt IE 6]>&#8203;<![endif]><wbr>26</A> to me stinks of a 
+very biased paid hack job.  
+
+<p>
+
+As a final note, Wikipedia’s strict policies on conflict of interest
+editing are fairly recent; as recently as six or seven years ago, people
+were allowed to edit about themselves or their own projects as long as
+their edits were objective and neutral.
+
+<p>
+
+<i>Posted Apr 04 2013</i>
+
+<p>
+
+<A name=I_found_an_IE6_workaround_for_the_wordbreak_problem></A><A name=IfoundanIE6workaroundforthewordbreakproblem></A><span class=moyet>==</span><span class=blogtitle><b>I found an IE6 workaround for the word-break problem</b></span><span class=moyet>==</span>
+
+<p>
+
+I found a way to put zero-length word breaks in the middle of long links
+and retain full cross-browser compatibility, including Internet Explorer 6
+(IE6):
+
+<p>
+
+<tt>&lt;![if gt IE 6]&gt;&amp;#8203;&lt;![endif]&gt;&lt;wbr&gt;</tt><br>
+
+<p>
+
+In more detail: Newer versions of Internet Explorer do not honor the
+&lt;wbr&gt; tag—but they, post-IE6, do honor &amp;#8203;.  Chrome doesn’t honor
+&amp;#8203; in the middle of a conditional statement like this, but it does
+honor the invisible-to-IE &lt;wbr&gt; tag.  Even IE6 sees the above code as
+an invisible line-break, probably because it treats unknown HTML tags
+that way.
+
+<p>
+
+It’s ugly but works.  Also: It looks like about 3% of my visitors
+still are using IE6 (then again, a lot of those may be bots and what
+not; one visitor with IE6 in their user-agent string was obviously a
+bot probing for security holes in the website to exploit).
+
+<p>
+
+<i>Posted Apr 04 2013</i>
+
+<p>
+
+<A name=Mark_Zuckerbergs_first_webpage></A><A name=MarkZuckerbergsfirstwebpage></A><span class=moyet>==</span><span class=blogtitle><b>Mark Zuckerberg’s first webpage</b></span><span class=moyet>==</span>
+
+<p>
+
+As confirmed by the web archive,
+this is Mark Zuckerberg’s first web page:
+<A href="http://web.archive.org/web/20021104225654/http://www.angelfire.com/ny/mez51/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>web.<![if gt IE 6]>&#8203;<![endif]><wbr>archive.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>web/<![if gt IE 6]>&#8203;<![endif]><wbr>20021104225654/<![if gt IE 6]>&#8203;<![endif]><wbr>http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>angelfire.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>ny/<![if gt IE 6]>&#8203;<![endif]><wbr>mez<![if gt IE 6]>&#8203;<![endif]><wbr>51/</A>
+(Observe “Mark Zuckerberg” in the headers [after the Web Archive
+prologue] when viewing the source code for this page)
+
+<p>
+
+<i>Posted Apr 03 2013</i>
+
+<p>
+
+<A name=TinyVZ_update></A><A name=TinyVZupdate></A><span class=moyet>==</span><span class=blogtitle><b>TinyVZ update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have updated the TinyVZ template for OpenVZ to act as a DNS
+toaster, as well as fixing a couple of long standing bugs in TinyVZ:
+<A href="http://samiam.org/TinyVZ/">http://samiam.org/TinyVZ/</A>
+
+<p>
+
+<i>Posted Apr 03 2013</i>
+
+<p>
+
+<A name=I_should_not_be_so_cynical></A><A name=Ishouldnotbesocynical></A><span class=moyet>==</span><span class=blogtitle><b>I should not be so cynical</b></span><span class=moyet>==</span>
+
+<p>
+
+Two years ago, I posted a blog criticizing Bitcoin:
+<A href="http://samiam.org/blog/20110323.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20110323.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>  If I had, instead of being so
+cynical, spent $1,000 on bitcoins instead, I would be $140,000 richer
+today.
+
+<p>
+
+Note to self: Don’t be so cynical in life.
+
+<p>
+
+<i>Posted Apr 03 2013</i>
+
+<p>
+
+<A name=Humanity_is_sinful></A><A name=Humanityissinful></A><span class=moyet>==</span><span class=blogtitle><b>Humanity is sinful</b></span><span class=moyet>==</span>
+
+<p>
+
+When I look at how selfish and dishonest people can be, it can make
+me upset.  Christianity teaches me that our inherit nature is sinful:
+Selfish, dishonest, resentful, fearful, self-pitying.
+
+<p>
+
+It is only through God that I can move beyond these selfish instincts
+and be a whole person.
+
+<p>
+
+<i>Posted Apr 03 2013</i>
+
+<p>
+
+<A name=Wikispaces_is_ending_IE7_support></A><A name=WikispacesisendingIE7support></A><span class=moyet>==</span><span class=blogtitle><b>Wikispaces is ending IE7 support</b></span><span class=moyet>==</span>
+
+<p>
+
+Wikispace is ending Internet Explorer 7 (IE7) support:
+<A href="http://blog.wikispaces.com/2013/03/ending-support-for-internet-explorer-7.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>blog.<![if gt IE 6]>&#8203;<![endif]><wbr>wikispaces.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>03/<![if gt IE 6]>&#8203;<![endif]><wbr>ending-<![if gt IE 6]>&#8203;<![endif]><wbr>support-<![if gt IE 6]>&#8203;<![endif]><wbr>for-<![if gt IE 6]>&#8203;<![endif]><wbr>internet-<![if gt IE 6]>&#8203;<![endif]><wbr>explorer-<![if gt IE 6]>&#8203;<![endif]><wbr>7.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+As that article points out, Google and Facebook have already ended IE7
+support two years ago.
+
+<p>
+
+My rule of thumb is “ten years after a given browser is released”; I
+plan on supporting IE7 until at least October 18, 2016.  But, then again,
+I only have to worry about HTML and CSS; this site is Javascript-free.
+
+<p>
+
+<i>Posted Apr 03 2013</i>
+
+<p>
+
+<A name=Fontsquirrel_now_restricts_conversion_of_Adobes_fonts></A><A name=FontsquirrelnowrestrictsconversionofAdobesfonts></A><span class=moyet>==</span><span class=blogtitle><b>Fontsquirrel now restricts conversion of Adobe’s fonts</b></span><span class=moyet>==</span>
+
+<p>
+
+For legal and ethical reasons, Fontsquirrel’s 
+<a href="http://www.fontsquirrel.com/tools/webfont-generator">webfont generator</a> no longer allows Adobe webfonts to be uploaded unless they happen to be
+called “Source Sans Pro” or “Source Code Pro”.
+
+<p>
+
+Because of the OFL license “Source Sans/Code” is under, and because
+I have modified the fonts, I can not call these fonts “Source Sans
+Pro” any more.  Because of this, and because I can not legally or
+ethically remove the “Adobe” name from the fonts, I used the tools
+at <A href="http://ttf2woff.com/">http://ttf2woff.com/</A> and <A href="http://ttf2eot.sebastiankippe.com/">http://ttf2eot.sebastiankippe.com/</A> to convert
+the fonts.
+
+<p>
+
+Unfortunately, the ttf2woff.com tool screws up the kerning in the web
+font in Firefox, which means I will be unable to update the fonts here
+unless I were to remove Adobe’s name from the font.
+
+<p>
+
+I think it’s best to keep the web fonts here as-is.  I have already
+made a version of the fonts without pre-ClearType hinting that looks
+better in modern systems which I may upgrade to once XP passes its
+end-of-life next year.
+
+<p>
+
+<i>Posted Apr 02 2013</i>
+
+<p>
+
+<A name=The_college_hookup_culture_redux></A><A name=Thecollegehookupcultureredux></A><span class=moyet>==</span><span class=blogtitle><b>The college hookup culture redux</b></span><span class=moyet>==</span>
+
+<p>
+
+A number of points of views about this “hook-up” culture that is 
+supposedly happening at college:
+<A href="http://theweek.com/article/index/242137/6-ways-of-looking-at-college-hookup-culture">http://<![if gt IE 6]>&#8203;<![endif]><wbr>theweek.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>article/<![if gt IE 6]>&#8203;<![endif]><wbr>index/<![if gt IE 6]>&#8203;<![endif]><wbr>242137/<![if gt IE 6]>&#8203;<![endif]><wbr>6-<![if gt IE 6]>&#8203;<![endif]><wbr>ways-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>looking-<![if gt IE 6]>&#8203;<![endif]><wbr>at-<![if gt IE 6]>&#8203;<![endif]><wbr>college-<![if gt IE 6]>&#8203;<![endif]><wbr>hookup-<![if gt IE 6]>&#8203;<![endif]><wbr>culture</A>
+
+<p>
+
+<i>Posted Apr 02 2013</i>
+
+<p>
+
+<A name=Endof2013_MaraDNS_goal></A><A name=Endof2013MaraDNSgoal></A><span class=moyet>==</span><span class=blogtitle><b>End-of-2013 MaraDNS goal</b></span><span class=moyet>==</span>
+
+<p>
+
+My goal is to, by the end of 2013, only update MaraDNS once every two
+months instead of once a month.
+
+<p>
+
+<i>Posted Apr 02 2013</i>
+
+<p>
+
+<A name=Web_browser_compatibility_chart></A><A name=Webbrowsercompatibilitychart></A><span class=moyet>==</span><span class=blogtitle><b>Web browser compatibility chart</b></span><span class=moyet>==</span>
+
+<p>
+
+In light of the lastest development (slightly) breaking things in Internet
+Explorer 6 (IE6), here is my updated web browser compatibility chart.
+
+<p>
+
+Fully supported:
+
+<p>
+
+<ul>
+<li> Firefox 17
+<li> Opera 12
+<li> Safari 5 
+<li> Internet Explorer 10 (IE9 also supported using IE10’s “IE9” render mode)
+<li> The current Chrome release (Right now Chrome 26)
+</ul>
+
+<p>
+
+Partially supported.  With these browsers, while the look of the web
+page may be different, the web page will still render and be perfectly
+readable:
+
+<p>
+
+<ul>
+<li> Internet Explorer 7 and 8 (Again, tested using IE10 and its “IE7” and “IE8” render modes)
+<li> Dillo Win32 3.0p9 (available at <A href="http://samiam.org/software/dillo/">http://samiam.org/software/dillo/</A>).  I support this because it is the best browser for pre-XP versions of Windows.
+<li> Whatever version of Lynx comes with RHEL/CentOS 6 (right now 2.8.6rel.5, from 2007)  I support this because it works well with screen readers for visually disabled people.
+</ul>
+
+<p>
+
+Obsolete.  While the web site has workarounds for these browsers, I will
+not update the web page design to work around bugs these browsers have
+unless the workaround is trivial to implement:
+
+<p>
+
+<ul>
+<li> Internet Explorer 6 
+<li> Netscape Navigator 4 (Yes, I still occassionally test my page on this 
+antique, even though the modern web is not at all usable with it; it has 
+an issue with Unicode zero-width spaces)
+</ul>
+
+<p>
+
+(Right now, the web design works in IE6 but has ugly squares in the links in
+Netscape 4)
+
+<p>
+
+<i>Posted Apr 02 2013</i>
+
+<p>
+
+<A name=Dillo></A><span class=moyet>==</span><span class=blogtitle><b>Dillo</b></span><span class=moyet>==</span>
+
+<p>
+
+I have created a mirror of the final Dillo-win32 release which is
+available here: <A href="http://samiam.org/software/dillo">http://samiam.org/software/dillo</A>  For any version of
+Windows earlier than XP, this is actually the best browser out there.
+
+<p>
+
+Web sites no longer cater to IE6 (Internet Explorer 6); Dillo renders 
+non-IE6-compatible websites better.  The only reason why the web looked 
+good in IE6 for so long is because web designers spent millions of 
+man-hours adding IE6 workarounds to their sites throughout the first 
+2000s decade.
+
+<p>
+
+Intalling newer browsers is a hit-and-miss affair in pre-XP Windows.  
+Even if the browsers install, the underlying OS can have issues which 
+cause instability and security problems.
+
+<p>
+
+For example, there is a bug in Firefox 10.0.12 where, in Windows 2000, 
+it will crash and reboot Windows when loading some webfonts.  A bug like 
+this can undoubtedly be exploited to install “hit and run” malware; with 
+the underlying OS so outdated, the only safe browser is a really simple 
+one.
+
+<p>
+
+<i>Posted Apr 02 2013</i>
+
+<p>
+
+<A name=Love_means_never_having_to_say_youre_sorry></A><A name=Lovemeansneverhavingtosayyouresorry></A><span class=moyet>==</span><span class=blogtitle><b>Love means never having to say you’re sorry</b></span><span class=moyet>==</span>
+
+<p>
+
+People Who Never Apologize Are Probably Happier Than You
+<A href="http://www.npr.org/2013/04/01/175714511/why-not-apologizing-makes-you-feel-better">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>npr.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>04/<![if gt IE 6]>&#8203;<![endif]><wbr>01/<![if gt IE 6]>&#8203;<![endif]><wbr>175714511/<![if gt IE 6]>&#8203;<![endif]><wbr>why-<![if gt IE 6]>&#8203;<![endif]><wbr>not-<![if gt IE 6]>&#8203;<![endif]><wbr>apologizing-<![if gt IE 6]>&#8203;<![endif]><wbr>makes-<![if gt IE 6]>&#8203;<![endif]><wbr>you-<![if gt IE 6]>&#8203;<![endif]><wbr>feel-<![if gt IE 6]>&#8203;<![endif]><wbr>better</A>
+
+<p>
+
+<blockquote>
+“When you refuse to apologize, it actually makes you feel more empowered,” 
+he said. “That power and control seems to translate into greater feelings 
+of self-worth.”
+</blockquote>
+
+<i>Posted Apr 02 2013</i>
+
+<p>
+
+<A name=Moving_away_from_IE6></A><A name=MovingawayfromIE6></A><span class=moyet>==</span><span class=blogtitle><b>Moving away from IE6</b></span><span class=moyet>==</span>
+
+<p>
+
+With worldwide Internet Explorer 6 (IE6) 
+<a href="http://ie6countdown.com/">usage</a> under 10%, and with usage at a fraction
+of a percent in the US, Mexico, and a lot of other western countries,
+I am finally phasing out IE6 compatibility.
+
+<p>
+
+I’m not going out of my way to break things in IE6, but I am not going
+to spend hours coming up with IE6 workarounds either.
+
+<p>
+
+To wit, I just discovered an issue with long URLs in microblog entries
+screwing up the layout in Chrome and all recent Internet Explorer
+releases.  The only way to fix this is to add the &amp; #8203;​ (zero-width space)
+character to long URLs, which will cause them to optionally break at
+that point.  While this works with IE7 and above, and doesn’t cause
+any issues in Lynx, Opera, or Dillo, it does cause long URLs to have
+ugly squares in them in IE6.
+
+<p>
+
+I couldn’t find a simple workaround (putting the &amp; #8203;​ thingys
+in &lt;span&gt; causes them to not break lines in Chrome), so, guess what:
+Welcome to 2013, IE6 users.  I have made the layout of my site gracefully
+degenerate for IE6 users, but, unfortunately, I have two choices: Have the
+site look weird in IE6 or look weird in modern browsers.  IE6 support is
+going away; if you have an old computer that can’t run IE7 or other
+modern browsers, the site is perfectly readable in Dillo and Lynx.
+It’s also still perfectly readable in IE6, except for those squares.
+
+<p>
+
+<i>Posted Apr 02 2013</i>
+
+<p>
+
+<A name=Conspiracy_theories></A><A name=Conspiracytheories></A><span class=moyet>==</span><span class=blogtitle><b>Conspiracy theories</b></span><span class=moyet>==</span>
+
+<p>
+
+In America, who believes in what conspiracy theory:
+<A href="http://www.publicpolicypolling.com/pdf/2011/PPP_Release_National_ConspiracyTheories_040213.pdf">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>publicpolicypolling.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>pdf/<![if gt IE 6]>&#8203;<![endif]><wbr>2011/<![if gt IE 6]>&#8203;<![endif]><wbr>PPP_<![if gt IE 6]>&#8203;<![endif]><wbr>Release_<![if gt IE 6]>&#8203;<![endif]><wbr>National_<![if gt IE 6]>&#8203;<![endif]><wbr>Conspiracy<![if gt IE 6]>&#8203;<![endif]><wbr>Theories_<![if gt IE 6]>&#8203;<![endif]><wbr>040213.<![if gt IE 6]>&#8203;<![endif]><wbr>pdf</A>
+
+<p>
+
+In my experience the “9/11 was faked” conspiracy theory is more popular in 
+Latin America than stateside, and the “USA faked the moon landing” conspiracy
+theory is more popular in Russia than here.
+
+<p>
+
+People will believe what fits their worldview.
+
+<p>
+
+<i>Posted Apr 02 2013</i>
+
+<p>
+
+<A name=Life_without_Google></A><A name=LifewithoutGoogle></A><span class=moyet>==</span><span class=blogtitle><b>Life without Google</b></span><span class=moyet>==</span>
+
+<p>
+
+Tips on how to use the Internet without Google: 
+<A href="http://www.itworld.com/software/350485/my-divorce-google-one-year-later">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>itworld.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>software/<![if gt IE 6]>&#8203;<![endif]><wbr>350485/<![if gt IE 6]>&#8203;<![endif]><wbr>my-<![if gt IE 6]>&#8203;<![endif]><wbr>divorce-<![if gt IE 6]>&#8203;<![endif]><wbr>google-<![if gt IE 6]>&#8203;<![endif]><wbr>one-<![if gt IE 6]>&#8203;<![endif]><wbr>year-<![if gt IE 6]>&#8203;<![endif]><wbr>later</A>
+(Because of Adsense, people who want to completely avoid Google will need 
+to block their adsense servers)
+
+<p>
+
+<i>Posted Apr 02 2013</i>
+
+<p>
+
+<A name=Announcing_a_MaraDNS_discussion_board></A><A name=AnnouncingaMaraDNSdiscussionboard></A><span class=moyet>==</span><span class=blogtitle><b>Announcing a MaraDNS discussion board</b></span><span class=moyet>==</span>
+
+<p>
+
+Hello, everyone,
+
+<p>
+
+I am in the process of shutting down the mailing list and replacing it with
+a PhpBB discussion board.  This new discussion board will have three
+sub-forums:
+
+<p>
+
+1) The contributer's forum
+
+<p>
+
+The only members of the mailing list will be members who have made
+financial contributions to MaraDNS or who have done other work such as
+reporting security bugs (which get assigned CVE numbers), making patches
+for MaraDNS available, or contributing to the MaraDNS-ng project (which
+will soon have a Git tree).  Indeed, this forum will have a sub-forum which
+will only contain MaraDNS patches.
+
+<p>
+
+2) The guest's forum
+
+<p>
+
+This forum will be open to anyone and everyone.  Clueful posts in this
+forum (read: Patches, useful "this host does not resolve" bug reports,
+etc.) will be moved to the contributer's forum, with the clueful poster
+marked as a "clueful poster".
+
+<p>
+
+Other posts, such as requests for MaraDNS 0.5 support, will remain on this
+forum.
+
+<p>
+
+3) The leecher's forum
+
+<p>
+
+This forum will be for the kinds of wannabe leachers posts which pass off
+as "hacking" these days.  Postings talking about how piracy should be
+legal, conspiracy theories about some shadowy "copyright cartel", postings
+bragging about using adblock, even postings discussing using MaraDNS to
+block ads will be placed here.
+
+<p>
+
+For example, this MaraDNS 2.0 recursive configuration snippet would be
+placed in the leecher's forum:
+
+<p>
+
+<A href="http://maradns.org/deadwood/doc/my.current.blacklist">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>doc/<![if gt IE 6]>&#8203;<![endif]><wbr>my.<![if gt IE 6]>&#8203;<![endif]><wbr>current.<![if gt IE 6]>&#8203;<![endif]><wbr>blacklist</A>
+
+<p>
+
+The reason being because it has the following lines in it:
+
+<p>
+
+<tt># Those "mouse over text" ads (the ones where keywords are double-</tt><br>
+<tt># underlined) are really annoying, since I like to move the mouse cursor</tt><br>
+<tt># around while reading something; having part of what I read replaced by an</tt><br>
+<tt># annoying mouseover ad annoys me to the point I don't want to read the</tt><br>
+<tt># article any more.</tt><br>
+<tt># (I also use a combination of click-to-flash and disabled animated GIFs</tt><br>
+<tt>#  to block annoying animated ads.  I don't block and sometimes even click</tt><br>
+<tt>#  static ads; I understand that web sites need money to stay online.)</tt><br>
+<tt>root_servers["kontera.com."]="192.168.255.255" # Annoying mouseover ads</tt><br>
+<tt>root_servers["infolinks.com."]="192.168.255.255" # Annoying mouseover ads</tt><br>
+<tt>root_servers["intellitxt.com."]="192.168.255.255" # Annoying mouseover ads</tt><br>
+
+<p>
+
+Since I only work on MaraDNS once a month, it will take me a while to
+implement this.  Hopefully, this will be ready by next year this time, on
+April 1, 2014.
+
+<p>
+
+- Sam
+
+<p>
+
+<i>Posted Apr 01 2013</i>
+
+<p>
+
+<A name=Current_MaraDNS_plans></A><A name=CurrentMaraDNSplans></A><span class=moyet>==</span><span class=blogtitle><b>Current MaraDNS plans</b></span><span class=moyet>==</span>
+
+<p>
+
+I’m going to still fix bugs and update MaraDNS so she will continue
+to work on the internet.  I will also continue to update her to work
+with newer versions of CentOS/RHEL Linux.  For example, I will probably
+eventually finish up MaraDNS' IPv6 support and will update her for
+systemd.
+
+<p>
+
+What is changing is that I am no longer going to discuss MaraDNS anywhere
+except on my personal blog and the mailing list.
+
+<p>
+
+People who whine about MaraDNS not having DNSSEC are the same people who
+whined (and probably still whine) about djbdns not having Notify/AXFR a
+decade ago.  Again, TANSTAAFL: I can make, in my spare time, a basic DNS
+server, but complicated features like DNSSEC require financial backing
+to become real.
+
+<p>
+
+For the people whining that MaraDNS should not get financial support
+until she has features like DNSSEC:
+
+<p>
+
+<ul>
+<li> DNS monoculture—remember, when I started MaraDNS, there was only 
+<i>one</i>
+open-source DNS server—is a bad thing
+<li> No, I’m still not developing DNSSEC for free.  Nice try.
+</ul>
+
+<p>
+
+<i>Posted Apr 01 2013</i>
+
+<p>
+
+<A name=Should_we_have_more_stateowned_banks></A><A name=Shouldwehavemorestateownedbanks></A><span class=moyet>==</span><span class=blogtitle><b>Should we have more state-owned banks?</b></span><span class=moyet>==</span>
+
+<p>
+
+An article about North Dakota’s state owned bank: http://truth-
+out.org/news/item/15435-why-is-socialism-doing-so-darn-well-in-deep-red-north-
+dakota  Should we have more state owned banks?
+
+<p>
+
+<i>Posted Mar 31 2013</i>
+
+<p>
+
+<A name=Happy_Easter_everyone></A><A name=HappyEastereveryone></A><span class=moyet>==</span><span class=blogtitle><b>Happy Easter everyone!</b></span><span class=moyet>==</span>
+
+<p>
+
+Have a good Easter everyone!
+
+<p>
+
+<i>Posted Mar 31 2013</i>
+
+<p>
+
+<A name=The_ultimate_problem_with_Internet_communities></A><A name=TheultimateproblemwithInternetcommunities></A><span class=moyet>==</span><span class=blogtitle><b>The ultimate problem with Internet communities</b></span><span class=moyet>==</span>
+
+<p>
+
+The ultimate problem with the Internet is that it is much easier to express 
+and incite negative feelings (in particular, fear and anger) on the 
+Internet than it is to create and share positive feelings and experiences.
+
+<p>
+
+
+<p>
+
+<i>Posted Mar 31 2013</i>
+
+<p>
+
+<A name=The_Bible></A><A name=TheBible></A><span class=moyet>==</span><span class=blogtitle><b>The Bible</b></span><span class=moyet>==</span>
+
+<p>
+
+I am enjoying “The Bible” miniseries that the History channel is showing 
+right now.  One thing that our society is losing is the basis of The Bible 
+as a common story that everyone in our society knows, a story that, whether
+Christian, of another faith, or atheist, everyone knows and can share.
+
+<p>
+
+I hope this miniseries helps reduce the amount of Biblical illiteracy today’s
+society has.  
+
+<p>
+
+<i>Posted Mar 30 2013</i>
+
+<p>
+
+<A name=March_microblogs_archived></A><A name=Marchmicroblogsarchived></A><span class=moyet>==</span><span class=blogtitle><b>March microblogs archived</b></span><span class=moyet>==</span>
+
+<p>
+
+I have archived all of the microblogs for
+<a href="http://samiam.org/blog/20130330.html">March 2013
+</a><p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,54 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS 2.0.07c</h1>
+<h2>September 20, 2013</h2>
+I have just declared MaraDNS 2.0.07c stable.  MaraDNS (authoritative)
+is unchanged; Deadwood has (compared to 2.0.07a/b) a 7-line patch to
+fix an obscure name resolution problem:
+
+<p>
+
+<A href="http://samiam.org/blog/20130713.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130713.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+Downloads:
+
+<p>
+
+<A href="http://maradns.samiam.org/download.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+<A href="http://maradns.samiam.org/deadwood/stable/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>stable/</A>
+
+<p>
+
+I also have improved MaraDNS' authoritative handling of IPv6 (we now
+link to IPv6 glue) and hope to have time today to prepare and upload a
+tarball. (<b>Edit</b>: <A href=http://maradns.samiam.org/download/2.0/snap/
+>Done</A>)
+
+<p>
+
+As a reminder, the mailing list is now only for MaraDNS announcements
+and support concerns sent to the list will not be posted.
+MaraDNS support is available at <A href="http://forum.samiam.org">http://forum.samiam.org</A>
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

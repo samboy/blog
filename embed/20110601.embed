@@ -1,0 +1,130 @@
+<!--{TAGS:G,L}-->
+
+<h1>Computex 2011</h1>
+
+<h2>June 1, 2011</h2>
+
+A lot of exciting new technology is coming out in the Computex event
+that a number of technology blogs are covering, including 
+<A href=http://engadget.com>Engadget</A>, <A 
+href=http://netbooklive.com>Netbook live</A>, <A 
+href=http://netbooknews.com>Netbook news</A>, <A
+href=http://liliputing.com>Liliputing</A>, and <A
+href=http://blog.laptopmag.com/>Laptop magazine</A>.
+
+<p>
+
+Thoughts on some of the more interesting announcements:
+<p>
+
+<b class=blogtitle>ASUS X101</b>
+<p>
+
+This isn’t the first time a Netbook using Linux has been released.
+Like all of the Linux-based Netbooks that have come out before, this model
+will probably not last too long before being dropped—most users do not
+want Linux if they are going to use an x86 system with a traditional
+laptop-like clamshell design (on the other hand, people are fine with
+using Linux on a mobile phone, as long as it’s Android).
+<p>
+
+Indeed, ASUS is hedging their bets by not only having the very thin
+and light X101, but also having the X101H which includes a conventional
+hard disk and Windows 7 Starter; this should be a reasonably successful
+netbook.  It’s a lot thinner than other netbooks; on the other hand,
+it will have less ports (the X101 has only 2 USB ports, a SD card reader,
+and doesn’t have a VGA, Ethernet, nor 1/8” audio port), and it uses
+the slower Atom N435 chip.
+<p>
+
+<b class=blogtitle>Lenovo S100 starting to appear</b>
+<p>
+
+Lenovo is starting to sell their latest Intel-Atom based Netbook,
+the S100.  Right now, the machine is only available in Hong Kong and
+China; this machine is a S10-3 on steroids.  The hard disk is larger:
+320Gb as opposed to the S10-3’s 160 or 250Gb hard disk.  The machine
+is thinner and weighs less than the S10-3.  Even though the system
+was supposed to be able to have a N570 processor (or at least that was
+what Lenovo promised us back in January), the only ones that
+currently are for sale use the same N455 processor as Lenovo’s current
+S10-3 model.
+<p>
+
+I would like to see Lenovo make the S100 available in the United States,
+but Lenovo may not do this (indeed, they delayed their S100 release
+by a couple of months) because the netbook market is fairly crowded,
+with current offerings from ASUS, Acer, Samsung, Toshiba, and others,
+and because the netbook market as a whole lost steam when the iPad made
+tablets trendy.
+<p>
+
+In fact, Lenovo is doing quite well with their AMD E-350 based offerings
+(The ThinkPad x120e, with a four-week wait, and the IdeaPad S205), and may
+not be entirely comfortable continuing to compete in the higher-volume
+lower-margin netbook market.  There may also be an issue with wanting
+to deplete the stock of S10-3 computers before bringing a new netbook
+to the market.
+<p>
+
+Then again, the fact that Lenovo has announced a low-cost Atom N435
+version of the S100 shows that they have not given up on the netbook
+platform yet.
+<p>
+
+<b class=blogtitle>Intel Competing with the AMD T40E</b>
+<p>
+
+I mentioned <A href=20110523.html>in a previous blog entry</A> that the
+AMD T40E trounces Intel’s current low-power low-cost Atom offerings.
+Thankfully, Intel is not standing still.  The Cedarview-based Atom N2800
+chip is their answer to the T40E.  Like the T40E, its TDP is 6.5 watts.
+<p>
+
+This chip reportedly is a dual-core chip running at 1.86ghz, with an
+improved “GMA 5650” graphics subsystem (compared to the GMA 3150 used
+by current Atoms), includes x86_64 support, and allows up to 4Gb of ram.
+My sense is that it will have better CPU performance than the T40E,
+but the T40E will have better GPU performance.  I also doubt the GMA
+5650 will be a programmable.
+<p>
+
+Speaking of the T40E, AMD has just announced a chip called the Z-01,
+which looks similar to the T40E but has a slightly smaller TDP of 5.9W.
+<p>
+
+<b class=blogtitle>Web page design update</b>
+<p>
+
+I have updated the web page design today to not be so dependent on
+Verdana.  Since <A href=20110528.html>it is now possible to
+use any font on a webpage</A>, I have modified the <A
+href=http://font.ubuntu.com>Ubuntu font</A> to have just the
+characters for writing in English and Spanish and be web page embeddable,
+and have put the font on my webpage.
+<p>
+
+Ubuntu's font is about as attractive as Verdana for small text and has full
+delta hinting.  Since this is a "branding" font, it has a distinct (but 
+very readable) look to it that makes it not quite suitable for body text,
+but it looks really nice everywhere else.
+<p>
+
+Hopefully a nice-looking open-source sans-serif font with full delta
+hinting usable for body text will come out soon.  <p>
+
+I have also updated my development system from Scientific Linux 5 (SL5)
+to SL6; this took far too long to do.  SL6 is more sluggish than SL5; I
+had to change my primary browser from Firefox to Opera to still access
+the internet inside my Virtualbox VM at a usable speed, but it's a lot more 
+current and will be supported until 2017.
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

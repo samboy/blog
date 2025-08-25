@@ -1,0 +1,90 @@
+<h1>On web site design</h1>
+
+<h2>October 10, 2011</h2>
+
+<div class=blogtitle>
+<b>C|Net's new design</b>
+</div><br>
+
+I must say, I really like the new web site design that
+<A href=http://cnet.com>C|Net</A> rolled out today.  It, however,
+has a significant problem: It uses a font without delta hinting.
+<A href=20110719.html>I recently blogged about why this is an
+issue</A>; there are a number of users using older operating systems
+without clear type or other modern font rendering technologies
+complaining about the font being gray and nay-to-unreadable.
+
+<p>
+
+I admire C|Net for making a web site design using a very attractive
+font that breaks the mold of "web safe" fonts we have been stuck with
+for over a decade, but I do not think modern font rendering technologies
+are ubiquitous enough to make a website that demands them.
+
+<p>
+
+Then again, C|Net should be more interested in the users who will click on the
+ads and maximize their ad revenue than they are on the users too cheap
+to upgrade their computer operating system (and probably run adblock to
+boot).
+
+<div class=blogtitle>
+<b>Mobile browser compatibility</b>
+</div><br>
+
+I was able to make a completely portable design for my web page that
+looks really nice on everything from legacy version of Internet Explorer
+to small smartphones, as well as desktops running modern browsers.
+
+<p>
+
+Then I added ads to my website.
+
+<p>
+
+As part of my contract with Google's ad sense, I am required to have
+the ads visible on my website.  Even if the ads ruin the look of the
+website on portable browsers.
+
+<p>
+
+The best solution would be to have the sidebar with the ads visible below
+the other content on mobile browsers using narrow screens.  Alas, in order
+to make the site compatible with legacy versions of Internet Explorer
+(I get about 6 times the number of IE6 hits as I get combined iPhone
+and iPad hits; never mind IE7 and IE8 hits), I had to make the layout a 
+HTML table, which precludes me from making this change.
+
+<p>
+
+The second-best solution would be to have the data on the right hand side,
+off of the screen but visible by horizontally scrolling.  This is also
+difficult to do since there is no CSS property "screen width" (100% in
+CSS means something different).
+
+<p>
+
+What I have settled on doing is having a minimum width for the web page's
+left-side content be 210 pixels; this means that there is some reasonable room
+for the content even on browsers using older iPhones or even tiny
+240x320 screens, while keeping at least some of the ads visible on the 
+right hand side of the screen.  It's not pretty, but it is usable.
+
+<p>
+
+For me to come up with a better solution, I would have to rewrite the
+HTML for dozens of pages (to remove the table and use a pure CSS solution)
+and use separate CSS for legacy versions of Internet Explorer.  I will
+hold off on doing this until smart phones become a higher percentage
+of the number of visitors of my web site.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

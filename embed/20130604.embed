@@ -1,0 +1,423 @@
+<h1>Microblogs May 2013</h1>
+<h2>June 4, 2013</h2>
+In this batch of microblogs, I have spolier-free reviews of the new
+<i>Star Trek</i>
+and
+<i>Fast and Furious </i>
+movies, discuss a new programming language (Dao), discuss marriage, look
+back at the environment where I started MaraDNS, among other topics.
+
+<p>
+
+<A name=Did_they_bury_all_those_unsold_ET_games></A><A name=DidtheyburyallthoseunsoldETgames></A><span class=moyet>==</span><span class=blogtitle><b>Did they bury all those unsold E.T. games?</b></span><span class=moyet>==</span>
+
+<p>
+
+Back in the early 1980s, Atari supposedly buried thousands of unsold
+E.T. games, as depicted in this mid-2000s music video:
+
+<p>
+
+<blockquote>
+<A href="http://www.youtube.com/watch?v=8Rt_3_bQVJU">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>watch?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>8<![if gt IE 6]>&#8203;<![endif]><wbr>Rt_<![if gt IE 6]>&#8203;<![endif]><wbr>3_<![if gt IE 6]>&#8203;<![endif]><wbr>b<![if gt IE 6]>&#8203;<![endif]><wbr>QVJU</A>
+</blockquote>
+
+They will finally put to rest the open question of whether this really
+happened (the guy who made the E.T. cart
+<a href="http://web.archive.org/web/20050406043144/http://beepbopboop.heavysixer.com/index.php?option=content&amp;task=view&amp;id=47&amp;Itemid=67">claimed it did not</a>)
+
+<p>
+
+<blockquote>
+<A href="http://arstechnica.com/gaming/2013/06/film-crew-to-dig-up-atari-landfill-site-maybe-score-3-5-million-copies-of-e-t/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>arstechnica.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>gaming/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>film-<![if gt IE 6]>&#8203;<![endif]><wbr>crew-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>dig-<![if gt IE 6]>&#8203;<![endif]><wbr>up-<![if gt IE 6]>&#8203;<![endif]><wbr>atari-<![if gt IE 6]>&#8203;<![endif]><wbr>landfill-<![if gt IE 6]>&#8203;<![endif]><wbr>site-<![if gt IE 6]>&#8203;<![endif]><wbr>maybe-<![if gt IE 6]>&#8203;<![endif]><wbr>score-<![if gt IE 6]>&#8203;<![endif]><wbr>3-<![if gt IE 6]>&#8203;<![endif]><wbr>5-<![if gt IE 6]>&#8203;<![endif]><wbr>million-<![if gt IE 6]>&#8203;<![endif]><wbr>copies-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>e-<![if gt IE 6]>&#8203;<![endif]><wbr>t/</A>
+</blockquote>
+
+
+<p>
+
+<i>Posted Jun 01 2013</i>
+
+<p>
+
+<A name=Its_not_obsolete_if_it_gets_the_job_done></A><A name=Itsnotobsoleteifitgetsthejobdone></A><span class=moyet>==</span><span class=blogtitle><b>It’s not obsolete if it gets the job done</b></span><span class=moyet>==</span>
+
+<p>
+
+12 “Obsolete” Technologies Americans Still Use
+
+<p>
+
+<blockquote>
+<A href="http://www.livescience.com/37004-12-outdated-technologies-refuse-to-die.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>livescience.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>37004-<![if gt IE 6]>&#8203;<![endif]><wbr>12-<![if gt IE 6]>&#8203;<![endif]><wbr>outdated-<![if gt IE 6]>&#8203;<![endif]><wbr>technologies-<![if gt IE 6]>&#8203;<![endif]><wbr>refuse-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>die.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+Dialup is pretty badly obsolete.  I have a setup that lets me approximate
+what my website is like to use on dialup: It takes about a minute to
+load all of the elements needed to view a page (and I still go to some
+trouble to make things as small as reasonably possible), but once that
+it done, pages load quickly.  My webpage tells browsers to cache the
+elements for nine months so dialup users only have to wait a minute once.
+
+<p>
+
+Pay phones: This is one technology I really wish wasn’t going away.
+While pay phone calls are expensive, they are cheaper than international
+roaming on a cell phone.  The US doesn’t have real options for low-cost
+cell phone use.  The best deal is T-Mobile’s
+<a href="http://prepaid-phones.t-mobile.com/prepaid-plans">pay-as-you-go plan</a>,
+which gives a year of mobile use for only $100—as long as the phone is
+used for less than 1,000 minutes of talking and, since in the US people
+pay for incoming texts (even from spammers),
+<a href="http://support.t-mobile.com/docs/DOC-1712">text messages are blocked</a>.
+
+<p>
+
+Windows 2000: I have a soft spot for Win2k: It’s the last version of
+Windows without intrusive DRM.  I have a Windows 2000 virtual machine
+for playing older games.  The only gotcha with Windows 2000 is that
+browsers are finally no longer running in Win2k—the latest Firefox
+to run is Firefox 10, and, even here, a web page with a bad webfont can
+cause the entire system to reboot.  I use
+<a href="http://samiam.org/software/dillo/">Dillo</a>, a tiny minimalist browser,
+to browse the web in Win2k.  If I ever make Linux my desktop OS again,
+I will use that Win2k virtual machine to run the few Windows-only apps
+I still use.
+
+<p>
+
+<i>Posted May 31 2013</i>
+
+<p>
+
+<A name=A_sign_of_having_wisdom></A><A name=Asignofhavingwisdom></A><span class=moyet>==</span><span class=blogtitle><b>A sign of having wisdom</b></span><span class=moyet>==</span>
+
+<p>
+
+The ignorant always want to
+<i>teach.</i>
+The knowledgeable (wise) always want to
+<i>learn.</i>
+
+<p>
+
+<i>Posted May 30 2013</i>
+
+<p>
+
+<A name=The_Dao_of_Programming></A><A name=TheDaoofProgramming></A><span class=moyet>==</span><span class=blogtitle><b>The Dao of Programming</b></span><span class=moyet>==</span>
+
+<p>
+
+Dao is a lightweight programming language which appears to be, if you
+will, “Lua on steroids”.  It’s bigger than Lua, but not as big as
+a “full sized” scripting language, while having most of the features
+of a bigger language:
+
+<p>
+
+<blockquote>
+<A href="http://daovm.net/">http://daovm.net/</A>
+</blockquote>
+
+<blockquote>
+<A href="http://lua-users.org/wiki/LuaImplementations">http://<![if gt IE 6]>&#8203;<![endif]><wbr>lua-<![if gt IE 6]>&#8203;<![endif]><wbr>users.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Lua<![if gt IE 6]>&#8203;<![endif]><wbr>Implementations</A>
+</blockquote>
+
+For something smaller than Lua (64k!)
+
+<p>
+
+<blockquote>
+<A href="http://www.tinypy.org/">http://www.tinypy.org/</A>
+</blockquote>
+
+<i>Posted May 28 2013</i>
+
+<p>
+
+<A name=Fast_and_Furious_6></A><A name=FastandFurious6></A><span class=moyet>==</span><span class=blogtitle><b>Fast and Furious 6</b></span><span class=moyet>==</span>
+
+<p>
+
+(This is a spoiler-free review)
+
+<p>
+
+The
+<i>Fast and Furious</i>
+franchise is notorious for check-your-brain-in-at-the-door moments.
+Fast 2 had one.  The final car chase in Fast 5
+<a href="http://www.vulture.com/2013/05/could-the-fast-5-safe-heist-happen-in-real-life.html">defies the laws of physics</a>
+(Warning: link has Fast 5 spoilers).  Not surprisingly, Fast 6 has its
+share of “yeah, right” moments.
+
+<p>
+
+My wife told me after the movie that
+<i>Star Trek: Into Darkness</i>
+was a more realistic movie than Fast 6.
+
+<p>
+
+But this doesn’t mean the movie isn’t fun to watch.  The viewing
+public agrees: The only movie to do better this year so far has been
+<i>Iron Man 3.</i>
+
+<p>
+
+For people that like to watch fast cars in high-speed chases, and look
+at beautiful men and women (albeit in a PG-13 movie), Fast 6 delivers.
+
+<p>
+
+<i>Posted May 27 2013</i>
+
+<p>
+
+<A name=Map_of_London_tubes_subways_using_only_CSS></A><A name=MapofLondontubessubwaysusingonlyCSS></A><span class=moyet>==</span><span class=blogtitle><b>Map of London tubes (subways) using only CSS</b></span><span class=moyet>==</span>
+
+<p>
+
+This is a map of the London tube (subway) system rendered using only CSS:
+
+<p>
+
+<blockquote>
+<A href="http://www.csstubemap.co.uk/index.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>csstubemap.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>index.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+Note: This site does not render correctly in any version (not even 10)
+of Internet Explorer, but renders fine in Firefox, Chrome, and even Opera.
+
+<p>
+
+<i>Posted May 22 2013</i>
+
+<p>
+
+<A name=Star_Trek_Into_Darkness></A><A name=StarTrekIntoDarkness></A><span class=moyet>==</span><span class=blogtitle><b>Star Trek: Into Darkness</b></span><span class=moyet>==</span>
+
+<p>
+
+(This is a spoiler-free review)
+
+<p>
+
+<i>Star Trek: Into Darkness</i>
+is a very good continuation of the Star Trek franchise.  The movie
+is written more in the spirit of the original Star Trek series and
+early movies, completely ignoring the Berman and Braga (B&amp;B) era of
+the franchise.
+
+<p>
+
+Like the original Star Trek, there is a lot of action in this movie.
+Like the original Star Trek, there is social commentary about current
+events.  Like the original Star Trek, Kirk is a brash, prideful, and
+womanizing captain.   Unlike the B&amp;B Star Trek, doing the ethically
+right thing is not always unquestionably rewarded.
+
+<p>
+
+As someone who mostly lost interest in Star Trek a few years in to the
+B&amp;B era, this is a nice revival, taken to the next level:  Unlike the
+original Star Trek, the special effects are not campy and my wife does
+not fall asleep while watching it.
+
+<p>
+
+I’m very glad to see the old Star Trek again.
+
+<p>
+
+<i>Posted May 19 2013</i>
+
+<p>
+
+<A name=My_favorite_dotcom_era_job></A><A name=Myfavoritedotcomerajob></A><span class=moyet>==</span><span class=blogtitle><b>My favorite dot-com era job</b></span><span class=moyet>==</span>
+
+<p>
+
+The best dot-com job I had was my last one: I was working for a tiny
+little consulting company. The company was still growing in the later days
+of the dot-com party. We finally had enough money coming in to move to a
+real office (before, we were working in some extra rooms a private school
+had which we converted in to office space) and hire a number of workers.
+
+<p>
+
+We were in a beautiful neighborhood in Mountain View, just across the
+business park from where Netscape still had their offices. The weather
+was beautiful sunny California weather; instead of driving, when it was
+lunch time, I would often just walk around the business park we were in
+and enjoy the beautiful weather, going to a restaurant close by or this
+small Mexican market near the office.
+
+<p>
+
+In was at this job that I decided to start MaraDNS. The positive
+atmosphere working at that job helped encourage me to work hard and make
+my mark on the world.
+
+<p>
+
+<i>Posted May 16 2013</i>
+
+<p>
+
+<A name=A_use_for_floppy_drives_in_2013></A><A name=Auseforfloppydrivesin2013></A><span class=moyet>==</span><span class=blogtitle><b>A use for floppy drives in 2013</b></span><span class=moyet>==</span>
+
+<p>
+
+Here’s one way to still use floppy drives in 2013:
+
+<p>
+
+<blockquote>
+<A href="http://gizmodo.com/floppy-drives-are-only-good-for-playing-daft-punk-music-500903524">http://<![if gt IE 6]>&#8203;<![endif]><wbr>gizmodo.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>floppy-<![if gt IE 6]>&#8203;<![endif]><wbr>drives-<![if gt IE 6]>&#8203;<![endif]><wbr>are-<![if gt IE 6]>&#8203;<![endif]><wbr>only-<![if gt IE 6]>&#8203;<![endif]><wbr>good-<![if gt IE 6]>&#8203;<![endif]><wbr>for-<![if gt IE 6]>&#8203;<![endif]><wbr>playing-<![if gt IE 6]>&#8203;<![endif]><wbr>daft-<![if gt IE 6]>&#8203;<![endif]><wbr>punk-<![if gt IE 6]>&#8203;<![endif]><wbr>music-<![if gt IE 6]>&#8203;<![endif]><wbr>500903524</A>
+</blockquote>
+
+The James Bond theme played with floppy drives is remarkably accurate:
+
+<p>
+
+<blockquote>
+<A href="http://www.youtube.com/watch?v=WtiAP8xMSPo">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>watch?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>Wti<![if gt IE 6]>&#8203;<![endif]><wbr>AP<![if gt IE 6]>&#8203;<![endif]><wbr>8<![if gt IE 6]>&#8203;<![endif]><wbr>x<![if gt IE 6]>&#8203;<![endif]><wbr>MSPo</A>
+</blockquote>
+
+On the topic of floppies,
+<a href="http://samiam.org/C-evo">C-evo</a>
+1.1.1 is a fully playable game that fits on a single 1.44 meg floppy
+disk (albeit without sound); C-evo 1.2 needs one of those rare 2.88 meg
+floppies that never caught on (getting C-evo 1.2 that small required
+building the C#-free version and hacking on my part to remove the
+requirement for the new larger graphics)
+
+<p>
+
+Then again, with C-evo 1.1.1, only the essential files to make a
+bare-bones playable game are on disk #1, and a lot of useful files for
+the game are on disk #2 (the sounds, the strong Seti AI, the sounds,
+the graphical tech chart).  One of the big reasons C-evo 1.2 needs a
+single larger file is because the graphical techchart is now integrated
+in to the core game.
+
+<p>
+
+<i>Posted May 14 2013</i>
+
+<p>
+
+<A name=Congrats_Nate_Silver></A><A name=CongratsNateSilver></A><span class=moyet>==</span><span class=blogtitle><b>Congrats Nate Silver</b></span><span class=moyet>==</span>
+
+<p>
+
+Nate Silver, after predicting all 50 states in the last presidential
+election, as well as doing a remarkably good job predicting the Academy
+Award winners, has been voted most creative person in business of
+the year:
+
+<p>
+
+<blockquote>
+<A href="http://www.fastcompany.com/3009258/most-creative-people-2013/1-nate-silver">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>fastcompany.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>3009258/<![if gt IE 6]>&#8203;<![endif]><wbr>most-<![if gt IE 6]>&#8203;<![endif]><wbr>creative-<![if gt IE 6]>&#8203;<![endif]><wbr>people-<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>1-<![if gt IE 6]>&#8203;<![endif]><wbr>nate-<![if gt IE 6]>&#8203;<![endif]><wbr>silver</A>
+</blockquote>
+
+<i>Posted May 13 2013</i>
+
+<p>
+
+<A name=Four_things_that_can_kill_a_marriage></A><A name=Fourthingsthatcankillamarriage></A><span class=moyet>==</span><span class=blogtitle><b>Four things that can kill a marriage</b></span><span class=moyet>==</span>
+
+<p>
+
+According to a scientific study, there are four factors (contempt,
+criticism, stonewalling, and defensiveness) that kill marriages:
+
+<p>
+
+<blockquote>
+<A href="http://blogs.scientificamerican.com/psysociety/2013/05/10/marriage-tips/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>blogs.<![if gt IE 6]>&#8203;<![endif]><wbr>scientificamerican.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>psysociety/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>05/<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>marriage-<![if gt IE 6]>&#8203;<![endif]><wbr>tips/</A>
+</blockquote>
+
+<i>Posted May 11 2013</i>
+
+<p>
+
+<A name=Gay_marriage_Now_in_Telenovelas></A><A name=GaymarriageNowinTelenovelas></A><span class=moyet>==</span><span class=blogtitle><b>Gay marriage: Now in Telenovelas!</b></span><span class=moyet>==</span>
+
+<p>
+
+For the first time ever, they showed a gay marriage in a Mexican soap
+opera
+<i>(telenovela)</i>
+last night.  The novela is called
+<i>Amores Verdaderos</i>
+(true love), and it’s in its final week, where they wrap up the various
+open stories.  In traditional Latin Soap Opera fashion, a lot of marriages
+happen during the final episodes.
+
+<p>
+
+I prefer Latin TV a lot of ways over TV in the US.  They do not have any
+qualms showing a beautiful girl and having guys appreciate her beauty;
+the novelas show people praying, something one almost never sees on US TV;
+and, there is not this disconnect between being religious and respecting
+human rights for gays the way there is in the US.
+
+<p>
+
+<i>Posted May 09 2013</i>
+
+<p>
+
+<A name=On_analog_vs_digital_synthesizers></A><A name=Onanalogvsdigitalsynthesizers></A><span class=moyet>==</span><span class=blogtitle><b>On analog vs. digital synthesizers</b></span><span class=moyet>==</span>
+
+<p>
+
+I prefer the music made in the early 1980s, when synths were expensive
+and unreliable; it is a lot more compelling than the stuff from the late
+1980s, when the technology matured.
+
+<p>
+
+Analog does not sound better because it has an inherently better sound. It
+sounds better because the limitations of analog forced musicians to be
+more creative in the early 1980s.
+
+<p>
+
+In 1983, no one would trade a Linn Drum for a TR-808—yet today, the
+808’s sound is much more coveted. The musicians who used an 808 did
+so because the Linn Drum was out of their budget. Their creativity with
+limited tools is what made that sound “classic”.
+
+<p>
+
+<i>Posted May 07 2013</i>
+
+<p>
+
+<A name=AprilMay_2013_archive></A><A name=AprilMay2013archive></A><span class=moyet>==</span><span class=blogtitle><b>April-May 2013 archive</b></span><span class=moyet>==</span>
+
+<p>
+
+I have archived the microblogs posted from April 15 to May 5 2013:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20130505.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130505.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

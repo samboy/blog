@@ -1,0 +1,55 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Using Crissic</h1>
+<h2>December 11, 2013</h2>
+I have been having a lot of problems with AlienVPS -- the only active node
+I have when them went offline Saturday and they have been ignoring my
+support ticket about the issue (as well as my
+<a href="https://twitter.com/samiamorg/status/410682151986659328">tweet</a>) --
+so I opened up a node with 
+<a href="http://crissic.net/">Crissic</a>.
+
+<p>
+
+Crissic net right now is the best $15/year OpenVZ virtual server out
+there.  A typical server at this price offers 128 megabytes of memory
+(maybe another 128 of “burst” memory) and under 20 gigs of hard disk
+space; Crissic offers 512 megabytes of memory and 50 gigs of disk 
+space.  Instead of one IP, they supply two; the maximum monthly bandwidth
+is also higher.  The offer is here:
+
+<p>
+
+<blockquote>
+<A href="https://vpsboard.com/topic/2862-new-hardware-same-great-price-vps-from-15yr-and-4m-crissic-solutions-llc/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>vpsboard.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>topic/<![if gt IE 6]>&#8203;<![endif]><wbr>2862-<![if gt IE 6]>&#8203;<![endif]><wbr>new-<![if gt IE 6]>&#8203;<![endif]><wbr>hardware-<![if gt IE 6]>&#8203;<![endif]><wbr>same-<![if gt IE 6]>&#8203;<![endif]><wbr>great-<![if gt IE 6]>&#8203;<![endif]><wbr>price-<![if gt IE 6]>&#8203;<![endif]><wbr>vps-<![if gt IE 6]>&#8203;<![endif]><wbr>from-<![if gt IE 6]>&#8203;<![endif]><wbr>15<![if gt IE 6]>&#8203;<![endif]><wbr>yr-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>4<![if gt IE 6]>&#8203;<![endif]><wbr>m-<![if gt IE 6]>&#8203;<![endif]><wbr>crissic-<![if gt IE 6]>&#8203;<![endif]><wbr>solutions-<![if gt IE 6]>&#8203;<![endif]><wbr>llc/</A>
+</blockquote>
+
+The server was set up very quickly (within a few hours after ordering)
+and when I asked for an IPv6 IP, Skylar almost immediately gave me 
+one by hand (they will give customers up to 200 IPv6 IPs for free).
+
+<p>
+
+The server is also faster than my other nodes.
+
+<p>
+
+While I can not know how this server will turn out in the long run -- any
+node that costs less than $20 a year is a gamble and I have already been
+burned three times -- so far they look like an excellent VPS provider.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

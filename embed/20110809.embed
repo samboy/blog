@@ -1,0 +1,48 @@
+<h1>Keeping CentOS secure</h1>
+
+<h2>August 9, 2011</h2>
+
+One annoyance CentOS has is that, whenever Red Hat makes a new upstream
+release available, CentOS stops making security updates until they 
+are current with upstream's new release; this process can sometimes
+take months.  
+
+<p>
+
+For CentOS users who want to be current with security updates until
+CentOS updates their system upstream, it is possible to use
+Scientific Linux's repo to apply security updates.
+
+<p>
+
+To do this, add the appropriate sl-security.repo file to /etc/yum.repos.d,
+as well as all of the relevant GPG public keys to /etc/pki/rpm-gpg.  I have
+a <a href=/geek/sl-security-etc.tar.bz2>handy tarball</a> with all of
+these files, as well as a <a href=/geek/sl-security-etc.tar.bz2.asc>GPG 
+signature</A> for said tarball which I have signed with MaraDNS' public 
+GPG key.
+
+<p>
+
+While it is a simple matter of exploding this tarball in the root directory
+to enable Scientific Linux security updates on a CentOS 5 system (via
+<tt>cd / ; tar xvjf sl-security-etc.tar.bz2</tt>), please be aware that
+this update does add GPG signatures that are allowed to sign rpm files.
+
+<p>
+
+This is quite useful for CentOS 5 users who want to keep up to date with
+security without having to reinstall the OS, or for OpenVZ container users,
+since OpenVZ provides a template for CentOS 5, but not one for Scientific
+Linux 5. 
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

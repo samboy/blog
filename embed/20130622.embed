@@ -1,0 +1,43 @@
+<!--{TAGS:M}-->
+
+<h1>MaraDNS Update</h1>
+<h2>June 22, 2013</h2>
+I have updated MaraDNS to incorporate a one-line bugfix with Deadwood
+(MaraDNS’s recursive resolver) in to the codebase.  The name of
+this release is MaraDNS 2.0.07b (for more details on the
+unusual naming patterns, 
+<a href="http://samiam.org/blog/20130523.html">read the May 23 blog entry</a>)
+
+<p>
+
+This will hopefully stop 
+<a href="http://woodlane.webconquest.com/pipermail/list/2013-June/001172.html">complaints of being unable to resolve some domain names</a>
+that occasionally pop up on the mailing list.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://www.maradns.org/download.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+While not a hard-and-fast rule, my plan is to work on MaraDNS or Deadwood
+again one day in a couple of months unless a critical security bug with
+a CVE number is found.
+
+<p>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,53 @@
+<h1>Deadwood update</h1>
+
+<h2>September 5, 2011</h2>
+
+I am slowly but surely going through the bugs people have been 
+reporting on the list:
+
+<p>
+
+<ul>
+
+<li><A href=http://woodlane.webconquest.com/pipermail/list/2011-August/000912.html>Steve
+Fatula reported</A> that Deadwood was returning SERVER FAILs on his system.
+I was and still am unable to reproduce this bug.  In an attempt to reproduce
+this concern, I have created a SQA test that simulates one of the two
+upstream servers giving out a SERVER FAIL error; this test did not
+reproduce the condition Steve reported.  I am closing this bug as
+"unreproducible". 
+
+<li><A href=http://woodlane.webconquest.com/pipermail/list/2011-August/000924.html>Domenico 
+Rotondi reported</A> having issues when both <tt>root_servers</tt> and
+<tt>upstream_servers</tt> are set in a <tt>dwood3rc</tt> file.  I have
+created a SQA test to use both of these settings in the same Deadwood
+configuration file; the
+tests appear to be able to reproduce this problem; I will investigate further
+in a month.
+
+<li><A href=http://woodlane.webconquest.com/pipermail/list/2011-August/000929.html>Angel
+reported</A> that some records were lost when transferring a zone.  I have
+not had a chance to look at this yet.  Hopefully next month.
+
+</ul>
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+The next day I plan to work on MaraDNS/Deadwood is one month from today:
+October 5, 2011.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

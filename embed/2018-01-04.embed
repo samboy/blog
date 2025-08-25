@@ -1,0 +1,131 @@
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>The ThinkPad T480</h1>
+<h2>January 4, 2018</h2>
+I look at the new Lenovo ThinkPad T480 laptop computer.
+
+<p>
+
+<A name=Lenovos_new_ThinkPads_An_overview></A><A name=LenovosnewThinkPadsAnoverview></A><span class=moyet>==</span><span class=blogtitle><b>Lenovo’s new ThinkPads: An overview</b></span><span class=moyet>==</span>
+
+<p>
+
+Before the opening of CES, Lenovo announced a number of 
+ThinkPad laptops this year:
+
+<p>
+
+<ul>
+<li> They have completely revamped the small “X” series of ThinkPads; the
+  new X280 is a good deal thinner and lighter than the X270.  To get this,
+  Lenovo had to make it less user-serviceable and have the battery not
+  last as long.  I think this is a wise decision on Lenovo’s part; this
+  adds another very small and light computer to their lineup.  They have
+  also added an X380 Yoga to the lineup.
+<li> The E series of lower cost laptops have already been updated late last 
+  year, with the E480 and E580 already available in some markets.
+<li> The L series, another low-cost lineup from Lenovo, has a number of
+  models for 2018: L380, L380 Yoga, L480, and L580
+<li> Finally, Lenovo has introduced three new T series laptops: The T480,
+  the thinner T480s, and the T580.  There will be no T480p; now that
+  Intel’s 15-watt chips have four cores, Lenovo does not feel the need
+  to have a separate line with 4-core chips.
+</ul>
+
+<p>
+
+Since I am typing this on a T470, I will go over its successor, the T480.
+
+<p>
+
+<A name=Comparing_the_T470_and_T480></A><A name=ComparingtheT470andT480></A><span class=moyet>==</span><span class=blogtitle><b>Comparing the T470 and T480</b></span><span class=moyet>==</span>
+
+<p>
+
+The 2017 T470 I currently own is not a computer for gamers: There are no
+graphics acceleration options; the only GPU option is the limited one
+included in Intel’s 2017 Kaby Lake line of microprocessors (Intel
+HD Graphics 620).  Only really good for older games.  While the
+GeForce 940MX was an option for the T470 in some markets, the only T470
+with that chipset available here in the United States was the T25.
+
+<p>
+
+The T480 has the option to have a NVIDIA GeForce MX150, which can play
+most 2017 games, albeit at lower resolution (1280x720 or 1920x1080) and
+in-game graphics settings.  While not a dedicated gaming computer, this
+allows users to play recent games in a pinch.
+
+<p>
+
+Speaking of video, the T480 has more display options than the older T470;
+the maximum resolution available for the T470 is 1920x1080; the T480 has
+the option for a 2560x1440 display.  It remains to be seen if the T480
+display will be brighter and have better colors than the T470 display.
+
+<p>
+
+The ports on the right hand side are the same on both models: We have a
+SD card slot in the back; in front of that is an RJ45 ethernet port (very
+useful when I bring my computer to the office), then a USB3 A port,
+an HDMI port, another USB3 A port, and finally a 1/8 inch headphone (or
+microphone) port.
+
+<p>
+
+On the left hand side, the ports have changed.  The T470 has a square
+Lenovo “Slim Tip” power socket; in front of that is another USB3 A port;
+and finally there is a combined USB-C and Thunderbolt 3 port, which can
+also power the laptop.  The T480 only has two left-hand ports: A USB-C
+port which can power the machine, as well as a combination Thunderbolt
+3/USB-C/Docker port.  The T470 has its docking bay port on the bottom;
+the T480 has no ports on the bottom.  Neither laptop has ports in the
+front or back.
+
+<p>
+
+The T470’s Thunderbolt 3 port has only two “PCI Lanes”, which means it
+is only half as fast as a four-lane full speed Thunderbolt 3 port; I do
+not know whether the T480’s Thunderbolt 3 port will be a 2-lane or 4-lane
+port.
+
+<p>
+
+The new T480 is using Intel’s newer four-core “Kaby Lake R” 15-watt 
+processors, which, at the high end, can have almost twice the performance
+as the older “Kaby Lake” CPU offerings available for the T470 line of
+computers, while offering the same 15W TDP (average power used) as the
+older, slower chips.  Note that single threaded performance has not
+significantly changed between the two models.
+
+<p>
+
+<A name=More_information></A><A name=Moreinformation></A><span class=moyet>==</span><span class=blogtitle><b>More information</b></span><span class=moyet>==</span>
+
+<p>
+
+More information about the new ThinkPad computers from Lenovo is available
+here:
+
+<p>
+
+<blockquote>
+<A href="https://www.notebookcheck.net/ThinkPad-T480s-ThinkPad-T480-ThinkPad-T580-Quad-Core-CPUs-and-the-GeForce-MX150-are-coming-to-the-traditional-T-series.273172.0.html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>notebookcheck.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>Think<![if gt IE 6]>&#8203;<![endif]><wbr>Pad-<![if gt IE 6]>&#8203;<![endif]><wbr>T<![if gt IE 6]>&#8203;<![endif]><wbr>480<![if gt IE 6]>&#8203;<![endif]><wbr>s-<![if gt IE 6]>&#8203;<![endif]><wbr>Think<![if gt IE 6]>&#8203;<![endif]><wbr>Pad-<![if gt IE 6]>&#8203;<![endif]><wbr>T<![if gt IE 6]>&#8203;<![endif]><wbr>480-<![if gt IE 6]>&#8203;<![endif]><wbr>Think<![if gt IE 6]>&#8203;<![endif]><wbr>Pad-<![if gt IE 6]>&#8203;<![endif]><wbr>T<![if gt IE 6]>&#8203;<![endif]><wbr>580-<![if gt IE 6]>&#8203;<![endif]><wbr>Quad-<![if gt IE 6]>&#8203;<![endif]><wbr>Core-<![if gt IE 6]>&#8203;<![endif]><wbr>CPUs-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>Ge<![if gt IE 6]>&#8203;<![endif]><wbr>Force-<![if gt IE 6]>&#8203;<![endif]><wbr>MX<![if gt IE 6]>&#8203;<![endif]><wbr>150-<![if gt IE 6]>&#8203;<![endif]><wbr>are-<![if gt IE 6]>&#8203;<![endif]><wbr>coming-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>traditional-<![if gt IE 6]>&#8203;<![endif]><wbr>T-<![if gt IE 6]>&#8203;<![endif]><wbr>series.<![if gt IE 6]>&#8203;<![endif]><wbr>273172.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+
+<p>
+
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

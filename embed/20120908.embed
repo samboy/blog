@@ -1,0 +1,78 @@
+<h1>Multi Master fonts</h1>
+
+<h2>September 8, 2012</h2>
+
+In today's blog, I discuss a new open-source Multi Master font, as well
+as an update on my Gopher files.
+
+<p>
+<div class=blogtitle>
+<b>Multi Master fonts</b>
+</div><br>
+
+<!--NOGOPHER -->
+<img src=../fonts/Userspace/UserspaceMMr.png width=600 height=77>
+<p>
+<!-- NOGOPHER-->
+
+In the early 1990s, people were really excited by a technology called
+<A href=http://xmorph.sourceforge.net/#morphing>morphing</A>.  Morphing
+uses digital technology to smoothly transform one shape to another.
+Adobe got on the morphing bandwagon by creating a font technology
+called "Multi Master" (MM) which allowed a font to smoothly transition
+from one shape to another
+<!--NOGOPHER -->
+as seen in the above image where the letter "a" smoothly goes from being
+pencil-light to extra-black bold.
+<!-- NOGOPHER-->
+
+<p>
+
+While Adobe made a few fonts taking advantage of this technology, it
+did not catch on and Adobe stopped selling commercial MM fonts a few
+years ago.  A shame too, since it allowed a font to go from one arbitrary
+form to another: Adobe Jenson, for example, allowed a font to change its
+optical size.
+
+<p>
+
+I mentioned that <A href=http://blogs.adobe.com/typblography/2012/08/source-sans-pro-revised-and-hosted-on-github.html>Adobe
+recently released an open source font called "Source Sans"</A>.  What has
+not been as widely advertised is that <i>this font is generated from two
+freely available multi-master fonts</i>.
+
+<p>
+
+The source code to "Source Sans" includes two MM fonts: One for the "roman"
+form and another for the italic form.  The fonts can smoothly transition from
+a very-thin font to an extra-black bold font.
+
+<p>
+
+I spent this morning generating 15 different thicknesses of this open-source
+MM font, resulting in some 15 different weights for my variant of this open
+source font.  It can be looked at here:
+
+<blockquote>
+<A href=../fonts/Userspace/UserspaceMMr.zip>http://samiam.org/fonts/Userspace/UserspaceMMr.zip</A>
+</blockquote>
+
+<p>
+<div class=blogtitle>
+<b>Gopher update</b>
+</div><br>
+
+I lost the script that automatically converts my HTML blog pages in
+to text pages suitable for looking at in Gopher.  This in mind, people
+using a Gopher client to read this page will either need to wait until
+I return home and recover this script from my backups, or to use a
+text-based web browser to read new entries.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

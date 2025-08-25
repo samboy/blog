@@ -1,0 +1,144 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2015-1-120.jpg width=120 height=120>
+</div>
+
+<h1>Don’t mix CNAMES</h1>
+<h2>February 11, 2015</h2>
+This blog discusses a possible issue with how Deadwood (MaraDNS)
+resolves a corner case which violates the Internet standards.
+
+<p>
+
+<A name=The_problem></A><A name=Theproblem></A><span class=moyet>==</span><span class=blogtitle><b>The problem</b></span><span class=moyet>==</span>
+
+<p>
+
+In DNS, a CNAME record is a record which points to another record. It
+is roughly the equivalent of a of a shortcut in Windows, a symbolic
+link in Mac OS, or a forwarding address with the postal service. For
+example:
+
+<p>
+
+<tt>www.example.com CNAME www.example.net</tt><br>
+
+<p>
+
+In English, this means “www.example.com will have whatever IP
+www.example.net has”.
+
+<p>
+
+This allows someone to change www.example.net’s IP address without
+changing www.example.com’s IP address; any change to the
+www.example.net IP automatically changes www.example.com’s IP.
+
+<p>
+
+However, what happens if we have these DNS records:
+
+<p>
+
+<tt>www.example.com CNAME www.example.net</tt><br>
+<tt>www.example.com A 10.2.3.4</tt><br>
+<tt>www.example.net A 192.168.1.1</tt><br>
+
+<p>
+
+(In the actual packets which I saw last night, the www.example.com answer
+with the CNAME was in one DNS packet and the www.example.net answer was in
+another)
+
+<p>
+
+Well, now, whether www.example.com has the IP address 10.2.3.4 or the
+IP address 192.168.1.1 is ambiguous. The official Internet specs — called
+RFCs — have no way to resolve this ambiguity; they merely tell people
+“Don't do that!”
+
+<p>
+
+<A name=Quoting_the_RFCs></A><A name=QuotingtheRFCs></A><span class=moyet>==</span><span class=blogtitle><b>Quoting the RFCs</b></span><span class=moyet>==</span>
+
+<p>
+
+Let me quote chapter and verse of the RFCs which say “Don't do that!”
+
+<p>
+
+RFC1034 section 3.6.2: “If a CNAME RR is present at a node, no other data
+should be present; this ensures that the data for a canonical name and its
+aliases cannot be different.”
+
+<p>
+
+RFC1912 section 2.4: “A CNAME record is not allowed to coexist with any other
+data.”
+
+<p>
+
+<A name=How_to_handle_this_kind_of_DNS_information></A><A name=HowtohandlethiskindofDNSinformation></A><span class=moyet>==</span><span class=blogtitle><b>How to handle this kind of DNS information</b></span><span class=moyet>==</span>
+
+<p>
+
+Since these packets are not permitted in the RFCs, the way DNS servers 
+will handle these packets is undefined.  Some DNS servers accept the
+CNAME record and ignore the non-CNAME answer to the original question.
+
+<p>
+
+Deadwood, on the other hand, considers the question solved: It stops
+solving the query as soon as it gets the answer to the original
+question, even if there is also a CNAME in the packet.
+
+<p>
+
+<A name=I_have_no_plans_to_modify_Deadwood></A><A name=IhavenoplanstomodifyDeadwood></A><span class=moyet>==</span><span class=blogtitle><b>I have no plans to modify Deadwood</b></span><span class=moyet>==</span>
+
+<p>
+
+While, yes, I could come up with some heuristics to handle this kind
+of RFC violating DNS packet the same way some other DNS servers do,
+now that I am a single parent working a full time job, and since my DNS
+server is a free open-source project I am not getting paid to work on,
+I am not going to change things on my side.
+
+<p>
+
+The fact that BIND or whatever handles a particular RFC violating DNS
+packet a particular way does not compel me to have Deadwood handle that
+corner case the same way.  Not unless there is significant money on
+the table.
+
+<p>
+
+Over the years, I have added countless fuzzy heuristics to Deadwood 
+so that it can resolve as many names as possible.  For years, I have
+said “If BIND or Unbound can resolve a given name, but Deadwood
+can not, that is a bug.” 
+
+<p>
+
+But, my life has changed, and I need to put the foot down: For something
+this badly RFC violating, the solution is 
+<i>not</i>
+to make Deadwood act, bug for bug, exactly like BIND.  The solution is
+to tell people to fix their zone files.
+
+<p>
+
+To be fair to the owner of the actual domain with this problem, they
+promptly fixed things on their end.
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

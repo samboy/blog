@@ -1,0 +1,198 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS 3.5.0025</h1>
+<h2>November 2, 2022</h2>
+I have released MaraDNS 3.5.0025
+
+<p>
+
+<A name=Scripting_languages></A><A name=Scriptinglanguages></A><span class=moyet>==</span><span class=blogtitle><b>Scripting languages</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS is becoming a mature open source project, having been around
+for over 21 years, and with stable releases since mid-2002.  That in 
+mind, I am now thinking about how I can keep MaraDNS sustainable for 
+as long as possible with a minimum of forced maintenance.
+
+<p>
+
+One moving part which can break some components of MaraDNS is any
+non-standard scripting language which MaraDNS uses.  For example, MaraDNS
+has had a Python script for converting BIND zone files in to MaraDNS
+zone files which I wrote in 2006, ran fine in 2006, and which I had no
+reason to update because it was running fine.  Then, in 2019, I got some
+<a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=936992">annoying
+messages from the Debian</a> team about having a Python2 script which
+would break in Python3.
+
+<p>
+
+I had made no changes to the script.  It did not have any bugs.  The
+only thing that changed is that the non-standard scripting language
+Python decided to change their syntax and stop supporting the older
+version of Python.  So, much to my annoyance, I had to perform unpaid
+maintenance work for MaraDNS because I chose to include a Python
+script.
+
+<p>
+
+That in mind, I have removed <tt>bind2csv2.py</tt> from MaraDNS,
+placing it in a separate repository of unsupported programs.
+
+<p>
+
+Likewise, I have converted the Perl scripts MaraDNS has to handle
+MaraDNS’ documentation in to Lua5.1 scripts. While Lua5.1 isn’t
+standard <i>per se</i>, there are multiple independent implementations
+of it (PUC Lua, LuaJIT, etc.) including one in the MaraDNS source tree
+(lunacy, a fork of PUC Lua 5.1), and Lua5.1 will never change its syntax.
+
+<p>
+
+I understand that, right now, there are no plans to come out with a
+Python4 that breaks Python3 scripts, nor a Perl7 which breaks Perl5
+scripts (there’s a reason Perl6 was renamed Raku, so that the Perl
+world would not have the same issues Python had with the Python3
+update), but since both scripting languages are not included with
+MaraDNS and are not set in stone with a standard like POSIX, in the
+interests of long-term maintainability, MaraDNS now has no Perl nor
+Python scripts in it.
+
+<p>
+
+For people who still want the Python scripts or the outdated Perl 
+versions of the the MaraDNS “EJ” (Easy Journal) documentation tools,
+they are available here:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS-attic">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS-<![if gt IE 6]>&#8203;<![endif]><wbr>attic</A>
+</blockquote>
+
+They are completely unsupported.
+
+<p>
+
+<A name=Multiple_implementations></A><A name=Multipleimplementations></A><span class=moyet>==</span><span class=blogtitle><b>Multiple implementations</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS 3.5.0025 can be built and tested using multiple implementations
+for each step of the process:
+
+<p>
+
+<ul>
+<li> It can be built on top of a Linux kernel, or in Windows 10 with cygwin.
+<li> It can use the GNU utilities for the POSIX userspace (<tt>sh</tt>,
+  <tt>awk</tt>, etc.), or it can use Busybox.  
+<li> It can use either PUC Lua 5.1 or Lunacy, my Lua 5.1 fork, to run the
+  Lua parts of the tests and the document-building Lua scripts.
+<li> No less than three <tt>make</tt> implementations can now run 
+  MaraDNS’ makefiles.
+<li> MaraDNS compiles with no less than three different C compilers:
+  <tt>gcc</tt>, <tt>clang</tt>, and <tt>tcc</tt>.
+</ul>
+
+<p>
+
+<A name=Make></A><A name=Make></A><span class=moyet>==</span><span class=blogtitle><b>Make</b></span><span class=moyet>==</span>
+
+<p>
+
+Make is a standard POSIX utility to determine dependencies and compile
+programs.
+
+<p>
+
+I have updated all of MaraDNS’ makefiles to work with 
+<a href="https://maradns.samiam.org/maramake/">an implementation
+of the “make” development utility which is <i>mostly</i> POSIX compliant</a>.
+For real world use, the “make” utility needs to have an extension that
+POSIX permits: The ability to have the <tt>/</tt> character in makefile
+targets.  This is supported by any real-world “make” implementation 
+(GNU make, bmake, even pdpmake with non-POSIX extensions enabled) but
+does deviate from a strict reading of the 
+<a href="https://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html">POSIX
+standard for “make”</a>.
+
+<p>
+
+If using a strictly POSIX version of make which has the extension of
+allowing <tt>/</tt> in target names, one needs to type in these commands 
+to compile MaraDNS:
+
+<p>
+
+<tt>./configure</tt><br>
+<tt>CC=cc # Change this to gcc/clang/tcc as desired</tt><br>
+<tt>export CC</tt><br>
+<tt>make</tt><br>
+
+<p>
+
+This deviates from the standard <tt>./configure ; make</tt> build
+process.
+
+<p>
+
+While real-world implementations of “make” set <tt>CC</tt> to the
+<tt>cc</tt> command by default, the POSIX make spec actually says
+this should be <tt>c99</tt> which won’t compile MaraDNS (since MaraDNS
+uses POSIX calls not part of the ISO spec).
+
+<p>
+
+That in mind, I have created a fork of <tt>pdpmake</tt> which is
+completely POSIX compliant with two exceptions:
+
+<p>
+
+<ul>
+<li> <tt>/</tt> character allowed in target names
+<li> Default C compiler is <tt>cc</tt> and not <tt>c99</tt>
+</ul>
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="https://maradns.samiam.org/maramake">https://maradns.samiam.org/maramake</A>
+</blockquote>
+
+Like <tt>pdpmake</tt>, this implementation is public domain.
+
+<p>
+
+<A name=Getting_MaraDNS></A><A name=GettingMaraDNS></A><span class=moyet>==</span><span class=blogtitle><b>Getting MaraDNS</b></span><span class=moyet>==</span>
+
+<p>
+
+MaraDNS, as always, can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="https://maradns.samiam.org/">https://maradns.samiam.org/</A>
+</blockquote>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

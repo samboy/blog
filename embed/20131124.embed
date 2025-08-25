@@ -1,0 +1,68 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Deadwood Update</h1>
+<h2>November 24, 2013</h2>
+I have disabled the compile-time option to have RadioGatún[64]. 
+
+<p>
+
+This code is not needed.  Even though RG64 is faster,
+even on 32-bit systems, it uses more code on 32-bit systems (breaking
+Deadwood's ability to fit in 65,536 bytes on Windows).
+
+<p>
+
+In addition, this code does not have a test for it.  RG32 is good enough; if
+I'm going to update Deadwood's crypto, do it right: add SipHash, add Keccak, 
+add maybe another stream cipher.  But, quite frankly, that probably will
+not happen unless some academic paper comes out questioning either
+Panama's or RadioGatún[32]'s security as a stream cipher.
+
+<p>
+
+The fact of the matter is this: While it is a lot of fun to play around
+with cryptographic primitives, the choice of cryptographic primitive is
+usually not the cause of security or performance problems.  Yes, Keccak
+fixes some theoretical issues with RadioGatún's security when used as
+a cryptographic hash -- but those issues are nowhere near a practical
+weakness in RadioGatún right now, and probably will never result in
+a real-world attack.  More to the point, Deadwood doesn't use RadioGatún
+as a cryptographic hash, but as a stream cipher, and there is no known
+attack against either Panama (RadioGatún's predecessor) or RadioGatún used 
+in this manner.
+
+<p>
+
+While RadioGatún[64] is faster than RadioGatún[32], this is not Deadwood's
+bottleneck.  Deadwood's main performance bottleneck is waiting for an 
+upstream DNS server to reply to a query, or moving on to the next DNS 
+server if there is a query timeout.
+
+<p>
+
+This update can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

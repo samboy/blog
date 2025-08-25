@@ -1,0 +1,114 @@
+<!--{TAGS:L}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Haircut-100.jpg width=224 height=126>
+</div>
+
+<h1>Slackware 15</h1>
+<h2>February 5, 2022</h2>
+I 
+discuss Slackware’s new release and
+finish up going over the top five 1980s songs on You Tube.
+
+<p>
+
+<A name=Slackware_150></A><A name=Slackware150></A><span class=moyet>==</span><span class=blogtitle><b>Slackware 15.0</b></span><span class=moyet>==</span>
+
+<p>
+
+<a href="https://slackware.com">Slackware</a>, the very first version of Linux
+I ever installed, is still around.  Indeed, they have, this week, just
+released
+<a href="http://www.slackware.com/announce/15.0.php">Slackware 15.0</a>, which
+keeps a lot of the feel of classic Slackware around while updating the
+distribution for the 2020s.
+
+<p>
+
+I set up a virtual machine and installed Slackware.  It feels, in
+many ways, more like a “real *NIX” than the newer versions of mainstream
+distributions like CentOS and Ubuntu.  There is no Systemd here.  Heck, there
+is not even GRUB: Slackware <i>still</i> uses LILO to boot the operating
+system.
+
+<p>
+
+My biggest surprise is how much disk space a full Slackware takes up.
+The days of being able to fit Slackware on a stack of floppies are long
+gone; a full install of Slackware is well over 15 gigabytes in size, and
+installing all of just the base and networking packages for a web server
+or what not is well over two gigabytes in size.  At home, in an era of under
+$30 240 gigabyte internal SSD drives, this is a drop in the bucket, but the
+reason why CentOS and Ubuntu have much smaller base installs is because,
+when renting a low-cost virtual machine in a datacenter, 
+<a href="https://buyvm.net/kvm-dedicated-server-slices/">$20 a year only gives you
+10 gigabytes of storage</a>, so having the underlying operating system
+only take up a gigabyte or so of space is still useful.
+
+<p>
+
+There are probably ways to make Slackware take up less space.  
+<tt>/lib/firmware</tt> takes up hundreds of megabytes, and we can
+probably safely remove this in a KVM virtual machine where none of the
+virtual hardware should need a binary firmware blob.
+
+<p>
+
+<A name=YouTube_1980s_hits_1_Axel_F></A><A name=YouTube1980shits1AxelF></A><span class=moyet>==</span><span class=blogtitle><b>YouTube 1980s hits #1: Axel F</b></span><span class=moyet>==</span>
+
+<p>
+
+<i>This concludes a series last covered 
+<a href="2022-01-09.html#1980ssong2TakeOnMe">a month ago</a></i>.
+
+<p>
+
+The most popular 1980s song is actually
+<a href="https://www.youtube.com/watch?v=k85mRPqvMbE">a 2009 cover of Harold
+Faltermeyer’s Axel F theme</a>, with some 3,052,616,747 views as
+I type this.
+
+<p>
+
+Of all of the songs from the 1980s, it’s somewhat unusual that this
+one is the overall most popular one.  While the
+<a href="https://www.youtube.com/watch?v=Qx2gvHjNhQ0">original 1980s song</a>
+was a major hit, it did not hit #1 in the US (it only hit #3 here), nor 
+the UK (#2), or even the composer’s own West Germany (#2).
+
+<p>
+
+While some incorrectly consider Harold Faltermeyer a one hit wonder,
+he has helped make a lot more hits than this one.  He 
+helped make the music for the movie <i>Midnight Express</i> (the first
+electronic score to win an Oscar), arranging its hit
+<a href="https://www.youtube.com/watch?v=ViN2bRGrBx8"><i>The Chase</i></a>.
+He also arranged Laura Branigan’s hit
+<a href="https://www.youtube.com/watch?v=RP0_8J7uxhs"><i>Self Control</i></a>,
+composed and produced the hit
+<a href="https://www.youtube.com/watch?v=RP0_8J7uxhs"><i>Square Rooms</i></a>,
+produced the album <i>Behavior</i> by the Pet Shop Boys, which includes
+their hit (and my favorite Pet Shop Boys song) 
+<a href="https://www.youtube.com/watch?v=jFAA6Z_YIEM"><i>So Hard</i></a> (as
+an aside, there was a note with the album that <i>So Hard</i> told a
+true story, a linear note one would not make today),
+among many other credits.
+
+<p>
+
+My daughter immediately recognized the Crazy Frog version of Axel F and
+feels it’s superior to Faltermeyer’s original; I prefer the original myself.
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

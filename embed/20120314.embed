@@ -1,0 +1,158 @@
+<h1>The ghost domain bug</h1>
+
+<h2>March 14, 2012</h2>
+
+In today's blog entry, I look at the ghost domain bug, and how
+various DNS servers have been updated to address this bug.
+
+<p>
+<div class=blogtitle>
+<b>Ghost domains</b>
+</div><br>
+
+The big DNS security hole for early 2012 is the 
+<A
+href=https://www.isc.org/files/imce/ghostdomain_camera.pdf>"ghost domain"
+attack</A>
+<!--NOGOPHER -->
+(PDF file).
+<!-- NOGOPHER-->
+It has hit every single major recursive DNS server out there: 
+<A 
+href=http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-1033>BIND</A>,
+<A 
+href=http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-1192>Unbound</A>,
+<A
+href=http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-1193
+>PowerDNS</A>, <A
+href=http://samiam.org/blog/20120311.html>Deadwood</A> (while the ghost
+domain paper correctly points out that Deadwood's recursion is immune to
+this particular attack, Deadwood was vulnerable to a related attack:
+allowing a really long TTL), and, yes
+<A 
+href=http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-1191>djbdns</A>.
+
+<p>
+<div class=blogtitle>
+<b>Response to this attack</b>
+</div><br>
+
+BIND has been patched to fix this issue.  Unbound fixed this issue a while
+ago; the CVE simply informs users to make sure their copy of Unbound is
+up to date.  I updated Deadwood back in February and made new MaraDNS
+releases with the updated Deadwood this week.
+
+<p>
+
+This leaves two DNS servers without this issue fixed.  
+
+<p>
+<div class=blogtitle>
+<b>PowerDNS</b>
+</div><br>
+
+I am surprised that
+<A href=https://bugzilla.redhat.com/show_bug.cgi?id=794963>PowerDNS
+has not fixed this issue yet</A>; they appear to have an active development
+community so hopefully a fix is in the pipeline.
+
+<p>
+<div class=blogtitle>
+<b>DjbDNS</b>
+</div><br>
+
+DjbDNS, not surprisingly, has no update for this issue.  I don't see
+any updates to fix this issue from the unofficial forks; <A 
+href=https://sourceforge.net/projects/zinq/files/>Zinq-djbdns</A>, for 
+example, hasn't been updated for nearly a year.
+
+<p>
+
+There is no traffic on the <A href=http://marc.info/?l=djbdns>mailing
+list</A> about this issue.  Indeed, there hasn't been a single posting
+to this mailing list this month and none of the postings last month
+discussed this security hole.
+
+<p>
+<div class=blogtitle>
+<b>dnscache and www.nature.com</b>
+</div><br>
+
+The last active discussion on the djbdns mailing list
+was people <A href=http://marc.info/?l=djbdns&m=132996881229765&w=2>whining
+about how www.nature.com takes 30 seconds to resolve with dnscache</A>.
+
+<p>
+
+Let me give the five people still using dnscache a hint: It is not
+Akamai's problem that www.nature.com takes 30 seconds to resolve with
+DjbDNS' dnscache.  It is dnscache's problem.  
+
+<p>
+
+Deadwood 3.2.02 is able to, with an empty cache, resolve www.nature.com 
+within 2 seconds.  With an active cache, it can resolve it in under a
+second.  
+
+<p>
+
+I have not investigated exactly why it is www.nature.com takes so long
+to resolve with dnscache.  My <i>guess</i> is that it is similar to the
+<A href=http://samiam.org/blog/20111113.html>EasyDNS tarpit</A> issue
+Deadwood had.
+
+<p>
+<div class=blogtitle>
+<b>Taking responsibility</b>
+</div><br>
+
+The only way to take responsibility is to have someone step up and
+say "I will make sure that bugs in djbdns get fixed".  DJB stopped
+doing this well over a decade ago.  
+
+<p>
+
+It was not feasible for someone else to take responsibility for the
+program for many years because of DjbDNS' old license.  When it finally
+became legal to make DjbDNS forks, it was too little, too late.  There is
+no longer an active community of developers contributing improvements
+to DjbDNS' in a cohesive, organized manner.  There is no one in the
+DjbDNS community that you can point to and say "DjbDNS is vulnerable to
+security bug CVE-2012-1191.  You are responsible for making sure this
+issue gets fixed."
+
+<p>
+
+Because there is no one left responsible for DjbDNS' bugs, the community
+handles bugs in an immature, unprofessional manner.  They either blame
+someone else for DjbDNS' bugs (such as blaming Akamai), or they come
+up with convoluted justifications about why a bug isn't <i>really</i>
+a bug, or they simply ignore the bug altogether.
+
+<p>
+
+Blaming Akamai for not resolving a domain quickly isn't going to make
+the offending domain resolve any more quickly.  Ignoring a security bug
+isn't going to magically make the security problem go away.
+
+<p>
+
+For DjbDNS to remain viable, someone needs to step up to plate to
+take responsibility for its bugs.
+
+<p>
+
+<!--NOGOPHER -->
+See also: <A href=20110103.html>DjbDNS: False security is dangerous</A>
+<!-- NOGOPHER-->
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

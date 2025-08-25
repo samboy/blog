@@ -1,0 +1,134 @@
+<h1>Deadwood update</h1>
+
+<h2>September 12, 2011</h2>
+
+I have finished up all of the work I am going to do for MaraDNS and Deadwood
+for September 2011 (barring receiving more sponsorship).  The work I have
+done this weekend was made possible by a fairly modest financial contribution.
+
+<p>
+
+Investigating <A 
+href=http://woodlane.webconquest.com/pipermail/list/2011-August/000924.html>the
+bug that Domenico Rotondi reported</A>, I discovered
+that there have been some issues with RD (recursion desired) being
+incorrectly set when both upstream_servers and root_servers are set.  I
+have updated the code and hopefully RD will now always have the
+correct value in DNS queries sent upstream.
+
+<p>
+
+In addition, I have updated Deadwood's parser:
+
+<ul>
+
+<li>I consider it a bug if any valid dwood3rc file does not parse in
+Python 2.  That in mind, I have updated the dwood3rc parser to not
+allow parameters to have any leading whitespace (since whitespace is
+significant in Python).
+
+<p>
+This is OK:
+
+<pre>
+recursive_acl = "127.0.0.1/16, 192.168.1.1/24"
+</pre>
+
+But this will raise an error:
+
+<pre>
+ recursive_acl = "127.0.0.1/16, 192.168.1.1/24"
+</pre>
+
+(Observe the extra space in the left of the second example) <p>
+
+<li>It is no longer allowed to set both root_servers or
+upstream_servers for a given name.  In other words, a configuration
+like this will now raise an error:
+
+<pre>
+upstream_servers = {}
+upstream_servers["example.com."] = "127.0.0.1"
+root_servers = {}
+root_servers["example.com."] = "192.168.1.1"
+</pre>
+
+<p>
+<li>Deadwood now raises a warning when the same name is set more than once.
+This will now trigger a warning:
+
+<pre>
+upstream_servers = {}
+upstream_servers["example.net."] = "10.1.2.3"
+upstream_servers["example.net."] = "192.168.1.1"
+</pre>
+
+I was tempted to make this fatal, but decided not to because making this
+fatal would make it more difficult to manage large anti-phish/malware
+blacklists.   <p>
+
+<li>It is no longer permitted to initialize root_servers or upstream_servers
+more than once.  This will now raise an error:
+
+<pre>
+upstream_servers = {}
+upstream_servers["example.net."] = "10.1.2.3"
+upstream_servers = {}
+upstream_servers["example.com."] = "192.168.1.1"
+</pre>
+
+<p><li>Deadwood will now raise an error for invalid lists of root or upstream 
+servers.  This is now fatal:
+
+<pre>
+root_servers = {}
+root_servers["."] = "foo"
+</pre>
+
+</ul>
+
+Yes, I am making the parser more anal.  This is to help protect the user from
+typos and other errors causing problems with Deadwood, giving them a 
+detailed description of the exact cause of a potential problem <i>before</i>
+Deadwood starts to resolve queries, so that they find and fix it before 
+coming to the mailing list and complaining about the issue.
+
+<p>
+
+In addition, I want to ensure that any valid dwood3rc file is also a valid
+Python 2 script to make it much easier to use Deadwood configuration 
+files in Python scripts.
+
+<p>
+
+I have also updated the SQA tests; they now run in both Scientific Linux 6
+and in CentOS 5.  Two new tests have been added: sqa_server_fail and
+sqa_root_upstream
+
+<p>
+
+Whew!  This was a lot of work; I spent most of Saturday and a couple
+of hours this morning making all of these improvements.  This will be all
+of the work I do with MaraDNS/Deadwood this month unless I can get
+more sponsorship.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+The next day I plan to work on MaraDNS/Deadwood without being compensated for
+my time is on October 5, 2011.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

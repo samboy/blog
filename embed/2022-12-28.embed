@@ -1,0 +1,162 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS 3.5.0035</h1>
+<h2>December 28, 2022</h2>
+To end 2022, I have released MaraDNS 3.5.0035.  This release adds
+support for large block lists which use little memory.
+
+<p>
+
+<A name=Blocking_hosts></A><A name=Blockinghosts></A><span class=moyet>==</span><span class=blogtitle><b>Blocking hosts</b></span><span class=moyet>==</span>
+
+<p>
+
+For a couple of years now, MaraDNS has had support for block lists.
+For example, let us suppose we want to block some domains.  We have
+been able to do it like this:
+
+<p>
+
+<pre>
+ip4 = {}
+ip4["evil.example.com."] = "X"
+ip4["phish.foo."] = "X"
+ip4["privacy-violator.example.net."] = "X"
+</pre>
+
+<p>
+
+(As an aside, this will block <i>both</i> the IPv4 and IPv6 forms
+ of these names)
+
+<p>
+
+Once this is set up, it will not be possible to resolve, say,
+<tt>evil.example.com</tt> using Deadwood.
+
+<p>
+
+This works, but there’s a problem: It uses too much memory per entry.
+
+<p>
+
+Over at <A href="https://github.com/StevenBlack/hosts">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>Steven<![if gt IE 6]>&#8203;<![endif]><wbr>Black/<![if gt IE 6]>&#8203;<![endif]><wbr>hosts</A> there are a number of large
+block lists.  One of which, the one for blocking pornographic content,
+has some 207,723 entries in it.  Loading this in to Deadwood using the
+<tt>ip4</tt> method uses some 237 megabytes or so of memory.  In 
+comparison, if we use a block hash (see below), the same list only takes 
+up 9.5 megabytes of memory.
+
+<p>
+
+<A name=Block_Hash_support></A><A name=BlockHashsupport></A><span class=moyet>==</span><span class=blogtitle><b>Block Hash support</b></span><span class=moyet>==</span>
+
+<p>
+
+In otder to be able to block a large number of hosts while using
+minimal memory, MaraDNS 3.5.0035 now has <i>block hash</i> support.
+
+<p>
+
+The process for adding a block hash to Deadwood is as follows:
+
+<p>
+
+<ul>
+<li> We use a new program, <i>blockHashMake</i>, to create a “block
+  hash file”:
+</ul>
+
+<p>
+
+<pre>
+$ cat | blockHashMake badHosts.bin
+evil.example.com
+phish.foo
+privacy-violator.example.net
+^D
+</pre>
+
+<p>
+
+(<tt>^D</tt> means to hit Ctrl + D at the same time to finish
+ the list; note that this is for *NIX systems and Windows users
+ will probably be better off with the 
+ <a href="https://github.com/samboy/BlockHash">Windows version which includes
+ a pre-built block hash file</a>)
+
+<p>
+
+<ul>
+<li> We place the block hash file in the Deadwood home directory (usually,
+  <tt>/etc/deadwood</tt>).
+<li> We then tell Deadwood to read the block hash file.  Put this in
+  <tt>/etc/dwood3rc</tt>:
+</ul>
+
+<p>
+
+<pre>
+blocked_hosts_hash_file = "badHosts.bin"
+</pre>
+
+<p>
+
+Note that, for security reasons, every time a block hash file is made,
+a different file is generated.  If, for some reason, it is desirable
+to have a block hash file be same for a given list of hosts every time,
+one can generate a block hash file as follows:
+
+<p>
+
+<pre>
+$ cat | blockHashMake badHosts.bin 0
+evil.example.com
+phish.foo
+privacy-violator.example.net
+^D
+</pre>
+
+<p>
+
+And read it as follows:
+
+<p>
+
+<pre>
+blocked_hosts_hash_file = "badHosts.bin"
+allow_block_hash_zero_key = 1
+</pre>
+
+<p>
+
+There is a security risk if we allow a blocked hosts file to have a 0
+key: An attacker with access to a recursive instance of Deadwood could
+have Deadwood use more resources than necessary if they know the block
+hash file being used. Since the block hash file is read only, hash
+flooding attacks are not possible, but an attacker could form queries
+which use more resources to resolve as not being present in the block
+hash.
+
+<p>
+
+Deadwood should never be an open recursor and this attack is limited in
+scope. But be aware of the risks before setting this parameter to 1.
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

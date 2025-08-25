@@ -1,0 +1,632 @@
+<h1>Microblogs April 2013 week 2</h1>
+<h2>April 15, 2013</h2>
+
+In my microblogs for the second week of April, I discuss living in
+Mexico, filing taxes online, keeping my online banking secure, and much
+more.
+
+<p>
+
+<A name=Going_to_Mexico_Learn_the_culture></A><A name=GoingtoMexicoLearntheculture></A><span class=moyet>==</span><span class=blogtitle><b>Going to Mexico: Learn the culture</b></span><span class=moyet>==</span>
+
+<p>
+
+Living in Mexico means learning to overcome both a language barrier (by learning Spanish) as well as a cultural barrier.  Before going down to Mexico, I picked up this book, which is an excellent in-depth look at Mexican culture and guide for people used to living in the US to Mexico’s cultural quirks:
+
+<p>
+
+<blockquote>
+<A href="http://www.peoplesguide.com/">http://www.peoplesguide.com/</A>
+</blockquote>
+
+This book made adjusting to Mexican life a lot easier.
+
+<p>
+
+<i>Posted Apr 15 2013</i>
+
+<p>
+
+<A name=The_return_of_the_netbook></A><A name=Thereturnofthenetbook></A><span class=moyet>==</span><span class=blogtitle><b>The return of the netbook</b></span><span class=moyet>==</span>
+
+<p>
+
+Now that the ultrabooks have faltered—they were too expensive for end consumers and I am sure a lot of IT departments balked at how hard those computers are to repair—the next attempt is the “ultramobile”.  This will consist of Windows Blue—which may as well be called “Windows 8 starter”—coupled with a netbook-sized computer with a touchscreen:
+
+<p>
+
+<blockquote>
+<A href="http://techland.time.com/2013/04/08/windows-blue-and-the-rise-of-ultramobiles/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>techland.<![if gt IE 6]>&#8203;<![endif]><wbr>time.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>04/<![if gt IE 6]>&#8203;<![endif]><wbr>08/<![if gt IE 6]>&#8203;<![endif]><wbr>windows-<![if gt IE 6]>&#8203;<![endif]><wbr>blue-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>rise-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>ultramobiles/</A>
+</blockquote>
+
+The truth is that low-end laptops like Acer’s AO756 are today’s netbooks.  Which the AO756’s battery does not last as long as a netbook’s battery, and while it is a little bigger (11 instead of 10-inch screen), they are being sold at the same price point as yesterday’s netbooks.
+
+<p>
+
+<i>Posted Apr 15 2013</i>
+
+<p>
+
+<A name=TurboTaxs_web_site_strains_under_the_load></A><A name=TurboTaxswebsitestrainsundertheload></A><span class=moyet>==</span><span class=blogtitle><b>TurboTax’s web site strains under the load</b></span><span class=moyet>==</span>
+
+<p>
+
+It would appear Turbo Tax’s web site is straining under the load of all of the last-minute filers.
+
+<p>
+
+<blockquote>
+<A href="http://www.buzzfeed.com/buzzfeednews/turbotax-falters-at-the-worst-possible-moment">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>buzzfeed.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>buzzfeednews/<![if gt IE 6]>&#8203;<![endif]><wbr>turbotax-<![if gt IE 6]>&#8203;<![endif]><wbr>falters-<![if gt IE 6]>&#8203;<![endif]><wbr>at-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>worst-<![if gt IE 6]>&#8203;<![endif]><wbr>possible-<![if gt IE 6]>&#8203;<![endif]><wbr>moment</A>
+</blockquote>
+
+I prefer <A href="http://hrblock.com">http://hrblock.com</A> for filing taxes more than Turbo Tax; the prices are more reasonable.  I also find it somewhat amusing that the only “Turbo” software package still being sold is “Turbo Tax”, whose name was modeled after Borland’s programming packages: “Turbo Pascal”, “Turbo C”, “Turbo Assembler”, etc.
+
+<p>
+
+<i>Posted Apr 15 2013</i>
+
+<p>
+
+<A name=New_Cevo_release></A><A name=NewCevorelease></A><span class=moyet>==</span><span class=blogtitle><b>New C-evo release</b></span><span class=moyet>==</span>
+
+<p>
+
+<a href="http://c-evo.org">C-evo</a> is my favorite open-source video game.  Steffen 
+Gerlach, the developer, has made 
+<a href="http://c-evo.org/files/files.php">a new release</a> this month after a 
+five-year hiatus.
+
+<p>
+
+It is a Civilization II-style game with a focus on AI development.  Unlike 
+other games, the AI never cheats: It has to work with the same limitations 
+a human does (fog of war, limited knowledge of the map, etc.).  C-evo 
+comes with its own built-in AI, and a number of other AIs are available 
+for download; the strongest AI is probably the “Seti” AI (which does very 
+well despite being unable to fight a naval war).
+
+<p>
+
+C-Evo has always been a one-trick pony: One set of rules, one game pace, one map script (with all of two “sliders”: Six fixed map sizes and a variable land mass/water level), one interface, one single game adjustment (difficulty level), one victory condition, one multiplayer mode (hotseat), and one tech tree. But C-Evo does all of that very well, better, in my opinion, than any
+other open-source game.
+
+<p>
+
+<i>Posted Apr 14 2013</i>
+
+<p>
+
+<A name=Im_on_a_Mexican_Radio></A><A name=ImonaMexicanRadio></A><span class=moyet>==</span><span class=blogtitle><b>I’m on a Mexican Radio</b></span><span class=moyet>==</span>
+
+<p>
+
+I’m sure listening to Wall of Voodoo’s one-hit wonder “Mexican Radio” as a little kid was a factor that encouraged me to learn Spanish and eventually live in Mexico for a few years.  
+
+<p>
+
+The song can be listened to on YouTube here:
+
+<p>
+
+<blockquote>
+<A href="http://www.youtube.com/watch?v=V04IBsz-9Wo">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>watch?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>V<![if gt IE 6]>&#8203;<![endif]><wbr>04<![if gt IE 6]>&#8203;<![endif]><wbr>IBsz-<![if gt IE 6]>&#8203;<![endif]><wbr>9<![if gt IE 6]>&#8203;<![endif]><wbr>Wo</A>
+</blockquote>
+
+and purchased at Amazon here:
+
+<p>
+
+<blockquote>
+<A href="http://www.amazon.com/Mexican-Radio/dp/B001QSGILA/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>amazon.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>Mexican-<![if gt IE 6]>&#8203;<![endif]><wbr>Radio/<![if gt IE 6]>&#8203;<![endif]><wbr>dp/<![if gt IE 6]>&#8203;<![endif]><wbr>B<![if gt IE 6]>&#8203;<![endif]><wbr>001<![if gt IE 6]>&#8203;<![endif]><wbr>QSGILA/</A>
+</blockquote>
+
+Here’s an article which discusses how the song was composed and recorded:
+
+<p>
+
+<blockquote>
+<A href="http://mixonline.com/mag/audio_wall_voodoos_mexican/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>mixonline.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>mag/<![if gt IE 6]>&#8203;<![endif]><wbr>audio_<![if gt IE 6]>&#8203;<![endif]><wbr>wall_<![if gt IE 6]>&#8203;<![endif]><wbr>voodoos_<![if gt IE 6]>&#8203;<![endif]><wbr>mexican/</A>
+</blockquote>
+
+<i>Posted Apr 13 2013</i>
+
+<p>
+
+<A name=John_Hurt_starring_in_Doctor_Who></A><A name=JohnHurtstarringinDoctorWho></A><span class=moyet>==</span><span class=blogtitle><b>John Hurt starring in Doctor Who!</b></span><span class=moyet>==</span>
+
+<p>
+
+John Hurt is going to star in the 50th anniversary special of Doctor Who:
+
+<p>
+
+<blockquote>
+<A href="http://tennantnews.blogspot.co.uk/2013/04/john-hurt-talks-about-david-tennant-and.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>tennantnews.<![if gt IE 6]>&#8203;<![endif]><wbr>blogspot.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>04/<![if gt IE 6]>&#8203;<![endif]><wbr>john-<![if gt IE 6]>&#8203;<![endif]><wbr>hurt-<![if gt IE 6]>&#8203;<![endif]><wbr>talks-<![if gt IE 6]>&#8203;<![endif]><wbr>about-<![if gt IE 6]>&#8203;<![endif]><wbr>david-<![if gt IE 6]>&#8203;<![endif]><wbr>tennant-<![if gt IE 6]>&#8203;<![endif]><wbr>and.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+I wonder if he is going to be a Time Lord.  People who have played Winston Smith in depictions of Orwell’s 1984 (Hurt did so in the 1984 movie, which also features Richard Burton in his very final role) tend to play the Doctor in Doctor Who (Patrick Troughton, Christopher Eccleston, and Peter Cushing from the 1960s movies have all played Winston Smith).  
+
+<p>
+
+<i>Posted Apr 12 2013</i>
+
+<p>
+
+<A name=Quizlet_Lock_Screen></A><A name=QuizletLockScreen></A><span class=moyet>==</span><span class=blogtitle><b>Quizlet Lock Screen</b></span><span class=moyet>==</span>
+
+<p>
+
+There is a “quizlet lock screen” useful for practicing Spanish:
+
+<p>
+
+<blockquote>
+<A href="http://lifehacker.com/5994499/the-quizlet-lock-screen-teaches-you-foreign-language-vocabulary-with-your-facebook-feed">http://<![if gt IE 6]>&#8203;<![endif]><wbr>lifehacker.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>5994499/<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>quizlet-<![if gt IE 6]>&#8203;<![endif]><wbr>lock-<![if gt IE 6]>&#8203;<![endif]><wbr>screen-<![if gt IE 6]>&#8203;<![endif]><wbr>teaches-<![if gt IE 6]>&#8203;<![endif]><wbr>you-<![if gt IE 6]>&#8203;<![endif]><wbr>foreign-<![if gt IE 6]>&#8203;<![endif]><wbr>language-<![if gt IE 6]>&#8203;<![endif]><wbr>vocabulary-<![if gt IE 6]>&#8203;<![endif]><wbr>with-<![if gt IE 6]>&#8203;<![endif]><wbr>your-<![if gt IE 6]>&#8203;<![endif]><wbr>facebook-<![if gt IE 6]>&#8203;<![endif]><wbr>feed</A>
+</blockquote>
+
+One issue is that it is using a machine translation for the Spanish words.  For example, it wants to ask me the Spanish word for “some” in this phrase:
+
+<p>
+
+<blockquote>
+Bet we have all used one of these at “some” time
+</blockquote>
+
+The choices it has are “unos” (“some”, but 
+<i>not</i>
+in this context), “lejos” (“far”), “jugo” (“I play” or “juice”), and “por” (“for” when it’s the motivation for doing something, “per” as in “miles per hour”).  The correct Spanish word would be “a” (as in “a veces”), “algunas” (“algunas veces”—“sometimes”) or even “unAs” (“unas veces”—“a few times”), but never “unos” because “veces” is a feminine noun.
+
+<p>
+
+While not perfect, it’s a useful tool for refreshing vocabulary.
+
+<p>
+
+<i>Posted Apr 12 2013</i>
+
+<p>
+
+<A name=What_happens_to_Winston_Smith></A><A name=WhathappenstoWinstonSmith></A><span class=moyet>==</span><span class=blogtitle><b>What happens to Winston Smith</b></span><span class=moyet>==</span>
+
+<p>
+
+After the end of “1984”, based on both the acting careers of Peter Cushing, who played Winston Smith in 1954, and John Hurt, who played Smith in 1984, Winston Smith becomes big brother.  To wit:
+
+<p>
+
+<ul>
+<li> Peter Cushing played Grand Moff Tarkin, the leader of the evil Death Star in 
+<i>Star Wars</i>
+<li> John Hurt played the evil Big Brother-like dictator in 
+<i>V For Vendetta</i>
+</ul>
+
+<p>
+
+So, after the final scene of 
+<i>1984, </i>
+Winston Smith becomes promoted by the party and eventually becomes Big Brother himself.
+
+<p>
+
+<i>Posted Apr 11 2013</i>
+
+<p>
+
+<A name=Whats_in_deodorant></A><A name=Whatsindeodorant></A><span class=moyet>==</span><span class=blogtitle><b>What’s in deodorant?</b></span><span class=moyet>==</span>
+
+<p>
+
+What’s in deodorant?
+
+<p>
+
+<blockquote>
+<A href="http://www.refinery29.com/natural-deodorant?utm_source=feed&amp;utm_medium=rss">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>refinery<![if gt IE 6]>&#8203;<![endif]><wbr>29.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>natural-<![if gt IE 6]>&#8203;<![endif]><wbr>deodorant?<![if gt IE 6]>&#8203;<![endif]><wbr>utm_<![if gt IE 6]>&#8203;<![endif]><wbr>source=<![if gt IE 6]>&#8203;<![endif]><wbr>feed&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>utm_<![if gt IE 6]>&#8203;<![endif]><wbr>medium=<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
+</blockquote>
+
+I can not use aluminum-based deodorants because they irritate my skin...I usually use Mennon’s Speed Stick or the ordinary Axe-based brands; they use the much milder Propylene glycol instead.
+
+<p>
+
+<i>Posted Apr 10 2013</i>
+
+<p>
+
+<A name=I_shouldnt_even_be_lurking_at_Slashdot></A><A name=IshouldntevenbelurkingatSlashdot></A><span class=moyet>==</span><span class=blogtitle><b>I shouldn’t even be lurking at Slashdot</b></span><span class=moyet>==</span>
+
+<p>
+
+Looking over Slashdot’s front page today, I only saw 
+<a href="http://www.nytimes.com/2013/04/09/science/tiny-chiplets-are-a-new-level-of-micro-manufacturing.html?_r=1&amp;pagewanted=all&amp;">two</a> 
+<a href="http://www.bbc.co.uk/news/entertainment-arts-22079232">positive</a>
+articles.  All of the other articles were about very negative things like lawsuits, allegations of privacy breaches, a ban, unemployment, etc.  
+
+<p>
+
+Compare this to 
+<a href="http://digg.com">Digg</a>, where at most, half of the articles were negative.  Also, ever since Digg removed the discussions, we don’t have the problems with negative people driving the discussion, something that inevitably happens with unmoderated discussions.
+
+<p>
+
+Even better is
+<a href="http://lifehacker.com">Life Hacker</a>, where almost all of the articles are positive.
+
+<p>
+
+I shouldn’t even be lurking at Slashdot, much less trying to have a reasonable conversation with the kind of jaded and cynical people who post there.
+
+<p>
+
+See also:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20120903.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20120903.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+Speaking of positive, I’m really happy to see Blake’s Seven coming back again (this was the second
+<a href="http://www.bbc.co.uk/news/entertainment-arts-22079232">positive</a>
+article I linked to above).  That was one of my favorite series when I was a kid.  Then again, when I recently watched some of the reruns, it annoyed me just how cynical the characters were.  Then again, England did have a pretty bad economic crisis when the original series aired.
+
+<p>
+
+<i>Posted Apr 09 2013</i>
+
+<p>
+
+<A name=The_Opus_codec></A><A name=TheOpuscodec></A><span class=moyet>==</span><span class=blogtitle><b>The Opus codec</b></span><span class=moyet>==</span>
+
+<p>
+
+My buddy
+<a href="http://www.kittyfeet.com">Michael Dean</a> just 
+<a href="http://www.kittyfeet.com/2013/03/31/opus-the-codec-that-will-vastly-improve-the-world/#comment-5902">posted</a> about the new low-bitrate Opus audio codec (A codec is a way of compressing audio or video so that files are smaller). It’s already supported by Foobar2000 and Firefox (even the older ESR Firefox 17 release), and, since the codec is free and open-source, hopefully more browsers and audio players will support this new low-bitrate speech and music codec:
+
+<p>
+
+<blockquote>
+<A href="http://www.opus-codec.org/">http://www.opus-codec.org/</A>
+</blockquote>
+
+<i>Posted Apr 09 2013</i>
+
+<p>
+
+<A name=My_site_never_looked_like_that></A><A name=Mysiteneverlookedlikethat></A><span class=moyet>==</span><span class=blogtitle><b>My site never looked like that!</b></span><span class=moyet>==</span>
+
+<p>
+
+Here is a tribute to the excesses of 1990s web site and 
+first-2000s-decade MySpace profile design:
+
+<p>
+
+<blockquote>
+<A href="http://www.theworldsworstwebsiteever.com/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>theworldsworstwebsiteever.<![if gt IE 6]>&#8203;<![endif]><wbr>com/</A>
+</blockquote>
+
+My site never looked like that...
+<a href="http://samiam.org/screenshots/2001webpage.html">its old school design</a> was
+actually pretty mild (the way things are scrunched up on the left side is par for the course for a design of that era; this was before widescreen monitors). 
+
+<p>
+
+These days, with people by and large using Wordpress themes instead of making their own HTML, I now only very rarely see a “1990s” web page design.  People who still post to what is left of 
+<a href="http://samiam.org/blog/20110111.html">Usenet</a>
+are the ones to have a “1990s design” web page, if they have a web page at all.
+
+<p>
+
+There’s something to be said for DJB’s “<a href="http://cr.yp.to/djbdns/intro-dns.html">no design at all</a>” web non-design.
+
+<p>
+
+<i>Posted Apr 09 2013</i>
+
+<p>
+
+<A name=My_sleep_cycle_is_actually_pretty_normal></A><A name=Mysleepcycleisactuallyprettynormal></A><span class=moyet>==</span><span class=blogtitle><b>My sleep cycle is actually pretty normal</b></span><span class=moyet>==</span>
+
+<p>
+
+Sometimes, I go to sleep early in the evening for a couple of hours, wake up again, and then finally going to sleep in the middle of the night.  This is actually perfectly normal and healthy:
+
+<p>
+
+<blockquote>
+<A href="http://www.bbc.co.uk/news/magazine-16964783">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>magazine-<![if gt IE 6]>&#8203;<![endif]><wbr>16964783</A>
+</blockquote>
+
+<blockquote>
+[Roger Ekirch]'s book At Day's Close: Night in Times Past [...] 
+unearths more than 500 references to a segmented sleeping pattern
+</blockquote>
+
+<i>Posted Apr 09 2013</i>
+
+<p>
+
+<A name=I_lived_in_Mexico_for_five_years></A><A name=IlivedinMexicoforfiveyears></A><span class=moyet>==</span><span class=blogtitle><b>I lived in Mexico for five years</b></span><span class=moyet>==</span>
+
+<p>
+
+I was just thinking that a lot of my blogs have been about very dry and boring geeky subjects like Linux and implementing a “DNS server” (a DNS server is a mysterious thingy the Internet needs to function—I am one of the relatively few people to have written one).  Well, I’m moving away from my DNS server project so it’s probably time to talk about something actually interesting.
+
+<p>
+
+I lived in Mexico for five years.  It started after getting laid off from yet another dot-com who went under; I decided to take an extended vacation by living in Mexico for four months to learn Spanish.  After doing that, I got my college degree in the US and then moved to Mexico for five years.
+
+<p>
+
+I know that Mexico has recently had a lot of issues with violence, but the fact of the matter is this: Mexico is a beautiful country with beautiful people.  I will discuss my life in Mexico more in future microblog entries.
+
+<p>
+
+<i>Posted Apr 08 2013</i>
+
+<p>
+
+<A name=Ive_cleaned_most_SSL_certs_from_my_online_banking_browser></A><A name=IvecleanedmostSSLcertsfrommyonlinebankingbrowser></A><span class=moyet>==</span><span class=blogtitle><b>I’ve cleaned most SSL certs from my online banking browser</b></span><span class=moyet>==</span>
+
+<p>
+
+Stories of the occasional SSL Root Certificate being compromised sometimes make the press (anyone remember DigiNotar?).  
+
+<p>
+
+In plain English: When I go to a secure site, such as my bank, my browser makes sure I am, in fact, going to my bank.  It does this by validating the “certificate” my bank has for generating encrypted messages.  How does my browser know the certificate really is coming from my bank and not from a hacker?  Because the bank’s certificate is signed by another company called a “certification authority” (CA) whose job it is to make sure that my bank’s certificate really and truly comes from my bank.
+
+<p>
+
+The issue is this: Modern browsers trust 
+<a href="http://www.mozilla.org/projects/security/certs/included/">dozens of different CAs</a> to sign certificates vetting for companies’ secure web pages.  DigiNotar was an obscure CA which the Dutch government used; browsers allowed DigiNotar to sign certificates for any company in the world.
+
+<p>
+
+A hacker from Iran broke in the DigiNotar network and make their machines fraudulently sign a number of fake certificates for companies like Yahoo and Google; Iran was then able to hijack traffic sent to Google and Yahoo, yet have the cryptographic certificate appear legitimate.
+
+<p>
+
+In the browser I use only for online banking, I just removed most SSL certificates from its list of trusted CAs; if the next DigiNotar compromise ever happens, I want to make sure my online banking browser warns me of an untrusted certificate; my banking browser no longer blindly trusts Random Banana Republic’s SSL root CA.
+
+<p>
+
+I really wish Firefox made this process easier (you have to remove dozens of root CAs by hand to pull it off).
+
+<p>
+
+<i>Posted Apr 08 2013</i>
+
+<p>
+
+<A name=Does_George_Shaheen_still_get_375000year_from_Webvan></A><A name=DoesGeorgeShaheenstillget375000yearfromWebvan></A><span class=moyet>==</span><span class=blogtitle><b>Does George Shaheen still get $375,000/year from Webvan?</b></span><span class=moyet>==</span>
+
+<p>
+
+Once upon a time, during the height of the dot-com boom, an online grocery store called WebVan hired one George Shaheen to be their CEO.  As part of the deal to hire him, WebVan agreed to pay him $375,000 a year for the rest of his life.
+
+<p>
+
+I wonder if George Shaheen still gets that $375,000/year from Webvan.  The Wikipedia article implies that he does, but I think that’s inaccurate. [Update: That inaccuracy bugged me enough that I
+<a href="http://en.wikipedia.org/w/index.php?title=Webvan&amp;diff=549407639&amp;oldid=539590622">removed the inaccurate statement</a>] According to one source, that $375,000/year for life golden parachute closed as soon as WebVan filed for bankruptcy.  In 
+<A href="http://community.seattletimes.nwsource.com/archive/?date=20010709&amp;slug=webvan">http://<![if gt IE 6]>&#8203;<![endif]><wbr>community.<![if gt IE 6]>&#8203;<![endif]><wbr>seattletimes.<![if gt IE 6]>&#8203;<![endif]><wbr>nwsource.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>archive/?<![if gt IE 6]>&#8203;<![endif]><wbr>date=<![if gt IE 6]>&#8203;<![endif]><wbr>20010709&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>slug=<![if gt IE 6]>&#8203;<![endif]><wbr>webvan</A>:
+
+<p>
+
+<blockquote>
+With the bankruptcy, Shaheen "will have to get in line with the rest 
+of our creditors," [Bud] Grebey said
+</blockquote>
+
+WebVan.com still existed in some form when Amazon bought it a few years ago, and it’s an open question whether Amazon’s deal to buy the domain name includes them compensating Shaheen again.
+
+<p>
+
+Personally, I doubt it; Shaheen’s 
+<a href="http://corporate.findlaw.com/contracts/compensation/agreement-of-employment-webvan-group-inc-and-george-t-shaheen.html">contract</a>
+states that the “company” would pay him that amount, and that company stopped existing in 2001 when WebVan went bankrupt; Amazon probably just bought the domain name from whoever got that WebVan asset during the bankruptcy fire-sale.
+
+<p>
+
+<i>Posted Apr 08 2013</i>
+
+<p>
+
+<A name=Net_Caf></A><A name=NetCaf></A><span class=moyet>==</span><span class=blogtitle><b>Net Café</b></span><span class=moyet>==</span>
+
+<p>
+
+Net Café is a late 1990s-early 2000s TV series which looked at all of the dot-coms that existed at the time as well as giving advice on finding interesting things on the then-young commercial Internet; it was a spin-off of Computer Chronicles.  Like Computer Chronicles, episodes are available for download at the web archive:
+
+<p>
+
+<blockquote>
+<A href="http://archive.org/details/netcafe">http://archive.org/details/netcafe</A>
+</blockquote>
+
+The episodes about startups can be sad to watch because most of the businesses they interviewed back then have gone under, many without even a Wikipedia article commemorating their brief existence.  Some even have become cyber-sqatter owned domains.  However, this episode is notable because it interviews the famous quarterback Steve Young as well as Google co-founder Sergei Brin:
+
+<p>
+
+<blockquote>
+<A href="http://archive.org/details/Newwebsi01">http://<![if gt IE 6]>&#8203;<![endif]><wbr>archive.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>details/<![if gt IE 6]>&#8203;<![endif]><wbr>Newwebsi<![if gt IE 6]>&#8203;<![endif]><wbr>01</A>
+</blockquote>
+
+Unfortunately, the audio suffers a technical problem where the mono track was mistakenly encoded as a stereo track with audio only coming out of the right speaker.
+
+<p>
+
+<i>Posted Apr 08 2013</i>
+
+<p>
+
+<A name=Kirk_battles_the_Gorn_again></A><A name=KirkbattlestheGornagain></A><span class=moyet>==</span><span class=blogtitle><b>Kirk battles the Gorn again!</b></span><span class=moyet>==</span>
+
+<p>
+
+Kirk battles the Gorn again!
+
+<p>
+
+<blockquote>
+<A href="http://www.hollywoodreporter.com/heat-vision/star-trek-william-shatner-fights-431693">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>hollywoodreporter.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>heat-<![if gt IE 6]>&#8203;<![endif]><wbr>vision/<![if gt IE 6]>&#8203;<![endif]><wbr>star-<![if gt IE 6]>&#8203;<![endif]><wbr>trek-<![if gt IE 6]>&#8203;<![endif]><wbr>william-<![if gt IE 6]>&#8203;<![endif]><wbr>shatner-<![if gt IE 6]>&#8203;<![endif]><wbr>fights-<![if gt IE 6]>&#8203;<![endif]><wbr>431693</A>
+</blockquote>
+
+ObMegaTrekkie: The battle music in this ad is inaccurate, since parts of it use the theme from the second season “The Doomsday Machine”, but “Arena” was a first season episode.  It may be a case that it was easier getting rights from Sol Kaplan’s estate instead of Alexander Courage’s estate.
+
+<p>
+
+<i>Posted Apr 08 2013</i>
+
+<p>
+
+<A name=Interviews_with_classic_80s_game_developers></A><A name=Interviewswithclassic80sgamedevelopers></A><span class=moyet>==</span><span class=blogtitle><b>Interviews with classic 80s game developers</b></span><span class=moyet>==</span>
+
+<p>
+
+Here are some interviews with some classic early 1980s computer and console game developers, back when a video game was a one-man operation:
+
+<p>
+
+<blockquote>
+<A href="http://www.dadgum.com/halcyon/">http://www.dadgum.com/halcyon/</A>
+</blockquote>
+
+I actually personally knew Steve Hales, one of the people interviewed here, when I was a kid.
+
+<p>
+
+<i>Posted Apr 08 2013</i>
+
+<p>
+
+<A name=CMA_Communications_appears_to_be_injecting_ads_in_to_web_pages></A><A name=CMACommunicationsappearstobeinjectingadsintowebpages></A><span class=moyet>==</span><span class=blogtitle><b>CMA Communications appears to be injecting ads in to web pages</b></span><span class=moyet>==</span>
+
+<p>
+
+It appears that CMA Communications, a rural Internet provider in the deep South (Texas, Louisiana, Mississippi, etc.) has a router that alters HTML and injects ads in to web pages:
+
+<p>
+
+<blockquote>
+<A href="http://arstechnica.com/tech-policy/2013/04/how-a-banner-ad-for-hs-ok/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>arstechnica.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>tech-<![if gt IE 6]>&#8203;<![endif]><wbr>policy/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>04/<![if gt IE 6]>&#8203;<![endif]><wbr>how-<![if gt IE 6]>&#8203;<![endif]><wbr>a-<![if gt IE 6]>&#8203;<![endif]><wbr>banner-<![if gt IE 6]>&#8203;<![endif]><wbr>ad-<![if gt IE 6]>&#8203;<![endif]><wbr>for-<![if gt IE 6]>&#8203;<![endif]><wbr>hs-<![if gt IE 6]>&#8203;<![endif]><wbr>ok/</A>
+</blockquote>
+
+My solution: I run my own DNS server, and have updated its blacklist to block the ad provider used here (r66t.com):
+
+<p>
+
+<blockquote>
+<A href="http://maradns.org/deadwood/doc/my.current.blacklist">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>doc/<![if gt IE 6]>&#8203;<![endif]><wbr>my.<![if gt IE 6]>&#8203;<![endif]><wbr>current.<![if gt IE 6]>&#8203;<![endif]><wbr>blacklist</A>
+</blockquote>
+
+<i>Update:</i>
+It appears that, after the above article got published, CMA Communications stopped injecting ads in to the web pages their paying customers download.
+
+<p>
+
+<i>Posted Apr 08 2013</i>
+
+<p>
+
+<A name=The_failure_of_the_Super_Mairo_Brothers_movie></A><A name=ThefailureoftheSuperMairoBrothersmovie></A><span class=moyet>==</span><span class=blogtitle><b>The failure of the Super Mairo Brothers movie</b></span><span class=moyet>==</span>
+
+<p>
+
+A look at the 1993 flop “Super Mario Brothers” and speculation about why it failed:
+
+<p>
+
+<blockquote>
+<A href="http://www.grantland.com/story/_/id/9123782/the-strange-case-super-mario-bros-movie">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>grantland.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>story/_/<![if gt IE 6]>&#8203;<![endif]><wbr>id/<![if gt IE 6]>&#8203;<![endif]><wbr>9123782/<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>strange-<![if gt IE 6]>&#8203;<![endif]><wbr>case-<![if gt IE 6]>&#8203;<![endif]><wbr>super-<![if gt IE 6]>&#8203;<![endif]><wbr>mario-<![if gt IE 6]>&#8203;<![endif]><wbr>bros-<![if gt IE 6]>&#8203;<![endif]><wbr>movie</A>
+</blockquote>
+
+Personally, I think its failure was caused by “too many cooks spoil the broth”; the script was written by too many different writers, becoming guacamole.
+
+<p>
+
+<i>Posted Apr 07 2013</i>
+
+<p>
+
+<A name=The_Internet_in_1995></A><A name=TheInternetin1995></A><span class=moyet>==</span><span class=blogtitle><b>The Internet in 1995</b></span><span class=moyet>==</span>
+
+<p>
+
+A look at the Internet in 1995, from a TV episode of a show called “Computer Chronicles” (May 2, 1995):
+
+<p>
+
+<blockquote>
+<A href="http://archive.org/details/CC1232_internet">http://<![if gt IE 6]>&#8203;<![endif]><wbr>archive.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>details/<![if gt IE 6]>&#8203;<![endif]><wbr>CC<![if gt IE 6]>&#8203;<![endif]><wbr>1232_<![if gt IE 6]>&#8203;<![endif]><wbr>internet</A>
+</blockquote>
+
+The computers used these big boxy monitors; the Internet at the time was a combination of Usenet Newsgroups, FTP sites, and mostly-text webpages. People used only Mosaic to surf the World Wide Web in this episode.
+
+<p>
+
+This episode has also been uploaded, in lower resolution, to YouTube:
+
+<p>
+
+<blockquote>
+<A href="http://www.youtube.com/watch?v=XluovrUA6Bk">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>watch?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>Xluovr<![if gt IE 6]>&#8203;<![endif]><wbr>UA<![if gt IE 6]>&#8203;<![endif]><wbr>6<![if gt IE 6]>&#8203;<![endif]><wbr>Bk</A>
+</blockquote>
+
+La Peña Cultural Center, whose webpage can be seen in this episode (No accents back then—it’s spelled La Pena in the pictures of their 1995 webpage), is still around:
+
+<p>
+
+<blockquote>
+<A href="http://lapena.org/">http://lapena.org/</A>
+</blockquote>
+
+Another web site seen in this episode, <A href="http://apc.org/">http://apc.org/</A>, is also still around.
+
+<p>
+
+This episode recently got some press:
+
+<p>
+
+<blockquote>
+<A href="http://www.sfgate.com/technology/businessinsider/article/FLASHBACK-This-Was-The-Internet-In-1995-4415170.php">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>sfgate.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>technology/<![if gt IE 6]>&#8203;<![endif]><wbr>businessinsider/<![if gt IE 6]>&#8203;<![endif]><wbr>article/<![if gt IE 6]>&#8203;<![endif]><wbr>FLASHBACK-<![if gt IE 6]>&#8203;<![endif]><wbr>This-<![if gt IE 6]>&#8203;<![endif]><wbr>Was-<![if gt IE 6]>&#8203;<![endif]><wbr>The-<![if gt IE 6]>&#8203;<![endif]><wbr>Internet-<![if gt IE 6]>&#8203;<![endif]><wbr>In-<![if gt IE 6]>&#8203;<![endif]><wbr>1995-<![if gt IE 6]>&#8203;<![endif]><wbr>4415170.<![if gt IE 6]>&#8203;<![endif]><wbr>php</A>
+</blockquote>
+
+<blockquote>
+<A href="http://www.businessinsider.com/flashback-this-was-the-internet-in-1995-2013-4">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>businessinsider.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>flashback-<![if gt IE 6]>&#8203;<![endif]><wbr>this-<![if gt IE 6]>&#8203;<![endif]><wbr>was-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>internet-<![if gt IE 6]>&#8203;<![endif]><wbr>in-<![if gt IE 6]>&#8203;<![endif]><wbr>1995-<![if gt IE 6]>&#8203;<![endif]><wbr>2013-<![if gt IE 6]>&#8203;<![endif]><wbr>4</A>
+</blockquote>
+
+The Business Insider link has a really good summary of the episode with screencaps for people who don’t want to bother watching the 30-minute episode.  The only issue is that they got their screencaps from the low-resolution YouTube video instead of the broadcast-quality MPEG2 video available at archive.org.
+
+<p>
+
+<i>Posted Apr 07 2013</i>
+
+<p>
+
+<A name=April_2013_week_1_archive></A><A name=April2013week1archive></A><span class=moyet>==</span><span class=blogtitle><b>April 2013 week 1 archive</b></span><span class=moyet>==</span>
+
+<p>
+
+I have archived the microblogs posted in the first week of April:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20130407.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130407.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

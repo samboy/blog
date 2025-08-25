@@ -1,0 +1,105 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/MaraDNS.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS work</h1>
+<h2>October 9, 2022</h2>
+This blog is a short summary of the work I have been doing on MaraDNS.
+
+<p>
+
+<A name=Working_on_another_34_release></A><A name=Workingonanother34release></A><span class=moyet>==</span><span class=blogtitle><b>Working on another 3.4 release</b></span><span class=moyet>==</span>
+
+<p>
+
+While the legacy 3.4 release is mainly only updated with security 
+updates, 
+<a href="https://github.com/samboy/MaraDNS/blob/master/deadwood-github/update/3.4.04/deadwood-3.4.03-min_ttl.patch">I 
+have decided to backport the <tt>min_ttl</tt> parameter from
+the 3.5 to the 3.4 branch of MaraDNS/Deadwood</a>, since this helps
+recursive resolvers be more responsive on the modern Internet.
+
+<p>
+
+While using Deadwood as a recursive resolver is generally 
+deprecated—recursive DNS here in 2022 is something best left to 
+large organizations which can pay programmers to maintain the 
+DNS server full time—this is a fairly small change which will make
+things more bearable for people still using Deadwood 3.4 as a recursive
+resolver.
+
+<p>
+
+Since the 3.4 branch of MaraDNS uses a system
+of shell scripts and <tt>diff</tt> patches to update the code, I have
+made <a href="https://github.com/samboy/MaraDNS/blob/master/deadwood-github/update/3.4.04/3.4.03-to-3.4.04">a 
+script which will update Deadwood</a> with this change when
+it is time to make the MaraDNS 3.4.04 release.
+
+<p>
+
+In the meantime, the code can be seen here:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS/tree/master/deadwood-github/update/3.4.04">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>tree/<![if gt IE 6]>&#8203;<![endif]><wbr>master/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood-<![if gt IE 6]>&#8203;<![endif]><wbr>github/<![if gt IE 6]>&#8203;<![endif]><wbr>update/<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>4.<![if gt IE 6]>&#8203;<![endif]><wbr>04</A>
+</blockquote>
+
+<A name=int_fast32_t></A><A name=intfast32t></A><span class=moyet>==</span><span class=blogtitle><b>int_fast32_t</b></span><span class=moyet>==</span>
+
+<p>
+
+As I was working on that code, I made this discovery that, on both
+64-bit ARM and 64-bit x86 architectures, <tt>int32_t</tt> and
+<tt>int_fast32_t</tt> are the same datatype.  Since there still exist
+some expensive mainframes out there which do not support
+32-bit words (Unisys still has a mainframe which uses 36-bit words instead),
+C code should ideally not use <tt>int32_t</tt>, since someone may end
+up trying to compile the code on some exotic computer some day.  Instead,
+one should use <tt>int_fast32_t</tt>, which is required to be supported
+if a compiler is C99 compliant (unlike <tt>int32_t</tt>), since this
+data type might be bigger than 32 bits.
+
+<p>
+
+I didn’t know this when I did the lion’s share of Deadwood development
+between 2007 and 2010; I used <tt>int32_t</tt> where most of the time
+<tt>int_fast32_t</tt> would had made more sense for integers which do
+not fit in 16 bits.  The thinking when developing Deadwood is that
+<tt>int</tt> could be 16-bit (but is 32-bit or 64-bit on anything Deadwood
+compiles on), and to use exact lengths when more bits was needed
+in a number.
+
+<p>
+
+There <i>are</i> places where the integer must be precisely 32-bits 
+(notably, the cryptographic random number generator), and since no one
+is loaning me a Unisys mainframe to develop things on something without
+32-bit support, there is no way for me to meaningfully test things on
+a system, 
+<a href="https://stackoverflow.com/questions/6971886/exotic-architectures-the-standards-committees-care-about">which 
+has not even been confirmed to exist</a>, which has 
+<tt>stdint.h</tt> support but doesn’t have <tt>int32_t</tt>,
+<tt>uint32_t</tt>, or even <tt>int64_t</tt>.  
+
+<p>
+
+Since I am aware of no one who has ever had an issue with this (and
+people have compiled Deadwood on lots of stuff like MIPS and what not),
+I will leave this bug, such as it is, open.  If you want things to work on
+your Unisys mainframe, if you’re rich enough to buy a Unisys, you’re
+rich enough to pay me to refactor Deadwood to not need <tt>int32_t</tt>.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

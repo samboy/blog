@@ -1,0 +1,178 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2015-01-pride.jpg width=120 height=120>
+</div>
+
+<h1>Welcome to September</h1>
+<h2>September 1, 2015</h2>
+Welcome to September of 2015, everyone. I discuss gay marriage,
+keeping my camera with a phone secure, the Sad Puppes Hugo fiasco,
+and a very minor MaraDNS security bug.
+
+<p>
+
+<A name=Gay_marriage></A><A name=Gaymarriage></A><span class=moyet>==</span><span class=blogtitle><b>Gay marriage</b></span><span class=moyet>==</span>
+
+<p>
+
+The fundamentalists continue to make a stink about marrying 
+people who are gay.  
+<a href="https://archive.is/3OCxT">Kim Davis</a> in Kentucky still refuses to
+issue marriage certificates, even though it’s now the law of the 
+land that she
+<i>must</i>
+issue those certificates (the Supreme Court refused to hear her
+appeal).  I told her legal counsel that her open defiance of the
+law is not Biblical on their Facebook page:
+
+<p>
+
+<blockquote>
+Romans 13:1 “Let every soul be subject to the authorities, for
+there is no authority except from God, and those who are authorities are
+ordained by God” It’s OK to think gay marriage is a sin, just as it’s
+OK to think marrying someone previously divorced is a sin, but it now
+is the law that they be given a secular marriage license. Luke 20:25
+“Give to Caesar the things that are Caesar’s, and to God the things
+that are God’s”
+</blockquote>
+
+After writing that, I found out that Kim Davis has been divorced
+at least three times.  Pot, kettle, black.
+
+<p>
+
+Should I mention that the group giving Davis legal counsel believes that
+“Those who are not saved will be forever separated from God in hell?”
+
+<p>
+
+<A name=My_camera_got_a_security_update></A><A name=Mycameragotasecurityupdate></A><span class=moyet>==</span><span class=blogtitle><b>My camera got a security update</b></span><span class=moyet>==</span>
+
+<p>
+
+I was very pleasantly surprised to get a message from AT&amp;T that they
+<a href="https://archive.is/QrGAQ">had an update for my older cell phone</a>,
+a Galaxy S4 Zoom (which is more a camera with a phone than a phone with
+a camera).  While AT&amp;T does not list the security bugs patched, it presumably
+patches the
+<a href="https://blog.zimperium.com/stagefright-vulnerability-details-stagefright-detector-tool-released/">Stagefright bug</a> 
+and hopefully patches the 
+<a href="https://www.nowsecure.com/keyboard-vulnerability/">keyboard update security bug</a>.
+
+<p>
+
+<A name=Sad_Puppies></A><A name=SadPuppies></A><span class=moyet>==</span><span class=blogtitle><b>Sad Puppies</b></span><span class=moyet>==</span>
+
+<p>
+
+A few thoughts about the sad puppy nonsense, which caused the 2015
+Hugos (one of the most prestigious awards in Science Fiction; you could,
+for a long time, get Asimov’s “The Hugo Winners” collection of
+stories and be guaranteed a great read) to have far fewer meaningful
+winners.  
+
+<p>
+
+It started when the social justice warriors (SJWs — yes, you heard
+me say “SJW”, and I’m talking about the really
+resentful hate-filled extreme left, not just anyone left-of-center) were
+<a href="http://web.archive.org/web/20150409214945/http://monsterhunternation.com/2015/04/09/a-response-to-george-r-r-martin-from-the-author-who-started-sad-puppies/">very inappropriate to Larry Correia at Worldcon 2011</a> because they disagreed
+with his politics.
+
+<p>
+
+In retaliation, a large number of right-wing people, calling themselves
+“Sad Puppes” (or “Rabid Puppies”) have been voting for the same
+stories in all categories.  In 2015, this resulted in entire categories
+(best short story, etc.) having only candidates the “Puppies”
+voted for.
+
+<p>
+
+GRRM (George Martin), who wrote a lot about the sad puppies, just could
+not understand how Correia could have had such a negative experience,
+because he experienced the Worldcon of the 1970s. He wrote that “I have
+read Correia’s blog, and I know he says that he was treated very badly
+at the Reno worldcon, attacked for his views, denounced as a racist
+and homophobe. I was at Reno myself, but I don’t recall meeting him,
+so I don’t know the details of any of that. It shocks me to hear it,
+because the fandom I know has always been warm and welcoming to people
+of all political views.”
+
+<p>
+
+Vox Day, who started the “Rabid Puppies” list, is a radical extremist
+who attracts the resentful hate-filled far right. He gave people a list
+of sci-fi works to vote for, including his own works, and the extreme
+right voted for the items on his list without reading them or otherwise
+making an attempt to appreciate great Sci-Fi. So, you got a lot of people
+who didn’t really care for SF stacking the vote by all voting for the
+same five items (called “slate voting”).
+
+<p>
+
+Because a number of categories (including “Best Short Story”) only
+had the five works Vox Day chose as 2015 nominees, a lot of categories
+at this year’s Hugo just didn’t get winners. The Hugos big time lost.
+
+<p>
+
+There is a proposal to make it not feasible for a
+minority to stuff the Hugo nominee ballot box via slate voting
+called SDV-LPE. It’s fairly simple, and explained fully 
+<a href="http://nielsenhayden.com/makinglight/archives/016262.html">elsewhere</a>.
+SDV-LPE is a fair system which favors people choosing the works they
+genuinely liked the most while making mindless slate votes less able to
+dominate who gets nominated.
+
+<p>
+
+It’s unfortunate that the radical right destroyed the 2015 Hugos,
+but it’s also unfortunate that the radical left was so hateful towards
+Larry Correia in Worldcon 2011. The Sad/Rabid Puppies happened because
+the Twitter and click-bait internet we have encourages tribal thinking
+and mob mentality over logical, reasoned critical thinking.
+
+<p>
+
+<A name=Minor_MaraDNS_security_update></A><A name=MinorMaraDNSsecurityupdate></A><span class=moyet>==</span><span class=blogtitle><b>Minor MaraDNS security update</b></span><span class=moyet>==</span>
+
+<p>
+
+Another bug from MaraDNS’ original 2001 codebase has been found.
+There’s a 
+<a href="https://github.com/samboy/MaraDNS/issues/20">difficult to exploit buffer overflow</a>
+(actually, underflow)
+in the mararc parser.  The workaround is to not let random people
+edit your mararc file (which is usually in /etc and owned by root); 
+the fix is
+<a href="https://github.com/samboy/MaraDNS">available on GitHub</a>,
+<a href="http://maradns.samiam.org/download/2.0/snap/">as a development snapshot</a>,
+<a href="http://maradns.samiam.org/download/patches/maradns-2.0.12-ParseMaraRc.patch">not to mention a patch</a>,
+and will be made part of MaraDNS proper when I release 2.0.13 next year.
+
+<p>
+
+I checked, and, yes, MaraDNS 1.0.00 from 2002 had this particular bug.
+Most of the things like this come from the 2001-2002 codebase; I wrote
+too much code too quickly because there was a hurry to have an open-source
+DNS server that wasn’t BIND at the time.
+
+<p>
+
+The exploit is very limited.  It’s not possible to write to any memory
+with this bug; it only allows MaraDNS to read from a memory location
+she should not read from.
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

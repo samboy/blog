@@ -1,0 +1,135 @@
+<div class=blogpic>
+<img src=pics/LoAA.jpg width=160 height=120>
+</div>
+
+<h1>Legends of Ancient Arabia</h1>
+
+<h2>June 11, 2012</h2>
+
+In today's blog entry, I review the <A
+href=http://forums.civfanatics.com/showthread.php?p=11559194>Legends of
+Ancient Arabia</A> (LoAA) modpack for Civilization 4.
+
+<p>
+
+In summary, it's an excellent mod pack which is still a little rough
+around the edges.
+
+<p> <div class=blogtitle> <b>Overview</b> </div><br>
+
+LoAA is a great little mod. It covers the period of ancient Arabian
+history about a thousand years before the rise of Islam.
+
+<p>
+
+The atmosphere and feel of this game is superb. The music, which Gordon
+Farrell insisted on having with the mod, adds a very nice touch. The
+units are redrawn and have a very distinct Arabian flare to them. I
+especially like the scimitars some late game horsemen have.
+
+<p>
+
+I actually prefer the flavor of this mod over stock Civilization, since it
+is more focused and has a stronger atmosphere than Civ's "kitchen sink"
+approach to covering the entire history of mankind in a single game. One
+ends a LoAA game in roughly the same world that one begins the game in.
+
+<p> <div class=blogtitle> <b>Game mechanics</b> </div><br>
+
+Unlike a lot of mods, the tech tree has been completely revamped. There
+are some 52 different techs one can develop--the mod has even more techs
+which only the AI can develop in the game's scenario map. The tech tree
+is one for an ancient world: There is no gunpowder here, and you will
+never build a spaceship.
+
+<p>
+
+While the technology progress has been greatly altered, the feel of the
+techs will be very familiar to civilization players. The library, for
+example, may have a different name, but it benefits research the same
+way Civ4's library does. The "build all trade routes to win" victory
+condition is obviously Civ4's spaceship with different names.
+
+<p>
+
+Once hitting the end of the tech tree, there simply is no more technology
+to develop; one may as well invest all of their technology research
+points on wealth or culture.
+
+<p>
+
+Since the tech tree is cut off compared to stock Civ4, some things are
+possible to obtain--including, to my surprise, deep water ships--while
+some other techs, such as the universal suffrage civic, can not ever be
+researched by the player.
+
+<p>
+
+The mod gives the player an early strong (strength 6) archer that is
+not made obsolete until late in the middle game; having such a strong
+unit makes battles more a question of outnumbering and outmaneuvering the
+opponent instead of beating them with superior technology. City sieges are
+assisted by a catapult equivalent unit which comes early in the midgame.
+
+<p>
+
+The Civlopedia has been completely rewritten for the units and
+wonders this mod offers; it is missing entries describing the
+Arabian tribes one can play, but that's why there's the Wikipedia: <A
+href=http://en.wikipedia.org/wiki/Pre-Islamic_Arabia>http://en.wikipedia.org/wiki/Pre-Islamic_Arabia</A>
+
+<p> <div class=blogtitle> <b>Bugs</b> </div><br>
+
+The game, while really fun, feels a little incomplete. The buttons have
+minor graphical glitches which make them not quite "fit in" with Civ4's
+buttons. The mod was never updated to run on Beyond the Sword instead
+of Warlords.
+
+<p>
+
+It also has some bugs. One is minor: While there is an endgame
+technology the supposedly allows workers to build windmills, it doesn't
+actually work and windmills can never be built (the tech, at least,
+also gives the player a free tech, so researching it isn't a complete
+waste) [<b>Update</b>: I have 
+now <A href=http://samiam.org/Civ4/Arabia.html>fixed
+the windmill bug</A>]. Another annoying bug was that random maps were 
+broken; I had
+to <A href=http://samiam.org/Civ4/Arabia.html>modify an XML file</A>
+to make a proper random map for this civ.
+
+<p>
+
+The mod's biggest bug is that it drags down and becomes dog slow by the
+end game. I decided to win the game on a huge (144x96) map at marathon
+speed peacefully by building all of the trade routes. Since the other
+civs and the barbarians were not threatening me, it was just a matter
+of hitting "turn done" about 60 times until all of the trade routes
+were done.
+
+<p>
+
+In the end game of finishing last two trade routes, each "turn done"
+was a 1 to 2 minute ordeal on my high speed Core i5-2430m processor
+(albeit with a slow HD 3000 graphics chipset). It took me about two
+hours to finish up the endgame, with most of the time waiting for me
+to be able to hit "turn done" again after dealing with choosing city
+improvements and negotiation with the remaining AI players.
+
+<p> <div class=blogtitle> <b>Conclusion</b> </div><br>
+
+LoAA is a fantastic free download with only a few incomplete rough edges
+(the broken windmills and <A href=http://samiam.org/Civ4/Arabia.html>random maps</A>; the lack of optimization) stopping
+it from being a superlative game.
+
+<p>
+
+<i>To post a comment about an entry, <A
+href=/comments-closed.html>send me an email</A> and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

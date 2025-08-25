@@ -1,0 +1,62 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Root server change</h1>
+<h2>November 19, 2013</h2>
+Last January, for the first time in over five years, the IPv4 address
+of one of the DNS root servers changed.
+
+<p>
+
+As per 
+<a href="http://d.root-servers.org/renumber.html">their announcement</a>,
+d.root-servers.org is moving from 128.8.10.90 to 199.7.91.13.
+While 128.8.10.90 still works as a root server, this machine will
+eventually be taken offline.
+
+<p>
+
+This in mind, I have updated Deadwood’s default root server list as
+well as all references in the Deadwood’s documentation to use this
+new IP.  Deadwood is MaraDNS 2’s recursive resolver.
+
+<p>
+
+Anyone with a Deadwood configuration file which has the old
+128.8.10.90 IP should update that file.
+
+<p>
+
+Note that MaraDNS 1 will 
+<i>not</i>
+be updated, since this isn’t a security hole with a CVE number.  Users of
+MaraDNS 1 need to transition to MaraDNS 2; MaraDNS 1 will no longer be
+supported at all on June 21, 2015.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

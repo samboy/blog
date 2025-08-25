@@ -1,0 +1,58 @@
+<h1>MaraDNS update</h1>
+
+<h2>July 8, 2011</h2>
+
+I have updated both MaraDNS and Deadwood today.
+
+<p>
+In today's snapshot of MaraDNS, I have fixed a bug MaraDNS 2.0 has
+had with binding to IPv6 addresses.  
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+In today's snapshot of Deadwood, I have finished updating the tests to
+use Scientific Linux (SL) 6.0 as the underlying OS instead of CentOS/SL 5.
+I have also fixed a bug where synthetic "not there" replies did not generate
+completely correct DNS replies, as well as updating the example 
+<tt>dwood3rc</tt> file to have an example of how to blacklist domains.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+While the next day I plan to work on MaraDNS/Deadwood would normally be
+two weeks from today, since JFC Morfin has very generously given me a
+small contribution, I am doing a little more MaraDNS development.  Namely:
+
+<ul>
+
+<li>I have already updated the obsolete MaraDNS 1.0 branch to be current with
+    respect to security holes.  It can be downloaded at <A 
+    href=http://maradns.org/download/1.0>this location</A>.
+
+<li>I will add documents detailing how to compile MaraDNS 2.0 in
+    Windows using Mingw; this should be done next week sometime.
+
+</ul>
+
+Since Deadwood now passes all of its SQA tests, I also plan on releasing
+Deadwood 3.0.03 two weeks from today: July 22, 2011.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

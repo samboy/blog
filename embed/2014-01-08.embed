@@ -1,0 +1,1537 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Microblogs 2013-2014</h1>
+<h2>January 8, 2014</h2>
+Here are my microblogs from mid-2013 until January 8, 2014.
+
+<p>
+
+<A name=New_MaraDNS_and_Deadwood_snapshots></A><A name=NewMaraDNSandDeadwoodsnapshots></A><span class=moyet>==</span><span class=blogtitle><b>New MaraDNS and Deadwood snapshots</b></span><span class=moyet>==</span>
+
+<p>
+
+I have updated the code in Deadwood and MaraDNS that determines the version number to be able to use YYYY-MM-DD datestamps in snapshot releases:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download/2.0/snap">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap</A>
+</blockquote>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+
+<p>
+
+<i>Posted Jan 08 2014</i>
+
+<p>
+
+<A name=BuyVM_has_stock></A><A name=BuyVMhasstock></A><span class=moyet>==</span><span class=blogtitle><b>BuyVM has stock</b></span><span class=moyet>==</span>
+
+<p>
+
+BuyVM has $15/year stock again: <A href="http://doesbuyvmhavestock.com/">http://doesbuyvmhavestock.com/</A>
+
+<p>
+
+<i>Posted Jan 08 2014</i>
+
+<p>
+
+<A name=Minor_MaraDNS_update></A><A name=MinorMaraDNSupdate></A><span class=moyet>==</span><span class=blogtitle><b>Minor MaraDNS update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have updated the changelog for MaraDNS:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download/2.0/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+
+<p>
+
+<i>Posted Jan 07 2014</i>
+
+<p>
+
+<A name=How_to_say_pussywhipped_in_Spanish></A><A name=HowtosaypussywhippedinSpanish></A><span class=moyet>==</span><span class=blogtitle><b>How to say “pussywhipped” in Spanish</b></span><span class=moyet>==</span>
+
+<p>
+
+Pimsleur’s Spanish lessons will not teach you this: The way to say “pussywhipped” in Spanish is “mandelon”
+
+<p>
+
+<i>Posted Jan 05 2014</i>
+
+<p>
+
+<A name=The_Pimsleur_approach></A><A name=ThePimsleurapproach></A><span class=moyet>==</span><span class=blogtitle><b>The Pimsleur approach</b></span><span class=moyet>==</span>
+
+<p>
+
+Since this is getting advertised everywhere on the Internet, here’s my link to the Pimsleur approach:
+
+<p>
+
+<blockquote>
+<A href="http://www.pimsleur.com/">http://www.pimsleur.com/</A>
+</blockquote>
+
+The sense I get is that the Pimsleur approach 
+<i>is</i>
+effective for people serious about learning a foreign language, but the lessons can be dry and tedious.  And, yes, $450 for the full lesson set for a given language is not chump change, but mastering a foreign language is expensive.
+
+<p>
+
+For people who are serious about learning Spanish, the best way to learn it is to go to a school in a Spanish speaking country.  I learned Spanish at the Spanish Institute of Puebla with very good results:
+
+<p>
+
+<blockquote>
+<A href="http://sipuebla.com/">http://sipuebla.com/</A>
+</blockquote>
+
+Puebla is one of the safest areas of Mexico (well, except possibly for the nearby Popocatepetl volcano which acted up some last fall) and a very good city for learning Spanish.
+
+<p>
+
+(Full disclosure: The school’s owner was the best man at my wedding)
+
+<p>
+
+<i>Posted Jan 04 2014</i>
+
+<p>
+
+<A name=Minor_MaraDNSDeadwood_update></A><A name=MinorMaraDNSDeadwoodupdate></A><span class=moyet>==</span><span class=blogtitle><b>Minor MaraDNS/Deadwood update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have updated both MaraDNS and Deadwood to use YYYY-MM-DD instead of YYYYMMDD timestamps for snapshot tarballs.  I have also fixed the compile warning discussed at <A href="/comments-closed.html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>forum.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>thread-<![if gt IE 6]>&#8203;<![endif]><wbr>39.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download/2.0/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<blockquote>
+<A href="http://maradns.samiam.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<i>Posted Jan 03 2014</i>
+
+<p>
+
+<A name=Adam_Cadre_on_article_comments></A><A name=AdamCadreonarticlecomments></A><span class=moyet>==</span><span class=blogtitle><b>Adam Cadre on article comments</b></span><span class=moyet>==</span>
+
+<p>
+
+Adam Cadre, a few years ago, had this to say about people who post comments on articles:
+
+<p>
+
+<blockquote>
+<A href="http://adamcadre.ac/calendar/14/14105.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>adamcadre.<![if gt IE 6]>&#8203;<![endif]><wbr>ac/<![if gt IE 6]>&#8203;<![endif]><wbr>calendar/<![if gt IE 6]>&#8203;<![endif]><wbr>14/<![if gt IE 6]>&#8203;<![endif]><wbr>14105.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+He refers to article comments as “the bottom half of the Internet”, and I agree.  It would sure be nice if Discus and Livefyre allowed me to killfile idiots.
+
+<p>
+
+<i>Posted Jan 02 2014</i>
+
+<p>
+
+<A name=Death_of_Facebook__Hardly></A><A name=DeathofFacebookHardly></A><span class=moyet>==</span><span class=blogtitle><b>Death of Facebook?  Hardly</b></span><span class=moyet>==</span>
+
+<p>
+
+Teenagers don’t like Facebook for no particular reason except that their parents are using it:
+
+<p>
+
+<blockquote>
+<A href="http://www.telegraph.co.uk/technology/facebook/10539274/Young-users-see-Facebook-as-dead-and-buried.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>telegraph.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>technology/<![if gt IE 6]>&#8203;<![endif]><wbr>facebook/<![if gt IE 6]>&#8203;<![endif]><wbr>10539274/<![if gt IE 6]>&#8203;<![endif]><wbr>Young-<![if gt IE 6]>&#8203;<![endif]><wbr>users-<![if gt IE 6]>&#8203;<![endif]><wbr>see-<![if gt IE 6]>&#8203;<![endif]><wbr>Facebook-<![if gt IE 6]>&#8203;<![endif]><wbr>as-<![if gt IE 6]>&#8203;<![endif]><wbr>dead-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>buried.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+I do not see this as the death of Facebook; the apps teens are using instead (Twitter, Instagram, etc.) have only a subset of Facebook’s functionality.  They’ll probably be happily using Facebook as soon as they get over their “teen rebellion” stage sometime in college.  If teens were using Google+, Livejournal, or one of the open source alternatives (Diaspora, etc.), Zuckerberg should start worrying, but not until then.
+
+<p>
+
+<i>Posted Dec 29 2013</i>
+
+<p>
+
+<A name=The_Christmas_story_in_Luke></A><A name=TheChristmasstoryinLuke></A><span class=moyet>==</span><span class=blogtitle><b>The Christmas story in Luke</b></span><span class=moyet>==</span>
+
+<p>
+
+Reading Luke chapter 2 -- the Christmas story with Jesus in the manger as well as the shepherds -- I observe one detail missed by those who only know the retail-induced Christmas of buying things is this: the point of the story is that God listens to the poor as much as if not more than those who own too many materialistic things.
+
+<p>
+
+Look at what Jesus was in -- a manger. A manger is a place where animal food is stored. By putting Jesus in a manger, Luke is emphasizing the poverty God was born in, and how being poor is, if anything, better in God’s eyes than being rich.
+
+<p>
+
+<blockquote>
+<A href="http://www.biblegateway.com/passage/?search=Luke%202&amp;version=NIV">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>biblegateway.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>passage/?<![if gt IE 6]>&#8203;<![endif]><wbr>search=<![if gt IE 6]>&#8203;<![endif]><wbr>Luke%<![if gt IE 6]>&#8203;<![endif]><wbr>202&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>version=<![if gt IE 6]>&#8203;<![endif]><wbr>NIV</A>
+</blockquote>
+
+<i>Posted Dec 25 2013</i>
+
+<p>
+
+<A name=Why_the_web_was_created></A><A name=Whythewebwascreated></A><span class=moyet>==</span><span class=blogtitle><b>Why the web was created</b></span><span class=moyet>==</span>
+
+<p>
+
+As I am reading CERN’s webpage explaining the Higgs Boson, I realize the reason 
+<i>the entire web was invented (at CERN, to boot)</i>
+was to share information about theoretical physics. 
+
+<p>
+
+<blockquote>
+<A href="http://home.web.cern.ch/about/physics/search-higgs-boson">http://<![if gt IE 6]>&#8203;<![endif]><wbr>home.<![if gt IE 6]>&#8203;<![endif]><wbr>web.<![if gt IE 6]>&#8203;<![endif]><wbr>cern.<![if gt IE 6]>&#8203;<![endif]><wbr>ch/<![if gt IE 6]>&#8203;<![endif]><wbr>about/<![if gt IE 6]>&#8203;<![endif]><wbr>physics/<![if gt IE 6]>&#8203;<![endif]><wbr>search-<![if gt IE 6]>&#8203;<![endif]><wbr>higgs-<![if gt IE 6]>&#8203;<![endif]><wbr>boson</A>
+</blockquote>
+
+<i>Posted Dec 24 2013</i>
+
+<p>
+
+<A name=More_on_unions></A><A name=Moreonunions></A><span class=moyet>==</span><span class=blogtitle><b>More on unions</b></span><span class=moyet>==</span>
+
+<p>
+
+I have been having a debate about the value of unions in decreasing income inequality.  After giving me the classic conservative “the only reason the us did so well in the mid-20-century was because we won the war” chestnut, my debater claimed that Japan beat us in the 1970s and 1980s because we had unions and they did not.
+
+<p>
+
+Well, it’s a little more complicated than that.  Comparing Japan and US when talking about the importance of unions here is like comparing apples to oranges.  Japan doesn’t really have unions, true, but, then again, they come from a culture where workers really 
+<i>don’t</i>
+need unions either. 
+
+<p>
+
+In traditional Japanese culture, employees are treated well, expected to work for a single company for their entire lifetime; traditionally companies even hooked workers up with women so they could get married.
+
+<p>
+
+Compare that to the US, where, unless the workers and their unions fight tooth and nail for worker’s rights, company owners get richer while workers get poorer.
+
+<p>
+
+There are a number of reasons Japan beat the US in the late 20th century, but it was 
+<i>not</i>
+an issue of whether or not workers were treated well.
+
+<p>
+
+<i>Posted Dec 23 2013</i>
+
+<p>
+
+<A name=Holy_Mass_in_Spanish></A><A name=HolyMassinSpanish></A><span class=moyet>==</span><span class=blogtitle><b>Holy Mass in Spanish</b></span><span class=moyet>==</span>
+
+<p>
+
+You know, I think my favorite Spanish is the order of Holy Mass. It sounds very 
+nice, a lot better than mass in English (since Spanish is a lot closer to Latin). 
+I can see why the Holy Mother Church did mass only in Latin for so many years.
+
+<p>
+
+<i>Posted Dec 22 2013</i>
+
+<p>
+
+<A name=Increasing_inequality_can_be_solved></A><A name=Increasinginequalitycanbesolved></A><span class=moyet>==</span><span class=blogtitle><b>Increasing inequality can be solved</b></span><span class=moyet>==</span>
+
+<p>
+
+From a comment I made in Facebook:
+
+<p>
+
+Technological development is not the sole reason for the increasing inequality. 
+The technology of the late 1800s was a lot more primitive, yet the monopolists and 
+CEOs of that era were able to become obscenely wealthy while the workers who made 
+their products lived in squalor. The inequality is, front and center, a societal 
+and a social problem, and the ways to solve it have been known throughout the 20th 
+century (stronger unions, stronger government). 
+
+<p>
+
+We know exactly how to solve these problems; it’s just a matter of getting the 
+political will to do so.
+
+<p>
+
+<i>Posted Dec 22 2013</i>
+
+<p>
+
+<A name=Charts_showing_Americas_increasing_inequality></A><A name=ChartsshowingAmericasincreasinginequality></A><span class=moyet>==</span><span class=blogtitle><b>Charts showing America’s increasing inequality</b></span><span class=moyet>==</span>
+
+<p>
+
+Some charts showing America’s increasing inequality:
+
+<p>
+
+<blockquote>
+<A href="http://www.huffingtonpost.com/2013/12/21/charts-2013_n_4486391.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>huffingtonpost.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>12/<![if gt IE 6]>&#8203;<![endif]><wbr>21/<![if gt IE 6]>&#8203;<![endif]><wbr>charts-<![if gt IE 6]>&#8203;<![endif]><wbr>2013_<![if gt IE 6]>&#8203;<![endif]><wbr>n_<![if gt IE 6]>&#8203;<![endif]><wbr>4486391.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<i>Posted Dec 22 2013</i>
+
+<p>
+
+<A name=Were_getting_closer_to_CentOS_7></A><A name=WeregettingclosertoCentOS7></A><span class=moyet>==</span><span class=blogtitle><b>We’re getting closer to CentOS 7</b></span><span class=moyet>==</span>
+
+<p>
+
+While it won’t come out in 2013, CentOS 7 should be out by mid-2014:
+
+<p>
+
+<blockquote>
+<A href="https://access.redhat.com/site/products/Red_Hat_Enterprise_Linux/Get-Beta">https://<![if gt IE 6]>&#8203;<![endif]><wbr>access.<![if gt IE 6]>&#8203;<![endif]><wbr>redhat.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>site/<![if gt IE 6]>&#8203;<![endif]><wbr>products/<![if gt IE 6]>&#8203;<![endif]><wbr>Red_<![if gt IE 6]>&#8203;<![endif]><wbr>Hat_<![if gt IE 6]>&#8203;<![endif]><wbr>Enterprise_<![if gt IE 6]>&#8203;<![endif]><wbr>Linux/<![if gt IE 6]>&#8203;<![endif]><wbr>Get-<![if gt IE 6]>&#8203;<![endif]><wbr>Beta</A>
+</blockquote>
+
+<i>Posted Dec 20 2013</i>
+
+<p>
+
+<A name=Wow__JSON_in_AWK></A><A name=WowJSONinAWK></A><span class=moyet>==</span><span class=blogtitle><b>Wow.  JSON in AWK</b></span><span class=moyet>==</span>
+
+<p>
+
+I didn’t think AWK would be able to support JSON (no non-associative  array type, no multidimensional associative arrays) but someone has pulled it off:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/step-/JSON.awk">https://github.com/step-/JSON.awk</A>
+</blockquote>
+
+I need to see how they did it.
+
+<p>
+
+<i>Posted Dec 16 2013</i>
+
+<p>
+
+<A name=CEO_vs_Worker_pay></A><A name=CEOvsWorkerpay></A><span class=moyet>==</span><span class=blogtitle><b>CEO vs. Worker pay</b></span><span class=moyet>==</span>
+
+<p>
+
+CEO vs. worker pay, in one graph:
+
+<p>
+
+<blockquote>
+<A href="http://qz.com/156522">http://qz.com/156522</A>
+</blockquote>
+
+
+<p>
+
+
+<p>
+
+<i>Posted Dec 12 2013</i>
+
+<p>
+
+<A name=Firefox_users_only></A><A name=Firefoxusersonly></A><span class=moyet>==</span><span class=blogtitle><b>Firefox users only</b></span><span class=moyet>==</span>
+
+<p>
+
+Firefox and IE users only: 𝑌𝑜𝑢𝑟 𝑏𝑟𝑜𝑤𝑠𝑒𝑟 𝑟𝑜𝑐𝑘𝑠
+
+<p>
+
+<i>Posted Dec 11 2013</i>
+
+<p>
+
+<A name=Microsoft_can_always_bring_back_the_netbook></A><A name=Microsoftcanalwaysbringbackthenetbook></A><span class=moyet>==</span><span class=blogtitle><b>Microsoft can always bring back the netbook</b></span><span class=moyet>==</span>
+
+<p>
+
+Supposedly, Microsoft is scared of Google’s Chromebook:
+
+<p>
+
+<blockquote>
+<A href="http://www.theverge.com/2013/12/6/5181974/why-is-microsoft-scared-of-chromebooks">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>theverge.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>12/<![if gt IE 6]>&#8203;<![endif]><wbr>6/<![if gt IE 6]>&#8203;<![endif]><wbr>5181974/<![if gt IE 6]>&#8203;<![endif]><wbr>why-<![if gt IE 6]>&#8203;<![endif]><wbr>is-<![if gt IE 6]>&#8203;<![endif]><wbr>microsoft-<![if gt IE 6]>&#8203;<![endif]><wbr>scared-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>chromebooks</A>
+</blockquote>
+
+If the Chromebook really made Microsoft nervous, they could bring back the netbook by making a Windows 8 Starter.  I discuss why a Chromebook is 
+<i>not</i>
+a netbook replacement here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20131117.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20131117.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<i>Posted Dec 08 2013</i>
+
+<p>
+
+<A name=Star_Wars_vs_Star_Trek></A><A name=StarWarsvsStarTrek></A><span class=moyet>==</span><span class=blogtitle><b>Star Wars vs. Star Trek</b></span><span class=moyet>==</span>
+
+<p>
+
+Star Wars vs. Star Trek:
+
+<p>
+
+<blockquote>
+<A href="http://www.youtube.com/watch?v=vFCBwob65Nw">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>watch?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>v<![if gt IE 6]>&#8203;<![endif]><wbr>FCBwob<![if gt IE 6]>&#8203;<![endif]><wbr>65<![if gt IE 6]>&#8203;<![endif]><wbr>Nw</A>
+</blockquote>
+
+<i>Posted Nov 25 2013</i>
+
+<p>
+
+<A name=Rob></A><A name=Rob></A><span class=moyet>==</span><span class=blogtitle><b>¡Rob!</b></span><span class=moyet>==</span>
+
+<p>
+
+In early 2012, the TV series ¡Rob! ran for only eight weeks as a mid-season replacement.  It was the story of a Caucasian man married to a Mexican woman -- and all her family. While the show got good ratings, it was canceled very quickly (CBS  felt Rob's ratings were not good enough for something that came immediately after their smash comedy
+<i>The Big Bang Theory</i>).
+
+<p>
+
+The series is available on Netflix and my wife and I finally finished watching the final episode.
+
+<p>
+
+It was a very enjoyable comedy with a very enjoyable premise.  Then again, I am married to a Mexican, so my opinion is biased.
+
+<p>
+
+Here is my favorite episode of this short-lived comedy:
+
+<p>
+
+<blockquote>
+<A href="http://www.youtube.com/watch?v=jHl6gGQRF58">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>watch?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>j<![if gt IE 6]>&#8203;<![endif]><wbr>Hl<![if gt IE 6]>&#8203;<![endif]><wbr>6<![if gt IE 6]>&#8203;<![endif]><wbr>g<![if gt IE 6]>&#8203;<![endif]><wbr>GQRF<![if gt IE 6]>&#8203;<![endif]><wbr>58</A>
+</blockquote>
+
+To translate the Spanish at the beginning: "I accept my wife is hairy, but 
+<i>don't throw peanuts at her</i>"
+
+<p>
+
+Cariño means "darling"
+
+<p>
+
+"How is it possible that Rob doesn't understand any Spanish at all?"
+
+<p>
+
+"The problem is that Rob can speak at all" (literally, "in any language")
+
+<p>
+
+"The worst thing about Rob is that he buys his clothing at the Baby Gap"
+
+<p>
+
+"Well, for me I find that .... " and then the conversation becomes a bunch of quacks, followed by "I want more coffee, please".
+
+<p>
+
+I think the actress who plays "Juana" (one Jennifer Delaeo) at 12:56 is very pretty...too bad they didn't do more with her (but, then again, too bad this comedy didn't last more than eight episodes).
+
+<p>
+
+<i>Posted Nov 24 2013</i>
+
+<p>
+
+<A name=Chrome_in_CentOS_6></A><A name=ChromeinCentOS6></A><span class=moyet>==</span><span class=blogtitle><b>Chrome in CentOS 6</b></span><span class=moyet>==</span>
+
+<p>
+
+The disadvantage of running Linux on the desktop is that I am using an operating system that only 1% of desktop users use.  That 1% is fragmented across dozens of different distributions, each of which has its own application binary interface (ABI).
+
+<p>
+
+There is no practical way for Google to have their Chrome browser support all of the different flavors of Linux out there.  To wit, they no longer support CentOS 6/RHEL 6.  Fortunately, for now, there is a workaround to get Chrome to run with all the relevant Fedora system libraries in a separate directory:
+
+<p>
+
+<blockquote>
+<A href="http://chrome.richardlloyd.org.uk/">http://chrome.richardlloyd.org.uk/</A>
+</blockquote>
+
+This hack will eventually stop working, so I will have to resort to setting up an OpenVZ container to run Chrome:
+
+<p>
+
+<blockquote>
+<A href="http://myatus.com/p/x-server-with-sound-inside-an-openvz-proxmox-container/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>myatus.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>p/<![if gt IE 6]>&#8203;<![endif]><wbr>x-<![if gt IE 6]>&#8203;<![endif]><wbr>server-<![if gt IE 6]>&#8203;<![endif]><wbr>with-<![if gt IE 6]>&#8203;<![endif]><wbr>sound-<![if gt IE 6]>&#8203;<![endif]><wbr>inside-<![if gt IE 6]>&#8203;<![endif]><wbr>an-<![if gt IE 6]>&#8203;<![endif]><wbr>openvz-<![if gt IE 6]>&#8203;<![endif]><wbr>proxmox-<![if gt IE 6]>&#8203;<![endif]><wbr>container/</A>
+</blockquote>
+
+<blockquote>
+<A href="http://openvz.org/X_inside_VE">http://openvz.org/X_inside_VE</A>
+</blockquote>
+
+Slashdot
+<a href="http://linux.slashdot.org/story/13/02/11/1452259/">had a story on this lack of support</a> and I think Google made the wrong decision cutting off Chrome CentOS/RHEL/Scientific/Oracle 6 support, but it's their browser and their decision [1].
+
+<p>
+
+Google, after all, already did give me a 100% refund.  They have paid back all of the money I paid for Chrome ($0.00) as then some (they pay me a modest amount of money every month since I use their network to run ads).
+
+<p>
+
+P.S. Another solution is to use the open-source Chromium with Chrome's Flash player:
+
+<p>
+
+<blockquote>
+<A href="http://www.webupd8.org/2012/09/how-to-make-chromium-use-flash-player.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>webupd<![if gt IE 6]>&#8203;<![endif]><wbr>8.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>2012/<![if gt IE 6]>&#8203;<![endif]><wbr>09/<![if gt IE 6]>&#8203;<![endif]><wbr>how-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>make-<![if gt IE 6]>&#8203;<![endif]><wbr>chromium-<![if gt IE 6]>&#8203;<![endif]><wbr>use-<![if gt IE 6]>&#8203;<![endif]><wbr>flash-<![if gt IE 6]>&#8203;<![endif]><wbr>player.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+[1] To be fair, the Googletalk plugin for Firefox still works really nicely in CentOS 6
+
+<p>
+
+<i>Posted Nov 23 2013</i>
+
+<p>
+
+<A name=Filtering_white_noise></A><A name=Filteringwhitenoise></A><span class=moyet>==</span><span class=blogtitle><b>Filtering white noise</b></span><span class=moyet>==</span>
+
+<p>
+
+I just posted how to generate a white noise .wav file in Linux.  Here's how to take a file with random bytes and make a interesting ocean-like sound from it:
+
+<p>
+
+<tt>sox --channels=2 --encoding=ms-adpcm -b 16 -r 44100 -s whitenoise.raw oceannoise.wav gain -12 band -n 1200 200 phaser 0.7 0.7 .1 0.5 0.1 -s reverb</tt><br>
+
+<p>
+
+Or for something more windlike:
+
+<p>
+
+<tt>sox --channels=2 --encoding=ms-adpcm -b 16 -r 44100 -s whitenoise.raw windnoise.wav gain -12 band -n 800 200 phaser 0.5 0.5 .1 0.5 0.1 -s echos 0.3 0.3 187 0.2 83 0.2 131 0.2 1024 0.3 reverb</tt><br>
+
+<p>
+
+(My wife says this second incantation sounds like street traffic)
+
+<p>
+
+These incantations is based on the command line posted here:
+
+<p>
+
+<blockquote>
+<A href="http://unreasonable.org/node/303">http://unreasonable.org/node/303</A>
+</blockquote>
+
+(Note that those Sox settings do not generate true pink noise)
+
+<p>
+
+It’s also possible to download white noise files for free here:
+
+<p>
+
+<blockquote>
+<A href="https://archive.org/details/TenMinutesOfWhiteNoisePinkNoiseAndBrownianNoise">https://<![if gt IE 6]>&#8203;<![endif]><wbr>archive.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>details/<![if gt IE 6]>&#8203;<![endif]><wbr>Ten<![if gt IE 6]>&#8203;<![endif]><wbr>Minutes<![if gt IE 6]>&#8203;<![endif]><wbr>Of<![if gt IE 6]>&#8203;<![endif]><wbr>White<![if gt IE 6]>&#8203;<![endif]><wbr>Noise<![if gt IE 6]>&#8203;<![endif]><wbr>Pink<![if gt IE 6]>&#8203;<![endif]><wbr>Noise<![if gt IE 6]>&#8203;<![endif]><wbr>And<![if gt IE 6]>&#8203;<![endif]><wbr>Brownian<![if gt IE 6]>&#8203;<![endif]><wbr>Noise</A>
+</blockquote>
+
+<i>Posted Nov 22 2013</i>
+
+<p>
+
+<A name=Why_Upworthy_sucks></A><A name=WhyUpworthysucks></A><span class=moyet>==</span><span class=blogtitle><b>Why Upworthy sucks</b></span><span class=moyet>==</span>
+
+<p>
+
+Any web site that posts a video without summarizing said video is a waste of time (I never bother watching videos at a site like that).  Upworthy is the biggest offender of this.  To quote this guy: “Their headlines are the purest, crack-cocaine of clickbait. And when you do click, the content they've dredged up from YouTube never, ever pays off.”
+
+<p>
+
+<blockquote>
+<A href="http://happyplace.someecards.com/27437/upworthy-clickbait-spoilers">http://<![if gt IE 6]>&#8203;<![endif]><wbr>happyplace.<![if gt IE 6]>&#8203;<![endif]><wbr>someecards.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>27437/<![if gt IE 6]>&#8203;<![endif]><wbr>upworthy-<![if gt IE 6]>&#8203;<![endif]><wbr>clickbait-<![if gt IE 6]>&#8203;<![endif]><wbr>spoilers</A>
+</blockquote>
+
+<i>Posted Nov 21 2013</i>
+
+<p>
+
+<A name=How_to_make_white_noise></A><A name=Howtomakewhitenoise></A><span class=moyet>==</span><span class=blogtitle><b>How to make white noise</b></span><span class=moyet>==</span>
+
+<p>
+
+To generate white noise is a two-step process.
+
+<p>
+
+The first step is to generate a random file.  This can be done, in Linux, with 
+
+<p>
+
+<tt>cat /dev/urandom &gt; whitenoise.raw</tt><br>
+
+<p>
+
+Or, using the rg32-bin tool available at <A href="http://samiam.org/rg32">http://samiam.org/rg32</A>
+
+<p>
+
+<tt>rg32-bin '' &gt; whitenoise.raw</tt><br>
+
+<p>
+
+In both cases, terminate the process after a few seconds with Ctrl-C (hit the "Ctrl" and the "C" keys at the same time)
+
+<p>
+
+Sox, which is included with CentOS 6, can then make this file an audio file:
+
+<p>
+
+<tt>sox --channels=2 --encoding=ms-adpcm -b 16 -r 44100 -s whitenoise.raw whitenoise.wav gain -6</tt><br>
+
+<p>
+
+We add the “gain -6” so that the file does not distort.
+
+<p>
+
+<i>Posted Nov 21 2013</i>
+
+<p>
+
+<A name=Kids_have_it_so_easy_these_days></A><A name=Kidshaveitsoeasythesedays></A><span class=moyet>==</span><span class=blogtitle><b>Kids have it so easy these days</b></span><span class=moyet>==</span>
+
+<p>
+
+I remember wanting to look at and drool over beautiful Stevie Nicks sitting in a luxury chair inexplicably in the middle of a desert and watching MTV nonstop for two or three days until they finally showed this video (Let me tell you, I got really familiar with Duran Duran’s music).  And then, since we didn’t have a VCR, I had to content myself with memorizing every curve on her face to play over and over in my mind.
+
+<p>
+
+These days, since Stevie has kindly uploaded said video to YouTube, all I have to do is click on this link and pause at 1:51 to marvel at her beauty:
+
+<p>
+
+<blockquote>
+<A href="http://www.youtube.com/watch?v=RAbfPDZdEBU">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>watch?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>RAbf<![if gt IE 6]>&#8203;<![endif]><wbr>PDZd<![if gt IE 6]>&#8203;<![endif]><wbr>EBU</A>
+</blockquote>
+
+Kids have it so easy these days.  I also had to walk uphill in the snow to go to school, both ways (since the path from home to school went both up and down).  Well, actually, when the snow got too bad, they just closed the schools.
+
+<p>
+
+<i>Posted Nov 18 2013</i>
+
+<p>
+
+<A name=The_destruction_of_Americas_middle_class></A><A name=ThedestructionofAmericasmiddleclass></A><span class=moyet>==</span><span class=blogtitle><b>The destruction of America’s middle class</b></span><span class=moyet>==</span>
+
+<p>
+
+A good article on the destruction of America’s working class:
+
+<p>
+
+<blockquote>
+<A href="http://prospect.org/article/40-year-slump">http://<![if gt IE 6]>&#8203;<![endif]><wbr>prospect.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>article/<![if gt IE 6]>&#8203;<![endif]><wbr>40-<![if gt IE 6]>&#8203;<![endif]><wbr>year-<![if gt IE 6]>&#8203;<![endif]><wbr>slump</A>
+</blockquote>
+
+<i>Posted Nov 17 2013</i>
+
+<p>
+
+<A name=Radio_in_Spanish></A><A name=RadioinSpanish></A><span class=moyet>==</span><span class=blogtitle><b>Radio in Spanish</b></span><span class=moyet>==</span>
+
+<p>
+
+To help my daughter be fully bilingual, I like to use my Netbook to tune in to this Mexican radio station:
+
+<p>
+
+<blockquote>
+<A href="http://www.radioformula.com.mx/estaciones.asp">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>radioformula.<![if gt IE 6]>&#8203;<![endif]><wbr>com.<![if gt IE 6]>&#8203;<![endif]><wbr>mx/<![if gt IE 6]>&#8203;<![endif]><wbr>estaciones.<![if gt IE 6]>&#8203;<![endif]><wbr>asp</A>
+</blockquote>
+
+With the miracle of the Internet, I can be on a Mexican radio from anywhere in the world.
+
+<p>
+
+(Sorry about the delay posting a new microblog; the CPU fan in my main computer died and I have been madly setting things up to work on my older computers)
+
+<p>
+
+<i>Posted Nov 17 2013</i>
+
+<p>
+
+<A name=New_cannonball_run_record></A><A name=Newcannonballrunrecord></A><span class=moyet>==</span><span class=blogtitle><b>New cannonball run record</b></span><span class=moyet>==</span>
+
+<p>
+
+It looks like the 
+<a href="http://samiam.org/blog/20130728.html#A_look_at_modern_cannonball_runs">previous speed record for a cannonball run</a> 
+has been broken:
+
+<p>
+
+<blockquote>
+<A href="http://jalopnik.com/meet-the-guy-who-drove-across-the-u-s-in-a-record-28-h-1454092837">http://<![if gt IE 6]>&#8203;<![endif]><wbr>jalopnik.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>meet-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>guy-<![if gt IE 6]>&#8203;<![endif]><wbr>who-<![if gt IE 6]>&#8203;<![endif]><wbr>drove-<![if gt IE 6]>&#8203;<![endif]><wbr>across-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>u-<![if gt IE 6]>&#8203;<![endif]><wbr>s-<![if gt IE 6]>&#8203;<![endif]><wbr>in-<![if gt IE 6]>&#8203;<![endif]><wbr>a-<![if gt IE 6]>&#8203;<![endif]><wbr>record-<![if gt IE 6]>&#8203;<![endif]><wbr>28-<![if gt IE 6]>&#8203;<![endif]><wbr>h-<![if gt IE 6]>&#8203;<![endif]><wbr>1454092837</A>
+</blockquote>
+
+The current Manhattan - Los Angeles record: 28 hours 50 minutes
+
+<p>
+
+<i>Posted Oct 31 2013</i>
+
+<p>
+
+<A name=I_now_have_a_Diaspora_account></A><A name=InowhaveaDiasporaaccount></A><span class=moyet>==</span><span class=blogtitle><b>I now have a Diaspora account</b></span><span class=moyet>==</span>
+
+<p>
+
+In support of open source software, I have made an account on a Diaspora node: <A href="https://despora.de/people/0dbb61c466905a8c">https://<![if gt IE 6]>&#8203;<![endif]><wbr>despora.<![if gt IE 6]>&#8203;<![endif]><wbr>de/<![if gt IE 6]>&#8203;<![endif]><wbr>people/<![if gt IE 6]>&#8203;<![endif]><wbr>0<![if gt IE 6]>&#8203;<![endif]><wbr>dbb<![if gt IE 6]>&#8203;<![endif]><wbr>61<![if gt IE 6]>&#8203;<![endif]><wbr>c<![if gt IE 6]>&#8203;<![endif]><wbr>466905<![if gt IE 6]>&#8203;<![endif]><wbr>a<![if gt IE 6]>&#8203;<![endif]><wbr>8<![if gt IE 6]>&#8203;<![endif]><wbr>c</A>
+
+<p>
+
+<i>Posted Oct 28 2013</i>
+
+<p>
+
+<A name=Once_the_worlds_most_densly_populated_neighborhood></A><A name=Oncetheworldsmostdenslypopulatedneighborhood></A><span class=moyet>==</span><span class=blogtitle><b>Once the world’s most densly populated neighborhood</b></span><span class=moyet>==</span>
+
+<p>
+
+This place, demolished 20 years ago, was once the world’s most densly populated neighborhood:
+
+<p>
+
+<blockquote>
+<A href="http://www.dailymail.co.uk/news/article-2139914/A-rare-insight-Kowloon-Walled-City.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>dailymail.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>article-<![if gt IE 6]>&#8203;<![endif]><wbr>2139914/<![if gt IE 6]>&#8203;<![endif]><wbr>A-<![if gt IE 6]>&#8203;<![endif]><wbr>rare-<![if gt IE 6]>&#8203;<![endif]><wbr>insight-<![if gt IE 6]>&#8203;<![endif]><wbr>Kowloon-<![if gt IE 6]>&#8203;<![endif]><wbr>Walled-<![if gt IE 6]>&#8203;<![endif]><wbr>City.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<i>Posted Oct 28 2013</i>
+
+<p>
+
+<A name=Too_many_freeloaders_on_the_Internet></A><A name=ToomanyfreeloadersontheInternet></A><span class=moyet>==</span><span class=blogtitle><b>Too many freeloaders on the Internet</b></span><span class=moyet>==</span>
+
+<p>
+
+Trust me, software developers get the exact same treatment on the Internet:
+
+<p>
+
+<blockquote>
+<A href="http://www.nytimes.com/2013/10/27/opinion/sunday/slaves-of-the-internet-unite.html?pagewanted=all&amp;_r=1&amp;">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>nytimes.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>27/<![if gt IE 6]>&#8203;<![endif]><wbr>opinion/<![if gt IE 6]>&#8203;<![endif]><wbr>sunday/<![if gt IE 6]>&#8203;<![endif]><wbr>slaves-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>internet-<![if gt IE 6]>&#8203;<![endif]><wbr>unite.<![if gt IE 6]>&#8203;<![endif]><wbr>html?<![if gt IE 6]>&#8203;<![endif]><wbr>pagewanted=<![if gt IE 6]>&#8203;<![endif]><wbr>all&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;_<![if gt IE 6]>&#8203;<![endif]><wbr>r=<![if gt IE 6]>&#8203;<![endif]><wbr>1&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;</A>
+</blockquote>
+
+
+<p>
+
+
+<p>
+
+<i>Posted Oct 28 2013</i>
+
+<p>
+
+<A name=The_Psychology_of_anonymous_Online_Comments></A><A name=ThePsychologyofanonymousOnlineComments></A><span class=moyet>==</span><span class=blogtitle><b>The Psychology of [anonymous] Online Comments</b></span><span class=moyet>==</span>
+
+<p>
+
+The Psychology of [anonymous] Online Comments
+
+<p>
+
+<blockquote>
+<A href="http://www.newyorker.com/online/blogs/elements/2013/10/the-psychology-of-online-comments.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>newyorker.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>online/<![if gt IE 6]>&#8203;<![endif]><wbr>blogs/<![if gt IE 6]>&#8203;<![endif]><wbr>elements/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>psychology-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>online-<![if gt IE 6]>&#8203;<![endif]><wbr>comments.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+There’s a reason I do not allow anonymous entities on my forum at <A href="https://forum.samiam.org">https://forum.samiam.org</A> (self-signed cert)
+
+<p>
+
+
+<p>
+
+<i>Posted Oct 26 2013</i>
+
+<p>
+
+<A name=A_modest_proposal_to_neutralize_gerrymandering></A><A name=Amodestproposaltoneutralizegerrymandering></A><span class=moyet>==</span><span class=blogtitle><b>A modest proposal to neutralize gerrymandering</b></span><span class=moyet>==</span>
+
+<p>
+
+A modest proposal to neutralize gerrymandering:
+
+<p>
+
+<blockquote>
+<A href="http://www.salon.com/2013/10/20/a_modest_proposal_to_neutralize_gerrymandering/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>salon.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>20/<![if gt IE 6]>&#8203;<![endif]><wbr>a_<![if gt IE 6]>&#8203;<![endif]><wbr>modest_<![if gt IE 6]>&#8203;<![endif]><wbr>proposal_<![if gt IE 6]>&#8203;<![endif]><wbr>to_<![if gt IE 6]>&#8203;<![endif]><wbr>neutralize_<![if gt IE 6]>&#8203;<![endif]><wbr>gerrymandering/</A>
+</blockquote>
+
+Summary: Democrats in heavily red congressional districts should register as Republicans to make sure Tea Party extremists do not win primaries.  
+
+<p>
+
+Then again, if everyone with left-of-center tendencies actually bothered to go to the polls and vote every two years, the Republicans would never be able to shut down the government again after the 2014 midterms.
+
+<p>
+
+
+<p>
+
+<i>Posted Oct 22 2013</i>
+
+<p>
+
+<A name=Another_reason_to_closely_control_comments></A><A name=Anotherreasontocloselycontrolcomments></A><span class=moyet>==</span><span class=blogtitle><b>Another reason to closely control comments</b></span><span class=moyet>==</span>
+
+<p>
+
+Unfiltered comments on the mostly anonymous Internet just do not work.  They killed Usenet and can cause problems when not carefully managed.  Spammers, trolls, and sock puppets will infest boards and comment sections like maggots unless carefully monitored.  
+
+<p>
+
+As just one example:
+
+<p>
+
+<blockquote>
+<A href="http://www.slate.com/blogs/the_slatest/2013/10/21/muroch_s_world_npr_reporter_s_book_claims_fox_news_waged_pr_war_with_anonymous.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>slate.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>blogs/<![if gt IE 6]>&#8203;<![endif]><wbr>the_<![if gt IE 6]>&#8203;<![endif]><wbr>slatest/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>21/<![if gt IE 6]>&#8203;<![endif]><wbr>muroch_<![if gt IE 6]>&#8203;<![endif]><wbr>s_<![if gt IE 6]>&#8203;<![endif]><wbr>world_<![if gt IE 6]>&#8203;<![endif]><wbr>npr_<![if gt IE 6]>&#8203;<![endif]><wbr>reporter_<![if gt IE 6]>&#8203;<![endif]><wbr>s_<![if gt IE 6]>&#8203;<![endif]><wbr>book_<![if gt IE 6]>&#8203;<![endif]><wbr>claims_<![if gt IE 6]>&#8203;<![endif]><wbr>fox_<![if gt IE 6]>&#8203;<![endif]><wbr>news_<![if gt IE 6]>&#8203;<![endif]><wbr>waged_<![if gt IE 6]>&#8203;<![endif]><wbr>pr_<![if gt IE 6]>&#8203;<![endif]><wbr>war_<![if gt IE 6]>&#8203;<![endif]><wbr>with_<![if gt IE 6]>&#8203;<![endif]><wbr>anonymous.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<i>Posted Oct 22 2013</i>
+
+<p>
+
+<A name=Worst_song_ever__Hardly></A><A name=WorstsongeverHardly></A><span class=moyet>==</span><span class=blogtitle><b>Worst song ever?  Hardly!</b></span><span class=moyet>==</span>
+
+<p>
+
+Even though this song was called the worst song ever by now-defunct Blender magazine (the male lead singer replied by saying “Blender's folded, and we're still here”) as well as the #1 worst song of the 1980s in a 2011 Rolling Stone poll, I have no shame saying I enjoy this song.
+
+<p>
+
+I would rather listen to this song 10 times in a row than anything by The Smiths (then again, “How Soon is Now” is pretty good)
+
+<p>
+
+It’s 1980s super-slick electronica from a once-classic rock band. It probably gets a lot more heat than other electronica-pop from that era since it gets more airplay on classic rock stations than, say, The Art of Noise or Stacey Q (who actually likes classic rock more than the 80s electronica that made her famous)
+
+<p>
+
+After nearly two decades, this song gave finally gave this classic rock band a #1 hit (after countless changes to their line up and two name changes), but as the Rolling Stone pointed out, “To the Woodstock generation, [this band’s] success in the 1980s just seemed like the final nail in the coffin of their youth”
+
+<p>
+
+Without further ado...“We Built This City” by Starship.
+
+<p>
+
+<blockquote>
+<A href="https://www.youtube.com/watch?v=K1b8AhIsSYQ">https://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>watch?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>K<![if gt IE 6]>&#8203;<![endif]><wbr>1<![if gt IE 6]>&#8203;<![endif]><wbr>b<![if gt IE 6]>&#8203;<![endif]><wbr>8<![if gt IE 6]>&#8203;<![endif]><wbr>Ah<![if gt IE 6]>&#8203;<![endif]><wbr>Is<![if gt IE 6]>&#8203;<![endif]><wbr>SYQ</A>
+</blockquote>
+
+<i>Posted Oct 21 2013</i>
+
+<p>
+
+<A name=Intels_answer_to_the_Raspberry_Pi></A><A name=IntelsanswertotheRaspberryPi></A><span class=moyet>==</span><span class=blogtitle><b>Intel’s answer to the Raspberry Pi</b></span><span class=moyet>==</span>
+
+<p>
+
+Now that the
+<a href="http://www.raspberrypi.org/">Raspberry Pi</a>
+<a href="http://samiam.org/blog/20111023.html">is not vaporware</a>, 
+Intel has made their own 
+<a href="http://www.intel.com/content/www/us/en/do-it-yourself/galileo-maker-quark-board.html">Galileo board</a>
+to compete with it.
+
+<p>
+
+My initial impression: I prefer the Pi because the Galileo uses the messy Pentium instruction set instead of the elegant ARM instruction set.
+
+<p>
+
+<i>Posted Oct 19 2013</i>
+
+<p>
+
+<A name=David_Brin_nailed_it></A><A name=DavidBrinnailedit></A><span class=moyet>==</span><span class=blogtitle><b>David Brin nailed it</b></span><span class=moyet>==</span>
+
+<p>
+
+David Brin, on October 5, accurately guessed how the shutdown/debt ceiling crisis would end:
+
+<p>
+
+<blockquote>
+<A href="http://davidbrin.blogspot.com/2013/10/how-shut-down-will-likely-end.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>davidbrin.<![if gt IE 6]>&#8203;<![endif]><wbr>blogspot.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>how-<![if gt IE 6]>&#8203;<![endif]><wbr>shut-<![if gt IE 6]>&#8203;<![endif]><wbr>down-<![if gt IE 6]>&#8203;<![endif]><wbr>will-<![if gt IE 6]>&#8203;<![endif]><wbr>likely-<![if gt IE 6]>&#8203;<![endif]><wbr>end.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<i>Posted Oct 17 2013</i>
+
+<p>
+
+<A name=87_Republicans_who_are_still_sane></A><A name=87Republicanswhoarestillsane></A><span class=moyet>==</span><span class=blogtitle><b>87 Republicans who are still sane</b></span><span class=moyet>==</span>
+
+<p>
+
+I feel a little hope for the Republican party.  87, count then 87 Republicans stood up to the Tea Party extremists in their party and voted to keep our government running.  The debt ceiling has been lifted and the shutdown is no more.
+
+<p>
+
+For the Republican party to survive, they
+<i>must </i>
+eschew their Tea Party extremists and move closer to the center.  
+
+<p>
+
+For the record, here is the
+<a href="http://www.senate.gov/legislative/LIS/roll_call_lists/roll_call_vote_cfm.cfm?congress=113&amp;session=1&amp;vote=00219">Senate Roll call
+</a>and the
+<a href="http://clerk.house.gov/evs/2013/roll550.xml">House Roll call</a>.
+
+<p>
+
+Here’s a 
+<a href="http://www.govtrack.us/congress/members/map">map of congressional districts</a>.
+
+<p>
+
+<i>Posted Oct 16 2013</i>
+
+<p>
+
+<A name=What_you_pay_for_when_getting_RedHat></A><A name=WhatyoupayforwhengettingRedHat></A><span class=moyet>==</span><span class=blogtitle><b>What you pay for when getting RedHat</b></span><span class=moyet>==</span>
+
+<p>
+
+Open software is not free:
+
+<p>
+
+<blockquote>
+<A href="http://news.idg.no/cw/art.cfm?id=8D9F0C4D-D4EA-68DD-5C1E1E993D9FDB86">http://<![if gt IE 6]>&#8203;<![endif]><wbr>news.<![if gt IE 6]>&#8203;<![endif]><wbr>idg.<![if gt IE 6]>&#8203;<![endif]><wbr>no/<![if gt IE 6]>&#8203;<![endif]><wbr>cw/<![if gt IE 6]>&#8203;<![endif]><wbr>art.<![if gt IE 6]>&#8203;<![endif]><wbr>cfm?<![if gt IE 6]>&#8203;<![endif]><wbr>id=<![if gt IE 6]>&#8203;<![endif]><wbr>8<![if gt IE 6]>&#8203;<![endif]><wbr>D<![if gt IE 6]>&#8203;<![endif]><wbr>9<![if gt IE 6]>&#8203;<![endif]><wbr>F<![if gt IE 6]>&#8203;<![endif]><wbr>0<![if gt IE 6]>&#8203;<![endif]><wbr>C<![if gt IE 6]>&#8203;<![endif]><wbr>4<![if gt IE 6]>&#8203;<![endif]><wbr>D-<![if gt IE 6]>&#8203;<![endif]><wbr>D<![if gt IE 6]>&#8203;<![endif]><wbr>4<![if gt IE 6]>&#8203;<![endif]><wbr>EA-<![if gt IE 6]>&#8203;<![endif]><wbr>68<![if gt IE 6]>&#8203;<![endif]><wbr>DD-<![if gt IE 6]>&#8203;<![endif]><wbr>5<![if gt IE 6]>&#8203;<![endif]><wbr>C<![if gt IE 6]>&#8203;<![endif]><wbr>1<![if gt IE 6]>&#8203;<![endif]><wbr>E<![if gt IE 6]>&#8203;<![endif]><wbr>1<![if gt IE 6]>&#8203;<![endif]><wbr>E<![if gt IE 6]>&#8203;<![endif]><wbr>993<![if gt IE 6]>&#8203;<![endif]><wbr>D<![if gt IE 6]>&#8203;<![endif]><wbr>9<![if gt IE 6]>&#8203;<![endif]><wbr>FDB<![if gt IE 6]>&#8203;<![endif]><wbr>86</A>
+</blockquote>
+
+The issue with free RedHat clones like CentOS is that they 
+<a href="http://www.samiam.org/blog/20110319.html">sometimes are badly out of date</a>.
+
+<p>
+
+<i>Posted Oct 16 2013</i>
+
+<p>
+
+<A name=Moral_indignation></A><A name=Moralindignation></A><span class=moyet>==</span><span class=blogtitle><b>Moral indignation</b></span><span class=moyet>==</span>
+
+<p>
+
+“There is perhaps no phenomenon which contains so much destructive feeling as ‘moral indignation,’ which permits envy or hate to be acted out under the guise of virtue.” -Erich Fromm, in the book
+<i>Man for Himself: An Inquiry Into the Psychology of Ethics</i>
+
+<p>
+
+<i>Posted Oct 15 2013</i>
+
+<p>
+
+<A name=Does_anyone_on_board_know_how_to_fly_a_plane></A><A name=Doesanyoneonboardknowhowtoflyaplane></A><span class=moyet>==</span><span class=blogtitle><b>Does anyone on board know how to fly a plane?</b></span><span class=moyet>==</span>
+
+<p>
+
+That classic trope of 1970s movies — “does anyone on board know how to fly an airplane” — has never happened on a big jumbo jet, but, every now and then, it happens with a small plane. <A href="http://www.bbc.co.uk/news/uk-england-humber-24450534">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>uk-<![if gt IE 6]>&#8203;<![endif]><wbr>england-<![if gt IE 6]>&#8203;<![endif]><wbr>humber-<![if gt IE 6]>&#8203;<![endif]><wbr>24450534</A>
+
+<p>
+
+<i>Posted Oct 10 2013</i>
+
+<p>
+
+<A name=Lots_of_free_20th_century_science_fiction></A><A name=Lotsoffree20thcenturysciencefiction></A><span class=moyet>==</span><span class=blogtitle><b>Lots of free 20th century science fiction</b></span><span class=moyet>==</span>
+
+<p>
+
+Lots of free 20th century science fiction:
+
+<p>
+
+<blockquote>
+<A href="http://www.munseys.com/detail/mode/cat/25/Science_Fiction">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>munseys.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>detail/<![if gt IE 6]>&#8203;<![endif]><wbr>mode/<![if gt IE 6]>&#8203;<![endif]><wbr>cat/<![if gt IE 6]>&#8203;<![endif]><wbr>25/<![if gt IE 6]>&#8203;<![endif]><wbr>Science_<![if gt IE 6]>&#8203;<![endif]><wbr>Fiction</A>
+</blockquote>
+
+<i>Posted Oct 09 2013</i>
+
+<p>
+
+<A name=Have_new_Doctor_Who_episodes_been_found></A><A name=HavenewDoctorWhoepisodesbeenfound></A><span class=moyet>==</span><span class=blogtitle><b>Have new Doctor Who episodes been found?</b></span><span class=moyet>==</span>
+
+<p>
+
+Which missing episodes of Doctor Who may have been recovered for its 50th anniversary? <A href="http://thedragonsmaw.blogspot.co.uk/2013/10/what-are-newly-recovered-doctor-who.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>thedragonsmaw.<![if gt IE 6]>&#8203;<![endif]><wbr>blogspot.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>what-<![if gt IE 6]>&#8203;<![endif]><wbr>are-<![if gt IE 6]>&#8203;<![endif]><wbr>newly-<![if gt IE 6]>&#8203;<![endif]><wbr>recovered-<![if gt IE 6]>&#8203;<![endif]><wbr>doctor-<![if gt IE 6]>&#8203;<![endif]><wbr>who.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+<i>Posted Oct 08 2013</i>
+
+<p>
+
+<A name=On_the_shutdown></A><A name=Ontheshutdown></A><span class=moyet>==</span><span class=blogtitle><b>On the shutdown</b></span><span class=moyet>==</span>
+
+<p>
+
+Ever since last year’s presidential election, I have not much posted my political opinion here, but since the political state of affairs has resulted in most of the US Federal Government put to a screeching halt, I am going to make precisely one political comment.
+
+<p>
+
+This shutdown is only going to speed up the destruction of the Republican party as it exists today.  Here in California, I can already see the future of what the political climate will be like across all of the USA within a couple of decades: The Republican party has no political power to speak of in state-level politics; it may as well be a one-party state here.
+
+<p>
+
+There is a lot I don’t agree with Bill Maher on, but his recent comments about California politics are spot-on:
+
+<p>
+
+<blockquote>
+<A href="http://www.huffingtonpost.com/bill-maher/bill-maher-california_b_3999675.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>huffingtonpost.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>bill-<![if gt IE 6]>&#8203;<![endif]><wbr>maher/<![if gt IE 6]>&#8203;<![endif]><wbr>bill-<![if gt IE 6]>&#8203;<![endif]><wbr>maher-<![if gt IE 6]>&#8203;<![endif]><wbr>california_<![if gt IE 6]>&#8203;<![endif]><wbr>b_<![if gt IE 6]>&#8203;<![endif]><wbr>3999675.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+While Rachel Maddow is rather biased, this poll she cites shows the Republicans going the way of the Whigs:
+
+<p>
+
+<blockquote>
+<A href="http://maddowblog.msnbc.com/_news/2013/10/01/20773488-gop-invites-a-public-backlash?lite">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maddowblog.<![if gt IE 6]>&#8203;<![endif]><wbr>msnbc.<![if gt IE 6]>&#8203;<![endif]><wbr>com/_<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>10/<![if gt IE 6]>&#8203;<![endif]><wbr>01/<![if gt IE 6]>&#8203;<![endif]><wbr>20773488-<![if gt IE 6]>&#8203;<![endif]><wbr>gop-<![if gt IE 6]>&#8203;<![endif]><wbr>invites-<![if gt IE 6]>&#8203;<![endif]><wbr>a-<![if gt IE 6]>&#8203;<![endif]><wbr>public-<![if gt IE 6]>&#8203;<![endif]><wbr>backlash?<![if gt IE 6]>&#8203;<![endif]><wbr>lite</A>
+</blockquote>
+
+There are a lot of disadvantages to having a one-party system of politics.  There is a lot I don’t like about conservative politics, but there also is a lot I do not like about liberal politics either.  It is unfortunate the Republican party is not updating their message so we have a real choice in elections again.
+
+<p>
+
+<i>Edit</i> Since is already a meme blaming the Democrats for the shutdown, here’s a counter-meme: <A href="http://www.quickmeme.com/p/3vnbq5">http://www.quickmeme.com/p/3vnbq5</A>  Original photo: <A href="https://twitter.com/LeoShane/status/385066927506194432/photo/1">https://<![if gt IE 6]>&#8203;<![endif]><wbr>twitter.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>Leo<![if gt IE 6]>&#8203;<![endif]><wbr>Shane/<![if gt IE 6]>&#8203;<![endif]><wbr>status/<![if gt IE 6]>&#8203;<![endif]><wbr>385066927506194432/<![if gt IE 6]>&#8203;<![endif]><wbr>photo/<![if gt IE 6]>&#8203;<![endif]><wbr>1</A>
+
+<p>
+
+<i>Posted Oct 01 2013</i>
+
+<p>
+
+<A name=Death_by_GPS></A><A name=DeathbyGPS></A><span class=moyet>==</span><span class=blogtitle><b>Death by GPS</b></span><span class=moyet>==</span>
+
+<p>
+
+A story of Apple’s map application directing people to drive on to an airport runway has gone viral:
+
+<p>
+
+<blockquote>
+<A href="http://www.alaskadispatch.com/article/20130924/iphone-map-app-directs-fairbanks-drivers-airport-taxiway">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>alaskadispatch.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>article/<![if gt IE 6]>&#8203;<![endif]><wbr>20130924/<![if gt IE 6]>&#8203;<![endif]><wbr>iphone-<![if gt IE 6]>&#8203;<![endif]><wbr>map-<![if gt IE 6]>&#8203;<![endif]><wbr>app-<![if gt IE 6]>&#8203;<![endif]><wbr>directs-<![if gt IE 6]>&#8203;<![endif]><wbr>fairbanks-<![if gt IE 6]>&#8203;<![endif]><wbr>drivers-<![if gt IE 6]>&#8203;<![endif]><wbr>airport-<![if gt IE 6]>&#8203;<![endif]><wbr>taxiway</A>
+</blockquote>
+
+This is a new case of “Death by GPS”, which was covered a few years ago:
+
+<p>
+
+<blockquote>
+<A href="http://www.sacbee.com/2011/01/30/3362727/death-by-gps-in-desert.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>sacbee.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2011/<![if gt IE 6]>&#8203;<![endif]><wbr>01/<![if gt IE 6]>&#8203;<![endif]><wbr>30/<![if gt IE 6]>&#8203;<![endif]><wbr>3362727/<![if gt IE 6]>&#8203;<![endif]><wbr>death-<![if gt IE 6]>&#8203;<![endif]><wbr>by-<![if gt IE 6]>&#8203;<![endif]><wbr>gps-<![if gt IE 6]>&#8203;<![endif]><wbr>in-<![if gt IE 6]>&#8203;<![endif]><wbr>desert.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+The lesson to be learned is to not blindly trust what a GPS says.  Then again, when I lived in Georgia, the roads were so confusing, I often times would be completely lost without a GPS helping me along the way.
+
+<p>
+
+<i>Posted Sep 26 2013</i>
+
+<p>
+
+<A name=The_most_interesting_legacy_of_the_Righthaven_lawsuits></A><A name=ThemostinterestinglegacyoftheRighthavenlawsuits></A><span class=moyet>==</span><span class=blogtitle><b>The most interesting legacy of the Righthaven lawsuits</b></span><span class=moyet>==</span>
+
+<p>
+
+The most interesting legacy of the Righthaven lawsuits is probably 
+<i>Righthaven LLC v. Center For Intercultural Organizing</i>, the lawsuit where judge James Mahan stated that it was fair use to copy an entire newspaper article.  
+
+<p>
+
+Righthaven tried to appeal the case; EFF filed an 
+<a href="https://www.eff.org/sites/default/files/filenode/RH_CIO_EFF_AMICI_BRIEF.pdf">amicus curiae</a> supporting that this usage
+<i>was</i>
+fair use.
+
+<p>
+
+The docket ends in January of 2012, right around the time Righthaven was dissolved and its domain name was sold.  Since Righthaven no longer existed at that point, the case ended and Mahan’s decision is precedent that can be used in future cases (not binding precedent, since this notion of quoting an entire article being fair use never went before an appellate court)
+
+<p>
+
+<i>Edit</i> Some more information about what happened with the fair use decision: <A href="http://www.wired.com/threatlevel/2012/07/righthaven-second-life">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>wired.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>threatlevel/<![if gt IE 6]>&#8203;<![endif]><wbr>2012/<![if gt IE 6]>&#8203;<![endif]><wbr>07/<![if gt IE 6]>&#8203;<![endif]><wbr>righthaven-<![if gt IE 6]>&#8203;<![endif]><wbr>second-<![if gt IE 6]>&#8203;<![endif]><wbr>life</A>  I also like the article posted
+<a href="http://www.zdnet.com/the-backlash-against-ip-trolls-will-leave-everyone-without-rights-7000000266/">here</a>. 
+
+<p>
+
+<i>Posted Sep 24 2013</i>
+
+<p>
+
+<A name=IPv6_deployment_in_the_Internet_top_12_sites></A><A name=IPv6deploymentintheInternettop12sites></A><span class=moyet>==</span><span class=blogtitle><b>IPv6 deployment in the Internet top 12 sites</b></span><span class=moyet>==</span>
+
+<p>
+
+The Alexa top four sites (Google, Facebook, YouTube, and Yahoo) all have IPv6 addresses.  Number five (Baidu, mainly popular in China) doesn’t (but, then again, large numbers of web surfers still use Internet Explorer 6 there), number six (Wikipedia) does use IPv6.  QQ, another popular Chinese site, doesn’t, and LinkedIn has the dubious honor of being the most popular English-language website
+<i>without</i> IPv6.   Microsoft’s live.com website also doesn’t have IPv6, nor does Twitter or Amazon.  Blogspot.com, Google’s blogging platform, on the other hand, does have IPv6.
+
+<p>
+
+So, seven of the top twelve sites use IPv6.  IPv6 is slowly replacing IPv4; it’s like the battle for standard compliant web browsers in the oughts (first 2000s decade); we need to have an IPv6 version of the
+<a href="http://acid2.acidtests.org/">Acid2 test</a> to get ISPs and major websites off their butt and make IPv6 more universal.
+
+<p>
+
+<i>Posted Sep 18 2013</i>
+
+<p>
+
+<A name=Thoughts_on_the_Miss_USA_offensive_tweets></A><A name=ThoughtsontheMissUSAoffensivetweets></A><span class=moyet>==</span><span class=blogtitle><b>Thoughts on the Miss USA offensive tweets</b></span><span class=moyet>==</span>
+
+<p>
+
+As someone in an interracial marriage, an as someone who was born and has lived in the South, I am both offended and unsurprised by the offensive and possibly racist tweets made in the wake of an Indian-American winning the Miss America pageant.
+
+<p>
+
+These tweets are a natural consequence of the fact that  
+<a href="http://samiam.org/blog/20120225.html">everyone has a soapbox</a>
+on the Internet.  What was once merely whispered between two rednecks in a backwater bar in the deep South is now being proclaimed from the rooftops thanks to the miracle of the Internet.
+
+<p>
+
+Making a big deal about a handful of otherwise unknown people on Twitter saying inappropriate things because they do not like the race of the Miss America winner seems to be the ultimate tempest in a teapot.  It offends me a lot more when someone with real power, such as the congressman Steve King (not to be confused with the author 
+<i>Steven</i> King) says 
+<a href="http://news.yahoo.com/racist-steve-king-defends-illegal-immigrant-stereotypes-objective-161000034.html">things that appear to be racist</a>.  
+
+<p>
+
+The important thing is to make sure people with real political power do not pander to racists; recent elections show that is exactly what is happening.
+
+<p>
+
+Right now, the Republican party has no power to speak of in California.  One of the big reasons for this is because, two decades ago, they made a metaphorical pact with the Devil and got an upswing in popularity pandering to racists (namely, Proposition 187).  This was, however, only a brief surge; the damage is long-term and the Republican party is still perceived as the party of bigots by many in the expanding base of Latino and young voters in California.
+
+<p>
+
+<i>Posted Sep 17 2013</i>
+
+<p>
+
+<A name=Why_people_think_Friday_the_13th_is_unlucky></A><A name=WhypeoplethinkFridaythe13thisunlucky></A><span class=moyet>==</span><span class=blogtitle><b>Why people think Friday the 13th is unlucky</b></span><span class=moyet>==</span>
+
+<p>
+
+Why people think Friday the 13th is unlucky
+
+<p>
+
+<blockquote>
+<A href="http://gizmodo.com/why-people-think-friday-the-13th-is-unlucky-1306401570">http://<![if gt IE 6]>&#8203;<![endif]><wbr>gizmodo.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>why-<![if gt IE 6]>&#8203;<![endif]><wbr>people-<![if gt IE 6]>&#8203;<![endif]><wbr>think-<![if gt IE 6]>&#8203;<![endif]><wbr>friday-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>13<![if gt IE 6]>&#8203;<![endif]><wbr>th-<![if gt IE 6]>&#8203;<![endif]><wbr>is-<![if gt IE 6]>&#8203;<![endif]><wbr>unlucky-<![if gt IE 6]>&#8203;<![endif]><wbr>1306401570</A>
+</blockquote>
+
+<i>Posted Sep 13 2013</i>
+
+<p>
+
+<A name=Digital_shareecropping_indeed></A><A name=Digitalshareecroppingindeed></A><span class=moyet>==</span><span class=blogtitle><b>Digital shareecropping indeed</b></span><span class=moyet>==</span>
+
+<p>
+
+Digital sharecropping indeed:
+
+<p>
+
+<A href="http://socialfixer.com/blog/2013/09/12/beware-your-business-is-at-the-mercy-of-facebook-social-fixer-page-deleted-without-explanation/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>socialfixer.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>09/<![if gt IE 6]>&#8203;<![endif]><wbr>12/<![if gt IE 6]>&#8203;<![endif]><wbr>beware-<![if gt IE 6]>&#8203;<![endif]><wbr>your-<![if gt IE 6]>&#8203;<![endif]><wbr>business-<![if gt IE 6]>&#8203;<![endif]><wbr>is-<![if gt IE 6]>&#8203;<![endif]><wbr>at-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>mercy-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>facebook-<![if gt IE 6]>&#8203;<![endif]><wbr>social-<![if gt IE 6]>&#8203;<![endif]><wbr>fixer-<![if gt IE 6]>&#8203;<![endif]><wbr>page-<![if gt IE 6]>&#8203;<![endif]><wbr>deleted-<![if gt IE 6]>&#8203;<![endif]><wbr>without-<![if gt IE 6]>&#8203;<![endif]><wbr>explanation/</A>
+
+<p>
+
+(Digital sharecropping is when your business model is at the mercy of another company who takes a cut of your profits and can cut you off anytime)
+
+<p>
+
+<i>Posted Sep 12 2013</i>
+
+<p>
+
+<A name=Remembering_September_11></A><A name=RememberingSeptember11></A><span class=moyet>==</span><span class=blogtitle><b>Remembering September 11</b></span><span class=moyet>==</span>
+
+<p>
+
+I was in Mexico on this day in 2001: <A href="http://samiam.org/blog/20120911.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20120911.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+Here is how my web page looked in response the attack: <A href="http://samiam.org/screenshots/2001webpage.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>screenshots/<![if gt IE 6]>&#8203;<![endif]><wbr>2001<![if gt IE 6]>&#8203;<![endif]><wbr>webpage.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+<i>Posted Sep 11 2013</i>
+
+<p>
+
+<A name=On_the_new_iPhones></A><A name=OnthenewiPhones></A><span class=moyet>==</span><span class=blogtitle><b>On the new iPhones</b></span><span class=moyet>==</span>
+
+<p>
+
+It’s brilliant marketing on the part of Apple and the cell phone carriers that the cheapest iPhone 5c is a $550 phone masquerading as a $100 phone.
+
+<p>
+
+I’ll stick to my Nokia X2-00 phone.  Mobile web sucks (especially for posting), the old-school Nokias can survive more drops than any smartphone, and it’s only a $100 replacement (unlocked) if anything happens to the phone.
+
+<p>
+
+<i>Posted Sep 10 2013</i>
+
+<p>
+
+<A name=Its_possible_to_use_Dillo_to_post_in_my_forum></A><A name=ItspossibletouseDillotopostinmyforum></A><span class=moyet>==</span><span class=blogtitle><b>It’s possible to use Dillo to post in my forum</b></span><span class=moyet>==</span>
+
+<p>
+
+One of the nice things about the back-end forum software I am using is that it is possible to post here using 
+<a href="http://samiam.org/software/dillo/">Dillo</a>.  Indeed, I have decided to turn off reCAPTCHA because:
+
+<p>
+
+<ul>
+<li> It does not work.  Stopforumspam works a lot better.
+<li> It makes it more difficult for visually impaired people and people using older or non-mainstream browsers (such as Dillo) to register here.
+<li> People who type in reCAPTCHAs are providing data that benefits only Google without getting paid for their work (micro-“digital sharecropping”)
+</ul>
+
+<p>
+
+If I start seeing a lot more successful spam registrations, I will turn it on again, but, until then, I think the common sense questions are just as effective at slowing down dumb robots.
+
+<p>
+
+<i>Posted Sep 08 2013</i>
+
+<p>
+
+<A name=Liberal_and_Conservative_are_just_labels></A><A name=LiberalandConservativearejustlabels></A><span class=moyet>==</span><span class=blogtitle><b>“Liberal” and “Conservative” are just labels</b></span><span class=moyet>==</span>
+
+<p>
+
+I think there is something really cool about a classically really “liberal” group, ACLU, joining forces with a classically really “conservative” group, the NRA: 
+
+<p>
+
+<blockquote>
+<A href="http://pjmedia.com/tatler/2013/09/05/nra-aclu-join-forces-against-nsa-on-guns/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>pjmedia.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>tatler/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>09/<![if gt IE 6]>&#8203;<![endif]><wbr>05/<![if gt IE 6]>&#8203;<![endif]><wbr>nra-<![if gt IE 6]>&#8203;<![endif]><wbr>aclu-<![if gt IE 6]>&#8203;<![endif]><wbr>join-<![if gt IE 6]>&#8203;<![endif]><wbr>forces-<![if gt IE 6]>&#8203;<![endif]><wbr>against-<![if gt IE 6]>&#8203;<![endif]><wbr>nsa-<![if gt IE 6]>&#8203;<![endif]><wbr>on-<![if gt IE 6]>&#8203;<![endif]><wbr>guns/</A>
+</blockquote>
+
+<i>Posted Sep 05 2013</i>
+
+<p>
+
+<A name=On_Miley_Cyrus_twerking></A><A name=OnMileyCyrustwerking></A><span class=moyet>==</span><span class=blogtitle><b>On Miley Cyrus’ twerking</b></span><span class=moyet>==</span>
+
+<p>
+
+Miley Cyrus twerking? Meh.  Now, what would be epic is Miley Cyrus singing “Closer” by Nine Inch Nails.
+
+<p>
+
+<i>Posted Aug 29 2013</i>
+
+<p>
+
+<A name=Thats_one_way_to_stop_telemarketers></A><A name=Thatsonewaytostoptelemarketers></A><span class=moyet>==</span><span class=blogtitle><b>That’s one way to stop telemarketers</b></span><span class=moyet>==</span>
+
+<p>
+
+Here’s one way to stop telemarketers: Charge them by the minute to call me.
+
+<p>
+
+<blockquote>
+<A href="http://www.bbc.co.uk/news/technology-23869462">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>technology-<![if gt IE 6]>&#8203;<![endif]><wbr>23869462</A>
+</blockquote>
+
+<i>Posted Aug 29 2013</i>
+
+<p>
+
+<A name=I_try_to_avoid_being_a_digital_sharecropper></A><A name=Itrytoavoidbeingadigitalsharecropper></A><span class=moyet>==</span><span class=blogtitle><b>I try to avoid being a “digital sharecropper”</b></span><span class=moyet>==</span>
+
+<p>
+
+The reason I like to post here on my microblog instead of some big corporate website (Facebook, Twitter, etc.) or online community is became I’m the one who gets the ad revenue should something here go viral:
+
+<p>
+
+<blockquote>
+<A href="http://www.codinghorror.com/blog/2009/08/are-you-a-digital-sharecropper.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>codinghorror.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>2009/<![if gt IE 6]>&#8203;<![endif]><wbr>08/<![if gt IE 6]>&#8203;<![endif]><wbr>are-<![if gt IE 6]>&#8203;<![endif]><wbr>you-<![if gt IE 6]>&#8203;<![endif]><wbr>a-<![if gt IE 6]>&#8203;<![endif]><wbr>digital-<![if gt IE 6]>&#8203;<![endif]><wbr>sharecropper.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+I don’t mind my occasional contribution to Wikipedia since they are strictly ad-free, and since anything there is released under an open license.
+
+<p>
+
+I also don’t mind using Facebook to share a photo with old acquaintances or using Twitter to have some level of contact with actors in the Mexican 
+<i>telenovelas</i>
+that I watch.  But anything substantial is here on my own webpage. 
+
+<p>
+
+The reason I no longer get too involved with online communities is because it’s just too much work for what amounts to nothing more than a virtual pat on the back, and because web-1.0 style online communities get really angry really quickly at any attempt to make money from one’s hard work.
+
+<p>
+
+“Digital sharecropping” can also refer to programmers whose revenue stream is tightly controlled by another company, such as the companies making games for Facebook or people whose income comes from selling iPhone apps.  
+
+<p>
+
+<i>Posted Aug 29 2013</i>
+
+<p>
+
+<A name=11_Words_without_English_equivalents></A><A name=11WordswithoutEnglishequivalents></A><span class=moyet>==</span><span class=blogtitle><b>11 Words without English equivalents</b></span><span class=moyet>==</span>
+
+<p>
+
+11 words without English equivalents:
+
+<p>
+
+<blockquote>
+<A href="http://www.huffingtonpost.com/ella-frances-sanders/11-untranslatable-words-f_b_3817711.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>huffingtonpost.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>ella-<![if gt IE 6]>&#8203;<![endif]><wbr>frances-<![if gt IE 6]>&#8203;<![endif]><wbr>sanders/<![if gt IE 6]>&#8203;<![endif]><wbr>11-<![if gt IE 6]>&#8203;<![endif]><wbr>untranslatable-<![if gt IE 6]>&#8203;<![endif]><wbr>words-<![if gt IE 6]>&#8203;<![endif]><wbr>f_<![if gt IE 6]>&#8203;<![endif]><wbr>b_<![if gt IE 6]>&#8203;<![endif]><wbr>3817711.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+I can think of a couple more in Spanish: 
+<i>Tocayo</i>, someone you share a name with, and
+<i>paquetería</i>, where you store your bags when entering a store.
+
+<p>
+
+<i>Posted Aug 29 2013</i>
+
+<p>
+
+<A name=Im_glad_to_see_web_anonymity_go_away></A><A name=Imgladtoseewebanonymitygoaway></A><span class=moyet>==</span><span class=blogtitle><b>I’m glad to see web anonymity go away</b></span><span class=moyet>==</span>
+
+<p>
+
+To quote
+<a href="http://www.theverge.com/2013/8/28/4667738/the-decline-of-the-serial-killer-and-rise-of-the-sharing-economy">this article</a>, 
+“Craigslist is a Web 1.0 dinosaur that has stubbornly resisted the shift to a less anonymous, more social web”.  
+
+<p>
+
+People are more respectful and flame less when their name is on it.  I’m glad to see the troll-filled anonymous web going away.  
+
+<p>
+
+
+<p>
+
+<i>Posted Aug 29 2013</i>
+
+<p>
+
+<A name=Melbourne_IT_and_hijacked_domains></A><A name=MelbourneITandhijackeddomains></A><span class=moyet>==</span><span class=blogtitle><b>Melbourne IT and hijacked domains</b></span><span class=moyet>==</span>
+
+<p>
+
+Back in 2005, Melbourne IT allowed one of its clients to 
+<a href="http://spectrum.ieee.org/telecom/security/panix-attack">hijack the panix.com domain</a>, and did nothing all weekend to restore the domain before finally restoring it on Monday morning.  Now I am hearing that 
+<a href="http://www.theregister.co.uk/2013/08/27/twitter_ny_times_in_domain_hijack/">Melbourne IT allowed nytimes.com and some of Twitter’s domains to be hijacked</a>.
+
+<p>
+
+Here, at least, unlike the Panix attack, nytimes.com and the relevant Twitter domains appear to have already been using Melbourne IT as their upstream registrar, and unlike last time, Melbourne IT 
+<i>immediately</i> fixed the hijack.
+
+<p>
+
+<i>Posted Aug 28 2013</i>
+
+<p>
+
+<A name=Chess_Variants_with_realworld_tournament_play></A><A name=ChessVariantswithrealworldtournamentplay></A><span class=moyet>==</span><span class=blogtitle><b>Chess Variants with real-world tournament play</b></span><span class=moyet>==</span>
+
+<p>
+
+Thousands upon thousands of Chess variants have been proposed.  Most have never been played.  Of the relatively few played, only a small handful have had real-world face-to-face tournaments.  Namely:
+
+<p>
+
+<ul>
+<li> Bughouse Chess (a frequent sideshow in Chess tournaments) <A href="http://www.chess.com/chessopedia/view/bughouse-chess">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>chess.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>chessopedia/<![if gt IE 6]>&#8203;<![endif]><wbr>view/<![if gt IE 6]>&#8203;<![endif]><wbr>bughouse-<![if gt IE 6]>&#8203;<![endif]><wbr>chess</A>
+<li> Chess960/FischerRandom chess (another frequent sideshow) <A href="http://www.chess.com/chessopedia/view/chess-960">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>chess.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>chessopedia/<![if gt IE 6]>&#8203;<![endif]><wbr>view/<![if gt IE 6]>&#8203;<![endif]><wbr>chess-<![if gt IE 6]>&#8203;<![endif]><wbr>960</A>
+<li> Circular Chess (which had and might still have an annual face to face “world championship” for many years) <A href="http://www.circularchess.co.uk/">http://www.circularchess.co.uk/</A>
+<li> Polgar Star Chess (has an annual “world championship” in Hungary every year) <A href="http://polgarstarchess.com/">http://polgarstarchess.com/</A>
+<li> Grand Chess (Possibly the best Chess Variant out there.  This was once a sideshow tournament at the 1996 Chess Olympiad in Armenia; a couple of those games were mentioned in a 1997 Chess Life article by Burt Hochberg) <A href="http://www.mindsports.nl/index.php/arena/grand-chess/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>mindsports.<![if gt IE 6]>&#8203;<![endif]><wbr>nl/<![if gt IE 6]>&#8203;<![endif]><wbr>index.<![if gt IE 6]>&#8203;<![endif]><wbr>php/<![if gt IE 6]>&#8203;<![endif]><wbr>arena/<![if gt IE 6]>&#8203;<![endif]><wbr>grand-<![if gt IE 6]>&#8203;<![endif]><wbr>chess/</A>
+<li> Gliński's hexagonal chess (tournaments between 1976 and 1982) <A href="http://en.wikipedia.org/wiki/Hexagonal_chess#Gli.C5.84ski.27s_hexagonal_chess">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Hexagonal_<![if gt IE 6]>&#8203;<![endif]><wbr>chess#<![if gt IE 6]>&#8203;<![endif]><wbr>Gli.<![if gt IE 6]>&#8203;<![endif]><wbr>C<![if gt IE 6]>&#8203;<![endif]><wbr>5.<![if gt IE 6]>&#8203;<![endif]><wbr>84<![if gt IE 6]>&#8203;<![endif]><wbr>ski.<![if gt IE 6]>&#8203;<![endif]><wbr>27<![if gt IE 6]>&#8203;<![endif]><wbr>s_<![if gt IE 6]>&#8203;<![endif]><wbr>hexagonal_<![if gt IE 6]>&#8203;<![endif]><wbr>chess</A>
+<li> Mongredien chess (swap the Queen’s knight with the King’s bishop so the Queenside flank has two bishops and the Kingside flank has two knights) had a tournament back in 1868. <A href="http://en.wikipedia.org/wiki/Displacement_chess">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Displacement_<![if gt IE 6]>&#8203;<![endif]><wbr>chess</A>  This is also Chess960 opening setup #692.
+</ul>
+
+<p>
+
+The national variants almost certainly have had tournaments:
+
+<p>
+
+<ul>
+<li> Chinese Chess/Xiangqi (mainly in China) <A href="http://www.crockford.com/chess/xiangqi.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>crockford.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>chess/<![if gt IE 6]>&#8203;<![endif]><wbr>xiangqi.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> Korean Chess/Changgi <A href="http://history.chess.free.fr/changgi.htm">http://<![if gt IE 6]>&#8203;<![endif]><wbr>history.<![if gt IE 6]>&#8203;<![endif]><wbr>chess.<![if gt IE 6]>&#8203;<![endif]><wbr>free.<![if gt IE 6]>&#8203;<![endif]><wbr>fr/<![if gt IE 6]>&#8203;<![endif]><wbr>changgi.<![if gt IE 6]>&#8203;<![endif]><wbr>htm</A>
+<li> Shogi (mainly in Japan; possibly the best Chess Variant out there) 
+<li> Shogi has a number of variants.  Both Tori Shogi and 5x5 Mini Shogi have been played in the Royston Shogi Club by a handful of players: <A href="http://www.shogi.net/shogi-l/Archive/1995/Nsep29-03.txt">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>shogi.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>shogi-<![if gt IE 6]>&#8203;<![endif]><wbr>l/<![if gt IE 6]>&#8203;<![endif]><wbr>Archive/<![if gt IE 6]>&#8203;<![endif]><wbr>1995/<![if gt IE 6]>&#8203;<![endif]><wbr>Nsep<![if gt IE 6]>&#8203;<![endif]><wbr>29-<![if gt IE 6]>&#8203;<![endif]><wbr>03.<![if gt IE 6]>&#8203;<![endif]><wbr>txt</A> (this is only one of many Royston Shogi face-to-face tournaments with Tori and/or Mini Shogi)
+<li> Thai Chess/Makruk <A href="http://ancientchess.com/page/play-makruk.htm">http://<![if gt IE 6]>&#8203;<![endif]><wbr>ancientchess.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>page/<![if gt IE 6]>&#8203;<![endif]><wbr>play-<![if gt IE 6]>&#8203;<![endif]><wbr>makruk.<![if gt IE 6]>&#8203;<![endif]><wbr>htm</A>
+<li> Shnterej/Ethiopian Chess <A href="http://en.wikipedia.org/wiki/Senterej">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Senterej</A>
+<li> Shatar (Mongolian Chess) <A href="http://www.chessvariants.org/oriental.dir/shatar.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>chessvariants.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>oriental.<![if gt IE 6]>&#8203;<![endif]><wbr>dir/<![if gt IE 6]>&#8203;<![endif]><wbr>shatar.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> Sittuyin (Burmese Chess) <A href="http://www.ancientchess.com/page/play-sittuyin.htm">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>ancientchess.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>page/<![if gt IE 6]>&#8203;<![endif]><wbr>play-<![if gt IE 6]>&#8203;<![endif]><wbr>sittuyin.<![if gt IE 6]>&#8203;<![endif]><wbr>htm</A>
+<li> There are probably other national variants
+</ul>
+
+<p>
+
+So, of all of the possible Chess variants out there, only 16 have been notable enough to have a real tournament, or be an integral part of a culture.
+
+<p>
+
+This is what usually happens with a Chess variant: Someone comes up with some interesting rule changes to Chess.  The game is usually not playable (greatly favors White, drawish, etc.)  Even if the game is playable, it’s nay to impossible to drum up interest in the variant.  It only takes a minute to come up with new rules for Chess, but it takes months, if not years to get familiar with the new rules to see if the game is balanced and not drawish.
+
+<p>
+
+For example, I once had a Chess variant invention called
+<a href="http://samiam.org/schoolbook/">Schoolbook Chess</a>.  It looked pretty good (I did some computer testing with it and what not before making it public in 2006), and it took three years and extensive computer testing to show that White has a very strong, possibly winning game by playing 1. c4.  
+
+<p>
+
+Drumming up support to get a face-to-face tournament going?  Good luck!  There are thousands of proposed Chess Variants over at my 
+<a href="http://microblog.samiam.org/ZoG/">Zillions Museum</a>.  There have only been, at most, a couple of dozen Chess Variants with real face-to-face tournament play, even counting things like Tori Shogi, which was a sideshow with only four participants at an already small Shogi tournament in England. (To be fair, there probably have been Tori Shogi tournaments in Japan, but my Japanese is not strong enough to look them up online).
+
+<p>
+
+<i>Posted Aug 27 2013</i>
+
+<p>
+
+<A name=Beautiful_optical_illusions></A><A name=Beautifulopticalillusions></A><span class=moyet>==</span><span class=blogtitle><b>Beautiful optical illusions</b></span><span class=moyet>==</span>
+
+<p>
+
+Some beautiful optical illusions:
+
+<p>
+
+<blockquote>
+<A href="http://blogs.smithsonianmag.com/artscience/2013/08/each-of-these-patterns-move-but-its-all-an-illusion/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>blogs.<![if gt IE 6]>&#8203;<![endif]><wbr>smithsonianmag.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>artscience/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>08/<![if gt IE 6]>&#8203;<![endif]><wbr>each-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>these-<![if gt IE 6]>&#8203;<![endif]><wbr>patterns-<![if gt IE 6]>&#8203;<![endif]><wbr>move-<![if gt IE 6]>&#8203;<![endif]><wbr>but-<![if gt IE 6]>&#8203;<![endif]><wbr>its-<![if gt IE 6]>&#8203;<![endif]><wbr>all-<![if gt IE 6]>&#8203;<![endif]><wbr>an-<![if gt IE 6]>&#8203;<![endif]><wbr>illusion/</A>
+</blockquote>
+
+<i>Posted Aug 23 2013</i>
+
+<p>
+
+<A name=People_are_becoming_nicer></A><A name=Peoplearebecomingnicer></A><span class=moyet>==</span><span class=blogtitle><b>People are becoming nicer</b></span><span class=moyet>==</span>
+
+<p>
+
+Now that social media sites encourage people to use their real names, people are becoming more nice and positive:
+
+<p>
+
+<blockquote>
+<A href="http://ideas.time.com/2013/08/21/how-the-news-got-less-mean/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>ideas.<![if gt IE 6]>&#8203;<![endif]><wbr>time.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>08/<![if gt IE 6]>&#8203;<![endif]><wbr>21/<![if gt IE 6]>&#8203;<![endif]><wbr>how-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>news-<![if gt IE 6]>&#8203;<![endif]><wbr>got-<![if gt IE 6]>&#8203;<![endif]><wbr>less-<![if gt IE 6]>&#8203;<![endif]><wbr>mean/</A>
+</blockquote>
+
+
+<p>
+
+
+<p>
+
+<i>Posted Aug 22 2013</i>
+
+<p>
+
+<A name=So_much_for_anonymous_comments></A><A name=Somuchforanonymouscomments></A><span class=moyet>==</span><span class=blogtitle><b>So much for anonymous comments</b></span><span class=moyet>==</span>
+
+<p>
+
+Arianna Huffington 
+<a href="http://www.boston.com/business/innovation/blogs/inside-the-hive/2013/08/21/huffinton-trolls-uglier-than-ever-cutting-off-anonymous-comments/0RQXoqsI5VWD8f3wEs0i2L/blog.html">concedes that anonymous comments bring out the ugliest in people</a>.  I have known this for a while:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20130728.html#The_name_of_the_deportation_bill">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130728.<![if gt IE 6]>&#8203;<![endif]><wbr>html#<![if gt IE 6]>&#8203;<![endif]><wbr>The_<![if gt IE 6]>&#8203;<![endif]><wbr>name_<![if gt IE 6]>&#8203;<![endif]><wbr>of_<![if gt IE 6]>&#8203;<![endif]><wbr>the_<![if gt IE 6]>&#8203;<![endif]><wbr>deportation_<![if gt IE 6]>&#8203;<![endif]><wbr>bill</A>
+</blockquote>
+
+<blockquote>
+<A href="http://samiam.org/blog/20110512.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20110512.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<i>Posted Aug 21 2013</i>
+
+<p>
+
+<A name=August_2013_archive></A><A name=August2013archive></A><span class=moyet>==</span><span class=blogtitle><b>August 2013 archive</b></span><span class=moyet>==</span>
+
+<p>
+
+I have archived the microblogs posted between July 30 and August 18, 2013:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20130818.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130818.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

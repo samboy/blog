@@ -1,0 +1,52 @@
+<h1>Web site plans</h1>
+
+<h2>October 12, 2011</h2>
+
+<div class=blogtitle>
+<b>Looking ahead</b>
+</div><br>
+
+While smartphone views are currently only a small percentage of viewers 
+of my web site (IE6, for better or for worse <i>still</i> has a higher
+percentage), their number is increasing while legacy IE user percentages
+are decreasing.
+
+<p>
+
+That in mind, here are some tentative plans for updating the web page
+design in 2012:
+
+<ul>
+<li>The web site was a table-free design until testing shows this was
+    causing problems in Internet Explorer 7 and 8.  I had to add tables
+    to work around CSS bugs in these older browsers.<p>
+<li>That in mind, I would like to return to the original table-free
+    design, along with &lt;!--[if lt IE 9]&gt;&lt;![endif]--&gt; code
+    to show only ancient IE releases tables.<p>
+<li>The webpage shows a banner suggesting upgrading for IE6 users.  I may 
+    either
+    keep this banner, remove the banner and test the webpage design in my
+    older laptop with an IE6 virtual machine, or lock out IE6 users
+    using code like <A 
+    href=http://code.google.com/p/ie6-upgrade-warning/>this</A>.<p>
+<li>I will need to have access to some kind of smartphone to perform
+    small browser testing.<p>
+<li>I will keep the same appearance as the current design; the
+    redesign is so smartphone users on small screens see the ads at the 
+    bottom, instead of the right, of the page.<p>
+<li>I have already updated my <A href=/alt.hackers.1995>archive of some 
+    ancient Usenet postings</A> with a design that works well on smartphones;
+    this design works well because those pages do not have ads--I can simply
+    hide the right-hand sidebar from small-screen users.  Of course, 
+    looking at 80-column fix-width text on a tiny smartphone screen is
+    never going to be the same as looking at it on a modern tablet or PC.<p>
+</ul>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

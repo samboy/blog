@@ -1,0 +1,961 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>Microblogs June-July 2013</h1>
+<h2>July 28, 2013</h2>
+These are the microblogs I posted between June 5 and July 17, 2013.
+
+<p>
+
+<A name=We_now_know_PayPal_uses_64bit_ints></A><A name=WenowknowPayPaluses64bitints></A><span class=moyet>==</span><span class=blogtitle><b>We now know PayPal uses 64-bit ints</b></span><span class=moyet>==</span>
+
+<p>
+
+We now know PayPal uses signed 64-bit integers to store people’s PayPal balances:
+
+<p>
+
+<blockquote>
+<A href="http://www.bbc.co.uk/news/world-us-canada-23352230">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>world-<![if gt IE 6]>&#8203;<![endif]><wbr>us-<![if gt IE 6]>&#8203;<![endif]><wbr>canada-<![if gt IE 6]>&#8203;<![endif]><wbr>23352230</A>
+</blockquote>
+
+2 to the power of 63 is 9,223,372,036,854,775,808.  In cents, the number is $92,233,720,368,547,758.08, and the press claims this gentleman had a balance of $92,233,720,368,547,800.
+
+<p>
+
+<i>Posted Jul 17 2013</i>
+
+<p>
+
+<A name=Time_to_learn_ARM_assembly></A><A name=TimetolearnARMassembly></A><span class=moyet>==</span><span class=blogtitle><b>Time to learn ARM assembly</b></span><span class=moyet>==</span>
+
+<p>
+
+The day when ARM assembly becomes a very hot skill is getting closer and closer:
+
+<p>
+
+<blockquote>
+<A href="http://www.bbc.co.uk/news/business-23352536">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>business-<![if gt IE 6]>&#8203;<![endif]><wbr>23352536</A>
+</blockquote>
+
+<i>Posted Jul 17 2013</i>
+
+<p>
+
+<A name=New_DeadwoodMaraDNS_bugfix_release></A><A name=NewDeadwoodMaraDNSbugfixrelease></A><span class=moyet>==</span><span class=blogtitle><b>New Deadwood/MaraDNS bugfix release</b></span><span class=moyet>==</span>
+
+<p>
+
+A couple of days ago, I fixed a bug in Deadwood; a very rare DNS packet would cause a name to not resolve:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20130713.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130713.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+I have now made a formal testing release with the seven-line patch to fix this bug, MaraDNS-2.0.07c (Deadwood 3.2.03c):
+
+<p>
+
+<blockquote>
+<A href="http://maradns.org/download/2.0/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<blockquote>
+<A href="http://maradns.org/deadwood/snap/">http://maradns.org/deadwood/snap/</A>
+</blockquote>
+
+This will probably become the stable MaraDNS/Deadwood release in August or September.
+
+<p>
+
+<i>Posted Jul 17 2013</i>
+
+<p>
+
+<A name=Woman_in_Korea_being_abused_Fake_video></A><A name=WomaninKoreabeingabusedFakevideo></A><span class=moyet>==</span><span class=blogtitle><b>Woman in Korea being abused: Fake video</b></span><span class=moyet>==</span>
+
+<p>
+
+There are stories making the rounds, even on professional news websites, about a video showing a Korean woman being abused by two guys in a bar.
+
+<p>
+
+According to a source who claims to be one of the guys, the video was staged and the people in the video are actors: 
+
+<p>
+
+<blockquote>
+<A href="http://imgur.com/a/5Z6OF">http://imgur.com/a/5Z6OF</A>
+</blockquote>
+
+<i>Posted Jul 16 2013</i>
+
+<p>
+
+<A name=Zillions_of_Games_future></A><A name=ZillionsofGamesfuture></A><span class=moyet>==</span><span class=blogtitle><b>Zillions of Games’ future</b></span><span class=moyet>==</span>
+
+<p>
+
+During the height of the dot-com boom, Jeff Mallet and Mark Lefler worked together to create a game called “Zillions of Games” (ZoG).  Not only could ZoG play Chess, it could play pretty much any variant of Chess as well as a lot of other abstract strategy games.
+
+<p>
+
+It was a huge hit in the Chess variant community, with hundreds of games made by well over a dozen people soon being available for Zillions.  Unfortunately for Mallet and Lefler, this community was very tiny, and they did not make too much revenue with Zillions.  After releasing 2.0 in 2002, Zillions began to languish: They stopped updating or making new versions of the Zillions program.
+
+<p>
+
+Despite this, they kept their website up, and until 2011 or 2012, they allowed people to submit new games running in the Zillions engine to the website.  I submitted my own modest Chess Variant there in 2006.  Well, some time in 2012, they stopped taking new game submissions, and, indeed, it is no longer possible to download the older games:
+
+<p>
+
+<blockquote>
+<A href="http://boardgamegeek.com/thread/835811/what-happened-to-zillions-of-games">http://<![if gt IE 6]>&#8203;<![endif]><wbr>boardgamegeek.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>thread/<![if gt IE 6]>&#8203;<![endif]><wbr>835811/<![if gt IE 6]>&#8203;<![endif]><wbr>what-<![if gt IE 6]>&#8203;<![endif]><wbr>happened-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>zillions-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>games</A>
+</blockquote>
+
+And, there is a rumor that Zillions will go away for good soon:
+
+<p>
+
+<blockquote>
+<A href="http://zillionsofgames.com/discus/messages/3/1527.html?1371650945">http://<![if gt IE 6]>&#8203;<![endif]><wbr>zillionsofgames.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>discus/<![if gt IE 6]>&#8203;<![endif]><wbr>messages/<![if gt IE 6]>&#8203;<![endif]><wbr>3/<![if gt IE 6]>&#8203;<![endif]><wbr>1527.<![if gt IE 6]>&#8203;<![endif]><wbr>html?<![if gt IE 6]>&#8203;<![endif]><wbr>1371650945</A>
+</blockquote>
+
+<blockquote>
+<A href="http://tvtropes.org/pmwiki/posts.php?discussion=13716534090A27426800&amp;page=1">http://<![if gt IE 6]>&#8203;<![endif]><wbr>tvtropes.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>pmwiki/<![if gt IE 6]>&#8203;<![endif]><wbr>posts.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>discussion=<![if gt IE 6]>&#8203;<![endif]><wbr>13716534090<![if gt IE 6]>&#8203;<![endif]><wbr>A<![if gt IE 6]>&#8203;<![endif]><wbr>27426800&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>page=<![if gt IE 6]>&#8203;<![endif]><wbr>1</A>
+</blockquote>
+
+<i>Update: Jeff Mallett denies that there are any plans to bring the Zillions site offline</i>
+
+<p>
+
+<blockquote>
+<A href="http://en.wikipedia.org/w/index.php?title=Zillions_of_Games&amp;diff=next&amp;oldid=508466091">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>w/<![if gt IE 6]>&#8203;<![endif]><wbr>index.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>title=<![if gt IE 6]>&#8203;<![endif]><wbr>Zillions_<![if gt IE 6]>&#8203;<![endif]><wbr>of_<![if gt IE 6]>&#8203;<![endif]><wbr>Games&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>diff=<![if gt IE 6]>&#8203;<![endif]><wbr>next&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>oldid=<![if gt IE 6]>&#8203;<![endif]><wbr>508466091</A>
+</blockquote>
+
+As someone who used to be a big fan of Chess variants, it’s sad to see that Zillions may be going away.  Even though I myself stopped playing Chess variants in 2010, I sometimes like looking at Zillions’ site to see what new Chess Variants people devised.
+
+<p>
+
+Here is my goodbye to Chess variants from 2010:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/old-201002-im-done-with-chess-variants.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>old-<![if gt IE 6]>&#8203;<![endif]><wbr>201002-<![if gt IE 6]>&#8203;<![endif]><wbr>im-<![if gt IE 6]>&#8203;<![endif]><wbr>done-<![if gt IE 6]>&#8203;<![endif]><wbr>with-<![if gt IE 6]>&#8203;<![endif]><wbr>chess-<![if gt IE 6]>&#8203;<![endif]><wbr>variants.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<i>Posted Jul 16 2013</i>
+
+<p>
+
+<A name=Linux_for_Workgroups></A><A name=LinuxforWorkgroups></A><span class=moyet>==</span><span class=blogtitle><b>Linux for Workgroups</b></span><span class=moyet>==</span>
+
+<p>
+
+Well, I must say, I like the names Linus gives his Linux releases.  Linux 3.11 is called “Linux for Workgroups”:
+
+<p>
+
+<blockquote>
+<A href="http://www.theregister.co.uk/2013/07/15/linux_for_workgroups/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>theregister.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>07/<![if gt IE 6]>&#8203;<![endif]><wbr>15/<![if gt IE 6]>&#8203;<![endif]><wbr>linux_<![if gt IE 6]>&#8203;<![endif]><wbr>for_<![if gt IE 6]>&#8203;<![endif]><wbr>workgroups/</A>
+</blockquote>
+
+<i>Posted Jul 15 2013</i>
+
+<p>
+
+<A name=On_Enders_Game></A><A name=OnEndersGame></A><span class=moyet>==</span><span class=blogtitle><b>On Ender’s Game</b></span><span class=moyet>==</span>
+
+<p>
+
+(Please imagine me saying this in my natural southern drawl) I’m actually hoping there is a boycott by the Gay community against “Ender’s Game”. Why?
+
+<p>
+
+Because there’s a chance that narrow-minded bigots (in the south and elsewhere) who see the movie as a counter-protest will learn some of the valuable lessons in the movie about the evils of bullying and the folly of mindless military conflict.
+
+<p>
+
+Ender’s Game is in no way a story that attacks or says anything negative about gay people.  It can even be argued that the story is a gay coming-of-age story (complete with our young hero staving off bullies).
+
+<p>
+
+An interesting article on the controversy:  
+
+<p>
+
+<blockquote>
+<A href="http://io9.com/could-the-enders-game-boycott-actually-tank-the-movie-749408769">http://<![if gt IE 6]>&#8203;<![endif]><wbr>io<![if gt IE 6]>&#8203;<![endif]><wbr>9.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>could-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>enders-<![if gt IE 6]>&#8203;<![endif]><wbr>game-<![if gt IE 6]>&#8203;<![endif]><wbr>boycott-<![if gt IE 6]>&#8203;<![endif]><wbr>actually-<![if gt IE 6]>&#8203;<![endif]><wbr>tank-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>movie-<![if gt IE 6]>&#8203;<![endif]><wbr>749408769</A>
+</blockquote>
+
+<i>Posted Jul 13 2013</i>
+
+<p>
+
+<A name=My_favorite_Star_Trek_episode></A><A name=MyfavoriteStarTrekepisode></A><span class=moyet>==</span><span class=blogtitle><b>My favorite Star Trek episode</b></span><span class=moyet>==</span>
+
+<p>
+
+My favorite Star Trek episode is “Errand of Mercy”.  This is classic 1960s Trek machismo, but the story ultimately denounces Kirk’s testosterone overload.  Here’s a good discussion (spoilers, but, then again, anyone who has any interest in 1960s Trek has already seen the episode dozens of times):
+
+<p>
+
+<blockquote>
+<A href="http://trekmovie.com/2007/05/14/review-errand-of-mercy-remastered/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>trekmovie.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2007/<![if gt IE 6]>&#8203;<![endif]><wbr>05/<![if gt IE 6]>&#8203;<![endif]><wbr>14/<![if gt IE 6]>&#8203;<![endif]><wbr>review-<![if gt IE 6]>&#8203;<![endif]><wbr>errand-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>mercy-<![if gt IE 6]>&#8203;<![endif]><wbr>remastered/</A>
+</blockquote>
+
+Just as interesting as the review itself are some of the comments.  I like this particular comment (#32):
+
+<p>
+
+<blockquote>
+It’s super duper easy for fans to lob tomatoes from the comfort of their desktops and insist that other people should pay more money and spend more time (which means more money) on something they’re getting for free. Personally, I love spending other people’s money but how about a moment of perspective.
+</blockquote>
+
+<i>Posted Jul 12 2013</i>
+
+<p>
+
+<A name=The_C_lanuage_FAQ></A><A name=TheClanuageFAQ></A><span class=moyet>==</span><span class=blogtitle><b>The C lanuage FAQ</b></span><span class=moyet>==</span>
+
+<p>
+
+Here is the web version of the classic Usenet FAQ for the C programming language (comp.lang.c):
+
+<p>
+
+<blockquote>
+<A href="http://www.c-faq.com/">http://www.c-faq.com/</A>
+</blockquote>
+
+<i>Posted Jul 12 2013</i>
+
+<p>
+
+<A name=RIP_PC_World></A><A name=RIPPCWorld></A><span class=moyet>==</span><span class=blogtitle><b>R.I.P. PC World</b></span><span class=moyet>==</span>
+
+<p>
+
+For me, PC Magazine was the magazine to keep up on computer technology, Computer Shopper (which was once the size of a phone book) was the magazine to find a computer to buy, and PC World was always the “other” magazine which I read after reading PC Magazine.
+
+<p>
+
+Once the Internet started becoming mainstream, these magazines were behind the curve because they did not see Linux (instead of Windows NT) replacing *NIX operating systems in the server back room (then again, there was the distinct possibility back then that Linux would take over the desktop, but Linux never got over a 1% desktop market share).  
+
+<p>
+
+Computer Shopper became a smaller and smaller magazine every year.  Finally, along with PC Magazine, it ceased publication in 2009.  PC World continued to limp along, but now is also ceasing publication:
+
+<p>
+
+<blockquote>
+<A href="http://techland.time.com/2013/07/11/pcworld-exits-print-and-the-era-of-computer-magazines-ends/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>techland.<![if gt IE 6]>&#8203;<![endif]><wbr>time.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>07/<![if gt IE 6]>&#8203;<![endif]><wbr>11/<![if gt IE 6]>&#8203;<![endif]><wbr>pcworld-<![if gt IE 6]>&#8203;<![endif]><wbr>exits-<![if gt IE 6]>&#8203;<![endif]><wbr>print-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>era-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>computer-<![if gt IE 6]>&#8203;<![endif]><wbr>magazines-<![if gt IE 6]>&#8203;<![endif]><wbr>ends/</A>
+</blockquote>
+
+The paper computer magazine is now no more.  It was fun while it lasted.
+
+<p>
+
+<i>Posted Jul 11 2013</i>
+
+<p>
+
+<A name=The_ARM_continues_to_overtake_x86></A><A name=TheARMcontinuestoovertakex86></A><span class=moyet>==</span><span class=blogtitle><b>The ARM continues to overtake x86</b></span><span class=moyet>==</span>
+
+<p>
+
+The way I program x86 assembly is by using a C compiler.  ARM, on the other hand, has a much cleaner assembly language (it is, if you ask me, 32/64-bit 6502).  While I can’t stand tablets, I do like the chip powering those tablets, and I am waiting to see more ARM notebooks come out.
+
+<p>
+
+<blockquote>
+<A href="http://www.bbc.co.uk/news/business-23251285">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>business-<![if gt IE 6]>&#8203;<![endif]><wbr>23251285</A>
+</blockquote>
+
+
+<p>
+
+<i>Posted Jul 11 2013</i>
+
+<p>
+
+<A name=Good_job_Deborah_Hersman></A><A name=GoodjobDeborahHersman></A><span class=moyet>==</span><span class=blogtitle><b>Good job Deborah Hersman</b></span><span class=moyet>==</span>
+
+<p>
+
+Deborah Hersman, the leader of the
+<a href="http://ntsb.gov">NTSB</a>, is a fine counterexample disproving the misogynist notion that women can not be “alpha”.
+Here is a very professional woman who is a very effective leader.
+
+<p>
+
+<i>Posted Jul 07 2013</i>
+
+<p>
+
+<A name=My_prayers_are_with_the_passangers_of_Asiana_Airlines_Flight_214></A><A name=MyprayersarewiththepassangersofAsianaAirlinesFlight214></A><span class=moyet>==</span><span class=blogtitle><b>My prayers are with the passangers of Asiana Airlines Flight 214</b></span><span class=moyet>==</span>
+
+<p>
+
+With family and friends up there, it’s quite a shock to see the horrible crash of Asiana Airlines Flight 214 at SFO (San Francisco Airport). This really hits home for my wife and I; my wife and I have been in this airport together three times.
+
+<p>
+
+We know there are survivors from the crash; our prayers are with the passengers and I hope a miracle has happened and no one has died.
+
+<p>
+
+<blockquote>
+<A href="http://www.sfgate.com/bayarea/article/South-Korean-passenger-jet-crashes-at-SFO-4650259.php">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>sfgate.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>bayarea/<![if gt IE 6]>&#8203;<![endif]><wbr>article/<![if gt IE 6]>&#8203;<![endif]><wbr>South-<![if gt IE 6]>&#8203;<![endif]><wbr>Korean-<![if gt IE 6]>&#8203;<![endif]><wbr>passenger-<![if gt IE 6]>&#8203;<![endif]><wbr>jet-<![if gt IE 6]>&#8203;<![endif]><wbr>crashes-<![if gt IE 6]>&#8203;<![endif]><wbr>at-<![if gt IE 6]>&#8203;<![endif]><wbr>SFO-<![if gt IE 6]>&#8203;<![endif]><wbr>4650259.<![if gt IE 6]>&#8203;<![endif]><wbr>php</A>
+</blockquote>
+
+<i>Posted Jul 06 2013</i>
+
+<p>
+
+<A name=I_learned_something_useful_watching_an_infomercial></A><A name=Ilearnedsomethingusefulwatchinganinfomercial></A><span class=moyet>==</span><span class=blogtitle><b>I learned something useful watching an infomercial</b></span><span class=moyet>==</span>
+
+<p>
+
+I actually learned something watching an infomercial for a high-speed high-cost blender called the  
+<a href="http://www.amazon.com/Nutri-Bullet-NBR-12-12-Piece-Hi-Speed/dp/B007TIE0GQ/">Nutri Bullet</a>.
+
+<p>
+
+According to the host, the best anti-inflammatory ingredient readily available in the US is something called
+<i>Turmeric. </i>
+
+<p>
+
+<i>Posted Jul 06 2013</i>
+
+<p>
+
+<A name=Yet_another_idiotic_site_with_overly_anal_password_rules></A><A name=Yetanotheridioticsitewithoverlyanalpasswordrules></A><span class=moyet>==</span><span class=blogtitle><b>Yet another idiotic site with overly anal password rules</b></span><span class=moyet>==</span>
+
+<p>
+
+I have had a system in place for the last decade or so which allows me to give every site I go to a fairly strong password, while having the password for each site be different (and have it so having one site password doesn’t give an attacker access to any other sites I log in to).  
+
+<p>
+
+Alas, a few sites have arbitrary rules for their passwords which doesn’t allow these generated passwords.  Usually, the rule is “you must have mixed case and a punctuation symbol”.  I wish the idiots who make up password rules like that would read
+<i>The Cuckoo’s Egg</i>
+by Cliff Stoll, which shows how forcing people to have hard-to-remember passwords can actually make things 
+<i>less</i>
+secure, because they then write down the password on their desk or in a file someone with a partial security breach can access. 
+
+<p>
+
+<i>Posted Jul 05 2013</i>
+
+<p>
+
+<A name=Happy_Fourth_of_July_Everyone></A><A name=HappyFourthofJulyEveryone></A><span class=moyet>==</span><span class=blogtitle><b>Happy Fourth of July Everyone!</b></span><span class=moyet>==</span>
+
+<p>
+
+Happy Fourth of July Everyone!  Or, at least, readers in the United States of America reading my microblog.
+
+<p>
+
+I have been spending the last few days collaborating with other people coming up with a good refutation to a recently proposed Young Earth Creationist theory called “Anisotropic synchrony convention”; I finally have a full refutation.  The trick for solving the puzzle is not to question the “Anisotropic synchrony convention”—special relativity allows for it, and it’s fruitless arguing with Einstein’s science [1].  The refutation comes from thinking about a universe created by a miracle 6,000 years ago and how it would appear in this bizarre “Anisotropic synchrony convention” frame of reference:
+
+<p>
+
+<blockquote>
+<A href="http://rationalwiki.org/w/index.php?title=Anisotropic_synchrony_convention#Problems_with_Lisle.27s_paper">http://<![if gt IE 6]>&#8203;<![endif]><wbr>rationalwiki.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>w/<![if gt IE 6]>&#8203;<![endif]><wbr>index.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>title=<![if gt IE 6]>&#8203;<![endif]><wbr>Anisotropic_<![if gt IE 6]>&#8203;<![endif]><wbr>synchrony_<![if gt IE 6]>&#8203;<![endif]><wbr>convention#<![if gt IE 6]>&#8203;<![endif]><wbr>Problems_<![if gt IE 6]>&#8203;<![endif]><wbr>with_<![if gt IE 6]>&#8203;<![endif]><wbr>Lisle.<![if gt IE 6]>&#8203;<![endif]><wbr>27<![if gt IE 6]>&#8203;<![endif]><wbr>s_<![if gt IE 6]>&#8203;<![endif]><wbr>paper</A>
+</blockquote>
+
+[1] If I were able to argue with Einstein’s science and have my argument stick, I wouldn’t be posting to some random Wiki on the Internet.  I would be publishing my stuff in peer-reviewed journals and using my Nobel Prize money to buy a Raspberry Pi.
+
+<p>
+
+<i>Posted Jul 04 2013</i>
+
+<p>
+
+<A name=A_look_at_modern_cannonball_runs></A><A name=Alookatmoderncannonballruns></A><span class=moyet>==</span><span class=blogtitle><b>A look at modern cannonball runs</b></span><span class=moyet>==</span>
+
+<p>
+
+Once upon a time, long long ago there was a game called a “Cannonball Run” where people would see how quickly they could (legally and illegally) travel across the United States using public roads.  The last record set was back in 1983, when, as the tale goes, the world was a different place and it was easier to break speed limit laws.
+
+<p>
+
+Much more recently, in 2006, one Alex Roy tries to beat the 1983 record for fastest road trip across the US:
+
+<p>
+
+<blockquote>
+<A href="http://www.wired.com/cars/coolwheels/magazine/15-11/ff_cannonballrun?currentPage=all">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>wired.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>cars/<![if gt IE 6]>&#8203;<![endif]><wbr>coolwheels/<![if gt IE 6]>&#8203;<![endif]><wbr>magazine/<![if gt IE 6]>&#8203;<![endif]><wbr>15-<![if gt IE 6]>&#8203;<![endif]><wbr>11/<![if gt IE 6]>&#8203;<![endif]><wbr>ff_<![if gt IE 6]>&#8203;<![endif]><wbr>cannonballrun?<![if gt IE 6]>&#8203;<![endif]><wbr>current<![if gt IE 6]>&#8203;<![endif]><wbr>Page=<![if gt IE 6]>&#8203;<![endif]><wbr>all</A>
+</blockquote>
+
+I think what would be more interesting would be “fastest road trip across the US
+<i>without ever once going over the speed limit</i>”.
+While that would have been impossible to verify in 1983, with today’s GPS units, one could keep a record of the exact route used in the road trip, and the exact speed at all times.
+
+<p>
+
+<i>Posted Jul 03 2013</i>
+
+<p>
+
+<A name=An_Orwell_Quote></A><A name=AnOrwellQuote></A><span class=moyet>==</span><span class=blogtitle><b>An Orwell Quote</b></span><span class=moyet>==</span>
+
+<p>
+
+A George Orwell quote, from 
+<i>1984</i>:
+
+<p>
+
+<blockquote>
+“No one ever seizes power with the intention of relinquishing it.” — George Orwell
+</blockquote>
+
+Where I break from Libertarianism is that not only can government institutions seize power and take away people’s liberty, but also monopolistic corporations can control a society’s economy to the point that people’s freedoms are curtailed.
+
+<p>
+
+<i>Posted Jun 27 2013</i>
+
+<p>
+
+<A name=What_causes_complex_code></A><A name=Whatcausescomplexcode></A><span class=moyet>==</span><span class=blogtitle><b>What causes complex code</b></span><span class=moyet>==</span>
+
+<p>
+
+In my experience as a professional software developer, the #1 cause of complex code is when the requirements change during the development process.  In professional environments, this is often caused when a new unanticipated feature is suddenly required (unanticipated complexity, sales or management change their mind, or a customer won’t buy the product unless it has feature X).
+
+<p>
+
+Here’s an article on how code sometimes has to be complex:
+
+<p>
+
+<blockquote>
+<A href="http://www.drdobbs.com/architecture-and-design/the-misplaced-obsession-with-simplicity/240157265">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>drdobbs.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>architecture-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>design/<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>misplaced-<![if gt IE 6]>&#8203;<![endif]><wbr>obsession-<![if gt IE 6]>&#8203;<![endif]><wbr>with-<![if gt IE 6]>&#8203;<![endif]><wbr>simplicity/<![if gt IE 6]>&#8203;<![endif]><wbr>240157265</A>
+</blockquote>
+
+As one open-source example: When I wrote MaraDNS, my plan was originally to make a simple authoritative-only server.  A friend suggested adding recursion to the code.  I thought it was going to be fairly straightforward six month project.  It wasn’t; while I 
+<i>did</i>
+manage to finish the code in about a year, the resulting code was very very messy.
+
+<p>
+
+When I finally got around to rewriting the code, over six years later, it took me three years of development to do it right.  There may still be the occasional corner case bug to be fixed (my last fix was 
+<a href="http://samiam.org/blog/20130320.html">just a couple of months ago</a>), but the code has been stable enough for me to use for all Internet access from home for years.
+
+<p>
+
+A sad note: That friend who told me to add recursion to MaraDNS ended up dying very young while I was rewriting MaraDNS’ recursive code; he didn’t live to see his thirtieth birthday nor to see MaraDNS finally finished.
+
+<p>
+
+<i>Posted Jun 27 2013</i>
+
+<p>
+
+<A name=RHEL7_should_be_available_for_ARM></A><A name=RHEL7shouldbeavailableforARM></A><span class=moyet>==</span><span class=blogtitle><b>RHEL7 should be available for ARM</b></span><span class=moyet>==</span>
+
+<p>
+
+Since RedHat Enterprise Linux 7 (RHEL7) is reported to be based on Fedora 19, it 
+<i>should</i>
+be available for the ARM architecture when it comes out.  Most likely, CentOS 7 will have an ARM version available.  With low cost devices like the Raspberry Pi, and ARM starting to get server-level performance, and with the open source nature of Linux, x86 Linux servers should start getting replaced by ARM.
+
+<p>
+
+For me, as a programmer, it’s nice to see an architecture that is a lot cleaner at the assembly level than x86 getting so much momentum.
+
+<p>
+
+Here’s a link to Fedora/ARM:
+
+<p>
+
+<blockquote>
+<A href="https://fedoraproject.org/wiki/Architectures/ARM">https://<![if gt IE 6]>&#8203;<![endif]><wbr>fedoraproject.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Architectures/<![if gt IE 6]>&#8203;<![endif]><wbr>ARM</A>
+</blockquote>
+
+
+<p>
+
+<i>Posted Jun 26 2013</i>
+
+<p>
+
+<A name=RedHat_7_Not_Until_2014></A><A name=RedHat7NotUntil2014></A><span class=moyet>==</span><span class=blogtitle><b>RedHat 7: Not Until 2014</b></span><span class=moyet>==</span>
+
+<p>
+
+It looks like Red Hat Enterprise Linux 7 (and its clones, such as Scientific Linux 7 and CentOS 7) will not come out until early 2014:
+
+<p>
+
+<blockquote>
+<A href="http://www.serverwatch.com/server-news/where-is-red-hat-enterprise-linux-7.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>serverwatch.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>server-<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>where-<![if gt IE 6]>&#8203;<![endif]><wbr>is-<![if gt IE 6]>&#8203;<![endif]><wbr>red-<![if gt IE 6]>&#8203;<![endif]><wbr>hat-<![if gt IE 6]>&#8203;<![endif]><wbr>enterprise-<![if gt IE 6]>&#8203;<![endif]><wbr>linux-<![if gt IE 6]>&#8203;<![endif]><wbr>7.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+With a 10-year-long support cycle, it makes sense to make sure everything is just right before making a release public; it will come out a little before halfway through RHEL6’s lifetime cycle (2010-2010) and RHEL5 (2007-2017) will still be supported when it comes out.  
+
+<p>
+
+I wonder if
+<a href="http://sourceforge.net/projects/lxc/">LXC</a> 
+will be feature complete enough to replace
+<a href="http://openvz.org/">OpenVZ</a> by the time RHEL7 comes out.
+
+<p>
+
+<i>Posted Jun 25 2013</i>
+
+<p>
+
+<A name=Stuart_Smith_Found></A><A name=StuartSmithFound></A><span class=moyet>==</span><span class=blogtitle><b>Stuart Smith: Found</b></span><span class=moyet>==</span>
+
+<p>
+
+After years of search John Romero (Doom Episode I, etc.) finally found Stuart Smith (Adventure Construction Set, Ali Baba and the 40 Theives RPG, etc.) and will interview him, hopefully soon:
+
+<p>
+
+<blockquote>
+<A href="http://www.youtube.com/all_comments?v=s8ty3pweccA">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>all_<![if gt IE 6]>&#8203;<![endif]><wbr>comments?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>s<![if gt IE 6]>&#8203;<![endif]><wbr>8<![if gt IE 6]>&#8203;<![endif]><wbr>ty<![if gt IE 6]>&#8203;<![endif]><wbr>3<![if gt IE 6]>&#8203;<![endif]><wbr>pwecc<![if gt IE 6]>&#8203;<![endif]><wbr>A</A>
+</blockquote>
+
+<i>Posted Jun 24 2013</i>
+
+<p>
+
+<A name=The_name_of_the_deportation_bill></A><A name=Thenameofthedeportationbill></A><span class=moyet>==</span><span class=blogtitle><b>The name of the deportation bill</b></span><span class=moyet>==</span>
+
+<p>
+
+A couple of weeks ago, the House of Representatives voted to restore deportations of children of undocumented immigrants.  It took me nearly an hour of sifting through articles, a lot of which had the most vile racist anonymous comments, to finally find the vote tally: It was HR 2217, Role call 208, and the voting record is here: 
+
+<p>
+
+<blockquote>
+<A href="http://clerk.house.gov/evs/2013/roll208.xml">http://<![if gt IE 6]>&#8203;<![endif]><wbr>clerk.<![if gt IE 6]>&#8203;<![endif]><wbr>house.<![if gt IE 6]>&#8203;<![endif]><wbr>gov/<![if gt IE 6]>&#8203;<![endif]><wbr>evs/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>roll<![if gt IE 6]>&#8203;<![endif]><wbr>208.<![if gt IE 6]>&#8203;<![endif]><wbr>xml</A>
+</blockquote>
+
+Shame on the AP and all the newspapers parroting the AP for not providing essential information like this about a bill.  Shame on the online newspapers who allow racists to cowardly post anonymous comments.  Here’s a clue: Use Facebook for comments.  That way, the racists have to show their name and face when they talk Nazi-like about the evils of “Illegal” people.
+
+<p>
+
+For example, in this thread, the racists were all of two fat white men trying to dominate the conversation; once I blocked their Facebook profiles, the comments became readable again:
+
+<p>
+
+<blockquote>
+<A href="http://blog.seattlepi.com/seattlepolitics/2013/06/06/house-republicans-vote-to-deport-dreamers/#comments">http://<![if gt IE 6]>&#8203;<![endif]><wbr>blog.<![if gt IE 6]>&#8203;<![endif]><wbr>seattlepi.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>seattlepolitics/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>house-<![if gt IE 6]>&#8203;<![endif]><wbr>republicans-<![if gt IE 6]>&#8203;<![endif]><wbr>vote-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>deport-<![if gt IE 6]>&#8203;<![endif]><wbr>dreamers/#<![if gt IE 6]>&#8203;<![endif]><wbr>comments</A>
+</blockquote>
+
+<i>Posted Jun 23 2013</i>
+
+<p>
+
+<A name=Twice_in_my_life></A><A name=Twiceinmylife></A><span class=moyet>==</span><span class=blogtitle><b>Twice in my life</b></span><span class=moyet>==</span>
+
+<p>
+
+I regret the two times in my life a lady approached me and indicated to me she was abused, and I did nothing to help her.  Here’s an article about a woman who did help women in need:
+
+<p>
+
+<blockquote>
+<A href="http://www.xojane.com/family/what-my-mother-taught-me-about-the-eff-words-feminism-and-fear">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>xojane.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>family/<![if gt IE 6]>&#8203;<![endif]><wbr>what-<![if gt IE 6]>&#8203;<![endif]><wbr>my-<![if gt IE 6]>&#8203;<![endif]><wbr>mother-<![if gt IE 6]>&#8203;<![endif]><wbr>taught-<![if gt IE 6]>&#8203;<![endif]><wbr>me-<![if gt IE 6]>&#8203;<![endif]><wbr>about-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>eff-<![if gt IE 6]>&#8203;<![endif]><wbr>words-<![if gt IE 6]>&#8203;<![endif]><wbr>feminism-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>fear</A>
+</blockquote>
+
+<a href="http://samiam.org/blog/20130316.html">I’m no feminist</a>, but one does not need to be a feminist to help a woman in need; one only needs to be a decent, honest human being.
+
+<p>
+
+<i>Posted Jun 23 2013</i>
+
+<p>
+
+<A name=It_has_become_a_lot_harder_for_writers></A><A name=Ithasbecomealotharderforwriters></A><span class=moyet>==</span><span class=blogtitle><b>It has become a lot harder for writers</b></span><span class=moyet>==</span>
+
+<p>
+
+It has become a lot harder to make a living as a writer:
+
+<p>
+
+<blockquote>
+<A href="http://www.theawl.com/2013/06/dox-dox-dox">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>theawl.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>dox-<![if gt IE 6]>&#8203;<![endif]><wbr>dox-<![if gt IE 6]>&#8203;<![endif]><wbr>dox</A>
+</blockquote>
+
+Here’s one interesting line from the article:
+
+<p>
+
+<blockquote>
+The reason Google is worth $30 billion is because [the publishing] industry decided to give away its 'content' for free
+</blockquote>
+
+This is why places like The Huffington Post and The New York Post now have talking ads on their websites; without a paywall, these sites need to have pretty aggressive advertising to make ends meet.  
+
+<p>
+
+<i>Posted Jun 21 2013</i>
+
+<p>
+
+<A name=Now_Im_using_NoScript></A><A name=NowImusingNoScript></A><span class=moyet>==</span><span class=blogtitle><b>Now I’m using NoScript</b></span><span class=moyet>==</span>
+
+<p>
+
+Web content producers desperate for revenue have started putting talking Javascript ads on their pages.  
+
+<p>
+
+I understand and indeed sympathize with content producers desperate for more revenue streams, but I do not like moving ads and I especially don’t like web pages that make noise; this in mind, I’ve enabled NoScript in blacklist-only mode and have black listed huffingtonpost.com and nypost.com from running Javascript in my browser.
+
+<p>
+
+Note: I will not run AdBlock, because the underlying attitude behind ad blockers is one I do not agree with; TANSTAAFL (There ain’t no such thing as a free lunch), and if everyone ran ad blockers, there were be little or no compelling content on the web.
+
+<p>
+
+<i>Posted Jun 19 2013</i>
+
+<p>
+
+<A name=ARM_is_catching_up_to_x86></A><A name=ARMiscatchinguptox86></A><span class=moyet>==</span><span class=blogtitle><b>ARM is catching up to x86</b></span><span class=moyet>==</span>
+
+<p>
+
+I remember when the consensus was that the x86 would never have the kind of performance custom RISC chips like the DEC Alpha had. I am pretty sure that, by the end of the 2010s, high-end ARM is going to have the same or better performance as anything x86, or any other chip, will offer. 
+
+<p>
+
+<blockquote>
+<A href="http://arstechnica.com/information-technology/2013/06/amd-announces-its-first-64-bit-8-and-16-core-arm-based-server-socs/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>arstechnica.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>information-<![if gt IE 6]>&#8203;<![endif]><wbr>technology/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>amd-<![if gt IE 6]>&#8203;<![endif]><wbr>announces-<![if gt IE 6]>&#8203;<![endif]><wbr>its-<![if gt IE 6]>&#8203;<![endif]><wbr>first-<![if gt IE 6]>&#8203;<![endif]><wbr>64-<![if gt IE 6]>&#8203;<![endif]><wbr>bit-<![if gt IE 6]>&#8203;<![endif]><wbr>8-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>16-<![if gt IE 6]>&#8203;<![endif]><wbr>core-<![if gt IE 6]>&#8203;<![endif]><wbr>arm-<![if gt IE 6]>&#8203;<![endif]><wbr>based-<![if gt IE 6]>&#8203;<![endif]><wbr>server-<![if gt IE 6]>&#8203;<![endif]><wbr>socs/</A>
+</blockquote>
+
+<i>Posted Jun 18 2013</i>
+
+<p>
+
+<A name=An_indepth_look_at_Pitfalls_map_generator></A><A name=AnindepthlookatPitfallsmapgenerator></A><span class=moyet>==</span><span class=blogtitle><b>An in-depth look at Pitfall’s map generator</b></span><span class=moyet>==</span>
+
+<p>
+
+In the original classic Pitfall game, David Crane was able to, by clever programming, represent a 255-location jungle in only 31 bytes of code.  I look at exactly what he did in a five-part blog series, as well as look at possible alternate jungle maps which are as little as 18 bytes in size:
+
+<p>
+
+<ul>
+<li> <A href="http://samiam.org/blog/20130606.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130606.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="http://samiam.org/blog/20130608.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130608.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="http://samiam.org/blog/20130612.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130612.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="http://samiam.org/blog/20130616.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130616.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="http://samiam.org/blog/20130617.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130617.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</ul>
+
+<p>
+
+<i>Posted Jun 17 2013</i>
+
+<p>
+
+<A name=My_Google_web_browser_compatibility_rant></A><A name=MyGooglewebbrowsercompatibilityrant></A><span class=moyet>==</span><span class=blogtitle><b>My Google web browser compatibility rant</b></span><span class=moyet>==</span>
+
+<p>
+
+I can understand dropping support for IE7 and can probably even understand not supporting IE8, but Google’s way of not fully testing their web applications in Firefox 17 is really annoying (two bugs: The new mail compose interface something has an annoying jump in FF17; the bottom direction on a given page when printing directions doesn’t print correctly). This is a browser that’s not even a year old.
+
+<p>
+
+For the record: My own webpage is fully compatible in Firefox 3.5+, IE9+, and any recent release of Chrome, Safari, and Opera; it usually remains readable on mobile browsers (code samples on small screens are tricky, but I try my best); it gracefully degenerates down for an obscure browser called Dillo, the text-based Lynx, as well as IE8, IE7, IE6, and even IE5. It’s perfectly usable in older Firefox releases (albeit without CSS); where there is a rendering issue with links in Netscape 4 (little annoying black boxes), the pages can still be used.
+
+<p>
+
+I don’t expect Google to make their pages that cross-platform compatible, but they could easily, if they wanted to, make Gmail perfectly Netscape 4 compatible again and even have it be usable in Dillo (that old “HTML only” Gmail interface Google used to be so proud of). They need to keep IE6 compatibility if they want to make any inroads in to China; even if not, I think asking users to upgrade their browser more than once a year is unfair.
+
+<p>
+
+Then again, since we don’t pay for Google’s products, 
+<i>we become the product.</i>
+It goes back to TANSTAAFL: There ain’t no such thing as a free lunch. That is why I prefer to post updates to my own domain than to Twitter, Google+, and Facebook.
+
+<p>
+
+Let me wrap up this rant with a link:
+
+<p>
+
+<blockquote>
+<A href="http://www.xconomy.com/national/2013/06/14/dont-panic-but-weve-passed-peak-apple-and-google-and-facebook/?single_page=true">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>xconomy.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>national/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>14/<![if gt IE 6]>&#8203;<![endif]><wbr>dont-<![if gt IE 6]>&#8203;<![endif]><wbr>panic-<![if gt IE 6]>&#8203;<![endif]><wbr>but-<![if gt IE 6]>&#8203;<![endif]><wbr>weve-<![if gt IE 6]>&#8203;<![endif]><wbr>passed-<![if gt IE 6]>&#8203;<![endif]><wbr>peak-<![if gt IE 6]>&#8203;<![endif]><wbr>apple-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>google-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>facebook/?<![if gt IE 6]>&#8203;<![endif]><wbr>single_<![if gt IE 6]>&#8203;<![endif]><wbr>page=<![if gt IE 6]>&#8203;<![endif]><wbr>true</A>
+</blockquote>
+
+<i>Browser notes</i>
+
+<p>
+
+Netscape 4 users: I apologize for the little squares in that link.  It’s either having little squares in Netscape 4 or breaking formatting in newer versions of Internet Explorer.  Any computer which can run NN4 can also run the open-source
+<a href="http://samiam.org/software/dillo/">Dillo</a>,
+which does not have this problem.  Yes, I know there are no NN4 users out there in 2013, but I am, as a matter of principle, against forcing people to upgrade their computer to read my website.
+
+<p>
+
+For contracting web design projects, I would design on Safari, Chrome, or Firefox, test in IE10 and IE9, make sure there aren’t any glitches in Firefox 17 (the oldest currently supported Firefox), and possibly go down to IE8, probably not IE7 (though, it’s easily enough reasonably well tested in IE9 or IE10).  IE6 compatibility is still important, but only if the website is in Chinese.
+
+<p>
+
+Some important webfont gotchas: Test web fonts in Chrome + modern Windows.  Test web fonts in Chrome or IE in Windows XP without Clear type.  Test printing webfonts in Safari 5 (It doesn’t work, last time I looked).  Do not have webfonts in iframes in IE8 (it’s a bug which only shows up in IE8, not even IE8 compatibility mode in IE9/IE10).
+
+<p>
+
+More details on fixing web fonts to look decent in Chrome: <A href="http://samiam.org/blog/20120918.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20120918.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+
+<p>
+
+<i>Posted Jun 15 2013</i>
+
+<p>
+
+<A name=The_32bit_6502_exists></A><A name=The32bit6502exists></A><span class=moyet>==</span><span class=blogtitle><b>The 32-bit 6502 exists</b></span><span class=moyet>==</span>
+
+<p>
+
+I always wanted to see a 32-bit or 64-bit 6502 with protected mode. Well, it exists. It’s called the ARM—the principal architects of the ARM were hardcore 6502 programmers and the ARM has 6502 quirks like rotate instructions that use the carry bit and “bne” (same mnemonic as the 6502) meaning “branch if not zero”.
+
+<p>
+
+<blockquote>
+<A href="http://www.ot1.com/arm/armchap1.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>ot<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>arm/<![if gt IE 6]>&#8203;<![endif]><wbr>armchap<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+It looks like the ARM architecture is slowly replacing the x86, which I think is a good thing.
+
+<p>
+
+<i>Posted Jun 12 2013</i>
+
+<p>
+
+
+<p>
+
+<A name=Being_bilingual_is_good></A><A name=Beingbilingualisgood></A><span class=moyet>==</span><span class=blogtitle><b>Being bilingual is good</b></span><span class=moyet>==</span>
+
+<p>
+
+Why Being Bilingual Can Actually Make You Smarter
+
+<p>
+
+<blockquote>
+<A href="http://www.howlifeworks.com/a/a?AG_ID=1192&amp;cid=7111ab">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>howlifeworks.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>a/<![if gt IE 6]>&#8203;<![endif]><wbr>a?<![if gt IE 6]>&#8203;<![endif]><wbr>AG_<![if gt IE 6]>&#8203;<![endif]><wbr>ID=<![if gt IE 6]>&#8203;<![endif]><wbr>1192&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>cid=<![if gt IE 6]>&#8203;<![endif]><wbr>7111<![if gt IE 6]>&#8203;<![endif]><wbr>ab</A>
+</blockquote>
+
+Yes, this is a thinly disguised ad for The Pimsleur Approach.  The sense I get is that the Pimsleur Approach can be remarkably effective—probably one of the best “teach yourself a language” programs—but the lessons are somewhat dry and tedious.  
+
+<p>
+
+The best way to learn a language is to go to another country and learn the language there.  This is how I learned Spanish after a couple of years of high school and college classes:
+
+<p>
+
+<blockquote>
+<A href="http://www.sipuebla.com/">http://www.sipuebla.com/</A>
+</blockquote>
+
+For the record: Puebla is still a remarkably safe area of Mexico right now;  I’m more worried about the nearby volcano than the drug gangs in that particular city.  And, yes, the owner of that school was the best man at my wedding.
+
+<p>
+
+<i>Posted Jun 10 2013</i>
+
+<p>
+
+<A name=Movie_review_Now_You_See_Me></A><A name=MoviereviewNowYouSeeMe></A><span class=moyet>==</span><span class=blogtitle><b>Movie review: Now You See Me</b></span><span class=moyet>==</span>
+
+<p>
+
+(This is a spoiler-free review)
+
+<p>
+
+<i>Now You See Me’s</i>
+best moment was on May 23, when Morgan Freeman and Michael Caine were interviewing together to promote the movie, and Morgan Freeman fell asleep during the interview.  This was far more entertaining than any scene in the actual movie.
+
+<p>
+
+The movie has more plot holes than swiss cheese.  The movie emphasizes action sequences over character development or a plausible plot.  While it has some entertaining action, I wish I had waited until this movie was available on Netflix before watching it.  I think, instead of seeing this at the local theater, one should wait for the new Superman to come out later this month, or  see 
+<i>Before Midnight </i>
+if it has made its way to a local movie theater.
+
+<p>
+
+<i>Posted Jun 09 2013</i>
+
+<p>
+
+<A name=Classic_Pitfall_with_a_new_map></A><A name=ClassicPitfallwithanewmap></A><span class=moyet>==</span><span class=blogtitle><b>Classic Pitfall with a new map</b></span><span class=moyet>==</span>
+
+<p>
+
+Using a modern random number generation technique that did not exist when David Crane wrote the original 2600 Pitfall in the early 1980s, I have created a version of Pitfall with a new map.
+
+<p>
+
+I have not fully play tested this map, but simulations indicate it should be possible to finish the map in under 20 minutes (just like in the original Pitfall). 
+
+<p>
+
+A download is here:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/pitfall/">http://samiam.org/pitfall/</A>
+</blockquote>
+
+<i>Posted Jun 09 2013</i>
+
+<p>
+
+<A name=My_favorite_Doctor_Who_trivia_factoid></A><A name=MyfavoriteDoctorWhotriviafactoid></A><span class=moyet>==</span><span class=blogtitle><b>My favorite Doctor Who trivia factoid</b></span><span class=moyet>==</span>
+
+<p>
+
+My favorite factoid about Doctor Who actors: Four, count them 
+<i>four</i>
+actors who have played the doctor have also played Winston Smith from Orwell’s 1984:
+
+<p>
+
+<ul>
+<li> Patrick Troughton, the second doctor, played Winston in a 1965 BBC radio adaptation of Orwell’s story.
+<li> Christopher Eccleston, the ninth doctor, plays Winston Smith in a BBC radio adaptation of 
+<i>1984</i>
+that came out earlier this year.
+<li> Peter Cushing, who played the Doctor in the 1960s movies, played Winston Smith in a 1950s adaptation of 
+<i>1984.</i>
+<li> John Hurt, who will be an incarnation of the Doctor in the 50th anniversary special coming out this fall, was Winston Smith in what is probably the most famous adaptation: The film made in the real year 1984.  
+</ul>
+
+<p>
+
+I’m very pleased in particular that the BBC has made John Hurt, who has always been for me Winston Smith, the Doctor.  This very extensive overlap of actors playing both characters show that Winston Smith struggles for the same thing the Doctor struggles for: to protect humanity from the forces of evil that want to oppress our freedom and liberty, that want to rule us with a fist of fear, that want to replace the truth with a lie.
+
+<p>
+
+
+<p>
+
+
+<p>
+
+<i>Posted Jun 06 2013</i>
+
+<p>
+
+<A name=IE6_only_matters_in_China></A><A name=IE6onlymattersinChina></A><span class=moyet>==</span><span class=blogtitle><b>IE6 only matters in China</b></span><span class=moyet>==</span>
+
+<p>
+
+During the first decade of the 2000s, keeping a web site Internet Explorer 6 (IE6) compatible was the bane of every web designer out there.  At first glance, it appears that IE6 is stubbornly holding at about 6% of users:
+
+<p>
+
+<blockquote>
+<A href="http://arstechnica.com/wp-content/uploads/2013/06/internet-explorer-versions-2013-05-640x480.png">http://<![if gt IE 6]>&#8203;<![endif]><wbr>arstechnica.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>wp-<![if gt IE 6]>&#8203;<![endif]><wbr>content/<![if gt IE 6]>&#8203;<![endif]><wbr>uploads/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>internet-<![if gt IE 6]>&#8203;<![endif]><wbr>explorer-<![if gt IE 6]>&#8203;<![endif]><wbr>versions-<![if gt IE 6]>&#8203;<![endif]><wbr>2013-<![if gt IE 6]>&#8203;<![endif]><wbr>05-<![if gt IE 6]>&#8203;<![endif]><wbr>640<![if gt IE 6]>&#8203;<![endif]><wbr>x<![if gt IE 6]>&#8203;<![endif]><wbr>480.<![if gt IE 6]>&#8203;<![endif]><wbr>png</A>
+</blockquote>
+
+However, the true story is this: China is the only country in the world that is clinging on to IE6.  Every other country out there (including other former IE6 holdouts like South Korea) has stopped using IE6.  Here’s the more detailed breakdown from Microsoft themselves:
+
+<p>
+
+<blockquote>
+<A href="http://www.ie6countdown.com/">http://www.ie6countdown.com/</A>
+</blockquote>
+
+To summarize: China still has 24% IE6 usage.  India has 2.8% IE6 usage.  Every other country has under 2% IE6 usage.  Except for web designers of webpages written in Chinese, IE6 does not matter anymore.
+
+<p>
+
+Then again, I keep this website IE6 compatible (and even recently did a modest update to have it degenerate gracefully in IE5), but that’s because I enjoy the challenge of making this website render well on as many different browsers as possible (it even fairly gracefully degenerates in the very obscure Dillo browser).
+
+<p>
+
+As for my personal choice in browsers: Usually Firefox in Windows 7; Chrome if I’m using a slow netbook or one of Google’s “runs best on Chrome” sites.  I briefly used Chrome as my main browser but went back to Firefox because there are too many “made on a Mac” sites with custom webfonts that look horrible in Chrome.  I’ve mainly been using Firefox in some form for 12 years now, going back to when it was called “Mozilla” and included an Email and Usenet client.
+
+<p>
+
+<i>Posted Jun 05 2013</i>
+
+<p>
+
+<A name=My_paleo_diet></A><A name=Mypaleodiet></A><span class=moyet>==</span><span class=blogtitle><b>My paleo diet</b></span><span class=moyet>==</span>
+
+<p>
+
+If I were to do a “paleo” diet, I would do a pre-Hispanic (before the arrival of the Spanish) Mexican diet.  To wit:
+
+<p>
+
+<ul>
+<li> Corn
+<li> Beans
+<li> Peanuts (originally from Peru, but were in Mexico by the time Cortéz showed up to liberate the Tlaxcaltecas from the Aztecs)
+<li> Turkey (but, as it turns out, not chicken)
+<li> Chocolate 
+<li> Avocado
+<li> Tomatoes
+<li> Nopales (an exotic Mexican edible cactus leaf)
+<li> Huazotle (an even more exotic Mexican seed)
+<li> Honey (this appears to be the only pre-Hispanic refined sugar, Piloncillo uses post-Hispanic cane sugar)
+</ul>
+
+<p>
+
+Some more information:
+
+<p>
+
+<blockquote>
+<A href="http://en.wikipedia.org/wiki/Aztec_cuisine">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Aztec_<![if gt IE 6]>&#8203;<![endif]><wbr>cuisine</A>
+</blockquote>
+
+<blockquote>
+<A href="http://en.wikipedia.org/wiki/Domesticated_plants_of_Mesoamerica">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Domesticated_<![if gt IE 6]>&#8203;<![endif]><wbr>plants_<![if gt IE 6]>&#8203;<![endif]><wbr>of_<![if gt IE 6]>&#8203;<![endif]><wbr>Mesoamerica</A>
+</blockquote>
+
+<i>Posted Jun 05 2013</i>
+
+<p>
+
+<A name=May_2013_archive></A><A name=May2013archive></A><span class=moyet>==</span><span class=blogtitle><b>May 2013 archive</b></span><span class=moyet>==</span>
+
+<p>
+
+I have archived the microblogs posted from May 6 to June 1 2013:
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20130604.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130604.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

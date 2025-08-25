@@ -1,0 +1,44 @@
+<h1>RedHat extended support</h1>
+
+<h2>February 15, 2012</h2>
+
+I just found out today that <A
+href=http://www.redhat.com/about/news/press-archive/2012/1/red-hat-enterprise-linux-stability-drives-demand-for-more-flexibility-in-long-term-operating-system-deployments
+>RedHat has added three years to the support lifecycle of both RHEL 5 and
+RHEL 6</A>.  Instead of being cut off in 2014, RHEL 5 will continue to
+be supported until 2017; instead of being cut off in 2017, RHEL 6 will 
+continue to be supported until late 2020.
+
+<p>
+
+This not only benefits the high-paying customers of RHEL, but also
+benefits the derivatives of RedHat.  <A 
+href=http://wiki.centos.org/FAQ/General#head-fe8a0be91ee3e7dea812e8694491e1dde5b75e6d
+>CentOS has already extended their support timelines</A> and
+while <A 
+href=http://www.scientificlinux.org/distributions/>Scientific Linux
+hasn't extended their end-of-life timeline</A>, there's a pretty good 
+chance they will.
+
+<p>
+
+While many operating system upgrades are quick and easy, and while 
+periodic updates is a good idea, it's nice to have the ability
+to continue using an older operating system and stay current with
+security fixes.
+
+<p>
+
+Indeed, I still use CentOS 5 for MaraDNS development, since I haven't had
+the time to update MaraDNS' regressions for Scientific Linux 6/CentOS 6.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

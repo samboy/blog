@@ -1,0 +1,68 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>I now have a forum</h1>
+<h2>September 2, 2013</h2>
+I now have a forum for discussing my web page, MaraDNS support concerns,
+or anything else set up at <A href="https://forum.samiam.org">https://forum.samiam.org</A> (self-signed
+certificate).
+
+<p>
+
+<A name=About_the_forum></A><A name=Abouttheforum></A><span class=moyet>==</span><span class=blogtitle><b>About the forum</b></span><span class=moyet>==</span>
+
+<p>
+
+This forum will allow me to:
+
+<p>
+
+<ul>
+<li> Give users of my free software better support than a mailing list.
+<li> Allow blog entries to have comments without me needing to filter them by
+  hand.
+<li> Allow people to provide feedback about my web page in an open forum.
+<li> Not clog up the MaraDNS list with support email back-and-forth exchanges.
+</ul>
+
+<p>
+
+
+<p>
+
+I have given the forum a look that goes fairly well with the look of
+my web pages.  While the underlying template code is very flexible,
+the forum’s default look has a very gaudy late 1990s dot-com-era look
+to it as well as the first 2000s decade’s look of having very small
+fonts, which I have somewhat fixed.
+
+<p>
+
+To give credit where credit is due, the forum software is 
+<a href="http://mybb.com">MyBB</a> and the forum
+buttons are made by 
+<a href="http://mods.mybb.com/profile/1830">Justin S</a>.
+
+<p>
+
+Accounts have to be activated by hand (register an account, and I will then
+email you to activate it so it can post there), and I do not think this forum
+will ever become big enough for me to change that. This is a small forum for a
+few small discussions. 
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

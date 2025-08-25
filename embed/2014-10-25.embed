@@ -1,0 +1,64 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/With-Citlalli-Tightcrop-120.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS support update</h1>
+<h2>October 25, 2014</h2>
+Why I have stopped using MyBB, and how to now get MaraDNS support.
+
+<p>
+
+<A name=Goodbye_MyBB></A><A name=GoodbyeMyBB></A><span class=moyet>==</span><span class=blogtitle><b>Goodbye MyBB</b></span><span class=moyet>==</span>
+
+<p>
+
+Now that I am a family man, I do not have time to be on the constant 
+upgrade treadmill.  MyBB 1.6.4 (which required a lot of core files to be 
+replaced to update from the previous 1.6 release) was released three 
+years ago, and they now have released 1.8 which requires a lot of 
+changes which I would have had to do my hand to update.
+
+<p>
+
+Since 
+<a href="http://web.nvd.nist.gov/view/vuln/search-results?query=MyBB&search_type=all&cves=on">MyBB does not have a great security record</a> (with some 114 CVE results), the 
+only way I can keep MyBB reasonably secure is to constantly update it. 
+Since they no longer are updating the 1.6 branch, it’s just too much 
+bother for me to still use this program.
+
+<p>
+
+That in mind, <A href="http://forum.samiam.org">http://forum.samiam.org</A> is now a static archive of posts 
+made there; MyBB has been completely removed. I have added a note at the 
+top of every page there on how to get MaraDNS support.
+
+<p>
+
+<A name=Getting_MaraDNS_support></A><A name=GettingMaraDNSsupport></A><span class=moyet>==</span><span class=blogtitle><b>Getting MaraDNS support</b></span><span class=moyet>==</span>
+
+<p>
+
+The way to now get MaraDNS support is to file an issue in GitHub:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/maradns/issues">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>issues</A>
+</blockquote>
+
+
+<p>
+
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

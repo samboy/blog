@@ -1,0 +1,122 @@
+<div class=blogpic>
+<img src=pics/pitfall.jpg width=160 height=120>
+</div>
+
+<h1>More on Pitfall’s polynomial</h1>
+<h2>June 16, 2013</h2>
+In this blog, I continue looking at Pitfall's random number generator.
+This continues a series with
+<a href="http://samiam.org/blog/20130606.html">three</a>
+<a href="http://samiam.org/blog/20130608.html">previous</a>
+<a href="http://samiam.org/blog/20130612.html">blog</a>
+entries. 
+
+<p>
+
+<A name=How_to_make_a_LFSR_more_compact></A><A name=HowtomakeaLFSRmorecompact></A><span class=moyet>==</span><span class=blogtitle><b>How to make a LFSR more compact</b></span><span class=moyet>==</span>
+
+<p>
+
+In a
+<a href="http://samiam.org/blog/20130612.html">previous blog entry</a>, I looked
+at how to implement a LFSR in 6502.  The code took 18 bytes of ROM.
+The actual code used in the Pitfall cartridge uses 15 bytes:
+
+<p>
+
+<tt>uint8_t lfsr_3(uint8_t r) {</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>uint8_t a, c, t;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a = r; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// LDA r	a: r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &gt;&gt; 7; a &lt;&lt;= 1; <font color=#008700>// ASL	a: r &lt;&lt; 1</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a ^= r; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// EOR r	a: r &lt;&lt; 1 ^ r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &gt;&gt; 7; a &lt;&lt;= 1; <font color=#008700>// ASL	a: r &lt;&lt; 2 ^ r &lt;&lt; 1</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a ^= r; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// EOR r <span class=pc>&nbsp;</span>a: r &lt;&lt; 2 ^ r &lt;&lt; 1 ^ r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &gt;&gt; 7; a &lt;&lt;= 1; <font color=#008700>// ASL	a: r &lt;&lt; 3 ^ r &lt;&lt; 2 ^ r &lt;&lt; 1</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &gt;&gt; 7; a &lt;&lt;= 1; <font color=#008700>// ASL	a: r &lt;&lt; 4 ^ r &lt;&lt; 3 ^ r &lt;&lt; 2</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>a ^= r; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// EOR r <span class=pc>&nbsp;</span>a: r &lt;&lt; 4 ^ r &lt;&lt; 3 ^ r &lt;&lt; 2 ^ r</font></tt><br>
+
+<p>
+
+The next command is a little tricky.  It takes the left bit of a and puts
+it in the “carry” bit.
+
+<p>
+
+When grabbing the 7th (left) bit of a value which is a series of left shifts,
+we can convert the left shifts in to the corresponding right shifts by
+taking 7 and subtracting it from the right shift value.
+
+<p>
+
+When this is done, grabbing the left bit makes a left shift of 0 become 
+a right shift of 7, a left shift of 1 be a right shift of 6 and so on:
+
+<p>
+
+<tt>Before (&lt;&lt;) <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>After(&gt;&gt;)</tt><br>
+<tt>0 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>7</tt><br>
+<tt>1 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>6</tt><br>
+<tt>2 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>5</tt><br>
+<tt>3 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>4</tt><br>
+<tt>4 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>3</tt><br>
+<tt>5 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>2</tt><br>
+<tt>6 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>1</tt><br>
+<tt>7 <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>0</tt><br>
+
+<p>
+
+This in mind, by taking the left bit of “r &lt;&lt; 4 ^ r &lt;&lt; 3 ^ r &lt;&lt; 2 ^ r”
+(4,3,2,0), we get “r &gt;&gt; 3 ^ r &gt;&gt; 4 ^ r &gt;&gt; 5 ^ r &gt;&gt; 7” (3,4,5,7).  Let’s
+continue the code in the actuall Pitfall cartridge:
+
+<p>
+
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>c = a &gt;&gt; 7; a &lt;&lt;= 1; <font color=#008700>// ASL</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>t = r &gt;&gt; 7; r &lt;&lt;= 1; r |= c; c = t; <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><font color=#008700>// ROL r</font></tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>return r;</tt><br>
+<tt>}</tt><br>
+
+<p>
+
+The reason David Crane wrote the code this way was to save three bytes;
+while the code is harder to follow, it’s now 15 instead of 18 bytes long.
+
+<p>
+
+<A name=Why_this_particular_tap_sequence></A><A name=Whythisparticulartapsequence></A><span class=moyet>==</span><span class=blogtitle><b>Why this particular tap sequence</b></span><span class=moyet>==</span>
+
+<p>
+
+There are 16 different possible
+<a href="http://samiam.org/blog/20130608.html#Pitfall_uses_a_LFSR">tap sequences</a>
+for this particular random number generator.  The reason Pitfall uses
+this particular one is because it has the most compact representation
+in 6502; other sequences use more code.  
+
+<p>
+
+<A name=More_to_come></A><A name=Moretocome></A><span class=moyet>==</span><span class=blogtitle><b>More to come</b></span><span class=moyet>==</span>
+
+<p>
+
+If David Crane knew then when we know today about pseudo-random number
+generators, he would have used a different algorithm.  The code we
+have been looking at is actually called a “Fibonacci LFSR”.  There
+is a variant way of representing a LFSR called a “Galois LFSR” which
+is even smaller; we will look at that as well as another small
+possible variant random number generator for Pitfall in a
+<a href="http://samiam.org/blog/20130617.html">future blog entry</a>.
+
+<p>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

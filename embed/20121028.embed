@@ -1,0 +1,63 @@
+<!--{TAGS:M}-->
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Deadwood update</h1>
+
+<h2>October 28, 2012</h2>
+
+<div class=blogtitle>
+<b>Deadwood update</b>
+</div><br>
+
+In today's update of Deadwood, MaraDNS' recursive resolver:
+
+<ul>
+<li>Updated doc: Made clear the difference between string and numeric 
+        parameters; made clear that string parameters are in quotes and 
+        that numeric parameters do <i>not</i> have quotes.   <p>
+
+<li>"Dogfood" testing to make sure "Deadwood stops" bug is unreproducible.
+    Looks pretty stable to me; here is a Deadwood process I've been processing
+    a lot of my internet DNS queries with:
+
+<pre>
+$ ps auxw |  grep Deadwood | grep -v grep
+root   32431 0.0 0.0 1736  188 ? S <b>Jul21</b> 0:00 duende Deadwood
+nobody 32432 0.0 0.7 2820 1616 ? S <b>Jul21</b> 7:50 Deadwood
+66     32433 0.0 0.1 1740  372 ? S <b>Jul21</b> 0:00 duende Deadwood
+</pre>
+
+   This process has been running for over four months. <p>
+
+<li>Replaced malloc() in DwSocket.c and DwStr.c with dw_malloc() (which is
+    just a #define back to malloc(), but using the macro makes it a little
+    easier for embedded developers on ultra-tiny systems)<p>
+
+<li>Made DwRadioGatun slightly smaller.  I like keeping the Deadwood
+    win32 binary 65,536 bytes in size or smaller; in making a <A href=
+    /rg32>"golf code" version of RadioGatun[32] (RG32)</A>, I found some 
+    optimizations that make Deadwood's RG32's library a little smaller 
+    and faster.
+
+</ul>
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood again one day next month, after the 20th,
+unless a critical security bug with a CVE number is found.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

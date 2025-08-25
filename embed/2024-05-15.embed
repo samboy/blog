@@ -1,0 +1,70 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/2024-05-01.jpg width=224 height=126>
+</div>
+
+<h1>Free ebook</h1>
+<h2>May 15, 2024</h2>
+I have spent a month writing a free open content (public domain) e-book
+about programming in Lua.  While Lua’s terse reference manual is open
+content, the official book for programming in Lua is proprietary.  I
+wrote this book as a guide to programming in Lua that is open content,
+and that is geared towards Lua 5.1, the most commonly deployed version
+of Lua out there.
+
+<p>
+
+The book is not an introduction to programming; in particular, it assumes
+the reader is already familiar with other scripting languages such as AWK,
+Perl, or Python. The book concentrates more on the parts of Lua which can
+be difficult for people used to other scripting languages to understand,
+such as function closures, how Lua uses function factories to run
+for loops (and how one can have Lua iterate through items in a list
+using the right function in a for loop), metatables, and Lua’s
+prototypical class model.
+
+<p>
+
+This book uses a large number of code examples to illustrate how code
+is written in Lua, and to provide public domain “battery” code
+(such as a regular expression splitter and a function which makes regular
+expressions case insensitive) people can use in their own Lua scripts.
+
+<p>
+
+This book is not a Lua reference; a very terse reference manual is
+already included with Lua. This is a companion to the reference manual
+to have code examples and longer explanations of the concepts expressed
+in that manual.
+
+<p>
+
+The book can be read here:
+
+<p>
+
+<blockquote>
+<A href="https://maradns.samiam.org/lunacy/SamDiscussesLunacy.pdf">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>lunacy/<![if gt IE 6]>&#8203;<![endif]><wbr>Sam<![if gt IE 6]>&#8203;<![endif]><wbr>Discusses<![if gt IE 6]>&#8203;<![endif]><wbr>Lunacy.<![if gt IE 6]>&#8203;<![endif]><wbr>pdf</A>
+</blockquote>
+
+In addition to the PDF e-book, the Open Document source, as well as all
+fonts used in the book, is also available as part of my “Lunacy”
+fork of Lua 5.1:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/lunacy">https://github.com/samboy/lunacy</A>
+</blockquote>
+
+Look in the <tt>doc/</tt> folder.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

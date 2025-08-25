@@ -1,0 +1,44 @@
+<h1>ObHack 007.3</h1>
+
+<h2>December 10, 2011</h2>
+
+<div class=blogtitle>
+<b>ObHack 007.3 released</b>
+</div><br>
+
+Fritz has made and I have uploaded ObHack 007.3.  This is an update
+to ObHack, a random map generator for Doom and other games that use the Doom
+engine.  It can be downloaded here:
+
+<p>
+<blockquote>
+<A href=http://samiam.org/slump/>http://samiam.org/slump/</A>
+</blockquote>
+
+<div class=blogtitle>
+<b>Deploying the updated web site</b>
+</div><br>
+
+I am in the process of deploying <A href=20111209.html>the updated web
+site design</A>.  This new design looks virtually identical to the previous
+design in modern desktop browsers, but the stylesheets and HTML layout
+are revised to look better both on older browsers and on smart phones
+as well as other mobile devices.
+
+<p>
+
+There are a lot of web pages on the web site, so it may take a few weeks to
+fully deploy the new design.  Right now, the main web pages, as well as
+the blog and the ObHack webpage have been updated with the revised
+design.  Other web pages will be slowly updated. 
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

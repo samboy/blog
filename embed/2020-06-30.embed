@@ -1,0 +1,123 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/graph-2020-05.jpg width=224 height=126>
+</div>
+
+<h1>COVID-19 growth</h1>
+<h2>June 30, 2020</h2>
+COVID-19 is undergoing exponential growth again. <i>362 words</i>
+
+<p>
+
+<A name=COVID19s_growth_is_going_up></A><A name=COVID19sgrowthisgoingup></A><span class=moyet>==</span><span class=blogtitle><b>COVID-19’s growth is going up</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/COVID-19-2020-06-30.png" alt="">
+<br class=nomobile>
+<i>COVID-19’s doubling time in San Diego. Lower numbers mean faster growth.</i>
+<p>
+
+<p>
+
+The number of COVID-19 cases in San Diego is surging.  More worrying,
+the growth rate is surging, decreasing the doubling time.
+
+<p>
+
+At the current growth rate, we will have COVID-19 herd immunity (i.e.
+pretty much everyone will be exposed to COVID-19) by mid-October.
+
+<p>
+
+It does not appear to be the George Floyd protests which have caused
+growth to go up again; it looks like our re-opening of the economy is
+causing growth to go up.
+
+<p>
+
+Bars are already starting to close in other parts of California. 
+The county with the most COVID-19 growth right now is Marin county,
+just north of San Francisco; my data shows that they are projected
+to have herd immunity in a month.  
+
+<p>
+
+I am doing my best to stay at home, only leaving for a socially 
+distanced walk, to buy groceries, or to take my daughter to and 
+from school.  I wear a mask if in an indoor public space; I maintain
+a distance of six feet from other people when going on my daily walks.
+
+<p>
+
+I have decided that it’s worth the increased possible
+exposure to the COVID-19 virus for my daughter to be back in 
+school and able to socialize with her peers.  They are taking
+a lot of measures to reduce spread at the school.
+
+<p>
+
+<i>The New York Times</i> recently published an opinion piece
+on why it is important for kids to go back to school.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote1">1</a></sup>
+
+<p>
+
+<A name=MaraDNS_update></A><A name=MaraDNSupdate></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS update</b></span><span class=moyet>==</span>
+
+<p>
+
+I am in the process of getting MaraDNS 3.5.0006 out the door.  I
+have updated the Deadwood parser to no longer always be Python 2 
+compatible; leading whitespace is now allowed in Deadwood configuration
+files.  The reason for this change is because Python 2 is no longer
+supported by the Python Software Foundation.  Since Deadwood’s
+configuration files are not always Python 3 compatible, I no
+longer see a need for its configuration file be a full subset of 
+Python 2 syntax.
+
+<p>
+
+I should have the 3.5.0006 release out later this week.
+
+<p>
+
+<A name=Footnotes></A><A name=Footnotes></A><span class=moyet>==</span><span class=blogtitle><b>Footnotes</b></span><span class=moyet>==</span>
+
+<p>
+
+The COVID-19 data comes from The New York Times, over at
+<A href="https://github.com/nytimes/covid-19-data">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>nytimes/<![if gt IE 6]>&#8203;<![endif]><wbr>covid-<![if gt IE 6]>&#8203;<![endif]><wbr>19-<![if gt IE 6]>&#8203;<![endif]><wbr>data</A>  I process the data to get 
+doubling time figures, both actual and predicted; that code can be
+seen at <A href="https://github.com/samboy/covid-19-html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>covid-<![if gt IE 6]>&#8203;<![endif]><wbr>19-<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>  While facts can not
+be copyrighted, The New York Times claims copyright on their COVID-19
+data.
+
+<p>
+
+<a name="Footnote1"> </a> For a discussion on why it’s important for kids to be in
+school, see
+“<a href="https://www.nytimes.com/2020/06/29/opinion/coronavirus-school-reopening.html">Remote
+School Is a Nightmare. Few in Power Care.</a>” by Michelle Goldberg,
+published by <i>The New York Times</i>.
+</ol>
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

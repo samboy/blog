@@ -1,0 +1,47 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>June 23, 2012</h2>
+
+<div class=blogtitle>
+<b>Deadwood update</b>
+</div><br>
+
+Earlier this month, Deadwood was unable to resolve es-us.noticias.yahoo.com
+(Deadwood's recursion problems always seem to be caused by either Yahoo or 
+EasyDNS).  
+
+<p>
+
+Yahoo has since fixed things on their end.  Since I recorded
+the DNS packets when Deadwood had the issue, I was able to make a SQA test
+to reproduce it.
+
+<p>
+
+Once I did that, it took me over an hour to find the problem and make a
+<A href=http://maradns.org/deadwood/browse-source/head/update/3.2.03/deadwood-3.2.02-es-us.noticias.yahoo.com.patch>one-line
+patch</A> to fix it.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood again one day next month, after the 20th,
+unless a critical security bug is found.
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

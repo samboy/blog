@@ -1,0 +1,114 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2015-1-120.jpg width=120 height=120>
+</div>
+
+<h1>MaraDNS 2.0.12</h1>
+<h2>August 19, 2015</h2>
+I have released MaraDNS 2.0.12 to fix a security bug in the zoneserver
+daemon.  All users are encouraged to update to this version of MaraDNS.
+
+<p>
+
+<A name=The_bug></A><A name=Thebug></A><span class=moyet>==</span><span class=blogtitle><b>The bug</b></span><span class=moyet>==</span>
+
+<p>
+
+I got a 
+<a href="https://github.com/samboy/MaraDNS/issues/18">GitHub bug report</a>
+about MaraDNS’ zoneserver program getting a segmentation fault.  In
+the stack trace, free() was being called against a memory location whose 
+value was uninitialized (and therefore random).
+
+<p>
+
+This bug allows a denial of service attack; by making the zoneserver
+daemon free an invalid memory location, it was possible to terminate
+the zoneserver process.  I do not know whether or not this bug
+is remotely exploitable.
+
+<p>
+
+<A name=The_fix></A><A name=Thefix></A><span class=moyet>==</span><span class=blogtitle><b>The fix</b></span><span class=moyet>==</span>
+
+<p>
+
+I now 
+<i>always</i>
+initialize the memory location in question.  
+
+<p>
+
+Because of the nature of this bug, I have made a MaraDNS 2.0.12
+release to fix this bug.  It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<A name=Sourceforge></A><A name=Sourceforge></A><span class=moyet>==</span><span class=blogtitle><b>Sourceforge</b></span><span class=moyet>==</span>
+
+<p>
+
+As I have promised
+<a href="http://samiam.org/blog/2015-06-12.html">before</a>,
+I am no longer updating the Sourceforge version of MaraDNS.  People
+may download MaraDNS from the MaraDNS web site, or from GitHub:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+</blockquote>
+
+<A name=MaraDNS_1></A><A name=MaraDNS1></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 1</b></span><span class=moyet>==</span>
+
+<p>
+
+This bug impacts MaraDNS 1.  I will not fix this bug in older
+versions of MaraDNS; I have given users a three-year warning that
+<a href="http://samiam.org/blog/20120621.html">MaraDNS 1 is no longer supported</a>.  
+All MaraDNS 1 users need to upgrade to MaraDNS 2.
+
+<p>
+
+<A name=Other_changes_in_MaraDNS_2012></A><A name=OtherchangesinMaraDNS2012></A><span class=moyet>==</span><span class=blogtitle><b>Other changes in MaraDNS 2.0.12</b></span><span class=moyet>==</span>
+
+<p>
+
+In addition to fixing this bug, MaraDNS 2.0.12 updates Deadwood
+(documentation updates and increased maxprocs values), fixes 
+zoneserver to work with newer versions of dig, and has a number
+of documentation updates.
+
+<p>
+
+<A name=Future_MaraDNS_plans></A><A name=FutureMaraDNSplans></A><span class=moyet>==</span><span class=blogtitle><b>Future MaraDNS plans</b></span><span class=moyet>==</span>
+
+<p>
+
+When and if letsencrypt.org becomes live and offers free HTTPS 
+certificates, I will get a free wildcard cert for samiam.org and 
+start serving MaraDNS over SSL (TLS).
+
+<p>
+
+Unless another security bug comes up, my next MaraDNS and Deadwood
+release will be in the late summer of 2016.
+
+<p>
+
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

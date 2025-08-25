@@ -1,0 +1,41 @@
+<h1>MaraDNS & Deadwood update</h1>
+
+<h2>April 15, 2011</h2>
+
+In today's snapshot of MaraDNS, I have fixed an error <A 
+href=http://woodlane.webconquest.com/pipermail/list/2011-March/000807.html>reported
+by Bryan Duff</A>.  In particular, instead of replying with "not implemented"
+when given an IXFR or AXFR query over UDP, MaraDNS now returns "truncated".
+
+<p>
+
+In today's snapshot of Deadwood, I have refined the heuristics of how to
+handle empty packets by only treating them as "this host does not exist"
+if the user asked for an AAAA (IPv6 IP) record.  This resolves a problem
+Deadwood has resolving the <tt>archive.org</tt> names when one of the 
+three upstream DNS servers replied to requests with a REFUSED DNS reply.
+
+<p>
+
+They can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A><br>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<p>
+
+The next day I will work on MaraDNS is two weeks from today: Friday, April 29
+2011.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

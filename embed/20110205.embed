@@ -1,0 +1,50 @@
+<h1>MaraDNS 2.0.02 released</h1>
+
+<h2>February 5, 2011</h2>
+
+I have just released MaraDNS 2.0.  This has the following updates:
+
+<ul>
+
+<li> Documentation updates
+
+<li> Applied Corey's patch that fixes a typo in fetchzone.c
+
+<li> Applied Yarin's patch that makes the "install.locations" script more flexible
+
+<li> I have adapted Yarin's patch that makes email addresses like
+'john\.doe@example.com' possible in SOA records.
+
+<li> Fixed an error message that stated we were running MaraDNS 1.2 (now 
+     says 2.0)
+
+<li> Updated the copyright statement to have the year 2011
+
+<li> Deadwood updated to Deadwood 3.0.02
+
+<li> Fixed security vulnerability CVE-2011-0520
+
+</ul>
+
+Because of the critical nature of CVE-2011-0520, all users of MaraDNS
+2.0 are encouraged to update to 2.0.02 at their soonest convenience.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<A href=http://www.maradns.org/download.html>http://www.maradns.org/download.html</A>
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

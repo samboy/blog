@@ -1,0 +1,174 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>October round-up</h1>
+<h2>October 5, 2019</h2>
+I discuss a new MaraDNS release, RMS being fired, and installing CentOS 8
+inside a VMware virtual machine.
+
+<p>
+
+<A name=MaraDNS_3303_released></A><A name=MaraDNS3303released></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.3.03 released</b></span><span class=moyet>==</span>
+
+<p>
+
+I have released MaraDNS 3.3.03.  This is an unstable beta release of MaraDNS;
+compared to MaraDNS 2.0.17:
+
+<p>
+
+<ul>
+<li> Updated numbering system to give MaraDNS the same version number as Deadwood.
+<li> Deadwood updated to 3.3.03.  Deadwood 3.3 adds “ip4” and “ip6”:  The
+  ability to specify an IP for a given name (both IPv4 and IPv6).   
+  Deadwood 3.3 now uses the Quad9 upstream DNS servers.  Deadwood 3.3 has
+  a compile time flag to use RadioGatún[64] instead of RadioGatún[32].
+<li> Document how star records work. 
+</ul>
+
+<p>
+
+It can be downloaded
+<a href="https://maradns.samiam.org/download.html">at the usual place</a>.
+
+<p>
+
+Note that this release only has source code and does not have a Windows
+binary.  For Windows users who want to try out the new features,
+<a href="https://maradns.samiam.org/deadwood/snap/">there is a download of Deadwood 3.3.03 available</a>.
+
+<p>
+
+<A name=On_RMS_being_fired></A><A name=OnRMSbeingfired></A><span class=moyet>==</span><span class=blogtitle><b>On RMS being fired</b></span><span class=moyet>==</span>
+
+<p>
+
+RMS, a.k.a. Richard Stallman, who created the entire framework of free
+UNIX software which made Linux possible in the 1990s, 
+<a href="https://lwn.net/Articles/799375/">has been forced to resign from his position at MIT and the Free Software Foundation he created</a>.
+He was forced to resign because of some incorrect allegations that he
+supported Jeffrey Epstein.
+
+<p>
+
+The thing that upsets me about RMS’s forced resignation is that the
+#MeToo witch hunt, which started off as something noble, is expanding
+its reach to attacking people who have unusual opinions.
+
+<p>
+
+Note this: RMS has 
+<i>not</i> been credibly accused of sexually harassing anyone since 1985,
+when he told a woman that he would kill himself if she didn’t go out
+with him.  The issue is not his behavior, but his opinions, which are
+being quoted out of context by people who appear to have more interest
+in destroying a good person than in a rational objective look at facts.
+
+<p>
+
+Note also that RMS does 
+not have racist or bigoted opinions. He does not
+believe in marginalizing someone because of the race, sexual orientation,
+nor gender.
+
+<p>
+
+He is quite left wing, from a culture a lot of young people these days
+have never seen and can not understand. 
+<a href="https://sterling-archermedes.github.io/">He has some opinions about sexuality which seem shocking to young people</a>, 
+but which were within the realm of acceptable among geeks in 
+the 1970s or 1980s. I emphatically do
+<i>not</i> agree with all of his opinions (I, for the record, believe sex should
+only be done inside of a lifetime monogamous commitment, but that’s
+neither here nor there). But I don’t think having had those opinions
+many years ago (the postings from his blog which everyone is up in arms
+about are from at least a decade ago) is grounds for termination either.
+
+<p>
+
+RMS is the father of Linux and open source software which keeps the
+internet (and, yes, this web site) running. It’s very ironic that the
+very technology he made widely available is being used to ruin him with
+accusations which are, at best, exaggerated.
+
+<p>
+
+See this: <A href="https://sterling-archermedes.github.io/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sterling-<![if gt IE 6]>&#8203;<![endif]><wbr>archermedes.<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>io/</A> No, I did not write
+that page, but I agree with its content. Clickbait journalists more
+interested in generating outrage than in looking at objective facts have
+ruined a good man.
+
+<p>
+
+I should also mention
+<A href="https://twitter.com/thomas_lord/status/1174433656024092672">https://<![if gt IE 6]>&#8203;<![endif]><wbr>twitter.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>thomas_<![if gt IE 6]>&#8203;<![endif]><wbr>lord/<![if gt IE 6]>&#8203;<![endif]><wbr>status/<![if gt IE 6]>&#8203;<![endif]><wbr>1174433656024092672</A> where Thomas
+Lord, who worked very closely with RMS, says that RMS was always seeking
+to be inclusive of women in technology, long before it became socially
+acceptable to do so.
+
+<p>
+
+<i>Edit: I have observed, after writing the above, that
+<a href="https://www.thefire.org/resources/spotlight/due-process-reports/due-process-report-2018/">MIT has a “F” grade for how they handle due process</a>.  Considering how they treated RMS, I am </i>not<i> surprised.
+</i>
+
+<p>
+
+<A name=CentOS_8_in_VMware></A><A name=CentOS8inVMware></A><span class=moyet>==</span><span class=blogtitle><b>CentOS 8 in VMware</b></span><span class=moyet>==</span>
+
+<p>
+
+I managed to get CentOS 8 to work in VMware player.
+
+<p>
+
+I had to install the vm X11 driver to get resize to work.  As root,
+I did this in the guest:
+
+<p>
+
+<tt>yum install xorg-x11-drv-vmware</tt><br>
+
+<p>
+
+To get suspend to work, I had to 
+<a href="https://communities.vmware.com/thread/589891">find the secret recipe online</a>.
+
+<p>
+
+<ul>
+<li> Shut down the guest
+<li> On the host, go in to the folder with the virtual machine and edit 
+  the relevant .vmx file
+<li> Make sure the line controlling how suspend works looks like this:
+</ul>
+
+<p>
+
+<tt>powerType.Suspend = "hard"</tt><br>
+
+<p>
+
+<ul>
+<li> Suspend only works by clicking on the pause button and selecting
+  suspend.  
+</ul>
+
+<p>
+
+
+<p>
+
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

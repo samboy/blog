@@ -1,0 +1,122 @@
+<!--{TAGS:M}-->
+
+<h1>New MaraDNS CVE: 2012-1570</h1>
+
+<h2>March 22, 2012</h2>
+
+In today's blog entry, I discuss CVE-2012-1570 as well as 
+Deadwood 2.3.
+
+<p>
+
+<div class=blogtitle>
+<b>CVE-2012-1570</b>
+</div><br>
+
+CVE-2012-1570 is the CVE number assigned for MaraDNS updates made in
+light of the "ghost domain" bug.  I have <A href=20120311.html>already
+updated Deadwood</A> as well as <A href=20120317.html>the legacy MaraDNS
+1 branch</A>; this CVE just formally declares these updates to be serious
+security updates.
+
+<p>
+
+Here is a rundown of all MaraDNS versions affected by the ghost domain
+security bug:
+
+<ul>
+<li>All MaraDNS 0 releases with recursion (Do NOT use; not maintained)
+<li>All MaraDNS 1.0 releases (Do NOT use; not maintained)
+<li>All MaraDNS 1.1 releases (Do NOT use; not maintained)
+<li>All MaraDNS 1.2 releases (Do NOT use; not maintained)
+<li>All MaraDNS 1.3 releases besides 1.3.07 (Do NOT use; not maintained)
+<li>All MaraDNS 1.3.07 releases before MaraDNS 1.3.07.15
+<li>All MaraDNS 1.4 releases before MaraDNS 1.4.12
+<li>All MaraDNS 2 releases before MaraDNS 2.0.06
+<li>All Deadwood 3 (subpackage of MaraDNS) releases before Deadwood 3.2.02
+<li>All Deadwood 2 releases besides 2.3 (Do NOT use; not maintained)
+<li>All Deadwood 2.3 releases before Deadwood 2.3.08
+</ul>
+
+The following releases have been patched to address this bug:
+MaraDNS <b>1.3.07.15</b>, <b>1.4.12</b>, <b>2.0.06</b>, as well as
+<b>Deadwood 3.2.02</b> and <b>Deadwood 2.3.08</b> have been released to
+address this security bug.  It is <i>very</i> important that all MaraDNS
+users update to one of these versions.
+
+<p>
+
+Please note that MaraDNS 1.3.07 will no longer be supported on December
+21, 2012. Please upgrade to MaraDNS 1.4 or 2.0 at your soonest convenience
+if feasible.  Here is an update guide:
+
+<blockquote><A href=http://maradns.org/tutorial/update.html>http://maradns.org/tutorial/update.html</A></blockquote>
+
+Distributions and users who wish to continue, against my wishes,
+supporting an outdated version of MaraDNS 1 may (or may not) be able
+to update MaraDNS 1 by using this patch:
+
+<blockquote><A href=http://maradns.org/download/patches/security/maradns-1.4.11-ghostdomain.patch>http://maradns.org/download/patches/security/maradns-1.4.11-ghostdomain.patch</A></blockquote>
+
+<p>
+<div class=blogtitle>
+<b>Deadwood update</b>
+</div><br>
+
+As noted above, I have updated the older "tiny" branch of Deadwood
+to address the important "ghost domain" bug; Deadwood 2.3.08 has been
+released.
+
+<p>
+
+This took all morning to do; the "tiny" branch has diverged from the
+main branch of Deadwood enough that it was necessary to completely 
+redo the patch by hand.
+
+<p>
+
+After doing that, a number of SQA regressions failed because CentOS
+5 has changed enough since the last time I ran the Deadwood 2.3 regressions:
+example.com has a different A record, netstat's output format has changed,
+and Valgrind complains about "possibly lost" memory it wasn't complaining
+about before.  I had to verify the failed SQA regressions were caused by 
+issues external to Deadwood, and that the code changes did not break
+anything.
+
+<p>
+
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/tiny/>http://www.maradns.org/deadwood/tiny/</A>
+</blockquote>
+
+At this point, I am only supporting Deadwood 2.3 for security and other
+critical bugs.  Deadwood 2.3 only makes sense if one is in an environment
+where it's better to have a 32 kilobyte non-recursive DNS cache instead of
+a 64 kilobyte fully recursive DNS cache.
+
+<p>
+
+Also: Because of how Deadwood 2.3 works, records with TTLs longer than
+one day will show a longer TTL when said record is retrieved.  This update
+only affects how long the record is stored in Deadwood 2.3's cache.  
+If there is any suspicion that resolvers downstream from a Deadwood 2.3
+cache honor large TTLs, please upgrade to Deadwood 3.  Also note
+that Deadwood 2.3 doesn't properly age TTLs.
+
+<p>
+
+I plan to work on MaraDNS/Deadwood again one day next month, after the 20th,
+unless another critical security bug is found.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

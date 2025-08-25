@@ -1,0 +1,121 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/police-car-blog.jpg width=224 height=126>
+</div>
+
+<h1>Crime, Police, and Chicago</h1>
+<h2>July 6, 2020</h2>
+This blog is about how someone in Chicago may see the police very
+differently than how I do, and also has a MaraDNS update. 
+<i>429 words</i>
+
+<p>
+
+<A name=Why_someone_in_Chicago_may_see_police_differently></A><A name=WhysomeoneinChicagomayseepolicedifferently></A><span class=moyet>==</span><span class=blogtitle><b>Why someone in Chicago may see police differently</b></span><span class=moyet>==</span>
+
+<p>
+
+I posted this comment over at <i>The New York Times</i> today,
+in an article about 
+<a href="https://www.nytimes.com/2020/07/05/us/chicago-shootings.html#commentsContainer">out 
+of control violence in Chicago</a>.  I am very honored it became a 
+New York Times pick:
+
+<p>
+
+In the wake of the George Floyd protests, because of my spiritual and 
+yes religious beliefs, I have been thinking a lot about what 
+progressives refer to as my “white privilege” and how being born and 
+raised white has resulted in my having a lot of implicit biases.
+
+<p>
+
+The world I live in and grew up in is one that the police are the good
+guys who are there to protect me and keep my neighborhood safe. I am
+coming to understand that many Black people see it differently, and feel
+that not only do the police harass them and are very confrontational
+with them, but also that the police fail to keep the streets safe in
+many Black neighborhoods, as illustrated in a recent article at <i>The
+New York Times</i> about Chicago’s violence.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote1">1</a></sup>
+
+<p>
+
+Based on my experiences with police, when someone says “defund the 
+police”, I think they’re being preposterous. However, I can also 
+empathize that someone from a world where the police are not keeping 
+neighborhoods safe and where interactions with police can be dangerous 
+would entertain that notion.
+
+<p>
+
+I don’t think we should defund the police, and I also believe we should 
+increase funding for Chicago’s “Project Safe Neighborhoods” program. 
+Studies show it is quite effective at reducing this kind of violence.
+
+<p>
+
+Being in a safe neighborhood where the police are the good guys and 
+where I can walk by myself at night is something I take for granted; I 
+want more Black people to be able to have the same experience.
+
+<p>
+
+<A name=MaraDNS_update_ip_blocklist></A><A name=MaraDNSupdateipblocklist></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS update: ip_blocklist</b></span><span class=moyet>==</span>
+
+<p>
+
+I have added a new parameter to Deadwood, MaraDNS’s recursive component:
+<tt>ip_blocklist</tt>.  This parameter acts the same as 
+<tt>ip_blacklist</tt>, but does not have the
+<a href="https://gitlab.com/gitlab-org/gitlab/-/issues/7554">possible
+negative connotations “blacklist” can have</a>.
+
+<p>
+
+I have no plans to break the older <tt>ip_blacklist</tt> name in
+existing dwood3rc files; while the newer <tt>ip_blocklist</tt> name 
+is preferable, both names continue to work.
+
+<p>
+
+A look through my blog makes it clear 
+<a href="https://www.samiam.org/blog/2019-10-05.html#On_RMS_being_fired">I am 
+no</a> fan
+<a href="https://www.samiam.org/blog/2018-02-10.html">of what is</a> called
+“<a href="https://www.samiam.org/blog/2020-06-16.html">cancel culture</a>”.  
+This is in no way an endorsement of cancel culture nor of out
+of control “political correctness”.  This is about having compassion
+and empathy for people who have been born and raised in a very 
+different world than the world I was born in to.
+
+<p>
+
+<i>July 7 2020 update: I have now released 
+<a href="https://maradns.samiam.org/download.html">MaraDNS 3.5.0007</a> with
+this change.</i>
+
+<p>
+
+<A name=Footnote></A><A name=Footnote></A><span class=moyet>==</span><span class=blogtitle><b>Footnote</b></span><span class=moyet>==</span>
+
+<p>
+
+<ol>
+<li><a name="Footnote1"> </a>“<a href="https://www.nytimes.com/2020/07/05/us/chicago-shootings.html">Chicago 
+Gun Violence Spikes and Increasingly Finds the Youngest Victims</a>” by
+Neil MacFarquhar and Robert Chiarito, published in 
+<i>The New York Times</i>.
+</ol>
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,61 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood bug fixed</h1>
+
+<h2>January 4, 2012</h2>
+
+I have fixed a bug in Deadwood: Srinivas Hebbar reported that Deadwood
+changed the TTL of cached records to always have a TTL of at least
+30 seconds.  This resulted in Deadwood not removing a record from the
+cache if it's retrieved every 30 seconds or more.
+
+<p>
+
+The reason why Deadwood did this is because:
+
+<ul>
+<li> The code for adding records to Deadwood's LRU hash requires a record
+to have a TTL of at least 30 seconds
+
+<li> Deadwood's code that ages TTLs and rotates records fetches a record
+from the LRU hash, then immediately puts the same record back in the
+LRU hash.
+</ul>
+
+To fix this issue, I modified the code that adds a record to the LRU
+hash.  I have added special code, so that if the TTL has a value of
+-2, this means do the following:
+
+<ul>
+<li> Look to see if the record is already in the LRU hash.
+
+<li> If it is, do not alter the TTL when updating the record.
+
+<li> If it is not, give the new record a new TTL of 30 seconds.
+</ul>
+
+Using a SQA test I created for this issue yesterday, I have verified
+that my patch resolves Srinivas' issue.
+
+<p>
+
+The patch is here:
+
+<blockquote>
+<A href=http://maradns.org/deadwood/patches/deadwood-3.1.03-ttl_expire.patch>http://maradns.org/deadwood/patches/deadwood-3.1.03-ttl_expire.patch</A>
+</blockquote>
+
+And the snapshot with this patch as well as the new SQA test is here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

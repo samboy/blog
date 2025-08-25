@@ -1,0 +1,81 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2015-1-120.jpg width=120 height=120>
+</div>
+
+<h1>Removing MaraDNS’ ads</h1>
+<h2>December 7 2015</h2>
+This blog is about why I removed the ads from samiam.org and 
+maradns.samiam.org, and an issue I had restoring Windows 7
+on my Lenovo Thinkpad.
+
+<p>
+
+<A name=Removing_the_ads></A><A name=Removingtheads></A><span class=moyet>==</span><span class=blogtitle><b>Removing the ads</b></span><span class=moyet>==</span>
+
+<p>
+
+When I originally put the ads on maradns.samiam.org and samiam.org,
+I promised that the ads would always be 
+<a href="http://maradns.samiam.org/old-list-archive/2011-July/000862.html">unobtrusive and text-only</a>.
+Well, Google changed the ads they give their subscribers; what were once
+text-only ads now have images in them, making them obtrusive and gaudy.
+
+<p>
+
+So I have pulled all ads from my websites.  Yes, this is going to cost
+me real money.  But I made a promise to the MaraDNS community, and I
+can no longer be a client of Google ad words and keep that promise.
+So the ads go.
+
+<p>
+
+I have replaced the obtrusive text + image ads with a single unobtrusive
+one-line ad at the top of the MaraDNS webpages: “Support MaraDNS or listen
+to my music”  “Support MaraDNS” takes users to a page where they can
+make a PayPal donation. “Listen to my music” takes users to my page where
+they can listen to for free and optionally buy the music I am composing.
+
+<p>
+
+I keep the promises I have made to the MaraDNS community.  That is why
+I released Deadwood and MaraDNS 2.0 after I realized I no longer wanted
+to define myself as “The MaraDNS guy.”  That is why I still fix security
+problems in MaraDNS 2, even though, as a single parent, it’s hard to
+find time to do so.  And that is why I spent a lot of time this last
+weekend scrubbing all of the ads from my web sites.
+
+<p>
+
+<A name=Reinstalling_Windows_7_on_my_Thinkpad></A><A name=ReinstallingWindows7onmyThinkpad></A><span class=moyet>==</span><span class=blogtitle><b>Reinstalling Windows 7 on my Thinkpad</b></span><span class=moyet>==</span>
+
+<p>
+
+Lenovo Thinkpads come with an tool which supposedly makes DVDs of
+all of the files needed to reinstall windows from scratch on a
+Thinkpad.  Only one problem: When I needed to reinstall Windows
+on my Thinkpad, the image discs did not work.  I had to take a 
+fresh install of Windows 7, on my Thinkpad’s identical twin sister 
+which I keep in a closet and sometimes run Windows Update on, make
+a sector-by-sector disk image of the hard disk, and copy that
+image to my current Thinkpad.
+
+<p>
+
+This process took 12 hours but gave me a working system again.  
+Lesson learned: The only way to ensure I can recover a Windows image
+so I can reinstall it without purchasing another Windows license is
+by spending the six hours or so making a sector-by-sector copy of the
+hard disk when I first buy the system.
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

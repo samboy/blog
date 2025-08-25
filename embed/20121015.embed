@@ -1,0 +1,159 @@
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Predicting the election</h1>
+
+<h2>October 15, 2012</h2>
+
+I am discussing politics again.  As per my <A href=20120901.html>previous
+promise</A>, I will not waste my readers' time with my personal
+opinions.  Instead, I am looking at a couple of models of the election 
+and predicting the winner.
+
+<p>
+<div class=blogtitle>
+<b>Finding a model to use for the vote</b>
+</div><br>
+
+Right now, Nate Silver at <A href=http://538.vk.tj>538.vk.tj</A> is
+saying Obama has about a 66% chance of winning.  This comes from,
+admittedly, a left-leaning source, so take that number with as much
+(or little) salt as needed -- if anyone knows of a more right-leaning source 
+with state-by-state win prediction percentages, I will gladly run a
+simulation with their numbers. (<b>Update</b> <A 
+href=
+http://www.nerdwallet.com/markets/election>Nerd wallet</A> uses the
+same methodology as I do, and Obama shows a 67.4% chance of winning when I
+run their numbers).
+
+<p>
+
+What I have done is write down the chance of Obama or Romney getting a
+given state from his state-by-state numbers and then ran a simulation
+which assumes a given state going for a candidate does not affect the
+other states.  
+
+<p>
+
+In more detail, using a strong random number generator (details below),
+I rolled a 1000-sided dice for each state and/or district with electoral
+votes.  In this model, for example, Florida has a 63.3% percent chance of 
+voting for Romney, so if the dice rolled a 367 or higher, I gave the state
+to Romney; otherwise I gave it to Obama.
+
+<p>
+
+I did this for all states and districts 100,000 times.  The results were as
+follows:
+
+<pre>
+Obama  81.9%
+Romney 16.8%
+Tie     1.3%
+</pre>
+
+I wonder why Nate is getting a 66.6% chance for Obama from the same 
+numbers; perhaps he is coupling results more than I have (for example, if 
+Romney gets Iowa in a given simulation, Nate probably lowers Obama's chances 
+of getting Florida).
+
+<p>
+
+As an aisde, I also ran this simulation against some more liberal numbers
+from <A href=http://huffpost.com>Huffpost</A>; their numbers give Obama
+a 98.1% chance of winning.
+
+<A name=nh> </A>
+<p>
+<div class=blogtitle>
+<b>New Hampshire</b>
+</div><br>
+
+While New Hampshire has only four electoral votes, it is still
+a very key swing state.  Right now, Nate's model gives New
+Hampshire a 71.4% chance of going for Obama (which is higher than <A
+href=http://electoral-vote.com/>electoral-vote.com</A>, which currently
+says that Romney has a 2% lead in this state).
+
+<p>
+
+What I have done is go through the results of my 100,000 run simulation and
+compared the chances of winning depending on how New Hampshire goes.  Here
+are my results:
+
+<p>
+<b>Obama wins New Hampshire</b><br>
+<tt>Obama wins election&nbsp;&nbsp;&nbsp; 83.5%<br>
+Electoral vote tie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.4%<br>
+Romney wins election&nbsp;&nbsp; 15.1%</tt><p>
+
+<b>Romney wins New Hampshire</b><br>
+<tt>Obama wins election&nbsp;&nbsp;&nbsp; 77.9%<br>
+Electoral vote tie&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.0%<br>
+Romney wins election&nbsp;&nbsp; 21.1%</tt><p>
+
+While New Hampshire has under 1% of the electoral votes in the nation,
+its influence on the election results, according to my model (loosely based
+on Nate's model) is 6%.
+
+<p>
+
+In summary: Voters in New Hampshire are best off getting out and voting,
+and voting for one of the two main candidates this election cycle. 
+(<b>Update</b> The Nerd wallet numbers show a nearly identical 6% effect on 
+the outcome).
+
+<A name=rg32> </A>
+<p>
+<div class=blogtitle>
+<b>The random number generator</b>
+</div><br>
+
+The random number generator I am using is something oddball called
+<A href=/rg32/>RadioGatun</A>.  While RadioGatun is rather obscure, its
+direct successor, Keccak, just won the SHA-3 competition.  This is a 
+very good number generator for using with this kind of simulation;
+I ran a bunch of statistical tests against it a couple of years ago and <A 
+href=old-20100712-radiogatun32-passes-all-dieharder-tests.html>it passes
+with flying colors</A>.
+
+<p>
+
+For the record, here is the source code to the core of the random number 
+generator:
+
+<div class=usenet>
+<pre>
+/* Public domain crypto-strong random number generator; no warranty */
+#include &lt;stdint.h&gt;
+#define rgp uint32_t
+#define rgf(a) for(c=0;c&lt;a;c++)
+#define rgn rgf(3){w[c*13]^=s[c];u[16+c]^=s[c];}rgk(u,w);
+void rgk(rgp *a,rgp *b){rgp A[19],x,m=19,o=13,c,y,r=0,q[3],i=o;rgf(3){q
+[c]=b[c*o+12];}for(;--i;){rgf(3){b[c*o+i]=b[c*o+i-1];}}rgf(3){b[c*o]=q[
+c];}rgf(12){i=c+1+(c%3*o);b[i]^=a[c+1];}rgf(m){y=(c*7)%m;r+=c;r%=32;x=a
+[y]^(a[(y+1)%m]|(~a[(y+2)%m]));A[c]=x&gt;&gt;r|x&lt;&lt;(32-r);}rgf(m){a[c]=A[c]^A[
+(c+1)%m]^A[(c+4)%m];}a[0]^=1;rgf(3){a[c+o]^=q[c];}}void rgl(rgp *u, rgp
+*w,char *v){rgp s[3],q,c,r,x,d=0;rgf(19){u[c]=0;}rgf(39){w[c]=0;}for(;;
+){rgf(3){s[c]=0;}for(r=0;r&lt;3;++r){for(q=0;q&lt;32;q+=8){*v?x=*v++:(d=x=1);
+s[r]|=x&lt;&lt;q;if(d){rgn;rgf(16){rgk(u,w);}return;}}}rgn;}}rgp rgi(rgp *m,
+rgp *b){static int a=2;a&amp;2?rgk(m,b):0;a^=3;return m[a];}
+</pre>
+</div>
+
+<p>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="http://samiam.org/blog/20121015.html" data-num-posts="7" data-width="600"></div>
+
+<A href=/blog/>Blog index</A>
+
+</div>

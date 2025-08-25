@@ -1,0 +1,132 @@
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>The “Heartbleed” bug</h1>
+<h2>April 12, 2014</h2>
+I briefly discuss the “Heartbleed” bug, and why my https certificate key
+has changed.
+
+<p>
+
+This bug has been getting a lot of press, even making the front page of the
+<a href="http://www.bbc.com/news/technology-26935905">BBC</a>.
+
+<p>
+
+<A name=My_experience></A><A name=Myexperience></A><span class=moyet>==</span><span class=blogtitle><b>My experience</b></span><span class=moyet>==</span>
+
+<p>
+
+Five days ago, one of my hosting providers
+<a href="https://twitter.com/FrantechCA/status/453351811890417664">tweeted</a> 
+that there was a
+<a href="https://vpsboard.com/topic/3994-might-wanna-recompile-or-patch-that-openssl-buddy-472014/">nasty bug in OpenSSL</a>,
+which hardly surprised me considering
+<a href="http://web.nvd.nist.gov/view/vuln/search-results?query=OpenSSL&amp;search_type=all&amp;cves=on">OpenSSL's security history</a>.
+
+<p>
+
+The 
+<a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-0160">heartbleed bug</a> 
+is not that severe of a bug (5.0); indeed, 
+<a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2012-1570">MaraDNS’ most recent CVE report</a>
+was a more severe bug (6.4).
+
+<p>
+
+<A name=The_fix></A><A name=Thefix></A><span class=moyet>==</span><span class=blogtitle><b>The fix</b></span><span class=moyet>==</span>
+
+<p>
+
+The bug was very easy to fix:
+
+<p>
+
+<tt>yum -y update</tt><br>
+<tt>service nginx restart</tt><br>
+
+<p>
+
+It was yet another routine update, in the scheme of things.
+
+<p>
+
+<A name=Making_a_new_server_key></A><A name=Makinganewserverkey></A><span class=moyet>==</span><span class=blogtitle><b>Making a new server key</b></span><span class=moyet>==</span>
+
+<p>
+
+For those who wish to be extra-careful, here is how to make a new self-signed
+server key:
+
+<p>
+
+<tt>openssl genrsa -des3 -passout pass:x -out server.pass.key 2048</tt><br>
+<tt>openssl rsa -passin pass:x -in server.pass.key -out server.key</tt><br>
+<tt>rm server.pass.key</tt><br>
+<tt>openssl req -new -key server.key -out server.csr</tt><br>
+<tt>openssl x509 -req -days 365 -in server.csr -signkey server.key \</tt><br>
+<tt>&nbsp;-out server.crt</tt><br>
+
+<p>
+
+<A name=Hardening_nginx></A><A name=Hardeningnginx></A><span class=moyet>==</span><span class=blogtitle><b>Hardening nginx</b></span><span class=moyet>==</span>
+
+<p>
+
+While I was at it, I also hardened OpenSSL on nginx to only use secure
+ciphers, as per 
+<a href="https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/">Hynek Schlawack's instructions</a>, 
+by adding these lines to my nginx.conf file:
+
+<p>
+
+<tt>ssl_prefer_server_ciphers On;</tt><br>
+<tt>ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;</tt><br>
+<tt>ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:</tt><br>
+<tt>&nbsp;ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:</tt><br>
+<tt>&nbsp;RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS;</tt><br>
+
+<p>
+
+The last three lines above are actually one long line in my nginx.conf.
+
+<p>
+
+I also made sure root owns my server.key and server.crt files, and that
+they are only readable by root:
+
+<p>
+
+<tt>chown root:root server.key server.crt</tt><br>
+<tt>chmod 600 server.key server.crt</tt><br>
+
+<p>
+
+As an aside, I use
+<a href="https://github.com/samboy/nginx-1.2-samiam">my own fork of nginx 1.2</a>
+with all CVE security patches applied.
+
+<p>
+
+<A name=Still_supported_by_CentOS></A><A name=StillsupportedbyCentOS></A><span class=moyet>==</span><span class=blogtitle><b>Still supported by CentOS</b></span><span class=moyet>==</span>
+
+<p>
+
+While OpenSSL does not have the best security, it is a package that is
+included with CentOS 6 and, hence, will be supported with security updates
+until 2020.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

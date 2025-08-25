@@ -1,0 +1,54 @@
+<!--{TAGS:L}-->
+
+<h1>Oracle Linux: Now free</h1>
+
+<h2>July 31, 2012</h2>
+
+Ever since <A href=20110319.html>I had issues with CentOS over a 
+year ago</A> (which have greatly improved since then: CentOS did not
+significantly lag behind RHEL in 2012), I have been looking around for
+a really good RHEL clone.
+
+<p>
+
+Scientific Linux is really good, but it has issues being updated from
+one version to the next using the "Yum" command.  CentOS has been really
+good in 2012, but has been highly variable over the years.
+
+<p>
+
+Another RHEL clone I haven't paid much attention to is Oracle Linux. 
+While it was free, you had to pay to get security updates.  Well
+<A href=http://public-yum.oracle.com/>that has recently changed</A>
+and, indeed, 
+<A href=http://linux.oracle.com/switch/centos/>it's possible to switch
+from either CentOS or Scientific Linux to Oracle Linux</A> without 
+reinstalling.  This is especially useful for cheap OpenVZ accounts, since 
+one can install an ancient template of CentOS or Scientific Linux,
+update it to Oracle, and have an up-to-date RHEL clone.
+
+<p>
+
+In terms of people looking for good work, I once had a
+phone screening from a clueless HR drone that went like this:
+
+<p>
+"Do you have experience with
+Red Hat?"<br> "Yes, I have used RedHat since RH4.2 in 1997 and use both
+CentOS 5 and CentOS 6 on my servers."<br>"But CentOS is not Red Hat!" 
+<br>"It's 100% compatible"<br>"Sorry, we only want people with recent
+Red Hat experience"
+<p>
+Now that Oracle Linux is free, it's a lot easier to get past a clueless
+HR drone with the buzzword "Oracle" than with "CentOS".
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,54 @@
+<div class=blogpic>
+<img src=pics/webdev-icon-1.png>
+</div>
+
+<h1>Web page redesign</h1>
+
+<h2>May 17, 2011</h2>
+
+I am wrapping up the 2011 redesign of the web page and blog.  I started
+by <A href=20110514.html>fixing how this web page looks in mobile
+browsers</A>; once that was done, I replaced the entire web page by
+a mostly entire new design, as I <A href=20110515.html>mentioned here</A>.
+
+<p>
+
+Today, I worked on redesigning the blog so that it looks more professional.
+A lot of the work was setting up the automation scripts to use the new
+design.  The web page is static web pages modified by *NIX scripts;
+I prefer not to use a database back end because that's one less moving
+part that can break.
+
+<p>
+
+I tested the design in the "big five" browsers:
+Firefox, Opera, Chrome, Safari, and Internet Explorer.  
+There was only one minor issue in Safari with the iframe on the right-hand
+side of the pages; this was fixed after a single Google search.  
+Internet Explorer (IE) gave the most issues; while it rendered fine in IE9,
+I had to fix an issue rendering the page in Internet Explorer 7 and 8.  I
+made my life easier by performing no
+IE 6 testing; <A href=20110417.html>I no longer support
+Internet Explorer 6</A>.
+
+<p>
+
+The new design looks remarkably good in <A 
+href=http://dillo.org>Dillo</A> and is perfectly usable on mobile
+cell phones.  
+
+<p>
+
+This hopefully will be the last revision to this site's design for a while.  
+
+<p> 
+
+<i>To post a comment about an entry (or about the new design of this
+web site), send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,28 @@
+<!--{TAGS:L,M}-->
+<h1>Win32 Deadwood build</h1>
+<h2>January 22, 2011</h2>
+
+Wayne, on the MaraDNS mailing list, requested a Windows-compatible build of
+last weekend's snapshot of Deadwood.  I have made a debug ('-g') build
+of Deadwood for testing on Win32, available at
+<A href=http://maradns.org/deadwood/snap/>maradns.org/deadwood/snap</A>;
+look for the file with a ".7z" file extension.
+
+<p>
+
+I have also uploaded my 2011 screenshot of Linux today, available
+at <A href=/screenshots/>samiam.org/screenshots</A>.  Unlike last
+year's screenshots, this is Linux running natively on one of my
+netbooks (it's my wireless router).
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

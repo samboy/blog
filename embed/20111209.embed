@@ -1,0 +1,90 @@
+<h1>Web page design update</h1>
+
+<h2>December 9, 2011</h2>
+
+As I <A href=20111010.html>have mentioned before</A>, I am not completely
+satisfied with how this web site looks on mobile browsers.  While I was able
+to <A href=20111123.html>make some minor changes</A> to get the site to look
+half-decent on a mobile device, further testing on an iPod touch shows
+there was still work to be done.
+
+<p>
+
+I have done this work.  Instead of using an actual table, the CSS now
+uses <tt>display: table</tt> to arrange the page in a table layout.  For
+Internet Explorer 7 and 6 -- the only browsers today with significant
+market share that do not support <tt>display: table</tt> -- I have used
+IE-specific HTML to show the tables only to these older programs.
+
+<p>
+
+Because of this, I can now move the ads on the right hand side of the 
+table to the bottom of the page on mobile browsers; in addition,
+since I now use <tt>viewport</tt> in the head of the document, the
+ads are fully readable in mobile browsers without needing a pinch
+zoom.
+
+<p>
+
+I have also tested the web page in Internet Explorer 6 and the page's
+content degenerates fairly reasonably on this ancient browser.  The top
+of the page is light grey instead of having my picture, because IE6 doesn't
+support PNG transparency and that's how the PNG's background looks in IE6.
+I have removed the link hover colors in IE6 via the <A 
+href="http://www.albin.net/css/owen-hack">Owen Hack</A>; on pages with the
+Google ads, move hovers cause the page to annoyingly "blink".
+
+<p>
+
+I have removed the text razzing users who still use IE6; I have decided 
+it's not my place to tell people what browser they should or should not be
+using, and there may be someone out there who somehow has an internet 
+connection, but is not in a financial position to upgrade their older 
+computer.  IE6 is the oldest browser that mainstream web sites still cater
+their design to accommodate.
+
+<p>
+
+The site also looks reasonable on <A href=http://dillo.org>Dillo</A> as well
+as being perfectly readable on a browser that does not support CSS.
+
+<p>
+
+My goal in my web site designs has always been to have my site render 
+reasonably well on as many browsers as possible.  While I'm no longer
+worried about how it looks on museum pieces like Netscape 4, I have
+made sure the web site looks good on Opera 11, Chrome 15,
+Safari 5, both Firefox 8 and Firefox 3.6, Internet Explorer 8, on
+mobile browsers (namely, the iPhone), and reasonably degenerates in
+Internet Explorer 6-8.
+
+<p>
+
+In Dillo and Links, the site does not look perfect, but it is reasonably
+attractive and perfectly readable.  On browsers without CSS, the site is
+perfectly readable, albeit not pretty.
+
+<p>
+
+I have not had a chance yet to test the revision of the web site's design
+on iPads or other tablet devices, nor on any non-iPhone smart phones, but
+suspect the site will look good (it <i>should</i> look the same as it does
+on a desktop browser; the mobile page is only for small-screen devices).
+
+<p>
+
+I would like to perform more testing on mobile devices before going
+live with the site; in the meantime, its design can be tested here:
+
+<blockquote>
+<A href=http://samiam.org/try/>http://samiam.org/try/</A>
+</blockquote>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,37 @@
+<h1>New MaraDNS snapshot</h1>
+
+<h2>February 12, 2011</h2>
+
+Last November, <A 
+href=http://woodlane.webconquest.com/pipermail/list/2010-November/000702.html>William
+Summers pointed out that MaraDNS has issues with the corner case of an 
+ANY reply which is larger than 512 bytes long</A>.  In today's snapshot,
+I am beginning work on fixing this bug; MaraDNS now sends out a correct
+truncated reply if it (she) would otherwise generate an ANY reply longer
+than 512 bytes.
+
+<p>
+
+I do apologize for taking so long to start addressing this issue; I am 
+working with my employer to ensure that it no longer takes me three months
+for me to address an open bug in MaraDNS.
+
+<p>
+
+Today's snapshot can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

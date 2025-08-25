@@ -1,0 +1,85 @@
+<div class=blogpic>
+<img src=pics/App_Inventor.png width=160 height=120>
+</div>
+
+<h1>App Inventor</h1>
+
+<h2>May 25, 2011</h2>
+
+<h2>App Inventor: Create Your Own Android Apps</h2>
+
+<h3>By David Wolber, Hal Abelson, Ellen Spertus, and Liz Looney</h3>
+
+
+<i>App Inventor: Create Your Own Android Apps</i> describes and shows
+people how to use a new web application platform which has the goal of
+allowing non-programmers to be able to make Android apps.  This book
+is for people who have never programmed before who wish to develop
+Android apps.  "App Inventor" should not be confused with the Android SDK, 
+which is geared towards professional programmers who already know Java, 
+nor with the Android NDK that uses C++.
+
+<p>
+
+Computers have made a lot of progress in the last three decades.  We have
+moved from machines that can only work with 80 column text using a
+fixed-width font to machines with sophisticated graphical user interfaces.
+This transition has been done piecemeal, starting with the transition
+from the Apple II to the Macintosh, followed by the transition
+from DOS to Windows for business computers, which was then followed by 
+the transition of the Internet from Usenet and other 
+text-only applications to graphical web browsers.
+<p>
+
+The only technology that hasn't made this transition is the interface 
+used by programmers.  Programs are still made using the paradigm
+of an 80-column terminal with a fixed-width font.  
+
+<p>
+
+App Inventor breaks this programming model.  Programs are developed
+with a mouse; the program structure is described using 
+graphical components resembling pieces of a jigsaw puzzle.  The
+<i>App Inventor</i> book walks you through the process of using
+this platform, starting with a simple "Hello, world" application and
+finishing with advanced topics such as using Android's web API.
+
+<p>
+
+One issue I had with the system is that App Inventor needs a fast computer
+with a large screen to function well.  While I was able to build basic 
+applications on my test system (an Atom N455 Netbook with a small 1024x600
+screen), the emulated system I was developing on ran very slowly and 
+developing applications required a lot of switching the window between
+the web page with the application and the Java-generated page for 
+programming the application's logic.
+
+<p>
+
+I might have had better luck running the system using my 64-bit Linux
+system <A href=20110518.html>which runs the Android SDK noticeably faster</A>,
+but unfortunately I was unable to synchronize App Inventor with its included
+Android emulator in Linux.
+
+<p>
+
+App Inventor shows a lot of promise, and the O'Reilly book does a good
+job of describing how to use this development toolkit.  Unfortunately,
+the technology is a little too cutting-edge to use with the low-end
+computers many people have today.  Only get this book if you have
+<A href=http://appinventor.googlelabs.com>tried out App Inventor</A>
+and it runs well on your system.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing).  A digital copy of this
+book was given to me because I am a member of the <A
+href=http://www.oreillynet.com/oreilly/bloggers/home.csp>O'Reilly Blogger
+Review Program</A>.  The above image is part of the book's cover.</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

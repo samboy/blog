@@ -1,0 +1,95 @@
+<div class=blogpicx style="text-align: right">
+<img src=pics/SAN-chart.jpg width=224 height=126>
+</div>
+
+<h1>COVID-19: Update</h1>
+<h2>April 11, 2020</h2>
+The doubling rate in San Diego is now over ten days long.  This means
+the social isolation, as unpleasant as it is, has been very effective at
+controlling the spread of the virus.
+
+<p>
+
+<A name=San_Diegos_growth_rate></A><A name=SanDiegosgrowthrate></A><span class=moyet>==</span><span class=blogtitle><b>San Diego’s growth rate</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/COVID19-2020-04-11.png" alt="">
+<br class=nomobile>
+<i>COVID-19’s growth in San Diego</i>
+<p>
+
+<p>
+
+In this chart, we can see that, while the number of cases are still 
+going up, they are going up <i>more slowly</i>.  In mid-March, before
+the lockdown started, San Diego was doubling the number of COVID-19 cases 
+every day.  Right now, it takes over 10 days for the number of cases
+to double.  
+
+<p>
+
+Since San Diego county has around 3,000,000 people, and since we currently
+have 1,696 known cases (which means we probably have around 15,000 cases 
+total), we need seven or eight doublings before everyone gets infected,
+which means we currently have about 75 days to expand testing and 
+treatment.
+
+<p>
+
+<A name=How_to_end_the_stayathome_order></A><A name=Howtoendthestayathomeorder></A><span class=moyet>==</span><span class=blogtitle><b>How to end the stay-at-home order</b></span><span class=moyet>==</span>
+
+<p>
+
+We can not end the stay-at-home order and restart the economy without
+<a href="https://www.nytimes.com/2020/04/06/business/economy/coronavirus-economy.html">there being more widespread testing</a>.  Right now, we are flying blind: We do 
+not know the full spread of the virus, and we really do not know who has
+and who does not have the virus.  This is why, right now, <i>everyone</i>
+has to stay at home except to get essential supplies, and why everyone
+should be wearing a mask in public.  Because we have to act <i>as if</i>
+everyone has the virus.
+
+<p>
+
+Once we have widespread testing, the only people who will need to stay
+at home will be people who test positive for the virus.  Once that is
+in place, we will be able to re-open schools and non-essential businesses.
+
+<p>
+
+<A name=Where_to_get_current_information></A><A name=Wheretogetcurrentinformation></A><span class=moyet>==</span><span class=blogtitle><b>Where to get current information</b></span><span class=moyet>==</span>
+
+<p>
+
+Current numbers for the number of COVID-19 cases are available 
+<a href="https://github.com/nytimes/covid-19-data/">from The New York Times</a>.  
+
+<p>
+
+<A name=Stay_Safe></A><A name=StaySafe></A><span class=moyet>==</span><span class=blogtitle><b>Stay Safe!</b></span><span class=moyet>==</span>
+
+<p>
+
+I know it’s hard to stay at home all day, day after day, but that is
+what we need to do to save millions of lives and give us enough time to
+treat everyone who will need COVID-19 treatment, and to find better 
+treatments and more widespread testing.
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

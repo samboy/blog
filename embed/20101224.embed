@@ -1,0 +1,62 @@
+<h1>Windows on ARM chips</h1>
+<h2>December 24, 2010</h2>
+
+Every couple of decades, Microsoft ports Windows to some non-x86 chip.
+The port always ends up with a small userbase, not many applications
+are ported to it (we’re lucky if Microsoft Office gets ported to it),
+and Microsoft finally stops supporting the ISA (chip) in question.
+This happened with NT for Alpha, MIPS, and PowerPC in the 1990s.
+This happened with the Itanium port of Windows (notably, Windows server
+2003) in the first 2000s decade.
+
+<p>
+
+So, when I saw rumors of there being an ARM port of Windows 8, I was
+not too excited.  Windows is intertwined with the x86 architecture;
+the reason I like Windows is because it runs TextMaker 2006, Sun (sorry,
+I meant Oracle) VirtualBox, C-evo, Skype, Firefox + Flash + PDF reader +
+Java, The Gimp, Doom, Battle for Wesnoth, Age of Wonders: Shadow Magic,
+as well as Heroes of Might and Magic III.
+
+<p>
+
+Now, some of these applications could be ported to the ARM.  The open
+source ones written in C (Gimp, Doom, Wesnoth, Firefox, Battle for
+Wesnoth, and to some extent VirtualBox) may need little more than a
+recompile to run.  There’s a reasonably good chance Skype will port
+their software to Windows 8/ARM.  Flash will probably get ported, and if
+Adobe doesn’t port their PDF reader, there are free PDF readers that
+could be used instead.  Oracle may (or may not) port Java to Windows/ARM.
+
+<p>
+
+TextMaker Office will undoubtedly get ported to Windows/ARM, but I
+will have to purchase the software (TextMaker 2006 is a “free beer”
+download to demo their more recent products).  Forget about porting AoW:
+Shadow Magic or HOMM3.
+
+<p>
+
+C-evo would need a substantial rewrite before porting could even begin
+(first, it would have to be ported to Lazarus.  Then Lazarus would have
+to be ported to Windows/ARM.  Then finally C-evo’s source code could
+be looked at to fix issues caused by the ARM port).  No, they are not
+going to make Delphi for ARM unless this thing really catches on (hint:
+No non-x86 Windows has ever caught on, and they’ve been trying it
+since the 1990s).
+
+<p>
+
+Windows for ARM?  If this thing still exists in 10 years, I will be amazed.
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

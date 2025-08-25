@@ -1,0 +1,33 @@
+<!--{TAGS:M}-->
+
+<h1>Getting DNSSEC for MaraDNS</h1>
+
+<h2>April 3, 2012</h2>
+
+I would love MaraDNS to have DNSSEC support.  Unfortunately, I have bills
+to pay and a family to feed, so I will need to be paid for my work.
+
+<p>
+
+For me to implement DNSSEC for Deadwood using an external crypto library
+(like <A href=http://libtom.org/>LibTom</A>) would currently 
+require a grant of $50,000.
+
+<p>
+
+For parties interested in funding Deadwood having DNSSEC support, please
+<A href=/comments-closed.html>contact me</A> (<b>Important</b>:
+this email address is for people in a financial position to give me a
+$50,000 grant, <b>not</b> for random people on the Internet wanting free
+MaraDNS support).
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

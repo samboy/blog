@@ -1,0 +1,182 @@
+<h1>Looking at Celery</h1>
+
+<h2>December 20, 2011</h2>
+
+In today's blog entry, I describe how to have cloud (distributed)
+computing with Python.
+
+<p>
+
+<a href=http://celeryproject.org>Celery</A> is the technology
+this blog entry will look at.
+Celery uses the following components:
+
+<ul>
+
+<li>A daemon, called <i>celeryd</i> that is placed on each node (computer,
+    either physical or virtual) and queries a "broker" to see if any
+    tasks are to be performed.
+
+<li>A broker, which can be one of several databases or other data
+    store systems, which is used to store which tasks are to be
+    performed.  The client sends a task request to this broker; the 
+    celery servers (celeryd instances) get task requests from the  
+    brokers and perform them.  Once a task is finished, its return
+    value is stored on the broker to give back to the client.
+
+<li>The clients, which request celery tasks to be performed.
+
+</ul>
+
+<div class=blogtitle>
+<b>Installing Celery</b>
+</div><br>
+
+Not only does Celery need to be installed (after installing Python,
+naturally), the broker server has to also be installed (this is an
+issue Celery's documentation is not clear about).  Celery's
+preferred broker is something called Rabbitmq, written in erlang.  
+
+<p>
+
+Once Python, Erlang, and Rabbitmq are installed, Celery can be
+installed.
+
+<p>
+<div class=blogtitle>
+<b>Using Celery</b>
+</div><br>
+
+Once celery is installed, set up a directory for running
+celeryd which will process tasks.  Celeryd uses a file called
+<tt>celeryconfig.py</tt> to get configuration.  Here is a 
+simple configuration file which uses Rabbitmq on localhost
+(the same machine/node) as a broker:
+
+<p>
+<tt>
+BROKER_URL = "amqp://guest:guest@127.0.0.1:5672//"<br>
+CELERY_RESULT_BACKEND = "amqp"<br>
+CELERY_TASK_RESULT_EXPIRES = 300<br>
+CELERY_IMPORTS = ("tasks", )
+</tt>
+<p>
+
+The "CELERY_IMPORTS" line lists the files that contain tasks that
+this Celery daemon can process.  "tasks" above points to a file
+called "tasks.py" which contains the code for the actual task to
+perform.  In this example, the tasks is a simple brute-force search
+for a prime number:
+
+<P>
+<tt>
+from celery.task import task<br>
+<br>
+@task<br>
+<br>
+# Determine if a number is prime.  This is slow -- the point of this<br>
+# is a computation that is slow enough it should be handed off to another<br>
+# computer or thread<br>
+<br>
+def is_prime(x):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;s = x ** .5 # Square root of x<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if (x % 2) == 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0 # Not prime; even number<br>
+&nbsp;&nbsp;&nbsp;&nbsp;q = 3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;while q &lt; s + 1:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (x % q) == 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0 # Not prime<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q += 2<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return x # Prime<br>
+</tt>
+
+<p>
+
+The above code is run on a celery server, and determines whether or not
+a given number is prime.
+
+<p>
+
+Now that the above code is in place, we can have a client that determines
+the first number that is prime after a given number:
+
+<p>
+
+<tt>
+#!/usr/bin/python<br>
+<br>
+from tasks import is_prime<br>
+<br>
+def find_prime(x):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;p = 3 # We can run up to three tasks at once<br>
+&nbsp;&nbsp;&nbsp;&nbsp;results = []<br>
+</tt>
+<p>
+
+<i>Below, we fill up the task queue by testing the first p (maximum simultaneous
+tasks run at one time) numbers.</i>
+
+<p>
+<tt>
+&nbsp;&nbsp;&nbsp;&nbsp;a = 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;while a &lt; p:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;results.append(is_prime.delay(x))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x += 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a += 1<br>
+</tt>
+<p>
+
+<i>Now that the task queue is full, we wait for tasks to finish.  If a task
+is finished and the candidate number, in fact, is prime, we output the
+prime number and stop spawning new tasks.  If a given task is finished
+and the candidate number is not prime, we use the now-empty task slot to
+spawn a new task testing the next-higher to see if it is prime</i>
+
+<p>
+<tt>
+&nbsp;&nbsp;&nbsp;&nbsp;a = 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;while a &lt; 2000: # Infinite loop protection<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while b &lt; p:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if results[b].ready():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if results[b].result != 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return results[b].result<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;results[b] = is_prime.delay(x)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x += 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b += 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a += 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0 # No prime found :(<br>
+</tt>
+<p>
+
+<i>That finishes the code looking for a prime number.  We now 
+run this code to find the first prime number for a series of power of
+10s.</i>
+
+<p>
+<tt>
+print find_prime(1000)<br>
+print find_prime(1000000)<br>
+print find_prime(1000000000)<br>
+print find_prime(1000000000000)<br>
+print find_prime(1000000000000000)<br>
+</tt>
+<p>
+
+This simple example shows how Celery can be used with Python programs
+to make programs run across multiple computers, which increases the
+scalability and speed of Python applications.
+
+<p>
+
+<i>While this blog post is copyright 2011 Sam Trenholme, all code 
+contained here is public domain and can be used for any purpose whatsoever.
+To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

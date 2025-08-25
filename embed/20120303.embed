@@ -1,0 +1,49 @@
+<h1>MaraDNS 1 has limited support</h1>
+
+<h2>March 3, 2012</h2>
+
+This is a heads-up that MaraDNS 1 is no longer supported for 
+anything besides security holes; I mentioned <a 
+href=20120101.html>this policy</a> at the beginning of the year.  I 
+actually have been phasing out of support for MaraDNS 1 since 2009:
+
+<p>
+
+<blockquote>
+<A href=
+http://maradns.blogspot.com/2009/05/alexa-top-500-list.html
+>http://maradns.blogspot.com/2009/05/alexa-top-500-list.html</A>
+<p>
+<A href=
+http://maradns.blogspot.com/2010/08/deadwood-2904-released.html
+>http://maradns.blogspot.com/2010/08/deadwood-2904-released.html</A>
+<p>
+<A href=
+http://samiam.org/blog/20120101.html
+>http://samiam.org/blog/20120101.html</A>
+</blockquote>
+
+Since I understand a lot of MaraDNS users do not carefully read my blog,
+and since I have made updates to MaraDNS 1 this year, I can see why some
+people are not aware of my support boundaries for MaraDNS 1.  This in mind,
+I have updated the relevant download pages for MaraDNS 1 to make
+it clear only security support is supplied for this older software.
+
+<p>
+
+I wish I was in an economic position to supply full support for all 
+MaraDNS releases, as well as being able to add DNSSEC support as well as
+better integration between the authoritative and recursive parts of
+MaraDNS 2, but unfortunately no one with deep pockets has offered to pay
+me to work on MaraDNS full time.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

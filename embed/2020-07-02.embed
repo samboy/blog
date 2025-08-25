@@ -1,0 +1,129 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/2020-Election-Prediction-1.jpg width=224 height=126>
+</div>
+
+<h1>Election prediction</h1>
+<h2>July 2, 2020</h2>
+I make my first prediction for the presidential election this November.
+Also, a MaraDNS release. <i>314 words</i>
+
+<p>
+
+<A name=My_prediction></A><A name=Myprediction></A><span class=moyet>==</span><span class=blogtitle><b>My prediction</b></span><span class=moyet>==</span>
+<br>
+<style>
+.widepic {box-shadow: 0 0 4px #888;
+border-radius: 8px;
+width: 99%;
+height: auto;
+}
+@media screen and (max-width: 640px) {
+.nomobile { display: none; }
+}
+</style>
+<img class=widepic src="pics/2020-Election-Prediction-1.png" alt="">
+<br class=nomobile>
+<i>My first prediction for the November 3 presidential election</i>
+<p>
+
+<p>
+
+In this prediction, which I made over at
+<a href="https://www.270towin.com/maps/XOEyQ">270towin.com</a>, I predict that
+Biden will beat Trump with 308 electoral votes (270 electoral votes are
+needed to win).  I predict that Wisconsin, Michigan, Pennsylvania, and
+Florida will flip blue this year.  This map is very similar to my
+<a href="https://www.270towin.com/maps/qOzNA">2016 prediction</a>, the only
+difference being that I (correctly) predicted that Wisconsin would
+go to Trump.
+
+<p>
+
+The 2016 election, looking back, was <i>bizarre</i>.  I think it is
+the first election where 
+<a href="https://www.samiam.org/blog/2016-10-08.html">a candidate was caught
+on tape bragging about sexually assaulting women</a> but still won.
+
+<p>
+
+Comparing things to 2016, when Trump did briefly out-poll Hillary at
+the national level in late May of 2016,<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote1">1</a></sup> Biden has been 
+consistently out polling Trump.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote2">2</a></sup>  
+
+<p>
+
+Looking at just Florida, a key battleground state, Hillary was 3.7 points
+ahead of Trump in polling four years ago today.  Trump ultimately won
+the state by 1.2 points, because of voters who made up their mind in
+the final days before the election.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote3">3</a></sup>  Right now, Biden is
+6.4 points ahead of Trump in Florida,<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote4">4</a></sup> a lead Clinton only 
+had briefly in April of 2016.
+
+<p>
+
+As it turns out, Biden is polling even better in Pennsylvania, Michigan, and
+Wisconsin right now.  For Trump to win come November, someone would need
+to come up with a COVID-19 vaccine within the next three months—a very
+long shot.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a href="#Footnote5">5</a></sup>
+
+<p>
+
+<A name=MaraDNS_350006_released></A><A name=MaraDNS350006released></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0006 released</b></span><span class=moyet>==</span>
+
+<p>
+
+I mentioned that <a href="https://www.samiam.org/blog/2020-06-30.html">MaraDNS
+3.5.0006 was almost ready</a> a few days ago.  I have now released
+MaraDNS 3.5.0006; it is available at <A href="https://maradns.samiam.org">https://maradns.samiam.org</A> or
+<A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+
+<p>
+
+This release mainly makes the Deadwood parser less strict with whitespace.
+This is one more step in my process of making MaraDNS a little easier to use
+with each release.
+
+<p>
+
+<A name=Footnotes></A><A name=Footnotes></A><span class=moyet>==</span><span class=blogtitle><b>Footnotes</b></span><span class=moyet>==</span>
+
+<p>
+
+<ol>
+<a name="Footnote1"> </a><li>RealClear Politics, 
+<a href="https://www.realclearpolitics.com/epolls/2016/president/us/general_election_trump_vs_clinton-5491.html">General
+Election: Trump vs. Clinton</a>
+<a name="Footnote2"> </a><li>RealClear Politics,
+<a href="https://www.realclearpolitics.com/epolls/2020/president/us/general_election_trump_vs_biden-6247.html">General 
+Election: Trump vs. Biden</a>
+<a name="Footnote3"> </a><li>RealClear Politics,
+<a href="https://www.realclearpolitics.com/epolls/2016/president/fl/florida_trump_vs_clinton-5635.html">Florida:
+Trump vs. Clinton</a>
+<a name="Footnote4"> </a><li>RealClear Politics,
+<a href="https://www.realclearpolitics.com/epolls/2020/president/fl/florida_trump_vs_biden-6841.html">Florida:
+Trump vs. Biden</a>
+<a name="Footnote5"> </a><li>“<a href="https://www.nytimes.com/interactive/2020/science/coronavirus-vaccine-tracker.html">Coronavirus 
+Vaccine Tracker</a>”, by Jonathan Corum, Denise Grady, Sui-Lee Wee and 
+Carl Zimmer, published by <i>The New York Times</i>
+</ol>
+
+<p>
+
+The election map is public domain, obtained from 
+<a href="https://en.wikipedia.org/wiki/File:ElectoralCollege2020.svg">the
+Wikipedia</a>.  Its SVG vector form is also 
+<a href="https://www.samiam.org/blog/pics/2020-Election-Prediction-1.svg">available</a>.
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

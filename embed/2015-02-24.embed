@@ -1,0 +1,142 @@
+<div class=blogpic>
+<img src=pics/2015-1-120.jpg width=120 height=120>
+</div>
+
+<h1>Superfish</h1>
+<h2>February 24, 2015</h2>
+Last Thursday, the Internet’s daily two minutes hate was
+directed towards Lenovo because they have installed a piece of
+adware on their more inexpensive computers called “Superfish.”
+
+<p>
+
+<A name=What_happened></A><A name=Whathappened></A><span class=moyet>==</span><span class=blogtitle><b>What happened</b></span><span class=moyet>==</span>
+
+<p>
+
+It has been a long-standing practice for computer makers to get paid for
+adding software to their Windows installs.  The software traditionally
+has been trial versions of commercial programs; the thinking being that
+some small percentage of users will purchase the software after the
+trial period ends.
+
+<p>
+
+This is a win-win: It’s a win for the computer makers, because they
+get some extra money for each computer they sell.  It’s a win for
+the software makers, who get more users of their software.  It’s even
+a win for end-consumers because they usually end up paying less for
+their computers.
+
+<p>
+
+Lenovo took this to the next level: They installed a piece of 
+software called “Superfish”, which injected ads in to user’s
+web pages.  The
+<a href="https://forums.lenovo.com/t5/Lenovo-P-Y-and-Z-series/Lenovo-Pre-instaling-adware-spam-Superfish-powerd-by/td-p/1726839">first complaint about “Superfish”</a>
+on Lenovo’s forums appeared in September of 2014.  They pointed out,
+in the thread, the Lenovo was not the only computer maker to add 
+unwanted programs; other computer makers add an unwanted and 
+difficult-to-uninstall program called “Wild Tangent Games.”
+
+<p>
+
+The thread remained relatively quiet until last Thursday after
+<a href="http://blog.erratasec.com/2015/02/extracting-superfish-certificate.html">Robert Graham extracted the root certificate</a>.
+The Superfish developers were very careless with their security.  So careless
+that the mainstream press promptly 
+<a href="http://arstechnica.com/security/2015/02/lenovo-pcs-ship-with-man-in-the-middle-adware-that-breaks-https-connections/">reported that Lenovo was adding malware to their computers</a>.
+
+<p>
+
+At this point, the floodgates of rage opened and the Lenovo became the
+victim of last Thursday’s Internet two minutes hate.
+
+<p>
+
+<A name=No_Thinkpads_were_affected></A><A name=NoThinkpadswereaffected></A><span class=moyet>==</span><span class=blogtitle><b>No Thinkpads were affected</b></span><span class=moyet>==</span>
+
+<p>
+
+Lenovo never installed the Superfish program on any of their Thinkpads.
+The software was only installed on their Ideapad consumer line in 2014,
+and was already being phased out in early 2015 before the mainstream
+press discovered it was malware last Thursday.
+
+<p>
+
+<A name=Lenovo_listens_to_their_customers></A><A name=Lenovolistenstotheircustomers></A><span class=moyet>==</span><span class=blogtitle><b>Lenovo listens to their customers</b></span><span class=moyet>==</span>
+
+<p>
+
+The thing to keep in mind is that
+<i>Lenovo listens to their customers</i>.  Why do I know this?  
+Because, last year, Lenovo tried to make their Thinkpads a little
+better for customers who prefer using a touchpad instead of 
+the trackpoint (the red “button” on Thinkpad keyboards which acts
+like a mouse) by making the touchpad bigger.  They did this by removing
+the mouse buttons for trackpoint users, having them click the touchpad
+instead.
+
+<p>
+
+The reaction was negative.  Not only did traditional Thinkpad users not
+like it, but also the new method of using the touchpad for
+the trackpoint mouse buttons got negative reviews in the mainstream
+press.  
+
+<p>
+
+Lenovo listened.  It was a very pleasant surprise when I looked at
+the 2015 lineup of Thinkpads and saw that the trackpoint mouse buttons
+came back.
+
+<p>
+
+<A name=Lenovo_can_redeem_themselves></A><A name=Lenovocanredeemthemselves></A><span class=moyet>==</span><span class=blogtitle><b>Lenovo can redeem themselves</b></span><span class=moyet>==</span>
+
+<p>
+
+Since Lenovo listened when it came to the Trackpoint mouse buttons, I
+have the utmost of confidence that they will listen again and make 
+changes so that something like Superfish never happens again.
+
+<p>
+
+One way to rebuild consumer trust is to have many of their computers
+available as
+<a href="http://www.microsoftstore.com/signature">Microsoft Signature computers</a>,
+ensuring that there is no third party software besides drivers installed
+on the computers.
+
+<p>
+
+Another is to simply have little or no third party software on
+their Thinkpad lineup.  While some Thinkpads may need third
+party software added to reduce their price (such as their
+low cost “E” series), the high-end Thinkpads (the small “X” series,
+medium sized “T” series, and large “W” series) really should
+only have Windows and Lenovo’s drivers installed; if any other
+software is installed, the customer can choose to install (or not install) it
+when configuring their computer.
+
+<p>
+
+Just as Lenovo rebuilt trust with their most devoted users by restoring
+the Trackpoint mouse buttons, Lenovo can rebuild the trust
+damaged by the Superfish fiasco by giving customers more options about
+what third party software is or is not installed on their computers.
+
+<p>
+
+<p>
+
+<i>Comments are closed
+
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

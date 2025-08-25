@@ -1,0 +1,38 @@
+<h1>Classic X11 fonts for Windows</h1>
+
+<h2>February 16, 2012</h2>
+
+For people, like myself, who are fans of the classic <A 
+href=http://x.org>X11</A> font misc-fixed, 
+<A href=http://www.ank.com.ar/fonts/>there is now a Windows version
+of this font</A>, and I have made <A href=/screenshots/MISCFS__.TTF>a
+local mirror</A> of the true-type version of the 6x13 font, which 
+seems to be available under a GPL license.
+
+<p>
+
+This font is very useful for having two 80x41 terminal windows side-by-side 
+on a tiny 1024x600 Netbook screen.  The font is a true-type font which 
+looks good at only one size: 9 point.  
+
+<p>
+
+For anything larger, I recommend using <A 
+href=http://www.google.com/webfonts/specimen/Cousine>Cousine</A>
+(also sometimes known as "Liberation mono"), which is a beautiful and
+fully readable fully delta hinted monospace font released under an 
+open-source license (the <A 
+href=http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>Open
+Font License</A>);  I also have a <A href=/screenshots/Cousine.zip>local
+mirror</A> of this font.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

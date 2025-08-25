@@ -1,0 +1,106 @@
+<h1>Happy Valentine's Day</h1>
+
+<h2>February 14, 2012</h2>
+
+Happy Valentine's day everyone.  For people happily in relationships,
+today is a very good day to remember how special your loved one is.
+For people who are single, today is a great day to get yourself a date
+and get someone in your life--I once had a roommate who started dating
+this girl on Valentine's day.
+
+<p>
+
+For you single nerds out there, today is a good day to stop spending so
+much time on Slashdot and editing the Wikipedia, and spending more time
+flirting with and meeting girls, even if you're meeting them online--I
+met my wife online, so Internet dating does work.
+
+<p>
+
+<b class=blogtitle>On the Debian OpenSSL RNG bug</b>
+
+<p>
+
+I have been reading up on the <A
+href=http://perimetergrid.com/wp/2008/05/17/ubuntudebian-crng-cracked-ssh-vulnerable/
+>Debian OpenSSL RNG bug</A>.  I personally am no fan of the 
+<A href=http://maradns.org/debian.html>Debian bureaucracy</A> and deeply
+thank Nicholas Bamber for dealing with it to keep MaraDNS (mostly) up-to-date
+in Debian.  
+
+<p>
+
+However, I think the real reason this happened is the very nature of
+open-source.  Ben Laurie <A 
+href=http://www.links.org/?p=328>summarized it well</A>:
+
+<blockquote>
+Despite the widespread use of OpenSSL, almost no-one funds development on it.
+</blockquote>
+
+<b class=blogtitle>Ubuntu rant</b>
+
+<p>
+
+Right now, I am creating eight Ubuntu virtual containers so that I can
+test a deployment script I am writing for my day job.  My script to create
+the containers calls <tt>apt-get -y dist-upgrade</tt> which is supposed
+to patch any known security problems in the containers unattended.
+
+<p>
+
+Unfortunately, apt-get, even though it is called with <tt>-y</tt>, stops
+the automated security patching with this rather obnoxious prompt:
+
+<p>
+<tt>
+Configuration file `/etc/init/portmap.conf'<br>
+&nbsp;==&gt; Deleted (by you or by a script) since installation.<br>
+&nbsp;==&gt; Package distributor has shipped an updated version.<br>
+&nbsp;&nbsp;&nbsp;What would you like to do about it ?  Your options are:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Y or I  : install the package maintainer's version<br>
+&nbsp;&nbsp;&nbsp;&nbsp;N or O  : keep your currently-installed version<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D     : show the differences between the versions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Z     : background this process to examine the situation<br>
+&nbsp;The default action is to keep your current version.<br>
+*** portmap.conf (Y/I/N/O/D/Z) [default=N] ?<br>
+</tt>
+<p>
+
+Note to Ubuntu maintainers: We don't care.  A fresh system calling
+<tt>apt-get <b>-y</b> dist-upgrade</tt> should never prompt the user
+for anything--that's why apt-get was called with the <tt>-y</tt> flag.
+From the <tt>apt-get</tt> man page:
+
+<blockquote>
+       <tt>-y</tt>, <tt>--yes</tt>, <tt>--assume-yes</tt><p>
+           Automatic yes to prompts; assume "yes" as answer to all prompts and
+           run non-interactively. If an undesirable situation, such as
+           changing a held package, trying to install a unauthenticated
+           package or removing an essential package occurs then apt-get will
+           abort.
+</blockquote>
+
+<p>
+
+My work-around:
+
+<blockquote><tt>vzctl exec $NUM 'yes Y | apt-get -y dist-upgrade'</tt>
+</blockquote>
+
+<p>
+
+See also: <A href=20110529.html>Linux is only for bachelors</A>,
+<A href=20110603.html>I made LXer</A>, and
+<A href=20110623.html>Linux: Desktop fail</A>.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,44 @@
+<h1>MaraDNS update</h1>
+
+<h2>October 8, 2011</h2>
+
+Thanks to a contribution from a sponsor, I have been able to allocate some
+more time this month to work on MaraDNS and Deadwood.
+
+<p>
+
+<A href=http://woodlane.webconquest.com/pipermail/list/2011-October/000945.html>Harlan 
+Bloom reported</A> having problems using Deadwood to resolve names on his
+internal network.  After troubleshooting the problem with him, I discovered
+that he was trying to resolve 192.168.1.x IPs without adding 
+<tt>filter_rfc1918 = 0</tt> to his dwood3rc file.
+
+<p>
+
+Since this is the second time someone has had an issue like this, I have
+updated the default dwood3rc files to describe and explain the 
+filer_rfc1918 parameter.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<A href=http://woodlane.webconquest.com/pipermail/list/2011-October/000943.html>Karim
+Malhas has reported</A> a bug with MaraDNS' csv2 parser when using the
+<tt>/read</tt> directive.  I have been able to confirm the existence of
+this bug and have example configuration files that reproduce said bug,
+and will hopefully have time in the next few days to fix the bug.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

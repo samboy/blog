@@ -1,0 +1,70 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>February 22, 2013</h2>
+
+In today’s blog, I discuss today’s Deadwood update.
+
+<p>
+
+<span class=blogtitle><b>The problem</b></span>
+
+<p>
+
+When I updated Deadwood to no longer read the cache if the dwood3rc file
+is newer, there was still a problem when:
+
+<ul>
+<li>Deadwood is started
+<li>The dwood3rc file is modified
+<li>Deadwood is stopped, writing a new cache file
+</ul>
+
+When this happens with Deadwood 3.2.03, the cache file (which is a stale
+cache) is newer than the dwood3rc file.  
+
+<p>
+
+<span class=blogtitle><b>The solution</b></span>
+
+<p>
+
+In order to solve this problem, Deadwood needs to have this workflow:
+
+<ul>
+<li>Make a note of the timestamp for the dwood3rc file when Deadwood
+    is started
+<li>The dwood3rc file is replaced with a new file
+<li>The cache is written, including a note of when the dwood3rc was modified
+    when Deadwood was started
+<li>Deadwood is started again.  It sees that, while dwood3rc is older than
+    the cache, the dwood3rc timestamp is not the same as the older one, so
+    it doesn't load the cache.
+<li>The cache is no longer stale.
+</ul>
+
+I spent today adding the ability to write metadata to a cache file in a 
+format that allows the cache to be read by older Deadwood releases.  Now,
+I need to add the code to make sure the dwood3rc file hasn't changed since
+the last cache read before reading the cache.  I will do that in March.
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+I plan to work on MaraDNS/Deadwood again one day in March, after the 21st.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

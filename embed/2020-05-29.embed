@@ -1,0 +1,111 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Green-blue.jpg width=224 height=126>
+</div>
+
+<h1>Goodbye, OpenVZ</h1>
+<h2>May 29, 2020</h2>
+I discuss updating my severs from OpenVZ.
+
+<p>
+
+<A name=Time_to_move_on_from_OpenVZ></A><A name=TimetomoveonfromOpenVZ></A><span class=moyet>==</span><span class=blogtitle><b>Time to move on from OpenVZ</b></span><span class=moyet>==</span>
+
+<p>
+
+OpenVZ is the technology I have been using to host my websites starting
+in 2011.  It allowed me to be root in my own virtual container running
+a full version of CentOS Linux for only $15 a year.  At that price, I
+got three of them.  
+
+<p>
+
+While the technology has worked fairly well over the years, for me to
+update to a new technology requires my hosting provider to have a 
+“template” for the OS in question.  My hosting provider did not have
+a template for CentOS 8, even though
+<a href="https://src.openvz.org/projects/OVZT">one appears to exist</a>.  
+
+<p>
+
+When I asked them for CentOS 8 support, they said there might be
+issues with the template.  They never added CentOS 8 support.
+
+<p>
+
+For me to continue using OpenVZ, I need to use an OS which will continue
+to be updated with security updates for the foreseeable future.
+Since my OpenVZ providers are not adding CentOS 8 support, that meant
+I needed to look elsewhere for hosting.
+
+<p>
+
+I decided to get Dreamhost, simply because a family member chose Dreamhost
+for their hosting and it looked to be compatible with my workflow 
+(UNIX-compatible shell, rsync for file transfer).  That in mind, I finally
+pulled the trigger and ordered Dreamhost yesterday, and spent a couple of
+hours moving everything over to my new hosting provider.
+
+<p>
+
+While Dreamhost is perceived as a “Wordpress” site, they work fine for
+hosting (mostly) static files which are copied from a local Linux
+“master” server via rsync.
+
+<p>
+
+The transition was very smooth, with very few issues.  I started off 
+moving over a small domain, then moved over the rest of my domains.
+
+<p>
+
+Dreamhost has been around 
+<a href="https://web.archive.org/web/19981201072457/http://www.dreamhost.com/">since the dot-com boom of the 1990s</a> 
+and are still around today; it looks like I will be able to use them
+for hosting for the foreseeable future.
+
+<p>
+
+<A name=Minor_MaraDNS_update></A><A name=MinorMaraDNSupdate></A><span class=moyet>==</span><span class=blogtitle><b>Minor MaraDNS update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have discovered that Docker is not a real viable solution for telling
+Windows uses “just run Docker” when they ask they I expand the Windows
+port:
+
+<p>
+
+<ul>
+<li> Docker requires a high end version of Windows 10 to run, since
+  it uses Hyper-V for the virtualization.
+<li> Docker and VMware do not play together very well on Windows 10,
+  unless one has <i>both</i> the latest version of Windows 10 and
+  the latest version of VMware player.
+</ul>
+
+<p>
+
+This in mind, I plan to add “star record” support for Deadwood’s
+bogus IPs.
+
+<p>
+
+Note that the Windows port of the MaraDNS authoritative server is
+being deprecated (it was never a real Windows port: it does not run as
+a standalone service and has Y2038 issues); I will no longer update the
+Windows 32-bit binary of the authoritative half of MaraDNS for Windows
+(unless a security issue with a CVE number is discovered).  The recursive
+server (Deadwood) is still fully supported as a Windows service and I
+have not plans to change that at this time.
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

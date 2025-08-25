@@ -1,0 +1,103 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/Kaminsky.jpg width=224 height=126>
+</div>
+
+<h1>Dan Kaminsky</h1>
+<h2>May 2, 2021</h2>
+On April 23, Dan Kaminsky passed away.  I write about how our lives
+crossed paths.
+
+<p>
+
+<A name=Making_MaraDNS_secure></A><A name=MakingMaraDNSsecure></A><span class=moyet>==</span><span class=blogtitle><b>Making MaraDNS secure</b></span><span class=moyet>==</span>
+
+<p>
+
+In the process of writing MaraDNS, I did a lot of online research about
+DNS and how DNS worked, including reading Dan Bernstein’s then
+<a href="https://web.archive.org/web/20010331112731/http://cr.yp.to/djbdns/forgery.html">excellent 
+notes</a> about protecting DNS servers from spoofing attacks.
+
+<p>
+
+Indeed, I noted, back in 2001—the year I started implementing Mara—that 
+MaraDNS used cryptography to protect her from a “spoofing attack”.
+
+<p>
+
+This spoofing attack was only theoretical back in 2001.  It did not
+become a practical attack for over half a decade.
+
+<p>
+
+<A name=Dan_Kaminsky></A><A name=DanKaminsky></A><span class=moyet>==</span><span class=blogtitle><b>Dan Kaminsky</b></span><span class=moyet>==</span>
+
+<p>
+
+In 2008, <a href="https://en.wikipedia.org/wiki/Dan_Kaminsky">Dan
+Kaminsky</a> finally found a way to implement the spoofing
+attack I went to some effort to protect MaraDNS from back in 2001.
+
+<p>
+
+This attack got a lot of attention and press at the time.  MaraDNS
+<a href="https://web.archive.org/web/20080831100625/http://blogs.zdnet.com/security/?p=1562">was 
+not vulnerable to the attack</a>, but other DNS servers were vulnerable.
+
+<p>
+
+This attack was very helpful in giving MaraDNS more press and attention
+in an era when getting a job in the tech industry was very difficult.
+Indeed, two years later, I was able to get two job offers in a very slow
+economy because of my work on MaraDNS.
+
+<p>
+
+Writing a DNS server and making it secure is a lot of work behind the
+scenes.  The work I did protecting MaraDNS from the attack Kaminsky
+implemented required adding an entire cryptographic library to MaraDNS’s
+code so she would not be vulnerable to the attack.  Since this code did not
+add any shiny features to MaraDNS, it was not visible to users of the
+software until Kaminsky’s attack.
+
+<p>
+
+I appreciate Kaminsky going to a lot of effort to make what was a
+theoretical attack practical. 
+
+<p>
+
+Rest in peace, Dan Kaminsky, and prayers for his family and friends. He
+was a very good colleague and someone who I am honored to have interacted
+with.  It has been a very deep honor to interact with Kaminsky while he 
+was still with us.
+
+<p>
+
+<A name=MaraDNS_350019></A><A name=MaraDNS350019></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0019</b></span><span class=moyet>==</span>
+
+<p>
+
+Last month, I released MaraDNS 3.5.0019.  This is MaraDNS 3.5.0018 with
+a <a href="https://github.com/samboy/MaraDNS/pull/95">one line patch</a> added 
+to allow the Zoneserver daemon to run better under systemd.
+
+<p>
+
+<i>The picture is a self-portrait of Kaminsky that he released under
+a <a href="https://creativecommons.org/licenses/by/3.0/deed.en">Creative Commons
+license</a>.  I have altered the work to make it a picutre I can include
+in my blog.</i>
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

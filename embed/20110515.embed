@@ -1,0 +1,48 @@
+<h1>Facebook viruses</h1>
+
+<h2>May 15, 2011</h2>
+
+One of my friends in Facebook recently got stung by a virus; I was able to look
+at the source code for the virus before Facebook's security team
+removed it.
+
+<p>
+
+The virus is written in straightforward Javascript and does the following:
+
+<ul>
+
+<li>The virus assumes that someone is logged in to their Facebook account.
+
+<li>The virus uses <tt>XMLHttpRequest</tt> to post a wall message telling
+    people to download the virus.  This is posted to all of the user's 
+    friend's pages.
+
+<li>The virus then redirects the user to a page with an advertisement.
+
+</ul>
+
+<p>
+
+The way for browsers to protect themselves from this virus is simple:
+They should not allow people to enter Javascript code in one's location
+toolbar.  Or, if that is too limiting, they should not allow XMLHttpRequest
+to be run in Javascript in a URL.
+
+<hr>
+
+I have just revamped the web page design of my website.  I always felt the
+old site design was a little too sparse; the new design is tighter.  The new
+design also removes the dated photo of myself from the top of my
+web page.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

@@ -1,0 +1,97 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood Update</h1>
+<h2>June 21, 2013</h2>
+11 years ago today, I released MaraDNS 1.0 to the world.  Today, I 
+have updated Deadwood and am announcing another end-of-life.
+
+<p>
+
+<A name=Deadwood_update></A><A name=Deadwoodupdate></A><span class=moyet>==</span><span class=blogtitle><b>Deadwood update</b></span><span class=moyet>==</span>
+
+<p>
+
+I have added a FAQ entry about using Deadwood with RFC1918 addresses.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://www.maradns.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+The updated FAQ:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.org/deadwood/doc/FAQ.html#11">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>doc/<![if gt IE 6]>&#8203;<![endif]><wbr>FAQ.<![if gt IE 6]>&#8203;<![endif]><wbr>html#<![if gt IE 6]>&#8203;<![endif]><wbr>11</A>
+</blockquote>
+
+<A name=Deadwood_20_endoflife></A><A name=Deadwood20endoflife></A><span class=moyet>==</span><span class=blogtitle><b>Deadwood 2.0 end-of-life</b></span><span class=moyet>==</span>
+
+<p>
+
+I have dropped most support for the older, more compact Deadwood 2.0
+release.  The only thing I update in this branch of Deadwood is
+security holes 
+<i>with</i>
+CVE numbers.
+
+<p>
+
+The last update to Deadwood 2.0 was Deadwood 2.3.08, which 
+addressed CVE-2012-1570.  
+
+<p>
+
+I am now placing an end of life on Deadwood 2.0: June 21, 2016.  This
+gives users three years to update to Deadwood 3.  With Deadwood 3 out
+for over two years, it’s time to upgrade.
+
+<p>
+
+<A name=MaraDNS_1_endoflife></A><A name=MaraDNS1endoflife></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 1 end-of-life</b></span><span class=moyet>==</span>
+
+<p>
+
+Please remember that all MaraDNS 1 releases are only supported for
+CVE security holes, and that this branch of MaraDNS will no longer
+be supported two years from today (June 21, 2015):
+
+<p>
+
+<blockquote>
+<A href="http://samiam.org/blog/20120621.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20120621.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+</blockquote>
+
+<A name=Current_MaraDNS_plans></A><A name=CurrentMaraDNSplans></A><span class=moyet>==</span><span class=blogtitle><b>Current MaraDNS plans</b></span><span class=moyet>==</span>
+
+<p>
+
+Unless a CVE security hole comes up, my present plan is to release
+Deadwood 3.2.04 and MaraDNS 2.0.08 sometime around the end of the year.
+
+<p>
+
+While not a hard-and-fast rule (for example, I answered a lot of email
+on the list this month), my plan is to work on MaraDNS or Deadwood again
+one day in a couple of months unless a critical security bug with a CVE
+number is found.
+
+<p>
+
+<p>
+
+<i>To post a comment about an entry, <A href=/comments-closed.html>send
+me an email</A> and I may or may not post your comment (with or without
+editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

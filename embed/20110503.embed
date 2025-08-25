@@ -1,0 +1,82 @@
+<h1>Poor man's Widelux</h1>
+
+<h2>May 3, 2011</h2>
+
+<style>
+a img {
+	border: 0px;
+}
+</style>
+<div>
+<A href=20110503.jpg><img src=20110503-thumb.jpg width=595></A><br>
+<i>Click on the picture to enlarge</i><p>
+</div>
+
+One of <A href=http://www.jeffbridges.com/widelux.html>Jeff Bridges' favorite
+cameras is the "Widelux"</A>.  The Widelux is a very expensive 
+special-purpose camera that acts like a fish-eye lens, but with more
+resolution: It uses a special moving lens that allows ultra-wide-angle
+shots.  Not only is this camera expensive, but <A 
+href=http://elizabethavedon.blogspot.com/2010/01/jeff-bridges-widelux-camera.html>it
+is difficult to work with</A>.
+
+<p>
+
+While I like the effect of the Widelux, I do not have Jeff Bridges' budget for
+fancy cameras.  Fortunately, I don't need an expensive Widelux to make 
+panoramic shots.  It is possible to make panoramic shots with the basic
+camera in my cell phone by using the right software.
+
+<p>
+
+I use an open-source program called <A 
+href=http://hugin.sourceforge.net/>Hugin</A> to make panoramic photos.
+To use this program, first I take a series of pictures that cover the 
+width I want in my photo.  This is done by taking one picture, then turning
+the camera to the left so that the left half of the picture I just took
+is the right half of the picture I am about to take.  If I do this enough
+times, I will have turned around and have enough pictures to make a 360 degree
+panoramic image.
+
+<p>
+
+Of course, doing a full 360 degree rotation is not necessary.  In the above
+picture, for example, I only wanted to cover a little over 180 degrees.  
+
+<p>
+
+Once the pictures are taken, it is a simple matter of loading the pictures in
+to Hugin.  Despite the program being open-source, there is a built-in
+"wizard" that can, in the majority of cases, take a series of photos and
+stitch them togeter in to a longer panoramic shot.  
+
+<p>
+
+One issue Hugin had in this picture was parallax distortion with 
+the tree about one third from the left of the picture.  Hugin caused
+the tree to have branches floating in mid-air; I had
+to edit the picture in <A href=http://gimp.org>The Gimp</A> for about
+an hour to resolve this issue.
+
+<p>
+
+Also, it can be difficult for Hugin to stitch photos together if less than 
+about half of the picture overlaps the picture next to it.  
+In addition, Hugin will sometimes crop the ends of the photo montage.
+
+<p>
+
+Like the real Widelux, Hugin is a little fickle and unpredictable.  Like
+the real Widelux, Hugin can generate some really beautiful panoramic shots.
+Unlike the real Widelux, Jeff Bridges' income is not needed to have one.
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

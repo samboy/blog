@@ -1,0 +1,34 @@
+<!--{TAGS:M}-->
+
+<h1>Deadwood update</h1>
+
+<h2>December 11, 2011</h2>
+
+Today's update to Deadwood does not update any source code; what I have done
+is:
+
+<ul>
+<li>Added a file, <tt>Makefile.fallback</tt>, for compiling Deadwood on
+    UNIX systems without <tt>clock_gettime()</tt> (Mac OS X, for example)
+<li>Updated <A href=http://maradns.org/deadwood/doc/INSTALL.txt>INSTALL.txt</A>
+<li>Added a new document, <A
+href=http://maradns.org/deadwood/doc/execfile-HOWTO.html>execfile-HOWTO</A>
+</ul>
+
+<p>
+It can be downloaded here:
+
+<blockquote>
+<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+</blockquote>
+
+<p>
+
+<i>To post a comment about an entry, send me an email and I may or may
+not post your comment (with or without editing)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

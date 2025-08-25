@@ -1,0 +1,134 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+</div>
+
+<h1>October MaraDNS Updates</h1>
+<h2>October 20, 2013</h2>
+I have updated MaraDNS and Deadwood this month.
+
+<p>
+
+<A name=MaraDNS_update></A><A name=MaraDNSupdate></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS update</b></span><span class=moyet>==</span>
+
+<p>
+
+I mentioned 
+<a href="http://samiam.org/blog/20130920.html">last month</a> I was working on
+making MaraDNS more IPv6 compatible.  I have finished that work.
+In the snap branch, if MaraDNS is compiled with
+IPv6 enabled, IPv6 glue records are now shown to the user.  This makes
+it possible to, in theory, resolve DNS names using entirely IPv6
+packets.
+
+<p>
+
+Note that Deadwood, MaraDNS’ recursor, still can not handle a
+glueless NS referral with only AAAA (IPv6) records.  But, since most
+registrars have issues with IPv6 glue in their referrals, IPv4 is
+still needed to resolve DNS names.
+
+<p>
+
+This update can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://www.maradns.org/download/2.0/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<A name=Third_party_patch></A><A name=Thirdpartypatch></A><span class=moyet>==</span><span class=blogtitle><b>Third party patch</b></span><span class=moyet>==</span>
+
+<p>
+
+Last year, Tomasz Torcz
+<a href="http://woodlane.webconquest.com/pipermail/list/2012-July/001123.html">provided a patch</a>
+for running MaraDNS with systemd.  Just a couple of weeks ago, he updated
+this patch.  While
+<a href="http://samiam.org/blog/20120723.html">I no longer accept third party patches</a>,
+I have made a copy of his updated patch, which can be looked at here:
+
+<p>
+
+<blockquote>
+<A href="http://maradns.samiam.org/download/patches/3rd_party/Thomasz-Torcz-systemd-2013-10-14.patch">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>patches/<![if gt IE 6]>&#8203;<![endif]><wbr>3<![if gt IE 6]>&#8203;<![endif]><wbr>rd_<![if gt IE 6]>&#8203;<![endif]><wbr>party/<![if gt IE 6]>&#8203;<![endif]><wbr>Thomasz-<![if gt IE 6]>&#8203;<![endif]><wbr>Torcz-<![if gt IE 6]>&#8203;<![endif]><wbr>systemd-<![if gt IE 6]>&#8203;<![endif]><wbr>2013-<![if gt IE 6]>&#8203;<![endif]><wbr>10-<![if gt IE 6]>&#8203;<![endif]><wbr>14.<![if gt IE 6]>&#8203;<![endif]><wbr>patch</A>
+</blockquote>
+
+<A name=Deadwood_update></A><A name=Deadwoodupdate></A><span class=moyet>==</span><span class=blogtitle><b>Deadwood update</b></span><span class=moyet>==</span>
+
+<p>
+
+In this month’s Deadwood update, I have added 
+<a href="http://maradns.samiam.org/deadwood/doc/FAQ.html#12">another question and answer</a>
+to the FAQ.
+
+<p>
+
+It can be downloaded here:
+
+<p>
+
+<blockquote>
+<A href="http://www.maradns.org/deadwood/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+</blockquote>
+
+<A name=Forum_update></A><A name=Forumupdate></A><span class=moyet>==</span><span class=blogtitle><b>Forum update</b></span><span class=moyet>==</span>
+
+<p>
+
+While I really can’t provide hand-holding support, I have been helping
+Vlodko Petrov on the 
+<a href="https://forum.samiam.org/forum-5.html">MaraDNS support forum</a>.  By making
+this help public, Google and other spiders are indexing this information,
+allowing the help and answers I provide to be readily available in search
+engines.
+
+<p>
+
+<A name=SipHash_for_Deadwood></A><A name=SipHashforDeadwood></A><span class=moyet>==</span><span class=blogtitle><b>SipHash for Deadwood?</b></span><span class=moyet>==</span>
+
+<p>
+
+While SipHash would
+<a href="http://www.samiam.org/blog/20131006.html">make Deadwood a little more secure</a>,
+this security improvement would be strictly academic.  I have to balance
+making an academic security update against Deadwood’s code against the need
+to keep Deadwood small and fast.  
+
+<p>
+
+That in mind, I have no plans to make my implementation of SipHash to
+Deadwood’s hash compression function at this time.  However, the code
+has already been written should I wish to do this in the future.
+
+<p>
+
+If SipHash existed in 2001 when I implemented MaraDNS’ random number
+generator or in 2010 when I was still actively developing Deadwood and
+last updated its hash compression function, I probably would have had
+the code use a 
+<a href="http://www.samiam.org/blog/20131006.html#S32Hash">32-bit SipHash variant</a>.
+
+<p>
+
+But, with a full-time job as a software developer and 
+<a href="http://www.samiam.org/blog/20131007.html">a baby to take care of</a>,
+I no longer am actively developing MaraDNS the way I was until 2010.
+There is a reason that 
+<a href="http://www.samiam.org/blog/20120326.html">I stopped marketing MaraDNS as being secure last year</a>.
+<p>
+
+<i>To post a comment about this blog entry, <A 
+href="/comments-closed.html">go to the forum</A>
+(<A 
+href="/comments-closed.html">self-signed https</A>).
+New accounts may post once I approve the account.  
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

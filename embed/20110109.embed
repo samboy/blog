@@ -1,0 +1,42 @@
+<h1>Deadwood & ObHack updated</h1>
+
+<h2>January 9, 2011</h2>
+
+I have updated two programs today.  Actually, let me 
+take that back.  Other people have patched programs,
+I am merely uploading their changes.
+
+<p>
+
+Fritz fixed a bug in ObHack 007.1
+that I reported; the revised version overwrites the
+previous version (since the change is just a simple
+bugfix).  I have made this available at
+<A href=http://samiam.org/slump/>samiam.org/slump</A>.
+
+<p>
+
+A ween or two ago, Yarin submitted some patches to the MaraDNS
+mailing list.  I am slowly making these patches part of MaraDNS;
+currently, I have updated Deadwood to have his patches:
+
+<p>
+
+<A href=http://maradns.org/deadwood/>maradns.org/deadwood</A>
+
+<p> 
+
+I hope to have time to apply Yarin's other patches to MaraDNS this
+coming weekend, but don't hold your breath.
+
+<p>
+
+<i>To post a comment about this entry, send me an email and I may or may
+not post your comment (with or without editing; see the <A href=/blog/>blog
+index</A> for details)</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

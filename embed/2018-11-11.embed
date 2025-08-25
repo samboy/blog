@@ -1,0 +1,84 @@
+<!--{TAGS:M}-->
+
+<div class=blogpic>
+<img src=pics/2017-09-03-Blog.jpg width=160 height=120>
+</div>
+
+<h1>Deadwood 3.2.13 released</h1>
+<h2>November 11, 2018</h2>
+I have released Deadwood 3.2.13.  Nothing in the server has changed; only
+the testing framework has been updated
+
+<p>
+
+<A name=Deadwood_3213></A><A name=Deadwood3213></A><span class=moyet>==</span><span class=blogtitle><b>Deadwood 3.2.13</b></span><span class=moyet>==</span>
+
+<p>
+
+In Deadwood 3.2.13, I have updated the SQA suite to run again.  The main
+issue is that Dig, when used to run DNS-over-TCP has changed and no longer
+works with Deadwood; that in mind, I have updated the tests to no longer
+use Dig, but use a tool I wrote myself instead for the DNS-over-TCP tests.
+
+<p>
+
+Only the SQA tests have been updated; no code changes to the
+Deadwood daemon have been made.
+
+<p>
+
+That in mind, I am only releasing the source code to Deadwood 3.2.13,
+and will not update MaraDNS to use the new version of Deadwood.  The
+Windows binaries will remain at 3.2.12.
+
+<p>
+
+The code is available here:
+
+<p>
+
+<blockquote>
+<A href="https://maradns.samiam.org/deadwood/stable/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>stable/</A>
+</blockquote>
+
+I have also updated the GitHub version of the code:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+</blockquote>
+
+<A name=MaraDNS_Now_under_the_Contributor_Covenant_Code_of_Conduct></A><A name=MaraDNSNowundertheContributorCovenantCodeofConduct></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS: Now under the Contributor Covenant Code of Conduct</b></span><span class=moyet>==</span>
+
+<p>
+
+For too long, I have been a grousy old-school *NIX graybeard.  I 
+strive to improve myself as a person; that means the days of replying
+to support requests with dismissive RTFMs are over.  In more detail,
+I now strive to have all of my public interactions, especially with
+regards to my open source development, follow the 
+<a href="https://github.com/samboy/MaraDNS/blob/master/CODE_OF_CONDUCT.md">Contributor Covenant Code of Conduct</a>.
+
+<p>
+
+It’s pretty simple: I will respect others as human beings.  I will be
+kind and considerate.  I will be empathetic towards others.
+
+<p>
+
+I think this change will make me a more happy person, and make my
+online interactions more pleasant.
+
+<p>
+
+<p>
+
+<i>Comments are closed.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

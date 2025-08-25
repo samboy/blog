@@ -1,0 +1,129 @@
+<div class=blogpic>
+<img src=pics/me-blog.jpg width=120 height=120>
+</div>
+
+<h1>Saturday election prediction</h1>
+
+<h2>October 20, 2012</h2>
+
+In tonight's prediction, I am using Nate Silver's numbers from yesterday 
+which can be seen at <a
+href=http://538.vk.tj>538.vk.tj</A> to see how likely each candidate is 
+to win, and by how many electoral votes.  
+
+<p>
+
+To make these numbers, I ran 100,000 simulated presidential votes; this
+is a type of simulation called a "Monte Carlo" simulation.
+
+<p>
+<div class=blogtitle>
+<b>No correlation between states</b>
+</div><br>
+
+Assuming there is no correlation between the states, we get the
+following numbers.  In other words, I am assuming that Obama getting
+Ohio does not affect his chances of getting Florida, and vice-versa.
+
+<pre>
+<b>Overall</b>
+Romney 13.6%
+Tie      .8%
+Obama  85.6%
+</pre>
+
+These numbers more favor Obama than <A href=20121017.html>Wednesday's 
+numbers</A>; it appears he is getting a post-second-debate bounce.
+
+<A name=state> </A>
+<p>
+<div class=blogtitle>
+<b>By state</b>
+</div><br>
+
+In these numbers, I have determined a given candidate's chances of 
+winning based on them winning or losing a given state.
+
+<pre>
+<b>Obama gets OH</b>
+Romney   6.02%
+Tie      0.56%
+Obama    93.42%
+<b>Romney gets OH</b>
+Romney   32.85%
+Tie      1.55%
+Obama    65.60%
+
+<b>Obama gets FL</b>
+Romney   0.70%
+Tie      0.10%
+Obama    99.20%
+<b>Romney gets FL</b>
+Romney   20.99%
+Tie      1.26%
+Obama    77.74%
+
+<b>Obama gets CO</b>
+Romney   9.72%
+Tie      0.76%
+Obama    89.51%
+<b>Romney gets CO</b>
+Romney   18.68%
+Tie      0.93%
+Obama    80.39%
+
+<b>Obama gets NH</b>
+Romney   12.06%
+Tie      0.93%
+Obama    87.01%
+<b>Romney gets NH</b>
+Romney   17.27%
+Tie      0.60%
+Obama    82.13%
+</pre>
+
+In the above blog, we look at the election probabilities based on various
+conditions.  For example, if Obama wins Ohio, Romney has only a
+6.02% chance of winning the election.
+
+<A name=ev> </A>
+<p>
+<div class=blogtitle>
+<b>By electoral vote</b>
+</div><br>
+
+Here are the chances of the incumbent (Obama) getting a certain number
+of electoral votes (EVs):
+
+<pre>
+Obama EV
+220-229    .1%
+230-239    .4%
+240-249   1.4%
+250-259   4.1%
+260-269   8.4%
+270-279  14.2%
+280-289  18.3%
+290-299  18.3%
+300-309  13.6%
+310-319  11.2%
+320-329   6.1%
+330-339   3.0%
+340-349    .7%
+
+Mean   291.6
+Median 290
+</pre>
+
+"Mean" is adding up all of the possible EVs together and dividing by
+100,000.  Median is sorting by the number of electoral votes and
+choosing the middle one.
+
+<p>
+
+<i>In order to reduce spam, comments for this entry are now closed</i>
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>

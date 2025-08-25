@@ -1,0 +1,166 @@
+<!--{TAGS:M}-->
+
+<div class=blogpicx style="text-align: right">
+<img src=pics/2020-07-blog.jpg width=224 height=126>
+</div>
+
+<h1>MaraDNS; SipHash</h1>
+<h2>August 11, 2020</h2>
+This blog is about my 3.5.0011 release of MaraDNS, and looks at
+patching Lua to add SipHash support. <i>687 words</i>
+
+<p>
+
+<A name=MaraDNS_350011></A><A name=MaraDNS350011></A><span class=moyet>==</span><span class=blogtitle><b>MaraDNS 3.5.0011</b></span><span class=moyet>==</span>
+
+<p>
+
+I have released MaraDNS 3.5.0011.  The biggest change is that the
+testing is more automated: I now have a cron tab which runs a
+Podman (Docker-compatible) container every night and performs
+a number of automated tests against MaraDNS and Deadwood.  
+
+<p>
+
+Since this test battery takes nearly an hour to run, the tests
+would only be run when making a new MaraDNS release.  By running them
+every night, this will make regressions easier to track down.
+
+<p>
+
+While it’s still quite unstable, I am in the process of making
+a Lua-based DNS server called <i>coLunacyDNS</i>.  This code is
+an update to <i>mmLunacyDNS</i>; it adds IPv6 record support (IPv6
+sockets aren’t present yet, but are being worked on), the ability
+to read data in from a file, the ability to send out “not there”
+replies, a strong random number generator, timestamp support,
+and the ability to ask for either A (IPv4 IP) or AAAA (IPv6 IP) 
+records from other DNS servers.
+
+<p>
+
+I have fixed two serious bugs in coLunacyDNS over the last couple
+of weeks, so this code is still unstable.  The nice thing about
+having a DNS server which can run Lua code while processing a 
+DNS query is that it allows one to implement features MaraDNS
+does not have, such as split horizon DNS or the ability to
+load DNS records from a file without having to restart the
+server.  Large block lists (lists of names we do not wish to
+resolve) take up much less memory when stored using Lua tables
+than as records in Deadwood’s speed optimized cache.
+
+<p>
+
+MaraDNS 3.5.0011 can be downloaded at the
+<a href="https://maradns.samiam.org/download.html">usual place</a>.
+
+<p>
+
+<A name=Lua_and_SipHash></A><A name=LuaandSipHash></A><span class=moyet>==</span><span class=blogtitle><b>Lua and SipHash</b></span><span class=moyet>==</span>
+
+<p>
+
+One issue Lua has which has security implications is that Lua’s
+hash compression algorithm is vulnerable to collisions, which can
+result in certain kinds of denial of service attacks.
+
+<p>
+
+The standard way to solve these kinds of problems is to
+use <a href="https://www.samiam.org/blog/20131004.html">SipHash</a>,
+which I last looked at back in 2013.  So, the first thing
+I did, after realizing Lua had this issue, was to make 
+patches for both Lua 5.1 and Lua 5.4 which add SipHash support:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/LUAstuff">https://github.com/samboy/LUAstuff</A>
+</blockquote>
+
+Look in the folder <tt>lua-patches/</tt> for the SipHash
+patches.  Note that the patches do not attempt to seed the
+key used by SipHash with random values, but do provide a Lua
+script which can create random keys on any *NIX system with
+<tt>/dev/urandom</tt> support.  An example of seeding the SipHash
+key can be seen in the file <tt>src/lua.c</tt> in Lunacy, my
+personal fork of Lua 5.1:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/samboy/lunacy">https://github.com/samboy/lunacy</A>
+</blockquote>
+
+In my benchmarks, adding SipHash support slows down 64-bit compiles
+of Lua by about 3% in real world use, and by about 10-15% if using a
+32-bit i386-based compile.  I personally think this amount of slow down
+is worth having a nice security margin, but there may be ways to
+reduce this slow down without reducing security.
+
+<p>
+
+<A name=SipHash_13></A><A name=SipHash13></A><span class=moyet>==</span><span class=blogtitle><b>SipHash 1-3</b></span><span class=moyet>==</span>
+
+<p>
+
+The version of SipHash I looked at back in 2013 is called 
+“SipHash 2-4”: 2-4 because it applies two rounds of SipHash’s
+“compression” function for every eight bytes in the input string,
+and four rounds of the “compression” function after it finishes
+receiving input.  As it turns out, “SipHash 1-3”, while not
+an officially sanctioned version of SipHash, is noticeably
+faster: It only performs one round of the core compression
+function for each eight bytes in the input string, and three
+rounds of the compression function after the end of the string.
+
+<p>
+
+This is the version of SipHash used by Python, Ruby, and Rust:
+
+<p>
+
+<blockquote>
+<A href="https://bugs.ruby-lang.org/issues/13017">https://<![if gt IE 6]>&#8203;<![endif]><wbr>bugs.<![if gt IE 6]>&#8203;<![endif]><wbr>ruby-<![if gt IE 6]>&#8203;<![endif]><wbr>lang.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>issues/<![if gt IE 6]>&#8203;<![endif]><wbr>13017</A>
+</blockquote>
+
+<blockquote>
+<A href="https://bugs.python.org/issue29410">https://bugs.python.org/issue29410</A>
+</blockquote>
+
+<A name=HalfSipHash></A><A name=HalfSipHash></A><span class=moyet>==</span><span class=blogtitle><b>HalfSipHash</b></span><span class=moyet>==</span>
+
+<p>
+
+Another option for 32-bit processors is HalfSipHash, which
+is similar to a <a href="https://www.samiam.org/blog/20131006.html">idea
+I proposed back in 2013</a>: Run SipHash against 32-bit, instead of
+64-bit, words.  The official proposal uses different rotation
+constants than the ones I proposed back in 2013; like my 2013
+proposal, this SipHash variant has a key which is only 64 bits
+in size, which is small enough to be brute force cracked, but
+that is a non-issue in the typical use case where one can not 
+see the numbers generated by HalfSipHash.  HalfSipHash, along 
+with the official SipHash reference code, can be viewed here:
+
+<p>
+
+<blockquote>
+<A href="https://github.com/veorq/SipHash/">https://github.com/veorq/SipHash/</A>
+</blockquote>
+
+
+<p>
+
+<p>
+
+<i>Did you know that all of my blog entries are available in a free to
+download eBook at 
+<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>
