@@ -31,3 +31,9 @@ https://creativecommons.org/licenses/by/2.0/deed.en
 CC-BY-2.0 license
 Attribution: Alan Light
 
+#Kaminsky.jpg
+
+Dan Kaminsky photo
+License: https://creativecommons.org/licenses/by/3.0/deed.en
+Attribution: Dan Kaminsky (Self portrait)
+
