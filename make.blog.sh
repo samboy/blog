@@ -19,11 +19,29 @@ echo \</style\> >> index.html
 # This is just going to be a long line
 echo \<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" \> >> index.html
 echo \</head\>\<body\>\<div class=blog\> >> index.html
+echo '<i>Please be aware that this is an archive of my currently' >> index.html
+echo 'active blog at <a ' >> index.html
+echo 'href=https://samiam.org/blog>samiam.org</a>.' >> index.html
+echo 'Many links in the blog are broken.' >> index.html
+echo '<a href="#GitBlogIndex">Click/tap here for a functional' >> index.html
+echo 'blog index.</a></i>' >> index.html
+echo '</div><div class=blog>' >> index.html
 echo \<h1\>Sam Trenholme’s blog\</h1\> >> index.html
 echo >> index.html
+echo > foo.html
 for a in $( ls embed/*embed | sort -r ) ; do
+  NAME=$( grep -i h1 $a | head -1 | tr '<>' ':' | awk -F: '{print $3}' )
+  LINK=$( echo $NAME | awk '{gsub(/[^A-Za-z0-9]/,"");print}' )
+  DATE=${a#embed/}
+  DATE=${DATE%.embed}
+  echo '<a name='$LINK'> </a>' >> index.html
+  echo '<a href="#'$LINK'">'$NAME' ('$DATE')</a></br>' >> foo.html
   cat $a >> index.html
   echo \<div class=blog\> >> index.html # An old bug I never correctly fixed
   echo $a
 done
-echo \</div\>\</body\>\</html\> >> index.html
+echo '<a name="GitBlogIndex"> </a><h1>Blog index</h1>' >> index.html
+cat foo.html >> index.html
+echo \</div\> >> index.html
+rm -f foo.html
+echo \</body\>\</html\> >> index.html
