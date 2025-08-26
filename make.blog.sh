@@ -7,6 +7,17 @@ echo \<style\> >> index.html
 echo '@import url('fonts.css');' >> index.html # OFL license in CSS file
 # A lot of the blog was made in an era before phone screens were mainstream
 echo 'body { max-width: 95vw; overflow-x: hidden; }' >> index.html
+
+# Nav after blog entries
+echo '.GitBlogNav { display: table; width: 95vw; ' >> index.html
+echo 'text-align: center;' >> index.html
+echo 'border-top: 1px solid black;' >> index.html
+echo 'margin: 3px; padding: 2px;' >> index.html
+echo margin-left: auto\; >> index.html
+echo margin-right: auto\; >> index.html
+echo 'border-bottom: 1px solid black; }' >> index.html
+echo '@media (min-width: 640px) {.GitBlogNav {width:640px;}}' >> index.html
+
 echo .blog { display: table\; max-width: 640px\; >> index.html
 echo 'font-family: Kilroy8; font-size: 16px;' >> index.html
 echo margin-left: auto\; >> index.html
@@ -31,8 +42,6 @@ echo \</style\> >> index.html
 echo \<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" \> >> index.html
 echo \</head\>\<body\> >> index.html
 echo \<a name="GitBlogTop"\> \</a\> >> index.html
-# Yes, two nested divs in the same class
-echo \<div class=blog\> >> index.html
 echo \<div class=blog\> >> index.html
 echo '<i>Please be aware that this is an archive of my currently' >> index.html
 echo 'active blog at <a ' >> index.html
@@ -52,15 +61,16 @@ for a in $( ls embed/*embed | sort -r ) ; do
   echo '<a name='$LINK'> </a>' >> index.html
   echo '<a href="#'$LINK'">'$NAME' ('$DATE')</a></br>' >> foo.html
   cat $a >> index.html
-  echo '<hr><div class=blog><i>Go to: ' >> index.html
+  #echo '<hr class=pc>' >> index.html
+  echo '<div class=GitBlogNav><i>Go to: ' >> index.html
   echo '<a href="#GitBlogTop">Top</a>' >> index.html
-  echo '<a href="#GitBlogIndex">Index</a></i></div><hr>' >> index.html
+  echo '<a href="#GitBlogIndex">Index</a></i></div>' >> index.html
+  #echo '<hr class=pc>' >> index.html
   echo \<div class=blog\> >> index.html # An old bug I never correctly fixed
   echo $a
 done
 echo '<a name="GitBlogIndex"> </a><h1>Blog index</h1>' >> index.html
 cat foo.html >> index.html
-echo \</div\> >> index.html
 echo \</div\> >> index.html
 rm -f foo.html
 echo \</body\>\</html\> >> index.html
