@@ -338,7 +338,7 @@ that says “get another browser”
 
 Speaking of getting other browsers on older systems, newer versions of
 Firefox do not install in Windows 2000, but Firefox 10.0.12 ESR does:
-ftp://ftp.mozilla.org/pub/firefox/releases/10.0.12esr/
+ftp://<![if gt IE 6]>&#8203;<![endif]><wbr>ftp.mozilla.org/<![if gt IE 6]>&#8203;<![endif]><wbr>pub/<![if gt IE 6]>&#8203;<![endif]><wbr>firefox/<![if gt IE 6]>&#8203;<![endif]><wbr>releases/<![if gt IE 6]>&#8203;<![endif]><wbr>10.0.12esr/
 
 <p>
 
