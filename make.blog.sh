@@ -16,6 +16,7 @@ echo margin-right: auto\; } >> index.html
 echo '.blog pre {max-width: 90vw; overflow: scroll; }' >> index.html
 echo '.blog li pre {max-width: 80vw; overflow: scroll; }' >> index.html
 echo '.blog table {max-width: 90vw; overflow: scroll; }' >> index.html
+echo '.blog tt {max-width: 90vw; overflow: scroll; }' >> index.html
 echo '.blogtable {max-width: 90vw; overflow: scroll; }' >> index.html
 
 echo '.moyet { display: none; }' >> index.html
