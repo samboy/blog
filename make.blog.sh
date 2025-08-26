@@ -10,6 +10,7 @@ echo 'body { max-width: 95vw; overflow-x: hidden; }' >> index.html
 
 # Nav after blog entries
 echo '.GitBlogNav { display: table; width: 95vw; ' >> index.html
+echo 'font-family: Kilroy8; font-size: 16px;' >> index.html
 echo 'text-align: center;' >> index.html
 echo 'border-top: 2px solid #aaa;' >> index.html
 echo 'margin: 5px; padding: 2px;' >> index.html
