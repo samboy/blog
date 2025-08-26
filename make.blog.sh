@@ -11,9 +11,12 @@ echo .blog { display: table\; max-width: 640px\; >> index.html
 echo 'font-family: Kilroy8; font-size: 16px;' >> index.html
 echo margin-left: auto\; >> index.html
 echo margin-right: auto\; } >> index.html
+
 # Again, phone screen workarounds
 echo '.blog pre {max-width: 90vw; overflow: scroll; }' >> index.html
 echo '.blog table {max-width: 90vw; overflow: scroll; }' >> index.html
+echo '.blogtable {max-width: 90vw; overflow: scroll; }' >> index.html
+
 echo '.moyet { display: none; }' >> index.html
 echo '.blog h1 { font-size: 28px; }' >> index.html
 echo '.s { font-size: 18px; }' >> index.html
