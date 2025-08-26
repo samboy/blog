@@ -726,9 +726,9 @@ The reason being because it has the following lines in it:
 <tt># (I also use a combination of click-to-flash and disabled animated GIFs</tt><br>
 <tt>#  to block annoying animated ads.  I don't block and sometimes even click</tt><br>
 <tt>#  static ads; I understand that web sites need money to stay online.)</tt><br>
-<tt>root_servers["kontera.com."]="192.168.255.255" # Annoying mouseover ads</tt><br>
-<tt>root_servers["infolinks.com."]="192.168.255.255" # Annoying mouseover ads</tt><br>
-<tt>root_servers["intellitxt.com."]="192.168.255.255" # Annoying mouseover ads</tt><br>
+<tt>root_servers["kontera.com."] = "192.168.255.255" # Annoying mouseover ads</tt><br>
+<tt>root_servers["infolinks.com."] = "192.168.255.255" # Annoying mouseover ads</tt><br>
+<tt>root_servers["intellitxt.com."] = "192.168.255.255" # Annoying mouseover ads</tt><br>
 
 <p>
 
