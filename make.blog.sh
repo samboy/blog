@@ -29,7 +29,11 @@ echo '.blogpicx { text-align: left !important; }' >> index.html
 echo \</style\> >> index.html
 # This is just going to be a long line
 echo \<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" \> >> index.html
-echo \</head\>\<body\>\<div class=blog\> >> index.html
+echo \</head\>\<body\> >> index.html
+echo \<a name="GitBlogTop"\> \</a\> >> index.html
+# Yes, two nested divs in the same class
+echo \<div class=blog\> >> index.html
+echo \<div class=blog\> >> index.html
 echo '<i>Please be aware that this is an archive of my currently' >> index.html
 echo 'active blog at <a ' >> index.html
 echo 'href=https://samiam.org/blog>samiam.org</a>.' >> index.html
@@ -48,11 +52,15 @@ for a in $( ls embed/*embed | sort -r ) ; do
   echo '<a name='$LINK'> </a>' >> index.html
   echo '<a href="#'$LINK'">'$NAME' ('$DATE')</a></br>' >> foo.html
   cat $a >> index.html
+  echo '<hr><div class=blog><i>Go to: ' >> index.html
+  echo '<a href="#GitBlogTop">Top</a>' >> index.html
+  echo '<a href="#GitBlogIndex">Index</a></i></div><hr>' >> index.html
   echo \<div class=blog\> >> index.html # An old bug I never correctly fixed
   echo $a
 done
 echo '<a name="GitBlogIndex"> </a><h1>Blog index</h1>' >> index.html
 cat foo.html >> index.html
+echo \</div\> >> index.html
 echo \</div\> >> index.html
 rm -f foo.html
 echo \</body\>\</html\> >> index.html
