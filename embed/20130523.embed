@@ -23,7 +23,7 @@ Deadwood pass all tests.
 <p>
 
 I have been silently updating the version of Deadwood available at
-<A href="http://maradns.org/deadwood">http://maradns.org/deadwood</A> as well as the version bundled with
+<A href="http://maradns.org/deadwood">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood</A> as well as the version bundled with
 MaraDNS.  Deadwood 3.2.03a is simply Deadwood 3.2.03 with a 
 <a href="http://samiam.org/blog/20130222.html">one-line bugfix patch</a>
 which I have been testing for the last three months; no problems have
@@ -59,7 +59,7 @@ MaraDNS-20130523 can be downloaded here:
 <p>
 
 <blockquote>
-<A href="http://www.maradns.org/download/2.0/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+<A href="http://www.maradns.org/download/2.0/snap/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
 </blockquote>
 
 Deadwood 3.2.03a is here:
@@ -67,7 +67,7 @@ Deadwood 3.2.03a is here:
 <p>
 
 <blockquote>
-<A href="http://maradns.org/deadwood/stable/">http://maradns.org/deadwood/stable/</A>
+<A href="http://maradns.org/deadwood/stable/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood<![if gt IE 6]>&#8203;<![endif]><wbr>/stable<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 I plan to work on MaraDNS/Deadwood again one day in a couple of months

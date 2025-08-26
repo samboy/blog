@@ -55,7 +55,7 @@ simple configuration file which uses Rabbitmq on localhost
 
 <p>
 <tt>
-BROKER_URL = "amqp://guest:guest@127.0.0.1:5672//"<br>
+BROKER_URL = "amqp://<![if gt IE 6]>&#8203;<![endif]><wbr>guest:guest@<![if gt IE 6]>&#8203;<![endif]><wbr>127.0.0.1:<![if gt IE 6]>&#8203;<![endif]><wbr>5672//"<br>
 CELERY_RESULT_BACKEND = "amqp"<br>
 CELERY_TASK_RESULT_EXPIRES = 300<br>
 CELERY_IMPORTS = ("tasks", )

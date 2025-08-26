@@ -182,7 +182,7 @@ page look really bad.  The ugly workaround is to disable web fonts in
 these browsers; I describe how to do so in an earlier blog:
 
 <blockquote>
-<A href=20110606.html>http://samiam.org/blog/20110606.html</A>
+<A href=20110606.html>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/blog<![if gt IE 6]>&#8203;<![endif]><wbr>/20110606<![if gt IE 6]>&#8203;<![endif]><wbr>.html</A>
 </blockquote>
 
 In addition, web fonts <A 

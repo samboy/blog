@@ -26,7 +26,7 @@ I have added an RSS feed for my personal blog:
 <p>
 
 <blockquote>
-<A href="http://www.samiam.org/blog/blog.rss">http://www.samiam.org/blog/blog.rss</A>
+<A href="http://www.samiam.org/blog/blog.rss">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/blog<![if gt IE 6]>&#8203;<![endif]><wbr>/blog<![if gt IE 6]>&#8203;<![endif]><wbr>.rss</A>
 </blockquote>
 
 As well as a feed for just MaraDNS blog entries:
@@ -34,7 +34,7 @@ As well as a feed for just MaraDNS blog entries:
 <p>
 
 <blockquote>
-<A href="http://www.samiam.org/blog/maradns.rss">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
+<A href="http://www.samiam.org/blog/maradns.rss">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
 </blockquote>
 
 These links are in the corresponding headers in the home pages for
@@ -48,11 +48,11 @@ the following feeds which validate:
 <p>
 
 <blockquote>
-<A href="http://samiam.org/blog/blog_strict.rss">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>blog_<![if gt IE 6]>&#8203;<![endif]><wbr>strict.<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
+<A href="http://samiam.org/blog/blog_strict.rss">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>blog_<![if gt IE 6]>&#8203;<![endif]><wbr>strict.<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
 
 <p>
 
-<A href="http://samiam.org/blog/maradns_strict.rss">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns_<![if gt IE 6]>&#8203;<![endif]><wbr>strict.<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
+<A href="http://samiam.org/blog/maradns_strict.rss">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns_<![if gt IE 6]>&#8203;<![endif]><wbr>strict.<![if gt IE 6]>&#8203;<![endif]><wbr>rss</A>
 </blockquote>
 
 Unlike the obsolete Gopher service

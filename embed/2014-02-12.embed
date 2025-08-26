@@ -47,11 +47,11 @@ Deadwood 3.2.05:
 <p>
 
 <blockquote>
-<A href="http://maradns.org/download/2.0/2.0.09">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>09</A>
+<A href="http://maradns.org/download/2.0/2.0.09">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>09</A>
 </blockquote>
 
 <blockquote>
-<A href="https://sourceforge.net/projects/maradns/files/MaraDNS/2.0.09/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>09/</A>
+<A href="https://sourceforge.net/projects/maradns/files/MaraDNS/2.0.09/">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0.<![if gt IE 6]>&#8203;<![endif]><wbr>09/</A>
 </blockquote>
 
 The GitHub version of MaraDNS has also been updated (it was actually
@@ -60,10 +60,10 @@ the first version to be updated):
 <p>
 
 <blockquote>
-<A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+<A href="https://github.com/samboy/MaraDNS">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/github<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/samboy<![if gt IE 6]>&#8203;<![endif]><wbr>/MaraDNS</A>
 </blockquote>
 
-git clone <A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+git clone <A href="https://github.com/samboy/MaraDNS">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/github<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/samboy<![if gt IE 6]>&#8203;<![endif]><wbr>/MaraDNS</A>
 
 <p>
 
@@ -72,11 +72,11 @@ It's also possible to download just Deadwood 3.2.05:
 <p>
 
 <blockquote>
-<A href="http://maradns.samiam.org/deadwood/stable/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>stable/</A>
+<A href="http://maradns.samiam.org/deadwood/stable/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>stable/</A>
 </blockquote>
 
 <blockquote>
-<A href="https://sourceforge.net/projects/maradns/files/Deadwood/3.2.05/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>05/</A>
+<A href="https://sourceforge.net/projects/maradns/files/Deadwood/3.2.05/">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>05/</A>
 </blockquote>
 
 People who are still using MaraDNS 1 may download MaraDNS 1.4.14
@@ -85,11 +85,11 @@ People who are still using MaraDNS 1 may download MaraDNS 1.4.14
 <p>
 
 <blockquote>
-<A href="http://maradns.samiam.org/download/1.4/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>4/</A>
+<A href="http://maradns.samiam.org/download/1.4/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>4/</A>
 </blockquote>
 
 <blockquote>
-<A href="https://sourceforge.net/projects/maradns/files/MaraDNS/1.4.14/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>4.<![if gt IE 6]>&#8203;<![endif]><wbr>14/</A>
+<A href="https://sourceforge.net/projects/maradns/files/MaraDNS/1.4.14/">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Mara<![if gt IE 6]>&#8203;<![endif]><wbr>DNS/<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>4.<![if gt IE 6]>&#8203;<![endif]><wbr>14/</A>
 </blockquote>
 
 Please note that MaraDNS 1 will stop being supported on June 21, 2015.
@@ -101,11 +101,11 @@ For anyone still using Deadwood 2.3, here are links to Deadwood 2.3.09:
 <p>
 
 <blockquote>
-<A href="http://maradns.samiam.org/deadwood/tiny/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>tiny/</A>
+<A href="http://maradns.samiam.org/deadwood/tiny/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>tiny/</A>
 </blockquote>
 
 <blockquote>
-<A href="https://sourceforge.net/projects/maradns/files/Deadwood/2.3.09/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>09/</A>
+<A href="https://sourceforge.net/projects/maradns/files/Deadwood/2.3.09/">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>sourceforge.<![if gt IE 6]>&#8203;<![endif]><wbr>net/<![if gt IE 6]>&#8203;<![endif]><wbr>projects/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns/<![if gt IE 6]>&#8203;<![endif]><wbr>files/<![if gt IE 6]>&#8203;<![endif]><wbr>Deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>3.<![if gt IE 6]>&#8203;<![endif]><wbr>09/</A>
 </blockquote>
 
 Note that Deadwood 2.3 will stop being supported on June 21, 2016.
@@ -172,7 +172,7 @@ me the following link:
 <p>
 
 <blockquote>
-<A href="http://teamchivers.com/?p=48">http://teamchivers.com/?p=48</A>
+<A href="http://teamchivers.com/?p=48">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/teamchivers<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/?p=48</A>
 </blockquote>
 
 <A name=Updated_link_for_bulk_polyhedral_dice></A><A name=Updatedlinkforbulkpolyhedraldice></A><span class=moyet>==</span><span class=blogtitle><b>Updated link for bulk polyhedral dice</b></span><span class=moyet>==</span>
@@ -189,7 +189,7 @@ pointed out this new listing at Amazon:
 <p>
 
 <blockquote>
-<A href="http://www.amazon.com/gp/product/B00G1RPRUO">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>amazon.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>gp/<![if gt IE 6]>&#8203;<![endif]><wbr>product/<![if gt IE 6]>&#8203;<![endif]><wbr>B<![if gt IE 6]>&#8203;<![endif]><wbr>00<![if gt IE 6]>&#8203;<![endif]><wbr>G<![if gt IE 6]>&#8203;<![endif]><wbr>1<![if gt IE 6]>&#8203;<![endif]><wbr>RPRUO</A>
+<A href="http://www.amazon.com/gp/product/B00G1RPRUO">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>amazon.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>gp/<![if gt IE 6]>&#8203;<![endif]><wbr>product/<![if gt IE 6]>&#8203;<![endif]><wbr>B<![if gt IE 6]>&#8203;<![endif]><wbr>00<![if gt IE 6]>&#8203;<![endif]><wbr>G<![if gt IE 6]>&#8203;<![endif]><wbr>1<![if gt IE 6]>&#8203;<![endif]><wbr>RPRUO</A>
 </blockquote>
 
 <p>

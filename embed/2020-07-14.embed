@@ -18,7 +18,7 @@ The website is here:
 <p>
 
 <blockquote>
-<A href="https://www.samiam.org/COVID-19/">https://www.samiam.org/COVID-19/</A>
+<A href="https://www.samiam.org/COVID-19/">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/COVID<![if gt IE 6]>&#8203;<![endif]><wbr>-19<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 The dashboard first shows a heat map of the United States; it shows
@@ -87,7 +87,7 @@ The script used to make this site is open source and available on GitHub:
 <p>
 
 <blockquote>
-<A href="https://github.com/samboy/covid-19-html">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>covid-<![if gt IE 6]>&#8203;<![endif]><wbr>19-<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<A href="https://github.com/samboy/covid-19-html">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>github.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>covid-<![if gt IE 6]>&#8203;<![endif]><wbr>19-<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
 </blockquote>
 
 The <a href="https://lua.org">Lua</a> language is used to generate this website;
@@ -158,7 +158,7 @@ considered a Republican, even though she was a Democrat until 2019.
 
 <i>Did you know that all of my blog entries are available in a free to
 download eBook at 
-<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+<a href=ebooks.html>https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/blog<![if gt IE 6]>&#8203;<![endif]><wbr>/ebooks<![if gt IE 6]>&#8203;<![endif]><wbr>.html</a>.
 </i>
 
 <p>

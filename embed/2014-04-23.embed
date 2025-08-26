@@ -112,7 +112,7 @@ this:
 
 <p>
 
-<tt>imap.gmail.com/ssl/user=username@gmail.com</tt><br>
+<tt>imap.gmail.com/<![if gt IE 6]>&#8203;<![endif]><wbr>ssl/<![if gt IE 6]>&#8203;<![endif]><wbr>user=username@gmail.com</tt><br>
 
 <p>
 
@@ -137,7 +137,7 @@ For "Use SMTP server", I put in a value like this:
 
 <p>
 
-<tt>smtp.gmail.com/novalidate-cert/user=username@gmail.com/ssl</tt><br>
+<tt>smtp.gmail.com/<![if gt IE 6]>&#8203;<![endif]><wbr>novalidate-cert/<![if gt IE 6]>&#8203;<![endif]><wbr>user=username@gmail.com/ssl</tt><br>
 
 <p>
 

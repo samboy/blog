@@ -17,7 +17,7 @@ We now know PayPal uses signed 64-bit integers to store people’s PayPal balanc
 <p>
 
 <blockquote>
-<A href="http://www.bbc.co.uk/news/world-us-canada-23352230">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>world-<![if gt IE 6]>&#8203;<![endif]><wbr>us-<![if gt IE 6]>&#8203;<![endif]><wbr>canada-<![if gt IE 6]>&#8203;<![endif]><wbr>23352230</A>
+<A href="http://www.bbc.co.uk/news/world-us-canada-23352230">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>world-<![if gt IE 6]>&#8203;<![endif]><wbr>us-<![if gt IE 6]>&#8203;<![endif]><wbr>canada-<![if gt IE 6]>&#8203;<![endif]><wbr>23352230</A>
 </blockquote>
 
 2 to the power of 63 is 9,223,372,036,854,775,808.  In cents, the number is $92,233,720,368,547,758.08, and the press claims this gentleman had a balance of $92,233,720,368,547,800.
@@ -37,7 +37,7 @@ The day when ARM assembly becomes a very hot skill is getting closer and closer:
 <p>
 
 <blockquote>
-<A href="http://www.bbc.co.uk/news/business-23352536">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>business-<![if gt IE 6]>&#8203;<![endif]><wbr>23352536</A>
+<A href="http://www.bbc.co.uk/news/business-23352536">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>business-<![if gt IE 6]>&#8203;<![endif]><wbr>23352536</A>
 </blockquote>
 
 <i>Posted Jul 17 2013</i>
@@ -53,7 +53,7 @@ A couple of days ago, I fixed a bug in Deadwood; a very rare DNS packet would ca
 <p>
 
 <blockquote>
-<A href="http://samiam.org/blog/20130713.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130713.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<A href="http://samiam.org/blog/20130713.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130713.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
 </blockquote>
 
 I have now made a formal testing release with the seven-line patch to fix this bug, MaraDNS-2.0.07c (Deadwood 3.2.03c):
@@ -61,11 +61,11 @@ I have now made a formal testing release with the seven-line patch to fix this b
 <p>
 
 <blockquote>
-<A href="http://maradns.org/download/2.0/snap/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
+<A href="http://maradns.org/download/2.0/snap/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>download/<![if gt IE 6]>&#8203;<![endif]><wbr>2.<![if gt IE 6]>&#8203;<![endif]><wbr>0/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
 </blockquote>
 
 <blockquote>
-<A href="http://maradns.org/deadwood/snap/">http://maradns.org/deadwood/snap/</A>
+<A href="http://maradns.org/deadwood/snap/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood<![if gt IE 6]>&#8203;<![endif]><wbr>/snap<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 This will probably become the stable MaraDNS/Deadwood release in August or September.
@@ -89,7 +89,7 @@ According to a source who claims to be one of the guys, the video was staged and
 <p>
 
 <blockquote>
-<A href="http://imgur.com/a/5Z6OF">http://imgur.com/a/5Z6OF</A>
+<A href="http://imgur.com/a/5Z6OF">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/imgur<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/a<![if gt IE 6]>&#8203;<![endif]><wbr>/5Z6OF</A>
 </blockquote>
 
 <i>Posted Jul 16 2013</i>
@@ -113,7 +113,7 @@ Despite this, they kept their website up, and until 2011 or 2012, they allowed p
 <p>
 
 <blockquote>
-<A href="http://boardgamegeek.com/thread/835811/what-happened-to-zillions-of-games">http://<![if gt IE 6]>&#8203;<![endif]><wbr>boardgamegeek.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>thread/<![if gt IE 6]>&#8203;<![endif]><wbr>835811/<![if gt IE 6]>&#8203;<![endif]><wbr>what-<![if gt IE 6]>&#8203;<![endif]><wbr>happened-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>zillions-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>games</A>
+<A href="http://boardgamegeek.com/thread/835811/what-happened-to-zillions-of-games">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>boardgamegeek.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>thread/<![if gt IE 6]>&#8203;<![endif]><wbr>835811/<![if gt IE 6]>&#8203;<![endif]><wbr>what-<![if gt IE 6]>&#8203;<![endif]><wbr>happened-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>zillions-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>games</A>
 </blockquote>
 
 And, there is a rumor that Zillions will go away for good soon:
@@ -121,11 +121,11 @@ And, there is a rumor that Zillions will go away for good soon:
 <p>
 
 <blockquote>
-<A href="http://zillionsofgames.com/discus/messages/3/1527.html?1371650945">http://<![if gt IE 6]>&#8203;<![endif]><wbr>zillionsofgames.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>discus/<![if gt IE 6]>&#8203;<![endif]><wbr>messages/<![if gt IE 6]>&#8203;<![endif]><wbr>3/<![if gt IE 6]>&#8203;<![endif]><wbr>1527.<![if gt IE 6]>&#8203;<![endif]><wbr>html?<![if gt IE 6]>&#8203;<![endif]><wbr>1371650945</A>
+<A href="http://zillionsofgames.com/discus/messages/3/1527.html?1371650945">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>zillionsofgames.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>discus/<![if gt IE 6]>&#8203;<![endif]><wbr>messages/<![if gt IE 6]>&#8203;<![endif]><wbr>3/<![if gt IE 6]>&#8203;<![endif]><wbr>1527.<![if gt IE 6]>&#8203;<![endif]><wbr>html?<![if gt IE 6]>&#8203;<![endif]><wbr>1371650945</A>
 </blockquote>
 
 <blockquote>
-<A href="http://tvtropes.org/pmwiki/posts.php?discussion=13716534090A27426800&amp;page=1">http://<![if gt IE 6]>&#8203;<![endif]><wbr>tvtropes.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>pmwiki/<![if gt IE 6]>&#8203;<![endif]><wbr>posts.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>discussion=<![if gt IE 6]>&#8203;<![endif]><wbr>13716534090<![if gt IE 6]>&#8203;<![endif]><wbr>A<![if gt IE 6]>&#8203;<![endif]><wbr>27426800&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>page=<![if gt IE 6]>&#8203;<![endif]><wbr>1</A>
+<A href="http://tvtropes.org/pmwiki/posts.php?discussion=13716534090A27426800&amp;page=1">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>tvtropes.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>pmwiki/<![if gt IE 6]>&#8203;<![endif]><wbr>posts.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>discussion=<![if gt IE 6]>&#8203;<![endif]><wbr>13716534090<![if gt IE 6]>&#8203;<![endif]><wbr>A<![if gt IE 6]>&#8203;<![endif]><wbr>27426800&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>page=<![if gt IE 6]>&#8203;<![endif]><wbr>1</A>
 </blockquote>
 
 <i>Update: Jeff Mallett denies that there are any plans to bring the Zillions site offline</i>
@@ -133,7 +133,7 @@ And, there is a rumor that Zillions will go away for good soon:
 <p>
 
 <blockquote>
-<A href="http://en.wikipedia.org/w/index.php?title=Zillions_of_Games&amp;diff=next&amp;oldid=508466091">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>w/<![if gt IE 6]>&#8203;<![endif]><wbr>index.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>title=<![if gt IE 6]>&#8203;<![endif]><wbr>Zillions_<![if gt IE 6]>&#8203;<![endif]><wbr>of_<![if gt IE 6]>&#8203;<![endif]><wbr>Games&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>diff=<![if gt IE 6]>&#8203;<![endif]><wbr>next&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>oldid=<![if gt IE 6]>&#8203;<![endif]><wbr>508466091</A>
+<A href="http://en.wikipedia.org/w/index.php?title=Zillions_of_Games&amp;diff=next&amp;oldid=508466091">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>w/<![if gt IE 6]>&#8203;<![endif]><wbr>index.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>title=<![if gt IE 6]>&#8203;<![endif]><wbr>Zillions_<![if gt IE 6]>&#8203;<![endif]><wbr>of_<![if gt IE 6]>&#8203;<![endif]><wbr>Games&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>diff=<![if gt IE 6]>&#8203;<![endif]><wbr>next&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>oldid=<![if gt IE 6]>&#8203;<![endif]><wbr>508466091</A>
 </blockquote>
 
 As someone who used to be a big fan of Chess variants, it’s sad to see that Zillions may be going away.  Even though I myself stopped playing Chess variants in 2010, I sometimes like looking at Zillions’ site to see what new Chess Variants people devised.
@@ -145,7 +145,7 @@ Here is my goodbye to Chess variants from 2010:
 <p>
 
 <blockquote>
-<A href="http://samiam.org/blog/old-201002-im-done-with-chess-variants.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>old-<![if gt IE 6]>&#8203;<![endif]><wbr>201002-<![if gt IE 6]>&#8203;<![endif]><wbr>im-<![if gt IE 6]>&#8203;<![endif]><wbr>done-<![if gt IE 6]>&#8203;<![endif]><wbr>with-<![if gt IE 6]>&#8203;<![endif]><wbr>chess-<![if gt IE 6]>&#8203;<![endif]><wbr>variants.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<A href="http://samiam.org/blog/old-201002-im-done-with-chess-variants.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>old-<![if gt IE 6]>&#8203;<![endif]><wbr>201002-<![if gt IE 6]>&#8203;<![endif]><wbr>im-<![if gt IE 6]>&#8203;<![endif]><wbr>done-<![if gt IE 6]>&#8203;<![endif]><wbr>with-<![if gt IE 6]>&#8203;<![endif]><wbr>chess-<![if gt IE 6]>&#8203;<![endif]><wbr>variants.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
 </blockquote>
 
 <i>Posted Jul 16 2013</i>
@@ -161,7 +161,7 @@ Well, I must say, I like the names Linus gives his Linux releases.  Linux 3.11 i
 <p>
 
 <blockquote>
-<A href="http://www.theregister.co.uk/2013/07/15/linux_for_workgroups/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>theregister.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>07/<![if gt IE 6]>&#8203;<![endif]><wbr>15/<![if gt IE 6]>&#8203;<![endif]><wbr>linux_<![if gt IE 6]>&#8203;<![endif]><wbr>for_<![if gt IE 6]>&#8203;<![endif]><wbr>workgroups/</A>
+<A href="http://www.theregister.co.uk/2013/07/15/linux_for_workgroups/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>theregister.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>07/<![if gt IE 6]>&#8203;<![endif]><wbr>15/<![if gt IE 6]>&#8203;<![endif]><wbr>linux_<![if gt IE 6]>&#8203;<![endif]><wbr>for_<![if gt IE 6]>&#8203;<![endif]><wbr>workgroups/</A>
 </blockquote>
 
 <i>Posted Jul 15 2013</i>
@@ -189,7 +189,7 @@ An interesting article on the controversy:
 <p>
 
 <blockquote>
-<A href="http://io9.com/could-the-enders-game-boycott-actually-tank-the-movie-749408769">http://<![if gt IE 6]>&#8203;<![endif]><wbr>io<![if gt IE 6]>&#8203;<![endif]><wbr>9.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>could-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>enders-<![if gt IE 6]>&#8203;<![endif]><wbr>game-<![if gt IE 6]>&#8203;<![endif]><wbr>boycott-<![if gt IE 6]>&#8203;<![endif]><wbr>actually-<![if gt IE 6]>&#8203;<![endif]><wbr>tank-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>movie-<![if gt IE 6]>&#8203;<![endif]><wbr>749408769</A>
+<A href="http://io9.com/could-the-enders-game-boycott-actually-tank-the-movie-749408769">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>io<![if gt IE 6]>&#8203;<![endif]><wbr>9.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>could-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>enders-<![if gt IE 6]>&#8203;<![endif]><wbr>game-<![if gt IE 6]>&#8203;<![endif]><wbr>boycott-<![if gt IE 6]>&#8203;<![endif]><wbr>actually-<![if gt IE 6]>&#8203;<![endif]><wbr>tank-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>movie-<![if gt IE 6]>&#8203;<![endif]><wbr>749408769</A>
 </blockquote>
 
 <i>Posted Jul 13 2013</i>
@@ -205,7 +205,7 @@ My favorite Star Trek episode is “Errand of Mercy”.  This is classic 1960s T
 <p>
 
 <blockquote>
-<A href="http://trekmovie.com/2007/05/14/review-errand-of-mercy-remastered/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>trekmovie.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2007/<![if gt IE 6]>&#8203;<![endif]><wbr>05/<![if gt IE 6]>&#8203;<![endif]><wbr>14/<![if gt IE 6]>&#8203;<![endif]><wbr>review-<![if gt IE 6]>&#8203;<![endif]><wbr>errand-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>mercy-<![if gt IE 6]>&#8203;<![endif]><wbr>remastered/</A>
+<A href="http://trekmovie.com/2007/05/14/review-errand-of-mercy-remastered/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>trekmovie.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2007/<![if gt IE 6]>&#8203;<![endif]><wbr>05/<![if gt IE 6]>&#8203;<![endif]><wbr>14/<![if gt IE 6]>&#8203;<![endif]><wbr>review-<![if gt IE 6]>&#8203;<![endif]><wbr>errand-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>mercy-<![if gt IE 6]>&#8203;<![endif]><wbr>remastered/</A>
 </blockquote>
 
 Just as interesting as the review itself are some of the comments.  I like this particular comment (#32):
@@ -229,7 +229,7 @@ Here is the web version of the classic Usenet FAQ for the C programming language
 <p>
 
 <blockquote>
-<A href="http://www.c-faq.com/">http://www.c-faq.com/</A>
+<A href="http://www.c-faq.com/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.c<![if gt IE 6]>&#8203;<![endif]><wbr>-faq<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 <i>Posted Jul 12 2013</i>
@@ -253,7 +253,7 @@ Computer Shopper became a smaller and smaller magazine every year.  Finally, alo
 <p>
 
 <blockquote>
-<A href="http://techland.time.com/2013/07/11/pcworld-exits-print-and-the-era-of-computer-magazines-ends/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>techland.<![if gt IE 6]>&#8203;<![endif]><wbr>time.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>07/<![if gt IE 6]>&#8203;<![endif]><wbr>11/<![if gt IE 6]>&#8203;<![endif]><wbr>pcworld-<![if gt IE 6]>&#8203;<![endif]><wbr>exits-<![if gt IE 6]>&#8203;<![endif]><wbr>print-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>era-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>computer-<![if gt IE 6]>&#8203;<![endif]><wbr>magazines-<![if gt IE 6]>&#8203;<![endif]><wbr>ends/</A>
+<A href="http://techland.time.com/2013/07/11/pcworld-exits-print-and-the-era-of-computer-magazines-ends/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>techland.<![if gt IE 6]>&#8203;<![endif]><wbr>time.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>07/<![if gt IE 6]>&#8203;<![endif]><wbr>11/<![if gt IE 6]>&#8203;<![endif]><wbr>pcworld-<![if gt IE 6]>&#8203;<![endif]><wbr>exits-<![if gt IE 6]>&#8203;<![endif]><wbr>print-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>era-<![if gt IE 6]>&#8203;<![endif]><wbr>of-<![if gt IE 6]>&#8203;<![endif]><wbr>computer-<![if gt IE 6]>&#8203;<![endif]><wbr>magazines-<![if gt IE 6]>&#8203;<![endif]><wbr>ends/</A>
 </blockquote>
 
 The paper computer magazine is now no more.  It was fun while it lasted.
@@ -273,7 +273,7 @@ The way I program x86 assembly is by using a C compiler.  ARM, on the other hand
 <p>
 
 <blockquote>
-<A href="http://www.bbc.co.uk/news/business-23251285">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>business-<![if gt IE 6]>&#8203;<![endif]><wbr>23251285</A>
+<A href="http://www.bbc.co.uk/news/business-23251285">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>bbc.<![if gt IE 6]>&#8203;<![endif]><wbr>co.<![if gt IE 6]>&#8203;<![endif]><wbr>uk/<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>business-<![if gt IE 6]>&#8203;<![endif]><wbr>23251285</A>
 </blockquote>
 
 
@@ -310,7 +310,7 @@ We know there are survivors from the crash; our prayers are with the passengers 
 <p>
 
 <blockquote>
-<A href="http://www.sfgate.com/bayarea/article/South-Korean-passenger-jet-crashes-at-SFO-4650259.php">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>sfgate.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>bayarea/<![if gt IE 6]>&#8203;<![endif]><wbr>article/<![if gt IE 6]>&#8203;<![endif]><wbr>South-<![if gt IE 6]>&#8203;<![endif]><wbr>Korean-<![if gt IE 6]>&#8203;<![endif]><wbr>passenger-<![if gt IE 6]>&#8203;<![endif]><wbr>jet-<![if gt IE 6]>&#8203;<![endif]><wbr>crashes-<![if gt IE 6]>&#8203;<![endif]><wbr>at-<![if gt IE 6]>&#8203;<![endif]><wbr>SFO-<![if gt IE 6]>&#8203;<![endif]><wbr>4650259.<![if gt IE 6]>&#8203;<![endif]><wbr>php</A>
+<A href="http://www.sfgate.com/bayarea/article/South-Korean-passenger-jet-crashes-at-SFO-4650259.php">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>sfgate.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>bayarea/<![if gt IE 6]>&#8203;<![endif]><wbr>article/<![if gt IE 6]>&#8203;<![endif]><wbr>South-<![if gt IE 6]>&#8203;<![endif]><wbr>Korean-<![if gt IE 6]>&#8203;<![endif]><wbr>passenger-<![if gt IE 6]>&#8203;<![endif]><wbr>jet-<![if gt IE 6]>&#8203;<![endif]><wbr>crashes-<![if gt IE 6]>&#8203;<![endif]><wbr>at-<![if gt IE 6]>&#8203;<![endif]><wbr>SFO-<![if gt IE 6]>&#8203;<![endif]><wbr>4650259.<![if gt IE 6]>&#8203;<![endif]><wbr>php</A>
 </blockquote>
 
 <i>Posted Jul 06 2013</i>
@@ -368,7 +368,7 @@ I have been spending the last few days collaborating with other people coming up
 <p>
 
 <blockquote>
-<A href="http://rationalwiki.org/w/index.php?title=Anisotropic_synchrony_convention#Problems_with_Lisle.27s_paper">http://<![if gt IE 6]>&#8203;<![endif]><wbr>rationalwiki.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>w/<![if gt IE 6]>&#8203;<![endif]><wbr>index.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>title=<![if gt IE 6]>&#8203;<![endif]><wbr>Anisotropic_<![if gt IE 6]>&#8203;<![endif]><wbr>synchrony_<![if gt IE 6]>&#8203;<![endif]><wbr>convention#<![if gt IE 6]>&#8203;<![endif]><wbr>Problems_<![if gt IE 6]>&#8203;<![endif]><wbr>with_<![if gt IE 6]>&#8203;<![endif]><wbr>Lisle.<![if gt IE 6]>&#8203;<![endif]><wbr>27<![if gt IE 6]>&#8203;<![endif]><wbr>s_<![if gt IE 6]>&#8203;<![endif]><wbr>paper</A>
+<A href="http://rationalwiki.org/w/index.php?title=Anisotropic_synchrony_convention#Problems_with_Lisle.27s_paper">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>rationalwiki.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>w/<![if gt IE 6]>&#8203;<![endif]><wbr>index.<![if gt IE 6]>&#8203;<![endif]><wbr>php?<![if gt IE 6]>&#8203;<![endif]><wbr>title=<![if gt IE 6]>&#8203;<![endif]><wbr>Anisotropic_<![if gt IE 6]>&#8203;<![endif]><wbr>synchrony_<![if gt IE 6]>&#8203;<![endif]><wbr>convention#<![if gt IE 6]>&#8203;<![endif]><wbr>Problems_<![if gt IE 6]>&#8203;<![endif]><wbr>with_<![if gt IE 6]>&#8203;<![endif]><wbr>Lisle.<![if gt IE 6]>&#8203;<![endif]><wbr>27<![if gt IE 6]>&#8203;<![endif]><wbr>s_<![if gt IE 6]>&#8203;<![endif]><wbr>paper</A>
 </blockquote>
 
 [1] If I were able to argue with Einstein’s science and have my argument stick, I wouldn’t be posting to some random Wiki on the Internet.  I would be publishing my stuff in peer-reviewed journals and using my Nobel Prize money to buy a Raspberry Pi.
@@ -392,7 +392,7 @@ Much more recently, in 2006, one Alex Roy tries to beat the 1983 record for fast
 <p>
 
 <blockquote>
-<A href="http://www.wired.com/cars/coolwheels/magazine/15-11/ff_cannonballrun?currentPage=all">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>wired.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>cars/<![if gt IE 6]>&#8203;<![endif]><wbr>coolwheels/<![if gt IE 6]>&#8203;<![endif]><wbr>magazine/<![if gt IE 6]>&#8203;<![endif]><wbr>15-<![if gt IE 6]>&#8203;<![endif]><wbr>11/<![if gt IE 6]>&#8203;<![endif]><wbr>ff_<![if gt IE 6]>&#8203;<![endif]><wbr>cannonballrun?<![if gt IE 6]>&#8203;<![endif]><wbr>current<![if gt IE 6]>&#8203;<![endif]><wbr>Page=<![if gt IE 6]>&#8203;<![endif]><wbr>all</A>
+<A href="http://www.wired.com/cars/coolwheels/magazine/15-11/ff_cannonballrun?currentPage=all">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>wired.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>cars/<![if gt IE 6]>&#8203;<![endif]><wbr>coolwheels/<![if gt IE 6]>&#8203;<![endif]><wbr>magazine/<![if gt IE 6]>&#8203;<![endif]><wbr>15-<![if gt IE 6]>&#8203;<![endif]><wbr>11/<![if gt IE 6]>&#8203;<![endif]><wbr>ff_<![if gt IE 6]>&#8203;<![endif]><wbr>cannonballrun?<![if gt IE 6]>&#8203;<![endif]><wbr>current<![if gt IE 6]>&#8203;<![endif]><wbr>Page=<![if gt IE 6]>&#8203;<![endif]><wbr>all</A>
 </blockquote>
 
 I think what would be more interesting would be “fastest road trip across the US
@@ -439,7 +439,7 @@ Here’s an article on how code sometimes has to be complex:
 <p>
 
 <blockquote>
-<A href="http://www.drdobbs.com/architecture-and-design/the-misplaced-obsession-with-simplicity/240157265">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>drdobbs.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>architecture-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>design/<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>misplaced-<![if gt IE 6]>&#8203;<![endif]><wbr>obsession-<![if gt IE 6]>&#8203;<![endif]><wbr>with-<![if gt IE 6]>&#8203;<![endif]><wbr>simplicity/<![if gt IE 6]>&#8203;<![endif]><wbr>240157265</A>
+<A href="http://www.drdobbs.com/architecture-and-design/the-misplaced-obsession-with-simplicity/240157265">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>drdobbs.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>architecture-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>design/<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>misplaced-<![if gt IE 6]>&#8203;<![endif]><wbr>obsession-<![if gt IE 6]>&#8203;<![endif]><wbr>with-<![if gt IE 6]>&#8203;<![endif]><wbr>simplicity/<![if gt IE 6]>&#8203;<![endif]><wbr>240157265</A>
 </blockquote>
 
 As one open-source example: When I wrote MaraDNS, my plan was originally to make a simple authoritative-only server.  A friend suggested adding recursion to the code.  I thought it was going to be fairly straightforward six month project.  It wasn’t; while I 
@@ -480,7 +480,7 @@ Here’s a link to Fedora/ARM:
 <p>
 
 <blockquote>
-<A href="https://fedoraproject.org/wiki/Architectures/ARM">https://<![if gt IE 6]>&#8203;<![endif]><wbr>fedoraproject.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Architectures/<![if gt IE 6]>&#8203;<![endif]><wbr>ARM</A>
+<A href="https://fedoraproject.org/wiki/Architectures/ARM">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>fedoraproject.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Architectures/<![if gt IE 6]>&#8203;<![endif]><wbr>ARM</A>
 </blockquote>
 
 
@@ -499,7 +499,7 @@ It looks like Red Hat Enterprise Linux 7 (and its clones, such as Scientific Lin
 <p>
 
 <blockquote>
-<A href="http://www.serverwatch.com/server-news/where-is-red-hat-enterprise-linux-7.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>serverwatch.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>server-<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>where-<![if gt IE 6]>&#8203;<![endif]><wbr>is-<![if gt IE 6]>&#8203;<![endif]><wbr>red-<![if gt IE 6]>&#8203;<![endif]><wbr>hat-<![if gt IE 6]>&#8203;<![endif]><wbr>enterprise-<![if gt IE 6]>&#8203;<![endif]><wbr>linux-<![if gt IE 6]>&#8203;<![endif]><wbr>7.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<A href="http://www.serverwatch.com/server-news/where-is-red-hat-enterprise-linux-7.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>serverwatch.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>server-<![if gt IE 6]>&#8203;<![endif]><wbr>news/<![if gt IE 6]>&#8203;<![endif]><wbr>where-<![if gt IE 6]>&#8203;<![endif]><wbr>is-<![if gt IE 6]>&#8203;<![endif]><wbr>red-<![if gt IE 6]>&#8203;<![endif]><wbr>hat-<![if gt IE 6]>&#8203;<![endif]><wbr>enterprise-<![if gt IE 6]>&#8203;<![endif]><wbr>linux-<![if gt IE 6]>&#8203;<![endif]><wbr>7.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
 </blockquote>
 
 With a 10-year-long support cycle, it makes sense to make sure everything is just right before making a release public; it will come out a little before halfway through RHEL6’s lifetime cycle (2010-2010) and RHEL5 (2007-2017) will still be supported when it comes out.  
@@ -526,7 +526,7 @@ After years of search John Romero (Doom Episode I, etc.) finally found Stuart Sm
 <p>
 
 <blockquote>
-<A href="http://www.youtube.com/all_comments?v=s8ty3pweccA">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>all_<![if gt IE 6]>&#8203;<![endif]><wbr>comments?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>s<![if gt IE 6]>&#8203;<![endif]><wbr>8<![if gt IE 6]>&#8203;<![endif]><wbr>ty<![if gt IE 6]>&#8203;<![endif]><wbr>3<![if gt IE 6]>&#8203;<![endif]><wbr>pwecc<![if gt IE 6]>&#8203;<![endif]><wbr>A</A>
+<A href="http://www.youtube.com/all_comments?v=s8ty3pweccA">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>youtube.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>all_<![if gt IE 6]>&#8203;<![endif]><wbr>comments?<![if gt IE 6]>&#8203;<![endif]><wbr>v=<![if gt IE 6]>&#8203;<![endif]><wbr>s<![if gt IE 6]>&#8203;<![endif]><wbr>8<![if gt IE 6]>&#8203;<![endif]><wbr>ty<![if gt IE 6]>&#8203;<![endif]><wbr>3<![if gt IE 6]>&#8203;<![endif]><wbr>pwecc<![if gt IE 6]>&#8203;<![endif]><wbr>A</A>
 </blockquote>
 
 <i>Posted Jun 24 2013</i>
@@ -542,7 +542,7 @@ A couple of weeks ago, the House of Representatives voted to restore deportation
 <p>
 
 <blockquote>
-<A href="http://clerk.house.gov/evs/2013/roll208.xml">http://<![if gt IE 6]>&#8203;<![endif]><wbr>clerk.<![if gt IE 6]>&#8203;<![endif]><wbr>house.<![if gt IE 6]>&#8203;<![endif]><wbr>gov/<![if gt IE 6]>&#8203;<![endif]><wbr>evs/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>roll<![if gt IE 6]>&#8203;<![endif]><wbr>208.<![if gt IE 6]>&#8203;<![endif]><wbr>xml</A>
+<A href="http://clerk.house.gov/evs/2013/roll208.xml">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>clerk.<![if gt IE 6]>&#8203;<![endif]><wbr>house.<![if gt IE 6]>&#8203;<![endif]><wbr>gov/<![if gt IE 6]>&#8203;<![endif]><wbr>evs/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>roll<![if gt IE 6]>&#8203;<![endif]><wbr>208.<![if gt IE 6]>&#8203;<![endif]><wbr>xml</A>
 </blockquote>
 
 Shame on the AP and all the newspapers parroting the AP for not providing essential information like this about a bill.  Shame on the online newspapers who allow racists to cowardly post anonymous comments.  Here’s a clue: Use Facebook for comments.  That way, the racists have to show their name and face when they talk Nazi-like about the evils of “Illegal” people.
@@ -554,7 +554,7 @@ For example, in this thread, the racists were all of two fat white men trying to
 <p>
 
 <blockquote>
-<A href="http://blog.seattlepi.com/seattlepolitics/2013/06/06/house-republicans-vote-to-deport-dreamers/#comments">http://<![if gt IE 6]>&#8203;<![endif]><wbr>blog.<![if gt IE 6]>&#8203;<![endif]><wbr>seattlepi.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>seattlepolitics/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>house-<![if gt IE 6]>&#8203;<![endif]><wbr>republicans-<![if gt IE 6]>&#8203;<![endif]><wbr>vote-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>deport-<![if gt IE 6]>&#8203;<![endif]><wbr>dreamers/#<![if gt IE 6]>&#8203;<![endif]><wbr>comments</A>
+<A href="http://blog.seattlepi.com/seattlepolitics/2013/06/06/house-republicans-vote-to-deport-dreamers/#comments">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>blog.<![if gt IE 6]>&#8203;<![endif]><wbr>seattlepi.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>seattlepolitics/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>house-<![if gt IE 6]>&#8203;<![endif]><wbr>republicans-<![if gt IE 6]>&#8203;<![endif]><wbr>vote-<![if gt IE 6]>&#8203;<![endif]><wbr>to-<![if gt IE 6]>&#8203;<![endif]><wbr>deport-<![if gt IE 6]>&#8203;<![endif]><wbr>dreamers/#<![if gt IE 6]>&#8203;<![endif]><wbr>comments</A>
 </blockquote>
 
 <i>Posted Jun 23 2013</i>
@@ -570,7 +570,7 @@ I regret the two times in my life a lady approached me and indicated to me she w
 <p>
 
 <blockquote>
-<A href="http://www.xojane.com/family/what-my-mother-taught-me-about-the-eff-words-feminism-and-fear">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>xojane.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>family/<![if gt IE 6]>&#8203;<![endif]><wbr>what-<![if gt IE 6]>&#8203;<![endif]><wbr>my-<![if gt IE 6]>&#8203;<![endif]><wbr>mother-<![if gt IE 6]>&#8203;<![endif]><wbr>taught-<![if gt IE 6]>&#8203;<![endif]><wbr>me-<![if gt IE 6]>&#8203;<![endif]><wbr>about-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>eff-<![if gt IE 6]>&#8203;<![endif]><wbr>words-<![if gt IE 6]>&#8203;<![endif]><wbr>feminism-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>fear</A>
+<A href="http://www.xojane.com/family/what-my-mother-taught-me-about-the-eff-words-feminism-and-fear">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>xojane.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>family/<![if gt IE 6]>&#8203;<![endif]><wbr>what-<![if gt IE 6]>&#8203;<![endif]><wbr>my-<![if gt IE 6]>&#8203;<![endif]><wbr>mother-<![if gt IE 6]>&#8203;<![endif]><wbr>taught-<![if gt IE 6]>&#8203;<![endif]><wbr>me-<![if gt IE 6]>&#8203;<![endif]><wbr>about-<![if gt IE 6]>&#8203;<![endif]><wbr>the-<![if gt IE 6]>&#8203;<![endif]><wbr>eff-<![if gt IE 6]>&#8203;<![endif]><wbr>words-<![if gt IE 6]>&#8203;<![endif]><wbr>feminism-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>fear</A>
 </blockquote>
 
 <a href="http://samiam.org/blog/20130316.html">I’m no feminist</a>, but one does not need to be a feminist to help a woman in need; one only needs to be a decent, honest human being.
@@ -590,7 +590,7 @@ It has become a lot harder to make a living as a writer:
 <p>
 
 <blockquote>
-<A href="http://www.theawl.com/2013/06/dox-dox-dox">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>theawl.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>dox-<![if gt IE 6]>&#8203;<![endif]><wbr>dox-<![if gt IE 6]>&#8203;<![endif]><wbr>dox</A>
+<A href="http://www.theawl.com/2013/06/dox-dox-dox">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>theawl.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>dox-<![if gt IE 6]>&#8203;<![endif]><wbr>dox-<![if gt IE 6]>&#8203;<![endif]><wbr>dox</A>
 </blockquote>
 
 Here’s one interesting line from the article:
@@ -638,7 +638,7 @@ I remember when the consensus was that the x86 would never have the kind of perf
 <p>
 
 <blockquote>
-<A href="http://arstechnica.com/information-technology/2013/06/amd-announces-its-first-64-bit-8-and-16-core-arm-based-server-socs/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>arstechnica.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>information-<![if gt IE 6]>&#8203;<![endif]><wbr>technology/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>amd-<![if gt IE 6]>&#8203;<![endif]><wbr>announces-<![if gt IE 6]>&#8203;<![endif]><wbr>its-<![if gt IE 6]>&#8203;<![endif]><wbr>first-<![if gt IE 6]>&#8203;<![endif]><wbr>64-<![if gt IE 6]>&#8203;<![endif]><wbr>bit-<![if gt IE 6]>&#8203;<![endif]><wbr>8-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>16-<![if gt IE 6]>&#8203;<![endif]><wbr>core-<![if gt IE 6]>&#8203;<![endif]><wbr>arm-<![if gt IE 6]>&#8203;<![endif]><wbr>based-<![if gt IE 6]>&#8203;<![endif]><wbr>server-<![if gt IE 6]>&#8203;<![endif]><wbr>socs/</A>
+<A href="http://arstechnica.com/information-technology/2013/06/amd-announces-its-first-64-bit-8-and-16-core-arm-based-server-socs/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>arstechnica.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>information-<![if gt IE 6]>&#8203;<![endif]><wbr>technology/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>amd-<![if gt IE 6]>&#8203;<![endif]><wbr>announces-<![if gt IE 6]>&#8203;<![endif]><wbr>its-<![if gt IE 6]>&#8203;<![endif]><wbr>first-<![if gt IE 6]>&#8203;<![endif]><wbr>64-<![if gt IE 6]>&#8203;<![endif]><wbr>bit-<![if gt IE 6]>&#8203;<![endif]><wbr>8-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>16-<![if gt IE 6]>&#8203;<![endif]><wbr>core-<![if gt IE 6]>&#8203;<![endif]><wbr>arm-<![if gt IE 6]>&#8203;<![endif]><wbr>based-<![if gt IE 6]>&#8203;<![endif]><wbr>server-<![if gt IE 6]>&#8203;<![endif]><wbr>socs/</A>
 </blockquote>
 
 <i>Posted Jun 18 2013</i>
@@ -654,11 +654,11 @@ In the original classic Pitfall game, David Crane was able to, by clever program
 <p>
 
 <ul>
-<li> <A href="http://samiam.org/blog/20130606.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130606.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
-<li> <A href="http://samiam.org/blog/20130608.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130608.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
-<li> <A href="http://samiam.org/blog/20130612.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130612.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
-<li> <A href="http://samiam.org/blog/20130616.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130616.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
-<li> <A href="http://samiam.org/blog/20130617.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130617.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="http://samiam.org/blog/20130606.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130606.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="http://samiam.org/blog/20130608.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130608.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="http://samiam.org/blog/20130612.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130612.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="http://samiam.org/blog/20130616.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130616.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<li> <A href="http://samiam.org/blog/20130617.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130617.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
 </ul>
 
 <p>
@@ -694,7 +694,7 @@ Let me wrap up this rant with a link:
 <p>
 
 <blockquote>
-<A href="http://www.xconomy.com/national/2013/06/14/dont-panic-but-weve-passed-peak-apple-and-google-and-facebook/?single_page=true">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>xconomy.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>national/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>14/<![if gt IE 6]>&#8203;<![endif]><wbr>dont-<![if gt IE 6]>&#8203;<![endif]><wbr>panic-<![if gt IE 6]>&#8203;<![endif]><wbr>but-<![if gt IE 6]>&#8203;<![endif]><wbr>weve-<![if gt IE 6]>&#8203;<![endif]><wbr>passed-<![if gt IE 6]>&#8203;<![endif]><wbr>peak-<![if gt IE 6]>&#8203;<![endif]><wbr>apple-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>google-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>facebook/?<![if gt IE 6]>&#8203;<![endif]><wbr>single_<![if gt IE 6]>&#8203;<![endif]><wbr>page=<![if gt IE 6]>&#8203;<![endif]><wbr>true</A>
+<A href="http://www.xconomy.com/national/2013/06/14/dont-panic-but-weve-passed-peak-apple-and-google-and-facebook/?single_page=true">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>xconomy.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>national/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>14/<![if gt IE 6]>&#8203;<![endif]><wbr>dont-<![if gt IE 6]>&#8203;<![endif]><wbr>panic-<![if gt IE 6]>&#8203;<![endif]><wbr>but-<![if gt IE 6]>&#8203;<![endif]><wbr>weve-<![if gt IE 6]>&#8203;<![endif]><wbr>passed-<![if gt IE 6]>&#8203;<![endif]><wbr>peak-<![if gt IE 6]>&#8203;<![endif]><wbr>apple-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>google-<![if gt IE 6]>&#8203;<![endif]><wbr>and-<![if gt IE 6]>&#8203;<![endif]><wbr>facebook/?<![if gt IE 6]>&#8203;<![endif]><wbr>single_<![if gt IE 6]>&#8203;<![endif]><wbr>page=<![if gt IE 6]>&#8203;<![endif]><wbr>true</A>
 </blockquote>
 
 <i>Browser notes</i>
@@ -715,7 +715,7 @@ Some important webfont gotchas: Test web fonts in Chrome + modern Windows.  Test
 
 <p>
 
-More details on fixing web fonts to look decent in Chrome: <A href="http://samiam.org/blog/20120918.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20120918.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+More details on fixing web fonts to look decent in Chrome: <A href="http://samiam.org/blog/20120918.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20120918.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
 
 <p>
 
@@ -732,7 +732,7 @@ I always wanted to see a 32-bit or 64-bit 6502 with protected mode. Well, it exi
 <p>
 
 <blockquote>
-<A href="http://www.ot1.com/arm/armchap1.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>ot<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>arm/<![if gt IE 6]>&#8203;<![endif]><wbr>armchap<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<A href="http://www.ot1.com/arm/armchap1.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>ot<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>arm/<![if gt IE 6]>&#8203;<![endif]><wbr>armchap<![if gt IE 6]>&#8203;<![endif]><wbr>1.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
 </blockquote>
 
 It looks like the ARM architecture is slowly replacing the x86, which I think is a good thing.
@@ -755,7 +755,7 @@ Why Being Bilingual Can Actually Make You Smarter
 <p>
 
 <blockquote>
-<A href="http://www.howlifeworks.com/a/a?AG_ID=1192&amp;cid=7111ab">http://<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>howlifeworks.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>a/<![if gt IE 6]>&#8203;<![endif]><wbr>a?<![if gt IE 6]>&#8203;<![endif]><wbr>AG_<![if gt IE 6]>&#8203;<![endif]><wbr>ID=<![if gt IE 6]>&#8203;<![endif]><wbr>1192&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>cid=<![if gt IE 6]>&#8203;<![endif]><wbr>7111<![if gt IE 6]>&#8203;<![endif]><wbr>ab</A>
+<A href="http://www.howlifeworks.com/a/a?AG_ID=1192&amp;cid=7111ab">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>www.<![if gt IE 6]>&#8203;<![endif]><wbr>howlifeworks.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>a/<![if gt IE 6]>&#8203;<![endif]><wbr>a?<![if gt IE 6]>&#8203;<![endif]><wbr>AG_<![if gt IE 6]>&#8203;<![endif]><wbr>ID=<![if gt IE 6]>&#8203;<![endif]><wbr>1192&<![if gt IE 6]>&#8203;<![endif]><wbr>amp;<![if gt IE 6]>&#8203;<![endif]><wbr>cid=<![if gt IE 6]>&#8203;<![endif]><wbr>7111<![if gt IE 6]>&#8203;<![endif]><wbr>ab</A>
 </blockquote>
 
 Yes, this is a thinly disguised ad for The Pimsleur Approach.  The sense I get is that the Pimsleur Approach can be remarkably effective—probably one of the best “teach yourself a language” programs—but the lessons are somewhat dry and tedious.  
@@ -767,7 +767,7 @@ The best way to learn a language is to go to another country and learn the langu
 <p>
 
 <blockquote>
-<A href="http://www.sipuebla.com/">http://www.sipuebla.com/</A>
+<A href="http://www.sipuebla.com/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.sipuebla<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 For the record: Puebla is still a remarkably safe area of Mexico right now;  I’m more worried about the nearby volcano than the drug gangs in that particular city.  And, yes, the owner of that school was the best man at my wedding.
@@ -818,7 +818,7 @@ A download is here:
 <p>
 
 <blockquote>
-<A href="http://samiam.org/pitfall/">http://samiam.org/pitfall/</A>
+<A href="http://samiam.org/pitfall/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/pitfall<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 <i>Posted Jun 09 2013</i>
@@ -870,7 +870,7 @@ During the first decade of the 2000s, keeping a web site Internet Explorer 6 (IE
 <p>
 
 <blockquote>
-<A href="http://arstechnica.com/wp-content/uploads/2013/06/internet-explorer-versions-2013-05-640x480.png">http://<![if gt IE 6]>&#8203;<![endif]><wbr>arstechnica.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>wp-<![if gt IE 6]>&#8203;<![endif]><wbr>content/<![if gt IE 6]>&#8203;<![endif]><wbr>uploads/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>internet-<![if gt IE 6]>&#8203;<![endif]><wbr>explorer-<![if gt IE 6]>&#8203;<![endif]><wbr>versions-<![if gt IE 6]>&#8203;<![endif]><wbr>2013-<![if gt IE 6]>&#8203;<![endif]><wbr>05-<![if gt IE 6]>&#8203;<![endif]><wbr>640<![if gt IE 6]>&#8203;<![endif]><wbr>x<![if gt IE 6]>&#8203;<![endif]><wbr>480.<![if gt IE 6]>&#8203;<![endif]><wbr>png</A>
+<A href="http://arstechnica.com/wp-content/uploads/2013/06/internet-explorer-versions-2013-05-640x480.png">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>arstechnica.<![if gt IE 6]>&#8203;<![endif]><wbr>com/<![if gt IE 6]>&#8203;<![endif]><wbr>wp-<![if gt IE 6]>&#8203;<![endif]><wbr>content/<![if gt IE 6]>&#8203;<![endif]><wbr>uploads/<![if gt IE 6]>&#8203;<![endif]><wbr>2013/<![if gt IE 6]>&#8203;<![endif]><wbr>06/<![if gt IE 6]>&#8203;<![endif]><wbr>internet-<![if gt IE 6]>&#8203;<![endif]><wbr>explorer-<![if gt IE 6]>&#8203;<![endif]><wbr>versions-<![if gt IE 6]>&#8203;<![endif]><wbr>2013-<![if gt IE 6]>&#8203;<![endif]><wbr>05-<![if gt IE 6]>&#8203;<![endif]><wbr>640<![if gt IE 6]>&#8203;<![endif]><wbr>x<![if gt IE 6]>&#8203;<![endif]><wbr>480.<![if gt IE 6]>&#8203;<![endif]><wbr>png</A>
 </blockquote>
 
 However, the true story is this: China is the only country in the world that is clinging on to IE6.  Every other country out there (including other former IE6 holdouts like South Korea) has stopped using IE6.  Here’s the more detailed breakdown from Microsoft themselves:
@@ -878,7 +878,7 @@ However, the true story is this: China is the only country in the world that is 
 <p>
 
 <blockquote>
-<A href="http://www.ie6countdown.com/">http://www.ie6countdown.com/</A>
+<A href="http://www.ie6countdown.com/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.ie6countdown<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 To summarize: China still has 24% IE6 usage.  India has 2.8% IE6 usage.  Every other country has under 2% IE6 usage.  Except for web designers of webpages written in Chinese, IE6 does not matter anymore.
@@ -925,11 +925,11 @@ Some more information:
 <p>
 
 <blockquote>
-<A href="http://en.wikipedia.org/wiki/Aztec_cuisine">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Aztec_<![if gt IE 6]>&#8203;<![endif]><wbr>cuisine</A>
+<A href="http://en.wikipedia.org/wiki/Aztec_cuisine">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Aztec_<![if gt IE 6]>&#8203;<![endif]><wbr>cuisine</A>
 </blockquote>
 
 <blockquote>
-<A href="http://en.wikipedia.org/wiki/Domesticated_plants_of_Mesoamerica">http://<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Domesticated_<![if gt IE 6]>&#8203;<![endif]><wbr>plants_<![if gt IE 6]>&#8203;<![endif]><wbr>of_<![if gt IE 6]>&#8203;<![endif]><wbr>Mesoamerica</A>
+<A href="http://en.wikipedia.org/wiki/Domesticated_plants_of_Mesoamerica">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>en.<![if gt IE 6]>&#8203;<![endif]><wbr>wikipedia.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>wiki/<![if gt IE 6]>&#8203;<![endif]><wbr>Domesticated_<![if gt IE 6]>&#8203;<![endif]><wbr>plants_<![if gt IE 6]>&#8203;<![endif]><wbr>of_<![if gt IE 6]>&#8203;<![endif]><wbr>Mesoamerica</A>
 </blockquote>
 
 <i>Posted Jun 05 2013</i>
@@ -945,7 +945,7 @@ I have archived the microblogs posted from May 6 to June 1 2013:
 <p>
 
 <blockquote>
-<A href="http://samiam.org/blog/20130604.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130604.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<A href="http://samiam.org/blog/20130604.html">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20130604.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
 </blockquote>
 
 <p>

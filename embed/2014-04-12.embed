@@ -83,9 +83,9 @@ by adding these lines to my nginx.conf file:
 
 <tt>ssl_prefer_server_ciphers On;</tt><br>
 <tt>ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;</tt><br>
-<tt>ssl_ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:</tt><br>
-<tt>&nbsp;ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:</tt><br>
-<tt>&nbsp;RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS;</tt><br>
+<tt>ssl_ciphers ECDH+AESGCM:<![if gt IE 6]>&#8203;<![endif]><wbr>DH+AESGCM:<![if gt IE 6]>&#8203;<![endif]><wbr>ECDH+AES256:<![if gt IE 6]>&#8203;<![endif]><wbr>DH+AES256:</tt><br>
+<tt>&nbsp;ECDH+AES128:<![if gt IE 6]>&#8203;<![endif]><wbr>DH+AES:<![if gt IE 6]>&#8203;<![endif]><wbr>ECDH+3DES:<![if gt IE 6]>&#8203;<![endif]><wbr>DH+3DES:<![if gt IE 6]>&#8203;<![endif]><wbr>RSA+AESGCM:</tt><br>
+<tt>&nbsp;RSA+AES:<![if gt IE 6]>&#8203;<![endif]><wbr>RSA+3DES:<![if gt IE 6]>&#8203;<![endif]><wbr>!aNULL:<![if gt IE 6]>&#8203;<![endif]><wbr>!MD5:<![if gt IE 6]>&#8203;<![endif]><wbr>!DSS;</tt><br>
 
 <p>
 

@@ -75,7 +75,7 @@ patches for both Lua 5.1 and Lua 5.4 which add SipHash support:
 <p>
 
 <blockquote>
-<A href="https://github.com/samboy/LUAstuff">https://github.com/samboy/LUAstuff</A>
+<A href="https://github.com/samboy/LUAstuff">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/github<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/samboy<![if gt IE 6]>&#8203;<![endif]><wbr>/LUAstuff</A>
 </blockquote>
 
 Look in the folder <tt>lua-patches/</tt> for the SipHash
@@ -89,7 +89,7 @@ personal fork of Lua 5.1:
 <p>
 
 <blockquote>
-<A href="https://github.com/samboy/lunacy">https://github.com/samboy/lunacy</A>
+<A href="https://github.com/samboy/lunacy">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/github<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/samboy<![if gt IE 6]>&#8203;<![endif]><wbr>/lunacy</A>
 </blockquote>
 
 In my benchmarks, adding SipHash support slows down 64-bit compiles
@@ -121,11 +121,11 @@ This is the version of SipHash used by Python, Ruby, and Rust:
 <p>
 
 <blockquote>
-<A href="https://bugs.ruby-lang.org/issues/13017">https://<![if gt IE 6]>&#8203;<![endif]><wbr>bugs.<![if gt IE 6]>&#8203;<![endif]><wbr>ruby-<![if gt IE 6]>&#8203;<![endif]><wbr>lang.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>issues/<![if gt IE 6]>&#8203;<![endif]><wbr>13017</A>
+<A href="https://bugs.ruby-lang.org/issues/13017">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>bugs.<![if gt IE 6]>&#8203;<![endif]><wbr>ruby-<![if gt IE 6]>&#8203;<![endif]><wbr>lang.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>issues/<![if gt IE 6]>&#8203;<![endif]><wbr>13017</A>
 </blockquote>
 
 <blockquote>
-<A href="https://bugs.python.org/issue29410">https://bugs.python.org/issue29410</A>
+<A href="https://bugs.python.org/issue29410">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/bugs<![if gt IE 6]>&#8203;<![endif]><wbr>.python<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/issue29410</A>
 </blockquote>
 
 <A name=HalfSipHash></A><A name=HalfSipHash></A><span class=moyet>==</span><span class=blogtitle><b>HalfSipHash</b></span><span class=moyet>==</span>
@@ -146,7 +146,7 @@ with the official SipHash reference code, can be viewed here:
 <p>
 
 <blockquote>
-<A href="https://github.com/veorq/SipHash/">https://github.com/veorq/SipHash/</A>
+<A href="https://github.com/veorq/SipHash/">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/github<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/veorq<![if gt IE 6]>&#8203;<![endif]><wbr>/SipHash<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 
@@ -156,7 +156,7 @@ with the official SipHash reference code, can be viewed here:
 
 <i>Did you know that all of my blog entries are available in a free to
 download eBook at 
-<a href=ebooks.html>https://www.samiam.org/blog/ebooks.html</a>.
+<a href=ebooks.html>https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/blog<![if gt IE 6]>&#8203;<![endif]><wbr>/ebooks<![if gt IE 6]>&#8203;<![endif]><wbr>.html</a>.
 </i>
 
 <p>

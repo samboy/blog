@@ -261,7 +261,7 @@ to CentOS 6:
 <p>
 
 <blockquote>
-<A href="https://github.com/samboy/fcgiwrap">https://github.com/samboy/fcgiwrap</A>
+<A href="https://github.com/samboy/fcgiwrap">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>fcgiwrap</A>
 </blockquote>
 
 To install that package, as root:
@@ -277,7 +277,7 @@ Follow this by, as
 
 <p>
 
-<tt>git clone https://github.com/samboy/fcgiwrap</tt><br>
+<tt>git clone https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>fcgiwrap</tt><br>
 
 <p>
 
@@ -320,7 +320,7 @@ Here are the relevant lines from my Nginx configuration:
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>server {</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>listen <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>[::]:80;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>listen <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>[::]:443 ssl;</tt><br>
-<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>ssl_certificate /usr/local/nginx/server.crt;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>ssl_certificate /usr/<![if gt IE 6]>&#8203;<![endif]><wbr>local/<![if gt IE 6]>&#8203;<![endif]><wbr>nginx/<![if gt IE 6]>&#8203;<![endif]><wbr>server.crt;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>ssl_certificate_key /usr/local/nginx/server.key;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>server_name <span class=pc>&nbsp;</span>mailman.example.com;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location / {</tt><br>
@@ -336,7 +336,7 @@ Here are the relevant lines from my Nginx configuration:
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location /mailman/cgi-bin {</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>root /usr/lib;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_split_path_info (^/mailman/cgi-bin/[^/]*)(.*)$;</tt><br>
-<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>include /usr/local/nginx/conf/fastcgi_params;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>include /usr/<![if gt IE 6]>&#8203;<![endif]><wbr>local/<![if gt IE 6]>&#8203;<![endif]><wbr>nginx/<![if gt IE 6]>&#8203;<![endif]><wbr>conf/<![if gt IE 6]>&#8203;<![endif]><wbr>fastcgi_params;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_param PATH_INFO $fastcgi_path_info;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;</tt><br>
@@ -344,13 +344,13 @@ Here are the relevant lines from my Nginx configuration:
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>fastcgi_pass <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>unix:/var/run/fcgiwrap.socket;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location /icons {</tt><br>
-<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>alias /usr/lib/mailman/icons/;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>alias /usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>icons/;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location /images/mailman {</tt><br>
-<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>alias /usr/lib/mailman/icons/;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>alias /usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>icons/;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>location /pipermail {</tt><br>
-<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>alias /var/lib/mailman/archives/public;</tt><br>
+<tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>alias /var/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>archives/<![if gt IE 6]>&#8203;<![endif]><wbr>public;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>autoindex on;</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>}</tt><br>
@@ -367,11 +367,11 @@ passed to a fastcgi socket started using this code (run as "nobody"):
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>echo Do not run this as root</tt><br>
 <tt>&nbsp;<span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>exit</tt><br>
 <tt>fi</tt><br>
-<tt>BIND=/tmp/php.socket</tt><br>
-<tt>USER=nobody</tt><br>
-<tt>PHP_CGI=/usr/bin/php-cgi</tt><br>
-<tt>export USER=nobody</tt><br>
-<tt>export PATH=/usr/bin</tt><br>
+<tt>BIND=<![if gt IE 6]>&#8203;<![endif]><wbr>/tmp/php.socket</tt><br>
+<tt>USER=<![if gt IE 6]>&#8203;<![endif]><wbr>nobody</tt><br>
+<tt>PHP_CGI=<![if gt IE 6]>&#8203;<![endif]><wbr>/usr/bin/<![if gt IE 6]>&#8203;<![endif]><wbr>php-cgi</tt><br>
+<tt>export USER=<![if gt IE 6]>&#8203;<![endif]><wbr>nobody</tt><br>
+<tt>export PATH=<![if gt IE 6]>&#8203;<![endif]><wbr>/usr/bin</tt><br>
 <tt>nohup php-cgi -b $BIND &amp;</tt><br>
 
 <p>
@@ -390,24 +390,24 @@ new lists are being generated from the command line.
 
 <p>
 
-It's important to edit /usr/lib/mailman/Mailman/Defaults.py to have
+It's important to edit /usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>Mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>Defaults.py to have
 lines that look like this:
 
 <p>
 
 <tt>DEFAULT_EMAIL_HOST = 'mailman.example.com'</tt><br>
 <tt>DEFAULT_URL_HOST = 'mailman.example.com'</tt><br>
-<tt>DEFAULT_URL_PATTERN = 'https://%s/mailman/cgi-bin/'</tt><br>
+<tt>DEFAULT_URL_PATTERN = 'https:<![if gt IE 6]>&#8203;<![endif]><wbr>//%s/mailman/cgi-bin/'</tt><br>
 
 <p>
 
-And edit /usr/lib/mailman/Mailman/mm_cfg.py to have lines like
+And edit /usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>Mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mm_cfg.py to have lines like
 this:
 
 <p>
 
 <tt>DEFAULT_URL_HOST <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>= 'mailman.example.com'</tt><br>
-<tt>DEFAULT_EMAIL_HOST = 'mailman.example.com'</tt><br>
+<tt>DEFAULT_EMAIL_HOST = 'mailman.<![if gt IE 6]>&#8203;<![endif]><wbr>example.com'</tt><br>
 
 <p>
 
@@ -421,7 +421,7 @@ making any mailing lists for Mailman.
 
 <p>
 
-<tt>cd /usr/lib/mailman/bin</tt><br>
+<tt>cd /usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>bin</tt><br>
 <tt>su</tt><br>
 <tt>./newlist</tt><br>
 
@@ -438,16 +438,16 @@ Once the list is made, the command will output lines like this:
 <p>
 
 <tt><font color=#008700>## foo mailing list </font></tt><br>
-<tt>foo: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman post foo"</tt><br>
-<tt>foo-admin: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman admin foo"</tt><br>
-<tt>foo-bounces: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman bounces foo"</tt><br>
-<tt>foo-confirm: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman confirm foo"</tt><br>
-<tt>foo-join: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman join foo"</tt><br>
-<tt>foo-leave: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman leave foo"</tt><br>
-<tt>foo-owner: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman owner foo"</tt><br>
-<tt>foo-request: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman request foo"</tt><br>
-<tt>foo-subscribe: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman subscribe foo"</tt><br>
-<tt>foo-unsubscribe: <span class=pc>&nbsp;</span>"|/usr/lib/mailman/mail/mailman unsubscribe foo"</tt><br>
+<tt>foo: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman post foo"</tt><br>
+<tt>foo-admin: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman admin foo"</tt><br>
+<tt>foo-bounces: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman bounces foo"</tt><br>
+<tt>foo-confirm: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman confirm foo"</tt><br>
+<tt>foo-join: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman join foo"</tt><br>
+<tt>foo-leave: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman leave foo"</tt><br>
+<tt>foo-owner: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman owner foo"</tt><br>
+<tt>foo-request: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman request foo"</tt><br>
+<tt>foo-subscribe: <span class=pc>&nbsp;</span><span class=pc>&nbsp;</span><span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman subscribe foo"</tt><br>
+<tt>foo-unsubscribe: <span class=pc>&nbsp;</span>"|/usr/<![if gt IE 6]>&#8203;<![endif]><wbr>lib/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman/<![if gt IE 6]>&#8203;<![endif]><wbr>mail/<![if gt IE 6]>&#8203;<![endif]><wbr>mailman unsubscribe foo"</tt><br>
 
 <p>
 
