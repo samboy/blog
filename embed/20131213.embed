@@ -49,7 +49,7 @@ It can be downloaded from here:
 <p>
 
 <blockquote>
-<A href="http://samiam.org/fonts/terminal/WTerm/old/WTm.fon">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>WTerm/<![if gt IE 6]>&#8203;<![endif]><wbr>WTm.<![if gt IE 6]>&#8203;<![endif]><wbr>fon</A>
+<A href="http://samiam.org/fonts/terminal/WTerm/old/WTm.fon">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>WTerm/<![if gt IE 6]>&#8203;<![endif]><wbr>WTm.<![if gt IE 6]>&#8203;<![endif]><wbr>fon</A>
 </blockquote>
 
 Once downloaded and installed (double-click on a font and click “install” to
@@ -84,7 +84,7 @@ I have a mirror of this font here, in the file X11.fon:
 <p>
 
 <blockquote>
-<A href="http://samiam.org/fonts/terminal/">http://samiam.org/fonts/terminal/</A>
+<A href="http://samiam.org/fonts/terminal/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/fonts<![if gt IE 6]>&#8203;<![endif]><wbr>/terminal<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 To get this font to look nice in MSYS, install it in Windows, then the relevant
@@ -108,7 +108,7 @@ under the MIT license; I have a mirror of it here:
 <p>
 
 <blockquote>
-<A href="http://samiam.org/fonts/terminal/zevv-peep/">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>zevv-<![if gt IE 6]>&#8203;<![endif]><wbr>peep/</A>
+<A href="http://samiam.org/fonts/terminal/zevv-peep/">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>fonts/<![if gt IE 6]>&#8203;<![endif]><wbr>terminal/<![if gt IE 6]>&#8203;<![endif]><wbr>zevv-<![if gt IE 6]>&#8203;<![endif]><wbr>peep/</A>
 </blockquote>
 
 

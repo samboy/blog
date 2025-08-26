@@ -18,7 +18,7 @@ grab MaraDNS thusly:
 <p>
 
 <blockquote>
-git clone <A href="https://github.com/samboy/MaraDNS">https://github.com/samboy/MaraDNS</A>
+git clone <A href="https://github.com/samboy/MaraDNS">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/github<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/samboy<![if gt IE 6]>&#8203;<![endif]><wbr>/MaraDNS</A>
 </blockquote>
 
 The above link can also be opened in a browser; I have gone to some

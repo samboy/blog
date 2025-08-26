@@ -28,7 +28,7 @@ without using Gnome’s GUI; this blog answered my question:
 
 Since I have no plans to post to Slashdot again until 2014, I
 will post a thank you to the anonymous hero who posted this at
-<A href="http://slashdot.org/comments.pl?sid=3592647&amp;cid=43313739">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/slashdot<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/comments<![if gt IE 6]>&#8203;<![endif]><wbr>.pl?sid=3592647&amp;cid=43313739</A>
+<A href="http://slashdot.org/comments.pl?sid=3592647&amp;cid=43313739">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/slashdot<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/comments<![if gt IE 6]>&#8203;<![endif]><wbr>.pl?sid=<![if gt IE 6]>&#8203;<![endif]><wbr>3592647&amp;<![if gt IE 6]>&#8203;<![endif]><wbr>cid=43313739</A>
 
 <p>
 
@@ -709,7 +709,7 @@ when going to nginx.foo:
 <tt></tt><br>
 <tt>location ~ \.php$ {</tt><br>
 <tt>&nbsp;root html/nginx.foo/;</tt><br>
-<tt>&nbsp;fastcgi_pass unix:/tmp/php.socket;</tt><br>
+<tt>&nbsp;fastcgi_pass unix:<![if gt IE 6]>&#8203;<![endif]><wbr>/tmp/php.socket;</tt><br>
 <tt>&nbsp;fastcgi_index foo.php;</tt><br>
 <tt>&nbsp;include fastcgi_params;</tt><br>
 <tt>&nbsp;index foo.php;</tt><br>
@@ -723,7 +723,7 @@ To fix this:
 
 <tt>location ~ \.php$ {</tt><br>
 <tt>&nbsp;root html/nginx.foo/;</tt><br>
-<tt>&nbsp;fastcgi_pass unix:/tmp/php.socket;</tt><br>
+<tt>&nbsp;fastcgi_pass unix:<![if gt IE 6]>&#8203;<![endif]><wbr>/tmp/php.socket;</tt><br>
 <tt>&nbsp;fastcgi_index foo.php;</tt><br>
 <tt>&nbsp;include fastcgi_params;</tt><br>
 <tt>&nbsp;index foo.php;</tt><br>

@@ -96,7 +96,7 @@ The variant can be looked at and the Zillions rules downloaded here:
 <p>
 
 <blockquote>
-<A href="https://samiam.org/schoolbook/">https://samiam.org/schoolbook/</A>
+<A href="https://samiam.org/schoolbook/">https://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.org/<![if gt IE 6]>&#8203;<![endif]><wbr>schoolbook/</A>
 </blockquote>
 
 <p>

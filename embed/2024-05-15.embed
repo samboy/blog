@@ -53,7 +53,7 @@ fork of Lua 5.1:
 <p>
 
 <blockquote>
-<A href="https://github.com/samboy/lunacy">https://github.com/samboy/lunacy</A>
+<A href="https://github.com/samboy/lunacy">https://<![if gt IE 6]>&#8203;<![endif]><wbr>github.com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>lunacy</A>
 </blockquote>
 
 Look in the <tt>doc/</tt> folder.
