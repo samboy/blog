@@ -3,6 +3,15 @@
 
 <h2>May 29, 2011</h2>
 
+<i>2025 commentary: Something is very wrong with online culture that
+something this negative which I wrote over 14 years ago gets a lot more
+attention than the many many positive useful things I write on this
+blog. That said, the year of the Linux desktop never happened, and the
+only reason Linux has so much traction in the mobile space is because
+of the semi-proprietary Android OS.</i>
+
+<p>
+
 <i>2014 update: The issue was not really with Linux as much as it
 was with VirtualBox.  It really is worth it to spring the $250 needed
 to buy VMWare workstation</i>
@@ -13,7 +22,7 @@ This morning, my Scientific Linux Virtual box guest developed a serious case of 
 slew.  After <A 
 href=http://www.virtualbox.org/ticket/3135>some research</A>, and trying
 all four possible timing sources (see 
-<tt>/sys/devices/system/clocksource/clocksource0/available_clocksource</tt>),
+<tt>/sys/<![if gt IE 6]>&#8203;<![endif]><wbr>devices/<![if gt IE 6]>&#8203;<![endif]><wbr>system/<![if gt IE 6]>&#8203;<![endif]><wbr>clocksource/<![if gt IE 6]>&#8203;<![endif]><wbr>clocksource0/<![if gt IE 6]>&#8203;<![endif]><wbr>available_<![if gt IE 6]>&#8203;<![endif]><wbr>clocksource</tt>),
 having to reboot the Virtual guest every time I tried a different clock 
 source, I finally came to the conclusion that the only way I am
 going to get a stable clock in Scientific Linux again is by upgrading to
