@@ -11,11 +11,11 @@ echo 'body { max-width: 95vw; overflow-x: hidden; }' >> index.html
 # Nav after blog entries
 echo '.GitBlogNav { display: table; width: 95vw; ' >> index.html
 echo 'text-align: center;' >> index.html
-echo 'border-top: 1px solid black;' >> index.html
-echo 'margin: 3px; padding: 2px;' >> index.html
+echo 'border-top: 2px solid #aaa;' >> index.html
+echo 'margin: 5px; padding: 2px;' >> index.html
 echo margin-left: auto\; >> index.html
 echo margin-right: auto\; >> index.html
-echo 'border-bottom: 1px solid black; }' >> index.html
+echo 'border-bottom: 2px solid #aaa; }' >> index.html
 echo '@media (min-width: 640px) {.GitBlogNav {width:640px;}}' >> index.html
 
 echo .blog { display: table\; max-width: 640px\; >> index.html
