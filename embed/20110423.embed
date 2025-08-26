@@ -9,7 +9,7 @@ exist, but tinydns will return a NXDOMAIN for foo.example.com even if
 bar.foo.example.com exists):
 
 <blockquote>
-	<A href="http://marc.info/?l=djbdns&m=130132697825674&w=1">http://marc.info/?l=djbdns&m=130132697825674&w=1</A>
+	<A href="http://marc.info/?l=djbdns&m=130132697825674&w=1">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/marc<![if gt IE 6]>&#8203;<![endif]><wbr>.info<![if gt IE 6]>&#8203;<![endif]><wbr>/?l=djbdns&m=130132697825674&w=1</A>
 </blockquote>
 
 However, back in 1999, Paul Vixie said that a server must return a NXDOMAIN,
@@ -52,33 +52,33 @@ NXDOMAIN signals "no RRs of any type at this name".
 Reference:
 
 <blockquote>
-<a href=http://groups.google.com/group/comp.protocols.dns.std/msg/69e4500e7b7d73c8>http://groups.google.com/group/comp.protocols.dns.std/msg/69e4500e7b7d73c8</A>
+<a href=http://groups.google.com/group/comp.protocols.dns.std/msg/69e4500e7b7d73c8>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/groups<![if gt IE 6]>&#8203;<![endif]><wbr>.google<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/group<![if gt IE 6]>&#8203;<![endif]><wbr>/comp<![if gt IE 6]>&#8203;<![endif]><wbr>.protocols<![if gt IE 6]>&#8203;<![endif]><wbr>.dns<![if gt IE 6]>&#8203;<![endif]><wbr>.std<![if gt IE 6]>&#8203;<![endif]><wbr>/msg<![if gt IE 6]>&#8203;<![endif]><wbr>/69e4500e7b7d73c8</A>
 </blockquote>
 
 And DJB referring to this:
 
 <blockquote>
-<a href=http://marc.info/?l=djbdns&m=130135043022339&w=1>http://marc.info/?l=djbdns&m=130135043022339&w=1</a>
+<a href=http://marc.info/?l=djbdns&m=130135043022339&w=1>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/marc<![if gt IE 6]>&#8203;<![endif]><wbr>.info<![if gt IE 6]>&#8203;<![endif]><wbr>/?l=djbdns&m=130135043022339&w=1</a>
 </blockquote>
 
 There actually isn't an RFC that requires this behavior.
 What there is instead is a draft proposal:
 
 <blockquote>
-<a href=http://tools.ietf.org/html/draft-vixie-dnsext-resimprove-00>http://tools.ietf.org/html/draft-vixie-dnsext-resimprove-00</a></blockquote>
+<a href=http://tools.ietf.org/html/draft-vixie-dnsext-resimprove-00>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/tools<![if gt IE 6]>&#8203;<![endif]><wbr>.ietf<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/html<![if gt IE 6]>&#8203;<![endif]><wbr>/draft<![if gt IE 6]>&#8203;<![endif]><wbr>-vixie<![if gt IE 6]>&#8203;<![endif]><wbr>-dnsext<![if gt IE 6]>&#8203;<![endif]><wbr>-resimprove<![if gt IE 6]>&#8203;<![endif]><wbr>-00</a></blockquote>
 
 Hauke Lampe pointed out that recent Unbound builds no longer expect
 NXDOMAIN to means "also for all domain names below" unless the
 remote cache supports DNSSEC:
 
 <blockquote>
-<a href=http://marc.info/?l=djbdns&m=130148377625400&w=1>http://marc.info/?l=djbdns&m=130148377625400&w=1</a>
+<a href=http://marc.info/?l=djbdns&m=130148377625400&w=1>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/marc<![if gt IE 6]>&#8203;<![endif]><wbr>.info<![if gt IE 6]>&#8203;<![endif]><wbr>/?l=djbdns&m=130148377625400&w=1</a>
 </blockquote>
 
 He is referring to the changelog in Unbound's SVN trunk:
 
 <blockquote>
-<a href=http://unbound.nlnetlabs.nl/svn/trunk/doc/Changelog>http://unbound.nlnetlabs.nl/svn/trunk/doc/Changelog</a>
+<a href=http://unbound.nlnetlabs.nl/svn/trunk/doc/Changelog>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/unbound<![if gt IE 6]>&#8203;<![endif]><wbr>.nlnetlabs<![if gt IE 6]>&#8203;<![endif]><wbr>.nl<![if gt IE 6]>&#8203;<![endif]><wbr>/svn<![if gt IE 6]>&#8203;<![endif]><wbr>/trunk<![if gt IE 6]>&#8203;<![endif]><wbr>/doc<![if gt IE 6]>&#8203;<![endif]><wbr>/Changelog</a>
 </blockquote>
 
 <hr>
@@ -125,7 +125,7 @@ My thoughts:
 <b>Update:</b> I have posted to the dnsext mailing list my concerns:
 
 <blockquote>
-<a href=http://www.ietf.org/mail-archive/web/dnsext/current/msg11207.html>http://www.ietf.org/mail-archive/web/dnsext/current/msg11207.html</a>
+<a href=http://www.ietf.org/mail-archive/web/dnsext/current/msg11207.html>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.ietf<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/mail<![if gt IE 6]>&#8203;<![endif]><wbr>-archive<![if gt IE 6]>&#8203;<![endif]><wbr>/web<![if gt IE 6]>&#8203;<![endif]><wbr>/dnsext<![if gt IE 6]>&#8203;<![endif]><wbr>/current<![if gt IE 6]>&#8203;<![endif]><wbr>/msg11207<![if gt IE 6]>&#8203;<![endif]><wbr>.html</a>
 </blockquote>
 <p>
 
