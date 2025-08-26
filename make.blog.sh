@@ -18,6 +18,7 @@ echo '.blog li pre {max-width: 80vw; overflow: scroll; }' >> index.html
 echo '.blog table {max-width: 90vw; overflow: scroll; }' >> index.html
 echo '.blog tt {max-width: 90vw; overflow: scroll; }' >> index.html
 echo '.blogtable {max-width: 90vw; overflow: scroll; }' >> index.html
+echo '@media (max-width: 640px) {.pc {display: none;}}' >> index.html
 
 echo '.moyet { display: none; }' >> index.html
 echo '.blog h1 { font-size: 28px; }' >> index.html
