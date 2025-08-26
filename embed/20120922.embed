@@ -52,7 +52,7 @@ fails (it now lets the user know which directory it tried to go to).
 Downloads are here:
 
 <blockquote>
-<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+<A href=http://www.maradns.org/deadwood/snap/>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood<![if gt IE 6]>&#8203;<![endif]><wbr>/snap<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 <A name=maradns> </A>
@@ -72,7 +72,7 @@ doesn't have an xz binary, and won't compile xz.
 It can be downloaded here:
 
 <blockquote>
-<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+<A href=http://www.maradns.org/download/2.0/snap/>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/download<![if gt IE 6]>&#8203;<![endif]><wbr>/2<![if gt IE 6]>&#8203;<![endif]><wbr>.0<![if gt IE 6]>&#8203;<![endif]><wbr>/snap<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 <A name=gpg> </A>
@@ -110,7 +110,7 @@ Unlike MaraDNS, it has DNSSEC and full zone transfer support.
 More information:
 
 <blockquote>
-<A href=http://www.knot-dns.cz/>http://www.knot-dns.cz/</A>
+<A href=http://www.knot-dns.cz/>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.knot<![if gt IE 6]>&#8203;<![endif]><wbr>-dns<![if gt IE 6]>&#8203;<![endif]><wbr>.cz<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 <A name=ultrabooks> </A>
@@ -153,7 +153,7 @@ improved things and, indeed, has stock.  Current information about BuyVM's
 stock is here:
 
 <blockquote>
-<a href=http://doesbuyvmhavestock.com/>http://doesbuyvmhavestock.com/</a>
+<a href=http://doesbuyvmhavestock.com/>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/doesbuyvmhavestock<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/</a>
 </blockquote>
 
 <A name=footnotes> </A>

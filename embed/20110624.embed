@@ -16,7 +16,7 @@ I will fix this bug before releasing Deadwood 3.0.03.
 It can be downloaded here:
 
 <blockquote>
-<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+<A href=http://www.maradns.org/deadwood/snap/>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood<![if gt IE 6]>&#8203;<![endif]><wbr>/snap<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 In addition to fixing the bug in Deadwood, I need to backport an

@@ -42,13 +42,13 @@ that my patch resolves Srinivas' issue.
 The patch is here:
 
 <blockquote>
-<A href=http://maradns.org/deadwood/patches/deadwood-3.1.03-ttl_expire.patch>http://maradns.org/deadwood/patches/deadwood-3.1.03-ttl_expire.patch</A>
+<A href=http://maradns.org/deadwood/patches/deadwood-3.1.03-ttl_expire.patch>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood<![if gt IE 6]>&#8203;<![endif]><wbr>/patches<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood<![if gt IE 6]>&#8203;<![endif]><wbr>-3<![if gt IE 6]>&#8203;<![endif]><wbr>.1<![if gt IE 6]>&#8203;<![endif]><wbr>.03<![if gt IE 6]>&#8203;<![endif]><wbr>-ttl_expire<![if gt IE 6]>&#8203;<![endif]><wbr>.patch</A>
 </blockquote>
 
 And the snapshot with this patch as well as the new SQA test is here:
 
 <blockquote>
-<A href=http://www.maradns.org/deadwood/snap/>http://www.maradns.org/deadwood/snap/</A>
+<A href=http://www.maradns.org/deadwood/snap/>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood<![if gt IE 6]>&#8203;<![endif]><wbr>/snap<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 <i>To post a comment about an entry, send me an email and I may or may

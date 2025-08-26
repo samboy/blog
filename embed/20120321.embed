@@ -14,7 +14,7 @@ out there and published my findings:
 <p>
 
 <blockquote>
-<A href=http://www.maradns.org/DNS.security.comparison.txt>http://www.maradns.org/DNS.security.comparison.txt</A>
+<A href=http://www.maradns.org/DNS.security.comparison.txt>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/DNS<![if gt IE 6]>&#8203;<![endif]><wbr>.security<![if gt IE 6]>&#8203;<![endif]><wbr>.comparison<![if gt IE 6]>&#8203;<![endif]><wbr>.txt</A>
 </blockquote>
 
 To summarize, MaraDNS was not as secure as I wanted it to be in 2002.

@@ -50,13 +50,13 @@ Please note that MaraDNS 1.3.07 will no longer be supported on December
 21, 2012. Please upgrade to MaraDNS 1.4 or 2.0 at your soonest convenience
 if feasible.  Here is an update guide:
 
-<blockquote><A href=http://maradns.org/tutorial/update.html>http://maradns.org/tutorial/update.html</A></blockquote>
+<blockquote><A href=http://maradns.org/tutorial/update.html>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/tutorial<![if gt IE 6]>&#8203;<![endif]><wbr>/update<![if gt IE 6]>&#8203;<![endif]><wbr>.html</A></blockquote>
 
 Distributions and users who wish to continue, against my wishes,
 supporting an outdated version of MaraDNS 1 may (or may not) be able
 to update MaraDNS 1 by using this patch:
 
-<blockquote><A href=http://maradns.org/download/patches/security/maradns-1.4.11-ghostdomain.patch>http://maradns.org/download/patches/security/maradns-1.4.11-ghostdomain.patch</A></blockquote>
+<blockquote><A href=http://maradns.org/download/patches/security/maradns-1.4.11-ghostdomain.patch>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/download<![if gt IE 6]>&#8203;<![endif]><wbr>/patches<![if gt IE 6]>&#8203;<![endif]><wbr>/security<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>-1<![if gt IE 6]>&#8203;<![endif]><wbr>.4<![if gt IE 6]>&#8203;<![endif]><wbr>.11<![if gt IE 6]>&#8203;<![endif]><wbr>-ghostdomain<![if gt IE 6]>&#8203;<![endif]><wbr>.patch</A></blockquote>
 
 <p>
 <div class=blogtitle>
@@ -88,7 +88,7 @@ anything.
 It can be downloaded here:
 
 <blockquote>
-<A href=http://www.maradns.org/deadwood/tiny/>http://www.maradns.org/deadwood/tiny/</A>
+<A href=http://www.maradns.org/deadwood/tiny/>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood<![if gt IE 6]>&#8203;<![endif]><wbr>/tiny<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 At this point, I am only supporting Deadwood 2.3 for security and other

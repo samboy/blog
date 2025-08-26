@@ -51,13 +51,13 @@ from the last six months:
 It can be downloaded here:
 
 <blockquote>
-<A href=http://www.maradns.org/deadwood/stable/>http://www.maradns.org/deadwood/stable/</A>
+<A href=http://www.maradns.org/deadwood/stable/>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/deadwood<![if gt IE 6]>&#8203;<![endif]><wbr>/stable<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 I have also updated MaraDNS to use Deadwood 3.0.03:
 
 <blockquote>
-<A href=http://www.maradns.org/download/2.0/snap/>http://www.maradns.org/download/2.0/snap/</A>
+<A href=http://www.maradns.org/download/2.0/snap/>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/www<![if gt IE 6]>&#8203;<![endif]><wbr>.maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/download<![if gt IE 6]>&#8203;<![endif]><wbr>/2<![if gt IE 6]>&#8203;<![endif]><wbr>.0<![if gt IE 6]>&#8203;<![endif]><wbr>/snap<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>
 </blockquote>
 
 The next day I plan to work on MaraDNS/Deadwood is two weeks from today:
