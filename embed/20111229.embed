@@ -57,7 +57,7 @@ Note that this security bug only affects you if:
 
 For example, if using MaraDNS 1 as described in
 <A
-href=http://samiam.org/blog/20111128.html>http://samiam.org/blog/20111128.html</A>,
+href=http://samiam.org/blog/20111128.html>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/blog<![if gt IE 6]>&#8203;<![endif]><wbr>/20111128<![if gt IE 6]>&#8203;<![endif]><wbr>.html</A>,
 one is safe as long as ones mararc file recursive_acl line looks
 like this:
 
@@ -69,11 +69,11 @@ recursive_acl = "127.0.0.1/8"
 The tarballs files can be found here:
 
 <blockquote>
-<A href=http://maradns.org/download/1.3>http://maradns.org/download/1.3</A>
+<A href=http://maradns.org/download/1.3>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/download<![if gt IE 6]>&#8203;<![endif]><wbr>/1<![if gt IE 6]>&#8203;<![endif]><wbr>.3</A>
 
 <p>
 
-<A href=http://maradns.org/download/1.4>http://maradns.org/download/1.4</A>
+<A href=http://maradns.org/download/1.4>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/download<![if gt IE 6]>&#8203;<![endif]><wbr>/1<![if gt IE 6]>&#8203;<![endif]><wbr>.4</A>
 (also has Windows binary)
 
 <p>
@@ -82,7 +82,7 @@ The tarballs files can be found here:
 The patch is here:
 
 <blockquote>
-<A href=http://maradns.org/download/patches/maradns-1.3-secret_hash.patch>http://maradns.org/download/patches/maradns-1.3-secret_hash.patch</A>
+<A href=http://maradns.org/download/patches/maradns-1.3-secret_hash.patch>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/download<![if gt IE 6]>&#8203;<![endif]><wbr>/patches<![if gt IE 6]>&#8203;<![endif]><wbr>/maradns<![if gt IE 6]>&#8203;<![endif]><wbr>-1<![if gt IE 6]>&#8203;<![endif]><wbr>.3<![if gt IE 6]>&#8203;<![endif]><wbr>-secret_hash<![if gt IE 6]>&#8203;<![endif]><wbr>.patch</A>
 </blockquote>
 
 No, MaraDNS 2.0's authoritative server does not use a randomized hash.

@@ -17,7 +17,7 @@ explained to Phil:
 <blockquote>
 To do this will require running MaraDNS 2.0 (or better, MicroDNS:
 <A 
-href=http://samiam.org/software/microdns.html>http://samiam.org/software/microdns.html</A>) 
+href=http://samiam.org/software/microdns.html>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/software<![if gt IE 6]>&#8203;<![endif]><wbr>/microdns<![if gt IE 6]>&#8203;<![endif]><wbr>.html</A>) 
 on one IP while running Deadwood on another IP.  Deadwood is strictly
 a caching DNS server and my free time ran out before I could merge it
 with MaraDNS' authoritative code.

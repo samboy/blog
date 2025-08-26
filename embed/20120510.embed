@@ -70,7 +70,7 @@ not incorporate any third party changes.
 <b>Getting the script</b>
 </div><br>
 
-Totestra is available at <A href=../Civ4>http://samiam.org/Civ4/</A>.
+Totestra is available at <A href=../Civ4>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/Civ4<![if gt IE 6]>&#8203;<![endif]><wbr>/</A>.
 
 <p>
 
@@ -114,7 +114,7 @@ you implement it yourself.
 <p>
 <li>All support requests or comments need to be posted at <A
 href=http://forums.civfanatics.com/showthread.php?t=461262
->http://forums.civfanatics.com/showthread.php?t=461262</A>.
+>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/forums<![if gt IE 6]>&#8203;<![endif]><wbr>.civfanatics<![if gt IE 6]>&#8203;<![endif]><wbr>.com<![if gt IE 6]>&#8203;<![endif]><wbr>/showthread<![if gt IE 6]>&#8203;<![endif]><wbr>.php?t=461262</A>.
 Do not email me, or use any other contact method to discuss with me
 this map script.
 

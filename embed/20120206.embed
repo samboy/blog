@@ -41,9 +41,9 @@ file:
 Here is some free-form text<br>
 tthis line needs two 't's at the beginning<br>
 <br>
-[0|Title of text document|/filename.txt|gopher.samiam.org|70]<br>
-[1|Gopher index location|/some_directory/|gopher.samiam.org|70]<br>
-[h|World wide web URL|URL:http://samiam.org|gopher.samiam.org|70]
+[0|<![if gt IE 6]>&#8203;<![endif]><wbr>Title of text document|<![if gt IE 6]>&#8203;<![endif]><wbr>/filename.txt|<![if gt IE 6]>&#8203;<![endif]><wbr>gopher.samiam.org|70]<br>
+[1|Gopher index location|<![if gt IE 6]>&#8203;<![endif]><wbr>/some_directory/|<![if gt IE 6]>&#8203;<![endif]><wbr>gopher.samiam.org|<![if gt IE 6]>&#8203;<![endif]><wbr>70]<br>
+[h|<![if gt IE 6]>&#8203;<![endif]><wbr>World wide web URL|<![if gt IE 6]>&#8203;<![endif]><wbr>URL:http://samiam.org|<![if gt IE 6]>&#8203;<![endif]><wbr>gopher.samiam.org|70]
 </tt>
 <p>
 

@@ -79,16 +79,16 @@ from celery.task import task<br>
 # computer or thread<br>
 <br>
 def is_prime(x):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;s = x ** .5 # Square root of x<br>
-&nbsp;&nbsp;&nbsp;&nbsp;if (x % 2) == 0:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0 # Not prime; even number<br>
-&nbsp;&nbsp;&nbsp;&nbsp;q = 3<br>
-&nbsp;&nbsp;&nbsp;&nbsp;while q &lt; s + 1:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (x % q) == 0:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0 # Not prime<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q += 2<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>s = x ** .5 # Square root of x<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>if (x % 2) == 0:<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>return 0 # Not prime; even number<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>q = 3<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>while q &lt; s + 1:<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>if (x % q) == 0:<br>
+&nbsp;&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>return 0 # Not prime<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>q += 2<br>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;return x # Prime<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>return x # Prime<br>
 </tt>
 
 <p>
@@ -109,8 +109,8 @@ the first number that is prime after a given number:
 from tasks import is_prime<br>
 <br>
 def find_prime(x):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;p = 3 # We can run up to three tasks at once<br>
-&nbsp;&nbsp;&nbsp;&nbsp;results = []<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>p = 3 # We can run up to three tasks at once<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>results = []<br>
 </tt>
 <p>
 
@@ -119,11 +119,11 @@ tasks run at one time) numbers.</i>
 
 <p>
 <tt>
-&nbsp;&nbsp;&nbsp;&nbsp;a = 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;while a &lt; p:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;results.append(is_prime.delay(x))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x += 1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a += 1<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>a = 0<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>while a &lt; p:<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>results.append(is_prime.delay(x))<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>x += 1<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>a += 1<br>
 </tt>
 <p>
 
@@ -135,18 +135,18 @@ spawn a new task testing the next-higher to see if it is prime</i>
 
 <p>
 <tt>
-&nbsp;&nbsp;&nbsp;&nbsp;a = 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;while a &lt; 2000: # Infinite loop protection<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while b &lt; p:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if results[b].ready():<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if results[b].result != 0:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return results[b].result<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;results[b] = is_prime.delay(x)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x += 1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b += 1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a += 1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return 0 # No prime found :(<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>a = 0<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>while a &lt; 2000: # Infinite loop protection<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>b = 0<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>while b &lt; p:<br>
+&nbsp;&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>if results[b].ready():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>if results[b].result != 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>return results[b].result<br>
+&nbsp;&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>results[b] = is_prime.delay(x)<br>
+&nbsp;&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>x += 1<br>
+&nbsp;&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>b += 1<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>a += 1<br>
+&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>return 0 # No prime found :(<br>
 </tt>
 <p>
 
