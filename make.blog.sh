@@ -20,8 +20,10 @@ echo 'border-bottom: 2px solid #aaa; }' >> index.html
 echo '@media (min-width: 640px) {.GitBlogNav {width:640px;}}' >> index.html
 
 echo .blog { display: table\; max-width: 640px\; >> index.html
-echo 'word-break: break-all;' >> index.html
-# Not needed
+# too much
+#echo 'word-break: break-all;' >> index.html
+# This didn't fix it
+#echo 'overflow-wrap: break-word;' >> index.html
 #echo 'overflow-x: scroll;' >> index.html
 echo 'font-family: Kilroy8; font-size: 16px;' >> index.html
 echo margin-left: auto\; >> index.html
