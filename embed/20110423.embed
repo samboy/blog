@@ -72,7 +72,7 @@ NXDOMAIN to means "also for all domain names below" unless the
 remote cache supports DNSSEC:
 
 <blockquote>
-<a href=http://marc.info/?l=djbdns&m=130148377625400&w=1>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/marc<![if gt IE 6]>&#8203;<![endif]><wbr>.info<![if gt IE 6]>&#8203;<![endif]><wbr>/?l=djbdns&m=130148377625400&w=1</a>
+<a href=http://marc.info/?l=djbdns&m=130148377625400&w=1>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/marc<![if gt IE 6]>&#8203;<![endif]><wbr>.info<![if gt IE 6]>&#8203;<![endif]><wbr>/?l=djbdns&amp;<![if gt IE 6]>&#8203;<![endif]><wbr>m=130148377625400&w=1</a>
 </blockquote>
 
 He is referring to the changelog in Unbound's SVN trunk:

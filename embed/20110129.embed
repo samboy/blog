@@ -29,7 +29,7 @@ labels.
 In response to this bug, I have released MaraDNS 1.4.06 and 1.3.07.11.
 These releases are available here:
 
-<A href=http://maradns.org/download.html>http://maradns.org/download.html</A>
+<A href=http://maradns.org/download.html>http://<![if gt IE 6]>&#8203;<![endif]><wbr>maradns.org/<![if gt IE 6]>&#8203;<![endif]><wbr>download.html</A>
 
 <p>
 
@@ -62,7 +62,7 @@ Deadwood can be looked at here:
 
 <p>
 
-<A href=http://maradns.org/deadwood/>http://maradns.org/deadwood/</A>
+<A href=http://maradns.org/deadwood/>http://maradns.org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/</A>
 
 <p>
 

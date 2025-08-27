@@ -121,7 +121,7 @@ tasks run at one time) numbers.</i>
 <tt>
 &nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>a = 0<br>
 &nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;</span>while a &lt; p:<br>
-&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>results.append(is_prime.delay(x))<br>
+&nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>results.append(<![if gt IE 6]>&#8203;<![endif]><wbr>is_prime.delay(x))<br>
 &nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>x += 1<br>
 &nbsp;&nbsp;<span class=pc>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>a += 1<br>
 </tt>
@@ -160,7 +160,7 @@ print find_prime(1000)<br>
 print find_prime(1000000)<br>
 print find_prime(1000000000)<br>
 print find_prime(1000000000000)<br>
-print find_prime(1000000000000000)<br>
+print find_prime(<![if gt IE 6]>&#8203;<![endif]><wbr>1000000000000000)<br>
 </tt>
 <p>
 

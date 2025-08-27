@@ -74,9 +74,9 @@ I figured it out:
 <ul>
 <li><tt>yum install strace</tt>
 <li><tt>yum -y update</tt> <i>This will crash</i>
-<li><tt>cd /var/cache/yum/base/packages/</tt>
+<li><tt>cd /var/<![if gt IE 6]>&#8203;<![endif]><wbr>cache/<![if gt IE 6]>&#8203;<![endif]><wbr>yum/<![if gt IE 6]>&#8203;<![endif]><wbr>base/<![if gt IE 6]>&#8203;<![endif]><wbr>packages/</tt>
 <li><tt>for a in *rpm ; do strace rpm --upgrade $a --nodeps; done</tt>
-<li><tt>cd /var/cache/yum/updates/packages/</tt>
+<li><tt>cd /var/<![if gt IE 6]>&#8203;<![endif]><wbr>cache/<![if gt IE 6]>&#8203;<![endif]><wbr>yum/<![if gt IE 6]>&#8203;<![endif]><wbr>updates/<![if gt IE 6]>&#8203;<![endif]><wbr>packages/</tt>
 <li><tt>for a in *rpm ; do strace rpm --upgrade $a --nodeps; done</tt>
 <li><tt>"yum -y update"</tt> <i>This should now report everything as up to 
     date</i>
