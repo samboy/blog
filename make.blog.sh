@@ -59,15 +59,17 @@ for a in $( ls embed/*embed | sort -r ) ; do
   LINK=$( echo $NAME | awk '{gsub(/[^A-Za-z0-9]/,"");print}' )
   DATE=${a#embed/}
   DATE=${DATE%.embed}
-  echo '<a name='$LINK'> </a>' >> index.html
+  #YEAR=$( echo $DATE | awk '{print substr($0,1,4)}' )
+  YEAR=index
+  echo '<a name='$LINK'> </a>' >> $YEAR.html
   echo '<a href="#'$LINK'">'$NAME' ('$DATE')</a></br>' >> foo.html
-  cat $a >> index.html
-  #echo '<hr class=pc>' >> index.html
-  echo '<div class=GitBlogNav><i>Go to: ' >> index.html
-  echo '<a href="#GitBlogTop">Top</a>' >> index.html
-  echo '<a href="#GitBlogIndex">Index</a></i></div>' >> index.html
-  #echo '<hr class=pc>' >> index.html
-  echo \<div class=blog\> >> index.html # An old bug I never correctly fixed
+  cat $a >> $YEAR.html
+  #echo '<hr class=pc>' >> $YEAR.html
+  echo '<div class=GitBlogNav><i>Go to: ' >> $YEAR.html
+  echo '<a href="#GitBlogTop">Top</a>' >> $YEAR.html
+  echo '<a href="#GitBlogIndex">Index</a></i></div>' >> $YEAR.html
+  #echo '<hr class=pc>' >> $YEAR.html
+  echo \<div class=blog\> >> $YEAR.html # An old bug I never correctly fixed
   echo $a
 done
 echo '<a name="GitBlogIndex"> </a><h1>Blog index</h1>' >> index.html
