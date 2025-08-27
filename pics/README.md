@@ -47,3 +47,9 @@ Attribution: Tyler Merbler
 License: https://creativecommons.org/licenses/by/2.0/deed.en
 Picture is altered for this blog
 
+#BernieSandersByGageSkidmore4blog.jpg
+
+Attribution: Gage Skidmore
+License: https://creativecommons.org/licenses/by-sa/2.0/deed.en
+Picture is altered for this blog
+
