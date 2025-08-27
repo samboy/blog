@@ -25,7 +25,7 @@ bug, MaraDNS-2.0.07c (Deadwood 3.2.03c):
 </blockquote>
 
 <blockquote>
-<A href="http://maradns.org/deadwood/snap/">http://maradns.org/deadwood/snap/</A>
+<A href="http://maradns.org/deadwood/snap/">http://maradns.org/<![if gt IE 6]>&#8203;<![endif]><wbr>deadwood/<![if gt IE 6]>&#8203;<![endif]><wbr>snap/</A>
 </blockquote>
 
 This will probably become the stable MaraDNS/Deadwood release in September
