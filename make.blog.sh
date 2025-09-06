@@ -4,6 +4,13 @@
 
 echo \<html\>\<head\>\<title\>Sam Trenholme’s Blog\</title\> > index.html
 echo \<style\> >> index.html
+
+# Widepic CSS
+echo '.widepic { box-shadow: 0 0 4px #888;' >> index.html
+echo 'border-radius: 8px; width: 99%; height: auto; }' >> index.html
+echo '@media screen and (max-width: 640px) { ' >> index.html
+echo '.nomobile { display: none; } }' >> index.html
+
 echo '@import url('fonts.css');' >> index.html # OFL license in CSS file
 # A lot of the blog was made in an era before phone screens were mainstream
 echo 'body { max-width: 95vw; overflow-x: hidden; }' >> index.html
