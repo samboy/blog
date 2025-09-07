@@ -114,7 +114,7 @@ function processWidePic(l)
       globalCaption = ""
       local pic = fields[3]
       pic = pic:gsub('^[^"]*"','',1)
-      pic = pic:gsub('[^"]*$','',1)
+      pic = pic:gsub('"[^"]*$','',1)
       if(#fields > 3) then
         for a=4,#fields do
           globalCaption = globalCaption .. fields[a] .. " "
@@ -146,7 +146,7 @@ function processStep2(l)
     if(fields[3]) then
       local pic = fields[3]
       pic = pic:gsub('^[^"]*"','',1)
-      pic = pic:gsub('[^"]*$','',1)
+      pic = pic:gsub('"[^"]*$','',1)
       print('<div class=blogpicx style="text-align: right">')
       print('<img src="' .. pic .. '" width=224 height=126>')
       print('</div>')
