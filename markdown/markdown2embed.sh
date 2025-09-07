@@ -35,7 +35,7 @@ htmldoc --charset utf-8 $FILENAME 2>/dev/null | awk '
 		print "</div>" } else {print}}' | awk '{ # Other images
 		  if(/img alt="widepic"/) {
 		pic = $3
-		caption = $4 " " $5 " " $6
+		caption = $4 " " $5 " " $6 " " $7 " " $8 " " $9 " " $10 " " $11
  		sub(/^[^"]*"/,"",pic)
  		sub(/"[^"]*$/,"",pic)
 		print "<img class=widepic src=\"" pic "\" alt=\"\">"
@@ -54,6 +54,5 @@ htmldoc --charset utf-8 $FILENAME 2>/dev/null | awk '
 		print ""
 		print "</div>"
 		print ""
-		}'
-
-
+		}' | perl -pe ' # This perl mess removes <a id> tags
+        s/<a id[^>]+>([^<]+)<\/a>/\1/;s/<a id[^>]+>//;s|</a>(</h\d>)|\1|'
