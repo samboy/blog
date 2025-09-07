@@ -102,6 +102,7 @@ end
 -- blog
 function processID(l)
   -- If convenient, make <a id> <a name="foo"> </a>
+  -- This way the blog can have bookmarks linking directly to sections
   if l:find(mc('<h3>.*<a id="([^"]+)"[^"]*$')) then
     local thisID = l
     thisID = thisID:gsub('^.*<a id="','')
@@ -113,6 +114,8 @@ function processID(l)
     end 
     print('<a name="' .. thisID .. '"> </a>')
   end
+  -- Remove <a id> stuff; it messes up the formatting of the blog on my
+  -- web page
   l = l:gsub(mc('<a id[^>]+>'),'')
   l = l:gsub(mc('</a>(</h%d>)'),'%1')
   -- While we’re at it, we don’t need </p> in the document
