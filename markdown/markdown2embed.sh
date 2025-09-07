@@ -27,9 +27,11 @@ fi
 FILENAME="$(/bin/pwd)/$1"
 SCRIPTPATH="$0"
 SCRIPTPATH=${SCRIPTPATH%/*}
+BASE=${1##*/}
+BASE=${BASE%.md}
 if [ ! -z "$SCRIPTPATH" ] ; then
 	cd $SCRIPTPATH
 fi
 
-htmldoc --charset utf-8 $FILENAME 2>/dev/null | ./lunacyBlogFilter
+htmldoc --charset utf-8 $FILENAME 2>/dev/null | ./lunacyBlogFilter ${BASE}
 

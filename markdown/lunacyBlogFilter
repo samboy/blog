@@ -93,10 +93,26 @@ end
 
 globalInWidePic = false
 globalCaption = ""
+globalBlogDate = arg[1]
+if not globalBlogDate then
+  globalBlogDate = os.time()
+end
 
 -- Process any <a id> stuff in the HTML after processing pictures in the
 -- blog
 function processID(l)
+  -- If convenient, make <a id> <a name="foo"> </a>
+  if l:find(mc('<h3>.*<a id="([^"]+)"[^"]*$')) then
+    local thisID = l
+    thisID = thisID:gsub('^.*<a id="','')
+    thisID = thisID:gsub('"[^"]*$','')
+    if(globalBlogDate and globalBlogDate ~= "") then
+      thisID = globalBlogDate .. '-' .. thisID
+    else
+      thisID = os.time() .. '-' .. thisID
+    end 
+    print('<a name="' .. thisID .. '"> </a>')
+  end
   l = l:gsub(mc('<a id[^>]+>'),'')
   l = l:gsub(mc('</a>(</h%d>)'),'%1')
   -- While we’re at it, we don’t need </p> in the document
