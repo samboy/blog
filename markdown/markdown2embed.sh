@@ -25,7 +25,6 @@ if [ -z "$1" ] ; then
 fi
 
 FILENAME="$(/bin/pwd)/$1"
-echo $FILENAME
 SCRIPTPATH="$0"
 SCRIPTPATH=${SCRIPTPATH%/*}
 if [ ! -z "$SCRIPTPATH" ] ; then
