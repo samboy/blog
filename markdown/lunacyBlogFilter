@@ -44,3 +44,136 @@ exec $LUNACY $0 "$@"
 -- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 -- OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+-- mc() converts a string in to a case insensitive regex; mc('th') is [Tt][Hh]
+-- Do not use this when there are multiple letters in a regex class, i.e.
+-- do not use this when the input has something like [dou] in it (any one of
+-- d/o/u regex)
+function mc(i)
+  local out = ""
+  local afterPercent = false
+  for a=1,i:len() do
+    seek = i:sub(a,a)
+    -- Do not mangle anything right after a %
+    if seek == "%" and not afterPercent then
+      out = out .. seek
+      afterPercent = true
+    -- Only letters not after a % get mangled
+    elseif seek:find("%a") and not afterPercent then
+      out = out .. "[" .. seek:upper() .. seek:lower() .. "]"
+    -- Other stuff is copied as is
+    elseif seek and not afterPercent then
+      out = out .. seek
+    -- Everything right after a % is passed as-is
+    elseif afterPercent then
+      out = out .. seek
+      afterPercent = false
+    end
+  end
+  return out
+end
+
+-- Since Lunacy doesn't have split(), we make 
+-- it ourselves
+function Split(s, splitOn)
+  if not splitOn then splitOn = "," end
+  local place = true
+  local out = {}
+  local mark
+  local last = 1
+  while place do
+    place, mark = string.find(s, splitOn, last, false)
+    if place then
+      table.insert(out,string.sub(s, last, place - 1))
+      last = mark + 1
+    end
+  end
+  table.insert(out,string.sub(s, last, -1))
+  return out
+end
+
+globalInWidePic = false
+globalCaption = ""
+
+-- Process any <a id> stuff in the HTML after processing pictures in the
+-- blog
+function processID(l)
+  l = l:gsub(mc('<a id[^>]+>'),'')
+  l = l:gsub(mc('</a>(</h%d>)'),'%1')
+  -- While we’re at it, we don’t need </p> in the document
+  l = l:gsub(mc('</p>'),'')
+  print(l)
+end
+
+-- After processing the picture on top of the blog, process any pictures
+-- inside the blog
+function processWidePic(l)
+  if(l:find(mc('img alt="widepic"'))) then
+    local lp = l:gsub("^%s+","")
+    local fields=Split(lp,"%s+")
+    if(fields[3]) then
+      globalCaption = ""
+      local pic = fields[3]
+      pic = pic:gsub('^[^"]*"','',1)
+      pic = pic:gsub('[^"]*$','',1)
+      if(#fields > 3) then
+        for a=4,#fields do
+          globalCaption = globalCaption .. fields[a] .. " "
+        end
+      end
+      print('<img class=widepic src="' .. pic .. '" alt="">') 
+      print('<br class=nomobile>')
+      globalInWidePic = true
+    end
+  elseif(globalInWidePic) then
+    print(globalCaption)
+    processID(l)
+    globalInWidePic = false
+    globalCaption = ""
+  else 
+    processID(l)
+  end
+end
+
+-- After we have filtered out all lines before the second HR NOSHADE,
+-- process the line further
+-- In this step, we process the image for the blog entry at the top
+-- Input: A single line we are processing
+-- Output: None (print called in function)
+function processStep2(l)
+  if(l:find(mc('img alt="blogpic"'))) then
+    local lp = l:gsub("^%s+","")
+    local fields=Split(lp,"%s+")
+    if(fields[3]) then
+      local pic = fields[3]
+      pic = pic:gsub('^[^"]*"','',1)
+      pic = pic:gsub('[^"]*$','',1)
+      print('<div class=blogpicx style="text-align: right">')
+      print('<img src="' .. pic .. '" width=224 height=126>')
+      print('</div>')
+    else
+      processWidePic(l)
+    end
+  else
+    processWidePic(l)
+  end 
+end  
+
+linenum = 1
+placeMarker = 0
+repeat
+  l = io.read()
+  if not l then break end
+  linenum = linenum + 1
+  -- Do not show anything until after the *second* “HR NOSHADE”
+  if placeMarker == 2 then processStep2(l) end
+  if(l:find(mc("HR NOSHADE"))) then placeMarker = placeMarker + 1 end
+until not l
+
+-- Footer
+print ""
+print "<p>"
+print ""
+print "<A href=/blog/>Blog index</A>"
+print ""
+print "</div>"
+print ""
