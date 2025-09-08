@@ -12,7 +12,7 @@ elif command -v lua-5.1 >/dev/null 2>&1 ; then
 elif command -v lunacy >/dev/null 2>&1 ; then
   LUNACY=lunacy
 elif command -v luajit >/dev/null 2>&1 ; then
-  LUNACY=luajit
+  LUNACY=luajit # I assume luajit will remain frozen at Lua 5.1
 fi
 if [ -z "$LUNACY" ] ; then
   echo Please install Lunacy or Lua 5.1
@@ -100,9 +100,11 @@ globalBlogDate = arg[1]
 if not globalBlogDate then
   globalBlogDate = os.time()
 end
+globalSupString = 
+          '<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px">'
 
 -- Process any <a id> stuff in the HTML after processing pictures in the
--- blog
+-- blog. Also processes simple subscripts
 function processID(l)
   -- If convenient, make <a id> <a name="foo"> </a>
   -- This way the blog can have bookmarks linking directly to sections
@@ -123,6 +125,10 @@ function processID(l)
   l = l:gsub(mc('</a>(</h%d>)'),'%1')
   -- While we’re at it, we don’t need </p> in the document
   l = l:gsub(mc('</p>'),'')
+  -- And, oh, let’s process superscripts
+  if l:find("[A-Za-z0-9]%^[A-Za-z0-9]+") then
+    l = l:gsub('%^([A-Za-z0-9]+)',globalSupString .. "%1" .. "</sup>")
+  end
   print(l)
 end
 
