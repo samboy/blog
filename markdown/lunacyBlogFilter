@@ -130,7 +130,7 @@ function processID(l)
     l = l:gsub('%^([A-Za-z0-9]+)',globalSupString .. "%1" .. "</sup>")
   end
   -- htmldoc is buggy with single italic letters in quotes
-  l = l:gsub('_f_','<i>f</i>')
+  l = l:gsub('%;_([a-zA-Z0-9]+)_%&',';<i>%1</i>&')
   print(l)
 end
 
