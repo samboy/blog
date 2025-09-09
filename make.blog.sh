@@ -50,7 +50,9 @@ echo '.s { font-size: 18px; }' >> index.html
 echo '.blogtitle { font-size: 24px; }' >> index.html
 echo 'h3 { font-size: 24px; margin-bottom: 0; }' >> index.html
 # The HTML for the blog got weird over the years
-echo '.blogpicx { text-align: left !important; }' >> index.html
+echo '.blogpicx { text-align: left !important; }' >> index.html 
+echo '.blogpicx img { ' >> index.html
+echo 'border-radius: 8px; box-shadow: 0 0 4px #888; }' >> index.html
 echo \</style\> >> index.html
 # This is just going to be a long line
 echo \<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" \> >> index.html
