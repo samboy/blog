@@ -129,6 +129,8 @@ function processID(l)
   if l:find("[A-Za-z0-9]%^[A-Za-z0-9]+") then
     l = l:gsub('%^([A-Za-z0-9]+)',globalSupString .. "%1" .. "</sup>")
   end
+  -- htmldoc is buggy with single italic letters in quotes
+  l = l:gsub('_f_','<i>f</i>')
   print(l)
 end
 
