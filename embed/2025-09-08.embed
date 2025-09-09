@@ -31,8 +31,8 @@
 <p>To update the italic &ldquo;f&rdquo;, I had to keep in mind that a number of
  ligatures with &ldquo;f&rdquo; in them exist, e.g. &ldquo;ff&rdquo;, &ldquo;fi&rdquo;, &ldquo;fl&rdquo;, &ldquo;ffi&rdquo;, &ldquo;ffl&rdquo;,
  among others. While one version of the font has all of &ldquo;f&rdquo;, &ldquo;fi&rdquo;, &ldquo;fl&rdquo;,
- &ldquo;ffi&rdquo;, and even &ldquo;ffl&rdquo; updated so that &ldquo;_f_&rdquo; doesn&rsquo;t have a descender,
- it was simpler for me to make the italic &ldquo;_f_&rdquo; the non-italic &ldquo;f&rdquo; with
+ &ldquo;ffi&rdquo;, and even &ldquo;ffl&rdquo; updated so that &ldquo;<i>f</i>&rdquo; doesn&rsquo;t have a descender,
+ it was simpler for me to make the italic &ldquo;<i>f</i>&rdquo; the non-italic &ldquo;f&rdquo; with
  a 10 degree oblique skew. Since the font I use on my webpage and blog
  is size optimized, I dealt with the ligatures by simply not having
  them; since Roboto Serif is essentially a slab serif which invokes
