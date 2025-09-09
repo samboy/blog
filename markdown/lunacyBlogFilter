@@ -126,10 +126,9 @@ function processID(l)
   -- While we’re at it, we don’t need </p> in the document
   l = l:gsub(mc('</p>'),'')
   -- And, oh, let’s process superscripts
-  if l:find("[A-Za-z0-9]%^[A-Za-z0-9]+") then
-    l = l:gsub('%^([A-Za-z0-9]+)',globalSupString .. "%1" .. "</sup>")
-  end
-  -- htmldoc is buggy with single italic letters in quotes
+  l = l:gsub('([A-Za-z0-9])%^([A-Za-z0-9]+)', 
+             '%1' .. globalSupString .. "%2" .. "</sup>")
+  -- htmldoc is buggy with italics in quotes
   l = l:gsub('%;_([a-zA-Z0-9]+)_%&',';<i>%1</i>&')
   print(l)
 end
