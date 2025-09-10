@@ -53,3 +53,9 @@ Attribution: Gage Skidmore
 License: https://creativecommons.org/licenses/by-sa/2.0/deed.en
 Picture is altered for this blog
 
+#Charlie Kirk
+
+Attribution: Gage Skidmore
+License: https://creativecommons.org/licenses/by-sa/4.0/deed.en
+Picture is altered for this blog
+
