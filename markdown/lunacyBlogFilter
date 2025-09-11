@@ -144,6 +144,7 @@ function processID(l)
     linkText = linkText:gsub(mc('[^>]*>%^?(%S+).*$'),'%1')
     fnText = fnText:gsub(mc('[^>]*%^?%S+([^<]+).*$'),'%1')
     globalFootnotes[footnoteIndex] = {}
+    name = globalBlogDate .. '-' .. name
     globalFootnotes[footnoteIndex]['name'] = name
     globalFootnotes[footnoteIndex]['link'] = linkText
     globalFootnotes[footnoteIndex]['body'] = fnText
@@ -220,10 +221,12 @@ repeat
       inLinkLine = inLinkLine + 1
       l = l:gsub("[\r\n]","") 
       if not x then break end
+      x = x:gsub(mc('(</a>%S*)'),"%1\n") -- end of link ends a line
       l = l .. ' ' .. x
-      if x:find(mc('</a>')) then break end 
+      if x:find(mc('</a>')) and not x:find(mc('<a href=')) then break end 
       inLinkLine = inLinkLine + 1
     end
+    l = l:gsub(mc('%s+(</a>)'),'%1') -- Trim space before link text end
   end
   -- Do not show anything until after the *second* “HR NOSHADE”
   if placeMarker == 2 then processStep2(l) end
@@ -234,8 +237,10 @@ until not l
 if(#globalFootnotes > 0) then
   print "<h3>Footnotes</h3>"
   for f=1,#globalFootnotes do
+    local body = globalFootnotes[f]['body']
+    body=body:gsub(mc('(https://%S+)'),'<a href="%1">%1</a>')
     print('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>')
-    print(globalFootnotes[f]['link'] .. ': ' .. globalFootnotes[f]['body'])
+    print(globalFootnotes[f]['link'] .. ': ' .. body)
     print("<p>\n")
   end
 end
