@@ -235,7 +235,11 @@ until not l
 
 -- Footnotes
 if(#globalFootnotes > 0) then
-  print "<h3>Footnotes</h3>"
+  if(#globalFootnotes == 1) then 
+    print "<h3>Footnote</h3>" 
+  else
+    print "<h3>Footnotes</h3>" 
+  end
   for f=1,#globalFootnotes do
     local body = globalFootnotes[f]['body']
     body=body:gsub(mc('(https://%S+)'),'<a href="%1">%1</a>')
