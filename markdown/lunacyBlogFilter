@@ -215,7 +215,7 @@ repeat
   l = io.read()
   if not l then break end
   -- Collapse lines with links in them in to single lines
-  if(l:find(mc('<a href='))) then
+  if(placeMarker > 1 and l:find(mc('<a href='))) then
     while inLinkLine < 100 do
       local x = io.read()
       inLinkLine = inLinkLine + 1
