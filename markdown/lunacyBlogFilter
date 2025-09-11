@@ -209,28 +209,87 @@ function processStep2(l)
   end 
 end  
 
-placeMarker = 0
-inLinkLine = 0
-repeat
-  l = io.read()
-  if not l then break end
-  -- Collapse lines with links in them in to single lines
-  if(placeMarker > 1 and l:find(mc('<a href='))) then
-    while inLinkLine < 100 do
-      local x = io.read()
-      inLinkLine = inLinkLine + 1
-      l = l:gsub("[\r\n]","") 
-      if not x then break end
-      x = x:gsub(mc('(</a>%S*)'),"%1\n") -- end of link ends a line
-      l = l .. ' ' .. x
-      if x:find(mc('</a>')) and not x:find(mc('<a href=')) then break end 
-      inLinkLine = inLinkLine + 1
-    end
-    l = l:gsub(mc('%s+(</a>)'),'%1') -- Trim space before link text end
-  end
+globalPlaceMarker = 0
+-- Step one: Print nothing until after second HR NOSHADE
+function processStep1(l) 
+  l = l:gsub('%s+</a>','</a>') -- Spaces before link close look bad
   -- Do not show anything until after the *second* “HR NOSHADE”
-  if placeMarker == 2 then processStep2(l) end
-  if(l:find(mc("HR NOSHADE"))) then placeMarker = placeMarker + 1 end
+  if globalPlaceMarker == 2 then processStep2(l) end
+  if(l:find(mc("HR NOSHADE"))) then 
+    globalPlaceMarker = globalPlaceMarker + 1 
+  end
+end
+
+inLink = false
+inTag = false
+currentLine = ""
+currentState = 0
+repeat
+  l = io.read(1)
+  if not l then processStep1(currentLine) break end
+  if l == "\r" then l = io.read(1) 
+  elseif l == "\n" and not inLink and not inTag then
+    processStep1(currentLine)
+    currentLine = ""
+  elseif l == '<' and currentState == 0 then
+    inTag = true
+    currentLine = currentLine .. l
+    currentState = 1
+  elseif l == '/' and currentState == 1 then
+    currentLine = currentLine .. l
+    currentState = 100
+  elseif l == 'a' and currentState == 100 then
+    currentLine = currentLine .. l
+    currentState = 101
+  elseif l == '>' and currentState == 101 then
+    currentLine = currentLine .. l
+    currentState = 102
+    inLink = false
+    inTag = false
+  elseif l == '<' and currentState == 102 then
+    processStep1(currentLine)
+    currentLine = l
+    currentState = 1
+    inTag = true
+  elseif l:find('%S') and currentState == 102 then
+    currentLine = currentLine .. l
+  elseif l:find('%s') and currentState == 102 then
+    currentState = 0
+    processStep1(currentLine)
+    currentLine = ""
+  elseif l == 'a' and currentState == 1 then
+    currentLine = currentLine .. l
+    currentState = 2
+  elseif l:find('%s') and currentState == 2 then
+    currentLine = currentLine .. ' '
+  elseif l == 'h' and currentState == 2 then
+    currentLine = currentLine .. l
+    currentState = 3
+  elseif l == 'r' and currentState == 3 then
+    currentLine = currentLine .. l
+    currentState = 4
+  elseif l == 'e' and currentState == 4 then
+    currentLine = currentLine .. l
+    currentState = 5
+  elseif l == 'f' and currentState == 5 then
+    currentLine = currentLine .. l
+    currentState = 6
+  elseif l == '=' and currentState == 6 then
+    currentLine = currentLine .. l
+    currentState = 0
+    inLink = true
+  elseif l == "\n" and inLink then
+    currentLine = currentLine .. ' '
+  elseif l == "\n" and inTag then
+    currentLine = currentLine .. ' '
+  elseif l == '>' then
+    inTag = false
+    currentLine = currentLine .. l
+    currentState = 0
+  else
+    currentLine = currentLine .. l
+    currentState = 0
+  end
 until not l
 
 -- Footnotes
