@@ -102,6 +102,7 @@ if not globalBlogDate then
 end
 globalSupString = 
           '<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px">'
+globalFootnotes = {}
 
 -- Process any <a id> stuff in the HTML after processing pictures in the
 -- blog. Also processes simple subscripts
@@ -130,6 +131,26 @@ function processID(l)
              '%1' .. globalSupString .. "%2" .. "</sup>")
   -- htmldoc is buggy with italics in quotes
   l = l:gsub('%;_([a-zA-Z0-9]+)_%&',';<i>%1</i>&')
+  -- Remove whitespace after <a href
+  l = l:gsub(mc('(<a href=[^>]+>)%s+'),"%1")
+  -- Footnotes
+  if(l:find(mc('<a href=\"fn:'))) then
+    local footnoteIndex = #globalFootnotes + 1
+    local name = l
+    name = name:gsub(mc('.*<a href=\"fn:([^<]*).*'),'%1')
+    local linkText = name
+    local fnText = name
+    name = name:gsub('([^"]*)".*','%1')
+    linkText = linkText:gsub(mc('[^>]*>%^?(%S+).*$'),'%1')
+    fnText = fnText:gsub(mc('[^>]*%^?%S+([^<]+).*$'),'%1')
+    globalFootnotes[footnoteIndex] = {}
+    globalFootnotes[footnoteIndex]['name'] = name
+    globalFootnotes[footnoteIndex]['link'] = linkText
+    globalFootnotes[footnoteIndex]['body'] = fnText
+    l = l:gsub(mc('<a href=\"fn:[^>]*>[^<]*</a>'),
+        globalSupString .. 
+        '<a href="#' .. name .. '">' .. linkText .. '</a></sup>')
+  end
   print(l)
 end
 
@@ -187,16 +208,37 @@ function processStep2(l)
   end 
 end  
 
-linenum = 1
 placeMarker = 0
+inLinkLine = 0
 repeat
   l = io.read()
   if not l then break end
-  linenum = linenum + 1
+  -- Collapse lines with links in them in to single lines
+  if(l:find(mc('<a href='))) then
+    while inLinkLine < 100 do
+      local x = io.read()
+      inLinkLine = inLinkLine + 1
+      l = l:gsub("[\r\n]","") 
+      if not x then break end
+      l = l .. ' ' .. x
+      if x:find(mc('</a>')) then break end 
+      inLinkLine = inLinkLine + 1
+    end
+  end
   -- Do not show anything until after the *second* “HR NOSHADE”
   if placeMarker == 2 then processStep2(l) end
   if(l:find(mc("HR NOSHADE"))) then placeMarker = placeMarker + 1 end
 until not l
+
+-- Footnotes
+if(#globalFootnotes > 0) then
+  print "<h3>Footnotes</h3>"
+  for f=1,#globalFootnotes do
+    print('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>')
+    print(globalFootnotes[f]['link'] .. ': ' .. globalFootnotes[f]['body'])
+    print("<p>\n")
+  end
+end
 
 -- Footer
 print ""
