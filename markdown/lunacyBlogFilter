@@ -247,8 +247,7 @@ repeat
     inLink = false
     inTag = false
   elseif l == '<' and currentState == 102 then
-    processStep1(currentLine)
-    currentLine = l
+    currentLine = currentLine .. l
     currentState = 1
     inTag = true
   elseif l:find('%S') and currentState == 102 then
