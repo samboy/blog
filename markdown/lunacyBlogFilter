@@ -104,9 +104,29 @@ globalSupString =
           '<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px">'
 globalFootnotes = {}
 
+-- Footnotes
+function processFootnotes()
+  if(#globalFootnotes > 0) then
+    if(#globalFootnotes == 1) then 
+      print "<h3>Footnote</h3>" 
+    else
+      print "<h3>Footnotes</h3>" 
+    end
+    for f=1,#globalFootnotes do
+      local body = globalFootnotes[f]['body']
+      -- Allow bare links in footnotes
+      body=body:gsub(mc('(https://%S+)'),'<a href="%1">%1</a>')
+      print('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>')
+      print('<a href="#back-' .. globalFootnotes[f]['name'] .. '">')
+      print(globalFootnotes[f]['link'] .. '</a>: ' .. body)
+      print("<p>\n")
+    end
+  end
+end
+
 -- Process any <a id> stuff in the HTML after processing pictures in the
 -- blog. Also processes simple subscripts
-function processID(l)
+function processIDetc(l)
   -- If convenient, make <a id> <a name="foo"> </a>
   -- This way the blog can have bookmarks linking directly to sections
   if l:find(mc('<h3>.*<a id="([^"]+)"[^"]*$')) then
@@ -150,7 +170,8 @@ function processID(l)
     globalFootnotes[footnoteIndex]['body'] = fnText
     l = l:gsub(mc('<a href=\"fn:[^>]*>[^<]*</a>'),
         globalSupString .. 
-        '<a href="#' .. name .. '">' .. linkText .. '</a></sup>')
+        '<a id="back-' .. name .. '">' ..
+        '<a href="#' .. name .. '">' .. linkText .. '</a></a></sup>')
   end
   print(l)
 end
@@ -177,11 +198,11 @@ function processWidePic(l)
     end
   elseif(globalInWidePic) then
     print(globalCaption)
-    processID(l)
+    processIDetc(l)
     globalInWidePic = false
     globalCaption = ""
   else 
-    processID(l)
+    processIDetc(l)
   end
 end
 
@@ -220,6 +241,10 @@ function processStep1(l)
   end
 end
 
+-- This code is a fairly complicated state machine:
+-- * HTML tags are always on the same line so we can process them
+-- * HTML links are always on the same line so we can process them
+-- * DOS linefeed characters are stripped
 inLink = false
 inTag = false
 currentLine = ""
@@ -285,27 +310,14 @@ repeat
     inTag = false
     currentLine = currentLine .. l
     currentState = 0
-  else
+  elseif l then
     currentLine = currentLine .. l
     currentState = 0
   end
 until not l
 
--- Footnotes
-if(#globalFootnotes > 0) then
-  if(#globalFootnotes == 1) then 
-    print "<h3>Footnote</h3>" 
-  else
-    print "<h3>Footnotes</h3>" 
-  end
-  for f=1,#globalFootnotes do
-    local body = globalFootnotes[f]['body']
-    body=body:gsub(mc('(https://%S+)'),'<a href="%1">%1</a>')
-    print('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>')
-    print(globalFootnotes[f]['link'] .. ': ' .. body)
-    print("<p>\n")
-  end
-end
+-- Show any remaining footnotes
+processFootnotes()
 
 -- Footer
 print ""
