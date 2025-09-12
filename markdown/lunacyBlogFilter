@@ -94,6 +94,50 @@ function Split(s, splitOn)
   return out
 end
 
+-- Let’s determine how wide each and every character is in the Roboto
+-- Serif variant font I use for my blog. Since I only have a small superset
+-- of ASCII, I can do this.
+-- Glyph can either be an ASCII character (except '<', '>', or '&') or
+-- an HTML entity (e.g. '&amp;'. This function will raise an error if 
+-- a character not in my special subset of Roboto Serif is used as its
+-- argument.
+function width(glyph) 
+  -- Letters
+  local g = {A=707, B=698, C=762, D=784, E=694, F=666, G=810, H=842, I=408,
+             J=649, K=766, L=642, M=969, N=817, O=799, P=678, Q=799, R=744,
+             S=646, T=713, U=803, V=729, W=1014, X=744, Y=696, Z=661,
+             a=601, b=668, c=572, d=677, e=580, f=448, g=673, h=682, i=340,
+             j=338, k=681, l=347, m=990, n=682, o=630, p=691, q=668, r=474,
+             s=531, t=463, u=671, v=649, w=938, x=659, y=662, z=541}
+  -- Rest of ASCII
+  g[" "] = 257 g["0"] = 560 g["1"] = 560 g["2"] = 560 g["3"] = 560
+  g["4"] = 560 g["5"] = 560 g["6"] = 560 g["7"] = 560 g["8"] = 560
+  g["9"] = 560 g["_"] = 529 g["-"] = 479 g["("] = 408 g[")"] = 408
+  g["["] = 396 g["]"] = 396 g["{"] = 454 g["}"] = 454 g["#"] = 752
+  g["%"] = 752 g["'"] = 252 g['"'] = 457 g["*"] = 519 g["."] = 306
+  g[","] = 330 g[":"] = 306 g[";"] = 330 g["!"] = 326 g["?"] = 555
+  g["/"] = 583 g["\\"]= 583 g["@"] = 960 g["+"] = 560 g["-"] = 560
+  g["="] = 560 g["$"] = 560 g["^"] = 523 g["~"] = 521 g["|"]=267
+  -- ASCII with special meaning in HTML
+  g["&amp;"]=765 g["&lt;]=560 g["&gt;"]=560
+  -- Non-ASCII: Spanish letters
+  g["&Aacute;"]=707 g["&Eacute;"]=694 g["&Iacute;"]=408 g["&Ntilde;"]=817
+  g["&Oacute;"]=799 g["&Uacute;"]=803 g["&Uuml;"]=803
+  g["&aacute;"]=601 g["&eacute;"]=580 g["&iacute;"]=340 g["&ntilde;"]=682
+  g["&oacute;"]=630 g["&uacute;"]=671 g["&uuml;"]=671 
+  -- Non-ASCII: Punctuation
+  g["&mdash;"]=1002 g["&lsquo;"]=286 g["&rsquo;"]=286 g["&ldquo;"]=528
+  g["&rdquo;"]=528 g["&laquo;"]=635 g["&raquo;"]=635 g["&iexcl;"]=326
+  g["&iquest;"]=555 g["&copy;"]=870 g["&hearts;"]=905 g["&rarr;"]=840
+  g["&bull;"]=497
+
+  if g[glyph] == nil then
+    print("Fatal error: Invalid glyph " ..glyph.. " in source md file")
+    sys.exit(2)
+  end
+  return g[glyph]
+end
+
 globalInWidePic = false
 globalCaption = ""
 globalBlogDate = arg[1]
