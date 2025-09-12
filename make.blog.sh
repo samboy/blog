@@ -71,7 +71,9 @@ echo >> index.html
 echo > foo.html
 for a in $( ls embed/*embed | sort -r ) ; do
   NAME=$( grep -i h1 $a | head -1 | tr '<>' ':' | awk -F: '{print $3}' )
-  LINK=$( echo $NAME | awk '{gsub(/[^A-Za-z0-9]/,"");print}' )
+  LINK=${a#*/}
+  LINK=${LINK%.embed}
+  #LINK=$( echo $NAME | awk '{gsub(/[^A-Za-z0-9]/,"");print}' )
   DATE=${a#embed/}
   DATE=${DATE%.embed}
   #YEAR=$( echo $DATE | awk '{print substr($0,1,4)}' )
