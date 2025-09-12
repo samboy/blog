@@ -1,0 +1,73 @@
+#!/bin/sh
+_rem=--[=[
+# POSIX shell wrapper to call correct version of Lua or Lunacy
+
+LUNACY=""
+if command -v lunacy64 >/dev/null 2>&1 ; then
+  LUNACY=lunacy64
+elif command -v lua5.1 >/dev/null 2>&1 ; then
+  LUNACY=lua5.1
+elif command -v lua-5.1 >/dev/null 2>&1 ; then
+  LUNACY=lua-5.1
+elif command -v lunacy >/dev/null 2>&1 ; then
+  LUNACY=lunacy
+elif command -v luajit >/dev/null 2>&1 ; then
+  LUNACY=luajit # I assume luajit will remain frozen at Lua 5.1
+fi
+if [ -z "$LUNACY" ] ; then
+  echo Please install Lunacy or Lua 5.1
+  echo Either the version included with this blog -or- the version at
+  echo https://github.com/samboy/lunacy
+  echo To compile and install the version of Lunacy with the blog:
+  echo
+  echo     tar xvJf lunacy-2022-12-06.tar.xz
+  echo     cd lunacy-2022-12-06/
+  echo     make
+  echo     sudo cp lunacy /usr/local/bin/
+  exit 1
+fi
+
+exec $LUNACY $0 "$@"
+
+# ]=]1
+-- This script is written in Lua 5.1
+
+-- This script has been donated to the public domain in 2025 by Sam Trenholme
+-- If, for some reason, a public domain declation is not acceptable, it
+-- may be licensed under the following terms:
+
+-- Copyright 2025 Sam Trenholme
+-- Permission to use, copy, modify, and/or distribute this software for
+-- any purpose with or without fee is hereby granted.
+-- THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+-- WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES
+-- OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+-- ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+-- WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+-- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+-- OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+function Xascii2utf8(glyph) 
+  g={}
+  g["\1"] = "Á" g["\2"] = "É" g["\3"] = "Í" g["\4"] = "Ñ" g["\5"] = "Ó" 
+  g["\6"] = "Ú" g["\7"] = "Ü" g["\8"] = "¡" g["\11"] = "•" 
+  g["\14"] = "«" g["\15"] = "»" g["\16"] = "—" g["\17"] = "á" 
+  g["\18"] = "é" g["\19"] = "í" g["\20"] = "ñ" g["\21"] = "ó" 
+  g["\22"] = "ú" g["\23"] = "ü" g["\24"] = "¿" g["\25"] = "‘" 
+  g["\26"] = "’" g["\28"] = "→" g["\29"] = "“" g["\30"] = "”" 
+  g["\31"] = "©" g["\127"] = "♥"
+
+  if(g[glyph]) then return g[glyph] end
+  return glyph
+end
+
+l = true
+while l do
+  l = io.read(1)
+  if not l then break end
+  if(l:byte() > 128) then io.write("•") else
+    x = Xascii2utf8(l)
+    if x then io.write(x) else io.write(l) end
+  end
+end
+
