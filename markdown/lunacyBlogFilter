@@ -94,6 +94,45 @@ function Split(s, splitOn)
   return out
 end
 
+-- Let’s convert a single glyph in to its UTF-8 form.  We will keep
+-- &amp;, &lt;, and &gt for HTML compatibility
+function entity2utf8(entity)
+  local g={}
+  -- Spanish letters
+  g["&Aacute;"]='Á' g["&Eacute;"]='É' g["&Iacute;"]='Í' g["&Ntilde;"]='Ñ'
+  g["&Oacute;"]='Ó' g["&Uacute;"]='Ú' g["&Uuml;"]='Ü'
+  g["&aacute;"]='á' g["&eacute;"]='é' g["&iacute;"]='í' g["&ntilde;"]='ñ'
+  g["&oacute;"]='ó' g["&uacute;"]='ú' g["&uuml;"]='ü' 
+  -- Non-ASCII: Punctuation
+  g["&mdash;"]='—' g["&lsquo;"]='‘' g["&rsquo;"]='’' g["&ldquo;"]='“'
+  g["&rdquo;"]='”' g["&laquo;"]='«' g["&raquo;"]='»' g["&iexcl;"]='¡'
+  g["&iquest;"]='¿' g["&copy;"]='©' g["&hearts;"]='♥' g["&rarr;"]='→'
+  g["&bull;"]='•'
+
+  if g[entity] then return g[entity] end
+  return nil
+end
+
+-- Let’s convert a UTF-8 character in to a low-bit control character
+-- This uses obscure ASCII characters (Nul, \t, \n, \f, \r, and Esc
+-- keep their meta-meeting) so that each character is 8 bits wide for
+-- regex parsing etc.
+function utf8toXascii(glyph)
+  local g={}
+  --[[ NUL ]]    g["Á"] = '\1'  g["É"] = '\2'  g["Í"] = '\3' 
+  g["Ñ"] = '\4'  g["Ó"] = '\5'  g["Ú"] = '\6'  g["Ü"] = '\7'
+  g["¡"] = '\8'  --[[ \t ]]     --[[ \n ]]     g["•"] = '\11'
+  --[[ \f ]]     --[[ \r ]]     g["«"] = '\14' g["»"] = '\15'
+  g["—"] = '\16' g["á"] = '\17' g["é"] = '\18' g["í"] = '\19'
+  g["ñ"] = '\20' g["ó"] = '\21' g["ú"] = '\22' g["ü"] = '\23'
+  g["¿"] = '\24' g["‘"] = '\25' g["’"] = '\26' --[[ ESC ]]
+  g["→"] = '\28' g["“"] = '\29' g["”"] = '\30' g["©"] = '\31'
+  g["♥"] = '\127'
+
+  if g[glyph] then return g[glyph] end
+  return nil
+end
+
 -- Let’s determine how wide each and every character is in the Roboto
 -- Serif variant font I use for my blog. Since I only have a small superset
 -- of ASCII, I can do this.
