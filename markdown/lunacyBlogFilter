@@ -133,6 +133,20 @@ function utf8toXascii(glyph)
   return nil
 end
 
+function Xascii2utf8(glyph) 
+  g={}
+  g["\1"] = "Á" g["\2"] = "É" g["\3"] = "Í" g["\4"] = "Ñ" g["\5"] = "Ó" 
+  g["\6"] = "Ú" g["\7"] = "Ü" g["\8"] = "¡" g["\11"] = "•" 
+  g["\14"] = "«" g["\15"] = "»" g["\16"] = "—" g["\17"] = "á" 
+  g["\18"] = "é" g["\19"] = "í" g["\20"] = "ñ" g["\21"] = "ó" 
+  g["\22"] = "ú" g["\23"] = "ü" g["\24"] = "¿" g["\25"] = "‘" 
+  g["\26"] = "’" g["\28"] = "→" g["\29"] = "“" g["\30"] = "”" 
+  g["\31"] = "©" g["\127"] = "♥"
+
+  if(g[glyph]) then return g[glyph] end
+  return glyph
+end
+
 -- Let’s determine how wide each and every character is in the Roboto
 -- Serif variant font I use for my blog. Since I only have a small superset
 -- of ASCII, I can do this.
