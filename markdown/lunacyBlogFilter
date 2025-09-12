@@ -150,7 +150,8 @@ function splitWideWords(l)
   local thisGlyph = ""
   local currentWidth = 0
   local inTag = false
-  for a=1,l:len() do
+  a = 1
+  while a <= l:len() do
     local look = l:sub(a,a)
     if(look == '<') then
       inTag = true
@@ -162,11 +163,14 @@ function splitWideWords(l)
         look = l:sub(a,a)
         thisGlyph = thisGlyph .. look
       end
+      a = a + 1
       if(a >= l:len() and l:sub(l:len(),l:len()) ~= ';') then
         return outString
       end
+    else
+      a = a + 1
     end
-    if(look:find('%s') and not inTag) then
+    if(thisGlyph:find('%s') and not inTag) then
       currentWidth = 0
       outString = outString .. thisGlyph
     elseif(not inTag) then
