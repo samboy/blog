@@ -164,7 +164,8 @@ function splitWideWords(l)
         thisGlyph = thisGlyph .. look
       end
       a = a + 1
-      if(a >= l:len() and l:sub(l:len(),l:len()) ~= ';') then
+      if(a > l:len() and l:sub(l:len(),l:len()) ~= ';') then
+        outString = outString .. thisGlyph
         return outString
       end
     else
