@@ -29,8 +29,8 @@ In this blog, I talk about life in M&eacute;xico, and the font used for this
 </li>
 </ul>
 <p>To update the italic &ldquo;f&rdquo;, I had to keep in mind that a number of
- ligatures with &ldquo;f&rdquo; in them exist, e.g. &ldquo;ff&rdquo;, &ldquo;fi&rdquo;, &ldquo;fl&rdquo;, &ldquo;ffi&rdquo;, &ldquo;ffl
- among others. While one version of the font has all of &ldquo;f&rdquo;, &ldquo;fi&rdquo;, &ldquo;fl
+ ligatures with &ldquo;f&rdquo; in them exist, e.g. &ldquo;ff&rdquo;, &ldquo;fi&rdquo;, &ldquo;fl&rdquo;, &ldquo;ffi&rdquo;, &ldquo;ffl&rdquo;,
+ among others. While one version of the font has all of &ldquo;f&rdquo;, &ldquo;fi&rdquo;, &ldquo;fl&rdquo;,
  &ldquo;ffi&rdquo;, and even &ldquo;ffl&rdquo; updated so that <em>&ldquo;f&rdquo;</em> doesn&rsquo;t have a
  descender, it was simpler for me to make the italic <em>&ldquo;f&rdquo;</em> the
  non-italic &ldquo;f&rdquo; with a 10 degree oblique skew. Since the font I use on
