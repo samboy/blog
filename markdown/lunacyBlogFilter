@@ -112,6 +112,23 @@ function entity2utf8(entity)
   return nil
 end
 
+-- Let’s convert an entity in to my Xascii format
+function entity2Xascii(entity)
+  local g = {} 
+  g["&Aacute;"] = "\1" g["&Eacute;"] = "\2" g["&Iacute;"] = "\3"
+  g["&Ntilde;"] = "\4" g["&Oacute;"] = "\5" g["&Uacute;"] = "\6"
+  g["&Uuml;"] = "\7" g["&iexcl;"] = "\8" g["&mdash;"] = "\11" 
+  g["&laquo;"] = "\14" g["&raquo;"] = "\15" g["&bull;"] = "\16" 
+  g["&aacute;"] = "\17" g["&eacute;"] = "\18" g["&iacute;"] = "\19" 
+  g["&ntilde;"] = "\20" g["&oacute;"] = "\21" g["&uacute;"] = "\22" 
+  g["&uuml;"] = "\23" g["&iquest;"] = "\24" g["&lsquo;"] = "\25" 
+  g["&rsquo;"] = "\26" g["&rarr;"] = "\28" g["&ldquo;"] = "\29" 
+  g["&rdquo;"] = "\30" g["&copy;"] = "\31" g["&hearts;"] = "\127"
+
+  if g[entity] then return g[entity] end
+  return "\16"
+end
+
 -- Let’s convert a UTF-8 character in to a low-bit control character
 -- This uses obscure ASCII characters (Nul, \t, \n, \f, \r, and Esc
 -- keep their meta-meeting) so that each character is 8 bits wide for
@@ -150,9 +167,9 @@ end
 -- Serif variant font I use for my blog. Since I only have a small superset
 -- of ASCII, I can do this.
 -- Glyph can either be an ASCII character (except '<', '>', or '&') or
--- an HTML entity (e.g. '&amp;'). This function will raise an error if 
--- a character not in my special subset of Roboto Serif is used as its
--- argument.
+-- an HTML entity (e.g. '&amp;') or an Xascii character. This function will 
+-- raise an error if a character not in my special subset of Roboto Serif 
+-- is used as its argument.
 function width(glyph) 
   -- Letters
   local g = {A=707, B=698, C=762, D=784, E=694, F=666, G=810, H=842, I=408,
@@ -182,6 +199,15 @@ function width(glyph)
   g["&rdquo;"]=528 g["&laquo;"]=635 g["&raquo;"]=635 g["&iexcl;"]=326
   g["&iquest;"]=555 g["&copy;"]=870 g["&hearts;"]=905 g["&rarr;"]=840
   g["&bull;"]=497
+
+  -- Xascii
+  g["\1"] = 707 g["\2"] = 694 g["\3"] = 408 g["\4"] = 817 g["\5"] = 799
+  g["\6"] = 803 g["\7"] = 803 g["\8"] = 326 g["\11"] = 1002 g["\14"] = 635
+  g["\15"] = 635 g["\16"] = 497 g["\17"] = 601 g["\18"] = 580 
+  g["\19"] = 340 g["\20"] = 682 g["\21"] = 630 g["\22"] = 671 
+  g["\23"] = 671 g["\24"] = 555 g["\25"] = 286 g["\26"] = 286 
+  g["\28"] = 840 g["\29"] = 528 g["\30"] = 528 g["\31"] = 870 
+  g["\127"] = 905
 
   if g[glyph] == nil then
     print("Fatal error: Invalid glyph " ..glyph.. " in source md file")
