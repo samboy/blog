@@ -415,6 +415,7 @@ globalFootnotes = {}
 
 -- Footnotes
 function processFootnotes()
+  local x = XasciiStringConvert
   if(#globalFootnotes > 0) then
     if(#globalFootnotes == 1) then 
       print "<h3>Footnote</h3>" 
@@ -425,9 +426,9 @@ function processFootnotes()
       local body = globalFootnotes[f]['body']
       -- Allow bare links in footnotes
       body=body:gsub(mc('(https://%B+)'),'<a href="%1">%1</a>')
-      print('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>')
-      print('<a href="#back-' .. globalFootnotes[f]['name'] .. '">')
-      print(globalFootnotes[f]['link'] .. '</a>: ' .. body)
+      print(x('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>'))
+      print(x('<a href="#back-' .. globalFootnotes[f]['name'] .. '">' ..
+            globalFootnotes[f]['link'] .. '</a>: ' .. body))
       print("<p>\n")
     end
   end
