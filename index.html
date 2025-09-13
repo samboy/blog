@@ -54,28 +54,42 @@ blog index.</a></i>
 </div>
 <h1>Lua Table sorter, etc.</h1>
 <h2>September 13, 2025</h2>
-Let’s look at a Lua Table sorter.
+Let’s look at a Lua Table sorter. Also, thoughts on cancel culture in
+ 2025.
 <a name="2025-09-13-a-simple-lua-table-sorter"> </a>
 <h3>A simple Lua table sorter</h3>
 <p>This routine works like the <code>pairs()</code> function included
  with Lua, but the table keys are sorted:
-<pre>-- Like pairs() but sorted
--- All table keys should be
--- of the same type
-function sPairs(inputTable)
+<pre style="overflow: scroll">-- Like pairs() but sorted
+-- All table keys should be of the
+-- same type unless a sort function
+-- (“sorter”) is used.
+function sPairs(inputTable, sorter)
   local keyList = {}
   local index = 1
-  for k,_ in 
-      pairs(inputTable) do
+  for k,_ in pairs(inputTable) do
     table.insert(keyList,k)
   end
-  table.sort(keyList)
+  table.sort(keyList, sorter)
   return function()
     rvalue = keyList[index]
     index = index + 1
     return rvalue,
-         inputTable[rvalue]
+           inputTable[rvalue]
   end
+end
+</pre>
+<p>If one wishes to mix strings and numbers, a sort function should be
+ used, for example:
+<pre style="overflow: scroll">function aSortFunction(a, b)
+  return tostring(a) • tostring(b)
+end
+</pre>
+<p>Example usage of the above two functions:
+<pre style="overflow: scroll">a={z=1,y=2,c=3,w=4}
+for k,v in
+    sPairs(a, aSortFunction) do
+ print(k,v)
 end
 </pre>
 <a name="2025-09-13-cancelling-people-who-celebrate-charlie-kirks-death"> </a>
@@ -93,7 +107,7 @@ This time
 
 <h3>Footnote</h3>
 <a name="2025-09-13-1"> </a>
-<a href="#back-2025-09-13-1">1</a>:  When confronted with these accusations, the people who have encouraged violence respond by gaslighting—i.e.  denying that what they say encourages violence. Saying that Charlie Kirk was a bad person because he said something which goes against the modern leftist agenda is implying maybe he deserved to die for what he said.
+<a href="#back-2025-09-13-1">1</a>:  When confronted with these accusations, the people who have encouraged violence respond by gaslighting—i.e.  denying that what they say encourages violence. Saying that Charlie Kirk was a bad person because he said something which goes against the modern leftist agenda is implying maybe he deserved to die for what he said. For the record, I have never opposed anyone being cancelled for saying  tasteless bad things about George Floyd.
 <p>
 
 
