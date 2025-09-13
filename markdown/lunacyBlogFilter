@@ -396,7 +396,7 @@ function processIDetc(l)
   -- This way the blog can have bookmarks linking directly to sections
   if l:find(mc('<h3>.*<a id="([^"]+)"[^"]*$')) then
     local thisID = l
-    thisID = thisID:gsub('^.*<a id="','')
+    thisID = thisID:gsub(mc('^.*<a id="'),'')
     thisID = thisID:gsub('"[^"]*$','')
     if(globalBlogDate and globalBlogDate ~= "") then
       thisID = globalBlogDate .. '-' .. thisID
@@ -412,16 +412,13 @@ function processIDetc(l)
   -- While we’re at it, we don’t need </p> in the document
   l = l:gsub(mc('</p>'),'')
   -- And, oh, let’s process superscripts
-  -- \1-\7 is Spanish upper case (ÁÉÍÑÓÚÜ)
-  -- \17-23 is Spanish lower case (áéíñóúü)
-  l = l:gsub('([A-Za-z0-9\1-\7\17-\23])%^([A-Za-z0-9\1-\7\17-\23]+)', 
-             '%1' .. globalSupString .. "%2" .. "</sup>")
+  -- %r is alphanumeric, including non-ASCII Xascii chars
+  l = l:gsub(mc('(%r)%^(%r+)'), '%1' .. globalSupString .. "%2" .. "</sup>")
   -- htmldoc is buggy with italics in quotes
   -- \25 is ‘     \26 is ’     \29 is “     \30 is ” 
-  l = l:gsub('([\25\29])_([a-zA-Z0-9\1-\7\17-\23]+)_([\29\30])',
-             '%1<i>%2</i>%3')
+  l = l:gsub(mc('([\25\29])_(%r+)_([\29\30])'), '%1<i>%2</i>%3')
   -- Remove whitespace after <a href
-  l = l:gsub(mc('(<a href=[^>]+>)%s+'),"%1")
+  l = l:gsub(mc('(<a href=[^>]+>)%b+'),"%1")
   -- Footnotes
   if(l:find(mc('<a href=\"fn:'))) then
     local footnoteIndex = #globalFootnotes + 1
@@ -430,8 +427,8 @@ function processIDetc(l)
     local linkText = name
     local fnText = name
     name = name:gsub('([^"]*)".*','%1')
-    linkText = linkText:gsub(mc('[^>]*>%^?(%S+).*$'),'%1')
-    fnText = fnText:gsub(mc('[^>]*%^?%S+([^<]+).*$'),'%1')
+    linkText = linkText:gsub(mc('[^>]*>%^?(%B+).*$'),'%1')
+    fnText = fnText:gsub(mc('[^>]*%^?%B+([^<]+).*$'),'%1')
     globalFootnotes[footnoteIndex] = {}
     name = globalBlogDate .. '-' .. name
     globalFootnotes[footnoteIndex]['name'] = name
