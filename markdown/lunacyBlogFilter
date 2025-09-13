@@ -58,7 +58,6 @@ function mc(i)
     seek = i:sub(a,a)
     -- Do not mangle anything right after a %
     if seek == "%" and not afterPercent then
-      out = out .. seek
       afterPercent = true
     -- Only letters not after a % get mangled
     elseif seek:find("%a") and not afterPercent then
@@ -68,7 +67,7 @@ function mc(i)
       out = out .. seek
     -- Everything right after a % is passed as-is
     elseif afterPercent then
-      out = out .. seek
+      out = out .. "%" .. seek
       afterPercent = false
     end
   end
