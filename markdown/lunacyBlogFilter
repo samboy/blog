@@ -211,6 +211,8 @@ function entity2utf8(entity)
   g["&rdquo;"]='”' g["&laquo;"]='«' g["&raquo;"]='»' g["&iexcl;"]='¡'
   g["&iquest;"]='¿' g["&copy;"]='©' g["&hearts;"]='♥' g["&rarr;"]='→'
   g["&bull;"]='•'
+  -- Preserve entities which are metachars in HTML
+  g["&lt;"] = "&lt;" g["&gt;"] = "&gt;" g["&amp;"] = "&amp;"
 
   if g[entity] then return g[entity] end
   return nil
@@ -527,7 +529,7 @@ function processWidePic(l)
       globalInWidePic = true
     end
   elseif(globalInWidePic) then
-    print(globalCaption)
+    print(XasciiStringConvert(globalCaption))
     processIDetc(l)
     globalInWidePic = false
     globalCaption = ""
