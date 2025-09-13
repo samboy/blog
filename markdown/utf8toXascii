@@ -51,6 +51,12 @@ exec $LUNACY $0 "$@"
 -- This uses obscure ASCII characters (Nul, \t, \n, \f, \r, and Esc
 -- keep their meta-meeting) so that each character is 8 bits wide for
 -- regex parsing etc.
+
+-- Note that “•” becomes a character which the Lua regex expression
+-- "%s" sees as a space character ("%s" simply uses the C language 
+-- isspace() function). If • needs to be treated like a non-space,
+-- match against '[\9\10\12\13\32]' for spaces.
+
 function utf8toXascii(glyph)
   local g={}
   --[[ NUL ]]    g["Á"] = '\1'  g["É"] = '\2'  g["Í"] = '\3' 
