@@ -47,7 +47,25 @@ exec $LUNACY $0 "$@"
 -- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 -- OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
--- mc() converts a string in to a case insensitive regex; mc('th') is [Tt][Hh]
+-- mc() is a regex processing engine. For non-ASCII, it assume to be using
+-- my own Xascii format (a 7-bit representsation of characters in the subset
+-- of Roboto Serif I use for my blog)
+-- A few new character classes are used:
+
+-- '%b' is blank space ('%s' includes the — em dash character)
+-- '%B' is not blank space
+-- '%g' (“Grande”) is all uppercase letters
+-- '%G' is everything except uppercase letters
+-- '%m' (“mini”) is all lowercase letters
+-- '%M' is everything except lowercase letters
+-- '%r' (“read”) is alphanumeric
+-- '%R' is everything except alphanumeric
+-- '%t' (“total”) is all letters
+-- '%T' is everything except letters
+
+-- Do *NOT* use these new classes inside of [] brackets
+
+-- Also converts a string in to a case insensitive regex; mc('th') is [Tt][Hh]
 -- Do not use this when there are multiple letters in a regex class, i.e.
 -- do not use this when the input has something like [dou] in it (any one of
 -- d/o/u regex)
@@ -67,7 +85,29 @@ function mc(i)
       out = out .. seek
     -- Everything right after a % is passed as-is
     elseif afterPercent then
-      out = out .. "%" .. seek
+      if seek == 'b' then -- Blank
+        out = out .. '[\r\n\t\f ]'
+      elseif seek == 'B' then
+        out = out .. '[^\r\n\t\f ]'
+      elseif seek == 'g' then -- Uppercase (“grande”)
+        out = out .. '[A-Z\1-\7]'
+      elseif seek == 'G' then
+        out = out .. '[^A-Z\1-\7]'
+      elseif seek == 'm' then -- Lowercase (“mini”)
+        out = out .. '[a-z\17-\23]'
+      elseif seek == 'M' then
+        out = out .. '[^a-z\17-\23]'
+      elseif seek == 'r' then -- Alphanumeric (“read”)
+        out = out .. '[A-Za-z0-9\1-\7\17-\23]'
+      elseif seek == 'R' then 
+        out = out .. '[^A-Za-z0-9\1-\7\17-\23]'
+      elseif seek == 't' then -- All letters (“total”)
+        out = out .. '[A-Za-z\1-\7\17-\23]'
+      elseif seek == 'T' then 
+        out = out .. '[^A-Za-z\1-\7\17-\23]'
+      else
+        out = out .. "%" .. seek
+      end
       afterPercent = false
     end
   end
@@ -92,6 +132,46 @@ function Split(s, splitOn)
   table.insert(out,string.sub(s, last, -1))
   return out
 end
+
+-- CONVERSTION ROUTINES --
+-- These are a bunch of routines which convert between three forms
+-- of expressing non-ASCII characters:
+-- 1. HTML entities (e.g. "&hearts;") which htmldoc uses
+-- 2. UTF-8 which are a lot more readable than HTML entities
+-- 3. Xascii, which is a special 7-bit representation of non-ASCII
+-- 
+-- The reason we use Xascii is because Lunacy’s regex engine is 8-bit
+-- and we want to be able to process non-ASCII easily.
+-- Xascii is never stored in a file, and is as follows:
+
+--   0123456789abcdef
+-- 0 .ÁÉÍÑÓÚÜ¡..—..«»
+-- 1 •áéíñóúü¿‘’.→“”©
+-- 2 .!"#$%&'()*+,-./
+-- 3 0123456789:;<=>?
+-- 4 @ABCDEFGHIJKLMNO
+-- 5 PQRSTUVWXYZ[\]^_
+-- 6 `abcdefghijklmno
+-- 7 pqrstuvwxyz{|}~♥
+-- 
+-- Non-printable chars (rendered as .)
+-- 0x00 is Null (end of string)
+-- 0x09 is Tab
+-- 0x0a (\10) is Newline
+-- 0x0c (\12) is Form feed
+-- 0x0d (\13) is CR (used in DOS linefeeds)
+-- 0x1b (\14) is Escape
+-- 0x20 (\32) is space
+-- 
+-- Also:
+-- 
+-- 0x0b (\11) is em dash (—)
+-- 0x19 (\25) is left smart single quote (‘)
+-- 0x1a (\26) is right smart quote (’)
+-- 0x1d (\29) is left smart double quote (“)
+-- 0x1e (\30) is right smart double quote (”)
+-- 0x2d is ASCII dash (-)
+-- 0x2e is ASCII period (.)
 
 -- Let’s convert a single glyph in to its UTF-8 form.  We will keep
 -- &amp;, &lt;, and &gt for HTML compatibility
@@ -300,7 +380,7 @@ function processFootnotes()
     for f=1,#globalFootnotes do
       local body = globalFootnotes[f]['body']
       -- Allow bare links in footnotes
-      body=body:gsub(mc('(https://%S+)'),'<a href="%1">%1</a>')
+      body=body:gsub(mc('(https://%B+)'),'<a href="%1">%1</a>')
       print('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>')
       print('<a href="#back-' .. globalFootnotes[f]['name'] .. '">')
       print(globalFootnotes[f]['link'] .. '</a>: ' .. body)
