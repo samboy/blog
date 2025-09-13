@@ -1,5 +1,12 @@
 #!/bin/sh
+globalWebpageBlog=false
+pureASCIIoutput=false
 _rem=--[=[
+# Above are flags which affect how the code runs
+# globalWebpageBlog: true if https://samiam.org/blog page 
+#              false if blog archive (https://samboy.github.io/blog/ etc.)
+# pureASCIIoutput: false if you want the blog to output UTF-8
+#             true if you want to instead use HTML entities and pure ASCII
 # POSIX shell wrapper to call correct version of Lua or Lunacy
 
 LUNACY=""
@@ -133,11 +140,28 @@ function Split(s, splitOn)
   return out
 end
 
+-- We need to go through tables in sorted order sometimes
+-- Like pairs() but sorted
+-- This assumes all keys are of the same type
+function sPairs(inputTable)
+  local keyList = {}
+  local index = 1
+  for k,_ in pairs(inputTable) do
+    table.insert(keyList,k)
+  end
+  table.sort(keyList)
+  return function()
+    rvalue = keyList[index]
+    index = index + 1
+    return rvalue, inputTable[rvalue]
+  end
+end
+
 -- CONVERSTION ROUTINES --
 -- These are a bunch of routines which convert between three forms
 -- of expressing non-ASCII characters:
 -- 1. HTML entities (e.g. "&hearts;") which htmldoc uses
--- 2. UTF-8 which are a lot more readable than HTML entities
+-- 2. UTF-8 which is a lot more readable than HTML entities
 -- 3. Xascii, which is a special 7-bit representation of non-ASCII
 -- 
 -- The reason we use Xascii is because Lunacy’s regex engine is 8-bit
@@ -209,6 +233,22 @@ function entity2Xascii(entity)
   return "\16"
 end
 
+-- Convert Xascii in to an entity
+function Xascii2entity(glyph)
+  local g={}
+  g["\1"]="&Aacute;" g["\2"]="&Eacute;" g["\3"]="&Iacute;"
+  g["\4"]="&Ntilde;" g["\5"]="&Oacute;" g["\6"]="&Uacute;" g["\7"]="&Uuml;"
+  g["\8"]="&iexcl;" g["\11"]="&mdash;" g["\14"]="&laquo;" g["\15"]="&raquo;"
+  g["\16"]="&bull;" g["\17"]="&aacute;" g["\18"]="&eacute;"
+  g["\19"]="&iacute;" g["\20"]="&ntilde;" g["\21"]="&oacute;"
+  g["\22"]="&uacute;" g["\23"]="&uuml;" g["\24"]="&iquest;"
+  g["\25"]="&lsquo;" g["\26"]="&rsquo;" g["\28"]="&rarr;" g["\29"]="&ldquo;"
+  g["\30"]="&rdquo;" g["\31"]="&copy;" g["\127"]="&hearts;"
+  
+  if g[glyph] then return g[glyph] end
+  return glyph
+end
+
 -- Let’s convert a UTF-8 character in to a low-bit control character
 -- This uses obscure ASCII characters (Nul, \t, \n, \f, \r, and Esc
 -- keep their meta-meeting) so that each character is 8 bits wide for
@@ -243,12 +283,16 @@ function Xascii2utf8(glyph)
   return glyph
 end
 
--- Convert Xascii string in to utf-8
+-- Convert Xascii string in to utf-8 (or pure ASCII with HTML entities)
 function XasciiStringConvert(l)
   l = tostring(l)
   local out = ""
   for a=1,l:len() do
-    out = out .. Xascii2utf8(l:sub(a,a))
+    if pureASCIIoutput then
+      out = out .. Xascii2entity(l:sub(a,a))
+    else -- UTF-8 in output
+      out = out .. Xascii2utf8(l:sub(a,a))
+    end
   end
   return out
 end
@@ -438,6 +482,15 @@ function processIDetc(l)
         globalSupString .. 
         '<a id="back-' .. name .. '">' ..
         '<a href="#' .. name .. '">' .. linkText .. '</a></a></sup>')
+  end
+  -- Special blog links (since we handle them differently in the combined
+  -- blog compared to the individual blogs on the webpage)
+  if(l:find(mc('<a href=\"blog:'))) then
+    if globalWebpageBlog then -- https://samiam.org/blog page
+      l = l:gsub(mc('(<a href=\")blog:([^"]+)'),'%1%2.html')
+    else -- blog archive
+      l = l:gsub(mc('(<a href=\")blog:([^"]+)'),'%1%#BlogEntry-%2')
+    end 
   end
   -- Break long words
   l = splitWideWords(l)
