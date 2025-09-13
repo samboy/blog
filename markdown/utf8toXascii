@@ -52,18 +52,18 @@ exec $LUNACY $0 "$@"
 -- keep their meta-meeting) so that each character is 8 bits wide for
 -- regex parsing etc.
 
--- Note that “•” becomes a character which the Lua regex expression
+-- Note that “—” becomes a character which the Lua regex expression
 -- "%s" sees as a space character ("%s" simply uses the C language 
--- isspace() function). If • needs to be treated like a non-space,
+-- isspace() function). If — needs to be treated like a non-space,
 -- match against '[\9\10\12\13\32]' for spaces.
 
 function utf8toXascii(glyph)
   local g={}
   --[[ NUL ]]    g["Á"] = '\1'  g["É"] = '\2'  g["Í"] = '\3' 
   g["Ñ"] = '\4'  g["Ó"] = '\5'  g["Ú"] = '\6'  g["Ü"] = '\7'
-  g["¡"] = '\8'  --[[ \t ]]     --[[ \n ]]     g["•"] = '\11'
+  g["¡"] = '\8'  --[[ \t ]]     --[[ \n ]]     g["—"] = '\11'
   --[[ \f ]]     --[[ \r ]]     g["«"] = '\14' g["»"] = '\15'
-  g["—"] = '\16' g["á"] = '\17' g["é"] = '\18' g["í"] = '\19'
+  g["•"] = '\16' g["á"] = '\17' g["é"] = '\18' g["í"] = '\19'
   g["ñ"] = '\20' g["ó"] = '\21' g["ú"] = '\22' g["ü"] = '\23'
   g["¿"] = '\24' g["‘"] = '\25' g["’"] = '\26' --[[ ESC ]]
   g["→"] = '\28' g["“"] = '\29' g["”"] = '\30' g["©"] = '\31'
