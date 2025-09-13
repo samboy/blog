@@ -493,6 +493,8 @@ function processIDetc(l)
       l = l:gsub(mc('(<a href=\")blog:([^"]+)'),'%1%#BlogEntry-%2')
     end 
   end
+  -- Allow italics in link text
+  l = l:gsub(mc('(<a href=\"[^>]+>[^<]*)_(%r+)_'),'%1<i>%2</i>')
   -- Break long words
   l = splitWideWords(l)
   -- Xascii in to UTF-8
