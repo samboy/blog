@@ -332,10 +332,14 @@ function processIDetc(l)
   -- While we’re at it, we don’t need </p> in the document
   l = l:gsub(mc('</p>'),'')
   -- And, oh, let’s process superscripts
-  l = l:gsub('([A-Za-z0-9])%^([A-Za-z0-9]+)', 
+  -- \1-\7 is Spanish upper case (ÁÉÍÑÓÚÜ)
+  -- \17-23 is Spanish lower case (áéíñóúü)
+  l = l:gsub('([A-Za-z0-9\1-\7\17-\23])%^([A-Za-z0-9\1-\7\17-\23]+)', 
              '%1' .. globalSupString .. "%2" .. "</sup>")
   -- htmldoc is buggy with italics in quotes
-  l = l:gsub('%;_([a-zA-Z0-9]+)_%&',';<i>%1</i>&')
+  -- \25 is ‘     \26 is ’     \29 is “     \30 is ” 
+  l = l:gsub('([\25\29])_([a-zA-Z0-9\1-\7\17-\23]+)_([\29\30])',
+             '%1<i>%2</i>%3')
   -- Remove whitespace after <a href
   l = l:gsub(mc('(<a href=[^>]+>)%s+'),"%1")
   -- Footnotes
