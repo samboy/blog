@@ -228,6 +228,8 @@ function entity2Xascii(entity)
   g["&uuml;"] = "\23" g["&iquest;"] = "\24" g["&lsquo;"] = "\25" 
   g["&rsquo;"] = "\26" g["&rarr;"] = "\28" g["&ldquo;"] = "\29" 
   g["&rdquo;"] = "\30" g["&copy;"] = "\31" g["&hearts;"] = "\127"
+  -- Preserve entities which are metachars in HTML
+  g["&lt;"] = "&lt;" g["&gt;"] = "&gt;" g["&amp;"] = "&amp;"
 
   if g[entity] then return g[entity] end
   return "\16"
