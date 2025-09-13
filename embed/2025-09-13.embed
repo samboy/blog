@@ -30,7 +30,8 @@ end
 <p>If one wishes to mix strings and numbers, a sort function should be
  used, for example:
 <pre style="overflow: scroll">function aSortFunction(a, b)
-  return tostring(a)&lt;tostring(b)
+  local t = tostring
+  return t(a) &lt; t(b)
 end
 </pre>
 <p>Example usage of the above two functions:
@@ -55,7 +56,7 @@ This time
 
 <h3>Footnote</h3>
 <a name="2025-09-13-1"> </a>
-<a href="#back-2025-09-13-1">1</a>:  When confronted with these accusations, the people who have encouraged violence respond by gaslighting—i.e.  denying that what they say encourages violence. Saying that Charlie Kirk was a bad person because he said something which goes against the modern leftist agenda is implying maybe he deserved to die for what he said. For the record, I have never opposed anyone being cancelled for saying  tasteless bad things about George Floyd.
+<a href="#back-2025-09-13-1">1</a>:  When confronted with these accusations, the people who have encouraged violence respond by gaslighting—i.e.  denying that what they say encourages violence.
 <p>
 
 
