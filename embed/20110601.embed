@@ -75,7 +75,7 @@ platform yet.
 <b class=blogtitle>Intel Competing with the AMD T40E</b>
 <p>
 
-I mentioned <A href=20110523.html>in a previous blog entry</A> that the
+I mentioned <A href="blog:20110523">in a previous blog entry</A> that the
 AMD T40E trounces Intel’s current low-power low-cost Atom offerings.
 Thankfully, Intel is not standing still.  The Cedarview-based Atom N2800
 chip is their answer to the T40E.  Like the T40E, its TDP is 6.5 watts.
@@ -97,7 +97,7 @@ which looks similar to the T40E but has a slightly smaller TDP of 5.9W.
 <p>
 
 I have updated the web page design today to not be so dependent on
-Verdana.  Since <A href=20110528.html>it is now possible to
+Verdana.  Since <A href="blog:20110528">it is now possible to
 use any font on a webpage</A>, I have modified the <A
 href=http://font.ubuntu.com>Ubuntu font</A> to have just the
 characters for writing in English and Spanish and be web page embeddable,

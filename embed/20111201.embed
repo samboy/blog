@@ -6,7 +6,7 @@
 <b>MaraDNS funding</b>
 </div><br>
 
-<A href=20111108.html>Last month's funding drive</A> gave me enough money
+<A href="blog:20111108">Last month's funding drive</A> gave me enough money
 to devote my time off during the Thanksgiving week to improve Deadwood's
 handling of CNAME records, as well as allowing Deadwood's to accurately
 wait less before giving up on an unresponsive DNS server.

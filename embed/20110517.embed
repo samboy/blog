@@ -7,9 +7,9 @@
 <h2>May 17, 2011</h2>
 
 I am wrapping up the 2011 redesign of the web page and blog.  I started
-by <A href=20110514.html>fixing how this web page looks in mobile
+by <A href="blog:20110514">fixing how this web page looks in mobile
 browsers</A>; once that was done, I replaced the entire web page by
-a mostly entire new design, as I <A href=20110515.html>mentioned here</A>.
+a mostly entire new design, as I <A href="blog:20110515">mentioned here</A>.
 
 <p>
 
@@ -28,7 +28,7 @@ side of the pages; this was fixed after a single Google search.
 Internet Explorer (IE) gave the most issues; while it rendered fine in IE9,
 I had to fix an issue rendering the page in Internet Explorer 7 and 8.  I
 made my life easier by performing no
-IE 6 testing; <A href=20110417.html>I no longer support
+IE 6 testing; <A href="blog:20110417">I no longer support
 Internet Explorer 6</A>.
 
 <p>

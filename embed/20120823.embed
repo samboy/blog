@@ -40,14 +40,14 @@ dollars or Euros) on the table to even consider looking at the issue.
 </div><br>
 
 The version of Linux that MaraDNS officially supports has been under
-a lot of flux.  Last year, <A href=20110319.html>CentOS was really
+a lot of flux.  Last year, <A href="blog:20110319">CentOS was really
 slow with security updates so I moved over to Scientific Linux</A>.  
 This year, CentOS has finally caught up and Scientific continues to have
 issues with routine security updates breaking things (I had an issue
 last year where a security-only update broke wireless networking; just
 this week a security-only update in Scientific Linux broke X on one of
 my virtual machines).  If CentOS ever lags with security updates again, 
-<A href=20120731.html>I will try out Oracle Linux</A>.
+<A href="blog:20120731">I will try out Oracle Linux</A>.
 
 <p>
 

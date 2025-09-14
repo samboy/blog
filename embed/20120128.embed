@@ -4,7 +4,7 @@
 
 <h2>January 28, 2012</h2>
 
-The code <A href=20111129.html>to give Deadwood finer timestamps</A> has
+The code <A href="blog:20111129">to give Deadwood finer timestamps</A> has
 triggered a regression: For reasons I have not figured out yet, this
 code breaks Deadwood's DNS-over-TCP support.
 

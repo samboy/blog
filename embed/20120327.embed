@@ -7,7 +7,7 @@ of BuyVM's nodes, and give updated reviews of my VPS providers.
 
 <p>
 
-As I have <A href=20110614.html>blogged about before</A>, it is now
+As I have <A href="blog:20110614">blogged about before</A>, it is now
 possible to order a basic virtual machine for under $20 a year.  
 Indeed, this blog is hosted on a network of four such machines with
 failover set up.
@@ -58,7 +58,7 @@ six months.)
 
 <p>
 
-<i>Update: I was finally able to get a BuyVM node <A href=20130101.html>many
+<i>Update: I was finally able to get a BuyVM node <A href="blog:20130101">many
 months later</A></i>
 
 <p>
@@ -66,7 +66,7 @@ months later</A></i>
 <b>123systems.net: Very good service</b>
 </div><br>
 
-I mentioned, <A href=20120205.html>in an earlier blog posting</A>, that
+I mentioned, <A href="blog:20120205">in an earlier blog posting</A>, that
 it is difficult to update CentOS on a basic 128/128 123systems.net
 account.  Indeed, it is, but the procedure is pretty routine once
 I figured it out:
@@ -129,9 +129,9 @@ transfer the files over.
 <p>
 
 See also: 
-<A href=20110614.html>Dirt cheap Linux hosting</A> -
-<A href=20120203.html>Adios cripperz.sg</A> -
-<A href=20120205.html>A brief review of my VPS hosts</A>
+<A href="blog:20110614">Dirt cheap Linux hosting</A> -
+<A href="blog:20120203">Adios cripperz.sg</A> -
+<A href="blog:20120205">A brief review of my VPS hosts</A>
   
 <p>
 

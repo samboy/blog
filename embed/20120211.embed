@@ -4,7 +4,7 @@
 
 <h2>February 11, 2012</h2>
 
-I <A href=20120128.html>recently mentioned</A> that the changes to give
+I <A href="blog:20120128">recently mentioned</A> that the changes to give
 Deadwood finer time stamps was causing one of the TCP regression tests to
 fail. 
 

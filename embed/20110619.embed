@@ -4,7 +4,7 @@
 
 Since @font-face is a relatively new tag, there are a few bugs
 with its implementation in browsers.  I recently discovered that
-<A href=20110606.html>Webkit has an issue printing pages
+<A href="blog:20110606">Webkit has an issue printing pages
 that use @font-face</A> and 
 discovered just yesterday that Internet Explorer 8 has a nasty bug with
 @font-face on a page that uses iframes.  In particular: 

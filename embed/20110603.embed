@@ -6,7 +6,7 @@
 <h2>June 3, 2011</h2>
 
 Well, I'm glad to see my blog is starting to get read.  It would
-seem that <A href=20110529.html>Sunday's rant</A> about wasting all
+seem that <A href="blog:20110529">Sunday's rant</A> about wasting all
 day dealing with things which should just work but do not work in Linux
 has <A href=http://lxer.com/module/forums/t/31801/>gotten some
 attention</A>.
@@ -23,7 +23,7 @@ single moderately successful Windows game.
 
 <p>
 
-Indeed, <A href=20110512.html>I have blogged about internet 
+Indeed, <A href="blog:20110512">I have blogged about internet 
 loudmouths before</A>.  There is scientific evidence that
 Macintosh advocates <A href=http://www.sun-sentinel.com/features/religion/faith-and-values/sfl-fv-blog-apple,0,5968854.story>are
 quite literally religious about their beliefs</A>; Linux advocates are
@@ -90,7 +90,7 @@ absolutely everything works, out of the box. Everything.
 
 I actually have a Ubuntu partition on this computer--same
 chipset as an EEE PC--and <A
-href=20110518.html>it actually does some things better than
+href="blog:20110518">it actually does some things better than
 Windows</A>.  Of course, some things are a pain in the neck
 to set up.  One example: Linux's Calibre ereader is a slow dog compared to
 Amazon's Kindle, for example, and I can't buy ebooks from Amazon 
@@ -108,7 +108,7 @@ run it. Performance-wise it's working very, very well.
 </blockquote>
 
 Static HTML files made by UNIX scripts.  I have
-<A href=20110517.html>blogged</A> <A href=20110306.html>about this</A>
+<A href="blog:20110517">blogged</A> <A href="blog:20110306">about this</A>
 before.
 
 <hr>
@@ -126,7 +126,7 @@ I can honestly say that I didn't click through to the links you listed.
 
 If you click on <A 
 href=http://www.virtualbox.org/ticket/3135>the first link</A> I give
-<A href=20110529.html>in my rant</A>,
+<A href="blog:20110529">in my rant</A>,
 it explains why RHEL 5 (that means: CentOS 5/Scientific Linux 5) has
 a clock slew problem as a Virtual Box guest, and that the problem
 can not be fully fixed without a reinstall.  Which I have done.
@@ -145,7 +145,7 @@ href=old-200902-WinXP-works.html>everything
 worked</A>.  My headaches went away.  I still use Linux, but only as a server
 and only in a virtual machine.  Actually, I would use Linux in a non-VM/server
 role if I ever got an Android development gig, but that's <A 
-href=20110518.html>another story</A>.
+href="blog:20110518">another story</A>.
 <hr>
 
 Not sent to me in email, but in 
@@ -163,7 +163,7 @@ wondering why I'm using Scientific Linux, not one of the posters <A
 href=http://www.google.com/#hl=en&source=hp&q=Scientific+Linux+site:samiam.org>bothered
 to spend 30 seconds Googling the answer</A>.  The first hit using 
 <A href=http://www.google.com/#hl=en&source=hp&q=Scientific+Linux+site:samiam.org>an
-obvious Google search</A> <A href=20110319.html>explains everything</A>.
+obvious Google search</A> <A href="blog:20110319">explains everything</A>.
 
 <p>
 

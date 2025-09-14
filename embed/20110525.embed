@@ -57,7 +57,7 @@ programming the application's logic.
 <p>
 
 I might have had better luck running the system using my 64-bit Linux
-system <A href=20110518.html>which runs the Android SDK noticeably faster</A>,
+system <A href="blog:20110518">which runs the Android SDK noticeably faster</A>,
 but unfortunately I was unable to synchronize App Inventor with its included
 Android emulator in Linux.
 

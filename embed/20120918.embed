@@ -17,7 +17,7 @@ of my struggles making web fonts cross-browser compatible on my web page.
 Once upon a time, one was limited to a very limited selection of
 "<A href=http://www.ampsoft.net/webdesign-l/WindowsMacFonts.html>web safe
 fonts</A>" that one could have on their web page.  This <A 
-href=20110528.html>fairly recently changed</A>, and one can have pretty much
+href="blog:20110528">fairly recently changed</A>, and one can have pretty much
 any font they want on their web page.
 
 <p>
@@ -26,8 +26,8 @@ Kinda, sorta.
 
 <p>
 
-The first challenge, and one <A href=20111023.html>that bit C|Net</A>, is 
-that the <A href=20110719.html>font needs to look good on older systems
+The first challenge, and one <A href="blog:20111023">that bit C|Net</A>, is 
+that the <A href="blog:20110719">font needs to look good on older systems
 without Clear Type or other modern font hinting technologies</A>.  Since
 there are almost no good free proportional fonts that look good using delta
 hinting, my web site design only uses a single custom font for headline
@@ -157,7 +157,7 @@ characters not in either of the languages I speak (English and Spanish).
 
 There are a couple of bugs to keep in mind when using web fonts.  One is
 that webfonts can not be in iframes when using Internet Explorer 8, 
-otherwise <A href=20110619.html>the web fonts do not load at all</A>.  
+otherwise <A href="blog:20110619">the web fonts do not load at all</A>.  
 Annoyingly enough, this bug only shows up when using IE8 natively; 
 things look OK when using IE9 in IE8 render mode.
 
@@ -182,7 +182,7 @@ page look really bad.  The ugly workaround is to disable web fonts in
 these browsers; I describe how to do so in an earlier blog:
 
 <blockquote>
-<A href=20110606.html>http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/blog<![if gt IE 6]>&#8203;<![endif]><wbr>/20110606<![if gt IE 6]>&#8203;<![endif]><wbr>.html</A>
+<A href="blog:20110606">http:/<![if gt IE 6]>&#8203;<![endif]><wbr>/samiam<![if gt IE 6]>&#8203;<![endif]><wbr>.org<![if gt IE 6]>&#8203;<![endif]><wbr>/blog<![if gt IE 6]>&#8203;<![endif]><wbr>/20110606<![if gt IE 6]>&#8203;<![endif]><wbr>.html</A>
 </blockquote>
 
 In addition, web fonts <A 

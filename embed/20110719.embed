@@ -9,7 +9,7 @@ Bitstream Charter for the serif body text, and Source Sans Pro for
 the sans-serif headings).  Also: PT Serif looks a </i>lot<i> nicer
 when using modern font hinting technologies.</i><p>
 
-As I have noted in <A href=20110528.html>an earlier blog entry</A>, is is
+As I have noted in <A href="blog:20110528">an earlier blog entry</A>, is is
 now possible to put just about any font in a web page.  And, indeed, <A
 href=http://google.com/webfonts>Google has a large number of open-source
 fonts</A> to choose from.  All of these free fonts have the same problem:
@@ -40,12 +40,12 @@ at the font size I like to use for text.
 Ubuntu is a beautiful font, and readily readable, even at body text
 sizes.  Indeed, a modified version of it (to reduce loading times) is
 used as the non-body-text font on my webpage.
-However, <A href=20110601.html>as I have noted before</A>, this
+However, <A href="blog:20110601">as I have noted before</A>, this
 is a branding font so its look is a little too distinctive for me to
 be comfortable using it for body text.  It is, roughly speaking, an
 open-source font that fills the niche of Trebuchet.  In fact, on
 places on my webpage where I can't use Ubuntu on IE8 because of a
-<A href=20110619.html>bug it has</A>, I use Trebuchet.
+<A href="blog:20110619">bug it has</A>, I use Trebuchet.
 
 <p>
 

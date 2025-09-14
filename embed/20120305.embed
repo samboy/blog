@@ -2,7 +2,7 @@
 
 <h2>March 5, 2012</h2>
 
-In an <A href=20120218.html>earlier blog entry</A>, I implied that
+In an <A href="blog:20120218">earlier blog entry</A>, I implied that
 Geomyidae, the gopher daemon I am using, has some stability issues
 and crashes.  I was in error; the problem was that the node running
 this gopher daemon has been rebooting a lot and I had not correctly 
@@ -24,7 +24,7 @@ I believe that someone who is truly walking in the path of God
 does not need any rationalization--any need to make excuses--to
 justify their faith.  The fundamentalist needs rationalization
 on top of rationalization--such as the convoluted and intellectually
-dishonest reasoning to justify that <A href=20120304.html>the
+dishonest reasoning to justify that <A href="blog:20120304">the
 massacre of the innocents really happened</A> or that <A href=
 http://www.infidels.org/library/modern/richard_carrier/quirinius.html
 >the census in Luke 2 happened when Herod was still alive</A> to make 

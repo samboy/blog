@@ -15,11 +15,11 @@ from CentOS to Ubuntu LTS.
 
 I have been a RedHat user since 1996. While the RedHat → Fedora Core
 change was annoying, I was able to get back on track with CentOS. CentOS,
-in its community-operated days, <a href="20110319.html">had issues with taking 
+in its community-operated days, <a href="blog:20110319">had issues with taking 
 a long time making new releases available</a>, but was a good stable
 operating system which worked well for me: I had a number of OpenVZ
 nodes running CentOS 6 from the early 2010s which were in operation,
-and up to date with security patches, until <a href="2020-05-29.html">I finally 
+and up to date with security patches, until <a href="blog:2020-05-29">I finally 
 moved on from OpenVZ this year</a>. The long-term support policy made it
 that much easier to keep running my own online servers while being both
 a single parent and working full-time jobs in offices.

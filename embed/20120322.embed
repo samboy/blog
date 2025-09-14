@@ -14,8 +14,8 @@ Deadwood 2.3.
 </div><br>
 
 CVE-2012-1570 is the CVE number assigned for MaraDNS updates made in
-light of the "ghost domain" bug.  I have <A href=20120311.html>already
-updated Deadwood</A> as well as <A href=20120317.html>the legacy MaraDNS
+light of the "ghost domain" bug.  I have <A href="blog:20120311">already
+updated Deadwood</A> as well as <A href="blog:20120317">the legacy MaraDNS
 1 branch</A>; this CVE just formally declares these updates to be serious
 security updates.
 

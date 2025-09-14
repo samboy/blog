@@ -6,7 +6,7 @@
 
 Security fix for MaraDNS 1: Maximum TTL is now one day, to avoid ghost
 domain-style attacks with the legacy version of MaraDNS.  This is akin
-to the <A href=20120311.html>recent Deadwood update</A>.
+to the <A href="blog:20120311">recent Deadwood update</A>.
 
 <p>
 It can be downloaded here:

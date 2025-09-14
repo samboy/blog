@@ -37,7 +37,7 @@ NSD has a perfect security record (no CVE reports) so far.
 <p>
 
 Deadwood, MaraDNS 2.0's resolver, also has a perfect security record (no
-CVE reports)--but there is at least <A href=20120311.html>one security
+CVE reports)--but there is at least <A href="blog:20120311">one security
 bug</A> in older Deadwood releases which deserves a CVE report.
 
 <p>
@@ -45,7 +45,7 @@ bug</A> in older Deadwood releases which deserves a CVE report.
 <b>Desperately seeking a DjbDNS maintainer</b>
 </div><br>
 
-In light of <A href=20120314.html>my recent rant on DjbDNS being
+In light of <A href="blog:20120314">my recent rant on DjbDNS being
 unmaintained</A>, I have been contacting known DjbDNS advocates to see
 if anyone is willing to maintain a fork of DjbDNS.  So far, no one is
 interested, and more than one of these advocates has been downright rude

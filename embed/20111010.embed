@@ -9,7 +9,7 @@
 I must say, I really like the new web site design that
 <A href=http://cnet.com>C|Net</A> rolled out today.  It, however,
 has a significant problem: It uses a font without delta hinting.
-<A href=20110719.html>I recently blogged about why this is an
+<A href="blog:20110719">I recently blogged about why this is an
 issue</A>; there are a number of users using older operating systems
 without clear type or other modern font rendering technologies
 complaining about the font being gray and nay-to-unreadable.

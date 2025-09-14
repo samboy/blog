@@ -3,7 +3,7 @@
 
 <h2>March 24, 2011</h2>
 
-<A href=20110319.html>As I blogged about before</A>, I have made the
+<A href="blog:20110319">As I blogged about before</A>, I have made the
 transition from CentOS 5 to <A href=http://scientificlinux.org>Scientific
 Linux</A> 5.  This affects MaraDNS development because CentOS 5 is no
 longer an officially supported platform.  The officially supported platforms

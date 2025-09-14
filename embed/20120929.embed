@@ -7,8 +7,8 @@
 <h2>September 29, 2012</h2>
 
 In today's blog, I wrap my series on Slashdot which I have written about in <A 
-href=20120903.html>two previous</A> <A 
-href=20120907.html#slashdot>blog entries</A>.
+href="blog:20120903">two previous</A> <A 
+href="blog:20120907"#slashdot>blog entries</A>.
 
 <A name=decline> </A>
 <p>
@@ -29,15 +29,15 @@ years.
 
 <p>
 
-I have <A href=20120907.html#slashdot>already mentioned</A> that one 
+I have <A href="blog:20120907"#slashdot>already mentioned</A> that one 
 reason for Slashdot's decline is that it started catering to the 
 immature pro-piracy crowd.  There are a number of other reasons why
 Slashdot became less appealing:
 
 <ul>
-<li>The flame wars.  Just like <A href=20110111.html>Usenet</A>, 
+<li>The flame wars.  Just like <A href="blog:20110111">Usenet</A>, 
     once Slashdot starting getting popular, it attracted the kinds
-    of <A href=20110512.html>Internet loudmouths</A> that make an
+    of <A href="blog:20110512">Internet loudmouths</A> that make an
     online community unpleasant for everyone else.<p>
 <li>Beating the dead horse of Linux vs. Windows on the desktop.  The
     Slashdot editors never let go of the 1990s Linux vs. Windows on the
@@ -114,7 +114,7 @@ because:
 <li>It discourages anonymity.<p>
 <li>It allows people to fine-tune how public or private their posts
     are.<p>
-<li>It has <A href=20111222.html>killfiles</A>, something lacking with
+<li>It has <A href="blog:20111222">killfiles</A>, something lacking with
     most web-based communities.<p>
 </ul>
 

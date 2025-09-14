@@ -8,7 +8,7 @@
 <b>Better timestamps</b>
 </div><br>
 
-I mentioned <A href=20111113.html>in a recent blog entry</A> my plans
+I mentioned <A href="blog:20111113">in a recent blog entry</A> my plans
 to implement sub-second finer timestamps for Deadwood's time stamps.
 This uses the POSIX-compliant <tt>clock_gettime()</tt> call in Linux
 and the <tt>GetSystemTimeAsFileTime()</tt> call in Windows.  For systems

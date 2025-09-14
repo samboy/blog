@@ -26,7 +26,7 @@ of the SHA-1 attack are similarly scary
 
 <p>
 
-An anonymous poster on <A href=20120929.html>Slashdot</A> posted back
+An anonymous poster on <A href="blog:20120929">Slashdot</A> posted back
 in 2009 <A href=http://it.slashdot.org/comments.pl?sid=1905932&cid=34520692>a
 plausible attack scenario</A> with Git using collisions in SHA-1.
 There was also <A href=

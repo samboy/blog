@@ -9,7 +9,7 @@
 While I only devote one day a month to MaraDNS,
 I was able to update MaraDNS to be immune to the "ghost domain" security bug 
 which hit every single DNS server (including djbdns) this year.  I was
-also able to update Deadwood <A href=20121220.html>with a bunch of bug 
+also able to update Deadwood <A href="blog:20121220">with a bunch of bug 
 fixes</A> as well as update it for CentOS/RHEL 6.  
 
 <p>
@@ -22,7 +22,7 @@ possible to play random maps with this mod.
 
 <p>
 
-In addition, Fritz <A href=20121212.html>made another release of the ObHack 
+In addition, Fritz <A href="blog:20121212">made another release of the ObHack 
 Doom random map generator this year</A>
 
 <p>
