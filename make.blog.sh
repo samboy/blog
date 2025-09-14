@@ -60,9 +60,9 @@ echo \<meta name="viewport" content="width=device-width,initial-scale=1.0,maximu
 echo \</head\>\<body\> >> index.html
 echo \<a name="GitBlogTop"\> \</a\> >> index.html
 echo \<div class=blog\> >> index.html
-echo '<i>Please be aware that this is an archive of my currently' >> index.html
+echo '<i>This is an archive of my currently' >> index.html
 echo 'active blog at <a ' >> index.html
-echo 'href=https://samiam.org/blog>samiam.org</a>.<p>' >> index.html
+echo 'href=https://samiam.org/blog>samiam.org/blog</a>.<p>' >> index.html
 echo '<a href="#GitBlogIndex">Click/tap here for a functional' >> index.html
 echo 'blog index.</a></i>' >> index.html
 echo '</div><div class=blog>' >> index.html
