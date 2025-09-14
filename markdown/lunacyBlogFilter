@@ -490,7 +490,8 @@ function processIDetc(l)
   end
   -- Special blog links (since we handle them differently in the combined
   -- blog compared to the individual blogs on the webpage)
-  if(l:find(mc('<a href=\"blog:'))) then
+  -- Disabled: blogLinks.lua now does this processing
+  if(l:find(mc('<a href=\"blog:')) and false) then
     if globalWebpageBlog then -- https://samiam.org/blog page
       l = l:gsub(mc('(<a href=\")blog:([^"]+)'),'%1%2.html')
     else -- blog archive

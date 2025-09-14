@@ -81,7 +81,7 @@ for a in $( ls embed/*embed | sort -r ) ; do
   YEAR=index
   echo '<a name='$LINK'> </a>' >> $YEAR.html
   echo '<a href="#'$LINK'">'$NAME' ('$DATE')</a></br>' >> foo.html
-  cat $a >> $YEAR.html
+  cat $a | ./BlogLinks.lua >> $YEAR.html
   #echo '<hr class=pc>' >> $YEAR.html
   echo '<div class=GitBlogNav><i>Go to: ' >> $YEAR.html
   echo '<a href="#GitBlogTop">Top</a>' >> $YEAR.html
