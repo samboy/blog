@@ -56,7 +56,7 @@ l = io.read()
 while l do
   if globalWebpageBlog then
     l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
-               '<a href="https:%1.html')
+               '<a href="%1.html')
   else
     l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
                '<a href="#BlogEntry-%1')

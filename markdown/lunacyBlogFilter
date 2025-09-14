@@ -1,10 +1,7 @@
 #!/bin/sh
-globalWebpageBlog=false
 pureASCIIoutput=false
 _rem=--[=[
-# Above are flags which affect how the code runs
-# globalWebpageBlog: true if https://samiam.org/blog page 
-#              false if blog archive (https://samboy.github.io/blog/ etc.)
+# Above is a flag which affects how the code runs
 # pureASCIIoutput: false if you want the blog to output UTF-8
 #             true if you want to instead use HTML entities and pure ASCII
 # POSIX shell wrapper to call correct version of Lua or Lunacy
@@ -488,16 +485,7 @@ function processIDetc(l)
         '<a id="back-' .. name .. '">' ..
         '<a href="#' .. name .. '">' .. linkText .. '</a></a></sup>')
   end
-  -- Special blog links (since we handle them differently in the combined
-  -- blog compared to the individual blogs on the webpage)
-  -- Disabled: blogLinks.lua now does this processing
-  if(l:find(mc('<a href=\"blog:')) and false) then
-    if globalWebpageBlog then -- https://samiam.org/blog page
-      l = l:gsub(mc('(<a href=\")blog:([^"]+)'),'%1%2.html')
-    else -- blog archive
-      l = l:gsub(mc('(<a href=\")blog:([^"]+)'),'%1%#BlogEntry-%2')
-    end 
-  end
+  -- NOTE: BlogLinks.lua now handles special "blog:" links
   -- Allow italics in link text
   l = l:gsub(mc('(<a href=\"[^>]+>[^<]*)_(%r+)_'),'%1<i>%2</i>')
   -- <pre> links should not make the content too wide for a phone screen
