@@ -62,9 +62,8 @@ echo \<a name="GitBlogTop"\> \</a\> >> index.html
 echo \<div class=blog\> >> index.html
 echo '<i>Please be aware that this is an archive of my currently' >> index.html
 echo 'active blog at <a ' >> index.html
-echo 'href=https://samiam.org/blog>samiam.org</a>.' >> index.html
-echo 'Many links in this archive are broken, but one can' >> index.html
-echo '<a href="#GitBlogIndex">click/tap here for a functional' >> index.html
+echo 'href=https://samiam.org/blog>samiam.org</a>.<p>' >> index.html
+echo '<a href="#GitBlogIndex">Click/tap here for a functional' >> index.html
 echo 'blog index.</a></i>' >> index.html
 echo '</div><div class=blog>' >> index.html
 echo \<h1\>Sam Trenholme’s blog\</h1\> >> index.html
