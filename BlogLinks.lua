@@ -55,11 +55,13 @@ exec $LUNACY $0 "$@"
 l = io.read()
 while l do
   if globalWebpageBlog then
-    l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
+    l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"#]+)',
                '<a href="%1.html')
   else
     l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
                '<a href="#BlogEntry-%1')
+    -- We have to handle things like "blog:20120907#20120907-slashdot"
+    l = l:gsub('<a href="#BlogEntry-[0-9-]+(#[^"]+)','<a href="%1')
   end
   print(l)
   l = io.read()
