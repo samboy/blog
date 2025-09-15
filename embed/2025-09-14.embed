@@ -1,0 +1,76 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/2024-05-01.jpg" width=224 height=126>
+</div>
+<h1>Lua sorting again</h1>
+<h2>September 13, 2025</h2>
+An update to the Lua Table sorter. Also, a website I like.
+<a name="2025-09-14-an-updated-lua-table-sorter"> </a>
+<h3>An updated Lua table sorter</h3>
+<p>Like what I posted <a href="blog:2025-09-13">yesterday</a>,
+here is a
+ Lua iterator which goes through elements in a table in sorted order.
+ This routine works like the <code>pairs()</code> function included with
+ Lua:
+<pre style="overflow: scroll">-- Like pairs() but sorted
+function sPairs(inTable, sFunc)
+  if not sFunc then
+    sFunc = function(a, b)
+      local ta = type(a)
+      local tb = type(b)
+      if(ta == tb)
+        then return a &lt; b 
+      end
+      return tostring(ta) &lt;
+             tostring(tb)
+    end
+  end
+  local keyList = {}
+  local index = 1
+  for k,_ in pairs(inTable) do
+    table.insert(keyList,k)
+  end
+  table.sort(keyList, sFunc)
+  return function()
+    key = keyList[index]
+    index = index + 1
+    return key, inTable[key]
+  end
+end
+</pre>
+<p>Example usage of the above function:
+<pre style="overflow: scroll">a={z=1,y=2,c=3,w=4}
+for k,v in sPairs(a) do
+ print(k,v)
+end
+</pre>
+<p>With a sort function:
+<pre style="overflow: scroll">a={z=1,y=2,c=3,w=4}
+function revS(a,b)
+  return a&gt;b
+end
+for k,v in sPairs(a,revS) do
+  print(k,v)
+end
+</pre>
+<p>revS (“Reverse sort”) is a reverse sorter. Note that <code>revS</code>
+ assumes the elements to be sorted are all of the same type.
+<a name="2025-09-14-more-discussion-about-2025s-cancel-culture"> </a>
+<h3>More discussion
+ about 2025’s cancel culture</h3>
+<p>There is some good discussion about 2025’s cancel culture, albeit
+ with a right-of-center bias, over at <a href="https://themotte.org">The Motte</a>.
+In this week’s <a href="https://www.themotte.org/post/3128/culture-war-roundup-for-the-week">“Culture war” discussion</a>,
+some of the discussion is about left-wing
+ people who celebrated Charlie Kirk’s death and whether it’s OK for them
+ to lose their job or what not because of that behavior.
+<p>The Motte is a stand alone forum which started off <a href="https://old.reddit.com/r/themotte">on Reddit</a>
+but became stand alone because of concerns that Reddit was
+ stifling frank open discussion.
+
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>
+
