@@ -1,6 +1,9 @@
 #!/bin/sh
 pureASCIIoutput=false
 _rem=--[=[
+# This script converts the output of HTML doc (1.9.16) in to HTML suitable
+# for putting on my blog.
+#
 # Above is a flag which affects how the code runs
 # pureASCIIoutput: false if you want the blog to output UTF-8
 #             true if you want to instead use HTML entities and pure ASCII
@@ -51,7 +54,7 @@ exec $LUNACY $0 "$@"
 -- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 -- OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
--- mc() is a regex processing engine. For non-ASCII, it assume to be using
+-- mc() is a regex processing engine. For non-ASCII, it assumes to be using
 -- my own Xascii format (a 7-bit representsation of characters in the subset
 -- of Roboto Serif I use for my blog)
 -- A few new character classes are used:
@@ -76,37 +79,46 @@ exec $LUNACY $0 "$@"
 function mc(i)
   local out = ""
   local afterPercent = false
+  local bl = '['
+  local br = ']'
   for a=1,i:len() do
     seek = i:sub(a,a)
     -- Do not mangle anything right after a %
     if seek == "%" and not afterPercent then
       afterPercent = true
+    -- Allow letters and new (lower case) classes inside brackets
+    elseif seek == '[' then
+      bl = ''
+      br = ''
+    elseif seek == ']' then
+      bl = '['
+      br = ']'
     -- Only letters not after a % get mangled
     elseif seek:find("%a") and not afterPercent then
-      out = out .. "[" .. seek:upper() .. seek:lower() .. "]"
+      out = out .. bl .. seek:upper() .. seek:lower() .. br
     -- Other stuff is copied as is
     elseif seek and not afterPercent then
       out = out .. seek
     -- Everything right after a % is passed as-is
     elseif afterPercent then
       if seek == 'b' then -- Blank
-        out = out .. '[\r\n\t\f ]'
+        out = out .. bl .. '\r\n\t\f ' .. br
       elseif seek == 'B' then
         out = out .. '[^\r\n\t\f ]'
       elseif seek == 'g' then -- Uppercase (“grande”)
-        out = out .. '[A-Z\1-\7]'
+        out = out .. bl .. 'A-Z\1-\7' .. br
       elseif seek == 'G' then
         out = out .. '[^A-Z\1-\7]'
       elseif seek == 'm' then -- Lowercase (“mini”)
-        out = out .. '[a-z\17-\23]'
+        out = out .. bl .. 'a-z\17-\23' .. br
       elseif seek == 'M' then
         out = out .. '[^a-z\17-\23]'
       elseif seek == 'r' then -- Alphanumeric (“read”)
-        out = out .. '[A-Za-z0-9\1-\7\17-\23]'
+        out = out .. bl .. 'A-Za-z0-9\1-\7\17-\23' .. br
       elseif seek == 'R' then 
         out = out .. '[^A-Za-z0-9\1-\7\17-\23]'
       elseif seek == 't' then -- All letters (“total”)
-        out = out .. '[A-Za-z\1-\7\17-\23]'
+        out = out .. bl .. 'A-Za-z\1-\7\17-\23' .. br
       elseif seek == 'T' then 
         out = out .. '[^A-Za-z\1-\7\17-\23]'
       else
