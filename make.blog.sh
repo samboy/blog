@@ -38,7 +38,8 @@ echo margin-left: auto\; >> index.html
 echo margin-right: auto\; } >> index.html
 
 # Again, phone screen workarounds
-echo '.blog pre {max-width: 90vw; overflow-x: scroll; }' >> index.html
+echo '.blog pre {max-width: 90vw; overflow-x: scroll; ' >> index.html
+echo 'font-size: 14px; }' >> index.html
 echo '.blog li pre {max-width: 80vw; overflow-x: scroll; }' >> index.html
 echo '.blog table {max-width: 90vw; overflow-x: scroll; }' >> index.html
 echo '.blog tt {max-width: 90vw; overflow-x: scroll; }' >> index.html
