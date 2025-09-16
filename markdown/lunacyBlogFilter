@@ -90,9 +90,11 @@ function mc(i)
     elseif seek == '[' then
       bl = ''
       br = ''
+      out = out .. seek
     elseif seek == ']' then
       bl = '['
       br = ']'
+      out = out .. seek
     -- Only letters not after a % get mangled
     elseif seek:find("%a") and not afterPercent then
       out = out .. bl .. seek:upper() .. seek:lower() .. br
@@ -437,8 +439,16 @@ function processFootnotes()
     end
     for f=1,#globalFootnotes do
       local body = globalFootnotes[f]['body']
-      -- Allow bare links in footnotes
-      body=body:gsub(mc('(https://%B+)'),'<a href="%1">%1</a>')
+      -- Allow fancy links in footnotes
+      -- form is @https://example.com example page@ where “example page”
+      -- is the link text
+      if(body:find(mc('%@(https://%B+)%b([^%@]+)%@'))) then
+        body=body:gsub(mc('%@(https://%B+)%b([^%@]+)%@'),'<a href="%1">%2</a>')
+      else
+        -- Allow bare links in footnotes
+        body=body:gsub(mc('(https://%B+)'),'<a href="%1">%1</a>')
+      end
+      -- Add footnote to page
       print(x('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>'))
       print(x('<a href="#back-' .. globalFootnotes[f]['name'] .. '">' ..
             globalFootnotes[f]['link'] .. '</a>: ' .. body))
@@ -485,8 +495,8 @@ function processIDetc(l)
     local linkText = name
     local fnText = name
     name = name:gsub('([^"]*)".*','%1')
-    linkText = linkText:gsub(mc('[^>]*>%^?(%B+).*$'),'%1')
-    fnText = fnText:gsub(mc('[^>]*%^?%B+([^<]+).*$'),'%1')
+    linkText = linkText:gsub(mc('[^>]*>%b?%^?(%B+).*$'),'%1')
+    fnText = fnText:gsub(mc('[^>]*%b?%^?%B+([^<]+).*$'),'%1')
     globalFootnotes[footnoteIndex] = {}
     name = globalBlogDate .. '-' .. name
     globalFootnotes[footnoteIndex]['name'] = name
