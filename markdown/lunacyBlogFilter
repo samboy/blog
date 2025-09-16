@@ -433,9 +433,9 @@ function processFootnotes()
   local x = XasciiStringConvert
   if(#globalFootnotes > 0) then
     if(#globalFootnotes == 1) then 
-      print "<h3>Footnote</h3>" 
+      print "<h3>Footnote</h3><p>" 
     else
-      print "<h3>Footnotes</h3>" 
+      print "<h3>Footnotes</h3><p>" 
     end
     for f=1,#globalFootnotes do
       local body = globalFootnotes[f]['body']
