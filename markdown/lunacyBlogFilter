@@ -629,6 +629,27 @@ function processStep1(l)
   end
 end
 
+if arg[1] and arg[1] == '--test' then
+  print("Running tests")
+  print("This should output ÁÉÍÑÓÚÜ—•áéíóúñü¿¡→«»♥")
+  local i = "&Aacute;&Eacute;&Iacute;&Ntilde;&Oacute;&Uacute;&Uuml;"
+  i = i .. "&mdash;&bull;&aacute;&eacute;&iacute;&oacute;&uacute;&uuml;"
+  i = i .. "&iquest;&iexcl;&rarr;&laquo;&raquo;&hearts;"
+  local Xa = makeXascii(i)
+  pureASCIIoutput = false
+  print(XasciiStringConvert(Xa))
+  pureASCIIoutput = true
+  if(XasciiStringConvert(Xa) ~= i) then
+    print("XasciiStringConvert (pureASCIIoutput) failed")
+    print("Expecting " .. i)
+    print("Got       " .. XasciiStringConvert(Xa))
+    os.exit(1)
+  else
+    print("XasciiStringConvert (pureASCIIoutput) pass")
+  end
+  os.exit(0)
+end
+
 -- This code is a fairly complicated state machine:
 -- * HTML tags are always on the same line so we can process them
 -- * HTML links are always on the same line so we can process them
