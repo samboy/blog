@@ -61,13 +61,13 @@ exec $LUNACY $0 "$@"
 
 -- '%b' is blank space ('%s' includes the — em dash character)
 -- '%B' is not blank space
--- '%g' (“Grande”) is all uppercase letters
+-- '%g' (“Grande”) is all uppercase letters ('%u' is ASCII only)
 -- '%G' is everything except uppercase letters
--- '%m' (“mini”) is all lowercase letters
+-- '%m' (“mini”) is all lowercase letters ('%l' is ASCII only)
 -- '%M' is everything except lowercase letters
--- '%r' (“read”) is alphanumeric
+-- '%r' (“read”) is alphanumeric ('%w' is ASCII only)
 -- '%R' is everything except alphanumeric
--- '%t' (“total”) is all letters
+-- '%t' (“total”) is all letters ('%a' is ASCII only)
 -- '%T' is everything except letters
 
 -- Do *NOT* use these new classes inside of [] brackets
