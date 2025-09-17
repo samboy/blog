@@ -431,11 +431,15 @@ globalFootnotes = {}
 -- Footnotes
 function processFootnotes()
   local x = XasciiStringConvert
+  -- In a more enlightened world, 'text-indent: -1.1em hanging' would work
+  -- on Chrome and Edge
+  local style = 'margin-left: 1.1em;text-indent: -1.1em;'
+  -- Show footnotes if present
   if(#globalFootnotes > 0) then
     if(#globalFootnotes == 1) then 
-      print '<h3>Footnote</h3><p style="margin-left: 1em;text-indent: -1em;">'
+      print('<h3>Footnote</h3><p style="' .. style .. '">')
     else
-      print '<h3>Footnotes</h3><p style="margin-left: 1em;text-indent: -1em;">'
+      print('<h3>Footnotes</h3><p style="' .. style .. '">')
     end
     for f=1,#globalFootnotes do
       local body = globalFootnotes[f]['body']
@@ -453,7 +457,7 @@ function processFootnotes()
       print(x('<a href="#back-' .. globalFootnotes[f]['name'] .. '">' ..
             globalFootnotes[f]['link'] .. '</a>: ' .. body))
       if f<#globalFootnotes then
-        print('<p style="margin-left: 1em; text-indent: -1em;">')
+        print('<p style="' .. style .. '">')
       else
         print "<p>"
       end
