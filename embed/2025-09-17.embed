@@ -1,0 +1,76 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/CharlieKirk.jpg" width=224 height=126>
+</div>
+<h1>Lua primes; etc.</h1>
+<h2>September 14, 2025</h2>
+A Lua function for finding prime numbers. Also, some links about
+ Charlie Kirk.
+<a name="2025-09-17-finding-primes-in-lua"> </a>
+<h3>Finding primes in Lua</h3>
+<p>This Lua function files all primes between 2 and <code>a</code>, and
+ returns the list of primes in an array:
+<pre style="overflow: scroll">function primes(a)
+  local out = {2}
+  local inComposite = false
+  local c = 1
+  for b=3,a,2 do
+    isComposite = false
+    c = 1
+    while out[c]*out[c] &lt;= b
+        do
+      if(b/out[c] ==
+         math.floor(b/out[c]))
+      then
+        isComposite = true
+        break
+      end
+      c = c + 1
+    end
+    if not isComposite then
+      out[#out + 1] = b
+    end
+  end
+  return out
+end
+</pre>
+<p>Here’s a function for printing array elements:
+<pre style="overflow: scroll">function listArray(a)
+  local out = ""
+  for b=1,#a do
+    out = out .. 
+          tostring(a[b]) 
+          .. " "
+  end
+  return out
+end
+</pre>
+<p>Example usage of the above functions:
+<pre style="overflow: scroll">print(listArray(primes(99)))
+</pre>
+<a name="2025-09-17-charlie-kirk-and-ryan-carson"> </a>
+<h3>Charlie Kirk and Ryan Carson</a>
+</h3>
+<p>Ryan Carson is someone who died in 2023. People on the right did some
+ amount of dancing on his grave after he died; how bad that dancing was
+ is something I will leave to the reader. Here is how the right reacted
+ to his death: <a href="https://archive.ph/SfpJa">The Voice of Thy Brother’s Blood</a>
+- <a href="https://archive.ph/gYazW">REVEALED: Murdered leftist activist Ryan Carson has history of celebrating  death, violence towards conservatives</a>
+<p>Charlie Kirk is someone I have already <a href="blog:2025-09-13">talked about</a>
+in <a href="blog:2025-09-11">previous blogs</a>.
+In
+ terms of the left dancing on his grave, as a point of comparison, here
+ is how someone on the left reacted to Charlie Kirk’s death: <a href="https://archive.ph/BaEFv">The World Is a Better Place Without Charlie Kirk  In It</a>
+<p>Looking at this <a href="https://www.youtube.com/watch?v=7JRWZ13JXtw">short YouTube video of Charlie  Kirk</a>,
+he comes off as someone very
+ compassionate, even to people who have a very different standard of
+ morality than the morality he had—a morality which I myself have (I
+ have <em>never</em> had sex outside of a lifetime monogamous
+ commitment).
+
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>
+
