@@ -221,7 +221,9 @@ function entity2utf8(entity)
   g["&mdash;"]='—' g["&lsquo;"]='‘' g["&rsquo;"]='’' g["&ldquo;"]='“'
   g["&rdquo;"]='”' g["&laquo;"]='«' g["&raquo;"]='»' g["&iexcl;"]='¡'
   g["&iquest;"]='¿' g["&copy;"]='©' g["&hearts;"]='♥' g["&rarr;"]='→'
-  g["&bull;"]='•'
+  g["&bull;"]='•' 
+  -- ASCII
+  g["&quot;"] = '"'
   -- Preserve entities which are metachars in HTML
   g["&lt;"] = "&lt;" g["&gt;"] = "&gt;" g["&amp;"] = "&amp;"
 
@@ -232,6 +234,7 @@ end
 -- Let’s convert an entity in to my Xascii format
 function entity2Xascii(entity)
   local g = {} 
+  -- non-ASCII
   g["&Aacute;"] = "\1" g["&Eacute;"] = "\2" g["&Iacute;"] = "\3"
   g["&Ntilde;"] = "\4" g["&Oacute;"] = "\5" g["&Uacute;"] = "\6"
   g["&Uuml;"] = "\7" g["&iexcl;"] = "\8" g["&mdash;"] = "\11" 
@@ -241,6 +244,8 @@ function entity2Xascii(entity)
   g["&uuml;"] = "\23" g["&iquest;"] = "\24" g["&lsquo;"] = "\25" 
   g["&rsquo;"] = "\26" g["&rarr;"] = "\28" g["&ldquo;"] = "\29" 
   g["&rdquo;"] = "\30" g["&copy;"] = "\31" g["&hearts;"] = "\127"
+  -- ASCII
+  g["&quot;"] = '"'
   -- Preserve entities which are metachars in HTML
   g["&lt;"] = "&lt;" g["&gt;"] = "&gt;" g["&amp;"] = "&amp;"
 
@@ -631,10 +636,10 @@ end
 
 if arg[1] and arg[1] == '--test' then
   print("Running tests")
-  print("This should output ÁÉÍÑÓÚÜ—•áéíóúñü¿¡→«»♥")
+  print("This should output ÁÉÍÑÓÚÜ—•áéíóúñü¿¡→«»♥ \" ' \"")
   local i = "&Aacute;&Eacute;&Iacute;&Ntilde;&Oacute;&Uacute;&Uuml;"
   i = i .. "&mdash;&bull;&aacute;&eacute;&iacute;&oacute;&uacute;&uuml;"
-  i = i .. "&iquest;&iexcl;&rarr;&laquo;&raquo;&hearts;"
+  i = i .. "&iquest;&iexcl;&rarr;&laquo;&raquo;&hearts; \" ' \" "
   local Xa = makeXascii(i)
   pureASCIIoutput = false
   print(XasciiStringConvert(Xa))
