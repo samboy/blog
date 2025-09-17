@@ -433,9 +433,9 @@ function processFootnotes()
   local x = XasciiStringConvert
   if(#globalFootnotes > 0) then
     if(#globalFootnotes == 1) then 
-      print '<h3>Footnote</h3><p style="text-indent: 1em hanging;">' 
+      print '<h3>Footnote</h3><p style="margin-left: 1em;text-indent: -1em;">'
     else
-      print '<h3>Footnotes</h3><p style="text-indent: 1em hanging;">' 
+      print '<h3>Footnotes</h3><p style="margin-left: 1em;text-indent: -1em;">'
     end
     for f=1,#globalFootnotes do
       local body = globalFootnotes[f]['body']
@@ -453,7 +453,7 @@ function processFootnotes()
       print(x('<a href="#back-' .. globalFootnotes[f]['name'] .. '">' ..
             globalFootnotes[f]['link'] .. '</a>: ' .. body))
       if f<#globalFootnotes then
-        print('<p style="text-indent: 1em hanging;">')
+        print('<p style="margin-left: 1em; text-indent: -1em;">')
       else
         print "<p>"
       end
