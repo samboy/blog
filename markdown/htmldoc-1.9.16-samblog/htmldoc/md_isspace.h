@@ -6,5 +6,9 @@
 
 #ifndef _MD_ISSPACE_H_
 #define _MD_ISSPACE_H_
-#define md_isspace(codepoint) isspace(codepoint)
+int md_isspace(char codepoint) {
+        if(codepoint == 32 || codepoint == 9 || codepoint == 10 ||
+           codepoint == 12 || codepoint == 13) return 1;
+        return 0;
+}
 #endif 
