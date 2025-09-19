@@ -40,5 +40,5 @@ cat foo.md | ./utf8toX2 > foo
 mv foo foo.md
 htmldoc-1.9.16-samblog foo.md 2>/dev/null | \
 	./lunacyBlogFilter ${BASE}
-#rm -f foo.md
+rm -f foo.md
 
