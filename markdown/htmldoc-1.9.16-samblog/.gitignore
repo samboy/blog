@@ -24,6 +24,7 @@ htmldoc/iso8859.o
 htmldoc/license.o
 htmldoc/markdown.o
 htmldoc/md5.o
+htmldoc/md_isspace.o
 htmldoc/mmd.o
 htmldoc/progress.o
 htmldoc/ps-pdf.o

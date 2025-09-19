@@ -6,5 +6,11 @@
 
 #ifndef _MD_ISSPACE_H_
 #define _MD_ISSPACE_H_
-#define md_isspace(codepoint) isspace(codepoint)
+#  ifdef __cplusplus
+extern "C" {
+#  endif /* __cplusplus */
+int md_isspace(int codepoint);
+#  ifdef __cplusplus
+}
+#  endif /* __cplusplus */
 #endif 

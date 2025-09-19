@@ -29,6 +29,7 @@ COMMONOBJS =	array.o \
 		image.o \
 		iso8859.o \
 		md5.o \
+		md_isspace.o \
 		progress.o \
 		snprintf.o \
 		string.o \
