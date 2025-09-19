@@ -36,7 +36,9 @@ fi
 # Sometimes htmldoc crashes if there’s too much whitespace at the end of
 # a line
 cat $FILENAME | awk '{sub(/ +$/," ");print}' > foo.md
-htmldoc-1.9.16-samblog --charset utf-8 foo.md 2>/dev/null | \
+cat foo.md | ./utf8toX2 > foo
+mv foo foo.md
+htmldoc-1.9.16-samblog foo.md 2>/dev/null | \
 	./lunacyBlogFilter ${BASE}
-rm -f foo.md
+#rm -f foo.md
 
