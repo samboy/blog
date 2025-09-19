@@ -51,6 +51,7 @@
  * Include necessary headers...
  */
 
+#include "md_isspace.h"
 #include "mmd.h"
 #include <stdlib.h>
 #include <ctype.h>
@@ -356,7 +357,7 @@ mmdGetMetadata(mmd_t	  *doc,		/* I - Document */
       continue;
 
     value = current->text + prefix_len;
-    while (isspace(*value & 255))
+    while (md_isspace(*value & 255))
       value ++;
 
     return (value);
@@ -555,7 +556,7 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
 
     linestart = lineptr;
 
-    while (isspace(*lineptr & 255))
+    while (md_isspace(*lineptr & 255))
       lineptr ++;
 
     DEBUG2_printf("	line indent=%d\n", (int)(lineptr - line));
@@ -583,12 +584,12 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
       */
 
       lineptr ++;
-      if (isspace(*lineptr & 255))
+      if (md_isspace(*lineptr & 255))
 	lineptr ++;
 
       linestart = lineptr;
 
-      while (isspace(*lineptr & 255))
+      while (md_isspace(*lineptr & 255))
 	lineptr ++;
     }
     else if (*lineptr != '>' && stackptr > stack && stack[1].parent->type == MMD_TYPE_BLOCK_QUOTE && (!block || *lineptr == '\n' || mmd_is_chars(lineptr, "- \t", 3) || mmd_is_chars(lineptr, "_ \t", 3) || mmd_is_chars(lineptr, "* \t", 3)))
@@ -695,7 +696,7 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
 
       while ((lineptr = mmd_read_line(&file, line, sizeof(line))) != NULL)
       {
-	while (isspace(*lineptr & 255))
+	while (md_isspace(*lineptr & 255))
 	  lineptr ++;
 
 	if (!strncmp(lineptr, "---", 3) || !strncmp(lineptr, "...", 3))
@@ -718,7 +719,7 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
       lineptr += 3;
       while (*lineptr == ch)
 	lineptr ++;
-      while (isspace(*lineptr & 255))
+      while (md_isspace(*lineptr & 255))
 	lineptr ++;
 
       if (!*lineptr)
@@ -760,7 +761,7 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
       linestart = lineptr;
       newindent = linestart - line;
 
-      while (isspace(*lineptr & 255))
+      while (md_isspace(*lineptr & 255))
 	lineptr ++;
 
       while (stackptr > stack && stackptr->indent > newindent)
@@ -823,7 +824,7 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
 	linestart = lineptr;
 	newindent = linestart - line;
 
-	while (isspace(*lineptr & 255))
+	while (md_isspace(*lineptr & 255))
 	  lineptr ++;
 
 	while (stackptr > stack && stackptr->indent > newindent)
@@ -880,7 +881,7 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
       while (*temp == '#')
 	temp ++;
 
-      if ((temp - lineptr) <= 6 && isspace(*temp & 255))
+      if ((temp - lineptr) <= 6 && md_isspace(*temp & 255))
       {
        /*
 	* Heading 1-6...
@@ -894,7 +895,7 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
 	*/
 
 	lineptr = temp;
-	while (isspace(*lineptr & 255))
+	while (md_isspace(*lineptr & 255))
 	  lineptr ++;
 
 	linestart = lineptr;
@@ -904,13 +905,13 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
 	*/
 
 	temp = lineptr + strlen(lineptr) - 1;
-	while (temp > lineptr && isspace(*temp & 255))
+	while (temp > lineptr && md_isspace(*temp & 255))
 	  *temp-- = '\0';
 	while (temp > lineptr && *temp == '#')
 	  temp --;
-	if (isspace(*temp & 255))
+	if (md_isspace(*temp & 255))
 	{
-	  while (temp > lineptr && isspace(*temp & 255))
+	  while (temp > lineptr && md_isspace(*temp & 255))
 	    *temp-- = '\0';
 	}
 	else if (temp == lineptr)
@@ -1053,10 +1054,10 @@ mmdLoadFile(FILE *fp)			/* I - File to load */
 	  * Process separator row for alignment...
 	  */
 
-	  while (isspace(*start & 255))
+	  while (md_isspace(*start & 255))
 	    start ++;
 
-	  for (end = start + strlen(start) - 1; end > start && isspace(*end & 255); end --)
+	  for (end = start + strlen(start) - 1; end > start && md_isspace(*end & 255); end --)
 	    ;				/* Find the last non-space character */
 
 	  if (*start == ':' && *end == ':')
@@ -1296,13 +1297,13 @@ mmd_has_continuation(
 
   do
   {
-    while (isspace(*lineptr & 255))
+    while (md_isspace(*lineptr & 255))
       lineptr ++;
 
     if (*lineptr == '[' && (lineptr - line - indent) < 4 && (*fileptr == ' ' || *fileptr == '\t'))
       return (1);
 
-    while (isspace(*fileptr & 255))
+    while (md_isspace(*fileptr & 255))
       fileptr ++;
 
     if (*lineptr == '>' && *fileptr == '>')
@@ -1316,12 +1317,12 @@ mmd_has_continuation(
     if (*fileptr == '\n' || *fileptr == '\r')
       return (0);
   }
-  while (isspace(*lineptr & 255) || isspace(*fileptr & 255));
+  while (md_isspace(*lineptr & 255) || md_isspace(*fileptr & 255));
 
   if (*lineptr == '#')
     return (0);
 
-  if (strchr("-+*", *fileptr) && isspace(fileptr[1] & 255))
+  if (strchr("-+*", *fileptr) && md_isspace(fileptr[1] & 255))
   {
    /*
     * Bullet list item...
@@ -1415,7 +1416,7 @@ mmd_is_chars(const char *lineptr,	/* I - Current line */
     }
   }
 
-  while (*lineptr && isspace(*lineptr & 255) && *lineptr != '\n')
+  while (*lineptr && md_isspace(*lineptr & 255) && *lineptr != '\n')
     lineptr ++;
 
   if ((*lineptr && *lineptr != '\n') || found_ch < minchars)
@@ -1466,14 +1467,14 @@ mmd_is_codefence(char	*lineptr,	/* I - Line */
     if (match == '`' && strchr(lineptr, match))
       return (0);
 
-    while (isspace(*lineptr & 255))
+    while (md_isspace(*lineptr & 255))
       lineptr ++;
 
     if (*lineptr && language)
     {
       *language = lineptr;
 
-      while (*lineptr && !isspace(*lineptr & 255))
+      while (*lineptr && !md_isspace(*lineptr & 255))
 	lineptr ++;
       *lineptr = '\0';
     }
@@ -1545,7 +1546,7 @@ mmd_parse_inline(_mmd_doc_t *doc,	/* I - Document */
   {
     DEBUG2_printf("mmd_parse_inline: lineptr=%p(\"%32.32s...\"), type=%d, text=%p, whitespace=%d\n", lineptr, lineptr, type, text, whitespace);
 
-    if (isspace(*lineptr & 255) && type != MMD_TYPE_CODE_TEXT)
+    if (md_isspace(*lineptr & 255) && type != MMD_TYPE_CODE_TEXT)
     {
       if (text)
       {
@@ -1691,7 +1692,7 @@ mmd_parse_inline(_mmd_doc_t *doc,	/* I - Document */
 	delimlen = strlen(delim);
       }
 
-      if (type == MMD_TYPE_NORMAL_TEXT && delim && ((end = strstr(lineptr + delimlen, delim)) == NULL || end == (lineptr + delimlen) || isspace(end[-1] & 255)))
+      if (type == MMD_TYPE_NORMAL_TEXT && delim && ((end = strstr(lineptr + delimlen, delim)) == NULL || end == (lineptr + delimlen) || md_isspace(end[-1] & 255)))
       {
 	if (!text)
 	  text = lineptr;
@@ -1716,7 +1717,7 @@ mmd_parse_inline(_mmd_doc_t *doc,	/* I - Document */
 
       if (type == MMD_TYPE_NORMAL_TEXT)
       {
-	if (!strncmp(lineptr, delim, delimlen) && !isspace(lineptr[delimlen] & 255))
+	if (!strncmp(lineptr, delim, delimlen) && !md_isspace(lineptr[delimlen] & 255))
 	{
 	  type = delimlen == 2 ? MMD_TYPE_STRONG_TEXT : MMD_TYPE_EMPHASIZED_TEXT;
 	  text = lineptr + delimlen;
@@ -1749,7 +1750,7 @@ mmd_parse_inline(_mmd_doc_t *doc,	/* I - Document */
 	whitespace = 0;
       }
 
-      if (!isspace(lineptr[2] & 255) && type == MMD_TYPE_NORMAL_TEXT)
+      if (!md_isspace(lineptr[2] & 255) && type == MMD_TYPE_NORMAL_TEXT)
       {
 	type = MMD_TYPE_STRUCK_TEXT;
 	text = lineptr + 2;
@@ -1802,7 +1803,7 @@ mmd_parse_inline(_mmd_doc_t *doc,	/* I - Document */
 	{
 	  char	*textptr = lineptr;
 
-	  while (textptr > text && isspace(textptr[-1] & 255))
+	  while (textptr > text && md_isspace(textptr[-1] & 255))
 	    textptr --;
 
 	  *textptr = '\0';
@@ -1837,11 +1838,11 @@ mmd_parse_inline(_mmd_doc_t *doc,	/* I - Document */
 	type	= MMD_TYPE_CODE_TEXT;
 	lineptr += delimlen - 1;
 
-	if (isspace(lineptr[1] & 255))
+	if (md_isspace(lineptr[1] & 255))
 	{
 	  whitespace = 1;
 
-	  while (isspace(lineptr[1] & 255))
+	  while (md_isspace(lineptr[1] & 255))
 	    lineptr ++;
 	}
 
@@ -1929,7 +1930,7 @@ mmd_parse_link(_mmd_doc_t *doc,		/* I - Document */
 
     while (*lineptr && *lineptr != ')')
     {
-      if (isspace(*lineptr & 255))
+      if (md_isspace(*lineptr & 255))
 	*lineptr = '\0';
       else if (*lineptr == '\"' || *lineptr == '\'')
       {
@@ -1963,7 +1964,7 @@ mmd_parse_link(_mmd_doc_t *doc,		/* I - Document */
 
     while (*lineptr && *lineptr != ']')
     {
-      if (isspace(*lineptr & 255))
+      if (md_isspace(*lineptr & 255))
 	*lineptr = '\0';
       else if (*lineptr == '\\' && lineptr[1])
       {
@@ -2003,18 +2004,18 @@ mmd_parse_link(_mmd_doc_t *doc,		/* I - Document */
     */
 
     lineptr ++;
-    while (*lineptr && isspace(*lineptr & 255))
+    while (*lineptr && md_isspace(*lineptr & 255))
       lineptr ++;
 
     *url = lineptr;
 
-    while (*lineptr && !isspace(*lineptr & 255))
+    while (*lineptr && !md_isspace(*lineptr & 255))
       lineptr ++;
 
     if (*lineptr)
     {
       *lineptr++ = '\0';
-      while (*lineptr && isspace(*lineptr & 255))
+      while (*lineptr && md_isspace(*lineptr & 255))
 	lineptr ++;
 
       if (*lineptr == '\"' || *lineptr == '\'')

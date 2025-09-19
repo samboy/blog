@@ -29,6 +29,7 @@
 #endif // __hpux
 
 /*#define DEBUG*/
+#include "md_isspace.h"
 #include "htmldoc.h"
 #include "markdown.h"
 #include "md5-private.h"
@@ -1565,7 +1566,7 @@ pspdf_prepare_heading(int   page,	// I - Page number
 
       hfi = strtol((char*)((*format) + 8), &hfp, 10);
 
-      if (hfi < 0 || hfi >= MAX_HF_IMAGES || !(isspace(*hfp) || !*hfp))
+      if (hfi < 0 || hfi >= MAX_HF_IMAGES || !(md_isspace(*hfp) || !*hfp))
         progress_error(HD_ERROR_BAD_HF_STRING,
 	               "Bad $HFIMAGE... substitution on page %d.", page + 1);
       else
@@ -5598,7 +5599,7 @@ parse_pre(tree_t *t,		/* I - Tree to parse */
   if (flat->markup == MARKUP_NONE && flat->data != NULL)
   {
     // Skip leading blank line, if present...
-    for (dataptr = flat->data; isspace(*dataptr); dataptr ++);
+    for (dataptr = flat->data; md_isspace(*dataptr); dataptr ++);
 
     if (!*dataptr)
     {
@@ -7567,14 +7568,14 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
   for (comment = (const char *)t->data; *comment;)
   {
     // Skip leading whitespace...
-    while (isspace(*comment))
+    while (md_isspace(*comment))
       comment ++;
 
     if (!*comment)
       break;
 
     if (strncasecmp(comment, "PAGE BREAK", 10) == 0 &&
-	(!comment[10] || isspace(comment[10])))
+	(!comment[10] || md_isspace(comment[10])))
     {
      /*
       * <!-- PAGE BREAK --> generates a page break...
@@ -7598,7 +7599,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       tof = 1;
     }
     else if (strncasecmp(comment, "NEW PAGE", 8) == 0 &&
-	     (!comment[8] || isspace(comment[8])))
+	     (!comment[8] || md_isspace(comment[8])))
     {
      /*
       * <!-- NEW PAGE --> generates a page break...
@@ -7622,7 +7623,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       tof = 1;
     }
     else if (strncasecmp(comment, "NEW SHEET", 9) == 0 &&
-	     (!comment[9] || isspace(comment[9])))
+	     (!comment[9] || md_isspace(comment[9])))
     {
      /*
       * <!-- NEW SHEET --> generate a page break to a new sheet...
@@ -7667,7 +7668,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       tof = 1;
     }
     else if (strncasecmp(comment, "HALF PAGE", 9) == 0 &&
-             (!comment[9] || isspace(comment[9])))
+             (!comment[9] || md_isspace(comment[9])))
     {
      /*
       * <!-- HALF PAGE --> Go to the next half page.  If in the
@@ -7715,7 +7716,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
 
       comment += 5;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -7744,7 +7745,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       *x = *left;
 
       // Skip amount...
-      while (*comment && !isspace(*comment))
+      while (*comment && !md_isspace(*comment))
         comment ++;
     }
     else if (strncasecmp(comment, "MEDIA COLOR ", 12) == 0)
@@ -7752,7 +7753,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Media color for page...
       comment += 12;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -7801,7 +7802,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       else
       {
 	for (ptr = pages[*page].media_color;
-             *comment && !isspace(*comment);
+             *comment && !md_isspace(*comment);
 	     comment ++)
           if (ptr < (pages[*page].media_color +
 	             sizeof(pages[*page].media_color) - 1))
@@ -7815,7 +7816,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Media position for page...
       comment += 15;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -7851,7 +7852,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       pages[*page].media_position = atoi(comment);
 
       // Skip position...
-      while (*comment && !isspace(*comment))
+      while (*comment && !md_isspace(*comment))
         comment ++;
     }
     else if (strncasecmp(comment, "MEDIA TYPE ", 11) == 0)
@@ -7859,7 +7860,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Media type for page...
       comment += 11;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -7908,7 +7909,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       else
       {
 	for (ptr = pages[*page].media_type;
-             *comment && !isspace(*comment);
+             *comment && !md_isspace(*comment);
 	     comment ++)
           if (ptr < (pages[*page].media_type +
 	             sizeof(pages[*page].media_type) - 1))
@@ -7922,7 +7923,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Media size...
       comment += 11;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -7979,7 +7980,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       pages[*page].length = PageLength;
 
       // Skip width...
-      while (*comment && !isspace(*comment))
+      while (*comment && !md_isspace(*comment))
         comment ++;
     }
     else if (strncasecmp(comment, "MEDIA LEFT ", 11) == 0)
@@ -7987,7 +7988,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Left margin...
       comment += 11;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -8028,7 +8029,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       *right = PagePrintWidth - *right;
 
       // Skip left...
-      while (*comment && !isspace(*comment))
+      while (*comment && !md_isspace(*comment))
         comment ++;
     }
     else if (strncasecmp(comment, "MEDIA RIGHT ", 12) == 0)
@@ -8036,7 +8037,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Right margin...
       comment += 12;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -8077,7 +8078,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       *right = PagePrintWidth - *right;
 
       // Skip right...
-      while (*comment && !isspace(*comment))
+      while (*comment && !md_isspace(*comment))
         comment ++;
     }
     else if (strncasecmp(comment, "MEDIA BOTTOM ", 13) == 0)
@@ -8085,7 +8086,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Bottom margin...
       comment += 13;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -8126,7 +8127,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       *y   = *top;
 
       // Skip bottom...
-      while (*comment && !isspace(*comment))
+      while (*comment && !md_isspace(*comment))
         comment ++;
     }
     else if (strncasecmp(comment, "MEDIA TOP ", 10) == 0)
@@ -8134,7 +8135,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Top margin...
       comment += 10;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -8176,7 +8177,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       *y   = *top;
 
       // Skip top...
-      while (*comment && !isspace(*comment))
+      while (*comment && !md_isspace(*comment))
         comment ++;
     }
     else if (strncasecmp(comment, "MEDIA LANDSCAPE ", 16) == 0)
@@ -8184,7 +8185,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Landscape on/off...
       comment += 16;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -8251,7 +8252,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       *y = *top;
 
       // Skip landscape...
-      while (*comment && !isspace(*comment))
+      while (*comment && !md_isspace(*comment))
         comment ++;
     }
     else if (strncasecmp(comment, "MEDIA DUPLEX ", 13) == 0)
@@ -8259,7 +8260,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Duplex printing on/off...
       comment += 13;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -8311,7 +8312,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       }
 
       // Skip duplex...
-      while (*comment && !isspace(*comment))
+      while (*comment && !md_isspace(*comment))
         comment ++;
     }
     else if (strncasecmp(comment, "HEADER ", 7) == 0)
@@ -8319,7 +8320,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Header string...
       comment += 7;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (para != NULL && para->child != NULL)
@@ -8332,17 +8333,17 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
 	tof = (*y >= *top);
       }
 
-      if (strncasecmp(comment, "LEFT", 4) == 0 && isspace(comment[4]))
+      if (strncasecmp(comment, "LEFT", 4) == 0 && md_isspace(comment[4]))
       {
         pos     = 0;
 	comment += 4;
       }
-      else if (strncasecmp(comment, "CENTER", 6) == 0 && isspace(comment[6]))
+      else if (strncasecmp(comment, "CENTER", 6) == 0 && md_isspace(comment[6]))
       {
         pos     = 1;
 	comment += 6;
       }
-      else if (strncasecmp(comment, "RIGHT", 5) == 0 && isspace(comment[5]))
+      else if (strncasecmp(comment, "RIGHT", 5) == 0 && md_isspace(comment[5]))
       {
         pos     = 2;
 	comment += 5;
@@ -8354,7 +8355,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
 	return;
       }
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (*comment != '\"')
@@ -8430,7 +8431,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // First page header string...
       comment += 8;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (para != NULL && para->child != NULL)
@@ -8443,17 +8444,17 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
 	tof = (*y >= *top);
       }
 
-      if (strncasecmp(comment, "LEFT", 4) == 0 && isspace(comment[4]))
+      if (strncasecmp(comment, "LEFT", 4) == 0 && md_isspace(comment[4]))
       {
         pos     = 0;
 	comment += 4;
       }
-      else if (strncasecmp(comment, "CENTER", 6) == 0 && isspace(comment[6]))
+      else if (strncasecmp(comment, "CENTER", 6) == 0 && md_isspace(comment[6]))
       {
         pos     = 1;
 	comment += 6;
       }
-      else if (strncasecmp(comment, "RIGHT", 5) == 0 && isspace(comment[5]))
+      else if (strncasecmp(comment, "RIGHT", 5) == 0 && md_isspace(comment[5]))
       {
         pos     = 2;
 	comment += 5;
@@ -8465,7 +8466,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
 	return;
       }
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (*comment != '\"')
@@ -8531,7 +8532,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // Footer string...
       comment += 7;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (para != NULL && para->child != NULL)
@@ -8544,17 +8545,17 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
 	tof = (*y >= *top);
       }
 
-      if (strncasecmp(comment, "LEFT", 4) == 0 && isspace(comment[4]))
+      if (strncasecmp(comment, "LEFT", 4) == 0 && md_isspace(comment[4]))
       {
         pos     = 0;
 	comment += 4;
       }
-      else if (strncasecmp(comment, "CENTER", 6) == 0 && isspace(comment[6]))
+      else if (strncasecmp(comment, "CENTER", 6) == 0 && md_isspace(comment[6]))
       {
         pos     = 1;
 	comment += 6;
       }
-      else if (strncasecmp(comment, "RIGHT", 5) == 0 && isspace(comment[5]))
+      else if (strncasecmp(comment, "RIGHT", 5) == 0 && md_isspace(comment[5]))
       {
         pos     = 2;
 	comment += 5;
@@ -8566,7 +8567,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
 	return;
       }
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (*comment != '\"')
@@ -8632,7 +8633,7 @@ parse_comment(tree_t *t,	/* I - Tree to parse */
       // N-up printing...
       comment += 10;
 
-      while (isspace(*comment))
+      while (md_isspace(*comment))
 	comment ++;
 
       if (!*comment)
@@ -9319,10 +9320,10 @@ get_cell_size(tree_t *t,		// I - Cell
 
             frag_width = 0.0f;
 	  }
-          else if (!temp->preformatted && temp->data != NULL && temp->data[0] && (isspace(temp->data[0]) || (temp->data[0] && isspace(temp->data[strlen((char *)temp->data) - 1]))))
+          else if (!temp->preformatted && temp->data != NULL && temp->data[0] && (md_isspace(temp->data[0]) || (temp->data[0] && md_isspace(temp->data[strlen((char *)temp->data) - 1]))))
 	  {
 	    // Check required width...
-	    if (isspace(temp->data[0]))
+	    if (md_isspace(temp->data[0]))
 	      frag_width = temp->width + 1;
 	    else
               frag_width += temp->width + 1;
@@ -9334,7 +9335,7 @@ get_cell_size(tree_t *t,		// I - Cell
               minw = frag_width;
 	    }
 
-	    if (!isspace(temp->data[0]))
+	    if (!md_isspace(temp->data[0]))
               frag_width = 0.0f;
 
             DEBUG_printf(("frag_width=%.1f after whitespace processing...\n",
@@ -12262,7 +12263,7 @@ write_text(FILE     *out,	/* I - Output file */
 
   // Quick optimization - don't output spaces...
   for (ptr = r->data.text.buffer; *ptr; ptr ++)
-    if (!isspace(*ptr) && *ptr != 0xa0)
+    if (!md_isspace(*ptr) && *ptr != 0xa0)
       break;
 
   if (!*ptr)

@@ -12,6 +12,7 @@
  * Include necessary headers.
  */
 
+#include "md_isspace.h"
 #include "htmldoc.h"
 #include "http.h"
 #include <ctype.h>
@@ -329,7 +330,7 @@ htmlReadFile(tree_t     *parent,	// I - Parent tree entry
 
     if (parent == NULL || !parent->preformatted)
     {
-      while (isspace(ch))
+      while (md_isspace(ch))
       {
 	if (ch == '\n')
 	  linenum ++;
@@ -400,7 +401,7 @@ htmlReadFile(tree_t     *parent,	// I - Parent tree entry
 
       ch = getc(fp);
 
-      if (isspace(ch) || ch == '=' || ch == '<')
+      if (md_isspace(ch) || ch == '=' || ch == '<')
       {
        /*
         * Sigh...  "<" followed by anything but an element name is
@@ -810,7 +811,7 @@ htmlReadFile(tree_t     *parent,	// I - Parent tree entry
 	have_whitespace = 0;
       }
 
-      while (!isspace(ch) && ch != '<' && ch != EOF && ptr < (s + sizeof(s) - 1))
+      while (!md_isspace(ch) && ch != '<' && ch != EOF && ptr < (s + sizeof(s) - 1))
       {
         if (ch == '&')
         {
@@ -878,7 +879,7 @@ htmlReadFile(tree_t     *parent,	// I - Parent tree entry
       if (ch == '\n')
 	linenum ++;
 
-      if (isspace(ch))
+      if (md_isspace(ch))
         have_whitespace = 1;
 
       *ptr = '\0';
@@ -1166,13 +1167,13 @@ htmlReadFile(tree_t     *parent,	// I - Parent tree entry
 
             for (ptr = face; *ptr;)
 	    {
-	      while (isspace(*ptr) || *ptr == ',')
+	      while (md_isspace(*ptr) || *ptr == ',')
 	        ptr ++;
 
               if (!*ptr)
 	        break;
 
-	      for (fontptr = font; *ptr && *ptr != ',' && !isspace(*ptr); ptr ++)
+	      for (fontptr = font; *ptr && *ptr != ',' && !md_isspace(*ptr); ptr ++)
 	        if (fontptr < (font + sizeof(font) - 1))
 		  *fontptr++ = (char)*ptr;
 
@@ -1292,13 +1293,13 @@ htmlReadFile(tree_t     *parent,	// I - Parent tree entry
 
             for (ptr = face; *ptr;)
 	    {
-	      while (isspace(*ptr) || *ptr == ',')
+	      while (md_isspace(*ptr) || *ptr == ',')
 	        ptr ++;
 
               if (!*ptr)
 	        break;
 
-	      for (fontptr = font; *ptr && *ptr != ',' && !isspace(*ptr); ptr ++)
+	      for (fontptr = font; *ptr && *ptr != ',' && !md_isspace(*ptr); ptr ++)
 	        if (fontptr < (font + sizeof(font) - 1))
 		  *fontptr++ = (char)*ptr;
 
@@ -1456,7 +1457,7 @@ htmlReadFile(tree_t     *parent,	// I - Parent tree entry
       case MARKUP_TT :
       case MARKUP_CODE :
       case MARKUP_SAMP :
-          if (isspace(ch = getc(fp)))
+          if (md_isspace(ch = getc(fp)))
 	    have_whitespace = 1;
 	  else
 	    ungetc(ch, fp);
@@ -2227,7 +2228,7 @@ htmlGetStyle(tree_t *t,		// I - Node
        ptr ++, ptrlen --)
     if (strncasecmp((char *)name, (char *)ptr, namelen) == 0)
     {
-      for (ptr += namelen; isspace(*ptr); ptr ++);
+      for (ptr += namelen; md_isspace(*ptr); ptr ++);
 
       for (bufptr = buffer;
            *ptr && *ptr != ';' && bufptr < (buffer + sizeof(buffer) - 1);
@@ -2729,7 +2730,7 @@ parse_markup(tree_t *t,		/* I - Current tree entry */
   mptr = markup;
 
   while ((ch = getc(fp)) != EOF && mptr < (markup + sizeof(markup) - 1))
-    if (ch == '>' || isspace(ch))
+    if (ch == '>' || md_isspace(ch))
       break;
     else if (ch == '/' && mptr > markup)
     {
@@ -2896,7 +2897,7 @@ parse_markup(tree_t *t,		/* I - Current tree entry */
       if (ch == '\n')
         (*linenum) ++;
 
-      if (!isspace(ch))
+      if (!md_isspace(ch))
       {
         ungetc(ch, fp);
         parse_variable(t, fp, linenum);
@@ -2940,7 +2941,7 @@ parse_variable(tree_t *t,		// I - Current tree entry
 
   ptr = name;
   while ((ch = getc(fp)) != EOF)
-    if (isspace(ch) || ch == '=' || ch == '>' || ch == '\r')
+    if (md_isspace(ch) || ch == '=' || ch == '>' || ch == '\r')
       break;
     else if (ch == '/' && ptr == name)
       break;
@@ -2961,7 +2962,7 @@ parse_variable(tree_t *t,		// I - Current tree entry
   if (ch == '\n')
     (*linenum) ++;
 
-  while (isspace(ch) || ch == '\r')
+  while (md_isspace(ch) || ch == '\r')
   {
     ch = getc(fp);
 
@@ -2980,7 +2981,7 @@ parse_variable(tree_t *t,		// I - Current tree entry
         ptr = value;
         ch  = getc(fp);
 
-        while (isspace(ch) || ch == '\r')
+        while (md_isspace(ch) || ch == '\r')
           ch = getc(fp);
 
         if (ch == EOF)
@@ -3138,7 +3139,7 @@ parse_variable(tree_t *t,		// I - Current tree entry
           *ptr++ = (uchar)ch;
           while ((ch = getc(fp)) != EOF)
 	  {
-            if (isspace(ch) || ch == '>' || ch == '\r')
+            if (md_isspace(ch) || ch == '>' || ch == '\r')
               break;
 	    else if (ch == '&')
 	    {

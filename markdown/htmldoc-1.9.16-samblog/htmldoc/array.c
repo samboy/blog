@@ -13,6 +13,7 @@
  * Include necessary headers...
  */
 
+#include "md_isspace.h"
 #include "hdstring.h"
 #include "array-private.h"
 #ifndef DEBUG_printf
@@ -138,7 +139,7 @@ _cupsArrayAddStrings(cups_array_t *a,	/* I - Array */
 
     DEBUG_puts("1_cupsArrayAddStrings: Skipping leading whitespace.");
 
-    while (*s && isspace(*s & 255))
+    while (*s && md_isspace(*s & 255))
       s ++;
 
     DEBUG_printf(("1_cupsArrayAddStrings: Remaining string \"%s\".", s));
@@ -173,9 +174,9 @@ _cupsArrayAddStrings(cups_array_t *a,	/* I - Array */
 
       if (delim == ' ')
       {
-        while (*end && !isspace(*end & 255))
+        while (*end && !md_isspace(*end & 255))
           end ++;
-        while (*end && isspace(*end & 255))
+        while (*end && md_isspace(*end & 255))
           *end++ = '\0';
       }
       else if ((end = strchr(start, delim)) != NULL)

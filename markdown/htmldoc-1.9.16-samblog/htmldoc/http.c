@@ -16,6 +16,7 @@
  * Include necessary headers...
  */
 
+#include "md_isspace.h"
 #include "http-private.h"
 #include <fcntl.h>
 #include <math.h>
@@ -829,7 +830,7 @@ httpGetContentEncoding(http_t *http)	/* I - HTTP connection */
 
       qvalue = 1.0;
       end    = start;
-      while (*end && *end != ';' && *end != ',' && !isspace(*end & 255))
+      while (*end && *end != ';' && *end != ',' && !md_isspace(*end & 255))
         end ++;
 
       if (*end == ';')
@@ -846,13 +847,13 @@ httpGetContentEncoding(http_t *http)	/* I - HTTP connection */
         */
 
         *end++ = '\0';
-        while (*end && *end != ',' && !isspace(*end & 255))
+        while (*end && *end != ',' && !md_isspace(*end & 255))
           end ++;
       }
       else if (*end)
         *end++ = '\0';
 
-      while (*end && isspace(*end & 255))
+      while (*end && md_isspace(*end & 255))
 	end ++;
 
      /*
@@ -2208,7 +2209,7 @@ httpReadRequest(http_t *http,		/* I - HTTP connection */
   req_method = line;
   req_uri    = line;
 
-  while (*req_uri && !isspace(*req_uri & 255))
+  while (*req_uri && !md_isspace(*req_uri & 255))
     req_uri ++;
 
   if (!*req_uri)
@@ -2220,12 +2221,12 @@ httpReadRequest(http_t *http,		/* I - HTTP connection */
 
   *req_uri++ = '\0';
 
-  while (*req_uri && isspace(*req_uri & 255))
+  while (*req_uri && md_isspace(*req_uri & 255))
     req_uri ++;
 
   req_version = req_uri;
 
-  while (*req_version && !isspace(*req_version & 255))
+  while (*req_version && !md_isspace(*req_version & 255))
     req_version ++;
 
   if (!*req_version)
@@ -2237,7 +2238,7 @@ httpReadRequest(http_t *http,		/* I - HTTP connection */
 
   *req_version++ = '\0';
 
-  while (*req_version && isspace(*req_version & 255))
+  while (*req_version && md_isspace(*req_version & 255))
     req_version ++;
 
  /*

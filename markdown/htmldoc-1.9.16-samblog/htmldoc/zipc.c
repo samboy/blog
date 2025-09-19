@@ -40,6 +40,7 @@
 #  define localtime_r(t,tm) localtime_s(tm,t)
 #endif /* _WIN32 */
 
+#include "md_isspace.h"
 #include "zipc.h"
 #include <stdio.h>
 #include <stdarg.h>
@@ -1282,7 +1283,7 @@ zipcXMLGetAttribute(
   * Skip the element name...
   */
 
-  while (*element && !isspace(*element & 255))
+  while (*element && !md_isspace(*element & 255))
     element ++;
 
  /*
@@ -1297,7 +1298,7 @@ zipcXMLGetAttribute(
     * Skip leading whitespace...
     */
 
-    while (*element && isspace(*element & 255))
+    while (*element && md_isspace(*element & 255))
       element ++;
 
    /*
