@@ -1,6 +1,7 @@
 #!/bin/sh
 pureASCIIoutput=false
 x80emdash=false
+blogFooter=true
 _rem=--[=[
 # This script converts the output of HTML doc (1.9.16) in to HTML suitable
 # for putting on my blog.
@@ -11,6 +12,7 @@ _rem=--[=[
 # x80emdash: true means we treat 0x80 (\128) as if it were an emdash
 #            false means we get HTML entities or pure Xascii as input.
 #            In both cases, the input is Xascii/HTML entities and not UTF-8
+# blogfooter: Whether to have the blog footer in the generated HTML
 # POSIX shell wrapper to call correct version of Lua or Lunacy
 
 LUNACY=""
@@ -756,6 +758,7 @@ until not l
 processFootnotes()
 
 -- Footer
+if not blogFooter then os.exit(0) end
 print ""
 print "<p>"
 print ""
