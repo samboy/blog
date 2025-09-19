@@ -529,6 +529,9 @@ function processIDetc(l)
   l = l:gsub(mc('(<a href=\"[^>]+>[^<]*)_(%r+)_'),'%1<i>%2</i>')
   -- <pre> links should not make the content too wide for a phone screen
   l = l:gsub(mc('<pre>'),'<pre style="overflow: scroll">')
+  -- htmldoc is buggy with bold text
+  l = l:gsub(mc('%*%*([^*]+)%*%*'),'<b>%1</b>')
+  l = l:gsub(mc('<strong></strong>([^*]+)%*%*%*?'),'<b>%1</b>')
   -- Break long words
   l = splitWideWords(l)
   -- Xascii in to UTF-8
