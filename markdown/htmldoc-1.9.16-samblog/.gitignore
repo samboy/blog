@@ -11,6 +11,7 @@ htmldoc/file.o
 htmldoc/gui.o
 htmldoc/html.o
 htmldoc/htmldoc.exe
+htmldoc/htmldoc
 htmldoc/htmldoc.o
 htmldoc/htmllib.o
 htmldoc/htmlsep.o
@@ -30,6 +31,7 @@ htmldoc/rc4.o
 htmldoc/snprintf.o
 htmldoc/string.o
 htmldoc/testhtml.exe
+htmldoc/testhtml
 htmldoc/testhtml.o
 htmldoc/tls.o
 htmldoc/toc.o
