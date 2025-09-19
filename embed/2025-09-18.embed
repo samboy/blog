@@ -14,7 +14,7 @@ and uses the <code>primes()</code> function from
  list of prime factors in an array:
 <pre style="overflow: scroll">function factor(a)
   local out={}
-  local prime=primes(a^.5+1)
+  local prime=primes(a/2 + 1)
   for b = 1,#prime do
     while(a / prime[b] ==
       math.floor(a/prime[b]))
@@ -41,7 +41,7 @@ end
 <p>We hit some new lows over the weekend with the MAGA gang desperately
  trying to characterize this kid who murdered Charlie Kirk as anything
  other than one of them and doing everything they can to score political
- points from it <sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-09-18-1"><a href="#2025-09-18-1">1</a></a></sup>.
+ points from it.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-09-18-1"><a href="#2025-09-18-1">1</a></a></sup>
 </blockquote>
 <p>Not surprisingly, <a href="https://archive.ph/graPt">Reddit is upset about this</a>,
 but should they be, considering they
