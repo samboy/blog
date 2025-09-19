@@ -1,0 +1,13 @@
+#!/bin/sh
+
+FILENAME="$1"
+BASE=${FILENAME%.md}
+if [ "$BASE" = "$FILENAME" ] ; then
+	echo Usage: $0 YYYY-MM-DD.md
+	exit 1
+fi
+if [ ! -e "$FILENAME" ] ; then
+	echo $FILENAME not found
+	exit 1
+fi
+../markdown/markdown2embed.sh "$1" > ${BASE}.embed
