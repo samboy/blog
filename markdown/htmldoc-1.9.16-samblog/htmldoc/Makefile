@@ -90,6 +90,7 @@ depend:
 
 htmldoc$(EXEEXT):	$(HTMLDOCOBJS) $(COMMONOBJS) ../Makedefs
 	echo Linking $@...
+	echo $(CXX) $(LDFLAGS) -o htmldoc$(EXEEXT) $(HTMLDOCOBJS) $(COMMONOBJS) $(LIBS)
 	$(CXX) $(LDFLAGS) -o htmldoc$(EXEEXT) $(HTMLDOCOBJS) $(COMMONOBJS) $(LIBS)
 	if test `uname` = Darwin; then \
 		$(MAKE) -$(MAKEFLAGS) htmldoc.app || exit 1; \
