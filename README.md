@@ -15,6 +15,8 @@ in README.md, can be redistributed, as long as they are not modified.
 
 `BlogLinks.lua` and `FixLinks.lua` are public domain.
 
+`fonts.css` is OFL licensed; see that file for copyright and license.
+
 All files in `markdown` are either public domain or released under open
 source licenses. `htmldoc` and all related files are GPL; other files
 are under different open source licenses.

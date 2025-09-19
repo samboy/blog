@@ -22,3 +22,12 @@ make
 sudo cp htmldoc/htmldoc /usr/local/bin/htmldoc-1.9.16-samblog
 ```
 
+# GPL
+
+The following files are GPL:
+
+`htmldoc-1.9.16-source.tar.xz`
+`htmldoc-1.9.16-samblog/` and all files and folders under this directory.
+
+All other files in this directory are *not* GPL, but are either public 
+domain or released under other open source licenses.
