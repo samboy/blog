@@ -48,6 +48,84 @@ blog index.</a></i>
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<a name=BlogEntry-2025-09-18> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/JimmyKimmel.jpg" width=224 height=126>
+</div>
+<h1>Factoring Jimmy Kimmel</h1>
+<h2>September 18, 2025</h2>
+A Lua function for factoring numbers. And some thoughts on Jimmy
+ Kimmel.
+<a name="2025-09-18-factoring-numbers-in-lua"> </a>
+<h3>Factoring numbers in Lua</h3>
+<p>This is an extension of the code I posted <a href="#BlogEntry-2025-09-17">yesterday</a>,
+and uses the <code>primes()</code> function from
+ yesterday to factor numbers.
+<p>This function takes a number to factor as its input, and returns the
+ list of prime factors in an array:
+<pre style="overflow: scroll">function factor(a)
+  local out={}
+  local prime=primes(a^.5+1)
+  for b = 1,#prime do
+    while(a / prime[b] ==
+      math.floor(a/prime[b]))
+    do
+      out[#out + 1] = prime[b]
+      a = a / prime[b]
+    end
+  end
+  if #out == 0 then
+    out={a}
+  end
+  return out
+end
+</pre>
+<p>This uses <code>primes()</code> from yesterday. The example usage of
+ the above function uses <code>listArray()</code>, also posted
+<pre style="overflow: scroll">print(listArray(factor(48)))
+</pre>
+<a name="2025-09-18-jimmy-kimmel"> </a>
+<h3>Jimmy Kimmel</h3>
+<p>Jimmy Kimmel was fired and his show cancelled because he <a href="https://archive.ph/QQ8LK">said the  following</a>:
+<blockquote>
+<p>We hit some new lows over the weekend with the MAGA gang desperately
+ trying to characterize this kid who murdered Charlie Kirk as anything
+ other than one of them and doing everything they can to score political
+ points from it <sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-09-18-1"><a href="#2025-09-18-1">1</a></a></sup>
+</blockquote>
+<p>Not surprisingly, <a href="https://archive.ph/graPt">Reddit is upset about this</a>,
+but should they be, considering they
+ were <a href="https://archive.ph/hqq1B">cheering or  ignoring</a>
+the
+ abuses during the out of control cancel culture we had in 2020.
+<p><a href="https://archive.ph/g6AhQ">Garry Kasparov is also upset</a>
+
+about the post-Kirk cancellations, but to be fair to him, he has always
+ <em>opposed</em> cancel culture and was one of the people to sign <a href="#BlogEntry-2020-07-09">Harper’s Letter</a>.
+<p>What is good for the goose is good for the gander. One cannot ignore
+ or cheer on cancel culture when people they disagree with get
+ cancelled, then turn around and bewail people cancelling people they
+ agree with. That’s tribal hypocrisy.
+<p>The world would be a better place if we had more people as principled
+ as Kasparov is. Kasparov <em>knew</em> the out of control cancellations
+ were an unsound gambit, and now the boomerang is coming back to get the
+ extreme left wing.
+
+<h3>Footnote</h3><p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="2025-09-18-1"> </a>
+<a href="#back-2025-09-18-1">1</a>:  We now know that <a href="https://archive.ph/LFPn5">Charlie Kirk’s killer was left-wing</a>
+<p>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <a name=BlogEntry-2025-09-17> </a>
 <div class=blogpicx style="text-align: right">
 <img src="pics/CharlieKirk.jpg" width=224 height=126>
@@ -58236,6 +58314,7 @@ index</A> for details)</i>
 <div class=blog>
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
 
+<a href="#BlogEntry-2025-09-18">Factoring Jimmy Kimmel (2025-09-18)</a></br>
 <a href="#BlogEntry-2025-09-17">Lua primes; etc. (2025-09-17)</a></br>
 <a href="#BlogEntry-2025-09-16">2020’s Cancel culture (2025-09-16)</a></br>
 <a href="#BlogEntry-2025-09-14">Lua sorting again (2025-09-14)</a></br>
