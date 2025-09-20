@@ -415,7 +415,7 @@ function splitWideWords(l)
       outString = outString .. thisGlyph
     elseif(not inTag) then
       currentWidth = currentWidth + width(thisGlyph)
-      if currentWidth > 18000 then -- 18 “m”s roughly
+      if currentWidth > 15000 then -- 18 “m”s roughly
         currentWidth = 0
         outString = outString .. splitString
       end
@@ -531,7 +531,7 @@ function processIDetc(l)
   -- Allow italics in link text
   l = l:gsub(mc('(<a href=\"[^>]+>[^<]*)_(%r+)_'),'%1<i>%2</i>')
   -- <pre> links should not make the content too wide for a phone screen
-  l = l:gsub(mc('<pre>'),'<pre style="overflow: scroll">')
+  l = l:gsub(mc('<pre>'),'<pre class="blogPre">')
   -- htmldoc is buggy with bold text
   l = l:gsub(mc('%*%*([^*]+)%*%*'),'<b>%1</b>')
   l = l:gsub(mc('<strong></strong>([^*]+)%*%*%*?'),'<b>%1</b>')
