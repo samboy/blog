@@ -74,8 +74,8 @@ pictures, split long words so there aren’t issues on a phone, etc.)
  all whitespace characters <em>except</em> “vertical tab”.
 <p>The fonts I use to render the webpage have essentially only the
  characters that are present in Xascii; this allows the font files to be
- really small and load very quickly, even on older networks (down in in
- México, on my phone 4g is nearly universal and 5g is almost never
+ really small and load very quickly, even on older networks (down here
+ in México, on my phone 4g is nearly universal and 5g is almost never
  available).
 <p>This is perfect for my blog, since I only write in English and
  Spanish. I have all of the non-ASCII control characters I need for my
