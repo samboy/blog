@@ -11,7 +11,7 @@ here is a
  Lua iterator which goes through elements in a table in sorted order.
  This routine works like the <code>pairs()</code> function included with
  Lua:
-<pre style="overflow: scroll">-- Like pairs() but sorted
+<pre class="blogPre">-- Like pairs() but sorted
 function sPairs(inTable, sFunc)
   if not sFunc then
     sFunc = function(a, b)
@@ -38,13 +38,13 @@ function sPairs(inTable, sFunc)
 end
 </pre>
 <p>Example usage of the above function:
-<pre style="overflow: scroll">a={z=1,y=2,c=3,w=4}
+<pre class="blogPre">a={z=1,y=2,c=3,w=4}
 for k,v in sPairs(a) do
  print(k,v)
 end
 </pre>
 <p>With a sort function:
-<pre style="overflow: scroll">a={z=1,y=2,c=3,w=4}
+<pre class="blogPre">a={z=1,y=2,c=3,w=4}
 function revS(a,b)
   return a&gt;b
 end

@@ -26,20 +26,22 @@ echo margin-left: auto\; >> index.html
 echo margin-right: auto\; >> index.html
 echo 'border-bottom: 2px solid #aaa; }' >> index.html
 echo '@media (min-width: 640px) {.GitBlogNav {width:640px;}}' >> index.html
+echo '@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}' >> index.html
+echo '@media (max-width: 640px) {.blog {overflow-x:scroll;}}' >> index.html
 
 echo .blog { display: table\; max-width: 640px\; >> index.html
 # too much
 #echo 'word-break: break-all;' >> index.html
 # This didn't fix it
 #echo 'overflow-wrap: break-word;' >> index.html
-#echo 'overflow-x: scroll;' >> index.html
 echo 'font-family: Kilroy8; font-size: 16px;' >> index.html
 echo margin-left: auto\; >> index.html
 echo margin-right: auto\; } >> index.html
 
 # Again, phone screen workarounds
-echo '.blog pre {max-width: 90vw; overflow-x: scroll; ' >> index.html
-echo 'font-size: 14px; }' >> index.html
+echo '@media (max-width: 640px) {' >> index.html
+echo '.blog pre {max-width: 90vw; overflow-x: scroll;}} ' >> index.html
+echo '.blog pre { font-size: 14px; }' >> index.html
 echo '.blog li pre {max-width: 80vw; overflow-x: scroll; }' >> index.html
 echo '.blog table {max-width: 90vw; overflow-x: scroll; }' >> index.html
 echo '.blog tt {max-width: 90vw; overflow-x: scroll; }' >> index.html

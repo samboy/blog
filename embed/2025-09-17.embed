@@ -9,7 +9,7 @@ A Lua function for finding prime numbers. Also, some links about
 <h3>Finding primes in Lua</h3>
 <p>This Lua function finds all primes between 2 and <code>a</code>, and
  returns the list of primes in an array:
-<pre style="overflow: scroll">function primes(a)
+<pre class="blogPre">function primes(a)
   local out = {2}
   local inComposite = false
   local c = 1
@@ -34,7 +34,7 @@ A Lua function for finding prime numbers. Also, some links about
 end
 </pre>
 <p>Here’s a function for printing array elements:
-<pre style="overflow: scroll">function listArray(a)
+<pre class="blogPre">function listArray(a)
   local out = ""
   for b=1,#a do
     out = out .. 
@@ -45,7 +45,7 @@ end
 end
 </pre>
 <p>Example usage of the above functions:
-<pre style="overflow: scroll">print(listArray(primes(99)))
+<pre class="blogPre">print(listArray(primes(99)))
 </pre>
 <a name="2025-09-17-charlie-kirk-and-ryan-carson"> </a>
 <h3>Charlie Kirk and Ryan Carson</a>

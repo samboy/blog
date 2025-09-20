@@ -9,7 +9,7 @@ Let’s look at a Lua Table sorter. Also, thoughts on cancel culture in
 <h3>A simple Lua table sorter</h3>
 <p>This routine works like the <code>pairs()</code> function included
  with Lua, but the table keys are sorted:
-<pre style="overflow: scroll">-- Like pairs() but sorted
+<pre class="blogPre">-- Like pairs() but sorted
 -- All table keys should be of 
 -- the same type unless a sort
 -- function (“sFunc”) is used.
@@ -29,13 +29,13 @@ end
 </pre>
 <p>If one wishes to mix strings and numbers, a sort function should be
  used, for example:
-<pre style="overflow: scroll">function aSortFunction(a, b)
+<pre class="blogPre">function aSortFunction(a, b)
   local t = tostring
   return t(a) &lt; t(b)
 end
 </pre>
 <p>Example usage of the above two functions:
-<pre style="overflow: scroll">a={z=1,y=2,c=3,w=4}
+<pre class="blogPre">a={z=1,y=2,c=3,w=4}
 for k,v in
     sPairs(a, aSortFunction) do
  print(k,v)

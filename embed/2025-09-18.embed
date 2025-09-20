@@ -12,7 +12,7 @@ and uses the <code>primes()</code> function from
  yesterday to factor numbers.
 <p>This function takes a number to factor as its input, and returns the
  list of prime factors in an array:
-<pre style="overflow: scroll">function factor(a)
+<pre class="blogPre">function factor(a)
   local out={}
   local prime=primes(a/2 + 1)
   for b = 1,#prime do
@@ -32,7 +32,7 @@ end
 <p>This uses <code>primes()</code> from yesterday. The example usage of
  the above function uses <code>listArray()</code>, also posted
  yesterday:
-<pre style="overflow: scroll">print(listArray(factor(48)))
+<pre class="blogPre">print(listArray(factor(48)))
 </pre>
 <a name="2025-09-18-jimmy-kimmel"> </a>
 <h3>Jimmy Kimmel</h3>

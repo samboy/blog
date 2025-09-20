@@ -1,0 +1,99 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/2024-05-01.jpg" width=224 height=126>
+</div>
+<h1>HTMLDOC and Unicode</h1>
+<h2>September 19, 2025</h2>
+I go over how I process blog entries.
+<a name="2025-09-19-processing-the-blog"> </a>
+<h3>Processing the blog</h3>
+<p>I use a hacked version of <a href="https://www.msweet.org/htmldoc/">HTMLDOC</a>
+to process my blog entries. The entries are written in a
+ special version of Markdown which is then processed as follows:
+<p>Markdown → UTF-8 to Xascii converter → HTMLDOC → Lua script → HTML
+ webpage
+<p>The steps are as follows:
+<ul>
+<li>
+<p>I write the blog in Markdown
+</li>
+<li>
+<p>Since HTMLDOC doesn’t like Unicode (in theory, it has the ability to
+ accept UTF-8 input. In practice, this is so buggy it’s simply better to
+ convert it in to a non-Unicode format first), I convert the Unicode in
+ to a special 7-bit format called Xascii.
+</li>
+<li>
+<p>I use a slightly hacked version of HTMLDOC 1.9.16 (the last version
+ which easily compiles in Cygwin) to convert the Markdown in to HTML
+</li>
+<li>
+<p>Since that HTML isn’t quite in a form suitable for my blog, I run it
+ through a Lua script which uses a bunch of regular expressions to
+ massage the HTML (real footnotes,<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-09-19-1"><a href="#2025-09-19-1">1</a></a></sup>
+
+pictures, split long words so there aren’t issues on a phone, etc.)
+ using Lua’s 8-bit regular expression engine (with some extensions to
+ support the unusual Xascii format I use). Here keeping things 8-bit is
+ good because then the regular expressions can process non-ASCII. Said
+ Lua engine outputs UTF-8 HTML suitable for putting on my blog.
+</li>
+<li>
+<p>I have a final script which takes those (mostly) HTML blog entries
+ and puts them on both of my blogs (inter-blog links are different
+ between the two blogs)
+</li>
+</ul>
+<a name="2025-09-19-the-xascii-format"> </a>
+<h3>The Xascii format</h3>
+<p>Instead of using UTF-8, which HTMLDOC doesn’t really like, we use a
+ format called Xascii which I actually made up about seven years ago,
+ with no intention of using it in the real world. It was at the time a
+ “fantasy” encoding for an alternate universe where low end computers
+ would use this encoding to encode both English and Spanish, as well as
+ some limited non-ASCII punctuation.
+<p>Since both HTMLDOC and Lua prefer to get fix-width 8-bit input
+ (HTMLDOC is buggy with UTF-8 and Lua’s 8-bit regular expression treats
+ UTF-8 as multi character entities, so they can’t be part of regular
+ expression classes and what not), this fantasy format finally became a
+ reality since I had a real world use for it. The format is as follows:
+<pre class="blogPre">  0123456789abcdef
+0 .ÁÉÍÑÓÚÜ¡..—..«»
+1 •áéíñóúü¿‘’.→“”©
+2 .!"#$%&amp;'()*+,-./
+3 0123456789:;&lt;=&gt;?
+4 @ABCDEFGHIJKLMNO
+5 PQRSTUVWXYZ[\]^_
+6 `abcdefghijklmno
+7 pqrstuvwxyz{|}~♥
+</pre>
+<p>Here, “.” (except for 0x2e, the literal period) is a control
+ character. Note that “—” uses the slot for the very rarely used
+ “vertical tab”, so I have hacked HTMLDOC to not consider “vertical tab”
+ a whitespace character, and on the Lua side I have code which massages
+ regular expressions so that the custom class <code>%b</code> matches
+ all whitespace characters <em>except</em> “vertical tab”.
+<p>The fonts I use to render the webpage have essentially only the
+ characters that are present in Xascii; this allows the font files to be
+ really small and load very quickly, even on older networks (down in in
+ México, on my phone 4g is nearly universal and 5g is almost never
+ available).
+<p>This is perfect for my blog, since I only write in English and
+ Spanish. I have all of the non-ASCII control characters I need for my
+ blogs, and can use long term simple stable tools to build the blog.
+<a name="2025-09-19-getting-the-code"> </a>
+<h3>Getting the code</h3>
+<p>The code is open-source and available here:
+<blockquote>
+<p><a href="https://github.com/samboy/blog/">https://github.com/samboy<![if gt IE 6]>&#8203;<![endif]><wbr>/blog/</a>
+</blockquote>
+<h3>Footnote</h3><p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="2025-09-19-1"> </a>
+<a href="#back-2025-09-19-1">1</a>:  Like this footnote
+<p>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>
+
