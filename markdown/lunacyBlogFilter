@@ -762,8 +762,8 @@ processFootnotes()
 if not blogFooter then os.exit(0) end
 print ""
 print "<p>"
-print ""
-print "<A href=/blog/>Blog index</A>"
+--print ""
+--print "<A href=/blog/>Blog index</A>"
 print ""
 print "</div>"
 print ""
