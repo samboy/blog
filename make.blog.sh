@@ -28,16 +28,19 @@ echo 'border-bottom: 2px solid #aaa; }' >> index.html
 echo '@media (min-width: 640px) {.GitBlogNav {width:640px;}}' >> index.html
 echo '@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}' >> index.html
 echo '@media (max-width: 640px) {.blog {overflow-x:scroll;}}' >> index.html
-echo 'body { color #333; background-color: #fff; }' >> index.html
+echo 'body { color: #333; background-color: #fff; }' >> index.html
 echo '@media (prefers-color-scheme: dark) { ' >> index.html
 echo 'body { background-color: #131516; color: #d8d4cf; }' >> index.html
+echo '.blog { background-color: #131516; color: #d8d4cf; }' >> index.html
 echo 'a { color: #78dc78; }' >> index.html
+echo '.blog a { color: #78dc78; }' >> index.html
 echo '}' >> index.html
-echo .blog { display: table\; max-width: 640px\; >> index.html
+echo '.blog { display: table; max-width: 640px;' >> index.html
 # too much
 #echo 'word-break: break-all;' >> index.html
 # This didn't fix it
 #echo 'overflow-wrap: break-word;' >> index.html
+echo 'color: #333; background-color: #fff;' >> index.html # Blog colors
 echo 'font-family: Kilroy8; font-size: 16px;' >> index.html
 echo margin-left: auto\; >> index.html
 echo margin-right: auto\; } >> index.html
