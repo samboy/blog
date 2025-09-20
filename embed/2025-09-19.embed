@@ -52,10 +52,11 @@ pictures, split long words so there aren’t issues on a phone, etc.)
  would use this encoding to encode both English and Spanish, as well as
  some limited non-ASCII punctuation.
 <p>Since both HTMLDOC and Lua prefer to get fix-width 8-bit input
- (HTMLDOC is buggy with UTF-8 and Lua’s 8-bit regular expression treats
- UTF-8 as multi character entities, so they can’t be part of regular
- expression classes and what not), this fantasy format finally became a
- reality since I had a real world use for it. The format is as follows:
+ (HTMLDOC is buggy with UTF-8 and Lua’s 8-bit regular expression engine
+ treats UTF-8 as multi character entities, so they can’t be part of
+ regular expression classes and what not), this fantasy format finally
+ became a reality since I had a real world use for it. The format is as
+ follows:
 <pre class="blogPre">  0123456789abcdef
 0 .ÁÉÍÑÓÚÜ¡..—..«»
 1 •áéíñóúü¿‘’.→“”©
