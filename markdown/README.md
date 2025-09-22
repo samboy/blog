@@ -16,10 +16,10 @@ own fork of htmldoc 1.9.16 to process blog entries.
 To compile this fork of htmldoc:
 
 ```
-cd htmldoc-1.9.16-samblog
+cd htmldoc-samblog-2.20250922
 ./configure
 make
-sudo cp htmldoc/htmldoc /usr/local/bin/htmldoc-1.9.16-samblog
+sudo cp htmldoc/htmldoc /usr/local/bin/htmldoc-samblog-2.20250922
 ```
 
 # GPL
