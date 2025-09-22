@@ -1,13 +1,13 @@
 Some of these pictures are open content:
 
-#Asus_Eee_1005HA-small.jpg
+# Asus_Eee_1005HA-small.jpg
 
 http://creativecommons.org/licenses/by/3.0
 CC BY 3.0 licensed.
 Attribution: Ashley Pomeroy.
 Picture is altered for this blog
 
-#2001-09-11-Foran.jpg
+# 2001-09-11-Foran.jpg
 
 The picture of the twin towers burning on September 11 was taken
 by Michael Foran and obtained from the Wikimedia:
@@ -18,7 +18,7 @@ https://creativecommons.org/licenses/by/2.0/deed.en
 CC-BY-2.0 license, and has been altered (resized and cropped) for this 
 blog.
 
-#Valgelis.jpg
+# Valgelis.jpg
 
 The picture of Vangelis is
 https://creativecommons.org/licenses/by-sa/3.0/deed.en
@@ -26,7 +26,7 @@ CC BY-SA 3.0 licensed.
 Attribution: Kapetan Nikolios
 Picture is altered for this blog
 
-#Lansbury.jpg
+# Lansbury.jpg
 
 Angela Lansbury photo
 https://creativecommons.org/licenses/by/2.0/deed.en
@@ -34,26 +34,26 @@ CC-BY-2.0 license
 Attribution: Alan Light
 Picture is altered for this blog
 
-#Kaminsky.jpg
+# Kaminsky.jpg
 
 Dan Kaminsky photo
 License: https://creativecommons.org/licenses/by/3.0/deed.en
 Attribution: Dan Kaminsky (Self portrait)
 Picture is altered for this blog
 
-#CapitolStorming21.jpg
+# CapitolStorming21.jpg
 
 Attribution: Tyler Merbler
 License: https://creativecommons.org/licenses/by/2.0/deed.en
 Picture is altered for this blog
 
-#BernieSandersByGageSkidmore4blog.jpg
+# BernieSandersByGageSkidmore4blog.jpg
 
 Attribution: Gage Skidmore
 License: https://creativecommons.org/licenses/by-sa/2.0/deed.en
 Picture is altered for this blog
 
-#Charlie Kirk
+# Charlie Kirk
 
 Attribution: Gage Skidmore
 License: https://creativecommons.org/licenses/by-sa/4.0/deed.en
