@@ -2739,7 +2739,7 @@ ac_config_headers="$ac_config_headers config.h"
 
 
 
-SVERSION="1.9.16"
+SVERSION="samblog-2.20250922"
 
 printf "%s\n" "#define SVERSION \"$SVERSION\"" >>confdefs.h
 

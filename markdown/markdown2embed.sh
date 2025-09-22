@@ -41,7 +41,7 @@ cat $FILENAME | awk '{sub(/ +$/," ");print}' > foo.md
 # x80emdash be set to true (it’s at the top of that file)
 cat foo.md | ./utf8toXascii > foo
 mv foo foo.md
-htmldoc-1.9.16-samblog foo.md 2>/dev/null | \
+htmldoc-samblog-2.20250922 foo.md 2>/dev/null | \
 	./lunacyBlogFilter ${BASE}
 rm -f foo.md
 

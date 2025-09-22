@@ -12,7 +12,7 @@
  * What is the version number for this software?
  */
 
-#define SVERSION	""
+#define SVERSION	"samblog-2.20250922"
 
 
 /*
