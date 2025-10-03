@@ -18,7 +18,8 @@ echo 'body { max-width: 95vw; overflow-x: hidden; }' >> index.html
 
 # Nav after blog entries
 echo '.GitBlogNav { display: table; width: 95vw; ' >> index.html
-echo 'font-family: Kilroy8; font-size: 16px;' >> index.html
+echo 'font-family: Kilroy8, Verdana, sans-serif;' >> index.html
+echo 'font-size: 16px;' >> index.html
 echo 'text-align: center;' >> index.html
 echo 'border-top: 2px solid #aaa;' >> index.html
 echo 'margin: 5px; padding: 2px;' >> index.html
@@ -41,7 +42,8 @@ echo '.blog { display: table; max-width: 640px;' >> index.html
 # This didn't fix it
 #echo 'overflow-wrap: break-word;' >> index.html
 echo 'color: #333; background-color: #fff;' >> index.html # Blog colors
-echo 'font-family: Kilroy8; font-size: 16px;' >> index.html
+echo 'font-family: Kilroy8, Verdana, sans-serif;' >> index.html
+echo 'font-size: 16px;' >> index.html
 echo margin-left: auto\; >> index.html
 echo margin-right: auto\; } >> index.html
 
