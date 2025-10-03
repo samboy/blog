@@ -57,6 +57,96 @@ border-radius: 8px; box-shadow: 0 0 4px #888; }
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<a name=BlogEntry-2025-10-03> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/2024-05-01.jpg" width=224 height=126>
+</div>
+<h1>Font stacks: No more</h1>
+<h2>October 3, 2025</h2>
+I explain why font stacks are no more, and why one needs to use a
+ webfont if they want to determine which font someone sees a webpage
+ with.
+<a name="2025-10-03-font-stacks-in-2025"> </a>
+<h3>Font stacks in 2025?</h3>
+<p>A couple of years ago, <a href="https://modernfontstacks.com/">someone made a set of font stacks for modern web browsers</a>.
+While a
+ very noble effort, unfortunately they do not work here in 2025.
+<p>Font stacks made a lot of sense in the days of Internet Explorer 6
+ for a lot of reasons:
+<ul>
+<li>
+<p>Dial up users did not have enough bandwidth to download webfonts.
+</li>
+<li>
+<p>Only IE supported webfonts, in a weird proprietary “eot” format <sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-10-03-1"><a href="#2025-10-03-1">1</a></a></sup>
+</li>
+<li>
+<p>99% of desktop operating systems all had the same web safe fonts
+ “Verdana/Georgia/Trebuch<![if gt IE 6]>&#8203;<![endif]><wbr>et/Times New Roman/Arial/etc.”
+</li>
+</ul>
+<p>Things have changed a lot since then:
+<ul>
+<li>
+<p>100k for a webfont package is a small file, even on a 4g network in a
+ third world country. <sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-10-03-2"><a href="#2025-10-03-2">2</a></a></sup>
+</li>
+<li>
+<p>All mainstream current browsers <a href="https://caniuse.com/?search=woff2">support</a>
+woff2 webfonts. <sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-10-03-3"><a href="#2025-10-03-3">3</a></a></sup>
+</li>
+<li>
+<p>On Android, font support is very limited and has no support for the
+ old school “web safe” core fonts for the web (Verdana/etc.)
+</li>
+</ul>
+<p>Looking at those font stacks in Firefox on my Android phone, “System
+ UI” works, “Neo-Grotesque” gives a pencil thin font which is very
+ difficult to read (“Inter” on my phone is pencil thin), “Slab Serif”
+ actually looks nice (both in Windows, with Rockwell, and on Android,
+ with Roboto Slab, but note that Chrome for Android does not allow
+ Roboto Slab in a font stack), and “Handwritten” works for its purpose
+ (Android uses a “Cursive” fallback font). All the other font stacks are
+ giving me the system default serif/sans/mono fonts (either Noto or
+ Roboto).
+<p>With Chrome on my Android phone, source sans pro is used a lot, as
+ well as Google specific metric compatible versions of “Arial”,
+ “Georgia”, “Courier New” which often times do not look like the font
+ they are metrically compatible with. “Slab Serif” doesn’t work on
+ Chrome for Android even though Roboto Slab is installed on my Android
+ system.
+<p>Point being, Android has made web safe fonts a thing of the past.
+<a name="2025-10-03-finding-the-best-system-fallback-font"> </a>
+<h3>Finding the best
+ system fallback font</h3>
+<p>This doesn’t mean we shouldn’t have fallback fonts, of course.
+<p>There is a tool over at <a href="https://screenspan.net/fallback">https://screenspan.net/fall<![if gt IE 6]>&#8203;<![endif]><wbr>back</a>
+which is very good at finding out
+ which system font is the best fallback font to have in the rare
+ situations where a webfont can’t be loaded.
+<p>I use Verdana for my fallback font because it’s reasonably compatible
+ with the metrics for my webfont, and, like my webfont, is designed to
+ be really easy to read on the screen.
+
+<h3>Footnotes</h3><p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="2025-10-03-1"> </a>
+<a href="#back-2025-10-03-1">1</a>:    I actually have <a href="https://github.com/samboy/CaulixtlaFonts/tree/main/MiscFonts/Kilroy/obsolete">EOT versions</a> of the webfont used for this blog
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="2025-10-03-2"> </a>
+<a href="#back-2025-10-03-2">2</a>:  CJK users have font files large enough where    the download size <i>might</i> be an issue. In that case, we either accept the    download size as part of a modern website, or we accept that Android users    will generally get Noto while Mac/Windows users will get different    looking system fonts.
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="2025-10-03-3"> </a>
+<a href="#back-2025-10-03-3">3</a>:  Some people will turn off webfonts, but those people    have made it clear they <i>don’t care</i> whether or not they get a font which    looks like the design the webmaster intended.
+<p>
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <a name=BlogEntry-2025-10-01> </a>
 <div class=blogpicx style="text-align: right">
 <img src="pics/CharlieKirk.jpg" width=224 height=126>
@@ -58589,6 +58679,7 @@ index</A> for details)</i>
 <div class=blog>
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
 
+<a href="#BlogEntry-2025-10-03">Font stacks (2025-10-03)</a></br>
 <a href="#BlogEntry-2025-10-01">Left wing bullying (2025-10-01)</a></br>
 <a href="#BlogEntry-2025-09-22">Reddit lies (2025-09-22)</a></br>
 <a href="#BlogEntry-2025-09-20">Are H1B Visas no more? (2025-09-20)</a></br>
