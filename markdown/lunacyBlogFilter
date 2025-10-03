@@ -464,6 +464,7 @@ function processFootnotes()
         -- Allow bare links in footnotes
         body=body:gsub(mc('(https://%B+)'),'<a href="%1">%1</a>')
       end
+      body = body:gsub(mc('%*([^%*]+)%*'),'<i>%1</i>')
       -- Add footnote to page
       print(x('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>'))
       print(x('<a href="#back-' .. globalFootnotes[f]['name'] .. '">' ..
