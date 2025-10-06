@@ -410,9 +410,14 @@ function splitWideWords(l)
     else
       a = a + 1
     end
+    -- Emdash does split lines so it’s allowed as a “whitespace” char
     if(thisGlyph:find('%s') and not inTag) then
       currentWidth = 0
       outString = outString .. thisGlyph
+    elseif(thisGlyph:find('%/') and not inTag) then
+      currentWidth = 0
+      outString = outString .. thisGlyph
+      outString = outString .. splitString
     elseif(not inTag) then
       currentWidth = currentWidth + width(thisGlyph)
       if currentWidth > 15000 then -- 18 “m”s roughly
