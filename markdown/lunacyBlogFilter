@@ -458,8 +458,8 @@ function processFootnotes()
       -- Allow fancy links in footnotes
       -- form is @https://example.com example page@ where “example page”
       -- is the link text
-      if(body:find(mc('%@(https://%B+)%b([^%@]+)%@'))) then
-        body=body:gsub(mc('%@(https://%B+)%b([^%@]+)%@'),'<a href="%1">%2</a>')
+      if(body:find(mc('%@(https?://%B+)%b([^%@]+)%@'))) then
+       body=body:gsub(mc('%@(https?://%B+)%b([^%@]+)%@'),'<a href="%1">%2</a>')
       else
         -- Allow bare links in footnotes
         body=body:gsub(mc('(https://%B+)'),'<a href="%1">%1</a>')
