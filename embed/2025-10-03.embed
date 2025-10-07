@@ -22,7 +22,7 @@ While a
 </li>
 <li>
 <p>99% of desktop operating systems all had the same web safe fonts
- “Verdana/Georgia/Trebuch<![if gt IE 6]>&#8203;<![endif]><wbr>et/Times New Roman/Arial/etc.”
+ “Verdana/<![if gt IE 6]>&#8203;<![endif]><wbr>Georgia/<![if gt IE 6]>&#8203;<![endif]><wbr>Trebuchet/<![if gt IE 6]>&#8203;<![endif]><wbr>Times New Roman/<![if gt IE 6]>&#8203;<![endif]><wbr>Arial/<![if gt IE 6]>&#8203;<![endif]><wbr>etc.”
 </li>
 </ul>
 <p>Things have changed a lot since then:
@@ -37,7 +37,7 @@ woff2 webfonts. <sup style="font-size: 10pt; line-height: 0; vertical-align: 6px
 </li>
 <li>
 <p>On Android, font support is very limited and has no support for the
- old school “web safe” core fonts for the web (Verdana/etc.)
+ old school “web safe” core fonts for the web (Verdana/<![if gt IE 6]>&#8203;<![endif]><wbr>etc.)
 </li>
 </ul>
 <p>Looking at those font stacks in Firefox on my Android phone, “System
@@ -47,7 +47,7 @@ woff2 webfonts. <sup style="font-size: 10pt; line-height: 0; vertical-align: 6px
  with Roboto Slab, but note that Chrome for Android does not allow
  Roboto Slab in a font stack), and “Handwritten” works for its purpose
  (Android uses a “Cursive” fallback font). All the other font stacks are
- giving me the system default serif/sans/mono fonts (either Noto or
+ giving me the system default serif/<![if gt IE 6]>&#8203;<![endif]><wbr>sans/<![if gt IE 6]>&#8203;<![endif]><wbr>mono fonts (either Noto or
  Roboto).
 <p>With Chrome on my Android phone, source sans pro is used a lot, as
  well as Google specific metric compatible versions of “Arial”,
@@ -60,7 +60,7 @@ woff2 webfonts. <sup style="font-size: 10pt; line-height: 0; vertical-align: 6px
 <h3>Finding the best
  system fallback font</h3>
 <p>This doesn’t mean we shouldn’t have fallback fonts, of course.
-<p>There is a tool over at <a href="https://screenspan.net/fallback">https://screenspan.net/fall<![if gt IE 6]>&#8203;<![endif]><wbr>back</a>
+<p>There is a tool over at <a href="https://screenspan.net/fallback">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>screenspan.net/<![if gt IE 6]>&#8203;<![endif]><wbr>fallback</a>
 which is very good at finding out
  which system font is the best fallback font to have in the rare
  situations where a webfont can’t be loaded.
