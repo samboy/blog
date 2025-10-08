@@ -431,7 +431,7 @@ function splitWideWords(l)
       a = a + 1
     end
     -- Emdash does split lines so it’s allowed as a “whitespace” char
-    if(thisGlyph:find('%s') and not inTag) then
+    if(thisGlyph:find('%s') and not inTag) then -- Includes emDash
       currentWidth = 0
       outString = outString .. thisGlyph
     elseif(thisGlyph:find('%/') and not inTag) then
@@ -572,8 +572,8 @@ end
 -- inside the blog
 function processWidePic(l)
   if(l:find(mc('img alt="widepic"'))) then
-    local lp = l:gsub("^%s+","")
-    local fields=Split(lp,"%s+")
+    local lp = l:gsub("^%s+","") -- Don’t have emdash in picture caption
+    local fields=Split(lp,"%s+") -- No emdashes in picture caption
     if(fields[3]) then
       globalCaption = ""
       local pic = fields[3]
@@ -605,8 +605,8 @@ end
 -- Output: None (print called in function)
 function processStep2(l)
   if(l:find(mc('img alt="blogpic"'))) then
-    local lp = l:gsub("^%s+","")
-    local fields=Split(lp,"%s+")
+    local lp = l:gsub("^%s+","") -- No emdashes in picture descriptions
+    local fields=Split(lp,"%s+") -- No emdashes in picture descriptions
     if(fields[3]) then
       local pic = fields[3]
       pic = pic:gsub('^[^"]*"','',1)
@@ -664,7 +664,7 @@ globalPlaceMarker = 0
 -- Step one: Print nothing until after second HR NOSHADE
 function processStep1(l) 
   l = makeXascii(l)
-  l = l:gsub('%s+</a>','</a>') -- Spaces before link close look bad
+  l = l:gsub('%s+</a>','</a>') -- Spaces/emdash before link close look bad
   l = l:gsub('</h2>%s*<p>',"</h2>\n") -- No <p> after <h2>; legacy blog issue
   -- Do not show anything until after the *second* “HR NOSHADE”
   if globalPlaceMarker == 2 then processStep2(l) end
@@ -729,9 +729,9 @@ repeat
     currentLine = currentLine .. l
     currentState = 1
     inTag = true
-  elseif l:find('%S') and currentState == 102 then
+  elseif l:find(mc('%B')) and currentState == 102 then
     currentLine = currentLine .. l
-  elseif l:find('%s') and currentState == 102 then
+  elseif l:find(mc('%b')) and currentState == 102 then
     currentState = 0
     processStep1(currentLine)
     currentLine = ""
@@ -749,7 +749,7 @@ repeat
   elseif l == 'a' and currentState == 1 then
     currentLine = currentLine .. l
     currentState = 2
-  elseif l:find('%s') and currentState == 2 then
+  elseif l:find(mc('%b')) and currentState == 2 then
     currentLine = currentLine .. ' '
   elseif l == 'h' and currentState == 2 then
     currentLine = currentLine .. l
