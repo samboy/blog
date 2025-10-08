@@ -77,11 +77,13 @@ exec $LUNACY $0 "$@"
 -- '%T' is everything except letters
 
 -- Do *NOT* use these new classes inside of [] brackets
+-- (There is code to support classes inside [] but it’s untested)
 
 -- Also converts a string in to a case insensitive regex; mc('th') is [Tt][Hh]
 -- Do not use this when there are multiple letters in a regex class, i.e.
 -- do not use this when the input has something like [dou] in it (any one of
 -- d/o/u regex)
+-- (Again, there is code to support [aei] in a mc regex, but it’s untested)
 function mc(i)
   local out = ""
   local afterPercent = false
@@ -160,13 +162,24 @@ end
 -- We need to go through tables in sorted order sometimes
 -- Like pairs() but sorted
 -- This assumes all keys are of the same type
-function sPairs(inputTable)
+function sPairs(inputTable,sFunc)
+  if not sFunc then
+    sFunc = function(a, b)
+      local ta = type(a)
+      local tb = type(b)
+      if(ta == tb)
+        then return a < b
+      end
+      return tostring(ta) <
+             tostring(tb)
+    end
+  end
   local keyList = {}
   local index = 1
   for k,_ in pairs(inputTable) do
     table.insert(keyList,k)
   end
-  table.sort(keyList)
+  table.sort(keyList,sFunc)
   return function()
     rvalue = keyList[index]
     index = index + 1
@@ -177,13 +190,20 @@ end
 -- CONVERSTION ROUTINES --
 -- These are a bunch of routines which convert between three forms
 -- of expressing non-ASCII characters:
--- 1. HTML entities (e.g. "&hearts;") which htmldoc uses
+-- 1. HTML entities (e.g. "&hearts;") which htmldoc can use
 -- 2. UTF-8 which is a lot more readable than HTML entities
 -- 3. Xascii, which is a special 7-bit representation of non-ASCII
+--
+-- The current pipeline is this:
+-- • We convert UTF-8 in to Xascii
+-- • We run said Xascii through a version of htmldoc modified to not
+--   consider — a whitespace character
+-- • We input this Xascii in to luncyBlogFilter
+-- • lunacyBlogFilter outputs a UTF-8 encoded file
 -- 
 -- The reason we use Xascii is because Lunacy’s regex engine is 8-bit
 -- and we want to be able to process non-ASCII easily.
--- Xascii is never stored in a file, and is as follows:
+-- Xascii is as follows:
 
 --   0123456789abcdef
 -- 0 .ÁÉÍÑÓÚÜ¡..—..«»
