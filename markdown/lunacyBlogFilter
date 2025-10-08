@@ -548,7 +548,7 @@ function processIDetc(l)
     globalFootnotes[footnoteIndex]['name'] = name
     globalFootnotes[footnoteIndex]['link'] = linkText
     globalFootnotes[footnoteIndex]['body'] = fnText
-    l = l:gsub(mc('<a href=\"fn:[^>]*>[^<]*</a>'),
+    l = l:gsub(mc('%@?<a href=\"fn:[^>]*>[^<]*</a>'),
         globalSupString .. 
         '<a id="back-' .. name .. '">' ..
         '<a href="#' .. name .. '">' .. linkText .. '</a></a></sup>')
