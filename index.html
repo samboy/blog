@@ -94,11 +94,26 @@ end
 </pre>
 <p>This code is useful when reducing fractions, something I will post in
  a future blog.
-<a name="2025-10-09-not-allowing-globals-in-lua"> </a>
-<h3>Not allowing globals in Lua</h3>
-<p>It’s been possible, since Lua 5.1 (actually 5.0, but 5.1 is a very
- widely used version of Lua), to not allow globals in Lua scripts. This
- is <a href="https://www.lua.org/pil/14.2.html">discussed in the Programming in Lua  book</a>,
+<a name="2025-10-09-force-globals-to-be-declared-in-lua"> </a>
+<h3>Force globals to be
+ declared in Lua</h3>
+<p>One complaint people have about Lua is that the default scope of
+ variables is globals. This can cause typos to be hard to debug, e.g.
+<pre class="blogPre">function foo(a)
+  local the = "The the"
+  local out = tostring(teh) 
+        .. " " .. a
+  return out
+end
+</pre>
+<p>Here, it might be difficult to determine why “the” is not affecting
+ the output of the function, because “teh” here is a typo. Since “teh”
+ is undeclared, it defaults to having the value <code>nil</code> which
+ can cause, in code examples more complicated than this, code to act in
+ unusual ways.
+<p>However, it’s been possible, since Lua 5.1 (actually 5.0, but 5.1 is
+ a very widely used version of Lua), to force globals to be declared in
+ Lua scripts. This is <a href="https://www.lua.org/pil/14.2.html">discussed in the Programming in Lua  book</a>,
 but the code here has
  been rewritten to be public domain instead of under an unknown
  copyright.
