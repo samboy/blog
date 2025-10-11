@@ -59,3 +59,11 @@ Attribution: Gage Skidmore
 License: https://creativecommons.org/licenses/by-sa/4.0/deed.en
 Picture is altered for this blog
 
+# JesseSingal.jpg 
+
+This picture was taken by a YouTube user who uses
+the alias "Rebel Wisdom", is available under a [CC 3.0
+license](https://creativecommons.org/licenses/by/3.0/deed.en), 
+and has been altered.
+
+
