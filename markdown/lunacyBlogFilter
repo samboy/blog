@@ -556,6 +556,7 @@ function processIDetc(l)
   -- NOTE: BlogLinks.lua now handles special "blog:" links
   -- Allow italics in link text
   l = l:gsub(mc('(<a href=\"[^>]+>[^<]*)_(%r+)_'),'%1<i>%2</i>')
+  l = l:gsub(mc('(<a href=\"[^>]+>[^<]*)%*(%r+)%*'),'%1<i>%2</i>')
   -- <pre> links should not make the content too wide for a phone screen
   l = l:gsub(mc('<pre>'),'<pre class="blogPre">')
   -- htmldoc is buggy with bold text
