@@ -350,6 +350,8 @@ end
 -- an HTML entity (e.g. '&amp;') or an Xascii character. This function will 
 -- raise an error if a character not in my special subset of Roboto Serif 
 -- is used as its argument.
+-- This is for the non-italic font. To keep things simple, we assume all
+-- italic glyphs are the same width or narrower (they generally are)
 function width(glyph) 
   -- Letters
   local g = {A=707, B=698, C=762, D=784, E=694, F=666, G=810, H=842, I=408,
@@ -503,6 +505,7 @@ function processFootnotes()
   end
 end
 
+globalInPre = false
 -- Process any <a id> stuff in the HTML after processing pictures in the
 -- blog. Also processes simple subscripts
 function processIDetc(l)
@@ -557,13 +560,22 @@ function processIDetc(l)
   -- Allow italics in link text
   l = l:gsub(mc('(<a href=\"[^>]+>[^<]*)_(%r+)_'),'%1<i>%2</i>')
   l = l:gsub(mc('(<a href=\"[^>]+>[^<]*)%*(%r+)%*'),'%1<i>%2</i>')
-  -- <pre> links should not make the content too wide for a phone screen
-  l = l:gsub(mc('<pre>'),'<pre class="blogPre">')
   -- htmldoc is buggy with bold text
   l = l:gsub(mc('%*%*([^*]+)%*%*'),'<b>%1</b>')
   l = l:gsub(mc('<strong></strong>([^*]+)%*%*%*?'),'<b>%1</b>')
-  -- Break long words
-  l = splitWideWords(l)
+  -- <pre> links should not make the content too wide for a phone screen
+  if(l:find(mc('<pre>'))) then
+    l = l:gsub(mc('<pre>'),'<pre class="blogPre">')
+    globalInPre = true
+  end
+  if(l:find(mc('</pre>'))) then
+    globalInPre = false
+  end
+  -- Break long words, except in <pre> tags (the CSS will add scrollbars
+  -- to long lines in <pre> blocks as needed)
+  if not globalInPre then
+    l = splitWideWords(l)
+  end
   -- Xascii in to UTF-8
   l = XasciiStringConvert(l)
   print(l)
