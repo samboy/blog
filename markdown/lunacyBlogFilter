@@ -701,6 +701,28 @@ end
 -- * HTML tags are always on the same line so we can process them
 -- * HTML links are always on the same line so we can process them
 -- * DOS linefeed characters are stripped
+--
+--[[
+  The states are as follows:
+
+0: Default start state
+1: In an HTML tag (e.g. '<pre>' at the “<”)
+100: In an HTML closing tag (e.g. '</i>' at the “/”)
+101: In the letter 'a' at the start of link closing tag (i.e. '</a>')
+102: In text after a link ends (e.g. '</a>foo')
+103: In blankspace after link ends (e.g. '</a>\n' at the “\n”)
+200: In 'h' after tag (i.e. '<h' at the “h”) 
+201: In '2' after 'h' tag (i.e. '<h2' at the “2”) 
+2: In 'a' in tag (i.e. '<a' at the “a”)
+3: In 'h' after blankspace after a in tag (e.g. '<a h' at the “h”)
+4: '<a hr' at the “r”
+5: '<a hre' at the “e”
+6: '<a href' at the “f”
+
+We also have inLink and inTag
+
+]]--
+
 inLink = false
 inTag = false
 currentLine = ""
