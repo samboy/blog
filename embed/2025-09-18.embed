@@ -7,20 +7,20 @@ A Lua function for factoring numbers. And some thoughts on Jimmy
  Kimmel.
 <a name="2025-09-18-factoring-numbers-in-lua"> </a>
 <h3>Factoring numbers in Lua</h3>
-<p>This is an extension of the code I posted <a href="blog:2025-09-17">yesterday</a>,
+<p>This is an extension of the code I posted <a href="blog:2025-09-17">yesterday</a>, 
 and uses the <code>primes()</code> function from
  yesterday to factor numbers.
 <p>This function takes a number to factor as its input, and returns the
  list of prime factors in an array:
 <pre class="blogPre">function factor(a)
   local out={}
-  local prime=primes(a/2 + 1)
+  local prime=primes(a/<![if gt IE 6]>&#8203;<![endif]><wbr>2 + 1)
   for b = 1,#prime do
-    while(a / prime[b] ==
-      math.floor(a/prime[b]))
+    while(a /<![if gt IE 6]>&#8203;<![endif]><wbr> prime[b] ==
+      math.floor(a/<![if gt IE 6]>&#8203;<![endif]><wbr>prime[b]))
     do
       out[#out + 1] = prime[b]
-      a = a / prime[b]
+      a = a /<![if gt IE 6]>&#8203;<![endif]><wbr> prime[b]
     end
   end
   if #out == 0 then
@@ -43,16 +43,16 @@ end
  other than one of them and doing everything they can to score political
  points from it.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-09-18-1"><a href="#2025-09-18-1">1</a></a></sup>
 </blockquote>
-<p>Not surprisingly, <a href="https://archive.today/20250918182556/https://old.reddit.com/r/popular/?geo_filter=GLOBAL">Reddit is upset about this</a>,
+<p>Not surprisingly, <a href="https://archive.today/20250918182556/https://old.reddit.com/r/popular/?geo_filter=GLOBAL">Reddit is upset about this</a>, 
 but should they be, considering they
- were <a href="https://archive.today/20200708103205/https://www.reddit.com/r/politics/comments/hn0sct/a_letter_on_justice_and_open_debate/">cheering or  ignoring</a>
+ were <a href="https://archive.today/20200708103205/https://www.reddit.com/r/politics/comments/hn0sct/a_letter_on_justice_and_open_debate/">cheering or  ignoring</a> 
 the abuses during the out of control cancel
  culture we had in 2020.
-<p><a href="https://archive.today/20250917072847/https://www.thenextmove.org/p/state-sponsored-cancel-culture-after">Garry Kasparov is also upset</a>
+<p><a href="https://archive.today/20250917072847/https://www.thenextmove.org/p/state-sponsored-cancel-culture-after">Garry Kasparov is also upset</a> 
 about the post-Kirk cancellations, but
  to be fair to him, he has always <em>opposed</em> cancel culture and
- was one of the people to sign <a href="blog:2020-07-09">Harper’s Letter</a>
-.
+ was one of the people to sign <a href="blog:2020-07-09">Harper’s Letter</a>.
+
 <p>What is good for the goose is good for the gander. One cannot ignore
  or cheer on cancel culture when people they disagree with get
  cancelled, then turn around and bewail people cancelling people they
