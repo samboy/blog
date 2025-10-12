@@ -666,6 +666,8 @@ globalPlaceMarker = 0
 function processStep1(l) 
   l = makeXascii(l)
   l = l:gsub('%s+</a>','</a>') -- Spaces/emdash before link close look bad
+  -- Space between link close and sentence end looks bad
+  l = l:gsub(mc('</a>%b+([%.%!%?%,])'),'</a>%1')
   l = l:gsub('</h2>%s*<p>',"</h2>\n") -- No <p> after <h2>; legacy blog issue
   -- Do not show anything until after the *second* “HR NOSHADE”
   if globalPlaceMarker == 2 then processStep2(l) end
@@ -707,9 +709,10 @@ repeat
   l = io.read(1)
   if not l then processStep1(currentLine) break end
   if l == "\r" then l = io.read(1) 
-  elseif l == "\n" and not inLink and not inTag then
+  elseif l == "\n" and not inLink and not inTag and currentState ~= 102 then
     processStep1(currentLine)
     currentLine = ""
+    currentState = 0
   elseif l == '<' and currentState == 0 then
     inTag = true
     currentLine = currentLine .. l
@@ -730,12 +733,24 @@ repeat
     currentLine = currentLine .. l
     currentState = 1
     inTag = true
-  elseif l:find(mc('%B')) and currentState == 102 then
+  elseif l:find(mc('%B')) and currentState == 102 then 
     currentLine = currentLine .. l
-  elseif l:find(mc('%b')) and currentState == 102 then
-    currentState = 0
+  elseif l:find(mc('%b')) and currentState == 102 then -- Blank after '</a>'
+    currentState = 103
+    currentLine = currentLine .. " "
+  -- Sometimes, htmldoc converts [foo](http://example.com). in to
+  -- '<a href="http://example.com">foo</a>\n.' with an unwanted newline.
+  elseif l:find(mc('%b')) and currentState == 103 then
+    currentLine = currentLine .. " "
+  elseif l:find('[%!%.%,%?]') and currentState == 103 then
+    currentLine = currentLine .. l
     processStep1(currentLine)
     currentLine = ""
+    currentState = 0
+  elseif currentState == 103 then
+    processStep1(currentLine)
+    currentLine = l
+    currentState = 0
   -- Process h2 tags
   elseif l == 'h' and currentState == 100 then
     currentLine = currentLine .. l
