@@ -14,13 +14,13 @@ and uses the <code>primes()</code> function from
  list of prime factors in an array:
 <pre class="blogPre">function factor(a)
   local out={}
-  local prime=primes(a/<![if gt IE 6]>&#8203;<![endif]><wbr>2 + 1)
+  local prime=primes(a/2 + 1)
   for b = 1,#prime do
-    while(a /<![if gt IE 6]>&#8203;<![endif]><wbr> prime[b] ==
-      math.floor(a/<![if gt IE 6]>&#8203;<![endif]><wbr>prime[b]))
+    while(a / prime[b] ==
+      math.floor(a/prime[b]))
     do
       out[#out + 1] = prime[b]
-      a = a /<![if gt IE 6]>&#8203;<![endif]><wbr> prime[b]
+      a = a / prime[b]
     end
   end
   if #out == 0 then
