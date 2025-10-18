@@ -464,7 +464,7 @@ if not globalBlogDate then
   globalBlogDate = os.time()
 end
 globalSupString = 
-          '<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px">'
+          '<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">'
 globalFootnotes = {}
 
 -- Footnotes
