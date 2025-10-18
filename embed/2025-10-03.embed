@@ -8,7 +8,7 @@ I explain why font stacks are no more, and why one needs to use a
  with.
 <a name="2025-10-03-font-stacks-in-2025"> </a>
 <h3>Font stacks in 2025?</h3>
-<p>A couple of years ago, <a href="https://modernfontstacks.com/">someone made a set of font stacks for modern web browsers</a>.
+<p>A couple of years ago, <a href="https://modernfontstacks.com/">someone made a set of font stacks for modern web browsers</a>. 
 While a
  very noble effort, unfortunately they do not work here in 2025.
 <p>Font stacks made a lot of sense in the days of Internet Explorer 6
@@ -18,7 +18,7 @@ While a
 <p>Dial up users did not have enough bandwidth to download webfonts.
 </li>
 <li>
-<p>Only IE supported webfonts, in a weird proprietary “eot” format<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-10-03-1"><a href="#2025-10-03-1">1</a></a></sup>
+<p>Only IE supported webfonts, in a weird proprietary “eot” format<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2025-10-03-1"><a href="#2025-10-03-1">1</a></a></sup>
 </li>
 <li>
 <p>99% of desktop operating systems all had the same web safe fonts
@@ -29,11 +29,11 @@ While a
 <ul>
 <li>
 <p>100k for a webfont package is a small file, even on a 4g network in a
- third world country.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-10-03-2"><a href="#2025-10-03-2">2</a></a></sup>
+ third world country.<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2025-10-03-2"><a href="#2025-10-03-2">2</a></a></sup>
 </li>
 <li>
-<p>All mainstream current browsers <a href="https://caniuse.com/?search=woff2">support</a>
-woff2 webfonts.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-10-03-3"><a href="#2025-10-03-3">3</a></a></sup>
+<p>All mainstream current browsers <a href="https://caniuse.com/?search=woff2">support</a> 
+woff2 webfonts.<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2025-10-03-3"><a href="#2025-10-03-3">3</a></a></sup>
 </li>
 <li>
 <p>On Android, font support is very limited and has no support for the
@@ -60,7 +60,7 @@ woff2 webfonts.<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"
 <h3>Finding the best
  system fallback font</h3>
 <p>This doesn’t mean we shouldn’t have fallback fonts, of course.
-<p>There is a tool over at <a href="https://screenspan.net/fallback">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>screenspan.net/<![if gt IE 6]>&#8203;<![endif]><wbr>fallback</a>
+<p>There is a tool over at <a href="https://screenspan.net/fallback">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>screenspan.net/<![if gt IE 6]>&#8203;<![endif]><wbr>fallback</a> 
 which is very good at finding out
  which system font is the best fallback font to have in the rare
  situations where a webfont can’t be loaded.

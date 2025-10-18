@@ -6,7 +6,7 @@
 I go over how I process blog entries.
 <a name="2025-09-19-processing-the-blog"> </a>
 <h3>Processing the blog</h3>
-<p>I use a hacked version of <a href="https://www.msweet.org/htmldoc/">HTMLDOC</a>
+<p>I use a hacked version of <a href="https://www.msweet.org/htmldoc/">HTMLDOC</a> 
 to process my blog entries. The entries are written in a
  special version of Markdown which is then processed as follows:
 <p>Markdown → UTF-8 to Xascii converter → HTMLDOC → Lua script → HTML
@@ -29,8 +29,7 @@ to process my blog entries. The entries are written in a
 <li>
 <p>Since that HTML isn’t quite in a form suitable for my blog, I run it
  through a Lua script which uses a bunch of regular expressions to
- massage the HTML (real footnotes,<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px"><a id="back-2025-09-19-1"><a href="#2025-09-19-1">1</a></a></sup>
-
+ massage the HTML (real footnotes,<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2025-09-19-1"><a href="#2025-09-19-1">1</a></a></sup>  
 pictures, split long words so there aren’t issues on a phone, etc.)
  using Lua’s 8-bit regular expression engine (with some extensions to
  support the unusual Xascii format I use). Here keeping things 8-bit is
@@ -85,7 +84,7 @@ pictures, split long words so there aren’t issues on a phone, etc.)
 <h3>Getting the code</h3>
 <p>The code is open-source and available here:
 <blockquote>
-<p><a href="https://github.com/samboy/blog/">https://github.com/samboy<![if gt IE 6]>&#8203;<![endif]><wbr>/blog/</a>
+<p><a href="https://github.com/samboy/blog/">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>github.com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr></a>
 </blockquote>
 <h3>Footnote</h3><p style="margin-left: 1.1em;text-indent: -1.1em;">
 <a name="2025-09-19-1"> </a>

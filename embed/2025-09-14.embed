@@ -6,7 +6,7 @@
 An update to the Lua Table sorter. Also, a website I like.
 <a name="2025-09-14-an-updated-lua-table-sorter"> </a>
 <h3>An updated Lua table sorter</h3>
-<p>Like what I posted <a href="blog:2025-09-13">yesterday</a>,
+<p>Like what I posted <a href="blog:2025-09-13">yesterday</a>, 
 here is a
  Lua iterator which goes through elements in a table in sorted order.
  This routine works like the <code>pairs()</code> function included with
@@ -58,12 +58,12 @@ end
 <h3>More discussion
  about 2025’s cancel culture</h3>
 <p>There is some good discussion about 2025’s cancel culture, albeit
- with a right-of-center bias, over at <a href="https://themotte.org">The Motte</a>.
-In this week’s <a href="https://www.themotte.org/post/3128/culture-war-roundup-for-the-week">“Culture war” discussion</a>,
+ with a right-of-center bias, over at <a href="https://themotte.org">The Motte</a>. 
+In this week’s <a href="https://www.themotte.org/post/3128/culture-war-roundup-for-the-week">“Culture war” discussion</a>, 
 some of the discussion is about left-wing
  people who celebrated Charlie Kirk’s death and whether it’s OK for them
  to lose their job or what not because of that behavior.
-<p>The Motte is a stand alone forum which started off <a href="https://old.reddit.com/r/themotte">on Reddit</a>
+<p>The Motte is a stand alone forum which started off <a href="https://old.reddit.com/r/themotte">on Reddit</a> 
 but became stand alone because of concerns that Reddit was
  stifling frank open discussion.
 

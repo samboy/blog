@@ -8,9 +8,9 @@ I post some code to find the greatest common divisor (GCD) of two
 <a name="2025-10-09-the-code-to-find-a-gcd"> </a>
 <h3>The code to find a GCD</h3>
 <p>To use this code, one must have the function <code>primes()</code>
- which I posted <a href="blog:2025-09-17">on September 17<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px">th</sup></a>, 
+ which I posted <a href="blog:2025-09-17">on September 17<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup></a>, 
 as
- well as the function <code>factor()</code> which I posted <a href="blog:2025-09-18">on September 18<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px">th</sup></a>.
+ well as the function <code>factor()</code> which I posted <a href="blog:2025-09-18">on September 18<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup></a>.
 <pre class="blogPre">function GCD(a,b)
   local fa = factor(a)
   local fb = factor(b)

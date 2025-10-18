@@ -36,7 +36,7 @@ In this blog, I talk about life in México, and the font used for this
  non-italic “f” with a 10 degree oblique skew. Since the font I use on
  my webpage and blog is size optimized, I dealt with the ligatures by
  simply not having them; since Roboto Serif is essentially a slab serif
- which invokes typewriters of the 20<sup style="font-size: 10pt; line-height: 0; vertical-align: 6px">th</sup> century, the font looks fine
+ which invokes typewriters of the 20<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> century, the font looks fine
  without ligatures.
 
 
