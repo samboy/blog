@@ -170,8 +170,7 @@ function sPairs(inputTable,sFunc)
       if(ta == tb)
         then return a < b
       end
-      return tostring(ta) <
-             tostring(tb)
+      return ta < tb
     end
   end
   local keyList = {}
@@ -466,6 +465,7 @@ end
 globalSupString = 
           '<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">'
 globalFootnotes = {}
+globalFootnoteCount = 0
 
 -- Footnotes
 function processFootnotes()
@@ -474,13 +474,15 @@ function processFootnotes()
   -- on Chrome and Edge
   local style = 'margin-left: 1.1em;text-indent: -1.1em;'
   -- Show footnotes if present
-  if(#globalFootnotes > 0) then
-    if(#globalFootnotes == 1) then 
+  if(globalFootnoteCount > 0) then
+    local footnoteIndex = 0
+    if(globalFootnoteCount == 1) then 
       print('<h3>Footnote</h3><p style="' .. style .. '">')
     else
       print('<h3>Footnotes</h3><p style="' .. style .. '">')
     end
-    for f=1,#globalFootnotes do
+    for f,v in sPairs(globalFootnotes) do
+      footnoteIndex = footnoteIndex + 1
       local body = globalFootnotes[f]['body']
       -- Allow fancy links in footnotes
       -- form is @https://example.com example page@ where “example page”
@@ -496,7 +498,7 @@ function processFootnotes()
       print(x('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>'))
       print(x('<a href="#back-' .. globalFootnotes[f]['name'] .. '">' ..
             globalFootnotes[f]['link'] .. '</a>: ' .. body))
-      if f<#globalFootnotes then
+      if footnoteIndex<globalFootnoteCount then
         print('<p style="' .. style .. '">')
       else
         print "<p>"
@@ -537,8 +539,33 @@ function processIDetc(l)
   -- Remove whitespace after <a href
   l = l:gsub(mc('(<a href=[^>]+>)%b+'),"%1")
   -- Footnotes
+  -- This can’t really handle more than two footnotes together right now
+  if(l:find(mc('%@%,<a href=\"fn:'))) then
+    globalFootnoteCount = globalFootnoteCount + 1
+    local name = l
+    name = name:gsub(mc('.*%@%,<a href=\"fn:([^<]*).*'),'%1')
+    local linkText = name
+    local fnText = name
+    name = name:gsub('([^"]*)".*','%1')
+    linkText = linkText:gsub(mc('[^>]*>%b?%^?(%B+).*$'),'%1')
+    fnText = fnText:gsub(mc('[^>]*%b?%^?%B+([^<]+).*$'),'%1')
+    if(globalFootnotes[name]) then
+      print("Fatal: Footnote " .. name .. " already exists!")
+      sys.exit(1)
+    end
+    globalFootnotes[name] = {}
+    local iName = name
+    name = globalBlogDate .. '-' .. name
+    globalFootnotes[iName]['name'] = name
+    globalFootnotes[iName]['link'] = linkText
+    globalFootnotes[iName]['body'] = fnText
+    l = l:gsub(mc('%@%,<a href=\"fn:[^>]*>[^<]*</a>'),
+        globalSupString .. 
+        ',<a id="back-' .. name .. '">' ..
+        '<a href="#' .. name .. '">' .. linkText .. '</a></a></sup>')
+  end
   if(l:find(mc('<a href=\"fn:'))) then
-    local footnoteIndex = #globalFootnotes + 1
+    globalFootnoteCount = globalFootnoteCount + 1
     local name = l
     name = name:gsub(mc('.*<a href=\"fn:([^<]*).*'),'%1')
     local linkText = name
@@ -546,11 +573,16 @@ function processIDetc(l)
     name = name:gsub('([^"]*)".*','%1')
     linkText = linkText:gsub(mc('[^>]*>%b?%^?(%B+).*$'),'%1')
     fnText = fnText:gsub(mc('[^>]*%b?%^?%B+([^<]+).*$'),'%1')
-    globalFootnotes[footnoteIndex] = {}
+    if(globalFootnotes[name]) then
+      print("Fatal: Footnote " .. name .. " already exists!")
+      sys.exit(1)
+    end
+    globalFootnotes[name] = {}
+    local iName = name
     name = globalBlogDate .. '-' .. name
-    globalFootnotes[footnoteIndex]['name'] = name
-    globalFootnotes[footnoteIndex]['link'] = linkText
-    globalFootnotes[footnoteIndex]['body'] = fnText
+    globalFootnotes[iName]['name'] = name
+    globalFootnotes[iName]['link'] = linkText
+    globalFootnotes[iName]['body'] = fnText
     l = l:gsub(mc('%@?<a href=\"fn:[^>]*>[^<]*</a>'),
         globalSupString .. 
         '<a id="back-' .. name .. '">' ..
