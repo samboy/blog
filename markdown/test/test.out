@@ -1,0 +1,90 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/2024-05-01.jpg" width=224 height=126>
+</div>
+<h1>Title</h1>
+<h2>DATE</h2>
+SUMMARY
+<a name="test-sub-section-title"> </a>
+<h3>Sub-section title</h3>
+<img class=widepic src="pics/PICTURE.png" alt="">
+<br class=nomobile>
+<em>Picture caption</em></p> 
+<p>Some copy here.
+<a name="test-footnote-test"> </a>
+<h3>Footnote test</h3>
+<p>Text<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-test-1"><a href="#test-1">1</a></a></sup> 
+Two footnotes
+ together:<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-test-2"><a href="#test-2">2</a></a></sup><sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">,<a id="back-test-3"><a href="#test-3">3</a></a></sup>
+<p><sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-test-4"><a href="#test-4">4</a></a></sup> 
+<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-test-5"><a href="#test-5">5</a></a></sup> 
+<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-test-6"><a href="#test-6">6</a></a></sup> 
+<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-test-7"><a href="#test-7">7</a></a></sup> 
+<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-test-8"><a href="#test-8">8</a></a></sup> 
+<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-test-9"><a href="#test-9">9</a></a></sup> 
+<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-test-10"><a href="#test-10">10</a></a></sup>
+<p>The limit is two footnotes together. The footnotes must be numbers
+ from 1 to 9, so 9 footnotes total. We do not support footnotes where
+ footnotes themselves have footnotes, nor footnotes without a reference
+ in the main text.
+<a name="test-xascii"> </a>
+<h3>Xascii</h3>
+<pre class="blogPre">  0123456789abcdef
+0 .ÁÉÍÑÓÚÜ¡..—..«»
+1 •áéíñóúü¿‘’.→“”©
+2 .!"#$%&amp;'()*+,-./
+3 0123456789:;&lt;=&gt;?
+4 @ABCDEFGHIJKLMNO
+5 PQRSTUVWXYZ[\]^_
+6 `abcdefghijklmno
+7 pqrstuvwxyz{|}~♥
+</pre>
+<p>All non-ASCII: ÁÉÍÑÓÚÜ¡—«»•áéíñóúü¿‘’→“”©♥
+<a name="test-misc"> </a>
+<h3>Misc</h3>
+<p><em>italics</em> <a href="https://example.com">link</a>
+<p>Superscripts: 17<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> 18<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> 20<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> 4<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> etc.
+<ul>
+<li>
+<p>List item
+</li>
+<li>
+<p>Another bullet item
+</li>
+</ul>
+
+<h3>Footnotes</h3><p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-1"> </a>
+<a href="#back-test-1">1</a>:  Footnote <i>italics</i> <a href="https://www.example.com">link</a>
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-2"> </a>
+<a href="#back-test-2">2</a>:  Footnote 2
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-3"> </a>
+<a href="#back-test-3">3</a>:  Footnote 3
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-4"> </a>
+<a href="#back-test-4">4</a>:  Footnote 4
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-5"> </a>
+<a href="#back-test-5">5</a>:  Footnote 5
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-6"> </a>
+<a href="#back-test-6">6</a>:  Footnote 6
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-7"> </a>
+<a href="#back-test-7">7</a>:  Footnote 7
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-8"> </a>
+<a href="#back-test-8">8</a>:  Footnote 8
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-9"> </a>
+<a href="#back-test-9">9</a>:  Footnote 9
+<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<a name="test-10"> </a>
+<a href="#back-test-10">10</a>:  Footnote 10
+<p>
+
+<p>
+
+</div>
+

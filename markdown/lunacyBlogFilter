@@ -475,13 +475,30 @@ function processFootnotes()
   local style = 'margin-left: 1.1em;text-indent: -1.1em;'
   -- Show footnotes if present
   if(globalFootnoteCount > 0) then
+    -- To allow more than 9 footnotes, we need our own sort function
+    local sortFunction = function(a,b) 
+      local ta = type(a)
+      local tb = type(b)
+      -- Convert numeric strings in to numbers so we have a numeric and not
+      -- lexical sort (so "10" is greater then "2")
+      if(ta == 'string' and a:find('^%d+$')) then 
+        a = tonumber(a)
+        ta = 'number'
+      end
+      if(tb == 'string' and b:find('^%d+$')) then
+        b = tonumber(b)
+        tb = 'number'
+      end
+      if(ta == tb) then return a < b end
+      return ta < tb
+    end
     local footnoteIndex = 0
     if(globalFootnoteCount == 1) then 
       print('<h3>Footnote</h3><p style="' .. style .. '">')
     else
       print('<h3>Footnotes</h3><p style="' .. style .. '">')
     end
-    for f,v in sPairs(globalFootnotes) do
+    for f,v in sPairs(globalFootnotes, sortFunction) do
       footnoteIndex = footnoteIndex + 1
       local body = globalFootnotes[f]['body']
       -- Allow fancy links in footnotes
