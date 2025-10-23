@@ -52,34 +52,35 @@ Two footnotes
 </li>
 </ul>
 
-<h3>Footnotes</h3><p style="margin-left: 1.1em;text-indent: -1.1em;">
+<h3>Footnotes</h3>
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="test-1"> </a>
 <a href="#back-test-1">1</a>:  Footnote <i>italics</i> <a href="https://www.example.com">link</a>
-<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="test-2"> </a>
 <a href="#back-test-2">2</a>:  Footnote 2
-<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="test-3"> </a>
 <a href="#back-test-3">3</a>:  Footnote 3
-<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="test-4"> </a>
 <a href="#back-test-4">4</a>:  Footnote 4
-<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="test-5"> </a>
 <a href="#back-test-5">5</a>:  Footnote 5
-<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="test-6"> </a>
 <a href="#back-test-6">6</a>:  Footnote 6
-<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="test-7"> </a>
 <a href="#back-test-7">7</a>:  Footnote 7
-<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="test-8"> </a>
 <a href="#back-test-8">8</a>:  Footnote 8
-<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="test-9"> </a>
 <a href="#back-test-9">9</a>:  Footnote 9
-<p style="margin-left: 1.1em;text-indent: -1.1em;">
+<p style="margin-left: 1.74em;text-indent: -1.74em;">
 <a name="test-10"> </a>
 <a href="#back-test-10">10</a>:  Footnote 10
 <p>

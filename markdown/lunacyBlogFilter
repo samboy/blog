@@ -470,9 +470,6 @@ globalFootnoteCount = 0
 -- Footnotes
 function processFootnotes()
   local x = XasciiStringConvert
-  -- In a more enlightened world, 'text-indent: -1.1em hanging' would work
-  -- on Chrome and Edge
-  local style = 'margin-left: 1.1em;text-indent: -1.1em;'
   -- Show footnotes if present
   if(globalFootnoteCount > 0) then
     -- To allow more than 9 footnotes, we need our own sort function
@@ -494,11 +491,26 @@ function processFootnotes()
     end
     local footnoteIndex = 0
     if(globalFootnoteCount == 1) then 
-      print('<h3>Footnote</h3><p style="' .. style .. '">')
+      print('<h3>Footnote</h3>')
     else
-      print('<h3>Footnotes</h3><p style="' .. style .. '">')
+      print('<h3>Footnotes</h3>')
     end
     for f,v in sPairs(globalFootnotes, sortFunction) do
+      local fnWidth = 0
+      -- Determine just how wide the footnote left part (e.g. "1: ") is
+      local leftText = globalFootnotes[f]['link']
+      leftText = leftText .. ': '
+      -- This for loop assumes an 8-bit encoding (e.g. Xascii)
+      for a=1,#leftText do
+        fnWidth = fnWidth + width(leftText:sub(a,a))
+      end 
+      fnWidth = fnWidth / width("M") -- We measure in “em”s
+      fnWidth = string.format("%.2f",fnWidth)
+      -- In a more enlightened world, 'text-indent: -1.1em hanging' would work
+      -- on Chrome and Edge
+      local style = 'margin-left: ' .. fnWidth .. 
+                    'em;text-indent: -' .. fnWidth .. 'em;'
+      print('<p style="' .. style .. '">')
       footnoteIndex = footnoteIndex + 1
       local body = globalFootnotes[f]['body']
       -- Allow fancy links in footnotes
@@ -510,17 +522,14 @@ function processFootnotes()
         -- Allow bare links in footnotes
         body=body:gsub(mc('(https://%B+)'),'<a href="%1">%1</a>')
       end
+      -- *foo bar* should be in italics
       body = body:gsub(mc('%*([^%*]+)%*'),'<i>%1</i>')
       -- Add footnote to page
       print(x('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>'))
       print(x('<a href="#back-' .. globalFootnotes[f]['name'] .. '">' ..
             globalFootnotes[f]['link'] .. '</a>: ' .. body))
-      if footnoteIndex<globalFootnoteCount then
-        print('<p style="' .. style .. '">')
-      else
-        print "<p>"
-      end
     end
+    print"<p>"
   end
 end
 
