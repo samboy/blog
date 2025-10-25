@@ -92,7 +92,7 @@ engines.
 <p>
 
 While SipHash would
-<a href="http://www.samiam.org/blog/20131006.html">make Deadwood a little more secure</a>,
+<a href="blog:20131006">make Deadwood a little more secure</a>,
 this security improvement would be strictly academic.  I have to balance
 making an academic security update against Deadwood’s code against the need
 to keep Deadwood small and fast.  
@@ -109,15 +109,15 @@ If SipHash existed in 2001 when I implemented MaraDNS’ random number
 generator or in 2010 when I was still actively developing Deadwood and
 last updated its hash compression function, I probably would have had
 the code use a 
-<a href="http://www.samiam.org/blog/20131006.html#S32Hash">32-bit SipHash variant</a>.
+<a href="blog:20131006#S32Hash">32-bit SipHash variant</a>.
 
 <p>
 
 But, with a full-time job as a software developer and 
-<a href="http://www.samiam.org/blog/20131007.html">a baby to take care of</a>,
+<a href="blog:20131007">a baby to take care of</a>,
 I no longer am actively developing MaraDNS the way I was until 2010.
 There is a reason that 
-<a href="http://www.samiam.org/blog/20120326.html">I stopped marketing MaraDNS as being secure last year</a>.
+<a href="blog:20120326">I stopped marketing MaraDNS as being secure last year</a>.
 <p>
 
 <i>To post a comment about this blog entry, <A 

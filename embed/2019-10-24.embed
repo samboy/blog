@@ -17,7 +17,7 @@ products on Amazon.
 <p>
 
 I have released MaraDNS 3.4.01.  This is just 
-<a href="https://www.samiam.org/blog/2019-10-05.html">MaraDNS 3.3.03</a> declared
+<a href="blog:2019-10-05">MaraDNS 3.3.03</a> declared
 “stable”.  Compared to the last stable release of MaraDNS, I have
 added the ability to specify which IP a given host name has to Deadwood,
 MaraDNS’s recursive nameserver, and have updated the recursive nameserver

@@ -45,7 +45,7 @@ href=http://alienvps.com/vps-hosting-specials/>on sale for $15/year</A>
 <b>Cripperz</b>
 </div><br>
 
-<A href=http://www.samiam.org/blog/20120203.html>As I recently blogged</A>,
+<A href="blog:20120203">As I recently blogged</A>,
 Cripperz recently went deadpool.  My VPS with them was noticeably slower than
 my nodes with AlienVPS, and they had more downtime.  System was easily
 updated--I didn't even need to disable "fastestmirror" to do so.

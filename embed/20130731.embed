@@ -56,7 +56,7 @@ the following feeds which validate:
 </blockquote>
 
 Unlike the obsolete Gopher service
-<a href="http://www.samiam.org/blog/20121130.html">which I shut down</a>, the RSS feed
+<a href="blog:20121130">which I shut down</a>, the RSS feed
 generator is completely automated.  Now that I have written the script to
 update it, it will always be current whenever I add a new blog entry.
 

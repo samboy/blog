@@ -67,7 +67,7 @@ result in certain kinds of denial of service attacks.
 <p>
 
 The standard way to solve these kinds of problems is to
-use <a href="https://www.samiam.org/blog/20131004.html">SipHash</a>,
+use <a href="blog:20131004">SipHash</a>,
 which I last looked at back in 2013.  So, the first thing
 I did, after realizing Lua had this issue, was to make 
 patches for both Lua 5.1 and Lua 5.4 which add SipHash support:
@@ -133,7 +133,7 @@ This is the version of SipHash used by Python, Ruby, and Rust:
 <p>
 
 Another option for 32-bit processors is HalfSipHash, which
-is similar to a <a href="https://www.samiam.org/blog/20131006.html">idea
+is similar to a <a href="blog:20131006">idea
 I proposed back in 2013</a>: Run SipHash against 32-bit, instead of
 64-bit, words.  The official proposal uses different rotation
 constants than the ones I proposed back in 2013; like my 2013
