@@ -88,7 +88,7 @@
         border-right: 3px solid black;
         border-bottom: 3px solid black;
 }
-input   {
+.pz input {
 	border: 1px solid #888;
 	text-align: center;
 	width: 1em;
@@ -100,59 +100,59 @@ CSS is compatible with IE6 and even Dillo 2</span>
 <table cellspacing=0>
 <tr>
 <td class=a>1</td>
-<td class=b><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
 <td class=b>4</td>
-<td class=a><input type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
 <td class=a>2</td>
-<td class=b><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
 <td class=c>7</td>
 <tr>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=e>5</td>
-<td class=e><input type=text size=1 maxlength=1></td>
-<td class=d><input type=text size=1 maxlength=1></td>
-<td class=a><input type=text size=1 maxlength=1></td>
+<td class=e><input class=pz type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
 <td class=d>1</td>
-<td class=f><input type=text size=1 maxlength=1></td>
+<td class=f><input class=pz type=text size=1 maxlength=1></td>
 <tr>
 <td class=d>2</td>
-<td class=a><input type=text size=1 maxlength=1></td>
-<td class=b><input type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
 <td class=i>6</td>
-<td class=d><input type=text size=1 maxlength=1></td>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=f>5</td>
 <tr>
-<td class=a><input type=text size=1 maxlength=1></td>
-<td class=i><input type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
+<td class=i><input class=pz type=text size=1 maxlength=1></td>
 <td class=a>5</td>
-<td class=b><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
 <td class=i>1</td>
-<td class=a><input type=text size=1 maxlength=1></td>
-<td class=g><input type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
+<td class=g><input class=pz type=text size=1 maxlength=1></td>
 <tr>
 <td class=a>3</td>
-<td class=b><input type=text size=1 maxlength=1></td>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=a>4</td>
-<td class=b><input type=text size=1 maxlength=1></td>
-<td class=i><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
+<td class=i><input class=pz type=text size=1 maxlength=1></td>
 <td class=h>1</td>
 <tr>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=e>4</td>
-<td class=d><input type=text size=1 maxlength=1></td>
-<td class=d><input type=text size=1 maxlength=1></td>
-<td class=a><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
 <td class=b>5</td>
-<td class=j><input type=text size=1 maxlength=1></td>
+<td class=j><input class=pz type=text size=1 maxlength=1></td>
 <tr>
 <td class=la>5</td>
-<td class=lb><input type=text size=1 maxlength=1></td>
+<td class=lb><input class=pz type=text size=1 maxlength=1></td>
 <td class=lc>1</td>
-<td class=la><input type=text size=1 maxlength=1></td>
+<td class=la><input class=pz type=text size=1 maxlength=1></td>
 <td class=la>6</td>
-<td class=lb><input type=text size=1 maxlength=1></td>
+<td class=lb><input class=pz type=text size=1 maxlength=1></td>
 <td class=ld>4</td>
 <tr>
 </table>

@@ -88,7 +88,7 @@
         border-right: 3px solid black;
         border-bottom: 3px solid black;
 }
-input   {
+.pz input {
 	border: 1px solid #888;
 	text-align: center;
 	width: 1em;
@@ -99,61 +99,61 @@ CSS is compatible with IE6 and even Dillo 2</span>
 <form action="#" method="post">
 <table cellspacing=0>
 <tr>
-<td class=a><input type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
 <td class=b>3</td>
-<td class=b><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
 <td class=a>4</td>
-<td class=a><input type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
 <td class=b>6</td>
-<td class=c><input type=text size=1 maxlength=1></td>
+<td class=c><input class=pz type=text size=1 maxlength=1></td>
 <tr>
 <td class=d>4</td>
-<td class=e><input type=text size=1 maxlength=1></td>
+<td class=e><input class=pz type=text size=1 maxlength=1></td>
 <td class=e>5</td>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=a>6</td>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=f>7</td>
 <tr>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=a>5</td>
-<td class=b><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
 <td class=i>1</td>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=d>3</td>
-<td class=f><input type=text size=1 maxlength=1></td>
+<td class=f><input class=pz type=text size=1 maxlength=1></td>
 <tr>
 <td class=a>2</td>
-<td class=i><input type=text size=1 maxlength=1></td>
+<td class=i><input class=pz type=text size=1 maxlength=1></td>
 <td class=a>3</td>
-<td class=b><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
 <td class=i>7</td>
-<td class=a><input type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
 <td class=g>1</td>
 <tr>
-<td class=a><input type=text size=1 maxlength=1></td>
+<td class=a><input class=pz type=text size=1 maxlength=1></td>
 <td class=b>7</td>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=a>6</td>
-<td class=b><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
 <td class=i>5</td>
-<td class=h><input type=text size=1 maxlength=1></td>
+<td class=h><input class=pz type=text size=1 maxlength=1></td>
 <tr>
 <td class=d>3</td>
-<td class=e><input type=text size=1 maxlength=1></td>
+<td class=e><input class=pz type=text size=1 maxlength=1></td>
 <td class=d>1</td>
-<td class=d><input type=text size=1 maxlength=1></td>
+<td class=d><input class=pz type=text size=1 maxlength=1></td>
 <td class=a>5</td>
-<td class=b><input type=text size=1 maxlength=1></td>
+<td class=b><input class=pz type=text size=1 maxlength=1></td>
 <td class=j>6</td>
 <tr>
-<td class=la><input type=text size=1 maxlength=1></td>
+<td class=la><input class=pz type=text size=1 maxlength=1></td>
 <td class=lb>2</td>
-<td class=lc><input type=text size=1 maxlength=1></td>
+<td class=lc><input class=pz type=text size=1 maxlength=1></td>
 <td class=la>7</td>
-<td class=la><input type=text size=1 maxlength=1></td>
+<td class=la><input class=pz type=text size=1 maxlength=1></td>
 <td class=lb>1</td>
-<td class=ld><input type=text size=1 maxlength=1></td>
+<td class=ld><input class=pz type=text size=1 maxlength=1></td>
 <tr>
 </table>
 </form>
