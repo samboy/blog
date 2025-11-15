@@ -43,7 +43,7 @@ their moves.
 "8.f3 Be7 9.O-O-O b5 10.g4 Nxd4 11.Bxd4 Bb7 12.e5 Nxg4 13.Rg1 Nh6 " +
 "14.Bd3 Bf8 15.Be4 Rc8? 16.Bb6! Bxe4 17.Bxc7 Bc6 18.Bd6 Nf5 19.Ne4 1-0",
 "Black resigns",
-"gameScore",
+"20220715gameScore",
 8,
 "Position after 4... Nc6",
 0,0
@@ -77,8 +77,11 @@ Argentina.
 
 <p>
 
-<div id="board1-box"></div><script type="text/javascript">runGame(
-0,"Black resigns","board1",23,"Position after 12. e5",0,0
+<div id="20220715board1-box"></div><script type="text/javascript">runGame(
+"1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 Nc6 5.Nc3 Qc7 6.Be3 a6 7.Qd2 Nf6 " +
+"8.f3 Be7 9.O-O-O b5 10.g4 Nxd4 11.Bxd4 Bb7 12.e5 Nxg4 13.Rg1 Nh6 " +
+"14.Bd3 Bf8 15.Be4 Rc8? 16.Bb6! Bxe4 17.Bxc7 Bc6 18.Bd6 Nf5 19.Ne4 1-0",
+"Black resigns","20220715board1",23,"Position after 12. e5",0,0
 );</script>
 <noscript>
 <img src=pics/chess/2022-07-15-2.png><br>
@@ -97,8 +100,11 @@ before.
 
 <p>
 
-<div id="board2-box"></div><script type="text/javascript">runGame(
-0,"Black resigns","board2",26,"Position after 13... Nh6",0,0
+<div id="20220715board2-box"></div><script type="text/javascript">runGame(
+"1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 Nc6 5.Nc3 Qc7 6.Be3 a6 7.Qd2 Nf6 " +
+"8.f3 Be7 9.O-O-O b5 10.g4 Nxd4 11.Bxd4 Bb7 12.e5 Nxg4 13.Rg1 Nh6 " +
+"14.Bd3 Bf8 15.Be4 Rc8? 16.Bb6! Bxe4 17.Bxc7 Bc6 18.Bd6 Nf5 19.Ne4 1-0",
+"Black resigns","20220715board2",26,"Position after 13... Nh6",0,0
 );</script>
 <noscript>
 <img src=pics/chess/2022-07-15-3.png><br>
@@ -131,10 +137,10 @@ to a mating attack:
 
 <p>
 
-<div id="board3-box"></div><script type="text/javascript">runGame(
+<div id="20220715board3-box"></div><script type="text/javascript">runGame(
 "14... O-O? 15. Rxg7+ Kxg7 16. Rg1+ Ng4 17. Rxg4+ Kh8 18. Qh6 Bg5+ " +
 "19. Rxg5 Qxc3 20. Qg7#",
-"Checkmate","board3",0,"What if Black played 14... O-O?",
+"Checkmate","20220715board3",0,"What if Black played 14... O-O?",
 "r3k2r/1bqpbppp/p3p2n/1p2P3/3B4/2NB1P2/PPPQ3P/2KR2R1 b kq - 3 14",
 "Analysis"
 );</script>
@@ -167,8 +173,11 @@ Rc8 was a blunder; White can now move and win:
 
 <p>
 
-<div id="board4-box"></div><script type="text/javascript">runGame(
-0,"Black resigns","board4",30,"White to move and win",0,0
+<div id="20220715board4-box"></div><script type="text/javascript">runGame(
+"1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 Nc6 5.Nc3 Qc7 6.Be3 a6 7.Qd2 Nf6 " +
+"8.f3 Be7 9.O-O-O b5 10.g4 Nxd4 11.Bxd4 Bb7 12.e5 Nxg4 13.Rg1 Nh6 " +
+"14.Bd3 Bf8 15.Be4 Rc8? 16.Bb6! Bxe4 17.Bxc7 Bc6 18.Bd6 Nf5 19.Ne4 1-0",
+"Black resigns","20220715board4",30,"White to move and win",0,0
 );</script>
 <noscript>
 <img src=pics/chess/2022-07-15-5.png><br>
@@ -186,9 +195,9 @@ Black now plays 16... Qxb6??, White can mate with Qxd7#:
 
 <p>
 
-<div id="board5-box"></div><script type="text/javascript">runGame(
+<div id="20220715board5-box"></div><script type="text/javascript">runGame(
 "16. Qxb6?? Qxd7#",
-"Checkmate","board5",0,"What if Black played 16... Qxb6??",
+"Checkmate","20220715board5",0,"What if Black played 16... Qxb6??",
 "2r1kb1r/1bqp1ppp/pB2p2n/1p2P3/4B3/2N2P2/PPPQ3P/2KR2R1 b k - 7 16",
 "Analysis"
 );</script>
@@ -213,8 +222,11 @@ Magnus decided to continue on for a few more moves:
 
 <p>
 
-<div id="board6-box"></div><script type="text/javascript">runGame(
-0,"Black resigns","board6",31,"Position after 16. Bd6!",0,0
+<div id="20220715board6-box"></div><script type="text/javascript">runGame(
+"1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 Nc6 5.Nc3 Qc7 6.Be3 a6 7.Qd2 Nf6 " +
+"8.f3 Be7 9.O-O-O b5 10.g4 Nxd4 11.Bxd4 Bb7 12.e5 Nxg4 13.Rg1 Nh6 " +
+"14.Bd3 Bf8 15.Be4 Rc8? 16.Bb6! Bxe4 17.Bxc7 Bc6 18.Bd6 Nf5 19.Ne4 1-0",
+"Black resigns","20220715board6",31,"Position after 16. Bd6!",0,0
 );</script>
 <noscript>
 <img src=pics/chess/2022-07-15-7.png><br>

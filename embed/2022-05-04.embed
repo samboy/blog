@@ -51,7 +51,7 @@ notation</a> is used to describe the chess moves made.
 "1. e4 e5 2. Nf3 d6 3. Bc4 Bg4 4. Nc3 g6? " +
 "5. Nxe5! Bxd1 6. Bxf7+ Ke7 7. Nd5# ",
 "White checkmates Black",
-"gameScore",
+"20220504gameScore",
 0,
 0,0,0
 );</script>
@@ -66,8 +66,10 @@ Let’s look at this game.
 
 <p>
 
-<div id="board1-box"></div><script type="text/javascript">runGame(
-0,"White checkmates Black","board1",8,"Position after  4. g6?",0
+<div id="20220504board1-box"></div><script type="text/javascript">runGame(
+"1. e4 e5 2. Nf3 d6 3. Bc4 Bg4 4. Nc3 g6? " +
+"5. Nxe5! Bxd1 6. Bxf7+ Ke7 7. Nd5# ",
+"White checkmates Black","20220504board1",8,"Position after  4. g6?",0
 );</script>
 <noscript>
 <img src=pics/chess/2022-05-04-1.png><br>
@@ -79,8 +81,10 @@ Let’s look at this game.
 
 <p>
 
-<div id="board2-box"></div><script type="text/javascript">runGame(
-0,"White checkmates Black","board2",10,"White to move and mate",0,0
+<div id="20220504board2-box"></div><script type="text/javascript">runGame(
+"1. e4 e5 2. Nf3 d6 3. Bc4 Bg4 4. Nc3 g6? " +
+"5. Nxe5! Bxd1 6. Bxf7+ Ke7 7. Nd5# ",
+"White checkmates Black","20220504board2",10,"White to move and mate",0,0
 );</script>
 <noscript>
 <img src=pics/chess/2022-05-04-2.png><br>
@@ -93,8 +97,10 @@ White can now deliver mate
 
 <p>
 
-<div id="board3-box"></div><script type="text/javascript">runGame(
-0,"White checkmates Black","board3",13,"Checkmate",0,0
+<div id="20220504board3-box"></div><script type="text/javascript">runGame(
+"1. e4 e5 2. Nf3 d6 3. Bc4 Bg4 4. Nc3 g6? " +
+"5. Nxe5! Bxd1 6. Bxf7+ Ke7 7. Nd5# ",
+"White checkmates Black","20220504board3",13,"Checkmate",0,0
 );</script>
 <noscript>
 <img src=pics/chess/2022-05-04-3.png><br>
