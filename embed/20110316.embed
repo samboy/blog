@@ -93,6 +93,11 @@
 	text-align: center;
 	width: 1em;
 }
+.pz {
+	border: 1px solid #888;
+	text-align: center;
+	width: 1em;
+}
 </style>
 <span class=moyet>CSS needed to see this puzzle.  Yes, the
 CSS is compatible with IE6 and even Dillo 2</span>
