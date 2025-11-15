@@ -38,7 +38,7 @@ their moves.
 
 <p>
 
-<script src="/blog/chess/jquery-1.12.4.min.js"></script><script>$.ajaxSetup({contents: {script: false}})</script><script src="/blog/chess/chessboard-0.3.0.min.js" type="text/javascript"></script><script src="/blog/chess/chess.js"></script><link href="/blog/chess/chessboard-0.3.0.min.css" rel="stylesheet"></link><script src="/blog/chess/chessgame.js"></script><div id="gameScore-box"></div><script type="text/javascript">runGame(
+<script src="/blog/chess/jquery-1.12.4.min.js"></script><script>$.ajaxSetup({contents: {script: false}})</script><script src="/blog/chess/chessboard-0.3.0.min.js" type="text/javascript"></script><script src="/blog/chess/chess.js"></script><link href="/blog/chess/chessboard-0.3.0.min.css" rel="stylesheet"></link><script src="/blog/chess/chessgame.js"></script><div id="20220715gameScore-box"></div><script type="text/javascript">runGame(
 "1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 Nc6 5.Nc3 Qc7 6.Be3 a6 7.Qd2 Nf6 " +
 "8.f3 Be7 9.O-O-O b5 10.g4 Nxd4 11.Bxd4 Bb7 12.e5 Nxg4 13.Rg1 Nh6 " +
 "14.Bd3 Bf8 15.Be4 Rc8? 16.Bb6! Bxe4 17.Bxc7 Bc6 18.Bd6 Nf5 19.Ne4 1-0",
