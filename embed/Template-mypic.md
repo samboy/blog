@@ -18,6 +18,9 @@ footnotes, nor footnotes without a reference in the main text.
 
 *italics* [link](https://example.com) 
 
+Note that the character “'” (ASCII single quote) is not allowed in links, 
+if needed use %27 every time the link has “'” in it.
+
 Superscripts: 17^th 18^th 20^th 4^th etc.
 
 * List item
