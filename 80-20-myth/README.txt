@@ -34,3 +34,25 @@ set output 'monte.png'
 plot "data3montemale.dat" using 1:2 title "Men" with lines lw \
 2 lc "blue", \
 "data4montefemale.dat" using 1:2 title "Women" with lines lw 2 lc "red"
+
+---------------------------------
+
+Some more raw data from NSFG 2022:
+
+We have some more raw data.
+
+To see the age and number of reported sex partners with women, do this:
+
+xzcat NSFG_2022_2023_FemRespPUFData.csv.xz | awk -F, '
+	{print $2 " " $1461}' | less
+
+Note that 50 is 50 or more, 998 is “refused to answer”, 
+and 999 is “don’t know”.
+
+Likewise with men:
+
+xzcat NSFG_2022_2023_MaleRespPUFData.csv.xz | awk -F, '
+	{print $2 " " $920}' | less
+
+With the same note for values of 50/998/999.
+
