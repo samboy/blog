@@ -410,6 +410,8 @@ function splitWideWords(l)
   local thisGlyph = ""
   local currentWidth = 0
   local inTag = false
+  local inH1 = false
+  local thisTag = ""
   a = 1
   while a <= l:len() do
     local look = l:sub(a,a)
@@ -435,7 +437,7 @@ function splitWideWords(l)
     if(thisGlyph:find('%s') and not inTag) then -- Includes emDash
       currentWidth = 0
       outString = outString .. thisGlyph
-    elseif(thisGlyph:find('%/') and not inTag) then
+    elseif(thisGlyph:find('%/') and not inTag and not inH1) then
       currentWidth = 0
       outString = outString .. thisGlyph
       outString = outString .. splitString
@@ -451,6 +453,14 @@ function splitWideWords(l)
     end
     if(look == '>') then
       inTag = false
+      if(thisTag == "h1" or thisTag == "<h1" ) then
+        inH1 = true
+      else
+        inH1 = false
+      end
+      thisTag = ""
+    elseif(inTag) then
+      thisTag = thisTag .. look
     end
   end
   return outString
