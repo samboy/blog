@@ -12,6 +12,13 @@ lunacy lunacyNFSGdata.lua | grep 'Monte' | grep female | awk '
 lunacy lunacyNFSGdata.lua | grep 'Monte' | grep women | awk '
 {print $6 " " $2}' | tr -d % > data4montefemale.dat
 
+To get lunacy (a Lua 5.1 variant with a different random number generator
+and other security fixes):
+
+git clone https://github.com/samboy/lunacy
+
+Source code and Windows binaries are included.
+
 In GNUplot:
 
 set terminal pngcairo size 960,540 
