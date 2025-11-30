@@ -31,6 +31,7 @@ function report(data,size,fudge,formatString)
   end
   print("Population size: " .. subjects)
   print("Mean partners: " .. partners/subjects)
+  print("Virginity rate: " .. (data[0] / subjects) * 100 .. "%")
   local totalSubjects = 0
   local totalPartners = 0
   for a=size,1,-1 do
