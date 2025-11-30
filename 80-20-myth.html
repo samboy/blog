@@ -87,14 +87,19 @@ it has become viral on social media, even
  though there is no scientific evidence to support this myth.<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2025-11-29-1"><a href="#2025-11-29-1">1</a></a></sup>
 <p>That in mind, I have done some research myself to see whether this
  myth is true.
-<p>Let’s us imagine a world where 20% of the men have sex with 80% of
- the women. In this imaginary world, which I have modeled, we can see
- that women have a fairly linear distribution of sex partners; e.g.
- 26.75% of women have 40.7% of lifetime male sex partners and 99.80% of
- women have 100.0% of lifetime male sex partners.
-<p>Contrast this with the men in this incel fantasy, where 20.95% of men
- have 81.7% of lifetime female sex partners, and there is a nearly 50%
- male virginity rate.
+<p>
+
+Let’s us imagine a world where 20% of the men have sex with 80% of
+the women. In this imaginary world, which I have modeled, we can see
+that women have a fairly linear distribution of sex partners; e.g.
+26.75% of women have 40.7% of lifetime male sex partners and 99.80% of
+women have 100.0% of lifetime male sex partners.
+<p>
+
+Contrast this with the men in this incel fantasy, where 20.95% of men
+have 81.7% of lifetime female sex partners, and there is a nearly 50%
+male virginity rate.
+
 <a name="2025-11-29-the-actual-data"> </a>
 <h3>The actual data</h3>
 <img class=widepic src="pics/80-20-NSFG2022.png" alt="">
@@ -122,24 +127,99 @@ and male lifetime sex
 <p>There is a 22.3% male virginity rate
 </li>
 </ul>
-<p>Notably, both the men and women have what look to be a polynomial
- distribution of partners, instead of the reasonably linear distribution
- of partners among women we see when we model the imaginary 80/20 world
- incels have made up.
-<p>Also, the male and female partner count distributions are very
- similar to each other. This indicates that while about 20% of men have
- 70% of the lifetime female sex partners, about 20% of women <em>also</em>
- have about 70% of the lifetime male sex partners. So, while a small
- number of men do, in fact, have the majority of female sex partners,
- the women they are sleeping with, in turn, have a large number of male
- sex partners.
+<p>
+
+Notably, both the men and women have what look to be a polynomial
+distribution of partners, instead of the reasonably linear distribution
+of partners among women we see when we model the imaginary 80/20 world
+incels have made up.
+
+<p>
+
+Also, the male and female partner count distributions are very
+similar to each other. This indicates that while about 20% of men have
+70% of the lifetime female sex partners, about 20% of women <em>also</em>
+have about 70% of the lifetime male sex partners. So, while a small
+number of men do, in fact, have the majority of female sex partners,
+the women they are sleeping with, in turn, have a large number of male
+sex partners.
+
 <a name="2025-11-29-methodology"> </a>
 <h3>Methodology</h3>
-<p>The files used to process this data and generate these graphs are
- available here:
+<p>
+
+The files used to process this data and generate these graphs are
+available here:
+
 <blockquote>
 <p><a href="https://github.com/samboy/blog/tree/main/80-20-myth">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>github.com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>tree/<![if gt IE 6]>&#8203;<![endif]><wbr>main/<![if gt IE 6]>&#8203;<![endif]><wbr>80-20-myth</a>
 </blockquote>
+
+I will explain some of the methodology below.
+
+<h3>The simulated incel fantasy</h3>
+
+<p>
+
+While it’s possible to choose, when a sexual encounter happens, to have
+the woman randomly choose one of the “alpha” guys 80% of the time and
+one of the “beta” guys 20% of the time, the code actually uses a curve.
+
+<p>
+
+Let’s look at the math to make such a curve:
+
+<p>
+<img src=pics/80-20-math-1.png width=320px>
+
+<p>
+In order to make the integration as simple as possible, let’s have
+<i>f(x)</i> be a polynomial:
+
+<p>
+<img src=pics/80-20-math-2.png width=320px>
+
+<p>
+Let’s integrate that equation:
+
+<p>
+<img src=pics/80-20-math-3.png width=320px>
+
+<p>
+Then simplify:
+
+<p>
+<img src=pics/80-20-math-4.png width=200px>
+
+<p>
+For <i>n</i> = 6, <img src=pics/80-20-math-5.png width=75px> is 
+about 0.7902848 and
+<img src=pics/80-20-math-6.png width=75px> is about 0.8388608; those values
+are close enough to 80/20 and keep the math relatively simple.
+
+<p>
+That in mind, we do the following when choosing which man will have a
+sexual encounter with a new partner:
+
+<ul>
+<li>We choose a random point (<i>x,y</i>) where both <i>x</i> and <i>y</i>
+are random numbers between 0 and 1
+<li>If the point ends up below the curve <i>y=x<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">6</sup></i>, we keep the values of <i>x</i> and
+<i>y</i>
+<li>If the point is not below this curve, we choose another random point
+until we find one below the curve (maximum tries: 100 times)
+<li>We then multiply <i>x</i> by 10,000 (the number of men in our
+simulation), round to the nearest integer, and that man will now have 
+a sexual encounter
+<li>Now that we have determined which man has a sexual encounter, we
+randomly choose which one of the 10,000 women in our simulation he
+will have the encounter with
+</ul>
+
+The simulation has 61,000 sexual encounters with a new parter, which is
+approximately 10,000 multiplied by the mean number of partners women in
+the 2022 NSFG data have.
+
 <h3>Footnotes</h3>
 <p style="margin-left: 1.16em;text-indent: -1.16em;">
 <a name="2025-11-29-1"> </a>
