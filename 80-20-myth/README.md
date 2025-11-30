@@ -26,16 +26,22 @@ compiling Lunacy:
 
 ```
 lunacy lunacyNFSGdata.lua | grep '2022:' | grep female | awk '
-{print $6 " " $2}' | tr -d % > data1male.dat
+    {print $6 " " $2}' | tr -d % > data1male.dat
 
 lunacy lunacyNFSGdata.lua | grep '2022:' | grep women | awk '
-{print $6 " " $2}' | tr -d % > data2female.dat
+    {print $6 " " $2}' | tr -d % > data2female.dat
 
 lunacy lunacyNFSGdata.lua | grep 'Monte' | grep female | awk '
-{print $6 " " $2}' | tr -d % > data3montemale.dat
+    {print $6 " " $2}' | tr -d % > data3montemale.dat
 
 lunacy lunacyNFSGdata.lua | grep 'Monte' | grep women | awk '
-{print $6 " " $2}' | tr -d % > data4montefemale.dat
+    {print $6 " " $2}' | tr -d % > data4montefemale.dat
+
+lunacy lunacyNFSGdata18_29.lua | grep female | awk '
+    {print $6 " " $2}' | tr -d % > data5male18_29.dat
+
+lunacy lunacyNFSGdata18_29.lua | grep women | awk '
+    {print $6 " " $2}' | tr -d % > data6female18_29.dat
 ```
 
 If you do not wish to compile Lunacy, running `lua` (or `luajit`) will 

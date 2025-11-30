@@ -1,9 +1,14 @@
-#!/usr/bin/env lunacy64
+#!/usr/bin/env lunacy
 
+-- This is a Lua 5.1 compatible script, which runs the same in Lunacy
+-- If not using Lunacy, this needs to be run in the same directory as
+-- rg32-polyfill.lua
+if not rg32 then require("rg32-polyfill") end
+-- PLEASE NOTE: rg32-polyfill is a *very* slow polyfill.  It is far
+-- better to use lunacy which can calculate the same random numbers much
+-- more quickly
 -- rg32 is at https://github.com/samboy/LUAlibs
--- If you don’t want to compile a lib or install lunacy, do this:
--- require("rg32-polyfill")
-if not rg32 then require("rg32") end
+-- if not rg32 then require("rg32") end
 
 -- Let’s get the real 2011 numbers for lifetime sex partners
 -- This is NSFG2011Men[#female partners] = #men with that many female partners
@@ -236,11 +241,11 @@ for a=1,61000 do
   local man = 0
   while(chadFunction(x,degree) < y and count < 100) do
     count = count + 1
-    x = math.random()
-    y = math.random()
+    x = rg32.random()
+    y = rg32.random()
   end
   man = math.floor(x * men + 0.5) 
-  x = math.random() -- Randomly sleep with any woman
+  x = rg32.random() -- Randomly sleep with any woman
   woman = math.floor(x * women + 0.5)
   pMen[man] = pMen[man] + 1
   pWomen[woman] = pWomen[woman] + 1
