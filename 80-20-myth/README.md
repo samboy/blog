@@ -70,6 +70,21 @@ plot "data3montemale.dat" using 1:2 title "Men" with lines lw \
 "data4montefemale.dat" using 1:2 title "Women" with lines lw 2 lc "red"
 ```
 
+The 18-29 graph:
+
+```
+set terminal pngcairo size 960,540 
+set output 'data18_29.png'
+plot "data5male18_29.dat" using 1:2 title "Men (18-29)" with lines lw \
+2 lc "blue", \
+"data6female18_29.dat" using 1:2 title "Women (18-29)" with lines lw 2 \
+lc "red", \
+"data1male.dat" using 1:2 title "Men (all ages)" with lines lw \
+2 lc "dark-spring-green", \
+"data2female.dat" using 1:2 title "Women (all ages)" with lines lw 2 \
+lc "orange"
+```
+
 # Some more raw data from NSFG 2022
 
 We have some more raw data.
