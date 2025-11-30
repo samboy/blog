@@ -13,12 +13,16 @@
 
 For people who do not wish to compile Lunacy, there is a Lua compatible
 (including Lua 5.1 compatible) polyfill library which implements the
-rg32 random number generator in pure Lua here; look at the top of
-lunacyNSFGdata.lua to see how to use it.
+rg32 random number generator in pure Lua.  While lunacyNSFGdata.lua
+will run fine with Lua 5.1, Lua 5.4, and LuaJIT, generating the same Monte
+Carlo output, it is a lot slower (it’s a fraction of a second to run
+in Lunacy, 7.5 seconds in LuaJIT, nearly a minute in Lua 5.4, and about
+90 seconds in Lua 5.1)
 
 # Making the data sets
 
-To make the data sets (which, yes, are included here):
+To make the data sets (which, yes, are included here), do this after
+compiling Lunacy:
 
 ```
 lunacy lunacyNFSGdata.lua | grep '2022:' | grep female | awk '
@@ -33,6 +37,10 @@ lunacy lunacyNFSGdata.lua | grep 'Monte' | grep female | awk '
 lunacy lunacyNFSGdata.lua | grep 'Monte' | grep women | awk '
 {print $6 " " $2}' | tr -d % > data4montefemale.dat
 ```
+
+If you do not wish to compile Lunacy, running `lua` (or `luajit`) will 
+work and even generate the same Monte Carlo output, but will be a lot
+slower.
 
 # Making the graphs in GNUplot
 
