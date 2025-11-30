@@ -79,3 +79,16 @@ xzcat NSFG_2022_2023_MaleRespPUFData.csv.xz | awk -F, '
 
 With the same note for values of 50/998/999.
 
+To make snippets of Lua code:
+
+```
+xzcat NSFG_2022_2023_FemRespPUFData.csv.xz | awk -F, '
+        {partnercount=$1461;if(partnercount == ""){partnercount = 0}
+        if($2 >= 18 && $2 <= 29 && partnercount <= 50){a[partnercount]++}}
+        END{for(b in a){print "women[" b "] = " a[b]}}' > women18_29
+xzcat NSFG_2022_2023_MaleRespPUFData.csv.xz | awk -F, '
+        {partnercount=$920;if(partnercount == ""){partnercount = 0}
+        if($2 >= 18 && $2 <= 29 && partnercount <= 50){a[partnercount]++}}
+        END{for(b in a){print "men[" b "] = " a[b]}}' > men18_29
+```
+
