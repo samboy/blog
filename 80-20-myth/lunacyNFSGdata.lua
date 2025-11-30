@@ -2,7 +2,7 @@
 
 -- rg32 is at https://github.com/samboy/LUAlibs
 -- If you don’t want to compile a lib or install lunacy, do this:
--- rg32 = math
+-- require("rg32-polyfill")
 if not rg32 then require("rg32") end
 
 -- Let’s get the real 2011 numbers for lifetime sex partners
