@@ -20,6 +20,10 @@ footnotes, nor footnotes without a reference in the main text.
 @*italics* also works (sometimes you need the @ after another punctuation
 characer, like —@*italics* here—)
 
+If you want an italic link, be sure the link ends the sentence, and
+make sure the setence ends with a period in italics, like this:
+_Get an italic link [like this](https://italic.link.foo)._
+
 Note that the character “'” (ASCII single quote) is not allowed in links, 
 if needed use %27 every time the link has “'” in it.
 
