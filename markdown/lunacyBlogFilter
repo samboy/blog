@@ -582,7 +582,7 @@ function processIDetc(l)
   -- _Here is [a link somewhere](https://name.foo)._
   -- Note that the period is needed at the end there, and the link ends
   -- the sentence.
-  l = l:gsub('</em> <a ([^%/]*)/a><em>%.</em>','<a %1/a>.</em>')
+  l = l:gsub('</em> <a ([^%/]*)/a><em>%.</em>',' <a %1/a>.</em>')
   -- Footnotes
   -- This can’t really handle more than two footnotes together right now
   if(l:find(mc('%@%,<a href=\"fn:'))) then
