@@ -238,6 +238,52 @@ The simulation has 61,000 sexual encounters with a new parter, which is
 approximately 10,000 multiplied by the mean number of partners women in
 the 2022 NSFG data have.
 
+<p>
+
+As an aside, this is how we calculate the precise value we give <i>n</i> in
+the <i>x<sup style="font-size: 9pt; line-height: 0; 
+vertical-align: 5px">n</sup></i> function:
+
+<p>
+<img src=pics/80-20-math-7.png width=200px>
+<p>
+
+When <i>k</i> has a value of 80% (0.8), the above equation gives a
+precise solution for <i>n</i> in this equation:
+
+<p>
+<img src=pics/80-20-math-2.png width=300px>
+<p>
+
+By dividing those two logarithms and subtracting one,
+we create a curve such that the area below the curve between 0 to 0.8
+is one fourth of the area below the curve from 0.8 to 1.  <i>k</i>
+having a value of 80% (0.8) represents an imaginary world where 80%
+of the women sleep with 20% of the men.  
+
+<p>
+
+If we want to create an curve representing a fantasy world where 90% 
+of the women sleep with 10% of the men, <i>k</i> would have a value 
+of 0.9 (90%) with that equation.  In the resulting curve, the area
+below the curve from 0 to 0.9 is one nineth of the area below the
+curve from 0.9 to 1.  One nineth because 90 in 90/10 is nine times
+the value of 10.
+
+<p>
+
+To calculate this in Lua, here <tt>k</tt> is a number between 0 and 1:
+
+<pre>
+function chad(k)
+  return math.log(1-k) /
+         math.log(k) - 1
+end
+</pre>
+
+For 80/20, the value of <i>n</i> is about 6.212567; for 90/10, the 
+value is about 20.8543; and for 95/5, the value is about 57.404.
+
 <a name="comments"> </a>
 <h3>Addressing incel comments</h3>
 
