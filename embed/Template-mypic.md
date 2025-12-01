@@ -17,6 +17,8 @@ needed. We do not support footnotes where footnotes themselves have
 footnotes, nor footnotes without a reference in the main text.
 
 *italics* [link](https://example.com) 
+@*italics* also works (sometimes you need the @ after another punctuation
+characer, like —@*italics* here—)
 
 Note that the character “'” (ASCII single quote) is not allowed in links, 
 if needed use %27 every time the link has “'” in it.

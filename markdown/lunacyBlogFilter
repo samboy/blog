@@ -545,7 +545,7 @@ end
 
 globalInPre = false
 -- Process any <a id> stuff in the HTML after processing pictures in the
--- blog. Also processes simple subscripts
+-- blog. Also processes simple subscripts and other stuff
 function processIDetc(l)
   -- If convenient, make <a id> <a name="foo"> </a>
   -- This way the blog can have bookmarks linking directly to sections
@@ -574,6 +574,10 @@ function processIDetc(l)
   l = l:gsub(mc('([\25\29])_(%r+)_([\29\30])'), '%1<i>%2</i>%3')
   -- Remove whitespace after <a href
   l = l:gsub(mc('(<a href=[^>]+>)%b+'),"%1")
+  -- htmldoc has italic bugs in certain cases, so @*foo* becomes <i>foo</i>
+  l = l:gsub('%@%*([^%*]+)%*','<i>%1</i>')
+  -- If htmldoc processed @*foo*, remove the leading @
+  l = l:gsub('%@<em>','<em>')
   -- Footnotes
   -- This can’t really handle more than two footnotes together right now
   if(l:find(mc('%@%,<a href=\"fn:'))) then
