@@ -21,7 +21,9 @@ echo '@media screen and (max-width: 640px) { ' >> index.html
 echo '.nomobile { display: none; } }' >> index.html
 
 # A lot of the blog was made in an era before phone screens were mainstream
-echo 'body { max-width: 95vw; overflow-x: hidden; }' >> index.html
+echo 'body { max-width: 95vw; overflow-x: hidden; } ' >> index.html
+
+echo 'a { color: #258723; } ' >> index.html
 
 # Nav after blog entries
 echo '.GitBlogNav { display: table; width: 95vw; ' >> index.html
