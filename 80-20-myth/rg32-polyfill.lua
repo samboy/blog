@@ -5,6 +5,9 @@
 -- Lua 5.1 install.  No library using bitwise operations is needed
 -- for this polyfill.
 
+-- This polyfill generates (slowly) the same numbers as Lunacy’s random
+-- number generator, as well as the rg32 lib for stock Lua.
+
 -- Placed in the public domain 2020, 2025 Sam Trenholme
 
 -- If you have access to the Lua C API, or if you are using a version
@@ -14,14 +17,17 @@
 -- is how both ObHack and Lunacy run RadioGatun[32]
 
 -- Lua 5.2 adds native bitwise operations, which can run a lot faster 
--- than this does.  This is for Roblox users, Lightroom Classic users,
--- or anyone else stuck at Lua 5.1.
+-- than this does.  This Lightroom Classic users or anyone else stuck at 
+-- stock Lua 5.1.
 
 -- This is an implementation of RadioGatun[32] for pure Lua 5.1
 -- Lua suffers from an "Internet Explorer 6" problem.  While Lua
 -- 5.3 has native bitwise operations, Lua 5.1 does *not*.  However,
 -- there are multiple places where "Lua scripting" means Lua 5.1
 -- scripting, even though Lua 5.3 has been out for over five years.
+
+-- This polyfill does not pollute the global namespace; the only 
+-- variable added to the global namespace is “rg32”
 
 if not rg32 then
 -- 4x4 xor table
