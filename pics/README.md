@@ -91,3 +91,9 @@ Next Generation episode "Ménage a Troi", copyright 1990 CBS Studios. I
 believe this use of the image qualifies as fair use, since it is only a
 very low-resolution single frame, and its use does not harm (indeed it
 may even help) the market for the original work.
+
+## TN7th.jpg
+
+CC BY-SA 4.0 
+License: https://creativecommons.org/licenses/by-sa/4.0/deed.en
+Attribution: https://commons.wikimedia.org/wiki/User:Twotwofourtysix (Anon.)
