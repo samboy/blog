@@ -16,7 +16,7 @@ This is a bugfix-only release; no security updates were made.
 <p>
 
 Deadwood has been updated to 3.2.14 as described in
-<a href="https://samiam.org/blog/2019-01-19.html">yesterday’s blog entry</a>.
+<a href="blog:2019-01-19">yesterday’s blog entry</a>.
 MaraDNS has been updated to double the default amount of memory
 allowed to be used while MaraDNS is running.  
 <a href="https://github.com/samboy/MaraDNS/issues/52">More information is in the GitHub ticket</a>.
