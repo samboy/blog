@@ -94,6 +94,6 @@ may even help) the market for the original work.
 
 ## TN7th.jpg
 
-CC BY-SA 4.0 
+CC BY-SA 4.0; altered
 License: https://creativecommons.org/licenses/by-sa/4.0/deed.en
 Attribution: https://commons.wikimedia.org/wiki/User:Twotwofourtysix (Anon.)
