@@ -39,12 +39,6 @@ echo '@media (min-width: 640px) {.GitBlogNav {width:640px;}}' >> index.html
 echo '@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}' >> index.html
 echo '@media (max-width: 640px) {.blog {overflow-x:scroll;}}' >> index.html
 echo 'body { color: #333; background-color: #fff; }' >> index.html
-echo '@media (prefers-color-scheme: dark) { ' >> index.html
-echo 'body { background-color: #131516; color: #d8d4cf; }' >> index.html
-echo '.blog { background-color: #131516; color: #d8d4cf; }' >> index.html
-echo 'a { color: #78dc78; }' >> index.html
-echo '.blog a { color: #78dc78; }' >> index.html
-echo '}' >> index.html
 echo '.blog { display: table; max-width: 640px;' >> index.html
 # too much
 #echo 'word-break: break-all;' >> index.html
@@ -75,6 +69,14 @@ echo 'h3 { font-size: 24px; margin-bottom: 0; }' >> index.html
 echo '.blogpicx { text-align: left !important; }' >> index.html 
 echo '.blogpicx img { ' >> index.html
 echo 'border-radius: 8px; box-shadow: 0 0 4px #888; }' >> index.html
+echo 'a { color: #258723; }' >> index.html
+echo '.blog a { color: #258723; }' >> index.html
+echo '@media (prefers-color-scheme: dark) { ' >> index.html
+echo 'body { background-color: #131516; color: #d8d4cf; }' >> index.html
+echo '.blog { background-color: #131516; color: #d8d4cf; }' >> index.html
+echo 'a { color: #78dc78; }' >> index.html
+echo '.blog a { color: #78dc78; }' >> index.html
+echo '}' >> index.html
 echo \</style\> >> index.html
 # This is just going to be a long line
 echo \<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" \> >> index.html
