@@ -208,7 +208,7 @@ More information about this conversion is in a previous blog entry:
 <p>
 
 <blockquote>
-<A href="http://samiam.org/blog/20131215.html">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20131215.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
+<A href="blog:20131215">http://<![if gt IE 6]>&#8203;<![endif]><wbr>samiam.<![if gt IE 6]>&#8203;<![endif]><wbr>org/<![if gt IE 6]>&#8203;<![endif]><wbr>blog/<![if gt IE 6]>&#8203;<![endif]><wbr>20131215.<![if gt IE 6]>&#8203;<![endif]><wbr>html</A>
 </blockquote>
 
 Here is a screenshot with this font:
@@ -248,7 +248,7 @@ I have a mirror of the font here:
 <p>
 
 I mentioned in a
-<a href="http://samiam.org/blog/2014-06-11.html">previous blog</a>
+<a href="blog:2014-06-11">previous blog</a>
 that Georgia originally had lining numbers.  As it turns out, 
 Microsoft kept Georgia’s lining numbers in the version of the
 font for Windows 3.11.  Keep in mind that these are proportional,
@@ -277,10 +277,10 @@ I have made a mirror of the older Georgia here:
 <p>
 
 In my
-<a href="http://samiam.org/blog/2014-06-11.html">last blog</a>, I mentioned that
+<a href="blog:2014-06-11">last blog</a>, I mentioned that
 we might not be ready for web fonts in body text, because of holdouts
 still using Windows XP without clear type.  It is true that 
-<a href="http://samiam.org/blog/20111023.html">back in 2011</a> one could not
+<a href="blog:20111023.html">back in 2011</a> one could not
 readily use a web font for body text without non-cleartype 
 users complaining, but the number of such people has certainly
 greatly decreased.

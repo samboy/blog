@@ -107,7 +107,7 @@ the real IP from one of the nameservers for netdna-cdn.com:
 <p>
 
 Like the issue of CNAMEs being combined with other records,
-<a href="http://samiam.org/blog/2015-02-11.html">I have no plans to fix this issue</a>, for pretty much the same reasons.  I might change my 
+<a href="blog:2015-02-11">I have no plans to fix this issue</a>, for pretty much the same reasons.  I might change my 
 stance in five years when my child is a little older, but, ever since
 I became a single parent, I have not had time to play the “let’s
 update Deadwood to resolve every single corner case bug-for-bug the way

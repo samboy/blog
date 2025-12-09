@@ -16,7 +16,7 @@ use GnuPG to verify that releases of MaraDNS are legitimate.
 <p>
 
 As I
-<a href="http://samiam.org/blog/20120621.html">announced three years ago</a>, MaraDNS
+<a href="blog:20120621">announced three years ago</a>, MaraDNS
 1 support stops on June 21, 2015.  That is within one month.  If anyone
 still wishes to use MaraDNS 1 after that date, they are on their own:
 No support nor updates (not even security updates, no matter how critical

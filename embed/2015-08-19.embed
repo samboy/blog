@@ -54,7 +54,7 @@ release to fix this bug.  It can be downloaded here:
 <p>
 
 As I have promised
-<a href="http://samiam.org/blog/2015-06-12.html">before</a>,
+<a href="blog:2015-06-12">before</a>,
 I am no longer updating the Sourceforge version of MaraDNS.  People
 may download MaraDNS from the MaraDNS web site, or from GitHub:
 
@@ -70,7 +70,7 @@ may download MaraDNS from the MaraDNS web site, or from GitHub:
 
 This bug impacts MaraDNS 1.  I will not fix this bug in older
 versions of MaraDNS; I have given users a three-year warning that
-<a href="http://samiam.org/blog/20120621.html">MaraDNS 1 is no longer supported</a>.  
+<a href="blog:20120621">MaraDNS 1 is no longer supported</a>.  
 All MaraDNS 1 users need to upgrade to MaraDNS 2.
 
 <p>

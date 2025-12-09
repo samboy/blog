@@ -164,7 +164,7 @@ overly complicated function.
 <p>
 
 A few months ago, I posted a 
-<a href="http://samiam.org/blog/20130826.html">blog entry</a> showing how to set
+<a href="blog:20130826">blog entry</a> showing how to set
 up a host-only network, as well as how to edit the registry to work
 around a bug in how VirtualBox sets up host-only networks.  David gave
 me the following link:
