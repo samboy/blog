@@ -97,3 +97,39 @@ may even help) the market for the original work.
 CC BY-SA 4.0; altered
 License: https://creativecommons.org/licenses/by-sa/4.0/deed.en
 Attribution: https://commons.wikimedia.org/wiki/User:Twotwofourtysix (Anon.)
+
+# Public domain pictures
+
+These are public domain pictures I have either used in my copyrighted
+pictures or have cropped.  This is not every single public domain picture
+in my blog; I am only listing them as a courtesy.
+
+## Faerie ring
+
+https://commons.wikimedia.org/wiki/File:Fairy_ring_on_a_suburban_lawn_100_1851.jpg
+
+## Forest
+
+https://commons.wikimedia.org/wiki/File:Garibaldi_National_Park_-_Garibaldi_Mountain.jpg
+
+## Police car
+
+https://commons.wikimedia.org/wiki/File:Daytona_Beach_Shores_Police_Car.png
+
+## Icy waterfall
+
+https://commons.wikimedia.org/wiki/File:Frozen_Wappinger_Creek.JPG
+
+## 2 + 2 = 5
+
+https://commons.wikimedia.org/wiki/File:Yakov_Guminer_-_Arithmetic_of_a_counter-plan_poster_(1931).jpg
+
+## Waffles
+
+https://commons.wikimedia.org/wiki/File:Gaufre_liege.jpg
+
+## Jimmy Kimmel
+
+https://commons.wikimedia.org/wiki/File:Jimmy_Kimmel_June_2022.jpg
+
+
