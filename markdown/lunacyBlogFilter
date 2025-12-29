@@ -650,6 +650,10 @@ function processIDetc(l)
   if(l:find(mc('</pre>'))) then
     globalInPre = false
   end
+  -- Allow @ before link to work around htmldoc buggyness
+  l = l:gsub('%@<a href=','<a href=')
+  -- @~{ becomes [ and @~{ becomes ] because htmldoc is buggy
+  l = l:gsub('%@%~%{','[') l = l:gsub('%@%~%}',']')
   -- Break long words, except in <pre> tags (the CSS will add scrollbars
   -- to long lines in <pre> blocks as needed)
   if not globalInPre then

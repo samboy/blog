@@ -20,6 +20,12 @@ footnotes, nor footnotes without a reference in the main text.
 @*italics* also works (sometimes you need the @ after another punctuation
 characer, like —@*italics* here—)
 
+Some rules to deal with htmldoc buggyness:
+
+@~{ becomes [ and @~} becomes ]
+
+@[link](https://example.com) removes the leading @.
+
 If you want an italic link, be sure the link ends the sentence, and
 make sure the setence ends with a period in italics, like this:
 _Get an italic link [like this](https://italic.link.foo)._
