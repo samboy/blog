@@ -1,0 +1,63 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/Chess2.jpg" width=224 height=126>
+</div>
+<h1>New Capablanca Setup</h1>
+<h2>December 31, 2025</h2>
+I end 2025 by looking at a possible chess variant
+<a name="2025-12-31-mongredien-carrera-chess"> </a>
+<h3>Mongredien Carrera Chess</h3>
+<img class=widepic src="pics/MongredienCarrera.jpg" alt="">
+<br class=nomobile>
+<em>Mongredien 
+ Carrera Chess</em>
+<p>Capablance Chess (or Knighted Chess) is a series of variants, usually
+ on 8x10 boards, where two fairy pieces are added:
+<ul>
+<li>
+<p>A piece that moves like a knight and bishop
+</li>
+<li>
+<p>A piece that moves like a knight and rook
+</li>
+</ul>
+<p>There has been a lot of debate about which opening setup is the best
+ one. The problem with Capablanca Chess is that the more powerful pieces
+ give White a considerable advantage, and offsetting this is difficult.
+<p><a href="https://samiam.org/schoolbook/">Back in 2006, I came up with a Capablanca opening  setup</a> 
+which is
+ remarkably balanced. Since then, computer chess variant play has become
+ a lot stronger.
+<p>Looking at Capablanca variants again, I tried out a Capablance
+ version of <em>Mongredien Chess</em>. Mongredien Chess is a variant
+ where we swap the queen side knight with the king side bishop; in other
+ words, we swap the B file knight with the F file bishop, resulting in
+ an opening setup where the queenside has two bishop, and the kingside
+ has two knights. This setup is <a href="https://lichess.org/analysis/chess960?position=692">Fischer Random Setup #692</a>.
+<p>I observed that White has less of an advantage in this setup compared
+ to the standard Chess opening setup, so I put a version of this setup
+ in Capablanca Chess and <a href="https://www.pychess.org/analysis/capablanca?fen=rcbbqknnar/pppppppppp/10/10/10/10/PPPPPPPPPP/RCBBQKNNAR_w_KQkq_-_0_1">analyzed the resulting starting position</a>.
+<p>What I got is a position where White’s advantage is minimized. While
+ further analysis is needed, this looks to be a game where draws are
+ less common than they are in standard Chess, but where White does not
+ have the overwhelming advantage he has in other opening setups.
+<p>The word “Carrera” is used because Pietro Carrera suggested a similar
+ opening setup back in 1617.
+<a name="2025-12-31-men-dont-be-afraid-of-women"> </a>
+<h3>Men: Don’t be afraid of women</a> 
+</h3>
+<p>While I now have a girlfriend—my biggest accomplishment for 2025—I
+ would like to end the year with some advice for single men reading this
+ blog.
+<p>Men should not be afraid of women, but <a href="https://archive.ph/20251231164747/https://x.com/datingbyblaine/status/2006374205281984681">approach them  more</a>. 
+This is based on a survey over 13,000 women,
+ where some 95% of them wished men would approach more.
+<p>The important thing men need to remember is that sex is a lifetime
+ monogamous commitment, not a way to put another notch on the bedpost,
+ and, in my experience, sex is a lot better when I’m married to the
+ woman.
+
+
+<p>
+
+</div>
+
