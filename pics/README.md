@@ -98,6 +98,12 @@ CC BY-SA 4.0; altered
 License: https://creativecommons.org/licenses/by-sa/4.0/deed.en
 Attribution: https://commons.wikimedia.org/wiki/User:Twotwofourtysix (Anon.)
 
+## Fischer-Tal-1960-blog.jpg
+
+Taken by Ulrich Kohls in 1960. Provided by Deutsches Bundesarchiv. 
+CC-BY-SA 3.0 DE https://creativecommons.org/licenses/by-sa/3.0/de/deed.en 
+Colorized by DeepAI with manual tweaking
+
 # Public domain pictures
 
 These are public domain pictures I have either used in my copyrighted
