@@ -531,6 +531,12 @@ function processFootnotes()
       else
         -- Allow bare links in footnotes
         body=body:gsub(mc('(https://%B+)'),'<a href="%1">%1</a>')
+        local thisl = body:match('<a href="[^"]*">([^<]*)</a>')
+        -- Add line breaks to long bare links
+        if thisl then
+          thisl = thisl:gsub('%/','/<![if gt IE 6]>&#8203;<![endif]><wbr>')
+          body=body:gsub('(<a href="[^"]*">)[^<]*</a>','%1'..thisl..'</a>')
+        end
       end
       -- *foo bar* should be in italics
       body = body:gsub(mc('%*([^%*]+)%*'),'<i>%1</i>')
