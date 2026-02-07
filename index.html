@@ -62,6 +62,260 @@ a { color: #78dc78; }
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<a name=BlogEntry-2026-02-07> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/Fischer-Tal-1960-blog.jpg" width=224 height=126>
+</div>
+<h1>Capa720: A Chess Variant
+ proposal</h1>
+<h2>February 7, 2026</h2>
+Capablanca Chess is a family of (usually 8x10) Chess variants where
+ the board is 8 files high but 10 files wide, and the usual Chess setup
+ has rook + knight (C) and bishop + knight (A) fairy pieces added to the
+ starting array.
+<p>The king moves three squares instead of two when castling.
+<p>If the rook remains in the corners, and the king in the center, and
+ if the bishops are on opposite colors, we have some 720 possible
+ opening setups (compared to 18 setups when we have the king in the
+ center and the rooks in the corners in Classic Chess).
+<p>I call this set of opening setups Capa720, a family of some 720
+ different Chess variants.
+<p>Pictured above are two world champions, Bobby Fischer (left) and
+ Mikhail Tal (right) playing a famous 1960 game which ended in a draw; I
+ discuss a Chess variant rule change which would result in fewer draws
+ later on in this blog entry.
+<a name="2026-02-07-improving-capablanca-chess"> </a>
+<h3>Improving Capablanca Chess</h3>
+<p>The problem with Capablanca Chess is this: The game greatly reduces
+ draws, but this is because the game is a win for White; analysis
+ indicates, that with perfect play, White always wins.
+<p>There are two ways to give Black better chances in Capablanca Chess:
+<ul>
+<li>
+<p>Changing the opening setup. One Trice originally proposed lowering
+ White’s advantage by carefully choosing a balanced opening setup.<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2026-02-07-1"><a href="#2026-02-07-1">1</a></a></sup>
+</li>
+<li>
+<p>“Pie rule”: Player one chooses White’s first move, and player two
+ chooses whether to play White or Black.<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2026-02-07-2"><a href="#2026-02-07-2">2</a></a></sup>
+</li>
+</ul>
+<p>Let’s look at these two proposals.
+<a name="2026-02-07-changing-the-opening-setup"> </a>
+<h3>Changing the opening setup</h3>
+<p>Back in the first 2000s decade, many members of the then Chess
+ Variant community looked at a large number of possible opening setups.
+ Here are the proposed setups with names which I listed back in 2008:<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2026-02-07-3"><a href="#2026-02-07-3">3</a></a></sup>
+<pre class="blogPre">Setup           Name               21-ply score
+--------------  -----------------  ------------
+RBANCKNQBR*     Grotesque          24
+RNABCKBQNR*     Finesse            24
+RNBQCKABNR      Gothic             27
+RNBAQKCBNR      Capa 1             29
+RNABQKBCNR      Capa 2             36
+RBCNAKNQBR*     Landorean          36
+RQNBAKBNCR      Schoolbook         39
+RNQBCKBANR      Blackbook          40
+RNCBQKBANR      Nalls              40
+RBNCQKANBR      Univers            40
+RANBQKBNCR      Aberg              43
+RNBACKQBNR      Embassy            45
+RCNBAKBNQR*     Notebook           47
+RNBQAKCBNR      Teutonic           49
+RCNBQKBNAR      Carrera            54
+RANBCKBNQR*     Narcotic           58
+RNBCAKQBNR*     Consulate          60
+RNBCQKABNR      Bird               62
+* The 2008 setup was a mirror image
+</pre>
+<p>The setup is the initial array for both Black and White; C is rook +
+ knight and A is knight + bishop. The name is the name given to the
+ setup back in 2008. The 21-ply score is White’s advantage, in
+ centipawns (100 centipawns is a 1-pawn advantage).
+<p>The best setups (where White has less than a 24-centipawn advantage)
+ are:
+<pre class="blogPre">Setup      21-ply score
+---------- ------------
+RNBBNKCQAR 17 (h2-h4)
+RABNNKCBQR 20 (d1-e3)
+RCNBNKAQBR 21 (b1-c3)
+RBNANKBCQR 21 (h2-h3)
+RNNBQKCABR 22 (b1-c3)
+RNABNKQCBR 22 (d2-d4)
+RNABBKNQCR 22 (e2-e4)
+RABBNKNCQR 23 (d2-d4)
+RABNNKQBCR 23 (d2-d4)
+RNBBQKNCAR 23 (e2-e4)
+RNABNKBQCR 23 (f2-f4)
+RBBCNKNQAR 23 (g1-f3)
+RNABCKQNBR 23 (h1-i3)
+RBCNAKBQNR 23 (h2-h4)
+RBBNCKAQNR 23 (i1-h3)
+</pre>
+<p>Here we see the setup, White’s centipawn advantage, and also the move
+ White should make to have that advantage.
+<p>The setups where White has a 24 centipawn advantage are RNBBAKCQNR,
+ RNBBQKCNAR, RBANCKNQBR (Grotesque), RNCBNKAQBR, RNABCKBQNR (Finesse),
+ RBANCKQNBR, and RNCBBKNAQR.
+<p>The three worst setups, with a significant advantage for White, are
+ RQNBCKBNAR (92 centipawns), RAQNBKCBNR (96), and finally RQNABKCBNR
+ (Where white has a 99 centipawn advantage).
+<p>The point being that carefully choosing the opening setup where White
+ has the minimum advantage reduces White’s advantage from around 35
+ centipawns to, at most, 17 centipawns. White still has an edge.
+<p>Indeed, if we play 500 games of Finesse Chess (RNABCKBQNR) at 18-ply
+ depth (this game has a 24 centipawn advantage for White in our 21-ply
+ analysis), we get these results:
+<pre class="blogPre">500 games played
+White 238 47.6%
+Draw   89 17.8%
+Black 173 34.6%
+13% White winning edge
+56.5% White score
+57.9075% White decisive wins
+</pre>
+<p>So, of the 500 games played, White won 238, 89 were draws, and Black
+ won 173. If we look at only decisive games where either White or Black
+ wins, White won 57.9% of those games.
+<p>Compare this to Classic Chess:
+<pre class="blogPre">White 142 28.4%
+Draw  258 51.6%
+Black 100 20%
+500 games played
+8.4% White winning edge
+54.2% White score
+58.6777% White decisive wins
+</pre>
+<p>Point being, with a carefully chosen opening setup for Capablanca
+ Chess, we can reduce White’s advantage to be roughly White’s advantage
+ in Classic Chess (58.7% decisive games won in Classic Chess, 57.9% in
+ Finesse Chess). Since Chess players are happy with White’s edge in
+ Classic Chess, maybe they would be happy with having the same edge for
+ White in Finesse Chess, while greatly reducing draws.
+<p>Maybe not. Let’s look at another way of reducing White’s advantage.
+<a name="2026-02-07-the-pie-rule"> </a>
+<h3>The Pie Rule</h3>
+<p>We can essentially eliminate White’s edge with the Pie rule.
+<p>With the Pie Rule, player one chooses White’s first move, and then
+ player two chooses whether he<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2026-02-07-4"><a href="#2026-02-07-4">4</a></a></sup> 
+is White or Black. To get a sense of what a Pie Rule game would
+ look like, let’s look at some good Pie Rule moves for White in Classic
+ Chess, where neither White nor Black have a significant advantage. The
+ edge for White is shown in centipawns.
+<pre class="blogPre">Move   White edge
+------ ----------
+Nc3    0
+c3     2
+a3     3
+d3     -6
+</pre>
+<p>Enough master games of Chess have been played that we can see how the
+ Baltic Opening (1. Nc3), Anderssen Opening (1. a3), Saragossa Opening
+ (1. c3), and Mieses Opening (1. d3) play out. 1. a3 is in particular a
+ very interesting opening, because it stops Black from playing a
+ reversed Ruy Lopez (1. a3 e5 2. e4 Nf6 3. Nc3 Bb4?? and now White takes
+ the bishop) and gives White his tempo back in many reversed Sicilian
+ setups (e.g. 1. a3 e5 2. c4 Nf6 3. d3 d5 4. cxd5 Nxd5 5. Nf3 Nc6 and
+ now it’s a reversed Najforf where White has a tempo because he played
+ a3 on the first move and doesn’t have to play 6. a3).
+<p>The big advantage of the Pie Rule is that it eliminates White’s edge
+ while minimizing the chances of the game being a forced win for Black.
+ Of the 720 Capa720 setups played, some 490 setups have 1 or more first
+ moves for White which perfectly balance the game (0 centipawn advantage
+ for White). Even with the very unbalanced RQNABKCBNR starting position,
+ where White has a nearly one pawn advantage, in Pie Rule, we can
+ balance the position by having White’s first move be one of 1. h4 or 1.
+ Ch3.
+<p>While the Pie Rule is a blunt tool for balancing an unbalanced
+ abstract game, it is also very effective at removing the first player
+ advantage.
+<p>Now that we have a way of reducing White’s edge, is there a way we
+ can make Chess less drawish?
+<a name="2026-02-07-ko-rule"> </a>
+<h3>Ko rule</h3>
+<img class=widepic src="pics/Fischer-Tal-1960-blog.jpg" alt="">
+<br class=nomobile>
+<em>In this 
+ famous 1960 game, Tal forces a draw</em>
+<p>One way we can make a drawish game, like Chess, less drawish is to
+ have a version of the “Ko Rule”, where it is not permitted to have a
+ previously played position repeated; if a given move repeats a
+ previously played position, another move has to be made which creates a
+ position not seen yet in the game being played. If a player cannot make
+ a legal move without repeating a previously played position, they lose.
+<p>This makes some classic games of Chess, such as Bobby Fischer’s hard
+ fought draw in 1960 against then reigning World Champion Tal<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2026-02-07-5"><a href="#2026-02-07-5">5</a></a></sup> 
+(pictured),
+ not possible, but it also makes Chess a lot less drawish.
+<p>Initial testing with Classic Chess and Finesse Chess shows that draws
+ are greatly reduced with this rule change. Here is a 12-ply tourney
+ played with Ko Rule Classic Chess:
+<pre class="blogPre">White 240 48%
+Draw   92 18.4%
+Black 168 33.6%
+500 games played
+14.4% White winning edge
+57.2% White score
+58.8235% White decisive wins
+</pre>
+<p>And with Finesse Chess:
+<pre class="blogPre">White 1287 51.48%
+Draw    58  2.32%
+Black 1155 46.2%
+2500 games played
+5.28% White winning edge
+52.64% White score
+52.7027% White decisive wins
+</pre>
+<a name="2026-02-07-capa720-a-proposal"> </a>
+<h3>Capa720: A proposal</h3>
+<p>Let me propose Pie Rule Capa720:
+<ul>
+<li>
+<p>We choose one of the 720 Capa720 setups at random
+</li>
+<li>
+<p>Player #1 chooses White’s first move
+</li>
+<li>
+<p>Player #2 gets to decide whether to be White or Black
+</li>
+</ul>
+<p>No opening book, minimum draws (and if 20% draws is too much, we can
+ always also have the Ko rule), and a lot of possibilities for very
+ tactical dynamic games.
+<a name="2026-02-07-picture-attribution"> </a>
+<h3>Picture attribution</h3>
+<p><em>Taken by Ulrich Kohls in 1960. Provided by Deutsches
+ Bundesarchiv.</em> <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en">CC-BY-SA 3.0 DE</a> 
+<em>Colorized by DeepAI with manual tweaking.</em>
+
+<h3>Footnotes</h3>
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
+<a name="2026-02-07-1"> </a>
+<a href="#back-2026-02-07-1">1</a>:  <a href="https://archive.ph/20030711200636/http://gothicchess.org/long_answer.html">https://archive.ph/20030711200636/http://gothicchess.org/long_answer.html</a>
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
+<a name="2026-02-07-2"> </a>
+<a href="#back-2026-02-07-2">2</a>:  New Rules for Classic Games, 1992, page 25
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
+<a name="2026-02-07-3"> </a>
+<a href="#back-2026-02-07-3">3</a>:  <a href="https://archive.ph/20090923161739/https://maradns.blogspot.com/2008/12/capa-opening-setups.html">https://archive.ph/20090923161739/https://maradns.blogspot.com/2008/12/capa-opening-setups.html</a>
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
+<a name="2026-02-07-4"> </a>
+<a href="#back-2026-02-07-4">4</a>:  Or she! Judit Polgar recently defeated World Champion Magnus Carlsen in a famous 2022 Skittles Game that they played
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
+<a name="2026-02-07-5"> </a>
+<a href="#back-2026-02-07-5">5</a>:  <a href="https://www.chessgames.com/perl/chessgame?gid=1008399">https://www.chessgames.com/perl/chessgame?gid=1008399</a>
+<p>
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <a name=BlogEntry-2026-01-04> </a>
 <div class=blogpicx style="text-align: right">
 <img src="pics/VE.png" width=224 height=126>
@@ -60065,6 +60319,7 @@ index</A> for details)</i>
 <div class=blog>
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
 
+<a href="#BlogEntry-2026-02-07">Capa720 (2026-02-07)</a></br>
 <a href="#BlogEntry-2026-01-04">The liberation of Venezuela (2026-01-04)</a></br>
 <a href="#BlogEntry-2025-12-31">New Capablanca Setup (2025-12-31)</a></br>
 <a href="#BlogEntry-2025-12-28">2025 in summary (2025-12-28)</a></br>
