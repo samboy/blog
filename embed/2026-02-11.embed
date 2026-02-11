@@ -1,0 +1,57 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/Chess1.jpg" width=224 height=126>
+</div>
+<h1>Chess Cancun: A public
+ domain font</h1>
+<h2>February 11, 2026</h2>
+I present to the world Chess Cancun, a public domain redrawing of a
+ well known freeware Chess font.
+<a name="2026-02-11-chess-cancun"> </a>
+<h3>Chess Cancun</h3>
+<img class=widepic src="pics/ChessCancunMates.png" alt="">
+<br class=nomobile>
+<em>White to move 
+ and give mate</em>
+<p>There has not been a truly open source font I would consider really
+ attractive. <a href="https://github.com/joshwalters/open-chess-font">Open Chess Font</a> 
+is close; it’s attractive and released under a
+ Creative Commons license. But it’s not OFL nor public domain, and in
+ some cases it’s better to have a font which doesn’t require attribution
+ in PDF files using the font.
+<p>After trying to draw a Chess font myself, without much success, I
+ have finally bit the bullet and have redrawn a well known Chess font
+ which was released as “freeware”, without any formal licensing terms.
+ Since the original font, which is itself based on pictures in a Chess
+ book, was made as a non-commercial font, its OK to redistribute the
+ font and almost certainly OK to use it in both commercial and
+ non-commercial contexts.
+<p>However, the spirit of open source requires explicit permission. That
+ in mind, since fonts <a href="https://en.wikipedia.org/wiki/Intellectual_property_protection_of_typefaces">cannot be copyrighted in the US and many other jurisdictions, and since font copyrights have a 25 year term  in Germany and England, a 15 year term in  Ireland</a>, 
+and since the font in question is over 25 years old, I have
+ redrawn the font and release it to the public domain.
+<p><br>
+<img class=widepic src="pics/ChessCancunFinesse.png" alt="">
+<br class=nomobile>
+<em>Finesse 
+ Chess, a variant with fairy pieces</em>
+<p>I have also added support for a couple of fairy pieces for people who
+ like to play or solve problems for Chess variants.
+<a name="2026-02-11-download"> </a>
+<h3>Download</h3>
+<p>All of the files in this Git repository are public domain:
+<blockquote>
+<p><a href="https://github.com/samboy/ChessCancun">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>github.com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>ChessCancun</a>
+</blockquote>
+<p>It is also available for download in this blog; this download has
+ both the font, instructions to use the font, and even a Zillions file
+ so that one can play Chess (or a few Chess variants) using a low
+ resolution bitmap renderings (the full resolution TTF file is also
+ included):
+<blockquote>
+<p><a href="/files/ChessCancun.zip">Local font download</a>
+</blockquote>
+
+<p>
+
+</div>
+

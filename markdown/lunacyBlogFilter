@@ -660,6 +660,8 @@ function processIDetc(l)
   l = l:gsub('%@<a href=','<a href=')
   -- @~{ becomes [ and @~{ becomes ] because htmldoc is buggy
   l = l:gsub('%@%~%{','[') l = l:gsub('%@%~%}',']')
+  -- @~/ becomes a <br>
+  l = l:gsub('%@%~%/','<br>')
   -- Break long words, except in <pre> tags (the CSS will add scrollbars
   -- to long lines in <pre> blocks as needed)
   if not globalInPre then

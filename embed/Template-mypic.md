@@ -24,6 +24,8 @@ Some rules to deal with htmldoc buggyness:
 
 @~{ becomes [ and @~} becomes ]
 
+@~/ becomes a line feed
+
 @[link](https://example.com) removes the leading @.
 
 If you want an italic link, be sure the link ends the sentence, and
