@@ -79,7 +79,7 @@ echo '.blog a { color: #78dc78; }' >> index.html
 echo '}' >> index.html
 echo \</style\> >> index.html
 # This is just going to be a long line
-echo \<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" \> >> index.html
+echo \<meta name="viewport" content="width=device-width,initial-scale=1.0" \> >> index.html
 echo \</head\>\<body\> >> index.html
 echo \<a name="GitBlogTop"\> \</a\> >> index.html
 echo \<div class=blog\> >> index.html
