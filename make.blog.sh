@@ -80,8 +80,7 @@ echo '}' >> index.html
 echo '.chessDiagram { ' >> index.html
 echo '  font-family: ChessCancun; font-size: 30px; ' >> index.html
 echo '  line-height: 1em;' >> index.html
-echo '  text-align: center; margin-top: -.8em; ' >> index.html
-echo '  margin-bottom: -.8em;}' >> index.html
+echo '  text-align: center; margin: -.8em; } ' >> index.html
 echo \</style\> >> index.html
 # This is just going to be a long line
 echo \<meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=1.0 \> >> index.html
