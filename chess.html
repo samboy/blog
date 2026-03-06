@@ -53,7 +53,7 @@ body { background-color: #131516; color: #d8d4cf; }
 a { color: #78dc78; }
 .blog a { color: #78dc78; }
 }
-.chessDiagram { font-family: ChessCancunColor; font-size: 30px; 
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 30px; 
 display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -62,22 +62,48 @@ display: grid;
     border: 2px solid #333;
 }
 
-.chessDiagram div {
+.chessDiagram8 div {
     text-align: center;
     background-color: #fff; /* Light square */
 }
 
 /* Alternating colors using nth-child */
-.chessDiagram div:nth-child(-n+8):nth-child(even),
-.chessDiagram div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
-.chessDiagram div:nth-child(n+17):nth-child(-n+24):nth-child(even),
-.chessDiagram div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
-.chessDiagram div:nth-child(n+33):nth-child(-n+40):nth-child(even),
-.chessDiagram div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
-.chessDiagram div:nth-child(n+49):nth-child(-n+56):nth-child(even),
-.chessDiagram div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
     background-color: #ddd; /* Dark square */
 }
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 30px; 
+display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 375px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram10x8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+</style>
 </style>
 <meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=1.0 >
 </head><body>
@@ -91,7 +117,7 @@ display: grid;
 <h3>Chess</h3>
 
 <div align=center>
-<div class=chessDiagram>
+<div class=chessDiagram8>
 <div>r</div>
 <div>n</div>
 <div>b</div>
@@ -145,18 +171,70 @@ display: grid;
 </div>
 
 <p>Also, 10x8 or 10x10 support
+<div align=center>
+<div class=chessDiagram10x8>
+<div>r</div>
+<div>n</div>
+<div>a</div>
+<div>b</div>
+<div>m</div>
+<div>k</div>
+<div>b</div>
+<div>q</div>
+<div>n</div>
+<div>r</div>
 
-<div class=chessDiagram>
-!""""""""""#<br>
-$tMsVfLvWmT%<br>
-$OoOoOoOoOo%<br>
-$ + + + + +%<br>
-$+ + + + + %<br>
-$ + + + + +%<br>
-$+ + + + + %<br>
-$pPpPpPpPpP%<br>
-$RnAbDkBqNr%<br>
-/(((((((((()
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div>
+
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div>
+
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div>
+
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div>
+
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+
+<div>R</div>
+<div>N</div>
+<div>A</div>
+<div>B</div>
+<div>M</div>
+<div>K</div>
+<div>B</div>
+<div>Q</div>
+<div>N</div>
+<div>R</div>
+
+</div>
+<i>Finesse Chess</i>
+</div>
+
+
+<div class=chessDiagram10x8>
 </div>
 <p>
 
