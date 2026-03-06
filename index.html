@@ -72,7 +72,7 @@ display: grid;
 .chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
 .chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
 .chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
-    background-color: #ddd; /* Dark square */
+    background-color: #ccc; /* Dark square */
 }
 .chessDiagram10x8 { font-family: ChessCancunColor; font-size: 30px; 
 display: grid;
@@ -98,7 +98,7 @@ display: grid;
 .chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
 .chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
 .chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
-    background-color: #ddd; /* Dark square */
+    background-color: #ccc; /* Dark square */
 }
 @media (prefers-color-scheme: dark) { 
 body { background-color: #131516; color: #d8d4cf; }
@@ -128,10 +128,46 @@ background-color: #888; }
 .chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
     background-color: #888; /* Dark square */
 }
-
+} /* End Dark mode theme */
+@media print {
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
 }
+} /* End print colors */
 </style>
-<meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=1.0 >
+<script>
+maxWidth = screen.width;
+maxWidth *= .95;
+if(maxWidth < 480) {
+  boardSize = maxWidth - 5;
+  pieceWidth = boardSize / 10;
+  capaPieceWidth = boardSize / 12.5;
+  capaHeight = boardSize * .8;
+}
+</script>
+<meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
 </head><body>
 <a name=GitBlogTop> </a>
 <div class=blog>
@@ -139,6 +175,188 @@ background-color: #888; }
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<a name=BlogEntry-2026-03-06> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/Chess2.jpg" width=224 height=126>
+</div>
+<h1>Sam T. vs. NN</h1>
+<h2>March 6, 2026</h2>
+
+Many moons ago, I was sick and tired of my friends beating me at chess
+all the time, so I started going to a local chess club where chess
+masters mentored me and I was playing in USCF sponsored tournaments.
+I remember that chess club well: It was in the cafeteria where a lot
+of scientists and other smart people worked, and met every Friday
+night.  I did not have a car at the time, so I would ride my bike
+there across town.
+
+<p>
+
+As the cafeteria workers were closing down the cafeteria, we all
+would go there and people would bring out their chessboards, along
+with their mechanical clock timers, and people would start playing
+chess.  We would usually play a number of casual (skittles) games
+before starting up our tournament.  Our games in the tournament were
+rated and the chess masters would teach us beginners how to play
+chess better.  Pretty soon after going to that club pretty much
+every week, and listening to the chess master teach me chess, my
+chess got a lot better.
+
+<p>
+
+I have a beautiful memory from this period of my life, of me hanging out
+with a buddy of mine at another club, which was <i>not</i> a chess club.
+My chess was already getting a lot better because of what the people at
+the chess club were teaching me, and it was time to use my new skills.
+
+<p>
+
+It was a amazing sunny day, and this club had large windows letting us enjoy
+the sun inside the club.  I was with a buddy of mine, so we brought
+out this nice, if somewhat small, wooden chessboard and started to play a 
+game of chess:
+
+<p>
+<b>1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4 4. Qe2</b>
+
+<div align=center>
+<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div>
+<div>q</div> <div>k</div> <div>b</div> <div></div> <div>r</div>
+<div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div>
+<div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div>n</div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div>
+<div>P</div> <div>P</div> <div>P</div> <div>Q</div> <div>P</div>
+<div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div>
+<div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
+<i>Position after 4. Qe2</i>
+</div>
+
+<p>
+
+<i>Modern Chess Openings</i>, back when we would use a huge thick
+book to go over openings, points out Black’s best course of action at
+this point is 4...Qe7 5. Qxe4 d6 6. d4, but even here White is up a 
+pawn.
+
+<p>
+
+My opponent could see his knight was in trouble, so he responded
+with a counter threat, <b>4. f6?</b>, giving us this:
+
+<div align=center>
+<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div>
+<div>q</div> <div>k</div> <div>b</div> <div></div> <div>r</div>
+<div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div>
+<div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div>n</div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div>
+<div>P</div> <div>P</div> <div>P</div> <div>Q</div> <div>P</div>
+<div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div>
+<div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
+<i>Position after 4... f6?</i>
+</div>
+
+<p>
+
+Black’s kingside is now weak enough that we can ignore the threat against
+the knight on e5.
+
+<p>
+
+<b>5. Qh5+! g6 6. Nxg6 hxg6</b>
+
+<div align=center>
+<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div>
+<div>q</div> <div>k</div> <div>b</div> <div></div> <div>r</div>
+<div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div>Q</div> <div></div> <div></div> <div></div> <div></div> <div>n</div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div>
+<div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div>
+<div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div>
+<div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
+<i>Position after 6... hxg6</i>
+</div>
+
+<p>
+
+When I showed the people at the chess club later on that week this game,
+my brother suggested that I take the rook with 7. Qxh8.  A chess master,
+a mentor for us, looked at him and said “you don’t go for the rook in 
+chess.  You go for the <i>king</i>!”.
+
+<p>
+
+Anyway, back to the game, which continued like this:
+
+<p>
+
+<b>7. Qxg6+ Ke7 8. Qxd4+ Kd6? 9. Qd4+?</b> (better was 9. d4!) <b>Kc6?</b>
+
+<div align=center>
+<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div>
+<div>q</div> <div></div> <div>b</div> <div></div> <div>r</div>
+<div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div>k</div>
+<div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div>Q</div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div>
+<div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div>
+<div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div>
+<div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
+<i>Position after 9... Kc6. White to move and force mate.</i>
+</div>
+
+<p>
+
+Checkmate is now unavoidable.  The actual continuation
+was longer, but this is roughly how the game ended, with
+a few more moves in between:
+
+<p>
+
+<b>10. Qc4+ Kb6 11. Qb5#</b>
+
+<p>
+
+I was getting results from going to the local chess club: I was now
+winning, instead of losing, games.
+
+<script>
+if(maxWidth < 480) {
+  elements = document.querySelectorAll('.chessDiagram8');
+  console.log(elements.length);
+  for (i = 0; i < elements.length; i++) {
+    console.log(elements[i].style);
+    elements[i].style.width = boardSize + 'px'; 
+    elements[i].style.height = boardSize + 'px'; 
+    elements[i].style.fontSize = pieceWidth + 'px'; 
+  }
+  capaElements = document.querySelectorAll('.chessDiagram10x8');
+  for (i = 0; i < capaElements.length; i++) {
+    capaElements[i].style.width = boardSize + 'px'; 
+    capaElements[i].style.height = capaHeight + 'px'; 
+    capaElements[i].style.fontSize = capaPieceWidth + 'px'; 
+  }
+}
+</script>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <a name=BlogEntry-2026-02-11> </a>
 <div class=blogpicx style="text-align: right">
 <img src="pics/Chess1.jpg" width=224 height=126>
@@ -60464,6 +60682,7 @@ index</A> for details)</i>
 <div class=blog>
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
 
+<a href="#BlogEntry-2026-03-06">Sam T. vs. NN (2026-03-06)</a></br>
 <a href="#BlogEntry-2026-02-11">Chess Cancun (2026-02-11)</a></br>
 <a href="#BlogEntry-2026-02-07">Capa720 (2026-02-07)</a></br>
 <a href="#BlogEntry-2026-01-04">The liberation of Venezuela (2026-01-04)</a></br>
