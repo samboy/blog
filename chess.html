@@ -72,7 +72,7 @@ display: grid;
 .chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
 .chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
 .chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
-    background-color: #ddd; /* Dark square */
+    background-color: #ccc; /* Dark square */
 }
 .chessDiagram10x8 { font-family: ChessCancunColor; font-size: 30px; 
 display: grid;
@@ -98,7 +98,7 @@ display: grid;
 .chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
 .chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
 .chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
-    background-color: #ddd; /* Dark square */
+    background-color: #ccc; /* Dark square */
 }
 @media (prefers-color-scheme: dark) { 
 body { background-color: #131516; color: #d8d4cf; }
@@ -129,6 +129,31 @@ background-color: #888; }
     background-color: #888; /* Dark square */
 }
 } /* End dark theme colors */
+@media print {
+.chessDiagram8 { border: 2px solid #ddd; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #ddd; }
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+} /* End print colors */
 </style>
 <meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=1.0 >
 </head><body>
@@ -142,7 +167,7 @@ background-color: #888; }
 <h3>Chess</h3>
 
 <div align=center>
-<div class=chessDiagram8><div>r</div> <div>n</div> <div>b</div>
+<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div>
 <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div>
 <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div>
 <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div>
@@ -159,7 +184,7 @@ background-color: #888; }
 
 <p>Also, 10x8 or 10x10 support
 <div align=center>
-<div class=chessDiagram10x8>
+<div class=chessDiagram10x8 translate="no">
 <div>r</div>
 <div>n</div>
 <div>a</div>
@@ -236,7 +261,7 @@ out a chessboard that was around, and starting to play chess:
 <b>1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4 4. Qe2</b>
 
 <div align=center>
-<div class=chessDiagram8><div>r</div> <div>n</div> <div>b</div>
+<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div>
 <div>q</div> <div>k</div> <div>b</div> <div></div> <div>r</div>
 <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div>
 <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div>
@@ -264,7 +289,7 @@ My opponent could see his knight was in trouble, so he responded
 with a counter threat, <b>4. f6?</b>, giving us this:
 
 <div align=center>
-<div class=chessDiagram8><div>r</div> <div>n</div> <div>b</div>
+<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div>
 <div>q</div> <div>k</div> <div>b</div> <div></div> <div>r</div>
 <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div>
 <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div>
@@ -289,7 +314,7 @@ the knight on e5.
 <b>5. Qh5+! g6 6. Nxg6 hxg6</b>
 
 <div align=center>
-<div class=chessDiagram8><div>r</div> <div>n</div> <div>b</div>
+<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div>
 <div>q</div> <div>k</div> <div>b</div> <div></div> <div>r</div>
 <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div>
 <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
@@ -314,7 +339,7 @@ because the goal in Chess is to checkmate the opponent’s <i>king</i>.
 <b>7. Qxg6+ Ke7 8. Qxd4+ Kd6? 9. Qd4+?</b> (better was 9. d4!) <b>Kc6?</b>
 
 <div align=center>
-<div class=chessDiagram8><div>r</div> <div>n</div> <div>b</div>
+<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div>
 <div>q</div> <div></div> <div>b</div> <div></div> <div>r</div>
 <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div>
 <div></div> <div></div> <div></div> <div></div> <div></div> <div>k</div>
