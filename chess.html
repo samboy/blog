@@ -130,7 +130,8 @@ background-color: #888; }
 }
 } /* End dark theme colors */
 @media print {
-.chessDiagram8 { border: 2px solid #ddd; }
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
 .chessDiagram8 div { background-color: #fff; }
 .chessDiagram8 div:nth-child(-n+8):nth-child(even),
 .chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
@@ -141,7 +142,8 @@ background-color: #888; }
 .chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
 .chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
 background-color: #ddd; } 
-.chessDiagram10x8 { border: 2px solid #ddd; }
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
 .chessDiagram10x8 div { background-color: #fff; }
 .chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
 .chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
