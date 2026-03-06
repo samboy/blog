@@ -157,6 +157,7 @@ background-color: #ddd; }
 </style>
 <script>
 viewportWidth = document.documentElement.clientWidth;
+document.write("<h1>"+viewportWidth+"</h1>"); // DEBUG
 viewportWidth *= .95;
 if(viewportWidth < 480) {
   boardSize = viewportWidth - 5;
