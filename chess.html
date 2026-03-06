@@ -53,8 +53,31 @@ body { background-color: #131516; color: #d8d4cf; }
 a { color: #78dc78; }
 .blog a { color: #78dc78; }
 }
-.chessDiagram { font-family: ChessCancun; font-size: 30px; line-height: 1em;
-                text-align: center; margin: -.8em;}
+.chessDiagram { font-family: ChessCancunColor; font-size: 30px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram div:nth-child(-n+8):nth-child(even),
+.chessDiagram div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
 </style>
 <meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=1.0 >
 </head><body>
@@ -67,19 +90,57 @@ a { color: #78dc78; }
 
 <h3>Chess</h3>
 
-<div class=chessDiagram>
-!""""""""#<br>
-$tMvWlVmT%<br>
-$OoOoOoOo%<br>
-$ + + + +%<br>
-$+ + + + %<br>
-$ + + + +%<br>
-$+ + + + %<br>
-$pPpPpPpP%<br>
-$RnBqKbNr%<br>
-/(((((((()
-</div>
 <div align=center>
+<div class=chessDiagram>
+<div>r</div>
+<div>n</div>
+<div>b</div>
+<div>q</div>
+<div>k</div>
+<div>b</div>
+<div>n</div>
+<div>r</div>
+
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+<div>p</div>
+
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div>
+
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div>
+
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div>
+
+<div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+<div></div> <div></div>
+
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+<div>P</div>
+
+<div>R</div>
+<div>N</div>
+<div>B</div>
+<div>Q</div>
+<div>K</div>
+<div>B</div>
+<div>N</div>
+<div>R</div>
+
+</div>
 <i>Caption</i>
 </div>
 
