@@ -155,7 +155,17 @@ background-color: #ddd; }
 }
 } /* End print colors */
 </style>
-<meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=1.0 >
+<script>
+viewportWidth = document.documentElement.clientWidth;
+viewportWidth *= .95;
+if(viewportWidth < 480) {
+  boardSize = viewportWidth - 5;
+  pieceWidth = boardSize / 10;
+  capaPieceWidth = boardSize / 12.5;
+  capaHeight = boardSize * .8;
+}
+</script>
+<meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=0.75 >
 </head><body>
 <a name=GitBlogTop> </a>
 <div class=blog>
@@ -364,5 +374,23 @@ a few more moves in between:
 
 <b>10. Qc4+ Kb6 11. Qb5#</b>
 
+<script>
+if(viewportWidth < 480) {
+  elements = document.querySelectorAll('.chessDiagram8');
+  console.log(elements.length);
+  for (i = 0; i < elements.length; i++) {
+    console.log(elements[i].style);
+    elements[i].style.width = boardSize + 'px'; 
+    elements[i].style.height = boardSize + 'px'; 
+    elements[i].style.fontSize = pieceWidth + 'px'; 
+  }
+  capaElements = document.querySelectorAll('.chessDiagram10x8');
+  for (i = 0; i < capaElements.length; i++) {
+    capaElements[i].style.width = boardSize + 'px'; 
+    capaElements[i].style.height = capaHeight + 'px'; 
+    capaElements[i].style.fontSize = capaPieceWidth + 'px'; 
+  }
+}
+</script>
 </body></html>
 
