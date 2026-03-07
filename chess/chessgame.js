@@ -117,7 +117,7 @@ function runGame(pgn,end,label,startply,caption,myfen,startmsg) {
 //      moves shown in the diagram.  Defaults to "Game start"
 function runGameReal(pgn,end,label,startply,caption,myfen,startmsg) {
   thisElement = document.getElementById(label +  "-box");
-  console.log(thisElement);
+  console.log(thisElement); console.log(label);
   if(startply == 0) {
     thisElement.innerHTML = HTMLstringForGame(label,398);
   } else {
