@@ -192,6 +192,12 @@ if(maxWidth < 480) {
   capaHeight = boardSize * .8;
 }
 </script>
+<script src="chess/jquery-1.12.4.min.js"></script>
+<script>$.ajaxSetup({contents: {script: false}})</script>
+<script src="chess/chessboard-0.3.0.min.js" type="text/javascript"></script>
+<script src="chess/chess.js"></script>
+<link href="chess/chessboard-0.3.0.min.css" rel="stylesheet"></link>
+<script src="chess/chessgame.js"></script>
 EOF
 #echo \</style\> >> index.html
 # This is just going to be a long line
