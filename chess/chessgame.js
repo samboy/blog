@@ -119,9 +119,9 @@ function runGameReal(pgn,end,label,startply,caption,myfen,startmsg) {
   thisElement = document.getElementById(label +  "-box");
   // console.log(thisElement); console.log(label); // DEBUG
   if(startply == 0) {
-    thisElement.innerHTML = HTMLstringForGame(label,398);
+    thisElement.innerHTML = HTMLstringForGame(label,300);
   } else {
-    thisElement.innerHTML = HTMLstringForPostition(label,398,startply);
+    thisElement.innerHTML = HTMLstringForPostition(label,300,startply);
   }
   ply[label] = startply;
   defaultply[label] = startply;
