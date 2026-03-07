@@ -97,50 +97,18 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 # Chess piece graphics
 
-The chess piece graphics have been made by Colin M.L. Burnett.
+The chess piece graphics are based on a “freeware” chess font made
+during or before 1998, which in turn is based on graphics in chess books 
+from the mid-20th century.
 
-While, as per *Eltra Corp. v. Ringer*, there is no need to follow the
-license for the piece images in the United States (since the PNG images 
-are raster renderings, *Adobe Systems, Inc. v. Southern Software, Inc.* 
-does not apply), for jurisdictions which recognize the copyright of
-fonts, and as a simple matter of courtesy towards Colin and his hard
-work making these images, I am including a link to the licenses.
+As per *Eltra Corp. v. Ringer*, the piece images in the United States
+are public domain (since the PNG images are raster renderings, *Adobe
+Systems, Inc. v. Southern Software, Inc.* does not apply), and most
+jurisdictions do not allow fonts to be copyrighted for over 25 years.
 
-The graphics are available under multiple licenses here:
+More discussion:
 
-https://commons.wikimedia.org/wiki/File:Chess_nll45.svg
-
-I am using the BSD license for this distribution:
-
-```
-Copyright © Cburnett
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions
-are met:
-
-1. Redistributions of source code must retain the above copyright notice,
-   this list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright
-   notice, this list of conditions and the following disclaimer in the
-   documentation and/or other materials provided with the distribution.
-
-3. Neither the name of Cburnett nor the names of its contributors may be
-   used to endorse or promote products derived from this software without
-   specific prior written permission.
-
-This software is provided by Cburnett "as is" and any express or implied
-warranties, including, but not limited to, the implied warranties of
-merchantability and fitness for a particular purpose are disclaimed. In
-no event shall Cburnett be liable for any direct, indirect, incidental,
-special, exemplary, or consequential damages (including, but not limited
-to, procurement of substitute goods or services; loss of use, data, or
-profits; or business interruption) however caused and on any theory of
-liability, whether in contract, strict liability, or tort (including
-negligence or otherwise) arising in any way out of the use of this
-software, even if advised of the possibility of such damage.
-```
+https://github.com/samboy/ChessCancun/blob/main/COPYING.md
 
 # chessgame.js
 
