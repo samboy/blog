@@ -157,6 +157,7 @@ function runGameReal(pgn,end,label,startply,caption,myfen,startmsg) {
   // move by move.  For really long games like Carlsen versus Nepomniachtchi, 
   // World Chess Championship 2021, Game 6 (136 moves!), this speeds up
   // the loading of games *a lot*
+  console.log(myfen); //DEBUG
   if(!Array.isArray(myfen)) { 
     // Initialize the board
     if(typeof(myfen) == "string") { 
