@@ -97,7 +97,7 @@ display: grid;
 .chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
 .chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
 .chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
-    background-color: #ddd; /* Dark square */
+    background-color: #ccc; /* Dark square */
 }
 .chessDiagram10x8 { font-family: ChessCancunColor; font-size: 30px; 
 display: grid;
@@ -123,7 +123,7 @@ display: grid;
 .chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
 .chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
 .chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
-    background-color: #ddd; /* Dark square */
+    background-color: #ccc; /* Dark square */
 }
 @media (prefers-color-scheme: dark) { 
 body { background-color: #131516; color: #d8d4cf; }
@@ -153,12 +153,49 @@ background-color: #888; }
 .chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
     background-color: #888; /* Dark square */
 }
-
+} /* End Dark mode theme */
+@media print {
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+} /* End print colors */
+</style>
+<script>
+maxWidth = screen.width;
+maxWidth *= .95;
+if(maxWidth < 480) {
+  boardSize = maxWidth - 5;
+  pieceWidth = boardSize / 10;
+  capaPieceWidth = boardSize / 12.5;
+  capaHeight = boardSize * .8;
+}
+</script>
 EOF
-echo '}' >> index.html
-echo \</style\> >> index.html
+#echo \</style\> >> index.html
 # This is just going to be a long line
-echo \<meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=1.0 \> >> index.html
+echo \<meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=0.8 \> >> index.html
 echo \</head\>\<body\> >> index.html
 echo \<a name="GitBlogTop"\> \</a\> >> index.html
 echo \<div class=blog\> >> index.html
@@ -174,19 +211,21 @@ for a in $( ls embed/*embed | sort -r ) ; do
   #LINK=$( echo $NAME | awk '{gsub(/[^A-Za-z0-9]/,"");print}' )
   DATE=${a#embed/}
   DATE=${DATE%.embed}
-  #YEAR=$( echo $DATE | awk '{print substr($0,1,4)}' )
-  YEAR=index
-  echo '<a name='$LINK'> </a>' >> $YEAR.html
+  YEAR=$( echo $DATE | awk '{print substr($0,1,4)}' )
+  FILE=index
+  echo '<!-- `ENTRY: '$DATE $YEAR' ` -->' >> $FILE.html
+  echo '<a name='$LINK'> </a>' >> $FILE.html
   echo '<a href="#'$LINK'">'$NAME' ('$DATE')</a></br>' >> foo.html
-  cat $a | ./BlogLinks.lua >> $YEAR.html
-  #echo '<hr class=pc>' >> $YEAR.html
-  echo '<div class=GitBlogNav><i>Go to: ' >> $YEAR.html
-  echo '<a href="#GitBlogTop">Top</a>' >> $YEAR.html
-  echo '<a href="#GitBlogIndex">Index</a></i></div>' >> $YEAR.html
-  #echo '<hr class=pc>' >> $YEAR.html
-  echo \<div class=blog\> >> $YEAR.html # An old bug I never correctly fixed
+  cat $a | ./BlogLinks.lua >> $FILE.html
+  #echo '<hr class=pc>' >> $FILE.html
+  echo '<div class=GitBlogNav><i>Go to: ' >> $FILE.html
+  echo '<a href="#GitBlogTop">Top</a>' >> $FILE.html
+  echo '<a href="#GitBlogIndex">Index</a></i></div>' >> $FILE.html
+  #echo '<hr class=pc>' >> $FILE.html
+  echo \<div class=blog\> >> $FILE.html # An old bug I never correctly fixed
   echo $a
 done
+echo '<!-- `FOOTER` -->' >> index.html
 echo '<a name="GitBlogIndex"> </a><h1>Blog index</h1>' >> index.html
 cat foo.html >> index.html
 echo \</div\> >> index.html
