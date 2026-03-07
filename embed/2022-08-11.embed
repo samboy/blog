@@ -86,7 +86,7 @@ Qxa3 24. Rg4  Rc1 25. Rxc1  Qxe3+ 26. Kf1</b>
 
 <p>
 
-<script src="/blog/chess/jquery-1.12.4.min.js"></script><script>$.ajaxSetup({contents: {script: false}})</script><script src="/blog/chess/chessboard-0.3.0.min.js" type="text/javascript"></script><script src="/blog/chess/chess.js"></script><link href="/blog/chess/chessboard-0.3.0.min.css" rel="stylesheet"></link><script src="/blog/chess/chessgame.js"></script><div id="gameScore-box"></div><script type="text/javascript">runGame(
+<div id="20220811gameScore-box"></div><script type="text/javascript">runGame(
 "1. d4 Nf6 2. c4 e6 3. Nc3 d5 4. Nf3 Bb4 5. e3 O-O 6. a3 Bxc3+ 7. bxc3 " +
 "c5 8. Bd3 dxc4 9. Bxc4 Qc7 10. Nd2 Nc6 11. O-O Rd8 12. f4  Nd5 " +
 "13. Bxd5  exd5 14. Qh5 cxd4 15. cxd4 Ne7 16. Nf3 Bf5 17. Bd2 f6 18. Nh4 " +
@@ -94,7 +94,7 @@ Qxa3 24. Rg4  Rc1 25. Rxc1  Qxe3+ 26. Kf1</b>
 "Qxa3 24. Rg4  Rc1 25. Rxc1  Qxe3+ 26. Kf1 Bd3# 0-1"
 ,
 "Checkmate",
-"gameScore",
+"20220811gameScore",
 51,
 "Black to move and mate",
 0,0

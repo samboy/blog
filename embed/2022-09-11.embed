@@ -128,7 +128,7 @@ game here without comment.
 
 <p>
 
-<script src="/blog/chess/jquery-1.12.4.min.js"></script><script>$.ajaxSetup({contents: {script: false}})</script><script src="/blog/chess/chessboard-0.3.0.min.js" type="text/javascript"></script><script src="/blog/chess/chess.js"></script><link href="/blog/chess/chessboard-0.3.0.min.css" rel="stylesheet"></link><script src="/blog/chess/chessgame.js"></script><div id="gameScore-box"></div><script type="text/javascript">runGame(
+<div id="20220911gameScore-box"></div><script type="text/javascript">runGame(
 "1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. g3 O-O 5. Bg2 d5 6. a3 Bxc3+ 7. bxc3 dxc4 "+
 "8. Nf3 c5 9. O-O cxd4 10. Qxd4 Nc6 11. Qxc4 e5 12. Bg5 h6 13. Rfd1 Be6 14. "+
 "Rxd8 Bxc4 15. Rxa8 Rxa8 16. Bxf6 gxf6 17. Kf1 Rd8 18. Ke1 Na5 19. Rd1 Rc8 "+
@@ -139,7 +139,7 @@ game here without comment.
 "44. Rxd2 Nf3+ 45. Kg2 Nxd2 46. a5 Ke5 47. Kg3 Nf1+ 48. Kf2 Nxh2 49. e4 Kxe4 "+
 "50. Be6 Kf4 51. Bc8 Nf3 52. Bxb7 Ne5 53. Bxa6 Nc6 54. Bb7 Nxa5 55. Bd5 h5 "+
 "56. Bf7 h4 57. Bd5 Ke5 0-1"
-,"White resigns", "gameScore", 0, 0, 0, 0, 0, 0, 0
+,"White resigns", "20220911gameScore", 0, 0, 0, 0, 0, 0, 0
 );</script>
 <noscript>
 <b class=s>1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. g3 O-O 5. Bg2 d5 6. a3 Bxc3+ 7. bxc3 dxc4

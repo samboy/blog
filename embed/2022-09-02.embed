@@ -95,7 +95,7 @@ Qg6 20.Red1 Ng5 21.f4 Bxd3 22.Qxd3 Nf3+ 23.Kg2</b>
 
 <p>
 
-<script src="/blog/chess/jquery-1.12.4.min.js"></script><script>$.ajaxSetup({contents: {script: false}})</script><script src="/blog/chess/chessboard-0.3.0.min.js" type="text/javascript"></script><script src="/blog/chess/chess.js"></script><link href="/blog/chess/chessboard-0.3.0.min.css" rel="stylesheet"></link><script src="/blog/chess/chessgame.js"></script><div id="gameScore-box"></div><script type="text/javascript">runGame(
+<div id="20220902gameScore-box"></div><script type="text/javascript">runGame(
 "1. Nf3 d5 2. e3 Nf6 3. c4 e6 4. b3 c5 5. Bb2 Nc6 6. cxd5 exd5 7. Bb5 Bd6 "+
 "8. O-O O-O 9. d4 cxd4 10. Nxd4 Bc7 11. Nd2 Nxd4 12. Bxd4 Qd6 13. g3 Ba5 "+
 "14. a3 Bh3 15. Re1 Bxd2 16. Qxd2 Ne4 17. Qe2 Rac8 18. Bd3 Bf5 19. b4 Qg6 "+
@@ -110,7 +110,7 @@ Qg6 20.Red1 Ng5 21.f4 Bxd3 22.Qxd3 Nf3+ 23.Kg2</b>
 "Kg4 62. Ra2?! Qg3+ 63. Kh1? Kh3 0-1"
 ,
 "Mate in 3",
-"gameScore",
+"20220902gameScore",
 45,
 "Black to move and win",
 0,0

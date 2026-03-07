@@ -82,7 +82,7 @@ c5 15.Nd5 c4 16.Nxc4 bxc4 17.Bxc4 Bb7 18.Bd2 Qc5 19.Bb4 Qc8 20.Ba5 Nxd5
 
 <p>
 
-<script src="/blog/chess/jquery-1.12.4.min.js"></script><script>$.ajaxSetup({contents: {script: false}})</script><script src="/blog/chess/chessboard-0.3.0.min.js" type="text/javascript"></script><script src="/blog/chess/chess.js"></script><link href="/blog/chess/chessboard-0.3.0.min.css" rel="stylesheet"></link><script src="/blog/chess/chessgame.js"></script><div id="gameScore-box"></div><script type="text/javascript">runGame(
+<div id="20220801gameScore-box"></div><script type="text/javascript">runGame(
 "1.e4 d6 2.d4 Nf6 3.Nc3 e5 4.Nf3 Nbd7 5.g4 Nxg4 6.Rg1 Ngf6 7.Bc4 h6 " +
 "8.dxe5 dxe5 9.Be3 c6 10.Qd3 b5 11.Bb3 Qa5 12.O-O-O Ba6 13.Nd2 Rd8 14.Qf1 " +
 "c5 15.Nd5 c4 16.Nxc4 bxc4 17.Bxc4 Bb7 18.Bd2 Qc5 19.Bb4 Qc8 20.Ba5 Nxd5 " +
@@ -90,7 +90,7 @@ c5 15.Nd5 c4 16.Nxc4 bxc4 17.Bxc4 Bb7 18.Bd2 Qc5 19.Bb4 Qc8 20.Ba5 Nxd5
 "27.Rxd5! 1-0"
 ,
 "Black resigns",
-"gameScore",
+"20220801gameScore",
 52,
 "White to move and win",
 0,0
