@@ -116,12 +116,12 @@ function runGame(pgn,end,label,startply,caption,myfen,startmsg) {
 // startmsg: The message used to describe the start of the sequence of
 //      moves shown in the diagram.  Defaults to "Game start"
 function runGameReal(pgn,end,label,startply,caption,myfen,startmsg) {
+  thisElement = document.getElementById(label +  "-box");
+  console.log(thisElement);
   if(startply == 0) {
-    document.getElementById(label +  "-box").innerHTML = 
-        HTMLstringForGame(label,398);
+    thisElement.innerHTML = HTMLstringForGame(label,398);
   } else {
-    document.getElementById(label +  "-box").innerHTML = 
-        HTMLstringForPostition(label,398,startply);
+    thisElement.innerHTML = HTMLstringForPostition(label,398,startply);
   }
   ply[label] = startply;
   defaultply[label] = startply;
