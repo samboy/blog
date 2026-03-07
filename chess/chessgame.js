@@ -205,7 +205,8 @@ function runGameReal(pgn,end,label,startply,caption,myfen,startmsg) {
     fen[label] = myfen;
     gamelength[label] = myfen.length - 1;
   }
- 
+
+  console.log("Here1 " + label); //DEBUG
   board[label] = ChessBoard(label, {
     // Make this the path to the pieces, e.g.
     pieceTheme: '/blog/chess/{piece}.png',
