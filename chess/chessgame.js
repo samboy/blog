@@ -117,11 +117,15 @@ function runGame(pgn,end,label,startply,caption,myfen,startmsg) {
 //      moves shown in the diagram.  Defaults to "Game start"
 function runGameReal(pgn,end,label,startply,caption,myfen,startmsg) {
   thisElement = document.getElementById(label +  "-box");
+  thisWidth = 350;
+  thisScreenWidth = screen.width;
+  thisScreenWidth *= .95;
+  if(thisScreenWidth < 350) { thisWidth = thisScreenWidth; }
   // console.log(thisElement); console.log(label); // DEBUG
   if(startply == 0) {
-    thisElement.innerHTML = HTMLstringForGame(label,300);
+    thisElement.innerHTML = HTMLstringForGame(label,thisWidth);
   } else {
-    thisElement.innerHTML = HTMLstringForPostition(label,300,startply);
+    thisElement.innerHTML = HTMLstringForPostition(label,thisWidth,startply);
   }
   ply[label] = startply;
   defaultply[label] = startply;
