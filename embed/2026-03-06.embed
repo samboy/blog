@@ -71,6 +71,21 @@ game of chess:
 <div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
 <i>Position after 4. Qe2</i>
 </div>
+<script>
+if(maxWidth < 480) {
+  elements = document.querySelectorAll('.chessDiagram8');
+  i = elements.length - 1;
+  elements[i].style.width = boardSize + 'px'; 
+  elements[i].style.height = boardSize + 'px'; 
+  elements[i].style.fontSize = pieceWidth + 'px'; 
+  /*capaElements = document.querySelectorAll('.chessDiagram10x8');
+  i = elements.length - 1;
+  capaElements[i].style.width = boardSize + 'px'; 
+  capaElements[i].style.height = capaHeight + 'px'; 
+  capaElements[i].style.fontSize = capaPieceWidth + 'px';*/
+}
+</script>
+
 
 <p>
 
@@ -99,6 +114,21 @@ with a counter threat, <b>4. f6?</b>, giving us this:
 <div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
 <i>Position after 4... f6?</i>
 </div>
+<script>
+if(maxWidth < 480) {
+  elements = document.querySelectorAll('.chessDiagram8');
+  i = elements.length - 1;
+  elements[i].style.width = boardSize + 'px'; 
+  elements[i].style.height = boardSize + 'px'; 
+  elements[i].style.fontSize = pieceWidth + 'px'; 
+  /*capaElements = document.querySelectorAll('.chessDiagram10x8');
+  i = elements.length - 1;
+  capaElements[i].style.width = boardSize + 'px'; 
+  capaElements[i].style.height = capaHeight + 'px'; 
+  capaElements[i].style.fontSize = capaPieceWidth + 'px';*/
+}
+</script>
+
 
 <p>
 
@@ -124,6 +154,21 @@ the knight on e5.
 <div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
 <i>Position after 6... hxg6</i>
 </div>
+<script>
+if(maxWidth < 480) {
+  elements = document.querySelectorAll('.chessDiagram8');
+  i = elements.length - 1;
+  elements[i].style.width = boardSize + 'px'; 
+  elements[i].style.height = boardSize + 'px'; 
+  elements[i].style.fontSize = pieceWidth + 'px'; 
+  /*capaElements = document.querySelectorAll('.chessDiagram10x8');
+  i = elements.length - 1;
+  capaElements[i].style.width = boardSize + 'px'; 
+  capaElements[i].style.height = capaHeight + 'px'; 
+  capaElements[i].style.fontSize = capaPieceWidth + 'px';*/
+}
+</script>
+
 
 <p>
 
@@ -155,6 +200,21 @@ Anyway, back to the game, which continued like this:
 <div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
 <i>Position after 9... Kc6. White to move and force mate.</i>
 </div>
+<script>
+if(maxWidth < 480) {
+  elements = document.querySelectorAll('.chessDiagram8');
+  i = elements.length - 1;
+  elements[i].style.width = boardSize + 'px'; 
+  elements[i].style.height = boardSize + 'px'; 
+  elements[i].style.fontSize = pieceWidth + 'px'; 
+  /*capaElements = document.querySelectorAll('.chessDiagram10x8');
+  i = elements.length - 1;
+  capaElements[i].style.width = boardSize + 'px'; 
+  capaElements[i].style.height = capaHeight + 'px'; 
+  capaElements[i].style.fontSize = capaPieceWidth + 'px';*/
+}
+</script>
+
 
 <p>
 
@@ -170,23 +230,4 @@ a few more moves in between:
 
 I was getting results from going to the local chess club: I was now
 winning, instead of losing, games.
-
-<script>
-if(maxWidth < 480) {
-  elements = document.querySelectorAll('.chessDiagram8');
-  console.log(elements.length);
-  for (i = 0; i < elements.length; i++) {
-    console.log(elements[i].style);
-    elements[i].style.width = boardSize + 'px'; 
-    elements[i].style.height = boardSize + 'px'; 
-    elements[i].style.fontSize = pieceWidth + 'px'; 
-  }
-  capaElements = document.querySelectorAll('.chessDiagram10x8');
-  for (i = 0; i < capaElements.length; i++) {
-    capaElements[i].style.width = boardSize + 'px'; 
-    capaElements[i].style.height = capaHeight + 'px'; 
-    capaElements[i].style.fontSize = capaPieceWidth + 'px'; 
-  }
-}
-</script>
 
