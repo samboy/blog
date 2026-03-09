@@ -84,7 +84,6 @@ display: grid;
 
 .chessDiagram8 div {
     text-align: center;
-    padding-top: 1px; padding-bottom: -1px;
     background-color: #fff; /* Light square */
 }
 
@@ -110,7 +109,6 @@ display: grid;
 
 .chessDiagram10x8 div {
     text-align: center;
-    padding-top: 1px; padding-bottom: -1px;
     background-color: #fff; /* Light square */
 }
 
