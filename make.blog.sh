@@ -73,7 +73,7 @@ echo 'a { color: #258723; }' >> index.html
 echo '.blog a { color: #258723; }' >> index.html
 cat >> index.html << EOF
 
-.chessDiagram8 { font-family: ChessCancunColor; font-size: 30px; 
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 32px; 
 display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -99,7 +99,7 @@ display: grid;
 .chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
     background-color: #ccc; /* Dark square */
 }
-.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 30px; 
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 32px; 
 display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -187,8 +187,8 @@ maxWidth = screen.width;
 maxWidth *= .95;
 if(maxWidth < 480) {
   boardSize = maxWidth - 5;
-  pieceWidth = boardSize / 10;
-  capaPieceWidth = boardSize / 12.5;
+  pieceWidth = (boardSize / 10) * (16/15);
+  capaPieceWidth = (boardSize / 12.5) * (16/15);
   capaHeight = boardSize * .8;
 }
 </script>
