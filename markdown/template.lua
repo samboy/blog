@@ -39,3 +39,51 @@ exec $LUNACY $0 "$@"
 -- ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 -- OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
+-- Utility functions --
+-- Since Lunacy doesn't have split(), we make
+-- it ourselves.  Like Perl’s split(), this can
+-- split on regular expressions
+-- Input is string, regex, output is an array with the string parts
+function split(s, splitOn)
+  if not splitOn then splitOn = "," end
+  local place = true
+  local out = {}
+  local mark
+  local last = 1
+  while place do
+    place, mark = string.find(s, splitOn, last, false)
+    if place then
+      table.insert(out,string.sub(s, last, place - 1))
+      last = mark + 1
+    end
+  end
+  table.insert(out,string.sub(s, last, -1))
+  return out
+end
+
+-- We need to go through tables in sorted order sometimes
+-- Like pairs() but sorted
+-- This assumes all keys are of the same type
+function sPairs(inputTable,sFunc)
+  if not sFunc then
+    sFunc = function(a, b)
+      local ta = type(a)
+      local tb = type(b)
+      if(ta == tb)
+        then return a < b
+      end
+      return ta < tb
+    end
+  end
+  local keyList = {}
+  local index = 1
+  for k,_ in pairs(inputTable) do
+    table.insert(keyList,k)
+  end
+  table.sort(keyList,sFunc)
+  return function()
+    rvalue = keyList[index]
+    index = index + 1
+    return rvalue, inputTable[rvalue]
+  end
+end
