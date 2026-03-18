@@ -98,6 +98,7 @@ display: grid;
 .chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
     background-color: #ccc; /* Dark square */
 }
+
 .chessDiagram10x8 { font-family: ChessCancunColor; font-size: 32px; 
 display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -123,6 +124,31 @@ display: grid;
 .chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
     background-color: #ccc; /* Dark square */
 }
+
+/* 4x8 diagram for showing opening patterns */
+.chessDiagram4 { font-family: ChessCancunColor; font-size: 32px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    border-top: 0;
+}
+
+.chessDiagram4 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
 @media (prefers-color-scheme: dark) { 
 body { background-color: #131516; color: #d8d4cf; }
 .blog { background-color: #131516; color: #d8d4cf; }
@@ -151,6 +177,13 @@ background-color: #888; }
 .chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
     background-color: #888; /* Dark square */
 }
+.chessDiagram4 { border: 2px solid #ddd; border-top: 0; }
+.chessDiagram4 div { background-color: #aaa; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+  background-color: #888; } 
 } /* End Dark mode theme */
 @media print {
 .chessDiagram8 { border: 2px solid #333; break-inside: avoid;
@@ -178,6 +211,14 @@ background-color: #ddd; }
 .chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
     background-color: #ddd; /* Dark square */
 }
+.chessDiagram4 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; border-top: 0; }
+.chessDiagram4 div { background-color: #fff; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+background-color: #ddd; } 
 } /* End print colors */
 </style>
 <script>
