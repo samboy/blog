@@ -28,6 +28,7 @@ White: Kasparov   Black: Topalov   Opening: Pirc Defense (ECO B07)
 <b>1. e4 d6</b>
 <p>
 <div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 The <i>Pirc Defense</i> is an unusual response by Topalov to Kasparov’s 1. e4, resulting in a position Kasparov never saw before in classical play.[4]
 <p>
@@ -35,6 +36,7 @@ The <i>Pirc Defense</i> is an unusual response by Topalov to Kasparov’s 1. e4,
 <b>2. d4 Nf6 3. Nc3 g6</b>
 <p>
 <div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div></div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>n</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 This setup has similarities to the King’s Indian Defence, but White’s c pawn remains on the second rank.[5]
 <p>
@@ -42,6 +44,7 @@ This setup has similarities to the King’s Indian Defence, but White’s c pawn
 <b>4. Be3 Bg7 5. Qd2 c6 6. f3 b5 7. Nge2 Nbd7 8. Bh6 Bxh6 9. Qxh6</b>
 <p>
 <div class=chessDiagram8 translate="no"><div>r</div> <div></div> <div>b</div> <div>q</div> <div>k</div> <div></div> <div></div> <div>r</div> <div>p</div> <div></div> <div></div> <div>n</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div></div> <div></div> <div>p</div> <div>p</div> <div></div> <div>n</div> <div>p</div> <div>Q</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>N</div> <div></div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div></div> <div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 This queen capture hinders Black’s castling.[4]
 <p>
@@ -49,6 +52,7 @@ This queen capture hinders Black’s castling.[4]
 <b>9...Bb7 10. a3 e5 11. O-O-O Qe7 12. Kb1 a6 13. Nc1 O-O-O 14. Nb3 exd4![5]</b>
 <p>
 <div class=chessDiagram8 translate="no"><div></div> <div></div> <div>k</div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>b</div> <div></div> <div>n</div> <div>q</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div>n</div> <div>p</div> <div>Q</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div>P</div> <div></div> <div></div> <div></div> <div>P</div> <div>N</div> <div>N</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div>K</div> <div></div> <div>R</div> <div></div> <div>B</div> <div></div> <div>R</div> </div><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 This opens Black’s position.[5]
 <p>
@@ -57,6 +61,7 @@ This opens Black’s position.[5]
 
 <p>
 <div class=chessDiagram8 translate="no"><div>b</div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div>k</div> <div></div> <div></div> <div></div> <div>q</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>n</div> <div></div> <div></div> <div></div> <div>n</div> <div>p</div> <div></div> <div>N</div> <div>p</div> <div>p</div> <div>N</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div>P</div> <div>Q</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div>R</div> <div>R</div> <div></div> <div></div> <div></div> </div><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 If Black plays 22...Nfxd5?, White responds with 23. exd5 Qd6 24. Qxf7+ which leads to White being up a piece, e.g. 24...Kb8 25. Re6 Qc7 26. Re7 Nd7 27. Nc6 Bxc6 28. dxc6 Qxc6 29. Bxd7.[6] 
 
@@ -66,6 +71,7 @@ If Black plays 22...Nfxd5?, White responds with 23. exd5 Qd6 24. Qxf7+ which lea
 
 <p>
 <div class=chessDiagram8 translate="no"><div>b</div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div>k</div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div>q</div> <div></div> <div>n</div> <div>p</div> <div></div> <div>N</div> <div>p</div> <div>p</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>R</div> <div></div> <div>Q</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div>R</div> <div></div> <div></div> <div></div> </div><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 Now the fireworks start.[5]
 
@@ -88,12 +94,14 @@ If Qxd7??, then mate cannot be avoided, e.g. 26.Qxd4+ Kb8 27.Qb6+ Bb7 28.Nc6+ Ka
 
 <div class=chessDiagram8 translate="no"><div>b</div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div>k</div> <div></div> <div></div> <div></div> <div>q</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div>n</div> <div>p</div> <div></div> <div>N</div> <div>p</div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>Q</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> </div>
 <i>Analysis of 25...Qxd7: White to move. Mate in 4</i>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 <p>
 <b>26. Qxd4+ Kxa5 27. b4+ Ka4 28. Qc3?![9]</b>
 
 <p>
 <div class=chessDiagram8 translate="no"><div>b</div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div></div> <div>R</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div>q</div> <div></div> <div>n</div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>k</div> <div>P</div> <div></div> <div>Q</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> </div><i>Position after 27...Ka4</i><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 Lubomir Kavalek, writing for The Washington Post, was the first one to observe that Ra7!! is a better attack for White in this position.[9][4]
 <p>
@@ -107,6 +115,7 @@ Bxd5? is refuted with 29. Kb2 followed by Qb3+ which leads to White delivering c
 <b>29. Ra7 Bb7 30. Rxb7 Qc4![4]</b>
 <p>
 <div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>R</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div>n</div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div>q</div> <div></div> <div></div> <div></div> <div></div> <div>k</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>Q</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> </div><i>Position after 30. Rxb4</i><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 Topalov, after the game, analyzed the position with his second Silvio Danailov for hours and told the press at the tournament that Black had drawing chances after 30...Rhe8 31. Rb6 Ra8 32. Be6.[10] However, Black is in trouble if White instead plays 32. Bf1!!.[4]
 <p>
@@ -114,6 +123,7 @@ Topalov, after the game, analyzed the position with his second Silvio Danailov f
 <b>31. Qxf6 Kxa3?![5]</b>
 <p>
 <div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>R</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div>Q</div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>k</div> <div>P</div> <div>q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> </div><i>Position after 31. Qxf6</i><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 Black had much better drawing chances with 31...Rd1+! During the game, Kasparov visualizing this line saw White having a stronger endgame after 32. Kb2 Ra8 33. Qb6 Qd4+ 34. Qxd4 Rxd4 35. Rxf7 a5 36. Be6 axb4 37. Bb3+ Ka5 38. axb4+ Kb6 39. Rxh7 but realized, after the game was over, that Black could had fought for a draw with 39...Rf8[4] Computer analysis shows no clear win for White after 39...Rf8, but also shows White had better fighting chances after 35. Bd7 Rd6 36. g4 in a line very hard for humans to visualize.[5]
 <p>
@@ -121,6 +131,7 @@ Black had much better drawing chances with 31...Rd1+! During the game, Kasparov 
 <b>32. Qxa6+ Kxb4 33. c3+ Kxc3 34. Qa1+ Kd2 35. Qb2+ Kd1</b>
 <p>
 <div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>R</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div>Q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div>k</div> <div></div> <div></div> <div></div> <div></div> </div><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 White to move and win.
 <p>
 
@@ -136,6 +147,7 @@ If 36...Qd5, 37.Qc1 mates.[7]
 <b>37. Rd7 Rxd7 38. Bxc4 bxc4</b>
 <p>
 <div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>p</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>B</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div>Q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div>k</div> <div></div> <div></div> <div></div> <div></div> </div><i>Position after 38. Bxc4</i><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 If Black attempted to save his h8 rook, White would had won with Qc1#.[7]
 <p>
@@ -143,6 +155,7 @@ If Black attempted to save his h8 rook, White would had won with Qc1#.[7]
 <b>39. Qxh8 Rd3 40. Qa8 c3 41. Qa4+ Ke1 42. f4 f5 43. Kc1 Rd2 44. Qa7 1-0</b>
 <p>
 <div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>Q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div>K</div> <div></div> <div>k</div> <div></div> <div></div> <div></div> </div><i>Black resigns</i><p>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 As the game ended, Kasparov remembers the audience in the hall applauding.[4] 
 
