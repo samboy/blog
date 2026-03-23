@@ -532,7 +532,14 @@ function FENtoDiagram(FEN)
     end
   end
   right = right .. "</div>"
-  return left .. middle .. right
+  -- Right now, the script only works with 8x8 boards, and I need to
+  -- fix that
+  script = "<script> if(maxWidth < 480) { elements = "
+  .. "document.querySelectorAll('.chessDiagram8'); i = elements.length - 1;"
+  .. " elements[i].style.width = boardSize + 'px'; "
+  .. "elements[i].style.height = boardSize + 'px'; "
+  .. "elements[i].style.fontSize = pieceWidth + 'px'; }</script>"
+  return left .. middle .. right .. script
 end
 
 globalInWidePic = false
