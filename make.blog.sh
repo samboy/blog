@@ -15,6 +15,10 @@ echo '@import url('fonts.css');' >> index.html # OFL license in CSS file
 echo '@font-face { font-family: 'GeorgiaF'; src: local(Georgia);' >> index.html
 echo 'size-adjust: 118%; }' >> index.html
 
+echo '@font-palette-values --dark {' >> index.html
+echo ' font-family: "ChessCancunColor";' >> index.html
+echo ' override-colors: 0 rgb(0 0 0), 1 rgb(192 192 192); }' >> index.html
+
 echo '.widepic { box-shadow: 0 0 4px #888;' >> index.html
 echo 'border-radius: 8px; width: 99%; height: auto; }' >> index.html
 echo '@media screen and (max-width: 640px) { ' >> index.html
@@ -154,7 +158,7 @@ body { background-color: #131516; color: #d8d4cf; }
 .blog { background-color: #131516; color: #d8d4cf; }
 a { color: #78dc78; }
 .blog a { color: #78dc78; }
-.chessDiagram8 { border: 2px solid #ddd; }
+.chessDiagram8 { border: 2px solid #ddd; font-palette: --dark; }
 .chessDiagram8 div { background-color: #aaa; }
 .chessDiagram8 div:nth-child(-n+8):nth-child(even),
 .chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
@@ -165,7 +169,7 @@ a { color: #78dc78; }
 .chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
 .chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
 background-color: #888; } 
-.chessDiagram10x8 { border: 2px solid #ddd; }
+.chessDiagram10x8 { border: 2px solid #ddd; font-palette: --dark; }
 .chessDiagram10x8 div { background-color: #aaa; }
 .chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
 .chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
@@ -177,7 +181,7 @@ background-color: #888; }
 .chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
     background-color: #888; /* Dark square */
 }
-.chessDiagram4 { border: 2px solid #ddd; border-top: 0; }
+.chessDiagram4 { border: 2px solid #ddd; border-top: 0; font-palette: --dark; }
 .chessDiagram4 div { background-color: #aaa; }
 .chessDiagram4 div:nth-child(-n+8):nth-child(even),
 .chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
