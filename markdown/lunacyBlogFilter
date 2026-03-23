@@ -468,14 +468,12 @@ function splitWideWords(l)
 end
 
 -- Let’s play Chess!  This converts FEN in to a Chess diagram we can
--- show in the blog.  8x8 boards
--- supported, as well as the Rook + Knight and Bishop + Knight fairy
--- pieces
+-- show in the blog.  
 function FENtoDiagram(FEN)
   local line = ""
-  -- We actually *can* do 10x8 diagrams, the style is there, but we
-  -- don’t.
-  local out = "<div class=chessDiagram8>" 
+  local left = '<div class=chessDiagram'
+  local middle = '8'
+  local right = ' translate="no">' 
   local width = 0
   local number = 0
   local inNumber = false
@@ -494,6 +492,9 @@ function FENtoDiagram(FEN)
       width = width + 1
     end
   end
+
+  if width == 10 then middle='10x8' end -- Maybe see height for 10x10 variants
+
   number = 0
   inNumber = false
 
@@ -502,6 +503,9 @@ function FENtoDiagram(FEN)
   -- This is the top border of the Chess board
   for a=1,#FEN do
     local thisSquare = FEN:sub(a,a)
+    if thisSquare:match("%_") or thisSquare:match("%s") then
+      break
+    end
     if thisSquare:match("%d") and inNumber == false then
       number = tonumber(FEN:sub(a,a))
       inNumber = true
@@ -511,7 +515,7 @@ function FENtoDiagram(FEN)
     end
     if thisSquare:match("%D") or a==#FEN then
       for b=1,number do
-        out = out .. "<div></div> " -- Empty square
+        right = right .. "<div></div> " -- Empty square
       end
       number = 0
       inNumber = false
@@ -524,11 +528,11 @@ function FENtoDiagram(FEN)
       if thisSquare == 'c' then
         thisSquare = 'm'
       end
-      out = out .. "<div>" .. thisSquare .. "</div> "
+      right = right .. "<div>" .. thisSquare .. "</div> "
     end
   end
-  out = out .. "</div>"
-  return out
+  right = right .. "</div>"
+  return left .. middle .. right
 end
 
 globalInWidePic = false
@@ -727,6 +731,16 @@ function processIDetc(l)
   l = l:gsub('%@%~%{','[') l = l:gsub('%@%~%}',']')
   -- @~/ becomes a <br>
   l = l:gsub('%@%~%/','<br>')
+  -- @~:<FEN>: becomes a Chess Diagram
+  if l:match('%@%~%:[^:]+%:') then
+    local start = l:find('%@%~%:')
+    local fin = l:find('%:',start + 4) -- "end" in Spanish
+    if fin >= start + 5 then
+      local FEN = l:sub(start+3,fin-1)
+      local ChessBoard = FENtoDiagram(FEN)
+      l = l:gsub('%@%~%:[^:]+%:',ChessBoard) 
+    end
+  end 
   -- Break long words, except in <pre> tags (the CSS will add scrollbars
   -- to long lines in <pre> blocks as needed)
   if not globalInPre then

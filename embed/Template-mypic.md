@@ -40,3 +40,9 @@ Superscripts: 17^th 18^th 20^th 4^th etc.
 * List item
 * Another bullet item
 
+We also have support for Chess diagrams in FEN format, like this:
+
+@~:b2r3r/k3qp1p/p4np1/Np1P4/3p1Q2/P4PPB/1PP4P/1K6:
+_White to move and deliver mate_
+
+
