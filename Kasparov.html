@@ -2,6 +2,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 @import url(fonts.css);
+@font-palette-values --dark {
+  font-family: "ChessCancunColor";
+  override-colors: 0 rgb(64 96 64), 1 rgb(192 192 192);
+}
 @font-face { font-family: GeorgiaF; src: local(Georgia);
 size-adjust: 118%; }
 .widepic { box-shadow: 0 0 4px #888;
@@ -130,8 +134,8 @@ body { background-color: #131516; color: #d8d4cf; }
 .blog { background-color: #131516; color: #d8d4cf; }
 a { color: #78dc78; }
 .blog a { color: #78dc78; }
-.chessDiagram8 { border: 2px solid #ddd; }
-.chessDiagram8 div { background-color: #aaa; }
+.chessDiagram8 { border: 2px solid #888; font-palette: --dark;}
+.chessDiagram8 div { background-color: #222; }
 .chessDiagram8 div:nth-child(-n+8):nth-child(even),
 .chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
 .chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
@@ -140,7 +144,7 @@ a { color: #78dc78; }
 .chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
 .chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
 .chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
-background-color: #888; } 
+background-color: #000; } 
 .chessDiagram10x8 { border: 2px solid #ddd; }
 .chessDiagram10x8 div { background-color: #aaa; }
 .chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
