@@ -17,7 +17,7 @@ echo 'size-adjust: 118%; }' >> index.html
 
 echo '@font-palette-values --dark {' >> index.html
 echo ' font-family: "ChessCancunColor";' >> index.html
-echo ' override-colors: 0 rgb(0 0 0), 1 rgb(192 192 192); }' >> index.html
+echo ' override-colors: 0 rgb(0 0 0), 1 rgb(205 192 180); }' >> index.html
 
 echo '.widepic { box-shadow: 0 0 4px #888;' >> index.html
 echo 'border-radius: 8px; width: 99%; height: auto; }' >> index.html
