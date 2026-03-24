@@ -258,7 +258,7 @@ function chessMove(label,action) {
     if(action == -5 || action == -6 || action == -7 || action > 0) {
       if(ply[label] != defaultply[label]) {
           document.getElementById(label +  "-text").innerHTML = 
-              "Position modified, hit “Reset” to restore";
+              "This is an interactive chess board";
       } else {
           document.getElementById(label +  "-text").innerHTML = note[label];
       }
