@@ -66,6 +66,8 @@ echo '@media (max-width: 640px) {.pc {display: none;}}' >> index.html
 
 echo '.moyet { display: none; }' >> index.html
 echo '.blog h1 { font-size: 28px; }' >> index.html
+echo '.blog b { font-size: 18px; }' >> index.html
+echo '.blog strong { font-size: 18px; }' >> index.html
 echo '.s { font-size: 18px; }' >> index.html
 echo '.blogtitle { font-size: 24px; }' >> index.html
 echo 'h3 { font-size: 24px; margin-bottom: 0; }' >> index.html
@@ -77,7 +79,7 @@ echo 'a { color: #258723; }' >> index.html
 echo '.blog a { color: #258723; }' >> index.html
 cat >> index.html << EOF
 
-.chessDiagram8 { font-family: ChessCancunColor; font-size: 32px; 
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
 display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -103,7 +105,7 @@ display: grid;
     background-color: #ccc; /* Dark square */
 }
 
-.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 32px; 
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 31.7px; 
 display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -130,7 +132,7 @@ display: grid;
 }
 
 /* 4x8 diagram for showing opening patterns */
-.chessDiagram4 { font-family: ChessCancunColor; font-size: 32px; 
+.chessDiagram4 { font-family: ChessCancunColor; font-size: 31.7px; 
 display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(4, 1fr);
