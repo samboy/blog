@@ -75,8 +75,8 @@ echo 'h3 { font-size: 24px; margin-bottom: 0; }' >> index.html
 echo '.blogpicx { text-align: left !important; }' >> index.html 
 echo '.blogpicx img { ' >> index.html
 echo 'border-radius: 8px; box-shadow: 0 0 4px #888; }' >> index.html
-echo 'a { color: #258723; }' >> index.html
-echo '.blog a { color: #258723; }' >> index.html
+echo 'a { color: #067610; }' >> index.html
+echo '.blog a { color: #067610; }' >> index.html
 cat >> index.html << EOF
 
 .chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
