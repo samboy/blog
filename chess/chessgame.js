@@ -341,15 +341,15 @@ function HTMLstringForPostition(label,width,ply) {
   // Start of game
   out += '<input type="button" onclick="chessMove('
       + "'" + label + "'" + ',-7)" value="<<" /> ';
+  // Back to default diagram position
+  out += '<input type="button" onclick="chessMove('
+      + "'" + label + "'" + ',' + ply + ')" value=" R " /> ';
   // Back one move
   out += '<input type="button" onclick="chessMove('
       + "'" + label + "'" + ',-6)" value="<" /> ';
-  // Back to default diagram position
+  // Next move
   out += '<input type="button" onclick="chessMove('
-      + "'" + label + "'" + ',' + ply + ')" value=" Reset " /> ';
-  // Start of game
-  out += '<input type="button" onclick="chessMove('
-      + "'" + label + "'" + ',-5)" value=">" /> ';
+      + "'" + label + "'" + ',-5)" value="&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;" /> ';
   out += newlinemaybe;
   out += '<span id="' + label + '-move" ';
   if(newlinemaybe == '') {
