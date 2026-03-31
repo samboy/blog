@@ -277,6 +277,7 @@ function FENtoDiagram(FEN)
   local middle = '8'
   local right = ' translate="no">' 
   local width = 0
+  local height = 1
   local number = 0
   local inNumber = false
   for a=1,#FEN do
@@ -308,6 +309,9 @@ function FENtoDiagram(FEN)
     if thisSquare:match("%_") or thisSquare:match("%s") then
       break
     end
+    if thisSquare:match("%/") then
+      height = height + 1
+    end 
     if thisSquare:match("%d") and inNumber == false then
       number = tonumber(FEN:sub(a,a))
       inNumber = true
@@ -334,6 +338,9 @@ function FENtoDiagram(FEN)
     end
   end
   right = right .. "</div>"
+  if height == 4 and width == 8 then
+    middle = '4'
+  end
   return left .. middle .. right
 end
 
