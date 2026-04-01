@@ -341,7 +341,7 @@ function FENtoDiagram(FEN)
   if height == 4 and width == 8 then
     middle = '4'
   end
-  return left .. middle .. right
+  return left .. middle .. right .. "\n<!-- FEN: " .. FEN .. " -->"
 end
 
 -- convert in to short algebracic
