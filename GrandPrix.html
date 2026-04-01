@@ -438,13 +438,18 @@ position.<p>
 <script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 <p>
 White would, in this analysis position, lose a piece after Black plays
-1...d5!  If 2. Bxd5 (or Nxd5), then 2...exd5 and White is down a piece.
-If 1...d5! 2. exd5 exd5 3. Nxd5 (or Bxd5) Nxd5 4. Bxd5 Qxd5 then
-White is again down a piece.  If 1...d5! 2. Bb3 d4 and now the
+1...d5! 
+<ul> 
+<li>If 1...d5! 2. Bb3 (or Ba2) d4 and now the
 knight on c3 and the bishop on e3 are forked by the d4 pawn; 3. Bxd4
-is replied to with either 3...Nxd4 or 3...cxd4 and once again White will
-end up down a piece.  1...d5 2. exd5 exd5 3. Bb3 d4 and yet again White
+is replied to with either 3...Nxd4 or 3...cxd4 and White will
+end up down a piece.  
+<li>If 2. Bxd5 (or Nxd5), then 2...exd5 and White is again down a piece.
+<li>If 1...d5! 2. exd5 exd5 3. Nxd5 (or Bxd5) Nxd5 4. Bxd5 Qxd5 then
+White is once again down a piece.  
+<li>1...d5 2. exd5 exd5 3. Bb3 d4 and yet again White
 loses a piece.
+</ul>
 <p>
 
 Back to the played game, where Black’s light squared bishop was on 
