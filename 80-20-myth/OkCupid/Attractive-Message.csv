@@ -1,0 +1,18 @@
+# Male → Female
+# Attractiness (1-7), % population, % of total messages
+M,1,6,1
+M,2,16,4
+M,3,18,9
+M,4,20,15
+M,5,19,24
+M,6,15,28
+M,7,6,18
+# Female → Male
+# Attractiness (1-7), % population, % of total messages
+F,1,27,11
+F,2,31,23
+F,3,23,26
+F,4,12,22
+F,5,5,16
+F,6,2,4
+F,7,0,0
