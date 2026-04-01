@@ -50,7 +50,7 @@ pawns (via a discovered attack on the g pawn from the c1 bishop).
 <p>
 <div class=chessDiagram4 translate="no"><div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
 <i>Position after 1. e4, 2. Nc3, 3. f4, and 4. Nc3</i>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram4'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram4'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = (boardSize / 2) + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 <p>
 
 <p>
@@ -70,7 +70,7 @@ the game.  It was a textbook Grand Prix, in fact.
 <div class=chessDiagram4 translate="no"><div></div> <div></div> <div>B</div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div>P</div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div>B</div> <div>Q</div> <div></div> <div>R</div> <div>K</div> <div></div> </div>
 <i>Pragg’s side of the board was almost identical to this textbook
 Grand Prix position after 9. d3</i>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram4'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram4'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = (boardSize / 2) + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 <p>
 
