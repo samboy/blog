@@ -2,7 +2,7 @@
 <img src="pics/Chess2.jpg" width=224 height=126>
 </div>
 <h1>The Grand Prix Attack</h1>
-<h2>March 30, 2026</h2>
+<h2>March 31, 2026</h2>
 
 <div id="GrandPrix2026-box"></div><script type="text/javascript">runGame(
 "1. e4 c5 2. Nc3 d6 3. f4 g6 4. Nf3 Bg7 5. Bb5+ Bd7 6. a4 Nc6 7. O-O a6 8. Bc4 e6 9. d3 Nge7 10. f5 exf5 11. Qe1 Be6 12. exf5 gxf5 13. Bxe6 fxe6 14. Qxe6 Qd7 15. Qc4 O-O-O 16. Bg5 Rde8 17. Rae1 Ng6 18. Nd5 Kb8 19. Nf6 Bxf6 20. Bxf6 Rhf8 21. Bc3 f4 22. Rxe8+ Rxe8 23. Re1 Rf8 24. Qe6 Qxe6 25. Rxe6 Kc7 26. Ng5 Kd7 27. Re4 Rf5 28. Nxh7 d5 29. Re2 d4 30. Be1 Nce5 31. Re4 Ng4 32. h3 Ne3 33. c3 Nd5 34. h4 dxc3 35. bxc3 Rh5 36. Ng5 Nf6 37. Re6 Rxg5 38. Rxf6 Rg4 39. h5 Ne5 40. h6 Nf3+ 41. Kf1 Nxe1 42. Kxe1 Rxg2 43. Rxf4 Rh2 44. Rf6 Rh3 45. Kd2 Rh2+ 46. Ke3 Rh3+ 47. Ke4 c4 48. dxc4 Rxc3 49. Kf5 Ke7 50. Rb6 Rxc4 51. h7 1-0"
@@ -41,6 +41,20 @@ kingside.  d3 is usually played.
 
 <p>
 
+It isn’t always possible to get a textbook Grand Prix, of course.  If,
+for example, the game goes 1. e4 c5 2. Nf3 e5?, then White would instead 
+play 3. Bc4! and get a strong edge over Black in the opening.
+With 1. e4 c5 2. Nf3 g5?, 3. d4! threatens both the d and g
+pawns (via a discovered attack on the g pawn from the c1 bishop).
+
+<p>
+<div class=chessDiagram4 translate="no"><div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
+<i>Position after 1. e4, 2. Nc3, 3. f4, and 4. Nc3</i>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram4'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
+<p>
+
+<p>
+
 That’s nice in theory.  Now, to show the Grand Prix, I could use one
 of the games in Moret’s book, but I think it makes more sense to show
 a game not in that book but still playing a textbook Grand Prix, ideally 
@@ -48,16 +62,23 @@ one played by an elite gransmaster where he goes on to win the game.
 
 <p>
 
-This week, Praggnanandhaa (“Pragg”) played the Grand Prix as White in the
-candidates and won the game.  It was a textbook Grand Prix, in fact.
+On Sunday, in his first game for the 2026 candidates tournament, Praggnanandhaa
+(“Pragg”) played the Grand Prix as White and won
+the game.  It was a textbook Grand Prix, in fact.
+
+<p>
+<div class=chessDiagram4 translate="no"><div></div> <div></div> <div>B</div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div>P</div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div>B</div> <div>Q</div> <div></div> <div>R</div> <div>K</div> <div></div> </div>
+<i>Pragg’s side of the board was almost identical to this textbook
+Grand Prix position after 9. d3</i>
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram4'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 
 <p>
 
 So let’s look at that game to see how to play the Grand Prix.
 
-<p>
+<h2>Praggnanandhaa v. Giri, Candidates 2026</h2>
 
-<b>1. e4 c5</b>
+<b>1. e4 c5</b><p>
 <div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div>
 <script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
 <p>
@@ -78,6 +99,11 @@ is knowing when to play f4.  I’ve decided the best answer is “as
 soon as possible”, and, indeed Pragg (at least for this game) agreed
 with me and played f4 on his third move.  The only reason we don’t play
 f4 on the second move is because of 1. e4 c5 2. f4 d5.
+
+<p>
+Levy Rozman says that <a href=
+"https://www.youtube.com/watch?v=i0Xjzd3UlIg&t=931s"
+>with 2...d6, it’s hard for Black to equalize against the Grand Prix</a>.
 
 <p>
 
@@ -108,6 +134,12 @@ common at club level, as per Moret’s book), Bb5 (more common in high
 level play, since this is a more positional place for the bishop, as
 seen in this game), and occassionally Be2.  In this game, Pragg tries
 to put it on the square b5.
+
+<p>
+
+Colovic says that <a href=
+"https://www.youtube.com/watch?v=NWmRJBJGNr0&t=1070s"
+>5. Bc4 doesn’t make sense at the master level</a> because of 5...Nc6.
 
 <p>
 
@@ -170,6 +202,11 @@ This is a good position for Black to castle kingside.  Niclas Huschenbeth
 castle kingside here.
 
 <p>
+Levy Rozman says that <a href=
+"https://www.youtube.com/watch?v=i0Xjzd3UlIg&t=970s"
+>10. f5 makes it less desirable to Black to kingside castle</a>.
+
+<p>
 <b>10...exf5 11. Qe1</b>
 <div class=chessDiagram8 translate="no"><div>r</div> <div></div> <div></div> <div>q</div> <div>k</div> <div></div> <div></div> <div>r</div> <div></div> <div>p</div> <div></div> <div>b</div> <div>n</div> <div>p</div> <div>b</div> <div>p</div> <div>p</div> <div></div> <div>n</div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div>P</div> <div></div> <div>B</div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div>P</div> <div></div> <div>N</div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div>B</div> <div></div> <div>Q</div> <div>R</div> <div>K</div> <div></div> </div>
 <script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
@@ -225,6 +262,11 @@ With his kingside in tatters, Black has no choice but to castle queenside.
 <p>
 By taking the pawn on h7, White’s king rook pawn is now a passed pawn.
 <p>
+Agadmator says that <a href=
+"https://www.youtube.com/watch?v=LpKlPC9shbk&t=430s"
+>Giri sacrificed his h pawn to allow his d pawn to move down to
+the d4 square</a>.
+<p>
 <b>
 28...d5 29. Re2 d4 30. Be1 Nce5 31. Re4 Ng4 32. h3 Ne3 33. c3 Nd5 34. h4 dxc3 35. bxc3 Rh5 36. Ng5
 </b>
@@ -233,6 +275,18 @@ By taking the pawn on h7, White’s king rook pawn is now a passed pawn.
 <p>
 Here, Black’s best options include advancing the b (queen knight’s) pawn 
 or taking White’s passed pawn with Nxh4.
+<p>
+Agadmator, commenting on this game, says that <a href=
+"https://www.youtube.com/watch?v=LpKlPC9shbk&t=537s"
+>Nxh4 loses for Black</a>: After 36...Nxh4 37. Ne6 which threatens
+both Nxc5 and Nxf4.  After 37...Nf5 38. c4 Nf6 39. Nf8+ Kd8 (39...Kd6?? 
+40. Re6+ followed by 41. Kxf6) 40. Rxf4 and now White’s g pawn is
+a passed pawn.  Stockfish says the best line after 36...Nxh4 is
+37. Ne6 b6 38. c4 Nb4 39. Nxf4 Rh6 and White is still ahead.
+<p>
+Colovic also <a href=
+"https://www.youtube.com/watch?v=NWmRJBJGNr0&t=1690s"
+>doesn’t like Nxh4 for Black</a>.
 <p>
 <b>
 36...Nf6
@@ -296,6 +350,23 @@ Giri, seeing all this as Black, throws in the towel and resigns after
 detail, in a form easy for beginners to understand.
 </ul>
 
+<h2>Videos</h2>
+
+<ul>
+<li><a href=
+"https://www.youtube.com/watch?v=i0Xjzd3UlIg&t=876s"
+>Levy Rozman’s commentary</a> on Pragg’s game.
+<li><a href=
+"https://www.youtube.com/watch?v=LpKlPC9shbk"
+>Agadmator’s commentary</a> on Pragg’s game.
+<li><a href=
+"https://www.youtube.com/watch?v=NWmRJBJGNr0&t=1027s"
+>Alex Colovic’s commentary</a> on Pragg’s game.
+<li><a href=
+"https://www.youtube.com/watch?v=bshvMfcrLWY&t=578s"
+>Vidit Gujrathi’s commentary</a> on Pragg’s game.
+</ul>
+
 <!--
 [Event "Candidates 2026"]
 [Site "Paphos CYP"]
@@ -319,4 +390,3 @@ https://lichess.org/gCGbVJtu
 https://www.chessgames.com/perl/chessgame?gid=3116895
 
 -->
-</div>
