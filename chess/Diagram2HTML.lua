@@ -342,7 +342,7 @@ function FENtoDiagram(FEN,blackSide)
     end
   end
   if not blackSide then
-    for a = 1,cells do
+    for a = 1,cells - 1 do
       right = right .. items[a]
     end
   else
