@@ -271,7 +271,7 @@ function board2FEN(board)
   return out
 end
 
-function FENtoDiagram(FEN)
+function FENtoDiagram(FEN,blackSide)
   local line = ""
   local left = '<div class=chessDiagram'
   local middle = '8'
@@ -304,6 +304,8 @@ function FENtoDiagram(FEN)
   -- We now know the width of the board, output the first row in
   -- diagram notation (this is the notation the ChessCancun font uses)
   -- This is the top border of the Chess board
+  items = {}
+  cells = 1
   for a=1,#FEN do
     local thisSquare = FEN:sub(a,a)
     if thisSquare:match("%_") or thisSquare:match("%s") then
@@ -321,7 +323,8 @@ function FENtoDiagram(FEN)
     end
     if thisSquare:match("%D") or a==#FEN then
       for b=1,number do
-        right = right .. "<div></div> " -- Empty square
+        items[cells] = "<div></div> " -- Empty square
+        cells = cells + 1
       end
       number = 0
       inNumber = false
@@ -334,7 +337,17 @@ function FENtoDiagram(FEN)
       if thisSquare == 'c' then
         thisSquare = 'm'
       end
-      right = right .. "<div>" .. thisSquare .. "</div> "
+      items[cells] = "<div>" .. thisSquare .. "</div> "
+      cells = cells + 1
+    end
+  end
+  if not blackSide then
+    for a = 1,cells do
+      right = right .. items[a]
+    end
+  else
+    for a = cells - 1, 1, -1 do
+      right = right .. items[a]
     end
   end
   right = right .. "</div>"
@@ -383,11 +396,13 @@ end
 
 function showUsage(exitcode)
   if not exitcode then exitcode = 0 end
-  print("Usage: Diagram2HTML.lua {setup}")
+  print("Usage: Diagram2HTML.lua {setup} {--black}")
   print("setup can be an opening setup like RBBQKNNR or a FEN diagram")
   print("Both 8x8 chess and 10x8 Capablanca Chess are supported")
   print("Example: Diagram2HTML " ..
         "b2r3r/k4p1p/p2q1np1/NppP4/3p1Q2/P4PPB/1PP4P/1K1RR3")
+  print('If the second argument is "--black" it will ' ..
+        "show board from Black's POV")
   os.exit(exitcode)
 end
 
@@ -396,14 +411,24 @@ if #arg < 1 then
 end
 
 local position = arg[1]
+if position:match("[Hh%?]") then
+  showUsage()
+  os.exit(0)
+end
+
+blackSide = false
+if #arg >= 2 and arg[2] == "--black" then
+  blackSide = true
+end
 
 if position:match("h") then
   showUsage()
 end
 
 if position:len() <= 10 then
-  print(FENtoDiagram(board2FEN(position)))
+  print(FENtoDiagram(board2FEN(position),blackSide))
   os.exit(0)
 end
 
-print(FENtoDiagram(position))
+print(FENtoDiagram(position,blackSide))
+
