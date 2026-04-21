@@ -1,11 +1,11 @@
-<!--{TAGS:M}-->
+<!--{TAGS:M}-->
 
 <div class=blogpic>
-<img src=pics/2013-07-blog-square.jpg width=120 height=120>
+<img src=pics/2013-07-blog-square.jpg width=120 height=120>
 </div>
 
-<h1>Microblogs January 2014</h1>
-<h2>January 22, 2014</h2>
+<h1>Microblogs January 2014</h1>
+<h2>January 22, 2014</h2>
 Here are the microblogs I posted between January 8 and 22, 2014.
 
 <p>
@@ -46,7 +46,7 @@ There is a lot of appeal with not having to target the web.  An app only has to 
 
 <p>
 
-<i>Posted Jan 14 2014</i>
+<i>Posted Jan 14 2014</i>
 
 <p>
 
@@ -60,12 +60,12 @@ warning clang emits when compiling MaraDNS is a bunch of warnings where the code
 
 <p>
 
-<tt>if(some_unsigned_var &gt; max || some_unsigned_var &lt; 0)</tt><br>
+<tt>if(some_unsigned_var &gt; max || some_unsigned_var &lt; 0)</tt><br>
 
 <p>
 
 I don't see the point in removing all those sanity checks (I would rather have a sanity check like that with an unsigned variable than
-<i>not</i>
+<i>not</i>
 have the sanity check with a signed variable)
 
 <p>
@@ -73,7 +73,7 @@ have the sanity check with a signed variable)
 
 <p>
 
-<i>Posted Jan 12 2014</i>
+<i>Posted Jan 12 2014</i>
 
 <p>
 
@@ -103,7 +103,7 @@ The Cppcheck updates for authoritative MaraDNS will be part of the 2.0.08 releas
 
 <p>
 
-<i>Posted Jan 09 2014</i>
+<i>Posted Jan 09 2014</i>
 
 <p>
 
