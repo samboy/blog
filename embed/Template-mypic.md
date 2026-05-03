@@ -45,4 +45,11 @@ We also have support for Chess diagrams in FEN format, like this:
 @~:b2r3r/k3qp1p/p4np1/Np1P4/3p1Q2/P4PPB/1PP4P/1K6:
 _White to move and deliver mate_
 
+We can do some Unicode in ASCII:
+
+Here is @~(quoted text)~@ and it@~'s also possible to have Unicode
+single quotes or arrows: @~>
+
+(quoted text is double quoted)
+
 

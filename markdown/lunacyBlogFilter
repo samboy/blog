@@ -748,6 +748,13 @@ function processIDetc(l)
       l = l:gsub('%@%~%:[^:]+%:',ChessBoard) 
     end
   end 
+  -- Allow smart quotes with editors (Busybox Vi, etc.) which don’t handle
+  -- Unicode well.  Example: @~(Some quoted text)~@
+  l = l:gsub('%@%~%(','&ldquo;')
+  l = l:gsub('%)%~%@','&rdquo;')
+  l = l:gsub("%@%~%'",'&rsquo;') -- it@~'s → it’s
+  l = l:gsub('%@%~%>','&rarr;') -- @-> becomes →
+  l = l:gsub('%@%~%&gt%;','&rarr;') -- @-> becomes → (post-processed)
   -- Break long words, except in <pre> tags (the CSS will add scrollbars
   -- to long lines in <pre> blocks as needed)
   if not globalInPre then
