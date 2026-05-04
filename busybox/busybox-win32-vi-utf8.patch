@@ -1,5 +1,5 @@
---- busybox-w32/editors/vi.c.orig	2026-05-03 22:33:28.550102700 -0600
-+++ busybox-w32/editors/vi.c	2026-05-04 00:04:11.365678200 -0600
+--- editors/vi.c.orig	2026-05-03 22:33:28.550102700 -0600
++++ editors/vi.c	2026-05-04 01:20:57.340278200 -0600
 @@ -871,6 +871,8 @@
  		co = next_tabstop(co);
  	else if ((unsigned char)c < ' ' || c == 0x7f)
@@ -9,17 +9,36 @@
  	return co + 1;
  }
  
-@@ -1886,6 +1888,9 @@
- static void dot_left(void)
- {
+@@ -1069,6 +1071,7 @@
+ #define old_offset refresh__old_offset
+ 
+ 	int li, changed;
++    int low, high;
+ 	char *tp, *sp;		// pointer into text[] and screen[]
+ 
+ 	if (ENABLE_FEATURE_VI_WIN_RESIZE IF_FEATURE_VI_ASK_TERMINAL(&& !G.get_rowcol_error) ) {
+@@ -1088,7 +1091,9 @@
+ 	tp = screenbegin;	// index into text[] of top line
+ 
+ 	// compare text[] to screen[] and mark screen[] lines that need updating
+-	for (li = 0; li < rows - 1; li++) {
++	low = 0; high = rows - 1;
++    if(full_screen == 2) { low = crow; high = crow + 1; } // Only update 1 line
++	for (li = low; li < high; li++) {
+ 		int cs, ce;				// column start & end
+ 		char *out_buf;
+ 		// format current text line
+@@ -1888,6 +1893,9 @@
  	undo_queue_commit();
-+	while(dot > text && (unsigned char)*dot >= 128 && 
-+	      (unsigned char)*dot < 192) // UTF-8 hack
-+		dot--;
  	if (dot > text && dot[-1] != '\n')
  		dot--;
++	while(dot > text && dot[-1] != '\n' && (unsigned char)*dot >= 128 && 
++	      (unsigned char)*dot < 192) // UTF-8 hack
++		dot--;
  }
-@@ -1895,6 +1900,9 @@
+ 
+ static void dot_right(void)
+@@ -1895,6 +1903,9 @@
  	undo_queue_commit();
  	if (dot < end - 1 && *dot != '\n')
  		dot++;
@@ -29,3 +48,11 @@
  }
  
  static void dot_begin(void)
+@@ -3922,6 +3933,7 @@
+ 		// insert the char c at "dot"
+ 		if (1 <= c || Isprint(c)) {
+ 			dot = char_insert(dot, c, ALLOW_UNDO_QUEUED);
++			refresh(2);
+ 		}
+ 		goto dc1;
+ 	}
