@@ -1,0 +1,31 @@
+--- busybox-w32/editors/vi.c.orig	2026-05-03 22:33:28.550102700 -0600
++++ busybox-w32/editors/vi.c	2026-05-04 00:04:11.365678200 -0600
+@@ -871,6 +871,8 @@
+ 		co = next_tabstop(co);
+ 	else if ((unsigned char)c < ' ' || c == 0x7f)
+ 		co++; // display as ^X, use 2 columns
++	else if ((unsigned char)c >= 128 && (unsigned char)c < 192)
++		return co; // Do not advance in middle of multichar UTF-8 sequence
+ 	return co + 1;
+ }
+ 
+@@ -1886,6 +1888,9 @@
+ static void dot_left(void)
+ {
+ 	undo_queue_commit();
++	while(dot > text && (unsigned char)*dot >= 128 && 
++	      (unsigned char)*dot < 192) // UTF-8 hack
++		dot--;
+ 	if (dot > text && dot[-1] != '\n')
+ 		dot--;
+ }
+@@ -1895,6 +1900,9 @@
+ 	undo_queue_commit();
+ 	if (dot < end - 1 && *dot != '\n')
+ 		dot++;
++	while(dot < end - 1 && (unsigned char)*dot >= 128 && 
++	      (unsigned char)*dot < 192) // UTF-8 hack
++		dot++;
+ }
+ 
+ static void dot_begin(void)
