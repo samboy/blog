@@ -65,7 +65,10 @@ codepoints has issues.
 <ul>
 <li>Install mingw
 <li>Extract the source tallball
+<li><tt>export CC="i686-w64-mingw32-gcc"</tt> or what not to make the 
+    compiler one that makes a native Windows app
 <li><tt>make mingw32w_defconfig</tt> to prepare the makefile
+<li><tt>make menuconfig</tt> (optional) to fine-tune how Busybox is built
 <li><tt>make</tt> to build Busybox
 </ul>
 
