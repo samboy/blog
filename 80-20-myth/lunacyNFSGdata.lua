@@ -1,5 +1,7 @@
 #!/usr/bin/env lunacy
 
+-- totalSexualEncounters = 80000 -- Avg partner count: 8.0 (Men reported)
+totalSexualEncounters = 61000 -- Avg partner count: 6.1 (Women reported)
 -- This is a Lua 5.1 compatible script, which runs the same in Lunacy
 -- If not using Lunacy, this needs to be run in the same directory as
 -- rg32-polyfill.lua
@@ -230,7 +232,7 @@ function chadFunction(x,y)
 end
 
 -- Run the monte carlo simulation
-for a=1,61000 do
+for a=1,totalSexualEncounters do
   local woman = rg32.random(1,10000)
   local y = 1
   local x = 0
