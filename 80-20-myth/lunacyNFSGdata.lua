@@ -1,7 +1,21 @@
 #!/usr/bin/env lunacy
 
--- totalSexualEncounters = 80000 -- Avg partner count: 8.0 (Men reported)
+--totalSexualEncounters = 100000 -- Fudge out numbers to make higher
+--totalSexualEncounters = 80000 -- Avg partner count: 8.0 (Men reported)
 totalSexualEncounters = 61000 -- Avg partner count: 6.1 (Women reported)
+chadFactor = 6 -- Roughly 80/20
+-- Some possible chadFactors:
+-- 6.212567: 80/20
+-- 20.8543:  90/10
+
+-- Given a number between 0 and 1 (0.8 is 80/20, 0.9 is 90/10, etc.),
+-- find the chadFactor (the exponent we used to determine how likely
+-- a woman will sleep with a given man)
+function calculateChadFactor(n)
+  return math.log(1-n) /
+         math.log(n) - 1
+end
+
 -- This is a Lua 5.1 compatible script, which runs the same in Lunacy
 -- If not using Lunacy, this needs to be run in the same directory as
 -- rg32-polyfill.lua
@@ -239,7 +253,7 @@ for a=1,totalSexualEncounters do
   local count = 0
   local men = 10000
   local women = 10000
-  local degree = 6
+  local degree = chadFactor
   local man = 0
   while(chadFunction(x,degree) < y and count < 100) do
     count = count + 1
