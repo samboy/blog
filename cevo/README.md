@@ -39,7 +39,7 @@ numbers are approximations.
 
 The smallest map is based on the size of the tutorial map, which was
 made wider because really narrow maps had rendering bugs in older
-versions of C-evo, and the biggest map is the biggest map C-evo
+versions of C-evo, and the biggest map is the biggest map unmodified C-evo
 supports, since the SETI AI author complained when I suggested
 supporting even bigger maps.
 
