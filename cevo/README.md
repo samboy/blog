@@ -29,8 +29,8 @@ is πr and the width is 4r.  However, due to the isomorphic projection,
 where each tile is twice as wide as tall, the height is 2πr and the
 width 4r.
 
-So, given a height y, x=2y/π (2*y/pi), or likewise, for a given width
-x, y=πx/2 (pi*x/2).  Here x=4r and y=2πr giving a 4πr² surface
+So, given a height y, x=2y/π (2\*y/pi), or likewise, for a given width
+x, y=πx/2 (pi\*x/2).  Here x=4r and y=2πr giving a 4πr² surface
 area (where the tiles are twice as wide as high).
 
 This is made more complicated by the fact C-evo’s random map generator
