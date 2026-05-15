@@ -1,6 +1,8 @@
+# C-evo: A Civilization 2 clone
+
 ![C-evo screenshot](../pics/cevo.jpg)
 
-# C-evo
+# About C-evo
 
 C-evo is a public domain Civilization 2 clone which was developed
 until 2013.
@@ -50,3 +52,7 @@ how small this game is.
 * [C-Evo that fits on a 1.44 meg floppy](cevo.7z)
 * [Source code to map generator](mapgen-source.zip)
 * [SETI AI for C-evo](seti.7z)
+
+# Links
+
+* [An up to date fork of C-evo](https://sourceforge.net/projects/c-evo-eh/)
