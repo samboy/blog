@@ -7,6 +7,25 @@
 C-evo is a public domain Civilization 2 clone which was developed
 until 2013.
 
+## Introduction to C-evo
+
+C-evo, written in Delphi, is a Windows game which is mostly like 
+Civilization 2; it’s a turn based strategy game where one takes 
+over the world and builds a spaceship.  The main differences from
+Civilization 2 are:
+
+* One needs to build a town hall for a new city to contribute
+  research and/or money to one’s civilization.
+* One needs to perform “military research” to generate new units;
+  they do not automatically appear when new military technology is
+  researched.
+* There are no barbarians. 
+
+Note that newer forks of C-evo are cross platform (see “links”
+below).
+
+## This version of C-evo
+
 This is a version of C-evo 1.2 (the final version of C-evo) with the
 following changes:
 
@@ -21,6 +40,7 @@ following changes:
   war
 * Fog of war tile overlay is less obnoxious
 * A number of static maps, including two versions of Caulixtla, added
+* Tutorial and HOWTO added
 
 The size of most maps is based on having a correct surface area:
 
