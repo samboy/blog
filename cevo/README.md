@@ -67,12 +67,32 @@ One nice things about C-evo is that, even with the additional random
 map generator, it fits nicely on an old school 1.44 meg floppy; that’s
 how small this game is.
 
+The main disadvantages of C-evo are that it can’t be modded short of 
+modifying the source, there are no barbarians, and it can’t be played
+on a phone.
+
 # Files
 
 * [C-Evo that fits on a 1.44 meg floppy](cevo.7z)
 * [Source code to map generator](mapgen-source.zip)
 * [SETI AI for C-evo](seti.7z)
+* [HOWTO](HOWTO.html)
+* [Tutorial](Tutorial.html)
 
 # Links
 
-* [An up to date fork of C-evo](https://sourceforge.net/projects/c-evo-eh/)
+* [An up to date fork of C-evo](https://sourceforge.net/projects/c-evo-eh/);
+  this version runs in both Linux and Windows.
+* [Unciv, a free/open-source CivV clone for Windows, Linux, MacOS, and 
+   Android phones](https://github.com/yairm210/Unciv).  This allows me
+  to play the same Civilization game on my phone and computer.
+* [GOG](https://gog.com) sells a number of DRM-free versions of Civilization,
+  including [Civ3](https://www.gog.com/en/game/sid_meiers_civilization_iii_complete),
+  [Civ4](https://www.gog.com/en/game/sid_meiers_civilization_iv_the_complete_edition),
+  [Alpha Centauri](https://www.gog.com/en/game/sid_meiers_alpha_centauri),
+  and [Call to Power 
+  Two](https://www.gog.com/en/game/call_to_power_2).
+* [FreeCiv](https://freeciv.org/) was the first take on making an open source
+  Civilization clone; this is, like C-evo, an open-source take on Civ2, but
+  has Cvi1/Civ4 style square maps, and supported hex maps long before Civ5
+  came out.
