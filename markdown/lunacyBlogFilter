@@ -325,6 +325,10 @@ function Xascii2utf8(glyph)
   g["\26"] = "’" g["\28"] = "→" g["\29"] = "“" g["\30"] = "”" 
   g["\31"] = "©" g["\127"] = "♥"
 
+  -- Lunacy for windows has issues with io.read if the input char
+  -- is '\26', which indicates “end of file” with the win32 API.
+  g["\128"] = "’"
+
   if(g[glyph]) then return g[glyph] end
   return glyph
 end
@@ -391,6 +395,10 @@ function width(glyph)
   g["\23"] = 671 g["\24"] = 555 g["\25"] = 286 g["\26"] = 286 
   g["\28"] = 840 g["\29"] = 528 g["\30"] = 528 g["\31"] = 870 
   g["\127"] = 905
+
+  -- Lunacy for windows has issues with io.read if the input char
+  -- is '\26', which indicates “end of file” with the win32 API.
+  g["\128"] = 286
 
   if g[glyph] == nil then
     print("Fatal error: Invalid glyph " ..glyph.. " in source md file")
