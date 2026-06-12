@@ -71,7 +71,8 @@ function utf8toXascii(glyph)
 
   -- Lunacy for windows has issues with io.read if the input char
   -- is '\26', which indicates “end of file” with the win32 API.
-  g["’"] = '\128'
+  -- (Disabled; just have Lunacy for Windows open file with "rb" flags)
+  -- g["’"] = '\128'
 
   if g[glyph] then return g[glyph] end
   return nil

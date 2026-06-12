@@ -325,8 +325,9 @@ function Xascii2utf8(glyph)
   g["\26"] = "’" g["\28"] = "→" g["\29"] = "“" g["\30"] = "”" 
   g["\31"] = "©" g["\127"] = "♥"
 
-  -- Lunacy for windows has issues with io.read if the input char
-  -- is '\26', which indicates “end of file” with the win32 API.
+  -- Lunacy for windows has issues with io.read if the input is stdin and
+  -- input char is '\26', which indicates “end of file” with the win32 API.
+  -- Workaround: Read input with file and "rb" flags
   g["\128"] = "’"
 
   if(g[glyph]) then return g[glyph] end
@@ -396,8 +397,8 @@ function width(glyph)
   g["\28"] = 840 g["\29"] = 528 g["\30"] = 528 g["\31"] = 870 
   g["\127"] = 905
 
-  -- Lunacy for windows has issues with io.read if the input char
-  -- is '\26', which indicates “end of file” with the win32 API.
+  -- Lunacy for windows has issues with io.read if the input is stdin and
+  -- input char is '\26', which indicates “end of file” with the win32 API.
   g["\128"] = 286
 
   if g[glyph] == nil then
@@ -585,9 +586,9 @@ function processFootnotes()
     end
     local footnoteIndex = 0
     if(globalFootnoteCount == 1) then 
-      print('<h3>Footnote</h3>')
+      fileOut('<h3>Footnote</h3>')
     else
-      print('<h3>Footnotes</h3>')
+      fileOut('<h3>Footnotes</h3>')
     end
     for f,v in sPairs(globalFootnotes, sortFunction) do
       local fnWidth = 0
@@ -604,7 +605,7 @@ function processFootnotes()
       -- on Chrome and Edge
       local style = 'margin-left: ' .. fnWidth .. 
                     'em;text-indent: -' .. fnWidth .. 'em;'
-      print('<p style="' .. style .. '">')
+      fileOut('<p style="' .. style .. '">')
       footnoteIndex = footnoteIndex + 1
       local body = globalFootnotes[f]['body']
       -- Allow fancy links in footnotes
@@ -625,11 +626,11 @@ function processFootnotes()
       -- *foo bar* should be in italics
       body = body:gsub(mc('%*([^%*]+)%*'),'<i>%1</i>')
       -- Add footnote to page
-      print(x('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>'))
-      print(x('<a href="#back-' .. globalFootnotes[f]['name'] .. '">' ..
+      fileOut(x('<a name="' .. globalFootnotes[f]['name'] .. '"> </a>'))
+      fileOut(x('<a href="#back-' .. globalFootnotes[f]['name'] .. '">' ..
             globalFootnotes[f]['link'] .. '</a>: ' .. body))
     end
-    print"<p>"
+    fileOut"<p>"
   end
 end
 
@@ -648,7 +649,7 @@ function processIDetc(l)
     else
       thisID = os.time() .. '-' .. thisID
     end 
-    print('<a name="' .. thisID .. '"> </a>')
+    fileOut('<a name="' .. thisID .. '"> </a>')
   end
   -- Remove <a id> stuff; it messes up the formatting of the blog on my
   -- web page
@@ -687,7 +688,7 @@ function processIDetc(l)
     linkText = linkText:gsub(mc('[^>]*>%b?%^?(%B+).*$'),'%1')
     fnText = fnText:gsub(mc('[^>]*%b?%^?%B+([^<]+).*$'),'%1')
     if(globalFootnotes[name]) then
-      print("Fatal: Footnote " .. name .. " already exists!")
+      fileOut("Fatal: Footnote " .. name .. " already exists!")
       sys.exit(1)
     end
     globalFootnotes[name] = {}
@@ -711,7 +712,7 @@ function processIDetc(l)
     linkText = linkText:gsub(mc('[^>]*>%b?%^?(%B+).*$'),'%1')
     fnText = fnText:gsub(mc('[^>]*%b?%^?%B+([^<]+).*$'),'%1')
     if(globalFootnotes[name]) then
-      print("Fatal: Footnote " .. name .. " already exists!")
+      fileOut("Fatal: Footnote " .. name .. " already exists!")
       sys.exit(1)
     end
     globalFootnotes[name] = {}
@@ -770,7 +771,7 @@ function processIDetc(l)
   end
   -- Xascii in to UTF-8
   l = XasciiStringConvert(l)
-  print(l)
+  fileOut(l)
 end
 
 -- After processing the picture on top of the blog, process any pictures
@@ -789,12 +790,12 @@ function processWidePic(l)
           globalCaption = globalCaption .. fields[a] .. " "
         end
       end
-      print('<img class=widepic src="' .. pic .. '" alt="">') 
-      print('<br class=nomobile>')
+      fileOut('<img class=widepic src="' .. pic .. '" alt="">') 
+      fileOut('<br class=nomobile>')
       globalInWidePic = true
     end
   elseif(globalInWidePic) then
-    print(XasciiStringConvert(globalCaption))
+    fileOut(XasciiStringConvert(globalCaption))
     processIDetc(l)
     globalInWidePic = false
     globalCaption = ""
@@ -816,9 +817,9 @@ function processStep2(l)
       local pic = fields[3]
       pic = pic:gsub('^[^"]*"','',1)
       pic = pic:gsub('"[^"]*$','',1)
-      print('<div class=blogpicx style="text-align: right">')
-      print('<img src="' .. pic .. '" width=224 height=126>')
-      print('</div>')
+      fileOut('<div class=blogpicx style="text-align: right">')
+      fileOut('<img src="' .. pic .. '" width=224 height=126>')
+      fileOut('</div>')
     else
       processWidePic(l)
     end
@@ -901,6 +902,24 @@ if arg[1] and arg[1] == '--test' then
   os.exit(0)
 end
 
+if arg[1] and arg[1] == "--help" then
+  print("Usage: lunacyBlogFilter {--test|--help|date} {input file}")
+  print("Date is in form like 2001-09-04")
+  os.exit(0)
+end
+
+-- Defulats: Input standard input, output is stdout
+inHandle = io.stdin
+fileOut = print
+
+if arg[2] then
+  inHandle = io.open(arg[2],"rb")
+  if not inHandle then
+    print("Fatal: Can not open file " .. arg[2])
+    os.exit(3)
+  end
+end
+
 -- This code is a fairly complicated state machine:
 -- * HTML tags are always on the same line so we can process them
 -- * HTML links are always on the same line so we can process them
@@ -932,9 +951,9 @@ inTag = false
 currentLine = ""
 currentState = 0
 repeat
-  l = io.read(1)
+  l = inHandle:read(1)
   if not l then processStep1(currentLine) break end
-  if l == "\r" then l = io.read(1) 
+  if l == "\r" then l = inHandle:read(1) 
   elseif l == "\n" and not inLink and not inTag and currentState ~= 102 then
     processStep1(currentLine)
     currentLine = ""
@@ -1028,10 +1047,10 @@ processFootnotes()
 
 -- Footer
 if not blogFooter then os.exit(0) end
-print ""
-print "<p>"
---print ""
---print "<A href=/blog/>Blog index</A>"
-print ""
-print "</div>"
-print ""
+fileOut ""
+fileOut "<p>"
+--fileOut ""
+--fileOut "<A href=/blog/>Blog index</A>"
+fileOut ""
+fileOut "</div>"
+fileOut ""
