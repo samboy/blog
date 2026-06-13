@@ -340,6 +340,36 @@ function fo(line)
   gOutHandle:write(line .. "\n")
 end
 
+-- LFS needed, included with Lunacy
+if not lfs then
+  print("FATAL: LFS needed to run this program")
+  print("Download Lunacy at https://github.com/samboy/Lunacy")
+  print("Or install LFS https://github.com/samboy/LUAlibs")
+  os.exit(2)
+end
+
+fileList = {}
+for a in lfs.dir("embed/") do
+  -- We only look at YYYY-MM-DD (YYYYMMDD before 2014) entries
+  if a:match("^%d%d%d%d%-?%d%d%-?%d%d.embed$") then
+    local date = a:gsub('.*(%d%d%d%d%-?%d%d%-?%d%d).*','%1')
+    fileList[date] = true
+  end
+end
+
+sortList = {}
+entry = 0 -- So much bikeshedding about 1-index arrays but they can be useful
+n = 1
+for date in sPairs(fileList,function(a,b) return b<a end) do
+  print(date) -- DEBUG
+  table.insert(sortList,date)
+  if "embed/" .. date .. ".embed" == fileName then
+    entry = n
+    break
+  end
+  n = n + 1
+end
+
 -- This script is public domain.
 U='<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'
 fo('<html><head><title>' .. date .. '</title>')
@@ -441,6 +471,16 @@ end
 thisFileHandle:close()
 -- fo('<hr class=pc>')
 fo('<div class=GitBlogNav><i>Go to: ')
+if entry > 1 then
+  fo('<a href="' .. sortList[entry - 1] .. '.html">Newer</a> - ')
+end
+if sortList[entry + 1] then
+  local date = sortList[entry + 1]
+  year = date:sub(1,4) 
+  if tonumber(year) >= 2024 then
+    fo('<a href="' .. date .. '.html">Older</a> - ')
+  end
+end
 fo('<a href="../archive.html#GitBlogTop">All entries</a>')
 fo(' - ')
 fo('<a href="../index.html#GitBlogIndex">Index</a></i></div>')
