@@ -481,7 +481,7 @@ doContinue = false
       -- archiveOnly('<hr class=pc>')
       archiveOnly('<div class=GitBlogNav><i>Go to: ')
       archiveOnly('<a href="#GitBlogTop">Top</a>')
-      fo(' - ')
+      archiveOnly(' - ')
       archiveOnly('<a href="#GitBlogIndex">Index</a></i></div>')
       -- archiveOnly('<hr class=pc>')
       archiveOnly('<div class=blog>')
