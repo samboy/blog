@@ -414,10 +414,10 @@ for l in thisFileHandle:lines() do
                '<a href="%1.html')
   else
     l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
-               '<a href="../index.html#BlogEntry-%1')
+               '<a href="../archive.html#BlogEntry-%1')
     -- We have to handle things like "blog:20120907#20120907-slashdot"
-    l = l:gsub('<a href="../index.html#BlogEntry-[0-9-]+(#[^"]+)',
-               '<a href="../index.html%1')
+    l = l:gsub('<a href="../archive.html#BlogEntry-[0-9-]+(#[^"]+)',
+               '<a href="../archive.html%1')
   end
   -- Convert image links
   l = l:gsub('src="pics/','src="../pics/')
@@ -441,7 +441,8 @@ end
 thisFileHandle:close()
 -- fo('<hr class=pc>')
 fo('<div class=GitBlogNav><i>Go to: ')
-fo('<a href="../index.html#GitBlogTop">All entries</a>')
+fo('<a href="../archive.html#GitBlogTop">All entries</a>')
+fo(' - ')
 fo('<a href="../index.html#GitBlogIndex">Index</a></i></div>')
 -- fo('<hr class=pc>')
 

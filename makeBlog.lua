@@ -308,13 +308,28 @@ if(maxWidth < 480) {
 ]] -- blogTop
 
 gOutHandle = io.open("index.html","wb")
+gArchiveHandle = io.open("archive.html","wb")
 if not gOutHandle then
   print("Fatal error opening index.html for writing")
   os.exit(1)
 end
 
+if not gArchiveHandle then
+  print("Fatal error opening archive.html for writing")
+  os.exit(1)
+end
+
 function fo(line)
   gOutHandle:write(line .. "\n")
+  gArchiveHandle:write(line .. "\n")
+end
+
+function indexOnly(line)
+  gOutHandle:write(line .. "\n")
+end
+
+function archiveOnly(line)
+  gArchiveHandle:write(line .. "\n")
 end
 
 -- This script is public domain.
@@ -361,6 +376,8 @@ end
 -- Ugly workarounds because Lua doesn’t have “continue”
 -- Ugly code to deal with the ugly HTML htmldoc makes
 blogIndex = ""
+archiveIndex = ""
+count = 0
 repeat
 doBreak = true
 doContinue = false
@@ -375,6 +392,8 @@ doContinue = false
     if not thisFileHandle then
       doContinue = true break -- “continue”
     end
+    
+    count = count + 1
 
     -- Grab title from file.  This is ugly because of the ugly HTML
     -- htmldoc makes
@@ -405,10 +424,25 @@ doContinue = false
     thisFileHandle:close()
     if not title then title="Blog entry" end
 
-    fo('<!-- `ENTRY: ' .. date .. ' ' .. year .. ' ` -->')
-    fo('<a name="' .. link .. '"> </a>')
-    blogIndex = blogIndex .. '<a href="#' .. link .. '">' .. title ..
-                ' (' .. date .. ')</a></br>' .. "\n"
+    if count <= 7 then
+      fo('<!-- `ENTRY: ' .. date .. ' ' .. year .. ' ` -->')
+      fo('<a name="' .. link .. '"> </a>')
+    else
+      archiveOnly('<!-- `ENTRY: ' .. date .. ' ' .. year .. ' ` -->')
+      archiveOnly('<a name="' .. link .. '"> </a>')
+    end
+
+    if(tonumber(year) >= 2024) then
+      blogIndex = blogIndex .. '<a href="entries/' .. date .. '.html">'
+                  .. title .. ' (' .. date .. ')</a></br>' .. "\n"
+      archiveIndex = archiveIndex .. '<a href="entries/' .. date .. '.html">'
+                  .. title .. ' (' .. date .. ')</a></br>' .. "\n"
+    else
+      blogIndex = blogIndex .. '<a href="archive.html#' .. link .. '">' 
+                  .. title .. ' (' .. date .. ')</a></br>' .. "\n"
+      archiveIndex = archiveIndex .. '<a href="#' .. link .. '">' 
+                  .. title .. ' (' .. date .. ')</a></br>' .. "\n"
+    end
 
     thisFileHandle = io.open("embed/" .. fileName,"rb")
     if not thisFileHandle then
@@ -428,21 +462,37 @@ doContinue = false
         -- We have to handle things like "blog:20120907#20120907-slashdot"
         l = l:gsub('<a href="#BlogEntry-[0-9-]+(#[^"]+)','<a href="%1')
       end
-      fo(l)
+      if count <= 7 then
+        fo(l)
+      else
+        archiveOnly(l)
+      end
     end
     thisFileHandle:close()
-    -- fo('<hr class=pc>')
-    fo('<div class=GitBlogNav><i>Go to: ')
-    fo('<a href="#GitBlogTop">Top</a>')
-    fo('<a href="#GitBlogIndex">Index</a></i></div>')
-    -- fo('<hr class=pc>')
-    fo('<div class=blog>')
+    if count <= 7 then
+      -- fo('<hr class=pc>')
+      fo('<div class=GitBlogNav><i>Go to: ')
+      fo('<a href="#GitBlogTop">Top</a>')
+      fo(' - ')
+      fo('<a href="#GitBlogIndex">Index</a></i></div>')
+      -- fo('<hr class=pc>')
+      fo('<div class=blog>')
+    else
+      -- archiveOnly('<hr class=pc>')
+      archiveOnly('<div class=GitBlogNav><i>Go to: ')
+      archiveOnly('<a href="#GitBlogTop">Top</a>')
+      fo(' - ')
+      archiveOnly('<a href="#GitBlogIndex">Index</a></i></div>')
+      -- archiveOnly('<hr class=pc>')
+      archiveOnly('<div class=blog>')
+    end
   end
   if doContinue then doBreak = false end
 until doBreak
 
 fo('<!-- `FOOTER` -->')
 fo('<a name="GitBlogIndex"> </a><h1>Blog index</h1>')
-fo(blogIndex)
+indexOnly(blogIndex)
+archiveOnly(archiveIndex)
 fo('</div>')
 fo('</body></html>')
