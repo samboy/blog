@@ -324,12 +324,12 @@ fo(U)
 fo('<style>')
 
 -- Widepic CSS
-fo("@import url('fonts.css');") -- OFL license in CSS file
+fo('@import url("fonts.css");') -- OFL license in CSS file
 
 -- Thanks to https://screenspan.net/fallback for this CSS
 -- Georgia has mostly the same metrics so this is a 99% metric
 -- compatible local replacment
-fo("@font-face { font-family: 'GeorgiaF'; src: local(Georgia);")
+fo('@font-face { font-family: "GeorgiaF"; src: local(Georgia);')
 fo('size-adjust: 118%; }')
 fo(blogTop)
 
@@ -381,6 +381,7 @@ doContinue = false
     local title=nil
     local inTitle = false
     for line in thisFileHandle:lines() do
+      line = line:gsub("\r","")
       if inTitle then
         local here = line:gsub("%<%/[^>]+%>","") -- Remove ugly closing tags
         title = title .. here
@@ -416,6 +417,7 @@ doContinue = false
     end
  
     for l in thisFileHandle:lines() do
+      l = l:gsub("\r","")
       -- Convert blog:entry links in to his correct form
       if globalWebpageBlog then
         l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"#]+)',
