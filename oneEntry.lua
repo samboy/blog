@@ -361,11 +361,9 @@ sortList = {}
 entry = 0 -- So much bikeshedding about 1-index arrays but they can be useful
 n = 1
 for date in sPairs(fileList,function(a,b) return b<a end) do
-  print(date) -- DEBUG
   table.insert(sortList,date)
   if "embed/" .. date .. ".embed" == fileName then
     entry = n
-    break
   end
   n = n + 1
 end
@@ -471,15 +469,15 @@ end
 thisFileHandle:close()
 -- fo('<hr class=pc>')
 fo('<div class=GitBlogNav><i>Go to: ')
-if entry > 1 then
-  fo('<a href="' .. sortList[entry - 1] .. '.html">Newer</a> - ')
-end
 if sortList[entry + 1] then
   local date = sortList[entry + 1]
   year = date:sub(1,4) 
   if tonumber(year) >= 2024 then
     fo('<a href="' .. date .. '.html">Older</a> - ')
   end
+end
+if entry > 1 then
+  fo('<a href="' .. sortList[entry - 1] .. '.html">Newer</a> - ')
 end
 fo('<a href="../archive.html#GitBlogTop">All entries</a>')
 fo(' - ')
