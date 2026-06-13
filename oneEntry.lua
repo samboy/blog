@@ -101,13 +101,13 @@ a { color: #067610; }
 .GitBlogNav { display: table; width: 95vw; 
 font-family: Kilroy8, GeorgiaF, Georgia, serif;
 font-size: 16px;
-text-align: center;
+text-align: left;
 border-top: 2px solid #aaa;
 margin: 5px; padding: 2px;
 margin-left: auto;
 margin-right: auto;
 border-bottom: 2px solid #aaa; }
-@media (min-width: 640px) {.GitBlogNav {width:640px;}}
+@media (min-width: 640px) {.GitBlogNav {width:640px; text-align: center}}
 @media (max-width: 640px) {.blogPre {overflow-x:scroll;}}
 @media (max-width: 640px) {.blog {overflow-x:scroll;}}
 body { color: #333; background-color: #fff; }
