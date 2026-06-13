@@ -1,0 +1,295 @@
+<html><head><title>" .. date .. "</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+@import url("../fonts.css");
+@font-face { font-family: "GeorgiaF"; src: local(Georgia);
+size-adjust: 118%; }
+@font-palette-values --dark {
+ font-family: "ChessCancunColor";
+ override-colors: 0 rgb(0 0 0), 1 rgb(205 192 180); }
+.widepic { box-shadow: 0 0 4px #888;
+border-radius: 8px; width: 99%; height: auto; }
+@media screen and (max-width: 640px) { 
+.nomobile { display: none; } }
+body { max-width: 95vw; overflow-x: hidden; } 
+a { color: #067610; } 
+.GitBlogNav { display: table; width: 95vw; 
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+text-align: center;
+border-top: 2px solid #aaa;
+margin: 5px; padding: 2px;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 2px solid #aaa; }
+@media (min-width: 640px) {.GitBlogNav {width:640px;}}
+@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}
+@media (max-width: 640px) {.blog {overflow-x:scroll;}}
+body { color: #333; background-color: #fff; }
+.blog { display: table; max-width: 640px;
+color: #333; background-color: #fff;
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+margin-left: auto;
+margin-right: auto; }
+@media (max-width: 640px) {
+.blog pre {max-width: 90vw; overflow-x: scroll;}} 
+.blog pre { font-size: 14px; }
+.blog li pre {max-width: 80vw; overflow-x: scroll; }
+.blog table {max-width: 90vw; overflow-x: scroll; }
+.blog tt {max-width: 90vw; overflow-x: scroll; }
+.blogtable {max-width: 90vw; overflow-x: scroll; }
+@media (max-width: 640px) {.pc {display: none;}}
+.moyet { display: none; }
+.blog h1 { font-size: 28px; }
+.blog b { font-size: 18px; }
+.blog strong { font-size: 18px; }
+.s { font-size: 18px; }
+.blogtitle { font-size: 24px; }
+h3 { font-size: 24px; margin-bottom: 0; }
+.blogpicx { text-align: left !important; }
+.blogpicx img { 
+border-radius: 8px; box-shadow: 0 0 4px #888; }
+a { color: #067610; }
+.blog a { color: #067610; }
+
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 375px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram10x8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+/* 4x8 diagram for showing opening patterns */
+.chessDiagram4 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    border-top: 1px dotted #333;
+}
+
+.chessDiagram4 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+@media (prefers-color-scheme: dark) { 
+body { background-color: #131516; color: #d8d4cf; }
+.blog { background-color: #131516; color: #d8d4cf; }
+a { color: #78dc78; }
+.blog a { color: #78dc78; }
+.chessDiagram8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram8 div { background-color: #aaa; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #888; } 
+.chessDiagram10x8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram10x8 div { background-color: #aaa; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #888; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #ddd; 
+                 border-top: 1px dotted #ddd; font-palette: --dark; }
+.chessDiagram4 div { background-color: #aaa; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+  background-color: #888; } 
+} /* End Dark mode theme */
+@media print {
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; border-top: 1px dotted #333; }
+.chessDiagram4 div { background-color: #fff; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+background-color: #ddd; } 
+} /* End print colors */
+</style>
+<script>
+maxWidth = screen.width;
+maxWidth *= .95;
+if(maxWidth < 480) {
+  boardSize = maxWidth - 5;
+  pieceWidth = (boardSize / 10) * (16/15);
+  capaPieceWidth = (boardSize / 12.5) * (16/15);
+  capaHeight = boardSize * .8;
+}
+</script>
+<script src="../chess/jquery-1.12.4.min.js"></script>
+<script>$.ajaxSetup({contents: {script: false}})</script>
+<script 
+ src="../chess/chessboard-0.3.0.min.js" type="text/javascript"></script>
+<script src="../chess/chess.js"></script>
+<link href="../chess/chessboard-0.3.0.min.css" rel="stylesheet"></link>
+<script src="../chess/chessgame.js"></script>
+<meta name=viewport 
+content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
+</head>
+
+<body>
+<a name="GitBlogTop"> </a>
+<div class=blog>
+<a href="../index.html#GitBlogIndex">Blog Index</a></i>
+</div><div class=blog>
+<h1>Sam Trenholme’s blog</h1>
+
+<!-- `ENTRY: 2026-02-11 2026 ` -->
+<a name="BlogEntry-2026-02-11"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="../pics/Chess1.jpg" width=224 height=126>
+</div>
+<h1>Chess Cancun: A public
+ domain font</h1>
+<h2>February 11, 2026</h2>
+I present to the world Chess Cancun, a public domain redrawing of a
+ well known freeware Chess font.
+<a name="2026-02-11-chess-cancun"> </a>
+<h3>Chess Cancun</h3>
+<img class=widepic src="../pics/ChessCancunMates.png" alt="">
+<br class=nomobile>
+<em>White to move 
+ and give mate</em>
+<p>There has not been a truly open source font I would consider really
+ attractive. <a href="https://github.com/joshwalters/open-chess-font">Open Chess Font</a> 
+is close; it’s attractive and released under a
+ Creative Commons license. But it’s not OFL nor public domain, and in
+ some cases it’s better to have a font which doesn’t require attribution
+ in PDF files using the font.
+<p>After trying to draw a Chess font myself, without much success, I
+ have finally bit the bullet and have redrawn a well known Chess font
+ which was released as “freeware”, without any formal licensing terms.
+ Since the original font, which is itself based on pictures in a Chess
+ book, was made as a non-commercial font, its OK to redistribute the
+ font and almost certainly OK to use it in both commercial and
+ non-commercial contexts.
+<p>However, the spirit of open source requires explicit permission. That
+ in mind, since fonts <a href="https://en.wikipedia.org/wiki/Intellectual_property_protection_of_typefaces">cannot be copyrighted in the US and many other jurisdictions, and since font copyrights have a 25 year term  in Germany and England, a 15 year term in  Ireland</a>, 
+and since the font in question is over 25 years old, I have
+ redrawn the font and release it to the public domain. <br> <br>
+<img class=widepic src="../pics/ChessCancunFinesse.png" alt="">
+<br class=nomobile>
+<em>Finesse 
+ Chess, a variant with fairy pieces</em>
+<p>I have also added support for a couple of fairy pieces for people who
+ like to play or solve problems for Chess variants.
+<a name="2026-02-11-download"> </a>
+<h3>Download</h3>
+<p>All of the files in this Git repository are public domain:
+<blockquote>
+<p><a href="https://github.com/samboy/ChessCancun">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>github.com/<![if gt IE 6]>&#8203;<![endif]><wbr>samboy/<![if gt IE 6]>&#8203;<![endif]><wbr>ChessCancun</a>
+</blockquote>
+<p>It is also available for download in this blog; this download has
+ both the font, instructions to use the font, and even a Zillions file
+ so that one can play Chess (or a few Chess variants) using low
+ resolution bitmap renderings (the full resolution TTF file is also
+ included):
+<blockquote>
+<p><a href="../files/ChessCancun.zip">Local font download</a>
+</blockquote>
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="../index.html#GitBlogTop">All entries</a>
+<a href="../index.html#GitBlogIndex">Index</a></i></div>
+<!-- `FOOTER` -->
+</body></html>

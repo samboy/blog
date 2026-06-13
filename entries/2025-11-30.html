@@ -1,0 +1,325 @@
+<html><head><title>" .. date .. "</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+@import url("../fonts.css");
+@font-face { font-family: "GeorgiaF"; src: local(Georgia);
+size-adjust: 118%; }
+@font-palette-values --dark {
+ font-family: "ChessCancunColor";
+ override-colors: 0 rgb(0 0 0), 1 rgb(205 192 180); }
+.widepic { box-shadow: 0 0 4px #888;
+border-radius: 8px; width: 99%; height: auto; }
+@media screen and (max-width: 640px) { 
+.nomobile { display: none; } }
+body { max-width: 95vw; overflow-x: hidden; } 
+a { color: #067610; } 
+.GitBlogNav { display: table; width: 95vw; 
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+text-align: center;
+border-top: 2px solid #aaa;
+margin: 5px; padding: 2px;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 2px solid #aaa; }
+@media (min-width: 640px) {.GitBlogNav {width:640px;}}
+@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}
+@media (max-width: 640px) {.blog {overflow-x:scroll;}}
+body { color: #333; background-color: #fff; }
+.blog { display: table; max-width: 640px;
+color: #333; background-color: #fff;
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+margin-left: auto;
+margin-right: auto; }
+@media (max-width: 640px) {
+.blog pre {max-width: 90vw; overflow-x: scroll;}} 
+.blog pre { font-size: 14px; }
+.blog li pre {max-width: 80vw; overflow-x: scroll; }
+.blog table {max-width: 90vw; overflow-x: scroll; }
+.blog tt {max-width: 90vw; overflow-x: scroll; }
+.blogtable {max-width: 90vw; overflow-x: scroll; }
+@media (max-width: 640px) {.pc {display: none;}}
+.moyet { display: none; }
+.blog h1 { font-size: 28px; }
+.blog b { font-size: 18px; }
+.blog strong { font-size: 18px; }
+.s { font-size: 18px; }
+.blogtitle { font-size: 24px; }
+h3 { font-size: 24px; margin-bottom: 0; }
+.blogpicx { text-align: left !important; }
+.blogpicx img { 
+border-radius: 8px; box-shadow: 0 0 4px #888; }
+a { color: #067610; }
+.blog a { color: #067610; }
+
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 375px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram10x8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+/* 4x8 diagram for showing opening patterns */
+.chessDiagram4 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    border-top: 1px dotted #333;
+}
+
+.chessDiagram4 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+@media (prefers-color-scheme: dark) { 
+body { background-color: #131516; color: #d8d4cf; }
+.blog { background-color: #131516; color: #d8d4cf; }
+a { color: #78dc78; }
+.blog a { color: #78dc78; }
+.chessDiagram8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram8 div { background-color: #aaa; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #888; } 
+.chessDiagram10x8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram10x8 div { background-color: #aaa; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #888; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #ddd; 
+                 border-top: 1px dotted #ddd; font-palette: --dark; }
+.chessDiagram4 div { background-color: #aaa; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+  background-color: #888; } 
+} /* End Dark mode theme */
+@media print {
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; border-top: 1px dotted #333; }
+.chessDiagram4 div { background-color: #fff; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+background-color: #ddd; } 
+} /* End print colors */
+</style>
+<script>
+maxWidth = screen.width;
+maxWidth *= .95;
+if(maxWidth < 480) {
+  boardSize = maxWidth - 5;
+  pieceWidth = (boardSize / 10) * (16/15);
+  capaPieceWidth = (boardSize / 12.5) * (16/15);
+  capaHeight = boardSize * .8;
+}
+</script>
+<script src="../chess/jquery-1.12.4.min.js"></script>
+<script>$.ajaxSetup({contents: {script: false}})</script>
+<script 
+ src="../chess/chessboard-0.3.0.min.js" type="text/javascript"></script>
+<script src="../chess/chess.js"></script>
+<link href="../chess/chessboard-0.3.0.min.css" rel="stylesheet"></link>
+<script src="../chess/chessgame.js"></script>
+<meta name=viewport 
+content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
+</head>
+
+<body>
+<a name="GitBlogTop"> </a>
+<div class=blog>
+<a href="../index.html#GitBlogIndex">Blog Index</a></i>
+</div><div class=blog>
+<h1>Sam Trenholme’s blog</h1>
+
+<!-- `ENTRY: 2025-11-30 2025 ` -->
+<a name="BlogEntry-2025-11-30"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="../pics/Marina-2012-11-16.jpg" width=224 height=126>
+</div>
+<h1>Happy birthday, Marina</h1>
+<h2>November 30, 2025</h2>
+I wish my departed wife a happy birthday, and talk about the 80/<![if gt IE 6]>&#8203;<![endif]><wbr>20
+ myth and whether it applies to young people.
+<a name="2025-11-30-in-memory-of-marina-rojas-nuez"> </a>
+<h3>In memory of Marina Rojas
+ Nuñez</h3>
+<img class=widepic src="../pics/Marina-2011-05-28.jpg" alt="">
+<br class=nomobile>
+<em>Marina Rojas 
+ Nuñez, 1974-2024. Today would had been her birthday.</em>
+<p>My departed (and probably first) wife, who passed away on September
+ 12, 2014, would had celebrated her birthday today. She was a very
+ beautiful women, and I’m glad we got to spend the happiest six years of
+ her life together.
+<p>Her daughter—<em>our</em> daughter—is doing really well and I’m glad
+ to have her in my life today. I <em>am</em> dating again and moving on,
+ but I will always honor Marina’s memory.
+<p>Famous people who share a birthday today with Marina include Mark
+ Twain (Samuel Clemens) and Winston Churchill.
+<p><em>I wrote extensively about Marina in <a href="../index.html#BlogEntry-2017-09-12">a previous blog</a>.</em>
+<a name="2025-11-30-8020-and-18-29-year-olds"> </a>
+<h3>80/<![if gt IE 6]>&#8203;<![endif]><wbr>20 and 18-29 year olds</h3>
+<img class=widepic src="../pics/80-20-18-29-NSFG2022.png" alt="">
+<br class=nomobile>
+<em>NSFG 2022 
+ data including data for just youth aged 18-29. The black line
+ highlights the percentage of male and female partners the “top” 20%
+ have.</em>
+<p><em>This continues my <a href="80-20-myth.html">discussion of the 80/<![if gt IE 6]>&#8203;<![endif]><wbr>20 myth</a>.</em>
+<p>The 80/<![if gt IE 6]>&#8203;<![endif]><wbr>20 myth is a myth that 80% of the women sleep with only 20% of
+ the men. I have shown it to be a myth; this is in response to a
+ question whether it is true for <em>only</em> younger people.
+<p>I have run the stats on just 18-29 year olds and the numbers are not
+ that different than they are for all ages.
+<p>If anything, the trend of there being more virgins of both genders as
+ well as the most promiscuous people being even more promiscuous
+ continues: While the “top” 20% of men have more partners compared to
+ all ages, the “top” 20% of women also have more partners.
+<p>In more detail:
+<ul>
+<li>
+<p>20.66% of men (18-29) have 75.7% of lifetime female sex partners
+</li>
+<li>
+<p>19.96% of women (18-29) have 68.0% of lifetime male sex partners
+</li>
+<li>
+<p>Virginity rates for 18-29 year olds: 30% men, 25% women
+</li>
+<li>
+<p>19.45% of men (all ages) have 71.5% of lifetime female sex partners
+</li>
+<li>
+<p>19.49% of women (all ages) have 64.8% of lifetime male sex partners
+</li>
+<li>
+<p>Virginity rates for all ages: 22% men, 18% women
+</li>
+</ul>
+<p>Note that:
+<ul>
+<li>
+<p>The most promiscuous people have even more sex partners, for both men
+ and women
+</li>
+<li>
+<p>In particular, the difference between all ages and 18-29 is that the
+ “top” 20% have 3-4% more of the lifetime partner count, again for both
+ men and women
+</li>
+<li>
+<p>Virginity rates are about 8% higher with younger people, once again
+ for both men and women
+</li>
+</ul>
+<p><em>I discuss in depth the 80/<![if gt IE 6]>&#8203;<![endif]><wbr>20 myth on <a href="80-20-myth.html">a page dedicated to this topic</a>.</em>
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="../index.html#GitBlogTop">All entries</a>
+<a href="../index.html#GitBlogIndex">Index</a></i></div>
+<!-- `FOOTER` -->
+</body></html>

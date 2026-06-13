@@ -1,0 +1,300 @@
+<html><head><title>" .. date .. "</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+@import url("../fonts.css");
+@font-face { font-family: "GeorgiaF"; src: local(Georgia);
+size-adjust: 118%; }
+@font-palette-values --dark {
+ font-family: "ChessCancunColor";
+ override-colors: 0 rgb(0 0 0), 1 rgb(205 192 180); }
+.widepic { box-shadow: 0 0 4px #888;
+border-radius: 8px; width: 99%; height: auto; }
+@media screen and (max-width: 640px) { 
+.nomobile { display: none; } }
+body { max-width: 95vw; overflow-x: hidden; } 
+a { color: #067610; } 
+.GitBlogNav { display: table; width: 95vw; 
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+text-align: center;
+border-top: 2px solid #aaa;
+margin: 5px; padding: 2px;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 2px solid #aaa; }
+@media (min-width: 640px) {.GitBlogNav {width:640px;}}
+@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}
+@media (max-width: 640px) {.blog {overflow-x:scroll;}}
+body { color: #333; background-color: #fff; }
+.blog { display: table; max-width: 640px;
+color: #333; background-color: #fff;
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+margin-left: auto;
+margin-right: auto; }
+@media (max-width: 640px) {
+.blog pre {max-width: 90vw; overflow-x: scroll;}} 
+.blog pre { font-size: 14px; }
+.blog li pre {max-width: 80vw; overflow-x: scroll; }
+.blog table {max-width: 90vw; overflow-x: scroll; }
+.blog tt {max-width: 90vw; overflow-x: scroll; }
+.blogtable {max-width: 90vw; overflow-x: scroll; }
+@media (max-width: 640px) {.pc {display: none;}}
+.moyet { display: none; }
+.blog h1 { font-size: 28px; }
+.blog b { font-size: 18px; }
+.blog strong { font-size: 18px; }
+.s { font-size: 18px; }
+.blogtitle { font-size: 24px; }
+h3 { font-size: 24px; margin-bottom: 0; }
+.blogpicx { text-align: left !important; }
+.blogpicx img { 
+border-radius: 8px; box-shadow: 0 0 4px #888; }
+a { color: #067610; }
+.blog a { color: #067610; }
+
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 375px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram10x8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+/* 4x8 diagram for showing opening patterns */
+.chessDiagram4 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    border-top: 1px dotted #333;
+}
+
+.chessDiagram4 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+@media (prefers-color-scheme: dark) { 
+body { background-color: #131516; color: #d8d4cf; }
+.blog { background-color: #131516; color: #d8d4cf; }
+a { color: #78dc78; }
+.blog a { color: #78dc78; }
+.chessDiagram8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram8 div { background-color: #aaa; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #888; } 
+.chessDiagram10x8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram10x8 div { background-color: #aaa; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #888; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #ddd; 
+                 border-top: 1px dotted #ddd; font-palette: --dark; }
+.chessDiagram4 div { background-color: #aaa; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+  background-color: #888; } 
+} /* End Dark mode theme */
+@media print {
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; border-top: 1px dotted #333; }
+.chessDiagram4 div { background-color: #fff; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+background-color: #ddd; } 
+} /* End print colors */
+</style>
+<script>
+maxWidth = screen.width;
+maxWidth *= .95;
+if(maxWidth < 480) {
+  boardSize = maxWidth - 5;
+  pieceWidth = (boardSize / 10) * (16/15);
+  capaPieceWidth = (boardSize / 12.5) * (16/15);
+  capaHeight = boardSize * .8;
+}
+</script>
+<script src="../chess/jquery-1.12.4.min.js"></script>
+<script>$.ajaxSetup({contents: {script: false}})</script>
+<script 
+ src="../chess/chessboard-0.3.0.min.js" type="text/javascript"></script>
+<script src="../chess/chess.js"></script>
+<link href="../chess/chessboard-0.3.0.min.css" rel="stylesheet"></link>
+<script src="../chess/chessgame.js"></script>
+<meta name=viewport 
+content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
+</head>
+
+<body>
+<a name="GitBlogTop"> </a>
+<div class=blog>
+<a href="../index.html#GitBlogIndex">Blog Index</a></i>
+</div><div class=blog>
+<h1>Sam Trenholme’s blog</h1>
+
+<!-- `ENTRY: 2025-12-03 2025 ` -->
+<a name="BlogEntry-2025-12-03"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="../pics/TN7th.jpg" width=224 height=126>
+</div>
+<h1>Last night’s special election</a> 
+</h1>
+<h2>December 3, 2025</h2>
+In the last big election of the year, Tennessee voted who would
+ represent their 7<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> congressional district. This is a very key
+ election.
+<a name="2025-12-03-the-election"> </a>
+<h3>The election</h3>
+<p>Last night, we had an election for who would represent Tennessee’s
+ 7<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> congressional district at the federal level. This election was for
+ a seat in the House of Representatives.
+<p>It was a <a href="https://archive.ph/20251202154945/https://www.washingtonpost.com/politics/2025/12/02/tennessee-special-election-behn-van-epps-trump/">very closely watched  election</a> 
+because it is a bellwether of just
+ how satisfied voters are with the right-wing politicians currently in
+ power.
+<p>While <a href="https://en.wikipedia.org/wiki/2025_Virginia_Attorney_General_election">Virginia</a> 
+and <a href="https://en.wikipedia.org/wiki/2025_New_York_City_mayoral_election">New  York</a> 
+were very successful for Democrats (the left-wing), with
+ someone who has <a href="https://archive.today/20250614180707/https://x.com/ZohranKMamdani/status/1277414510131916801">voiced support for defunding the  police</a> 
+(yes, <a href="https://archive.today/20251015221357/https://www.politico.com/news/2025/10/15/mamdani-apology-nypd-00610378">he apologized for this later</a>) 
+winning the New York mayoral race.
+<p>While these were notable victories for Democrats in 2025, both
+ happened in very blue states: <a href="https://en.wikipedia.org/wiki/2004_United_States_presidential_election">Virginia last voted a Republican for president  in 2004</a> 
+and <a href="https://en.wikipedia.org/wiki/1984_United_States_presidential_election">we have to go all the way back to 1984 to find New York voting for a  Republican</a>. 
+One could make the argument that these victories mainly show
+ greater polarization in today’s social-media driven political climate,
+ with blue voters voting more blue. Perhaps red voters will vote more
+ red come the midterms next year.
+<p>Or maybe not.
+<p>Tennessee’s 7<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> congressional district is <a href="https://en.wikipedia.org/wiki/Tennessee%27s_7th_congressional_district">very  red</a>; 
+the last two congressional elections have been 60-38%
+ blowouts, with the blue (Democrat) candidate losing by 22 points. So,
+ if the polarization theory is true, we would expect the blue candidate
+ to lose by even more points, perhaps having a 65-33% blowout.
+<p>That’s not what happened.
+<p>While <a href="https://archive.ph/20251203125007/https://www.pbs.org/newshour/politics/live-results-tennessee-7th-congressional-district-special-election#selection-2313.0-2313.13">Matt Van Epps did  win</a>, 
+it was not a blowout. It was a 54-45%
+ victory, with him leading only by 9 points in a district where
+ Republicans have previously won by over 20 points. At one point, there
+ was even a <a href="https://archive.ph/20251203014449/https://www.pbs.org/newshour/politics/live-results-tennessee-7th-congressional-district-special-election">blue mirage</a>, 
+where the blue candidate was actually leading Van Epps
+ by over five points.
+<p>The Democrat’s (i.e. blue) candidate, one <a href="https://en.wikipedia.org/wiki/Aftyn_Behn">Behn</a>, 
+is no blue dog moderate. She has <a href="https://archive.today/20251203155324/https://www.wsmv.com/2025/05/14/tn-rep-andy-ogles-calls-investigation-into-nashville-leadership-obstructing-ice-operations/">chased ICE agents, filming confrontations with them</a>.
+<p>Indeed, one very left-leaning site says that <a href="https://archive.ph/20251203033450/https://www.dailykos.com/stories/2025/12/2/2356597/-Given-the-Tennessee-special-election-result-the-GOP-is-so-f-d-in-2026">this looks really bad for Republicans</a>, 
+and with good reason: A
+ nationwide 15-point move leftward would be a bloodbath for Republicans
+ in the midterms next year.
+<p>Based on the elections we have had this year, it looks like a blue
+ tide is rising after Trump’s victory in 2024.
+<p><em>The picture of Tennessee’s district is</em> <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC  BY-SA 4.0</a> 
+<em>licensed, and has been altered. Attribution: <a href="https://commons.wikimedia.org/wiki/User:Twotwofourtysix">An anonymous person with the  handle “Twotwofourtysix”</a>.</em>
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="../index.html#GitBlogTop">All entries</a>
+<a href="../index.html#GitBlogIndex">Index</a></i></div>
+<!-- `FOOTER` -->
+</body></html>

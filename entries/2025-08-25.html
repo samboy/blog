@@ -1,0 +1,415 @@
+<html><head><title>" .. date .. "</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+@import url("../fonts.css");
+@font-face { font-family: "GeorgiaF"; src: local(Georgia);
+size-adjust: 118%; }
+@font-palette-values --dark {
+ font-family: "ChessCancunColor";
+ override-colors: 0 rgb(0 0 0), 1 rgb(205 192 180); }
+.widepic { box-shadow: 0 0 4px #888;
+border-radius: 8px; width: 99%; height: auto; }
+@media screen and (max-width: 640px) { 
+.nomobile { display: none; } }
+body { max-width: 95vw; overflow-x: hidden; } 
+a { color: #067610; } 
+.GitBlogNav { display: table; width: 95vw; 
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+text-align: center;
+border-top: 2px solid #aaa;
+margin: 5px; padding: 2px;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 2px solid #aaa; }
+@media (min-width: 640px) {.GitBlogNav {width:640px;}}
+@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}
+@media (max-width: 640px) {.blog {overflow-x:scroll;}}
+body { color: #333; background-color: #fff; }
+.blog { display: table; max-width: 640px;
+color: #333; background-color: #fff;
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+margin-left: auto;
+margin-right: auto; }
+@media (max-width: 640px) {
+.blog pre {max-width: 90vw; overflow-x: scroll;}} 
+.blog pre { font-size: 14px; }
+.blog li pre {max-width: 80vw; overflow-x: scroll; }
+.blog table {max-width: 90vw; overflow-x: scroll; }
+.blog tt {max-width: 90vw; overflow-x: scroll; }
+.blogtable {max-width: 90vw; overflow-x: scroll; }
+@media (max-width: 640px) {.pc {display: none;}}
+.moyet { display: none; }
+.blog h1 { font-size: 28px; }
+.blog b { font-size: 18px; }
+.blog strong { font-size: 18px; }
+.s { font-size: 18px; }
+.blogtitle { font-size: 24px; }
+h3 { font-size: 24px; margin-bottom: 0; }
+.blogpicx { text-align: left !important; }
+.blogpicx img { 
+border-radius: 8px; box-shadow: 0 0 4px #888; }
+a { color: #067610; }
+.blog a { color: #067610; }
+
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 375px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram10x8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+/* 4x8 diagram for showing opening patterns */
+.chessDiagram4 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    border-top: 1px dotted #333;
+}
+
+.chessDiagram4 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+@media (prefers-color-scheme: dark) { 
+body { background-color: #131516; color: #d8d4cf; }
+.blog { background-color: #131516; color: #d8d4cf; }
+a { color: #78dc78; }
+.blog a { color: #78dc78; }
+.chessDiagram8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram8 div { background-color: #aaa; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #888; } 
+.chessDiagram10x8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram10x8 div { background-color: #aaa; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #888; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #ddd; 
+                 border-top: 1px dotted #ddd; font-palette: --dark; }
+.chessDiagram4 div { background-color: #aaa; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+  background-color: #888; } 
+} /* End Dark mode theme */
+@media print {
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; border-top: 1px dotted #333; }
+.chessDiagram4 div { background-color: #fff; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+background-color: #ddd; } 
+} /* End print colors */
+</style>
+<script>
+maxWidth = screen.width;
+maxWidth *= .95;
+if(maxWidth < 480) {
+  boardSize = maxWidth - 5;
+  pieceWidth = (boardSize / 10) * (16/15);
+  capaPieceWidth = (boardSize / 12.5) * (16/15);
+  capaHeight = boardSize * .8;
+}
+</script>
+<script src="../chess/jquery-1.12.4.min.js"></script>
+<script>$.ajaxSetup({contents: {script: false}})</script>
+<script 
+ src="../chess/chessboard-0.3.0.min.js" type="text/javascript"></script>
+<script src="../chess/chess.js"></script>
+<link href="../chess/chessboard-0.3.0.min.css" rel="stylesheet"></link>
+<script src="../chess/chessgame.js"></script>
+<meta name=viewport 
+content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
+</head>
+
+<body>
+<a name="GitBlogTop"> </a>
+<div class=blog>
+<a href="../index.html#GitBlogIndex">Blog Index</a></i>
+</div><div class=blog>
+<h1>Sam Trenholme’s blog</h1>
+
+<!-- `ENTRY: 2025-08-25 2025 ` -->
+<a name="BlogEntry-2025-08-25"> </a>
+<div class=blogpicx style="text-align: right">
+<img src=../pics/marshall_rip.jpg width=224 height=126>
+</div>
+
+<h1>Remembering Marshall</h1>
+<h2>August 25, 2025</h2>
+Marshall was a friend and father figure to me at a very key coming of
+age time in my life. I remember my time with him.
+
+<p>
+
+<A name=Being_with_Marshall></A><A name=BeingwithMarshall></A><span class=moyet>==</span><span class=blogtitle><b>Being with Marshall</b></span><span class=moyet>==</span>
+
+<p>
+
+When I first met Marshall, I immediately liked the guy; he was friendly and took an interest in me. I was 20 and he was about 40, and had an interest in fast cars and young women. None of this I paid attention to at the time; I just liked the fact he was very friendly to me.
+
+<p>
+
+Marshall had a small business that looked very successful. I remember us driving around in his Porsche, with him telling me, in an excited voice, that we were going to be millionaires. I was taken in by the dream. I felt, like he did, that great financial success was just around the corner. So I started working for him. There was one small issue: His company was temporarily having some minor financial problems, and he couldn’t pay me for the moment. But I knew that was going to change.
+
+<p>
+
+The computer I really wanted was this tiny sub-sub-laptop, in an era when tiny computers like that cost a lot of money.
+
+<p>
+
+I knew I was going to get one as soon as Marshall’s company started taking off and the money started coming in. His business consisted of writing a Beauty Salon scheduling program. I started improving the program so we could have the successful business Marshall kept talking about. 
+
+<p>
+
+<A name=My_days_working_for_Marshall></A><A name=MydaysworkingforMarshall></A><span class=moyet>==</span><span class=blogtitle><b>My days “working” for Marshall</b></span><span class=moyet>==</span>
+<br>
+<img class=widepic src="../pics/marshall_sam_employee.jpg" alt="">
+<br class=nomobile>
+<i>I had a cat named Misty at the time</i>
+<p>
+
+<p>
+
+Every morning, I would wake up, shower, and get dressed. Marshall would soon arrive in his Porsche at my house and honk the horn, which told me to get out of the house and go in to his car to go to his office. After working for Marshall all day, I would socialize with him and his friends. This was my entire social life.
+
+<p>
+
+Marshall’s program was slow work; the program was nowhere near ready to ship and had a lot of bugs. Despite this, Marshall was trying to sell the application. He had one salon that he gave a computer with this application to; the owner of the salon didn’t need to pay Marshall for the computer, but instead gave Marshall some money every month.
+
+<p>
+
+We were regularly getting phone calls from him about how the program wasn’t working; he was getting more and more upset every time he had to call us. We kept putting band-aid fixes on it, but it wasn’t enough.
+
+<p>
+
+We were getting a lot of other calls. Indeed, Marshall made me the person answering all of the calls, and with good reason. Bill collectors were constantly calling us. Bill collectors for everything: Software not paid for; stuff bought with postdated and bouncing checks; computers he bought and never fully paid off; and so on.
+
+<p>
+
+<A name=Marshalls_shattered_dream></A><A name=Marshallsshattereddream></A><span class=moyet>==</span><span class=blogtitle><b>Marshall’s shattered dream</b></span><span class=moyet>==</span>
+
+<p>
+
+One phone call in particular disturbed Marshall greatly. It was some loan company; Marshall took the call and was clearly upset. He demanded to talk to the person in charge; he told him he had the money; he mentioned something about a car. After the phone call, I could see a pained look on his face; he just said nothing and I said nothing too. There was nothing to say.
+
+<p>
+
+That evening, as he was driving home, I asked him what the phone call was about. He assured me: “Oh, just some spiritually sick people who have a lot of insecurities. Nothing to worry about.” I almost completely believed him.
+
+<p>
+
+The next day, someone came to repossess Marshall’s car. It would seem that Marshall hadn’t made a single car payment after getting the car three months before. He called up the financial company again, talking to their boss, assuring them he could afford the car; telling them that, if they would only give him a little more time, he would be making the payments. The car was in the garage and the man who came for the car was smoking heavily and called the police. He was waiting to get the garage door opened and take the car.
+
+<p>
+
+Finally, after about 30 minutes of Marshall talking to the financial loan company, the repossession man came in to the office where Marshall was, got on the phone, and said “OK, have you had enough of this guy’s bullshit? I’m taking the car.” As Marshall finally gave the car to them, I could see he was in a lot of pain, though he had too much pride to openly weep—not a very productive day for work.
+
+<p>
+
+When Marshall’s girlfriend came home from work that evening, we went to see a movie at the theater together that night.
+
+<p>
+
+The repossession of the car was what woke me up to seeing the downward spiral Marshall was actually in. After that, things were not the same. I still held on to the hope things would change, but they didn’t. Things got worse and worse; Marshall was now losing his house and every possible avenue for the company getting money was closing. Marshall was getting more and more desperate. He became verbally abusive, yelling at me for no reason. I became the sounding box for the frustrations he was having with his company falling apart. 
+
+<p>
+
+<A name=Relaxing_days></A><A name=Relaxingdays></A><span class=moyet>==</span><span class=blogtitle><b>Relaxing days</b></span><span class=moyet>==</span>
+<br>
+<img class=widepic src="../pics/marshall_red_vwbug.jpg" alt="">
+<br class=nomobile>
+<i>The neighborhood where I worked for Marshall</i>
+<p>
+
+<p>
+
+When I took work breaks, I would take this walk in the neighborhood Marshall lived in; the weather was beautiful sunny California weather. One day I brought my camera with me to work; one of the pictures I took was of that walk I took every day; it’s a picture looking out on a street in the neighborhood, with a red Volkswagen bug parked on the street. It was a beautiful day with hardly a cloud in the sky; I still have that picture today to bring back memories of that time in my life. 
+
+<p>
+
+Desperate for money, one day Marshall got out his phone book and started calling up some local salons. All of them gave Marshall the same reply: They were not interested. His tone got more desperate and shill with each salon he called up; after the fourth one, he just gave up entirely and had a dejected look of despair on his face. 
+
+<p>
+
+After getting all these rejections, Marshall then left the room and came back an hour or two later; I could see from his face that he had been crying. He still had his pride, so he didn’t cry in front of me. He never let go of his pride.
+
+<p>
+
+The writing was on the wall: There was no money stream for Marshall’s company.
+
+<p>
+
+<A name=Ending_things_with_Marshall></A><A name=EndingthingswithMarshall></A><span class=moyet>==</span><span class=blogtitle><b>Ending things with Marshall</b></span><span class=moyet>==</span>
+
+<p>
+
+Marshall was, when he could, using his girlfriend’s car to take me to work; sometimes he couldn’t and I would have to ride a bicycle to work. Things were not changing. One evening, as I was riding home, my bicycle broke down and I had to walk it home. It was then I decided I had enough of working and not getting paid. That was my last day working for Marshall. I was through.
+
+<p>
+
+I ended up going back to school and eventually got high paying jobs as a programmer in the computer industry.
+
+<p>
+
+I had mostly cut off all contact with Marshall. I would see him sometimes, and we even had the occasional conversation, but it was never the same. He was no longer a father figure to me, and no longer the center of my life.
+
+<p>
+
+Marshall eventually married, and later on divorced, his girlfriend. I talked to Marshall one last time many years later; we said a final “I love you” to each other. Marshall died a little over a decade after our final conversation.
+
+<p>
+
+<A name=A_time_of_spiritual_growth></A><A name=Atimeofspiritualgrowth></A><span class=moyet>==</span><span class=blogtitle><b>A time of spiritual growth</b></span><span class=moyet>==</span>
+
+<p>
+
+The time I was with Marshall was a very key part of my spiritual growth.
+We would have long discussions, sometimes arguments, about God. When I
+started “working” for Marshall; I was an atheist. Just after I broke
+contact with him, I had a conversion experience and became a Christian;
+that experience was how I went from being a child to being an adult.
+This experience would not had been possible had Marshall not been a part
+of my life.
+
+<p>
+
+It is a time of my life I remember very fondly.
+
+<p>
+
+<A name=New_blog_mirror></A><A name=Newblogmirror></A><span class=moyet>==</span><span class=blogtitle><b>New blog mirror</b></span><span class=moyet>==</span>
+
+<p>
+
+I have a new mirror of this blog here:
+
+<p>
+
+<blockquote>
+<A href="https://samboy.github.io/blog/">https://samboy.github.io/blog/</A>
+</blockquote>
+
+
+<p>
+
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>
+<div class=GitBlogNav><i>Go to: 
+<a href="../index.html#GitBlogTop">All entries</a>
+<a href="../index.html#GitBlogIndex">Index</a></i></div>
+<!-- `FOOTER` -->
+</body></html>

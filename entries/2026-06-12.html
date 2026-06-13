@@ -1,0 +1,363 @@
+<html><head><title>" .. date .. "</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+@import url("../fonts.css");
+@font-face { font-family: "GeorgiaF"; src: local(Georgia);
+size-adjust: 118%; }
+@font-palette-values --dark {
+ font-family: "ChessCancunColor";
+ override-colors: 0 rgb(0 0 0), 1 rgb(205 192 180); }
+.widepic { box-shadow: 0 0 4px #888;
+border-radius: 8px; width: 99%; height: auto; }
+@media screen and (max-width: 640px) { 
+.nomobile { display: none; } }
+body { max-width: 95vw; overflow-x: hidden; } 
+a { color: #067610; } 
+.GitBlogNav { display: table; width: 95vw; 
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+text-align: center;
+border-top: 2px solid #aaa;
+margin: 5px; padding: 2px;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 2px solid #aaa; }
+@media (min-width: 640px) {.GitBlogNav {width:640px;}}
+@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}
+@media (max-width: 640px) {.blog {overflow-x:scroll;}}
+body { color: #333; background-color: #fff; }
+.blog { display: table; max-width: 640px;
+color: #333; background-color: #fff;
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+margin-left: auto;
+margin-right: auto; }
+@media (max-width: 640px) {
+.blog pre {max-width: 90vw; overflow-x: scroll;}} 
+.blog pre { font-size: 14px; }
+.blog li pre {max-width: 80vw; overflow-x: scroll; }
+.blog table {max-width: 90vw; overflow-x: scroll; }
+.blog tt {max-width: 90vw; overflow-x: scroll; }
+.blogtable {max-width: 90vw; overflow-x: scroll; }
+@media (max-width: 640px) {.pc {display: none;}}
+.moyet { display: none; }
+.blog h1 { font-size: 28px; }
+.blog b { font-size: 18px; }
+.blog strong { font-size: 18px; }
+.s { font-size: 18px; }
+.blogtitle { font-size: 24px; }
+h3 { font-size: 24px; margin-bottom: 0; }
+.blogpicx { text-align: left !important; }
+.blogpicx img { 
+border-radius: 8px; box-shadow: 0 0 4px #888; }
+a { color: #067610; }
+.blog a { color: #067610; }
+
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 375px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram10x8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+/* 4x8 diagram for showing opening patterns */
+.chessDiagram4 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    border-top: 1px dotted #333;
+}
+
+.chessDiagram4 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+@media (prefers-color-scheme: dark) { 
+body { background-color: #131516; color: #d8d4cf; }
+.blog { background-color: #131516; color: #d8d4cf; }
+a { color: #78dc78; }
+.blog a { color: #78dc78; }
+.chessDiagram8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram8 div { background-color: #aaa; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #888; } 
+.chessDiagram10x8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram10x8 div { background-color: #aaa; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #888; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #ddd; 
+                 border-top: 1px dotted #ddd; font-palette: --dark; }
+.chessDiagram4 div { background-color: #aaa; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+  background-color: #888; } 
+} /* End Dark mode theme */
+@media print {
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; border-top: 1px dotted #333; }
+.chessDiagram4 div { background-color: #fff; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+background-color: #ddd; } 
+} /* End print colors */
+</style>
+<script>
+maxWidth = screen.width;
+maxWidth *= .95;
+if(maxWidth < 480) {
+  boardSize = maxWidth - 5;
+  pieceWidth = (boardSize / 10) * (16/15);
+  capaPieceWidth = (boardSize / 12.5) * (16/15);
+  capaHeight = boardSize * .8;
+}
+</script>
+<script src="../chess/jquery-1.12.4.min.js"></script>
+<script>$.ajaxSetup({contents: {script: false}})</script>
+<script 
+ src="../chess/chessboard-0.3.0.min.js" type="text/javascript"></script>
+<script src="../chess/chess.js"></script>
+<link href="../chess/chessboard-0.3.0.min.css" rel="stylesheet"></link>
+<script src="../chess/chessgame.js"></script>
+<meta name=viewport 
+content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
+</head>
+
+<body>
+<a name="GitBlogTop"> </a>
+<div class=blog>
+<a href="../index.html#GitBlogIndex">Blog Index</a></i>
+</div><div class=blog>
+<h1>Sam Trenholme’s blog</h1>
+
+<!-- `ENTRY: 2026-06-12 2026 ` -->
+<a name="BlogEntry-2026-06-12"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="../pics/MaraDNS.jpg" width=224 height=126>
+</div>
+<h1>MaraDNS in the age of AI</h1>
+<h2>June 12, 2016</h2>
+MaraDNS is remarkably secure, as shown by the number of issues AI
+ assisted code reviews have found.
+<a name="2026-06-12-overview-mostly-false-alarms"> </a>
+<h3>Overview: Mostly false alarms</a> 
+</h3>
+<p>I have received 12 AI assisted security advisories; of those
+ advisories, only one was serious enough to merit a patch being made.
+ Another one, which yes I patched against, was with code which hasn’t
+ been able to even <em>compile</em> since 2022.
+<p>The problem with AI-assisted reviews is that people are finding a
+ large number of issues which aren’t actual security issues.
+<p>With one issue, when I asked for an exploit or a patch, they ignored
+ me. It didn’t look like a real issue.
+<p>I got some eight different reports from another person including one
+ claimed “packet of death”. I <a href="https://github.com/samboy/MaraDNS/tree/master/deadwood-github/sqa/sqa_null_in_cname">spent a day investigating the “packet of death”  claim</a>, 
+and it was a
+ false alarm. The issues they found were things like “if Deadwood gets
+ this weird packet, it takes Deadwood a couple of seconds to release the
+ resource used by the recursive query being processed”. So, nothing
+ serious and nothing that merits a patch.
+<p>Another person sent a fairly large merge request, claiming buffer
+ overflows in a couple of utilities that do not even compile by default.
+ I looked at the issues and verified that I did proper bounds checking
+ except in one case there is a program—which I wrote about 20 years ago
+ and which hasn’t even been able to <em>compile</em> since 2022—with a
+ buffer overflow, but only if one’s <code>$HOME</code> (home directory)
+ is over 50 characters in length—a very unusual circumstance. I will
+ detail this fix below.
+<p><a href="https://github.com/harukioya">Haruki Oyama</a>, 
+on the other
+ hand, did find a legitimate security hole which merited a new MaraDNS
+ release with the DNS-over-TCP code in Deadwood.
+<a name="2026-06-12-issue-1-dns-over-tcp-denial-of-service"> </a>
+<h3>Issue #1:
+ DNS-over-TCP denial of service</h3>
+<p>If DNS-over-TCP was enabled (it is disabled by default), a Deadwood
+ client authorized to perform DNS queries could cause the DNS-over-TCP
+ service to not function with a denial of service attack.
+<p>This bug does not affect DNS-over-UDP operation.
+<p>If <code>tcp_listen</code> is <em>not</em> in your dwood3rc file,
+ this bug <em>does not affect you</em>. If tcp_listen <em>is</em> in
+ your dwood3rc file but has the value <code>0</code>, this bug <em>still</em>
+ does not affect you. Only people who have set <code>tcp_listen</code>
+ to have a value of 1 are affected.
+<p>Note that no example <code>dwood3rc</code> file has <code>tcp_listen</code>
+ set to <code>1</code>.
+<p>Only clients authorized to perform DNS queries can exploit this bug.
+<a name="2026-06-12-issue-2-mqhash-buffer-overflow"> </a>
+<h3>Issue #2: mqhash buffer
+ overflow</h3>
+<p><code>mqhash</code> is a program I wrote in 2005 or 2006, and which I
+ stopped using once I moved from using AES for cryptographically strong
+ random numbers over to RadioGatún[32]. Indeed, the program stopped
+ being able to <em>compile</em> in 2022.
+<p>However, since it uses <code>strcat()</code>, a static code analysis
+ revealed that this unused code had a very hard to exploit buffer
+ overflow:
+<ul>
+<li>
+<p><code>mqhash</code> is not compiled by default when compiling
+ MaraDNS, Deadwood, and coLunacyDNS. One would have to go to the
+ directory <code>mqhash</code> is in to compile it.
+</li>
+<li>
+<p><code>mqhash</code> had to be patched before the program would even
+ compile; I didn’t even realize it stopped compiling until this issue
+ was brought up.
+</li>
+<li>
+<p>Once <code>mqhash</code> was patched, one would need to have <code>
+$HOME</code> (one’s home directory) be over 50 characters in length. <code>
+$HOME</code> is normally 6 + <em>size of username</em> characters in
+ length (<code>/<![if gt IE 6]>&#8203;<![endif]><wbr>home/<![if gt IE 6]>&#8203;<![endif]><wbr>$USERNAME</code>), and usernames are generally 8
+ characters or shorter, so in the real world, <code>$HOME</code> should
+ be 14 characters or less, but needs to be 50 characters or longer for
+ the exploit to work.
+</li>
+</ul>
+<p>To address this issue:
+<ul>
+<li>
+<p>I patched against the buffer overflow.
+</li>
+<li>
+<p>I updated <code>mqhash</code> so it would compile again
+</li>
+<li>
+<p>I updated the relevant <code>Makefile</code> so <code>mqhash</code>
+ won’t compile with the default <code>all</code> target.
+</li>
+</ul>
+<a name="2026-06-12-maradns-in-2026"> </a>
+<h3>MaraDNS in 2026</h3>
+<p>I have released <a href="https://samboy.github.io/MaraDNS/webpage/download.html">MaraDNS 3.5.0037</a> 
+with these issues patched.
+<p>People may observe I have moved MaraDNS from my <a href="https://samiam.org">personal domain</a> 
+to GitHub. While I have no plans to shut down my
+ personal domain at this time, having it on GitHub means that MaraDNS’s
+ webpage will stay online and not need to be accessed by using a web
+ archive when and if my personal domains ever go down.
+<p>Just as I have fixed Y2038 issues in 2022, as well as moving from
+ Perl to Lua 5.1 (which <em>is</em> included with MaraDNS as a security
+ hardened fork called “Lunacy”) for the scripts which make MaraDNS’s
+ documentation, I am now moving to a website which should stay online
+ for the foreseeable future.
+<p>In addition, it would seem I have lost my GPG signing key for
+ MaraDNS. For people who need a GPG signed copy of MaraDNS, download <a href="https://maradns.samiam.org/download/3.5/3.5.0036/">MaraDNS 3.5.0036</a> 
+and apply any <a href="https://samboy.github.io/MaraDNS/patches/">security  patches</a> 
+by hand.
+<p>MaraDNS can be downloaded from my <a href="https://samboy.github.io/MaraDNS/webpage/download.html">personal  domain</a> 
+as well as from <a href="https://sourceforge.net/projects/maradns/">Sourceforge</a>. 
+It’s also available on <a href="https://github.com/samboy/MaraDNS">multiple</a> 
+public <a href="https://codeberg.org/samboy/MaraDNS">Git repos</a>.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="../index.html#GitBlogTop">All entries</a>
+<a href="../index.html#GitBlogIndex">Index</a></i></div>
+<!-- `FOOTER` -->
+</body></html>
