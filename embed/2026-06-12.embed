@@ -14,8 +14,8 @@ MaraDNS is remarkably secure, as shown by the number of issues AI
  been able to even <em>compile</em> since 2022.
 <p>The problem with AI-assisted reviews is that people are finding a
  large number of issues which aren’t actual security issues.
-<p>With one issue, when I asked for exploit or a patch, they ignored me.
- It didn’t look like a real issue.
+<p>With one issue, when I asked for an exploit or a patch, they ignored
+ me. It didn’t look like a real issue.
 <p>I got some eight different reports from another person including one
  claimed “packet of death”. I <a href="https://github.com/samboy/MaraDNS/tree/master/deadwood-github/sqa/sqa_null_in_cname">spent a day investigating the “packet of death”  claim</a>, 
 and it was a
@@ -23,7 +23,7 @@ and it was a
  this weird packet, it takes Deadwood a couple of seconds to release the
  resource used by the recursive query being processed”. So, nothing
  serious and nothing that merits a patch.
-<p>Another person send a fairly large merge request, claiming buffer
+<p>Another person sent a fairly large merge request, claiming buffer
  overflows in a couple of utilities that do not even compile by default.
  I looked at the issues and verified that I did proper bounds checking
  except in one case there is a program—which I wrote about 20 years ago
@@ -54,9 +54,9 @@ on the other
 <h3>Issue #2: mqhash buffer
  overflow</h3>
 <p><code>mqhash</code> is a program I wrote in 2005 or 2006, and which I
- stopped using once I moved over from using AES for cryptographically
- strong random numbers over to RadioGatún[32]. Indeed, the program
- stopped being able to be <em>compiled</em> in 2022.
+ stopped using once I moved from using AES for cryptographically strong
+ random numbers over to RadioGatún[32]. Indeed, the program stopped
+ being able to <em>compile</em> in 2022.
 <p>However, since it uses <code>strcat()</code>, a static code analysis
  revealed that this unused code had a very hard to exploit buffer
  overflow:
@@ -73,7 +73,7 @@ on the other
 </li>
 <li>
 <p>Once <code>mqhash</code> was patched, one would need to have <code>
-$HOME</code> (one’s home directory) be over 50 chracters in length. <code>
+$HOME</code> (one’s home directory) be over 50 characters in length. <code>
 $HOME</code> is normally 6 + <em>size of username</em> characters in
  length (<code>/<![if gt IE 6]>&#8203;<![endif]><wbr>home/<![if gt IE 6]>&#8203;<![endif]><wbr>$USERNAME</code>), and usernames are generally 8
  characters or shorter, so in the real world, <code>$HOME</code> should
