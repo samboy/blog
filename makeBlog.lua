@@ -365,7 +365,13 @@ repeat
 doBreak = true
 doContinue = false
   for fileName in sPairs(fileList,function(a,b) return b<a end) do
+    -- Get the date for the blog from the filename
+    local date=fileName:gsub(".*(%d%d%d%d%-?%d%d%-?%d%d).*","%1")
+    local link = "BlogEntry-" .. date
+    local year = date:sub(1,4)
     local thisFileHandle = io.open("embed/" .. fileName,"rb")
+
+    print(date) -- Show progress
     if not thisFileHandle then
       doContinue = true break -- “continue”
     end
@@ -398,35 +404,43 @@ doContinue = false
     thisFileHandle:close()
     if not title then title="Blog entry" end
 
-    -- Get the date for the blog from the filename
-    local date=fileName:gsub(".*(%d%d%d%d%-?%d%d%-?%d%d).*","%1")
-    local link = "BlogEntry-" .. date
-    local year = date:sub(1,4)
-
     fo('<!-- `ENTRY: ' .. date .. ' ' .. year .. ' ` -->')
     fo('<a name="' .. link .. '"> </a>')
-    blogIndex = blogIndex .. '<a href="#' .. link .. '">' .. name ..
+    blogIndex = blogIndex .. '<a href="#' .. link .. '">' .. title ..
                 ' (' .. date .. ')</a></br>' .. "\n"
+
+    thisFileHandle = io.open("embed/" .. fileName,"rb")
+    if not thisFileHandle then
+      print("Fatal error: Second open of " .. fileName .. " failed")
+      os.exit(3)
+    end
+ 
+    for l in thisFileHandle:lines() do
+      -- Convert blog:entry links in to his correct form
+      if globalWebpageBlog then
+        l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"#]+)',
+                   '<a href="%1.html')
+      else
+        l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
+                   '<a href="#BlogEntry-%1')
+        -- We have to handle things like "blog:20120907#20120907-slashdot"
+        l = l:gsub('<a href="#BlogEntry-[0-9-]+(#[^"]+)','<a href="%1')
+      end
+      fo(l)
+    end
+    thisFileHandle:close()
+    -- fo('<hr class=pc>')
+    fo('<div class=GitBlogNav><i>Go to: ')
+    fo('<a href="#GitBlogTop">Top</a>')
+    fo('<a href="#GitBlogIndex">Index</a></i></div>')
+    -- fo('<hr class=pc>')
+    fo('<div class=blog>')
   end
   if doContinue then doBreak = false end
 until doBreak
 
---[=[
-for a in $( ls embed/*embed | sort -r ) ; do
-  cat $a | ./BlogLinks.lua >> $FILE.html
-  #echo '<hr class=pc>' >> $FILE.html
-  echo '<div class=GitBlogNav><i>Go to: ' >> $FILE.html
-  echo '<a href="#GitBlogTop">Top</a>' >> $FILE.html
-  echo '<a href="#GitBlogIndex">Index</a></i></div>' >> $FILE.html
-  #echo '<hr class=pc>' >> $FILE.html
-  echo \<div class=blog\> >> $FILE.html # An old bug I never correctly fixed
-  echo $a
-done
-echo '<!-- `FOOTER` -->' >> index.html
-echo '<a name="GitBlogIndex"> </a><h1>Blog index</h1>' >> index.html
-cat foo.html >> index.html
-echo \</div\> >> index.html
-rm -f foo.html
-echo \</body\>\</html\> >> index.html
-
-]=]
+fo('<!-- `FOOTER` -->')
+fo('<a name="GitBlogIndex"> </a><h1>Blog index</h1>')
+fo(blogIndex)
+fo('</div>')
+fo('</body></html>')

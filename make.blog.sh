@@ -1,5 +1,8 @@
 #!/bin/sh
 
+./makeBlog.lua
+exit 0
+
 # This script is public domain.
 U='<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'
 echo \<html\>\<head\>\<title\>Sam Trenholme’s Blog\</title\> > index.html
