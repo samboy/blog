@@ -484,6 +484,15 @@ fo(' - ')
 fo('<a href="../index.html#GitBlogIndex">Index</a></i></div>')
 -- fo('<hr class=pc>')
 
+fo([[<script>
+fontWidth = screen.width / 22;
+if(maxWidth < 480) {
+  elements = document.querySelectorAll('.GitBlogNav');
+  i = elements.length - 1;
+  elements[i].style.fontSize = fontWidth + 'px';
+}
+</script>]])
+
 fo('<!-- `FOOTER` -->')
 fo('</body></html>')
 print(outFile .. " written")
