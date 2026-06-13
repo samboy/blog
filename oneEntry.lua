@@ -342,7 +342,7 @@ end
 
 -- This script is public domain.
 U='<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'
-fo('<html><head><title>" .. date .. "</title>')
+fo('<html><head><title>' .. date .. '</title>')
 fo(U) 
 fo('<style>')
 
@@ -422,6 +422,20 @@ for l in thisFileHandle:lines() do
   -- Convert image links
   l = l:gsub('src="pics/','src="../pics/')
   l = l:gsub('src=pics/','src=../pics/')
+  -- Convert relative links
+  relativeLink = true
+  isIndex = false
+  if l:match('https?%:%/%/') then
+    relativeLink = false
+  end
+  if l:match('index%.html') then
+    isIndex = true
+  end
+  if relativeLink and not isIndex and l:match('href="') then
+    l = l:gsub('href="([^%#%/])','href="../%1')
+  elseif relativeLink and not isIndex and l:match('href=[^"]') then
+    l = l:gsub('href=([^%"%#%/])','href=../%1')
+  end
   fo(l)
 end
 thisFileHandle:close()
