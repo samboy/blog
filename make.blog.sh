@@ -1,6 +1,7 @@
 #!/bin/sh
 
 ./makeBlog.lua
+chmod 644 index.html
 exit 0
 
 # This script is public domain.
