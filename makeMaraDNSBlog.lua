@@ -389,8 +389,10 @@ doContinue = false
     for line in thisFileHandle:lines() do
       line = line:gsub("\r","")
       if inTitle then
-        local here = line:gsub("%<%/[^>]+%>","") -- Remove ugly closing tags
-        title = title .. here
+        if not line:match("%<[hH]") then
+          local here = line:gsub("%<%/?[^>]+%>","") -- Remove ugly closing tags
+          title = title .. here
+        end
         inTitle = false
       end 
       if line:match("%<[hH]1%>") then
