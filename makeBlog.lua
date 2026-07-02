@@ -424,6 +424,7 @@ doContinue = false
     thisFileHandle:close()
     if not title then title="Blog entry" end
 
+    -- First seven entries on index.html.  All entriesin archive.html
     if count <= 7 then
       fo('<!-- `ENTRY: ' .. date .. ' ' .. year .. ' ` -->')
       fo('<a name="' .. link .. '"> </a>')
@@ -432,6 +433,9 @@ doContinue = false
       archiveOnly('<a name="' .. link .. '"> </a>')
     end
 
+    -- Put a link to this blog entry in the index we have at the bottom of
+    -- the page
+    -- Entries in 2024 and later have single files too 
     if(tonumber(year) >= 2024) then
       blogIndex = blogIndex .. '<a href="entries/' .. date .. '.html">'
                   .. title .. ' (' .. date .. ')</a></br>' .. "\n"
@@ -444,6 +448,8 @@ doContinue = false
                   .. title .. ' (' .. date .. ')</a></br>' .. "\n"
     end
 
+    -- Open up the blog entry again to process it and put it in the
+    -- index (if first 7) and archive (all entries)
     thisFileHandle = io.open("embed/" .. fileName,"rb")
     if not thisFileHandle then
       print("Fatal error: Second open of " .. fileName .. " failed")
@@ -452,23 +458,25 @@ doContinue = false
  
     for l in thisFileHandle:lines() do
       l = l:gsub("\r","")
+
       -- Convert blog:entry links in to his correct form
-      if globalWebpageBlog then
-        l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"#]+)',
-                   '<a href="%1.html')
-      else
-        l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
-                   '<a href="#BlogEntry-%1')
-        -- We have to handle things like "blog:20120907#20120907-slashdot"
-        l = l:gsub('<a href="#BlogEntry-[0-9-]+(#[^"]+)','<a href="%1')
-      end
+      l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
+                 '<a href="#BlogEntry-%1')
+      -- We have to handle things like "blog:20120907#20120907-slashdot"
+      l = l:gsub('<a href="#BlogEntry-[0-9-]+(#[^"]+)',
+                 '<a href="archive.html%1')
+
+      -- First seven in index.html and archive.html; all in archive.html
       if count <= 7 then
         fo(l)
       else
         archiveOnly(l)
       end
+
     end
     thisFileHandle:close()
+
+    -- There’s a little navbar between blog entries
     if count <= 7 then
       -- fo('<hr class=pc>')
       fo('<div class=GitBlogNav><i>Go to: ')
@@ -487,6 +495,7 @@ doContinue = false
       archiveOnly('<div class=blog>')
     end
   end
+
   if doContinue then doBreak = false end
 until doBreak
 
