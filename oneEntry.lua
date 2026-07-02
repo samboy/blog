@@ -438,7 +438,7 @@ for l in thisFileHandle:lines() do
   l = l:gsub("\r","")
   -- Convert blog:entry links in to the correct form
   l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
-             '<a href="../archive.html#BlogEntry-%1')
+             '<a href="archive.html#BlogEntry-%1')
   -- We have to handle things like "blog:20120907#20120907-slashdot"
   l = l:gsub('<a href="archive.html#BlogEntry-[0-9-]+(#[^"]+)',
              '<a href="archive.html%1')
