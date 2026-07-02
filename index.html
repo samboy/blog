@@ -228,6 +228,84 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<!-- `ENTRY: 2026-07-02 2026 ` -->
+<a name="BlogEntry-2026-07-02"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/MaraDNS.jpg" width=224 height=126>
+</div>
+<h1>MaraDNS snapshot</h1>
+<h2>July 2, 2026</h2>
+I have made a <code>2026-07-02</code> tag of MaraDNS today. I will go
+ over the post 3.5.0037 changes.
+<a name="2026-07-02-maradns-3.5.0037"> </a>
+<h3>MaraDNS 3.5.0037</h3>
+<p>MaraDNS 3.5.0037 was a security only update; it fixed an issue with
+ DNS-over-TCP in Deadwood, where a trusted client authorized to perform
+ TCP DNS queries could disable DNS-over-TCP with a denial of service
+ attack. Note that DNS-over-TCP enabled is a configuration Deadwood does
+ not enable by default, and no example <code>dwood3rc</code> files
+ supplied with MaraDNS have DNS-over-TCP enabled.
+<p>This was the first update since MaraDNS 3.5.0036, a 2023 security
+ bugfix, where a remote “packet of death” could disable the MaraDNS
+ authoritative server.
+<a name="2026-07-02-post-3.5.0037"> </a>
+<h3>Post 3.5.0037</h3>
+<p>The changes I have made post 3.5.0037 are changes I am making, not
+ because MaraDNS’s code was broken, but because GCC (and to a lesser
+ extent, LLVM) decided to “update” their compilers to throw errors with
+ C code which could previously compile.
+<p>Most of the fixes are minor fixes, such as some minor changes to how
+ signal handlers are written. Yes, it only took me an afternoon to
+ update the code, but these are updates I would not have had to make if
+ GCC no longer updated their code. A C compiler should not be a moving
+ target.
+<p>Indeed, Joerg Schilling who is no longer with us made a lot of
+ updates to the code which generates ISO images to burn in CD players. I
+ maintain a fork of that code which mainly fixes gross bugs; and I had
+ to do <a href="https://github.com/samboy/img9660/commit/9c09aa58ac811119f832d3662c29200080e5fc7d">a whole bunch of  hacking</a> 
+to get the code to compile again in 2026,
+ again because of GCC’s changes to the compiler.
+<p>What I have done is comb through the code and removed all warnings in
+ clang 20 and clang 21, and made sure all of the code can compile in GCC
+ 15 and GCC 16—and without warnings in GCC 16 (at least in Cygwin) to
+ boot. So, right now in 2026, MaraDNS compiles just fine in GCC, and
+ compiles with no warnings, even when <code>-Wall</code> is set, in
+ clang 20.
+<a name="2026-07-02-compiling-to-the-c99-standard"> </a>
+<h3>Compiling to the C99 standard</a> 
+</h3>
+<p>In addition, to minimize changes to compilers breaking code which
+ compiles without warning here in 2026, I have gone to the effort to
+ compile all of the code with <code>-std=c99</code> to make sure the
+ compiler conforms to the 1999 C standard (i.e. the version of C which
+ existed when I started writing MaraDNS back in 2001).
+<p>Since some files use system calls which are not part of the C99
+ standard, the current workaround is to, for those files, compile it
+ with the incantation <code>-std=c99 -D_POSIX_C_SOURCE -D_DEFAULT_SOURCE</code>
+. Today, I have gone through the MaraDNS and Deadwood code, and made
+ sure that the <em>only</em> programs which get the <code>
+-D_POSIX_C_SOURCE -D_DEFAULT_SOURCE</code> incantation are programs
+ which otherwise do not compile if <code>-std=c99</code> is set.
+<p>Everything now compiles, in Cygwin, in Ubuntu 26.04, and in a recent
+ release of Alpine Linux (I use Alpine because it uses a very different
+ userspace than Ubuntu).
+<a name="2026-07-02-looking-ahead"> </a>
+<h3>Looking ahead</h3>
+<p>The next project is to minimize the number of files in the
+ coLunacyDNS sub-tree which are compiled with the <code>
+-D_POSIX_C_SOURCE -D_DEFAULT_SOURCE</code> incantation.
+<p>But that’s for another day.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-07-01 2026 ` -->
 <a name="BlogEntry-2026-07-01"> </a>
 <div class=blogpicx style="text-align: right">
@@ -1194,209 +1272,9 @@ https://www.chessgames.com/perl/chessgame?gid=3116895
  - 
 <a href="#GitBlogIndex">Index</a></i></div>
 <div class=blog>
-<!-- `ENTRY: 2026-03-21 2026 ` -->
-<a name="BlogEntry-2026-03-21"> </a>
-<div class=blogpicx style="text-align: right">
-<img src="pics/Chess2.jpg" width=224 height=126>
-</div>
-<h1>Kasparov vs. Topalov</h1>
-<h2>March 21, 2026</h2>
-
-<div id="KasparovImmortal-box"></div><script type="text/javascript">runGame(
-"1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Be3 Bg7 5. Qd2 c6 6. f3 b5 7. Nge2 Nbd7 8. Bh6 Bxh6 9. Qxh6 Bb7 10. a3 e5 11. O-O-O Qe7 12. Kb1 a6 13. Nc1 O-O-O 14. Nb3 exd4 15. Rxd4 c5 16. Rd1 Nb6 17. g3 Kb8 18. Na5 Ba8 19. Bh3 d5 20. Qf4+ Ka7 21. Rhe1 d4 22. Nd5 Nbxd5 23. exd5 Qd6 24. Rxd4 cxd4 25. Re7+ Kb6 26. Qxd4+ Kxa5 27. b4+ Ka4 28. Qc3 Qxd5 29. Ra7 Bb7 30. Rxb7 Qc4 31. Qxf6 Kxa3 32. Qxa6+ Kxb4 33. c3+ Kxc3 34. Qa1+ Kd2 35. Qb2+ Kd1 36. Bf1 Rd2 37. Rd7 Rxd7 38. Bxc4 bxc4 39. Qxh8 Rd3 40. Qa8 c3 41. Qa4+ Ke1 42. f4 f5 43. Kc1 Rd2 44. Qa7"
-,"Black Resigns",
-"KasparovImmortal",
-70, "White to move and win", 0,"Kasparov vs. Topalov, 1999");</script>
-
-<i>The above is an interactive chessboard. Click on the large
-right arrow button to advance the move. The single left arrow goes back
-one move; the double left arrows return to the beginning of the game;
-and the double right arrows go to the end of the game</i>
-
-<p>
-
-Kasparov's immortal is a chess game played by Garry Kasparov as White against Veselin Topalov as Black at the Hoogovens Wijk aan Zee Chess Tournament 1999 chess tournament.[1] This is one of Kasparov's most famous games; it is considered a masterpiece and Chess.com has listed it as the #1 chess game ever played.[2][3]
-
-<p>
-
-White: Kasparov   Black: Topalov   Opening: Pirc Defense (ECO B07) 
-
-<p>
-
-<b>1. e4 d6</b>
-<p>
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-The <i>Pirc Defense</i> is an unusual response by Topalov to Kasparov’s 1. e4, resulting in a position Kasparov never saw before in classical play.[4]
-<p>
-
-<b>2. d4 Nf6 3. Nc3 g6</b>
-<p>
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div></div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>n</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-This setup has similarities to the King’s Indian Defence, but White’s c pawn remains on the second rank.[5]
-<p>
-
-<b>4. Be3 Bg7 5. Qd2 c6 6. f3 b5 7. Nge2 Nbd7 8. Bh6 Bxh6 9. Qxh6</b>
-<p>
-<div class=chessDiagram8 translate="no"><div>r</div> <div></div> <div>b</div> <div>q</div> <div>k</div> <div></div> <div></div> <div>r</div> <div>p</div> <div></div> <div></div> <div>n</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div></div> <div></div> <div>p</div> <div>p</div> <div></div> <div>n</div> <div>p</div> <div>Q</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>N</div> <div></div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div></div> <div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-This queen capture hinders Black’s castling.[4]
-<p>
-
-<b>9...Bb7 10. a3 e5 11. O-O-O Qe7 12. Kb1 a6 13. Nc1 O-O-O 14. Nb3 exd4![5]</b>
-<p>
-<div class=chessDiagram8 translate="no"><div></div> <div></div> <div>k</div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>b</div> <div></div> <div>n</div> <div>q</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div>n</div> <div>p</div> <div>Q</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div>P</div> <div></div> <div></div> <div></div> <div>P</div> <div>N</div> <div>N</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div>K</div> <div></div> <div>R</div> <div></div> <div>B</div> <div></div> <div>R</div> </div><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-This opens Black’s position.[5]
-<p>
-
-<b>15. Rxd4 c5 16. Rd1 Nb6 17. g3 Kb8 18. Na5 Ba8 19. Bh3 d5 20. Qf4+ Ka7 21. Rhe1 d4 22. Nd5?![4]</b>
-
-<p>
-<div class=chessDiagram8 translate="no"><div>b</div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div>k</div> <div></div> <div></div> <div></div> <div>q</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>n</div> <div></div> <div></div> <div></div> <div>n</div> <div>p</div> <div></div> <div>N</div> <div>p</div> <div>p</div> <div>N</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div>P</div> <div>Q</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div>R</div> <div>R</div> <div></div> <div></div> <div></div> </div><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-If Black plays 22...Nfxd5?, White responds with 23. exd5 Qd6 24. Qxf7+ which leads to White being up a piece, e.g. 24...Kb8 25. Re6 Qc7 26. Re7 Nd7 27. Nc6 Bxc6 28. dxc6 Qxc6 29. Bxd7.[6] 
-
-<p>
-
-<b>22...Nbxd5 23. exd5 Qd6 24. Rxd4!![7]</b>
-
-<p>
-<div class=chessDiagram8 translate="no"><div>b</div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div>k</div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div>q</div> <div></div> <div>n</div> <div>p</div> <div></div> <div>N</div> <div>p</div> <div>p</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>R</div> <div></div> <div>Q</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div>R</div> <div></div> <div></div> <div></div> </div><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-Now the fireworks start.[5]
-
-<p>
-
-<b>24...cxd4</b>
-
-<p>
-
-While Black would had been better off declining the rook sacrifice with Kb6!, the game would had been largely forgotten.[4][5][7]
-
-<p>
-Topalov needed an hour of deep thinking before deciding to take the rook because the position was a “bit funny”, and years later felt it was “suicide” for him to take the rook. He feels the game wasn’t important, and in a way it wasn’t: If Topalov had won this game, he would had only tied for fourth place in the tournament.[11]
-<p>
-
-If I were Topalov, I would had been happy to accept the sacrifice and contribute to one of the most legendary, if not the most legendary Chess game ever, but he doesn’t see it that way.
-
-<p>
-
-Black can not reply with Nxd5 because White could had then played Qxf7+.[8]
-<p>
-
-<b>25. Re7+ Kb6</b>
-<p>
-
-If Qxd7??, then mate cannot be avoided, e.g. 26.Qxd4+ Kb8 27.Qb6+ Bb7 28.Nc6+ Ka8 29.Qa7#.[7]
-
-<div class=chessDiagram8 translate="no"><div>b</div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div>k</div> <div></div> <div></div> <div></div> <div>q</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div>n</div> <div>p</div> <div></div> <div>N</div> <div>p</div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>Q</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> </div>
-<i>Analysis of 25...Qxd7: White to move. Mate in 4</i>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-<p>
-<b>26. Qxd4+ Kxa5 27. b4+ Ka4 28. Qc3?![9]</b>
-
-<p>
-<div class=chessDiagram8 translate="no"><div>b</div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div></div> <div>R</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div>q</div> <div></div> <div>n</div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>k</div> <div>P</div> <div></div> <div>Q</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> </div><i>Position after 27...Ka4</i><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-Lubomir Kavalek, writing for The Washington Post, was the first one to observe that Ra7!! is a better attack for White in this position.[9][4]
-<p>
-
-<b>28...Qxd5</b>
-<p>
-
-Bxd5? is refuted with 29. Kb2 followed by Qb3+ which leads to White delivering checkmate.[4][5]
-<p>
-
-<b>29. Ra7 Bb7 30. Rxb7 Qc4![4]</b>
-<p>
-<div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>R</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div>n</div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div>q</div> <div></div> <div></div> <div></div> <div></div> <div>k</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>Q</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> </div><i>Position after 30. Rxb7</i><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-Topalov, after the game, analyzed the position with his second Silvio Danailov for hours and told the press at the tournament that Black had drawing chances after 30...Rhe8 31. Rb6 Ra8 32. Be6.[10] However, Black is in trouble if White instead plays 32. Bf1!!.[4]
-<p>
-
-<b>31. Qxf6 Kxa3?![5]</b>
-<p>
-<div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>R</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div>Q</div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>k</div> <div>P</div> <div>q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> </div><i>Position after 31. Qxf6</i><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-Black had much better drawing chances with 31...Rd1+! During the game, Kasparov visualizing this line saw White having a stronger endgame after 32. Kb2 Ra8 33. Qb6 Qd4+ 34. Qxd4 Rxd4 35. Rxf7 a5 36. Be6 axb4 37. Bb3+ Ka5 38. axb4+ Kb6 39. Rxh7 but realized, after the game was over, that Black could had fought for a draw with 39...Rf8[4] Computer analysis shows no clear win for White after 39...Rf8, but also shows White had better fighting chances after 35. Bd7 Rd6 36. g4 in a line very hard for humans to visualize.[5]
-<p>
-
-<b>32. Qxa6+ Kxb4 33. c3+ Kxc3 34. Qa1+ Kd2 35. Qb2+ Kd1</b>
-<p>
-<div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>R</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div>Q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div>k</div> <div></div> <div></div> <div></div> <div></div> </div><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-White to move and win.
-<p>
-
-<b>36. Bf1!! Rd2[7]</b>
-<p>
-
-If Black plays 36...Qxf1? in this position, White can force mate: 37.Qc2+ Ke1 38.Re7+ Qe2 39.Qxe2#[7]
-<p>
-
-If 36...Qd5, 37.Qc1 mates.[7]
-<p>
-
-<b>37. Rd7 Rxd7 38. Bxc4 bxc4</b>
-<p>
-<div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div>p</div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>B</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div>Q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>K</div> <div></div> <div>k</div> <div></div> <div></div> <div></div> <div></div> </div><i>Position after 38. Bxc4</i><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-If Black attempted to save his h8 rook, White would had won with Qc1#.[7]
-<p>
-
-<b>39. Qxh8 Rd3 40. Qa8 c3 41. Qa4+ Ke1 42. f4 f5 43. Kc1 Rd2 44. Qa7 1-0</b>
-<p>
-<div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>Q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>r</div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div>K</div> <div></div> <div>k</div> <div></div> <div></div> <div></div> </div><i>Black resigns</i><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-As the game ended, Kasparov remembers the audience in the hall applauding.[4] 
-
-<h1>Further reading</h1>
-
-<ul>
-<li><A href="https://www.chess.com/news/view/25-years-ago-kasparov-topalov-1999">What it was like to be there when this game was played</A>
-<li><A href="https://lichess.org/lwiPq9wB">Lichess analysis of the game</A>
-<li><A href="https://www.chessgames.com/perl/chessgame?gid=1011478">Chessgames.com discussion of the game</A>
-<li><A href="https://www.chess.com/blog/SamCopeland/the-greatest-chess-game-of-all-time-explained-kasparov-vs-topalov-1999">Sam Copeland’s analysis of this game</A>
-</ul>
-
-<h1>Footnotes</h1>
-
-<ol><li>
-Kaehler, Arne. “Svitlana's Smart Moves - Kasparov's immortal”. ChessBase. “one of the greatest chess games ever played is the one between Garry Kasparov and Veselin Topalov from 1999 in Wijk aan Zee”<li>
-Alberto Colodro, Carlos. “Throwback Thursday: Kasparov’s immortal”. ChessBase. “Garry Kasparov defeated Veselin Topalov in what is now known as his ‘immortal game’”<li>
-“The Best Chess Games Of All Time”. Chess.com. “Kasparov has a long list of brilliancies to his credit, but this game is his virtually undisputed masterpiece.”<li>
-Kasparov, Garry (2014). Garry Kasparov on Garry Kasparov: Part III. Everyman Chess (Gloucester Publishers Limited).<li>
-So, Wesley; Adams, Michael; Burgess, Graham; Nunn, John; Emms, John. The Mammoth Book of the World’s Greatest Chess Games, 2021 edition. Robinson Publishing.<li>
-Bryne, Robert. “CHESS; Kasparov Shows His Critics He Can Still Work Miracles”. The New York Times.<li>
-Seirawan, Yasser (September 2003). “Yasser Annotates: Kasparov-Topalov Wijk aan Zee 1999 Hoogovens Tournament Round 4”. Inside Chess.<li>
-Soltis, Andrew. The 100 Best Chess Games of the 20th Century, Ranked. McFarland & Company.<li>
-“Chess by Lubomir Kavalek”. The Washington Post. 1999-02-01.<li>
-“<A href="https://archive.ph/B7IF7#Parel">The Pearl of Wijk aan Zee</A>” by Tom Furstenberg. No longer online, but archived from the original on 2005-02-05.
-<li>l’Ami, Erwin; Doggers, Peter. <i>Kings, Queens and Rookies: The Tata Steel Chess Tournament - A Celebration of 85 Years</i>. New in Chess. 
-</ol>
-
-</div>
-<div class=GitBlogNav><i>Go to: 
-<a href="#GitBlogTop">Top</a>
- - 
-<a href="#GitBlogIndex">Index</a></i></div>
-<div class=blog>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="entries/2026-07-02.html">MaraDNS snapshot (2026-07-02)</a></br>
 <a href="entries/2026-07-01.html">Round up (2026-07-01)</a></br>
 <a href="entries/2026-06-12.html">MaraDNS in the age of AI (2026-06-12)</a></br>
 <a href="entries/2026-05-03.html">A new chess variant; etc. (2026-05-03)</a></br>

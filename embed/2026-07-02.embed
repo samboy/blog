@@ -1,0 +1,71 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/MaraDNS.jpg" width=224 height=126>
+</div>
+<h1>MaraDNS snapshot</h1>
+<h2>July 2, 2026</h2>
+I have made a <code>2026-07-02</code> tag of MaraDNS today. I will go
+ over the post 3.5.0037 changes.
+<a name="2026-07-02-maradns-3.5.0037"> </a>
+<h3>MaraDNS 3.5.0037</h3>
+<p>MaraDNS 3.5.0037 was a security only update; it fixed an issue with
+ DNS-over-TCP in Deadwood, where a trusted client authorized to perform
+ TCP DNS queries could disable DNS-over-TCP with a denial of service
+ attack. Note that DNS-over-TCP enabled is a configuration Deadwood does
+ not enable by default, and no example <code>dwood3rc</code> files
+ supplied with MaraDNS have DNS-over-TCP enabled.
+<p>This was the first update since MaraDNS 3.5.0036, a 2023 security
+ bugfix, where a remote “packet of death” could disable the MaraDNS
+ authoritative server.
+<a name="2026-07-02-post-3.5.0037"> </a>
+<h3>Post 3.5.0037</h3>
+<p>The changes I have made post 3.5.0037 are changes I am making, not
+ because MaraDNS’s code was broken, but because GCC (and to a lesser
+ extent, LLVM) decided to “update” their compilers to throw errors with
+ C code which could previously compile.
+<p>Most of the fixes are minor fixes, such as some minor changes to how
+ signal handlers are written. Yes, it only took me an afternoon to
+ update the code, but these are updates I would not have had to make if
+ GCC no longer updated their code. A C compiler should not be a moving
+ target.
+<p>Indeed, Joerg Schilling who is no longer with us made a lot of
+ updates to the code which generates ISO images to burn in CD players. I
+ maintain a fork of that code which mainly fixes gross bugs; and I had
+ to do <a href="https://github.com/samboy/img9660/commit/9c09aa58ac811119f832d3662c29200080e5fc7d">a whole bunch of  hacking</a> 
+to get the code to compile again in 2026,
+ again because of GCC’s changes to the compiler.
+<p>What I have done is comb through the code and removed all warnings in
+ clang 20 and clang 21, and made sure all of the code can compile in GCC
+ 15 and GCC 16—and without warnings in GCC 16 (at least in Cygwin) to
+ boot. So, right now in 2026, MaraDNS compiles just fine in GCC, and
+ compiles with no warnings, even when <code>-Wall</code> is set, in
+ clang 20.
+<a name="2026-07-02-compiling-to-the-c99-standard"> </a>
+<h3>Compiling to the C99 standard</a> 
+</h3>
+<p>In addition, to minimize changes to compilers breaking code which
+ compiles without warning here in 2026, I have gone to the effort to
+ compile all of the code with <code>-std=c99</code> to make sure the
+ compiler conforms to the 1999 C standard (i.e. the version of C which
+ existed when I started writing MaraDNS back in 2001).
+<p>Since some files use system calls which are not part of the C99
+ standard, the current workaround is to, for those files, compile it
+ with the incantation <code>-std=c99 -D_POSIX_C_SOURCE -D_DEFAULT_SOURCE</code>
+. Today, I have gone through the MaraDNS and Deadwood code, and made
+ sure that the <em>only</em> programs which get the <code>
+-D_POSIX_C_SOURCE -D_DEFAULT_SOURCE</code> incantation are programs
+ which otherwise do not compile if <code>-std=c99</code> is set.
+<p>Everything now compiles, in Cygwin, in Ubuntu 26.04, and in a recent
+ release of Alpine Linux (I use Alpine because it uses a very different
+ userspace than Ubuntu).
+<a name="2026-07-02-looking-ahead"> </a>
+<h3>Looking ahead</h3>
+<p>The next project is to minimize the number of files in the
+ coLunacyDNS sub-tree which are compiled with the <code>
+-D_POSIX_C_SOURCE -D_DEFAULT_SOURCE</code> incantation.
+<p>But that’s for another day.
+
+
+<p>
+
+</div>
+
