@@ -442,7 +442,6 @@ for l in thisFileHandle:lines() do
   -- We have to handle things like "blog:20120907#20120907-slashdot"
   l = l:gsub('<a href="archive.html#BlogEntry-[0-9-]+(#[^"]+)',
              '<a href="archive.html%1')
-  end
   -- Convert image links
   l = l:gsub('src="pics/','src="../pics/')
   l = l:gsub('src=pics/','src=../pics/')
