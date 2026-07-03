@@ -1,4 +1,4 @@
-<html><head><title>2026-07-02</title>
+<html><head><title>2026-07-03</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 @import url("../fonts.css");
@@ -230,73 +230,104 @@ content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
-<!-- `ENTRY: 2026-07-02 2026 ` -->
-<a name="BlogEntry-2026-07-02"> </a>
+<!-- `ENTRY: 2026-07-03 2026 ` -->
+<a name="BlogEntry-2026-07-03"> </a>
 <div class=blogpicx style="text-align: right">
 <img src="../pics/MaraDNS.jpg" width=224 height=126>
 </div>
-<h1>MaraDNS snapshot</h1>
-<h2>July 2, 2026</h2>
-I have made a <code>2026-07-02</code> tag of MaraDNS today. I will go
- over the post 3.5.0037 changes.
-<a name="2026-07-02-maradns-3.5.0037"> </a>
-<h3>MaraDNS 3.5.0037</h3>
-<p>MaraDNS 3.5.0037 was a security only update; it fixed an issue with
- DNS-over-TCP in Deadwood, where a trusted client authorized to perform
- TCP DNS queries could disable DNS-over-TCP with a denial of service
- attack. Note that DNS-over-TCP enabled is a configuration Deadwood does
- not enable by default, and no example <code>dwood3rc</code> files
- supplied with MaraDNS have DNS-over-TCP enabled.
-<p>This was the first update since MaraDNS 3.5.0036, a 2023 security
- bugfix, where a remote “packet of death” could disable the MaraDNS
- authoritative server.
-<a name="2026-07-02-post-3.5.0037"> </a>
-<h3>Post 3.5.0037</h3>
-<p>The changes I have made post 3.5.0037 are changes I am making, not
- because MaraDNS’s code was broken, but because GCC (and to a lesser
- extent, LLVM) decided to “update” their compilers to throw errors with
- C code which could previously compile.
-<p>Most of the fixes are minor fixes, such as some minor changes to how
- signal handlers are written. Yes, it only took me an afternoon to
- update the code, but these are updates I would not have had to make if
- GCC no longer updated their code. A C compiler should not be a moving
- target.
-<p>Indeed, Joerg Schilling who is no longer with us made a lot of
- updates to the code which generates ISO images to burn in CD players. I
- maintain a fork of that code which mainly fixes gross bugs; and I had
- to do <a href="https://github.com/samboy/img9660/commit/9c09aa58ac811119f832d3662c29200080e5fc7d">a whole bunch of  hacking</a> 
-to get the code to compile again in 2026,
- again because of GCC’s changes to the compiler.
-<p>What I have done is comb through the code and removed all warnings in
- clang 20 and clang 21, and made sure all of the code can compile in GCC
- 15 and GCC 16—and without warnings in GCC 16 (at least in Cygwin) to
- boot. So, right now in 2026, MaraDNS compiles just fine in GCC, and
- compiles with no warnings, even when <code>-Wall</code> is set, in
- clang 20.
-<a name="2026-07-02-compiling-to-the-c99-standard"> </a>
-<h3>Compiling to the C99 standard</a> 
-</h3>
-<p>In addition, to minimize changes to compilers breaking code which
- compiles without warning here in 2026, I have gone to the effort to
- compile all of the code with <code>-std=c99</code> to make sure the
- compiler conforms to the 1999 C standard (i.e. the version of C which
- existed when I started writing MaraDNS back in 2001).
-<p>Since some files use system calls which are not part of the C99
- standard, the current workaround is to, for those files, compile it
- with the incantation <code>-std=c99 -D_POSIX_C_SOURCE -D_DEFAULT_SOURCE</code>
-. Today, I have gone through the MaraDNS and Deadwood code, and made
- sure that the <em>only</em> programs which get the <code>
--D_POSIX_C_SOURCE -D_DEFAULT_SOURCE</code> incantation are programs
- which otherwise do not compile if <code>-std=c99</code> is set.
-<p>Everything now compiles, in Cygwin, in Ubuntu 26.04, and in a recent
- release of Alpine Linux (I use Alpine because it uses a very different
- userspace than Ubuntu).
-<a name="2026-07-02-looking-ahead"> </a>
-<h3>Looking ahead</h3>
-<p>The next project is to minimize the number of files in the
- coLunacyDNS sub-tree which are compiled with the <code>
--D_POSIX_C_SOURCE -D_DEFAULT_SOURCE</code> incantation.
-<p>But that’s for another day.
+<h1>MaraDNS and POSIX</h1>
+<h2>July 3, 2026</h2>
+I made a <code>2026-07-03</code> tag for MaraDNS today. I will go
+ over the changes since yesterday. MaraDNS can now be compiled on a C99
+ and POSIX 2008 compatible system.
+<a name="2026-07-03-maradns-and-posix"> </a>
+<h3>MaraDNS and POSIX</h3>
+<p>Since there have been issues where code which compiles without
+ warning when <code>-Wall</code> is set, I have finally made MaraDNS
+ have the option to be compiled using fully standards compliant code:
+<ul>
+<li>
+<p>MaraDNS programs now compile with the <code>-std=c99</code> flag
+</li>
+<li>
+<p>MaraDNS now uses feature test macros to make sure the standards are
+ used when compiling MaraDNS
+</li>
+</ul>
+<p>To compile MaraDNS in conformance with C99 and POSIX 2008:
+<pre class="blogPre">./configure --strict-posix
+CC=cc
+export CC
+make
+cd coLunacyDNS
+make clean
+make -f Makefile.strict
+</pre>
+<p>However, in the interests of security, MaraDNS by default uses two
+ functions which are not part of the POSIX 2008 standard.
+<a name="2026-07-03-chroot"> </a>
+<h3>chroot</h3>
+<p>MaraDNS uses the <code>chroot</code> system call to, in case of a
+ security issue which allows MaraDNS to give an attacker a remote shell,
+ restrict that shell’s access to the underlying filesystem. While there
+ has, as of 2026, <em>never</em> been a remote shell exploit found in
+ MaraDNS—even though MaraDNS has been around for over 25 years—<code>
+chroot</code> minimizes the impact should such a bug be found in the
+ future.
+<p>MaraDNS will run without <code>chroot</code>, but the security
+ implications would be more significant should someone ever be able to
+ get a remote shell with MaraDNS.
+<p><code>chroot</code> is not defined in POSIX because “<a href="https://www.govinfo.gov/content/pkg/GOVPUB-C13-bf1fc57a5dbcaa993cebad99aca83f64/pdf/GOVPUB-C13-bf1fc57a5dbcaa993cebad99aca83f64.pdf">it was not useful to portable applications</a>” 
+(page 258) since there
+ isn’t a way to make a usable <code>chroot</code> environment in the
+ POSIX spec.
+<p>The POSIX developers failed to consider the case of using <code>
+chroot</code> as a portable and widely implemented way of putting an
+ application in a sandbox—there is no need to have an “environment in
+ which an application could run” in said sandbox, since MaraDNS is
+ started and loads configuration files <em>before</em> entering the <code>
+chroot</code> jail.
+<a name="2026-07-03-setgroups"> </a>
+<h3>setgroups</h3>
+<p>The <code>setgroups</code> call is also used to sandbox MaraDNS. Like
+ <code>chroot</code>, this minimizes the impact should one be able to
+ get a remote root shell via a security hole in MaraDNS (again, as of
+ 2026, no security hole with remote shell access has ever been found in
+ MaraDNS, and it has been over 25 years).
+<p><code>setgroups</code> is not defined in POSIX because it <a href="https://linux.die.net/man/2/setgroups">requires elevated privileges to run</a>.
+<a name="2026-07-03-both-of-these-calls-are-standard-unix-calls"> </a>
+<h3>Both of these
+ calls are standard UNIX calls</h3>
+<p>Both <code>chroot</code> and <code>setgroups</code>, while not
+ formally part of the POSIX standard, have been used by MaraDNS for
+ decades. <code>chroot</code> and <code>setgroups</code> have been used,
+ with their API unchanged, by MaraDNS without issue since 2001—some 25
+ years ago. Considering these two function calls haven’t changed in 25
+ years, it is highly doubtful they will change in the future.
+<p>The <code>chroot</code> call <a href="https://pubs.opengroup.org/onlinepubs/7908799/xsh/chroot.html">used to be part of the POSIX  standard</a> 
+back when it was called the
+ “single UNIX specification”, and <a href="https://linux.die.net/man/2/setgroups">setgroups conforms to SVr4 and 4.3BSD</a>. 
+These calls are included with
+ Linux, BSD, and pretty much any UNIX that exists (with rare exceptions;
+ there was a time when QNX didn’t support <code>chroot</code>, <a href="https://www.qnx.com/developers/docs/8.0/com.qnx.doc.security.system/topic/manual/chroot.html">although it does  now</a>, 
+and the Win32 API doesn’t have <code>chroot</code>
+ either).
+<p>That in mind, MaraDNS will continue to support <code>chroot</code>
+ and <code>setgroups</code> unless one asks MaraDNS to compile in strict
+ conformance with POSIX 2008.
+<a name="2026-07-03-looking-forward"> </a>
+<h3>Looking forward</h3>
+<p>MaraDNS is now using the C99 standard to compile all programs, and
+ POSIX 2008 for all system calls, except for <code>chroot</code> and <code>
+setgroups</code> (the Win32 port of MaraDNS uses Windows specific calls,
+ but Windows—despite its imperfections—has a rock solid unchanging API).
+<p>That in mind, if MaraDNS doesn’t compile in the future, it is most
+ likely a bug with the compiler and/<![if gt IE 6]>&#8203;<![endif]><wbr>or libc library, and probably not a
+ bug with MaraDNS.
+<p>MaraDNS is now more future proof—it is now very unlikely a future
+ compiler change will stop MaraDNS from compiling, especially since
+ MaraDNS sets the flag (<code>-std=c99</code>) to compile the code using
+ the C99 standard.
 
 
 <p>
@@ -304,8 +335,7 @@ to get the code to compile again in 2026,
 </div>
 
 <div class=GitBlogNav><i>Go to: 
-<a href="2026-07-01.html">Older</a> - 
-<a href="2026-07-03.html">Newer</a> - 
+<a href="2026-07-02.html">Older</a> - 
 <a href="../archive.html#GitBlogTop">All entries</a>
  - 
 <a href="../index.html#GitBlogIndex">Index</a></i></div>
