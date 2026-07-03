@@ -8,9 +8,10 @@ I made a <code>2026-07-03</code> tag for MaraDNS today. I will go
  and POSIX 2008 compatible system.
 <a name="2026-07-03-maradns-and-posix"> </a>
 <h3>MaraDNS and POSIX</h3>
-<p>Since there have been issues where code which compiles without
- warning when <code>-Wall</code> is set, I have finally made MaraDNS
- have the option to be compiled using fully standards compliant code:
+<p>Since there have been issues where code which compiled without
+ warning when <code>-Wall</code> is set doesn’t compile any more with
+ newer versions of the same compilers, I have finally made MaraDNS have
+ the option to be compiled using fully standards compliant code:
 <ul>
 <li>
 <p>MaraDNS programs now compile with the <code>-std=c99</code> flag
@@ -20,7 +21,7 @@ I made a <code>2026-07-03</code> tag for MaraDNS today. I will go
  used when compiling MaraDNS
 </li>
 </ul>
-<p>To compile MaraDNS in conformance with C99 and POSIX 2008:
+<p>To compile MaraDNS in strict conformance with C99 and POSIX 2008:
 <pre class="blogPre">./configure --strict-posix
 CC=cc
 export CC
@@ -30,7 +31,15 @@ make clean
 make -f Makefile.strict
 </pre>
 <p>However, in the interests of security, MaraDNS by default uses two
- functions which are not part of the POSIX 2008 standard.
+ functions which are not part of the POSIX 2008 standard. Most of the
+ time, this is the correct way to compile MaraDNS:
+<pre class="blogPre">./configure --strict-posix
+CC=cc
+export CC
+make
+cd coLunacyDNS
+make -f Makefile.default
+</pre>
 <a name="2026-07-03-chroot"> </a>
 <h3>chroot</h3>
 <p>MaraDNS uses the <code>chroot</code> system call to, in case of a
