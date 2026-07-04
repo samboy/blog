@@ -228,6 +228,64 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<!-- `ENTRY: 2026-07-04 2026 ` -->
+<a name="BlogEntry-2026-07-04"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/MaraDNS.jpg" width=224 height=126>
+</div>
+<h1>MaraDNS 3.5.0038 relesed</h1>
+<h2>July 4, 2026</h2>
+In celebration of the 250<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> anniversary of the United States being
+ created, I have release MaraDNS 3.5.0038. The main changes, compared to
+ MaraDNS 3.5.0037, is that MaraDNS now cleanly compiles.
+<a name="2026-07-04-cleanly-compiles"> </a>
+<h3>Cleanly compiles</h3>
+<p>As I talked about <a href="#BlogEntry-2026-07-03">extensively</a>  
+yesterday, MaraDNS now cleanly compiles, and its build process has been
+ altered to ensure that MaraDNS will continue to compile for the
+ foreseeable future.
+<a name="2026-07-04-tests-updated"> </a>
+<h3>Tests updated</h3>
+<p>Since compilers have gotten more picky since I last ran the test
+ suite with MaraDNS, I have updated the test suite to run again. The OS
+ I currently use to run the test suite is a Docker container with Alpine
+ 3.24; all tests pass in that environment.
+<a name="2026-07-04-maradnss-future"> </a>
+<h3>MaraDNS’s future</h3>
+<p>MaraDNS is in deep freeze: The only changes I make at this point are
+ credible security updates (with the deluge of AI-assisted security
+ “reports” these days, I’m very picky about what makes a real security
+ issue) and updates to make sure MaraDNS continues to compile and run.
+<p>The 3.5.0037 release fixed a minor security issue; MaraDNS 3.5.0038
+ cleans things up and fixes issues found by newer and more picky
+ compilers.
+<p>As I get older—keep in mind MaraDNS has now existed for over 25
+ years—I change my outlook on life. Seeing my first wife and both my
+ parents die has made me think about my own mortality. While I hope to
+ live for many many more years, I am now thinking about what legacy I
+ will leave after I die. Yes, I do have a child, and yes I have a legacy
+ there, but I also want to have MaraDNS be something which outlives me.
+<p>This is why I have, by and large, moved MaraDNS from <a href="https://maradns.org">my personal domain</a> 
+over to <a href="https://samboy.github.io/MaraDNS/webpage/">GitHub</a>—my 
+personal domains will go down when I’m no longer in this
+ world and no longer babysit my servers and domain registrations, but
+ GitHub <em>should</em> outlive me, hopefully for a very long time. This
+ is why MaraDNS is on multiple public Git repos, so MaraDNS should still
+ be online should Git repos go offline.
+<p>MaraDNS has been a lot of work, and it’s unfortunate I was never able
+ to effectively monetize MaraDNS or making a living from this program,
+ and it’s work which I believe will have an enduring and lasting legacy.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-07-03 2026 ` -->
 <a name="BlogEntry-2026-07-03"> </a>
 <div class=blogpicx style="text-align: right">
@@ -779,220 +837,9 @@ I have been writing a lot about Chess lately. Below are links to my
  - 
 <a href="#GitBlogIndex">Index</a></i></div>
 <div class=blog>
-<!-- `ENTRY: 2026-03-31 2026 ` -->
-<a name="BlogEntry-2026-03-31"> </a>
-<a name=BlogEntry-2026-03-06> </a>
-<div class=blogpicx style="text-align: right">
-<img src="pics/Chess2.jpg" width=224 height=126>
-</div>
-<h1>Sam’s Micro Repertoire</h1>
-<h2>March 31, 2026</h2>
-
-Let’s look at the starting position of Chess:<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div> <i>The initial position</i><p>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-
-<p>
-
-It’s a mess.  All of the pieces, except the knights, are trapped by
-pawns.  The rooks are far away from each other.  All of the pieces are
-on the back row, and need to get out on the field to fight.  The pawn in
-front of the King’s Bishop (the “f” pawn) is weakly defended only by
-the King, resulting in a weakness next to the most valuable piece.
-
-<p>
-
-The general opening principles are this:
-
-<ul>
-<li>Develop knights before bishops.
-<li>Do not move the queen early in the game.
-<li>Do not advance the f pawn early in the game.
-<li>Castle early, preferably on the kingside.
-<li>Move pieces towards the center.
-</ul>
-
-<p>
-
-This is how one pieces would be developed, assuming the other player
-allows it:
-
-<p>
-<div class=chessDiagram4 translate="no">
-<div></div> <div></div> <div>B</div> <div>P</div> <div>P</div> <div>B</div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>Q</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div>R</div> <div>R</div> <div></div> <div>K</div> <div></div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram4'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = (boardSize / 2) + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<p>
-
-<h1>A micro Chess repertoire</h1>
-
-Beginners should not worry too much about memorizing Chess opening moves.  For
-beginners, it’s far more important to sharpen one’s midgame tactics
-and have a better strategic understanding why certain positions are
-reached.
-
-<p>
-
-That, said I will provide a few really basic opening moves.
-
-<h2>White: Open with 1. e4</h2>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<p>
-
-White has four really good moves to start the game with: 1. e4,
-1. d4, 1. c4, or 1. Nc3.  Grandmaster Larry Kaufman waffled between
-whether 1. e4 or 1. d4 was best for White’s first move, ultimately <a
-href="https://www.newinchess.com/kaufman-s-new-repertoire-for-black-and-white
-" >settling</a> on 1. e4.  World Champion Bobby Fischer almost always 
-played 1. e4.
-
-<p>
-
-1. e4 results in open, exciting tactical games and will make beginners
-learn how to hunt down the opponent’s king.
-
-<h2>Black: Usually play 1...e5</h2>
-
-Black should usually respond with 1...e5.  For example, if White
-plays 1. e4, Black’s very best response is 1...e5
-<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<p>
-
-That said, there are a few exceptions where Black should respond 1...d5
-instead.
-
-<p>
-
-If Black plays, 1. d4, respond with d5.  1. d4 e5 causes Black to lose
-a pawn without compensation.<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<i>1. d4 d5</i>
-
-<p>
-
-With 1. Nc3, again d5, to be able to threaten the knight with d4.<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<i>1. Nc3 d5</i>
-
-<p>
-
-With 1. f4, 1...d5.  1. f4 e5 loses the pawn without compensation.<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<i>1. f4 d5</i>
-
-<p>
-
-With 1. Nf3, 1...d5. 1. Nf3 e5 loses the pawn without compensation.<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<i>1. Nf3 d5</i>
-
-<p>
-
-With 1. g4, 1...d5.  This threatens the g4 pawn with Bxg4.<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<i>1. g4 d5</i>
-
-<h1>More discussion</h1>
-
-1. e4 e5 should be responded to with 2. Nf3.<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<i>1. e4 e5 2. Nf3</i>
-
-<h2>The Petroff trap</h2>
-
-If 1. e4 e5 2. Nf3 Nf6 (Petroff’s defense), with beginners it usually
-continues 3. Nxe5 Nxe4 4. Qe2 and now Black is in trouble unless he
-moves very precisely (then he merely loses a pawn).<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div></div> <div>r</div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>n</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>Q</div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div></div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<i>An opening trap in Petroff’s defense</i>
-
-<p>
-
-If, for example, 4...Nf6, then Black loses his queen with 5. Nc6!
-I have <a href="PetroffTrap.html">an article showing a game I won
-many moons ago with this trap in the Petroff</a>.
-
-<h2>The Slav Defense</h2>
-
-If 1. d4 d5 2. c4, Black should respond 2...c6.  This is the
-<i>Slav Defense</i>, and the simplest way to handle the Queen’s
-Gambit.<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div>b</div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div></div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div>R</div> <div>N</div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div>N</div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<i>The Slav Defense</i>
-<p>
-<h2>The Sicilian Defense</h2>
-
-The best way for White to handle the Sicilian defense at club level play
-is to play the Grand Prix anti-Sicilian.  After 1. e4 c5 (the Sicilian), 
-2. Nc3 is usually followed by 3. f4 then 4. Nf3.  While 3. f4 goes against
-the principle of moving the f pawn early in the game, Black is usually
-concentrating on the queenside early on in the Sicilian so the move is 
-relatively safe.  If Black were to play, say, 1. e4 c5 2. Nc3 e5? then 
-3. f4 obviously doesn’t make sense (White would get a strong advantage with 
-3. Bc4 in that position).
-
-<p>
-
-Pragg won his first game 
-in the 2026 candidates with this opening; this is how that game looked after 
-the fourth move:<p>
-
-<div class=chessDiagram8 translate="no"><div>r</div> <div>n</div> <div>b</div> <div>q</div> <div>k</div> <div></div> <div>n</div> <div>r</div> <div>p</div> <div>p</div> <div></div> <div></div> <div>p</div> <div>p</div> <div>b</div> <div>p</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>P</div> <div>P</div> <div></div> <div></div> <div>P</div> <div>P</div> <div>R</div> <div></div> <div>B</div> <div>Q</div> <div>K</div> <div>B</div> <div></div> <div>R</div> </div>
-<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script>
-<p>
-
-I have an <a href=GrandPrix.html>entire article on the Grand Prix</a> using
-that game.
-
-<h1>Further reading</h1>
-
-As I warned before, beginners should not be memorizing too many opening
-lines, but working on basic principles.  At the club level and playing
-one’s friends, they are unlikely to play, say, the first 20 moves
-of the Sicilian Najdorf.  They will make mistakes long before that.
-
-<p>
-
-That said, here are a couple of resources for studying the opening:
-
-<ul>
-<li><a href="https://lichess.org/opening">Lichess has an extensive
-    opening database</a>
-<li><a href="https://en.wikibooks.org/wiki/Chess/Basic_Openings"
-    >Wikibook on basic openings</a>
-<li><a href="https://en.wikibooks.org/wiki/Chess_Opening_Theory"
-    >Wikibook on Chess opening theory</A>
-</ul>
-
-</div>
-<div class=GitBlogNav><i>Go to: 
-<a href="#GitBlogTop">Top</a>
- - 
-<a href="#GitBlogIndex">Index</a></i></div>
-<div class=blog>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="entries/2026-07-04.html">MaraDNS 3.5.0038 relesed (2026-07-04)</a></br>
 <a href="entries/2026-07-03.html">MaraDNS and POSIX (2026-07-03)</a></br>
 <a href="entries/2026-07-02.html">MaraDNS snapshot (2026-07-02)</a></br>
 <a href="entries/2026-07-01.html">Round up (2026-07-01)</a></br>
