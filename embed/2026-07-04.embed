@@ -4,8 +4,8 @@
 <h1>MaraDNS 3.5.0038 relesed</h1>
 <h2>July 4, 2026</h2>
 In celebration of the 250<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> anniversary of the United States being
- created, I have release MaraDNS 3.5.0038. The main changes, compared to
- MaraDNS 3.5.0037, is that MaraDNS now cleanly compiles.
+ created, I have released MaraDNS 3.5.0038. The main changes, compared
+ to MaraDNS 3.5.0037, is that MaraDNS now cleanly compiles.
 <a name="2026-07-04-cleanly-compiles"> </a>
 <h3>Cleanly compiles</h3>
 <p>As I talked about <a href="blog:2026-07-03">extensively</a>  
@@ -33,7 +33,7 @@ yesterday, MaraDNS now cleanly compiles, and its build process has been
  live for many many more years, I am now thinking about what legacy I
  will leave after I die. Yes, I do have a child, and yes I have a legacy
  there, but I also want to have MaraDNS be something which outlives me.
-<p>This is why I have, by and large, moved MaraDNS from <a href="https://maradns.org">my personal domain</a> 
+<p>This is why I have, by and large, moved MaraDNS from <a href="https://maradns.samiam.org">my personal domain</a> 
 over to <a href="https://samboy.github.io/MaraDNS/webpage/">GitHub</a>—my 
 personal domains will go down when I’m no longer in this
  world and no longer babysit my servers and domain registrations, but
