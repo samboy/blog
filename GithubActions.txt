@@ -1,0 +1,5 @@
+This tracks when actions are not working.
+
+Failed runs:
+
+https://github.com/samboy/blog/actions/runs/28684427351 2026-07-03
