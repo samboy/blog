@@ -230,6 +230,89 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>MaraDNS blog</h1>
 
+<!-- `ENTRY: 2026-07-05 2026 ` -->
+<a name="BlogEntry-2026-07-05"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="../pics/MaraDNS.jpg" width=224 height=126>
+</div>
+<h1>Lunacy 2026-07-05 released</h1>
+<h2>July 5, 2026</h2>
+I have released Lunacy 2026-07-05 today, and have done some updates
+ to MaraDNS.
+<a name="2026-07-05-lunacy-2026-07-05"> </a>
+<h3>Lunacy 2026-07-05</h3>
+<p>Lunacy is a scripting language I use in MaraDNS (both to process DNS
+ queries with the coLunacyDNS server and to generate the documents); it
+ is a security hardened fork of Lua 5.1.
+<p>The last time I bumped the version number was in late 2022 with the
+ 2022-12-06 release of Lunacy. The 2026-07-05 release is by and large
+ unchanged; the only changes are:
+<ul>
+<li>
+<p>It is now possible to set the compiler with <code>CC</code> when
+ using the <code>Makefile</code> and <code>Makefile.editline</code>
+ makefiles.
+</li>
+<li>
+<p>There are now no warnings when compiling with clang 20; there is only
+ one warning when compiling with GCC 16.
+</li>
+<li>
+<p>There is now a makefile to compile Lunacy using TCC 0.9.25 in Windows
+</li>
+<li>
+<p>The reference manual has added a note about not exposing the output
+ of <code>pairs</code> to untrusted parties, and includes a sorted <code>
+sPairs</code> function, as well as noting <code>popen2</code> arguments
+ should only come from trusted sources.
+</li>
+<li>
+<p>Since 2022, I have written a book about how to use Lunacy as a
+ scripting language like Ruby/<![if gt IE 6]>&#8203;<![endif]><wbr>Perl/<![if gt IE 6]>&#8203;<![endif]><wbr>Python. This book, and its source, is
+ now part of the Lunacy tarball.
+</li>
+</ul>
+<p>The code is available <a href="https://samboy.github.io/MaraDNS/webpage/lunacy/">on the Lunacy  webpage</a>.
+<a name="2026-07-05-post-3.5.0038-maradns-updates"> </a>
+<h3>Post 3.5.0038 MaraDNS updates</a> 
+</h3>
+<p>I have also updated MaraDNS so she generates no warnings when
+ compiled with:
+<ul>
+<li>
+<p>GCC 15 (Ubuntu 26.04)
+</li>
+<li>
+<p>GCC 16 (Cygwin)
+</li>
+<li>
+<p>Clang 20 (Cygwin)
+</li>
+<li>
+<p>Clang 21 (Ubuntu 26.04)
+</li>
+<li>
+<p>TCC 0.9.27 (Ubuntu 26.04)
+</li>
+</ul>
+<p>Since MaraDNS here in 2026 compiled with no warnings, even when <code>
+-Wall</code> is set, and since MarsDNS uses the <code>-std=c99</code>
+ flag when compiling programs, should MaraDNS not compile in the future,
+ it is almost certainly a bug in the compiler toolchain and not a bug in
+ MaraDNS.
+<p>The code is available <a href="https://github.com/samboy/MaraDNS">on GitHub</a> 
+as well as <a href="https://gitlab.com/maradns/maradns">other repos</a>.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-07-04 2026 ` -->
 <a name="BlogEntry-2026-07-04"> </a>
 <div class=blogpicx style="text-align: right">
@@ -17791,6 +17874,7 @@ not post your comment (with or without editing)</i>
 <a name="BlogEntry-20101224"> </a>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="#BlogEntry-2026-07-05">Lunacy 2026-07-05 released (2026-07-05)</a></br>
 <a href="#BlogEntry-2026-07-04">MaraDNS 3.5.0038 released (2026-07-04)</a></br>
 <a href="#BlogEntry-2026-07-03">MaraDNS and POSIX (2026-07-03)</a></br>
 <a href="#BlogEntry-2026-07-02">MaraDNS snapshot (2026-07-02)</a></br>
