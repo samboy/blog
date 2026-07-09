@@ -1,4 +1,4 @@
-<html><head><title>2026-07-05</title>
+<html><head><title>2026-07-09</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 @import url("../fonts.css");
@@ -230,78 +230,90 @@ content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
-<!-- `ENTRY: 2026-07-05 2026 ` -->
-<a name="BlogEntry-2026-07-05"> </a>
+<!-- `ENTRY: 2026-07-09 2026 ` -->
+<a name="BlogEntry-2026-07-09"> </a>
+<!--{TAGS:M}-->
 <div class=blogpicx style="text-align: right">
-<img src="../pics/MaraDNS.jpg" width=224 height=126>
+<img src="../pics/2024-05-01.jpg" width=224 height=126>
 </div>
-<h1>Lunacy 2026-07-05 released</h1>
-<h2>July 5, 2026</h2>
-I have released Lunacy 2026-07-05 today, and have done some updates
- to MaraDNS.
-<a name="2026-07-05-lunacy-2026-07-05"> </a>
-<h3>Lunacy 2026-07-05</h3>
-<p>Lunacy is a scripting language I use in MaraDNS (both to process DNS
- queries with the coLunacyDNS server and to generate the documents); it
- is a security hardened fork of Lua 5.1.
-<p>The last time I bumped the version number was in late 2022 with the
- 2022-12-06 release of Lunacy. The 2026-07-05 release is by and large
- unchanged; the only changes are:
-<ul>
-<li>
-<p>It is now possible to set the compiler with <code>CC</code> when
- using the <code>Makefile</code> and <code>Makefile.editline</code>
- makefiles.
-</li>
-<li>
-<p>There are now no warnings when compiling with clang 20; there is only
- one warning when compiling with GCC 16.
-</li>
-<li>
-<p>There is now a makefile to compile Lunacy using TCC 0.9.25 in Windows
-</li>
-<li>
-<p>The reference manual has added a note about not exposing the output
- of <code>pairs</code> to untrusted parties, and includes a sorted <code>
-sPairs</code> function, as well as noting <code>popen2</code> arguments
- should only come from trusted sources.
-</li>
-<li>
-<p>Since 2022, I have written a book about how to use Lunacy as a
- scripting language like Ruby/<![if gt IE 6]>&#8203;<![endif]><wbr>Perl/<![if gt IE 6]>&#8203;<![endif]><wbr>Python. This book, and its source, is
- now part of the Lunacy tarball.
-</li>
-</ul>
-<p>The code is available <a href="https://samboy.github.io/MaraDNS/webpage/lunacy/">on the Lunacy  webpage</a>.
-<a name="2026-07-05-post-3.5.0038-maradns-updates"> </a>
-<h3>Post 3.5.0038 MaraDNS updates</a> 
+<h1>Grab bag</h1>
+<h2>July 9, 2026</h2>
+Some thoughts I have had these last few days.
+<a name="2026-07-09-the-motte"> </a>
+<h3>The Motte</h3>
+<p>I have decided to no longer contribute to The Motte. Like DailyKos
+ and a lot of other online spaces, it has become a place where people
+ think it’s OK to be rude to other people and not have basic respect and
+ dignity.
+<p>Its problem is this: The Motte suffers from the “<a href="https://nitter.net/IamRageSparkle/status/1280892535024619522">Nazi  Bar</a>” 
+problem that Twitter (X) also suffers from. Since The
+ Motte is an online space that allows racists and other bigots to post
+ “reasonable” arguments, the place has become dominated by right wing
+ shills.
+<p>People not having basic kindness and decency in anonymous forums has
+ been a long standing issue in the technical community; Slashdot had
+ these kinds of issues two decades ago and they are prevalent to this
+ day.
+<p>Fortunately, I have a network of friends who do have kindness, love,
+ and decency.
+<a name="2026-07-09-the-mottes-server-code"> </a>
+<h3>The Motte’s server code</h3>
+<p>While The Motte doesn’t link to this anywhere on their website, <a href="https://github.com/themotte/rDrama">The Motte’s server code is available online as open source software</a>.  
+The code is, as is typical for 2026, a lot of AI-generated slop, but
+ the code is out there and other people are free to make their own
+ version of “The Motte” for Reddit-style discussions.
+<a name="2026-07-09-github-is-having-issues-deploying-pages"> </a>
+<h3>GitHub is having
+ issues deploying pages</h3>
+<p>It’s well known in the hacker community that <a href="https://news.ycombinator.com/item?id=47932422">GitHub has reliability issues</a>. 
+The issue I am dealing with is this:
+ GitHub pages. While the servers that serve the static pages are rock
+ solid reliable, the GitHub actions which convert Git code in to a
+ static web page is <em>very</em> unreliable.
+<p>GitHub pages are OK for pages which aren’t updated very frequently,
+ such as the <a href="https://samboy.github.io/MaraDNS/webpage/">MaraDNS home page</a> 
+or my <a href="https://samboy.github.io/blog/archive.html">blog  archive</a>, 
+but they are not OK for pages which update
+ frequently, such as my <a href="https://blog.samiam.org">current blog</a>.
+
+<p>That in mind, I will self-host my current blog, and use GitHub for
+ the archive.
+<a name="2026-07-09-djbdns-no-longer-compiles"> </a>
+<h3>djbdns no longer compiles</h3>
+<p>With the post-C23 changes to the C specification, djbdns 1.05 (its
+ final release) no longer even <em>compiles</em>. Considering that, two
+ decades ago, djbdns advocates were well known online for being
+ obnoxious loud mouthed people, it’s telling that not one of them is
+ actively maintaining djbdns here in the 2020s.
+<p>I, on the other hand, am actively maintaining djbdns. My own fork of
+ a fork of djbdns, <a href="https://github.com/samboy/ndjbdns">ndjbdns</a>,
+ does compile, but one needs to type in this incantation to compile it:
+<pre class="blogPre">export CC="c99 -D_DEFAULT_SOURCE"
+./configure
+make
+</pre>
+<p>The <code>cc</code> command these days, by default, tries to compile
+ C23, which is a distinctly different language than the C which <code>
+djbdns</code> (and, yes, my own <code>MaraDNS</code> when I was starting
+ it) was written in. The above command, for now, instructs GCC/<![if gt IE 6]>&#8203;<![endif]><wbr>LLVM to
+ compile the program as if it’s using the current-for-2001 (i.e. the
+ year the final version of djbdns came out, as well as the initial
+ version of MaraDNS) revision of the C specification.
+<a name="2026-07-09-maradns-compiles-as-c23-code"> </a>
+<h3>MaraDNS: Compiles as C23 code</a> 
 </h3>
-<p>I have also updated MaraDNS so she generates no warnings when
- compiled with:
-<ul>
-<li>
-<p>GCC 15 (Ubuntu 26.04)
-</li>
-<li>
-<p>GCC 16 (Cygwin)
-</li>
-<li>
-<p>Clang 20 (Cygwin)
-</li>
-<li>
-<p>Clang 21 (Ubuntu 26.04)
-</li>
-<li>
-<p>TCC 0.9.27 (Ubuntu 26.04)
-</li>
-</ul>
-<p>Since MaraDNS here in 2026 compiles with no warnings, even when <code>
--Wall</code> is set, and since MarsDNS uses the <code>-std=c99</code>
- flag when compiling programs, should MaraDNS not compile in the future,
- it is almost certainly a bug in the compiler toolchain and not a bug in
- MaraDNS.
-<p>The code is available <a href="https://github.com/samboy/MaraDNS">on GitHub</a> 
-as well as <a href="https://gitlab.com/maradns/maradns">other repos</a>.
+<p>I have updated MaraDNS to be C23 compatible code so it will still be
+ able to compile should C compilers ever stop supporting the C99
+ specification, even though I don’t think losing C99 will ever be an
+ issue: As I type this, not only do both <code>gcc</code> and <code>
+clang</code> support the C99 specification, they also support the C90
+ spec that is now some 36 years old.
+<p>The MaraDNS authoritative server, the Deadwood recursive server, as
+ well as the Lua/<![if gt IE 6]>&#8203;<![endif]><wbr>Lunacy-scripted coLunacyDNS servers all compile without
+ warning using a C23 compiler.
+<p>Lunacy standalone still emits warnings (but <em>does</em> compile)
+ when compiled as a C23 program, so my next project is to have Lunacy
+ compile without warning in a modern C23 compiler.
 
 
 <p>
@@ -309,8 +321,7 @@ as well as <a href="https://gitlab.com/maradns/maradns">other repos</a>.
 </div>
 
 <div class=GitBlogNav><i>Go to: 
-<a href="2026-07-04.html">Older</a> - 
-<a href="2026-07-09.html">Newer</a> - 
+<a href="2026-07-05.html">Older</a> - 
 <a href="../archive.html#GitBlogTop">All entries</a>
  - 
 <a href="../index.html#GitBlogIndex">Index</a></i></div>

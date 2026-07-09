@@ -33,6 +33,15 @@ if [ ! -z "$SCRIPTPATH" ] ; then
 	cd $SCRIPTPATH
 fi
 
+touch foo.in.$$
+
+if head -1 $FILENAME | grep 'TAGS:M' > /dev/null ; then
+	echo '<!--{TAGS:M}-->'
+fi
+
+grep -Fv 'TAGS:M' $FILENAME > foo.in.$$
+FILENAME=foo.in.$$
+
 # Sometimes htmldoc crashes if there’s too much whitespace at the end of
 # a line
 cat $FILENAME | awk '{sub(/ +$/," ");print}' > foo.$$.md
@@ -43,5 +52,5 @@ cat foo.$$.md | ./utf8toXascii > foo.$$
 mv foo.$$ foo.$$.md
 htmldoc-samblog-2.20250922 foo.$$.md 2>/dev/null > foo.$$
 ./lunacyBlogFilter ${BASE} foo.$$
-rm -f foo.$$.md foo.$$
+rm -f foo.$$.md foo.$$ foo.in.$$
 
