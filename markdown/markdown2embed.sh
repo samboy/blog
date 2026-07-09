@@ -37,9 +37,11 @@ touch foo.in.$$
 
 if head -1 $FILENAME | grep 'TAGS:M' > /dev/null ; then
 	echo '<!--{TAGS:M}-->'
+	grep -Fv 'TAGS:M' $FILENAME > foo.in.$$
+else
+	cp $FILENAME foo.in.$$
 fi
 
-grep -Fv 'TAGS:M' $FILENAME > foo.in.$$
 FILENAME=foo.in.$$
 
 # Sometimes htmldoc crashes if there’s too much whitespace at the end of
