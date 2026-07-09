@@ -338,7 +338,7 @@ fo('<html><head><title>Sam Trenholme’s Blog</title>')
 fo(U) 
 fo('<style>')
 
--- Widepic CSS
+-- CSS fonts (Roboto serif variant as smaller non-variable fonts)
 fo('@import url("fonts.css");') -- OFL license in CSS file
 
 -- Thanks to https://screenspan.net/fallback for this CSS
@@ -353,6 +353,13 @@ fo("<body>")
 fo('<a name="GitBlogTop"> </a>')
 fo('<div class=blog>')
 fo('<a href="#GitBlogIndex">Blog Index</a></i>')
+-- Since github.com has problems updating pages, have both the
+-- current blog I host on my own server, as well as the archive which
+-- GitHub hosts
+fo(' - ')
+archiveOnly('<a href="https://blog.samiam.org">Current blog</a>')
+indexOnly('<a href="https://samboy.github.io/blog/archive.html"' ..
+          '>Blog archive')
 fo('</div><div class=blog>')
 fo('<h1>Sam Trenholme’s blog</h1>')
 fo('')
