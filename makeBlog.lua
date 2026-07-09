@@ -359,7 +359,7 @@ fo('<a href="#GitBlogIndex">Blog Index</a></i>')
 fo(' - ')
 archiveOnly('<a href="https://blog.samiam.org">Current blog</a>')
 indexOnly('<a href="https://samboy.github.io/blog/archive.html"' ..
-          '>Blog archive')
+          '>Blog archive</a>')
 fo('</div><div class=blog>')
 fo('<h1>Sam Trenholme’s blog</h1>')
 fo('')
