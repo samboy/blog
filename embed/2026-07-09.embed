@@ -70,10 +70,10 @@ djbdns</code> (and, yes, my own <code>MaraDNS</code> when I was starting
 </h3>
 <p>I have updated MaraDNS to be C23 compatible code so it will still be
  able to compile should C compilers ever stop supporting the C99
- specification, even though I don’t think losing C99 will ever be an
- issue: As I type this, not only do both <code>gcc</code> and <code>
-clang</code> support the C99 specification, they also support the C90
- spec that is now some 36 years old.
+ specification, even though I don’t think losing C99 will be an issue:
+ As I type this, not only do both <code>gcc</code> and <code>clang</code>
+ support the C99 specification, they also support the C90 spec that is
+ now some 36 years old.
 <p>The MaraDNS authoritative server, the Deadwood recursive server, as
  well as the Lua/<![if gt IE 6]>&#8203;<![endif]><wbr>Lunacy-scripted coLunacyDNS servers all compile without
  warning using a C23 compiler.
