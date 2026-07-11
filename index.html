@@ -230,6 +230,65 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<!-- `ENTRY: 2026-07-11 2026 ` -->
+<a name="BlogEntry-2026-07-11"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/Terminator.jpg" width=224 height=126>
+</div>
+<h1>Re-watching Terminator 2</h1>
+<h2>July 11, 2026</h2>
+I re-watched Terminator 2 today.
+<a name="2026-07-11-rewatching-terminator-2"> </a>
+<h3>Rewatching Terminator 2</h3>
+<p>I saw “Terminator 2” when it first came out, and just re-watched it
+ in light of the fact that AI is now real. In the movie, they were about
+ 15 years more optimistic about AI becoming real than what happened in
+ the real world; AI was viable in 1997 in the movie, but in real life it
+ didn’t become viable until 2023 or 2024, when people starting using
+ ChatGPT as a free therapist.
+<p>Also, AI was developed by the military in the movie,<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2026-07-11-1"><a href="#2026-07-11-1">1</a></a></sup> 
+but while the military has helped fund AI development, it has been
+ created by and funded in the private sector.
+<p>Yes, this movie describes one risk of AI: It may decide to kill us.
+ Whether or not that is a real risk is still up in the air, but what <em>
+has</em> happened is that AI is causing massive economic damage,
+ completely destroying the tech industry and highly paid computer
+ programmers.
+<p>I remember being a kid working at a gas station, slowly saving up
+ enough money to buy a car, and being on the internet for hours every
+ night, learning computers and technology to get out of the trap of only
+ being able to work in a gas station. Finally, I saved up enough to buy
+ an old car, had a friend of a friend find a place that was hiring, and
+ got my foot in the door by working as tech support for the then nascent
+ internet industry in Silicon Valley.
+<p>With AI taking over everything, people these days no longer have that
+ opportunity. AI is eating away at the middle class, and today’s
+ generation of talented artists, musicians, and computer programmers are
+ having their jobs being taken away from them by AI agents, forcing them
+ to stay in low paying service positions.
+<a name="2026-07-11-picture-credits"> </a>
+<h3>Picture credits</h3>
+<p><em>The picture for this blog is a waxwork of the Terminator at
+ Madame Tussauds, London. The picture was taken by</em> <a href="https://www.flickr.com/people/9246636@N02">Daniel  Jurena</a> 
+<em>from Prague, Czech Republic. The picture has been
+ altered (resized and cropped), and is</em> <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en">CC-BY-SA 2.0</a> 
+<em>licensed.</em>
+
+<h3>Footnote</h3>
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
+<a name="2026-07-11-1"> </a>
+<a href="#back-2026-07-11-1">1</a>:  The details are more complicated, but in the interest in having no spoilers, this is a reasonable description of how Skynet was created.
+<p>
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-07-09 2026 ` -->
 <a name="BlogEntry-2026-07-09"> </a>
 <!--{TAGS:M}-->
@@ -723,139 +782,9 @@ and a myth these people <a href="archive.html#2026-05-03-manosphere-lies">refuse
  - 
 <a href="#GitBlogIndex">Index</a></i></div>
 <div class=blog>
-<!-- `ENTRY: 2026-06-12 2026 ` -->
-<a name="BlogEntry-2026-06-12"> </a>
-<div class=blogpicx style="text-align: right">
-<img src="pics/MaraDNS.jpg" width=224 height=126>
-</div>
-<h1>MaraDNS in the age of AI</h1>
-<h2>June 12, 2016</h2>
-MaraDNS is remarkably secure, as shown by the number of issues AI
- assisted code reviews have found.
-<a name="2026-06-12-overview-mostly-false-alarms"> </a>
-<h3>Overview: Mostly false alarms</a> 
-</h3>
-<p>I have received 12 AI assisted security advisories; of those
- advisories, only one was serious enough to merit a patch being made.
- Another one, which yes I patched against, was with code which hasn’t
- been able to even <em>compile</em> since 2022.
-<p>The problem with AI-assisted reviews is that people are finding a
- large number of issues which aren’t actual security issues.
-<p>With one issue, when I asked for an exploit or a patch, they ignored
- me. It didn’t look like a real issue.
-<p>I got some eight different reports from another person including one
- claimed “packet of death”. I <a href="https://github.com/samboy/MaraDNS/tree/master/deadwood-github/sqa/sqa_null_in_cname">spent a day investigating the “packet of death”  claim</a>, 
-and it was a
- false alarm. The issues they found were things like “if Deadwood gets
- this weird packet, it takes Deadwood a couple of seconds to release the
- resource used by the recursive query being processed”. So, nothing
- serious and nothing that merits a patch.
-<p>Another person sent a fairly large merge request, claiming buffer
- overflows in a couple of utilities that do not even compile by default.
- I looked at the issues and verified that I did proper bounds checking
- except in one case there is a program—which I wrote about 20 years ago
- and which hasn’t even been able to <em>compile</em> since 2022—with a
- buffer overflow, but only if one’s <code>$HOME</code> (home directory)
- is over 50 characters in length—a very unusual circumstance. I will
- detail this fix below.
-<p><a href="https://github.com/harukioya">Haruki Oyama</a>, 
-on the other
- hand, did find a legitimate security hole which merited a new MaraDNS
- release with the DNS-over-TCP code in Deadwood.
-<a name="2026-06-12-issue-1-dns-over-tcp-denial-of-service"> </a>
-<h3>Issue #1:
- DNS-over-TCP denial of service</h3>
-<p>If DNS-over-TCP was enabled (it is disabled by default), a Deadwood
- client authorized to perform DNS queries could cause the DNS-over-TCP
- service to not function with a denial of service attack.
-<p>This bug does not affect DNS-over-UDP operation.
-<p>If <code>tcp_listen</code> is <em>not</em> in your dwood3rc file,
- this bug <em>does not affect you</em>. If tcp_listen <em>is</em> in
- your dwood3rc file but has the value <code>0</code>, this bug <em>still</em>
- does not affect you. Only people who have set <code>tcp_listen</code>
- to have a value of 1 are affected.
-<p>Note that no example <code>dwood3rc</code> file has <code>tcp_listen</code>
- set to <code>1</code>.
-<p>Only clients authorized to perform DNS queries can exploit this bug.
-<a name="2026-06-12-issue-2-mqhash-buffer-overflow"> </a>
-<h3>Issue #2: mqhash buffer
- overflow</h3>
-<p><code>mqhash</code> is a program I wrote in 2005 or 2006, and which I
- stopped using once I moved from using AES for cryptographically strong
- random numbers over to RadioGatún[32]. Indeed, the program stopped
- being able to <em>compile</em> in 2022.
-<p>However, since it uses <code>strcat()</code>, a static code analysis
- revealed that this unused code had a very hard to exploit buffer
- overflow:
-<ul>
-<li>
-<p><code>mqhash</code> is not compiled by default when compiling
- MaraDNS, Deadwood, and coLunacyDNS. One would have to go to the
- directory <code>mqhash</code> is in to compile it.
-</li>
-<li>
-<p><code>mqhash</code> had to be patched before the program would even
- compile; I didn’t even realize it stopped compiling until this issue
- was brought up.
-</li>
-<li>
-<p>Once <code>mqhash</code> was patched, one would need to have <code>
-$HOME</code> (one’s home directory) be over 50 characters in length. <code>
-$HOME</code> is normally 6 + <em>size of username</em> characters in
- length (<code>/<![if gt IE 6]>&#8203;<![endif]><wbr>home/<![if gt IE 6]>&#8203;<![endif]><wbr>$USERNAME</code>), and usernames are generally 8
- characters or shorter, so in the real world, <code>$HOME</code> should
- be 14 characters or less, but needs to be 50 characters or longer for
- the exploit to work.
-</li>
-</ul>
-<p>To address this issue:
-<ul>
-<li>
-<p>I patched against the buffer overflow.
-</li>
-<li>
-<p>I updated <code>mqhash</code> so it would compile again
-</li>
-<li>
-<p>I updated the relevant <code>Makefile</code> so <code>mqhash</code>
- won’t compile with the default <code>all</code> target.
-</li>
-</ul>
-<a name="2026-06-12-maradns-in-2026"> </a>
-<h3>MaraDNS in 2026</h3>
-<p>I have released <a href="https://samboy.github.io/MaraDNS/webpage/download.html">MaraDNS 3.5.0037</a> 
-with these issues patched.
-<p>People may observe I have moved MaraDNS from my <a href="https://samiam.org">personal domain</a> 
-to GitHub. While I have no plans to shut down my
- personal domain at this time, having it on GitHub means that MaraDNS’s
- webpage will stay online and not need to be accessed by using a web
- archive when and if my personal domains ever go down.
-<p>Just as I have fixed Y2038 issues in 2022, as well as moving from
- Perl to Lua 5.1 (which <em>is</em> included with MaraDNS as a security
- hardened fork called “Lunacy”) for the scripts which make MaraDNS’s
- documentation, I am now moving to a website which should stay online
- for the foreseeable future.
-<p>In addition, it would seem I have lost my GPG signing key for
- MaraDNS. For people who need a GPG signed copy of MaraDNS, download <a href="https://maradns.samiam.org/download/3.5/3.5.0036/">MaraDNS 3.5.0036</a> 
-and apply any <a href="https://samboy.github.io/MaraDNS/patches/">security  patches</a> 
-by hand.
-<p>MaraDNS can be downloaded from my <a href="https://samboy.github.io/MaraDNS/webpage/download.html">personal  domain</a> 
-as well as from <a href="https://sourceforge.net/projects/maradns/">Sourceforge</a>. 
-It’s also available on <a href="https://github.com/samboy/MaraDNS">multiple</a> 
-public <a href="https://codeberg.org/samboy/MaraDNS">Git repos</a>.
-
-
-<p>
-
-</div>
-
-<div class=GitBlogNav><i>Go to: 
-<a href="#GitBlogTop">Top</a>
- - 
-<a href="#GitBlogIndex">Index</a></i></div>
-<div class=blog>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="entries/2026-07-11.html">Re-watching Terminator 2 (2026-07-11)</a></br>
 <a href="entries/2026-07-09.html">Grab bag (2026-07-09)</a></br>
 <a href="entries/2026-07-05.html">Lunacy 2026-07-05 released (2026-07-05)</a></br>
 <a href="entries/2026-07-04.html">MaraDNS 3.5.0038 released (2026-07-04)</a></br>
