@@ -468,7 +468,7 @@ doContinue = false
 
       -- Convert blog:entry links in to his correct form
       l = l:gsub('<[aA]%s+[Hh][Rr][Ee][Ff]=%"[bB][lL][oO][gG]%:([^"]+)',
-                 '<a href="#BlogEntry-%1')
+                 '<a href="archive.html#BlogEntry-%1')
       -- We have to handle things like "blog:20120907#20120907-slashdot"
       l = l:gsub('<a href="#BlogEntry-[0-9-]+(#[^"]+)',
                  '<a href="archive.html%1')
