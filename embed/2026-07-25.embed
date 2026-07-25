@@ -113,7 +113,7 @@ doesn’t have an exit.
 <p>This is a non-issue for source ports with <a href="https://doomwiki.org/wiki/UMAPINFO">UMAPINFO</a> 
 support, but ObHack7 is made for Doomsday 1.8.6, which came
  out well over a decade before UMAPINFO existed, and doesn’t generate
- UMAPINFO limps.
+ UMAPINFO lumps.
 <a name="2026-07-25-obsidian"> </a>
 <h3>Obsidian</h3>
 <p>I mention Obsidian, another fork of Oblige 7. Obsidian is available
