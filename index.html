@@ -230,6 +230,149 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<!-- `ENTRY: 2026-07-25 2026 ` -->
+<a name="BlogEntry-2026-07-25"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/Heretic.jpg" width=224 height=126>
+</div>
+<h1>ObHack7 release</h1>
+<h2>July 25, 2026</h2>
+I have made what will probably be my only release of ObHack7 today.
+ This is a random map generator (procedural generator) for Doom, Doom2,
+ and Heretic that runs in Windows. It can be downloaded by clicking (or
+ tapping on) <a href="ObHack/Oblige-7.70-bright-2026-07-25.7z">this  link</a>, 
+and <a href="ObHack/Oblige-7.70-source.7z">source code</a>  
+is also available.
+<a name="2026-07-25-ohhack"> </a>
+<h3>OhHack</h3>
+<p><a href="https://doomwiki.org/wiki/ObHack">ObHack</a> 
+is a fork of
+ Oblige 2 which I mainly worked on back when I didn’t have Internet at
+ home and wanted to be able to play unlimited Freedoom and Heretic
+ levels.
+<p>There was interest in me doing a version of ObHack for later versions
+ of Oblige, something I never did until a couple of years ago, when I
+ started using Oblige 7 to generate Heretic levels.
+<a name="2026-07-25-obhack7-2026-07-25"> </a>
+<h3>ObHack7 2026-07-25</h3>
+<p>Compared to Oblige 7, ObHack7 has the following changes
+<ul>
+<li>
+<p>Town theme enabled (this looks like maps in E1 with classic Heretic).
+</li>
+<li>
+<p>New theme: Egypt (which ObHack had), which makes very sandy “desert”
+ levels.
+</li>
+<li>
+<p>“Episodic” levels start out smaller and get much bigger.
+</li>
+<li>
+<p>“Small”/<![if gt IE 6]>&#8203;<![endif]><wbr>“Medium”/<![if gt IE 6]>&#8203;<![endif]><wbr>“Large”/<![if gt IE 6]>&#8203;<![endif]><wbr>“Extreme” levels are now smaller.
+</li>
+<li>
+<p>Heretic: More tomes, more mega-armor.
+</li>
+<li>
+<p>We now make Episode 6 levels for Heretic (see discussion below).
+</li>
+<li>
+<p>Heretic: Level starts usually have backpack, often mega-armor.
+</li>
+<li>
+<p>Heretic: The only liquids we have is water.
+</li>
+<li>
+<p>CONFIG.TXT updated.
+</li>
+<li>
+<p>Added note that, because of a bug in Oblige7, levels using a date for
+ the seed should have the seed be in MMDDYYN000 format, where MM is
+ month, DD is day, YY is year (2000-2099), and N is a number from 1 to
+ 9; the final three digits of the seed should be 0. Example seed:
+ 0725261000 (or 725261000) for a seed with today’s date.
+</li>
+</ul>
+<a name="2026-07-25-playing-heretic-in-2026"> </a>
+<h3>Playing Heretic in 2026</h3>
+<p>Now that <a href="https://doomwiki.org/wiki/Heretic_%2B_Hexen">Heretic + Hexen</a> 
+has been released, finally giving the E6 levels
+ official names, here are my thoughts on playing Heretic here in 2026:
+<ul>
+<li>
+<p>Heretic + Hexen opted to have a mid-1990s pixelated look for the
+ game. There is a reason why Quake added support for hardware
+ acceleration to get rid of that ugly pixelated look, and why people
+ quickly in the late 1990s added graphic cards to their computers to
+ have things look much more smooth.
+</li>
+<li>
+<p>The best way to play Heretic here in the 2020s, in my opinion, is
+ with the final release of <a href="https://dengine.net/">Dengine</a>,  
+which is Heretic with modern graphics, and uses Quake-like “mouse look”
+ and WASD gameplay, the way a modern FPS (first person shooter) game
+ should be played.
+</li>
+<li>
+<p>I also like to play using the mid-first-2000s-decade 1.8.6 release of
+ Dengine, which also supports mouse look, hardware acceleration, is tiny
+ (only 2.2 megs in size), and runs great even on an ancient N455 Netbook
+ from 2010. I have <a href="https://samiam.org/slump/#Other">a mirror</a>  
+of this old version of Dengine.
+</li>
+</ul>
+<a name="2026-07-25-episode-6"> </a>
+<h3>Episode 6</h3>
+<p>Heretic’s “Shadow of the Serpent Riders” release included three
+ secret levels in Episode 6; these maps were for deathmatch play. E6M3,
+ “<a href="https://doomwiki.org/wiki/E6M3_%28Heretic%29">American’s Legacy</a>”, 
+doesn’t have an exit.
+<p>Oblige 7 handled episode 6 by ignoring it; ObHack7 handles Episode 6
+ by having it have an exit, and then having ObHack generate E6M4, E6M5,
+ and so on until E6M9.
+<p>The way Heretic + Hexen handles E6M3 having an exit is by having a
+ “You’re not supposed to get here, but hurray, you won the secret
+ levels” message after exiting E6M3, then ending the game. E6M4 and so
+ on are not accessible.
+<p>Dengine (Doomsday) 1.8.6 had a bug: It would take one to E6M4 once
+ one exited E6M3, and so on until E6M8. Switching the exit in E6M8
+ causes the exit to “click”, but otherwise nothing happens. Exiting E6M9
+ puts one in level E6M0. While it’s not possible to load a game saved in
+ E6M0, exiting E6M0 puts one in E6M1 again.
+<p>ObHack2 in fact generated an E6M0 level so one could exit the secret
+ E6 level and continue playing maps. ObHack 7 doesn’t generate E6M0; not
+ only isn’t there a way of getting to E6M9 without using the Doomsday
+ console, but exiting E6M9 will, since there isn’t E6M0, crash Doomsday
+ 1.8.6.
+<a name="2026-07-25-obsidian"> </a>
+<h3>Obsidian</h3>
+<p>I mention Obsidian, another fork of Oblige 7. Obsidian is available
+ here:
+<blockquote>
+<p><a href="https://github.com/GTD-Carthage/Obsidian-Content">https:/<![if gt IE 6]>&#8203;<![endif]><wbr>/<![if gt IE 6]>&#8203;<![endif]><wbr>github.com/<![if gt IE 6]>&#8203;<![endif]><wbr>GTD-Carthage/<![if gt IE 6]>&#8203;<![endif]><wbr>Obsidian-Content</a>
+</blockquote>
+<p>My impression is that Obsidian has a lot of features Oblige 7 doesn’t
+ have, but the code is a lot more buggy and unstable that Oblige 7 and
+ ObHack are.
+<a name="2026-07-25-download"> </a>
+<h3>Download</h3>
+<p>ObHack7 can be downloaded by clicking (or tapping on) <a href="ObHack/Oblige-7.70-bright-2026-07-25.7z">this link</a>, 
+and <a href="ObHack/Oblige-7.70-source.7z">source code</a>  
+is also available.
+<p>Note that both files are compressed using 7-zip. Windows 11 comes
+ with built-in 7-zip support; users of Windows 10 or earlier can use <a href="https://7-zip.org">7-zip</a> 
+to extract the files.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-07-24 2026 ` -->
 <a name="BlogEntry-2026-07-24"> </a>
 <div class=blogpicx style="text-align: right">
@@ -662,126 +805,9 @@ personal domains will go down when I’m no longer in this
  - 
 <a href="#GitBlogIndex">Index</a></i></div>
 <div class=blog>
-<!-- `ENTRY: 2026-07-03 2026 ` -->
-<a name="BlogEntry-2026-07-03"> </a>
-<div class=blogpicx style="text-align: right">
-<img src="pics/MaraDNS.jpg" width=224 height=126>
-</div>
-<h1>MaraDNS and POSIX</h1>
-<h2>July 3, 2026</h2>
-I made a <code>2026-07-03</code> tag for MaraDNS today. I will go
- over the changes since yesterday. MaraDNS can now be compiled on a C99
- and POSIX 2008 compatible system.
-<a name="2026-07-03-maradns-and-posix"> </a>
-<h3>MaraDNS and POSIX</h3>
-<p>Since there have been issues where code which compiled without
- warning when <code>-Wall</code> is set no longer compiling with newer
- versions of the same compilers, I have finally made MaraDNS have the
- option to be compiled using fully standards compliant code:
-<ul>
-<li>
-<p>MaraDNS programs now compile with the <code>-std=c99</code> flag
-</li>
-<li>
-<p>MaraDNS now uses feature test macros to make sure the standards are
- used when compiling MaraDNS
-</li>
-</ul>
-<p>To compile MaraDNS in strict conformance with C99 and POSIX 2008:
-<pre class="blogPre">./configure --strict-posix
-CC=cc
-export CC
-make
-cd coLunacyDNS
-make clean
-make -f Makefile.strict
-</pre>
-<p>However, in the interests of security, MaraDNS by default uses two
- functions which are not part of the POSIX 2008 standard. Most of the
- time, this is the correct way to compile MaraDNS:
-<pre class="blogPre">./configure --strict-posix
-CC=cc
-export CC
-make
-cd coLunacyDNS
-make -f Makefile.default
-</pre>
-<a name="2026-07-03-chroot"> </a>
-<h3>chroot</h3>
-<p>MaraDNS uses the <code>chroot</code> system call to, in case of a
- security issue which allows MaraDNS to give an attacker a remote shell,
- restrict that shell’s access to the underlying filesystem. While there
- has, as of 2026, <em>never</em> been a remote shell exploit found in
- MaraDNS—even though MaraDNS has been around for over 25 years—<code>
-chroot</code> minimizes the impact should such a bug be found in the
- future.
-<p>MaraDNS will run without <code>chroot</code>, but the security
- implications would be more significant should someone ever be able to
- get a remote shell with MaraDNS.
-<p><code>chroot</code> is not defined in POSIX because “<a href="https://www.govinfo.gov/content/pkg/GOVPUB-C13-bf1fc57a5dbcaa993cebad99aca83f64/pdf/GOVPUB-C13-bf1fc57a5dbcaa993cebad99aca83f64.pdf">it was not useful to portable applications</a>” 
-(page 258) since there
- isn’t a way to make a usable <code>chroot</code> environment in the
- POSIX spec.
-<p>The POSIX developers failed to consider the case of using <code>
-chroot</code> as a portable and widely implemented way of putting an
- application in a sandbox—there is no need to have an “environment in
- which an application could run” in said sandbox, since MaraDNS is
- started and loads configuration files <em>before</em> entering the <code>
-chroot</code> jail.
-<a name="2026-07-03-setgroups"> </a>
-<h3>setgroups</h3>
-<p>The <code>setgroups</code> call is also used to sandbox MaraDNS. Like
- <code>chroot</code>, this minimizes the impact should one be able to
- get a remote root shell via a security hole in MaraDNS (again, as of
- 2026, no security hole with remote shell access has ever been found in
- MaraDNS, and it has been over 25 years).
-<p><code>setgroups</code> is not defined in POSIX because it <a href="https://linux.die.net/man/2/setgroups">requires elevated privileges to run</a>.
-<a name="2026-07-03-both-of-these-calls-are-standard-unix-calls"> </a>
-<h3>Both of these
- calls are standard UNIX calls</h3>
-<p>Both <code>chroot</code> and <code>setgroups</code>, while not
- formally part of the POSIX standard, have been used by MaraDNS for
- decades. <code>chroot</code> and <code>setgroups</code> have been used,
- with their API unchanged, by MaraDNS without issue since 2001—some 25
- years ago. Considering these two function calls haven’t changed in 25
- years, it is highly doubtful they will change in the future.
-<p>The <code>chroot</code> call <a href="https://pubs.opengroup.org/onlinepubs/7908799/xsh/chroot.html">used to be part of the POSIX  standard</a> 
-back when it was called the
- “single UNIX specification”, and <a href="https://linux.die.net/man/2/setgroups">setgroups conforms to SVr4 and 4.3BSD</a>. 
-These calls are included with
- Linux, BSD, and pretty much any UNIX that exists (with rare exceptions;
- there was a time when QNX didn’t support <code>chroot</code>, <a href="https://www.qnx.com/developers/docs/8.0/com.qnx.doc.security.system/topic/manual/chroot.html">although it does  now</a>, 
-and the Win32 API doesn’t have <code>chroot</code>
- either).
-<p>That in mind, MaraDNS will continue to support <code>chroot</code>
- and <code>setgroups</code> unless one asks MaraDNS to compile in strict
- conformance with POSIX 2008.
-<a name="2026-07-03-looking-forward"> </a>
-<h3>Looking forward</h3>
-<p>MaraDNS is now using the C99 standard to compile all programs, and
- POSIX 2008 for all system calls, except for <code>chroot</code> and <code>
-setgroups</code> (the Win32 port of MaraDNS uses Windows specific calls,
- but Windows—despite its imperfections—has a rock solid unchanging API).
-<p>That in mind, if MaraDNS doesn’t compile in the future, it is most
- likely a bug with the compiler and/<![if gt IE 6]>&#8203;<![endif]><wbr>or libc library, and probably not a
- bug with MaraDNS.
-<p>MaraDNS is now more future proof—it is now very unlikely a future
- compiler change will stop MaraDNS from compiling, especially since
- MaraDNS sets the flag (<code>-std=c99</code>) to compile the code using
- the C99 standard.
-
-
-<p>
-
-</div>
-
-<div class=GitBlogNav><i>Go to: 
-<a href="#GitBlogTop">Top</a>
- - 
-<a href="#GitBlogIndex">Index</a></i></div>
-<div class=blog>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="entries/2026-07-25.html">ObHack7 release (2026-07-25)</a></br>
 <a href="entries/2026-07-24.html">More Marshall Memories (2026-07-24)</a></br>
 <a href="entries/2026-07-19.html">Grab bag (2026-07-19)</a></br>
 <a href="entries/2026-07-11.html">Re-watching Terminator 2 (2026-07-11)</a></br>
