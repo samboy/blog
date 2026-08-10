@@ -230,6 +230,65 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<!-- `ENTRY: 2026-08-10 2026 ` -->
+<a name="BlogEntry-2026-08-10"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/2024-05-01.jpg" width=224 height=126>
+</div>
+<h1>Grab bag</h1>
+<h2>August 10, 2026</h2>
+I discuss ideas for a universal cross-platform filesystem, and how
+ the manosphere/<![if gt IE 6]>&#8203;<![endif]><wbr>RedPill movement is a profit making industry.
+<a name="2026-08-10-a-universal-file-system"> </a>
+<h3>A universal file system</h3>
+<p>What is the best filesystem to use for an external hard drive? For a
+ while, I have been using FAT32 for fairly small filesystems which
+ anything can mount (FAT32 can support a filesystem <a href="https://nitter.net/davepl1968/status/2086519923493458183">up to two terabytes in  size</a>; 
+I use FAT32 for my car stereo which
+ doesn’t support exFAT), and NTFS for anything bigger.
+<p>FAT32 doesn’t support journalling and has a four gigabyte filesize
+ limitation. exFAT has <a href="https://archive.ph/20251219174720/https://en.wikipedia.org/wiki/ExFAT#Other_implementations">issues with  patents</a> 
+(but, yes, Microsoft gave open source software
+ a free license to use exFAT) and doesn’t have journalling. NTFS has
+ only readonly support on MacOS unless one buys <a href="https://www.paragon-software.com/home/ntfs-mac/">a third party  program</a>.
+<p>Probably the best universal read-write filesystem which all
+ mainstream operating systems support (including some BSDs) is UDF, the
+ filesystem DVDs used. It’s a read-write filesystem, it’s a
+ log-structured filesystem which means the entire filesystem is a
+ journal, it’s supported for both reading and writing in Windows, Linux,
+ and MacOS, among other operating systems, and filesystems can be up to
+ 16 terabytes in size.
+<p>There is some hacking to make a UDF drive cross-platfom, but there is
+ <a href="https://github.com/JElchison/format-udf">a utility</a> 
+which
+ handles the corner cases and documents all of the UDF compatibility
+ wrinkles.
+<a name="2026-08-10-the-manosphere-greed-machine"> </a>
+<h3>The manosphere greed machine</a> 
+</h3>
+<p>Wired has an <a href="https://archive.ph/20260808074124/https://www.wired.com/story/the-manosphere-isnt-a-movement-its-a-multibillion-dollar-grievance-industry">article</a> 
+about the manosphere movement, i.e. the kinds of guys who
+ believe <a href="80-20-myth.html">the  lie</a> 
+that 80% of the women
+ sleep with only 20% of the men. It argues that this movement is fueled
+ by greedy men who spread lies online to hook men in to the movement and
+ sell them things.
+<p>Getting men to believe 80% of the women only sleep with 20% of men is
+ a great way to make money: Convince men they can become part of that
+ imaginary 20% if they buy your $20 dating guide which supposedly
+ teaches you to become a “real man” (whatever that is) who attracts all
+ the girls.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-07-25 2026 ` -->
 <a name="BlogEntry-2026-07-25"> </a>
 <div class=blogpicx style="text-align: right">
@@ -751,66 +810,9 @@ as well as <a href="https://gitlab.com/maradns/maradns">other repos</a>.
  - 
 <a href="#GitBlogIndex">Index</a></i></div>
 <div class=blog>
-<!-- `ENTRY: 2026-07-04 2026 ` -->
-<a name="BlogEntry-2026-07-04"> </a>
-<div class=blogpicx style="text-align: right">
-<img src="pics/MaraDNS.jpg" width=224 height=126>
-</div>
-<h1>MaraDNS 3.5.0038 released</h1>
-<h2>July 4, 2026</h2>
-In celebration of the 250<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px">th</sup> anniversary of the United States being
- created, I have released MaraDNS 3.5.0038. The main changes, compared
- to MaraDNS 3.5.0037, is that MaraDNS now cleanly compiles.
-<a name="2026-07-04-cleanly-compiles"> </a>
-<h3>Cleanly compiles</h3>
-<p>As I talked about <a href="archive.html#BlogEntry-2026-07-03">extensively</a>  
-yesterday, MaraDNS now cleanly compiles, and its build process has been
- altered to ensure that MaraDNS will continue to compile for the
- foreseeable future.
-<a name="2026-07-04-tests-updated"> </a>
-<h3>Tests updated</h3>
-<p>Since compilers have gotten more picky since I last ran the test
- suite with MaraDNS, I have updated the test suite to run again. The OS
- I currently use to run the test suite is a Docker container with Alpine
- 3.24; all tests pass in that environment.
-<a name="2026-07-04-maradnss-future"> </a>
-<h3>MaraDNS’s future</h3>
-<p>MaraDNS is in deep freeze: The only changes I make at this point are
- credible security updates (with the deluge of AI-assisted security
- “reports” these days, I’m very picky about what makes a real security
- issue) and updates to make sure MaraDNS continues to compile and run.
-<p>The 3.5.0037 release fixed a minor security issue; MaraDNS 3.5.0038
- cleans things up and fixes issues found by newer and more picky
- compilers.
-<p>As I get older—keep in mind MaraDNS has now existed for over 25
- years—I change my outlook on life. Seeing my first wife and both my
- parents die has made me think about my own mortality. While I hope to
- live for many many more years, I am now thinking about what legacy I
- will leave after I die. Yes, I do have a child, and yes I have a legacy
- there, but I also want to have MaraDNS be something which outlives me.
-<p>This is why I have, by and large, moved MaraDNS from <a href="https://maradns.samiam.org">my personal domain</a> 
-over to <a href="https://samboy.github.io/MaraDNS/webpage/">GitHub</a>—my 
-personal domains will go down when I’m no longer in this
- world and no longer babysit my servers and domain registrations, but
- GitHub <em>should</em> outlive me, hopefully for a very long time. This
- is why MaraDNS is on multiple public Git repos, so MaraDNS should still
- be online if some Git repos go offline.
-<p>MaraDNS has been a lot of work, and it’s unfortunate I was never able
- to effectively monetize MaraDNS to make a living from this program, but
- it’s work which I believe will have an enduring and lasting legacy.
-
-
-<p>
-
-</div>
-
-<div class=GitBlogNav><i>Go to: 
-<a href="#GitBlogTop">Top</a>
- - 
-<a href="#GitBlogIndex">Index</a></i></div>
-<div class=blog>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="entries/2026-08-10.html">Grab bag (2026-08-10)</a></br>
 <a href="entries/2026-07-25.html">ObHack7 release (2026-07-25)</a></br>
 <a href="entries/2026-07-24.html">More Marshall Memories (2026-07-24)</a></br>
 <a href="entries/2026-07-19.html">Grab bag (2026-07-19)</a></br>

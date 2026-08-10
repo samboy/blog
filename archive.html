@@ -230,6 +230,65 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<!-- `ENTRY: 2026-08-10 2026 ` -->
+<a name="BlogEntry-2026-08-10"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/2024-05-01.jpg" width=224 height=126>
+</div>
+<h1>Grab bag</h1>
+<h2>August 10, 2026</h2>
+I discuss ideas for a universal cross-platform filesystem, and how
+ the manosphere/<![if gt IE 6]>&#8203;<![endif]><wbr>RedPill movement is a profit making industry.
+<a name="2026-08-10-a-universal-file-system"> </a>
+<h3>A universal file system</h3>
+<p>What is the best filesystem to use for an external hard drive? For a
+ while, I have been using FAT32 for fairly small filesystems which
+ anything can mount (FAT32 can support a filesystem <a href="https://nitter.net/davepl1968/status/2086519923493458183">up to two terabytes in  size</a>; 
+I use FAT32 for my car stereo which
+ doesn’t support exFAT), and NTFS for anything bigger.
+<p>FAT32 doesn’t support journalling and has a four gigabyte filesize
+ limitation. exFAT has <a href="https://archive.ph/20251219174720/https://en.wikipedia.org/wiki/ExFAT#Other_implementations">issues with  patents</a> 
+(but, yes, Microsoft gave open source software
+ a free license to use exFAT) and doesn’t have journalling. NTFS has
+ only readonly support on MacOS unless one buys <a href="https://www.paragon-software.com/home/ntfs-mac/">a third party  program</a>.
+<p>Probably the best universal read-write filesystem which all
+ mainstream operating systems support (including some BSDs) is UDF, the
+ filesystem DVDs used. It’s a read-write filesystem, it’s a
+ log-structured filesystem which means the entire filesystem is a
+ journal, it’s supported for both reading and writing in Windows, Linux,
+ and MacOS, among other operating systems, and filesystems can be up to
+ 16 terabytes in size.
+<p>There is some hacking to make a UDF drive cross-platfom, but there is
+ <a href="https://github.com/JElchison/format-udf">a utility</a> 
+which
+ handles the corner cases and documents all of the UDF compatibility
+ wrinkles.
+<a name="2026-08-10-the-manosphere-greed-machine"> </a>
+<h3>The manosphere greed machine</a> 
+</h3>
+<p>Wired has an <a href="https://archive.ph/20260808074124/https://www.wired.com/story/the-manosphere-isnt-a-movement-its-a-multibillion-dollar-grievance-industry">article</a> 
+about the manosphere movement, i.e. the kinds of guys who
+ believe <a href="80-20-myth.html">the  lie</a> 
+that 80% of the women
+ sleep with only 20% of the men. It argues that this movement is fueled
+ by greedy men who spread lies online to hook men in to the movement and
+ sell them things.
+<p>Getting men to believe 80% of the women only sleep with 20% of men is
+ a great way to make money: Convince men they can become part of that
+ imaginary 20% if they buy your $20 dating guide which supposedly
+ teaches you to become a “real man” (whatever that is) who attracts all
+ the girls.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-07-25 2026 ` -->
 <a name="BlogEntry-2026-07-25"> </a>
 <div class=blogpicx style="text-align: right">
@@ -63805,6 +63864,7 @@ index</A> for details)</i>
 <div class=blog>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="entries/2026-08-10.html">Grab bag (2026-08-10)</a></br>
 <a href="entries/2026-07-25.html">ObHack7 release (2026-07-25)</a></br>
 <a href="entries/2026-07-24.html">More Marshall Memories (2026-07-24)</a></br>
 <a href="entries/2026-07-19.html">Grab bag (2026-07-19)</a></br>
