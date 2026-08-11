@@ -386,8 +386,8 @@ blogIndex = ""
 archiveIndex = ""
 count = 0
 repeat
-doBreak = true
-doContinue = false
+  doBreak = true
+  doContinue = false
   for fileName in sPairs(fileList,function(a,b) return b<a end) do
     -- Get the date for the blog from the filename
     local date=fileName:gsub(".*(%d%d%d%d%-?%d%d%-?%d%d).*","%1")
