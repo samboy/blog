@@ -88,6 +88,15 @@ function sPairs(inputTable,sFunc)
   end
 end
 
+-- Directory traversal is not included with Lua 5.1, but we need it
+if not lfs then
+  print("If `require('lfs')` fails,")
+  print("Download Lunacy at https://github.com/samboy/Lunacy")
+  print("Or install LFS https://github.com/samboy/LUAlibs")
+  lfs = require('lfs')
+  print("Looks like `require('lfs')` succeeded")
+end
+
 blogTop = [[
 @font-palette-values --dark {
  font-family: "ChessCancunColor";
@@ -385,6 +394,22 @@ end
 blogIndex = ""
 archiveIndex = ""
 count = 0
+
+-- We need a link at the bottom of the blog index page to make it easy
+-- to go to older blog entries
+linkBeforeIndex = nil -- Link at end of 7th entry to continue reading
+for fileName in sPairs(fileList,function(a,b) return b<a end) do
+  local date=fileName:gsub(".*(%d%d%d%d%-?%d%d%-?%d%d).*","%1")
+  count = count + 1
+  if count == 8 then
+    linkBeforeIndex = '<a href="entries/' .. date .. '.html">Older entries</a>'
+  end
+end 
+count = 0
+
+-- Yes, there are patches to give Lua 5.1 “continue”, and LuaJIT 3.0 will
+-- have “continue”.  No, I will not use any of those patches so this script
+-- remains bog standard Lua 5.1 with LFS support
 repeat
   doBreak = true
   doContinue = false
@@ -484,21 +509,30 @@ repeat
     thisFileHandle:close()
 
     -- There’s a little navbar between blog entries
-    if count <= 7 then
-      -- fo('<hr class=pc>')
+    if count < 7 then
       fo('<div class=GitBlogNav><i>Go to: ')
       fo('<a href="#GitBlogTop">Top</a>')
       fo(' - ')
       fo('<a href="#GitBlogIndex">Index</a></i></div>')
-      -- fo('<hr class=pc>')
       fo('<div class=blog>')
-    else
-      -- archiveOnly('<hr class=pc>')
+    elseif count == 7 then
+      if linkBeforeIndex then
+        indexOnly('<div class=GitBlogNav><i>')
+        indexOnly(linkBeforeIndex)
+        indexOnly('</i></div>')
+      else
+        indexOnly('<div class=GitBlogNav><i>Go to: ')
+        indexOnly('<a href="#GitBlogTop">Top</a>')
+        indexOnly(' - ')
+        indexOnly('<a href="#GitBlogIndex">Index</a></i></div>')
+      end
+      indexOnly('<div class=blog>')
+    end
+    if count >= 7 then
       archiveOnly('<div class=GitBlogNav><i>Go to: ')
       archiveOnly('<a href="#GitBlogTop">Top</a>')
       archiveOnly(' - ')
       archiveOnly('<a href="#GitBlogIndex">Index</a></i></div>')
-      -- archiveOnly('<hr class=pc>')
       archiveOnly('<div class=blog>')
     end
   end
