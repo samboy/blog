@@ -22,7 +22,7 @@ fi
 exec $LUNACY $0 "$@"
 
 # ]=]1
--- This script is written in Lua 5.1
+-- This script is written in Lua 5.1 (lfs required)
 
 -- This script has been donated to the public domain in 2026 by Sam Trenholme
 -- If, for some reason, a public domain declation is not acceptable, it
@@ -91,8 +91,9 @@ end
 -- Directory traversal is not included with Lua 5.1, but we need it
 if not lfs then
   print("If `require('lfs')` fails,")
+  print("lfs should be available with your package manager.  If not,")
   print("Download Lunacy at https://github.com/samboy/Lunacy")
-  print("Or install LFS https://github.com/samboy/LUAlibs")
+  print("Or install LFS from here: https://github.com/samboy/LUAlibs")
   lfs = require('lfs')
   print("Looks like `require('lfs')` succeeded")
 end
