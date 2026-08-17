@@ -1,0 +1,58 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/2024-05-01.jpg" width=224 height=126>
+</div>
+<h1>RISC-V will eventually take
+ over</h1>
+<h2>August 16, 2026</h2>
+I explain why the future of computing is the RISC-V.
+<a name="2026-08-16-risc-v"> </a>
+<h3>RISC-V</h3>
+<p><a href="https://en.wikipedia.org/wiki/RISC-V">RISC-V</a> 
+is an open
+ source ISA (an ISA, or instruction set architecture, is the language a
+ given chip understands) which, unlike x86_64 and ARM, is free for
+ anyone to implement and use.
+<p>I believe there will come a day when RISC-V has comparable or better
+ performance than ARM and x86_64.
+<p>This is based on history: I remember when x86 performance compared to
+ the DEC Alpha, PA-RISC, SPARC, etc. was a joke. There was a time when,
+ if you wanted real performance, you needed to pony up $20,000-$50,000
+ for a workstation with a MIPS/<![if gt IE 6]>&#8203;<![endif]><wbr>PA-RISC/<![if gt IE 6]>&#8203;<![endif]><wbr>SPARC/<![if gt IE 6]>&#8203;<![endif]><wbr>Alpha/<![if gt IE 6]>&#8203;<![endif]><wbr>whatever processor.
+ All these workstations smoked the x86 computers of the era.
+<p>However, people were buying x86 computers at a far higher rate,
+ giving Intel (and AMD) the money needed to invest in better chip
+ designs and better fabs. Linux was, at the same time, gaining traction
+ and, around the time the dot-com bubble popped and there were no longer
+ companies with the money needed to get Sun SPARC workstations (or what
+ not) at $50,000 or more a pop to start up a web business, x86 computers
+ running Linux had nearly the same performance at a much lower price.
+ Once the Itanium sank and x86_64 was mainstream, x86_64 was the ISA of
+ choice for performance workstations and servers, and the RISC ISAs that
+ survived were now mainly used in the embedded space. Indeed, ARM was
+ never a high performance RISC processor, and it was the one that took
+ over the embedded space while PA-RISC, Alpha, and SPARC died.
+<p>The ISA for what were cheap computers become the highest performance
+ ISA around.
+<p>It has been only in the 2020s that RISC processors have gotten x86_64
+ levels of performance, notably in the the Apple M series of processors.
+ So now ARM, an ISA which was geared for cheap embedded devices, has
+ become a high performance processor, in line with x86.
+<p>Right now, RISC-V is mainly being used in cheap embedded components.
+ Considering that x86 and ARM also were made for cheap computing, until
+ becoming the dominant high end processor, history tells us that the
+ cheapest ISA is the one which will become the highest performance one.
+<p>RISC-V currently has about the same performance as a high end
+ Raspberry Pi. I predict it will have medium-level PC performance by the
+ end of the 2020s.
+<a name="2026-08-16-further-reading"> </a>
+<h3>Further reading</h3>
+<p>“Hacker news” has a <a href="https://news.ycombinator.com/item?id=49321717">thread</a> 
+about the RISC-V in response to <a href="https://news.ycombinator.com/item?id=49298035">another thread</a> 
+based on an article criticizing RISC-V. This blog
+ entry is based on a response I wrote at Hacker News.
+
+
+<p>
+
+</div>
+
