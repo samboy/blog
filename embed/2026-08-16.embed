@@ -31,7 +31,7 @@ is an open
  survived were now mainly used in the embedded space. Indeed, ARM was
  never a high performance RISC processor, and it was the one that took
  over the embedded space while PA-RISC, Alpha, and SPARC died.
-<p>The ISA for what were cheap computers become the highest performance
+<p>The ISA for what were cheap computers became the highest performance
  ISA around.
 <p>It has been only in the 2020s that RISC processors have gotten x86_64
  levels of performance, notably in the the Apple M series of processors.
