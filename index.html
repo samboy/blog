@@ -230,6 +230,76 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<!-- `ENTRY: 2026-08-24 2026 ` -->
+<a name="BlogEntry-2026-08-24"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/MaraDNS.jpg" width=224 height=126>
+</div>
+<h1>MaraDNS bugfix</h1>
+<h2>August 24, 2026</h2>
+I fixed a very minor security bug found in MaraDNS by an AI security
+ audit.
+<a name="2026-08-24-maradns-dns-over-tcp-issue"> </a>
+<h3>MaraDNS DNS-over-TCP issue</h3>
+<p>There is a minor DNS-over-TCP issue with Deadwood. The issue is not
+ serious enough to merit a CVE report nor to make a new MaraDNS release.
+<p>If DNS-over-TCP was enabled (it is disabled by default), a remote DNS
+ server could cause the DNS-over-TCP service to not function with a
+ denial of service attack. The issue does not affect DNS-over-UDP
+ operation. This bug was fixed on August 24, 2026, but is not a serious
+ enough bug to merit a new release, since DNS-over-TCP is disabled and
+ really should not be enabled.
+<p>If <code>tcp_listen</code> is not in your dwood3rc file, this bug
+ does not affect you. If <code>tcp_listen</code> is in your dwood3rc
+ file but has the value <code>0</code>, this bug <em>still</em> does not
+ affect you. Only people who have set <code>tcp_listen</code> to have a
+ value of <code>1</code> are affected.
+<p>The bug was patched in <a href="https://github.com/samboy/MaraDNS/commit/13c0af9d3c2b39241d052a438f91c2e4bb77e9c8">commit 13c0af9d3c</a>, 
+with a new Windows binary made (a previous <a href="https://github.com/samboy/MaraDNS/commit/00b1c3361322c30d3c4f19761ef30eae9e1938d8">commit</a> 
+fixes the source code). There is also a <a href="https://samboy.github.io/MaraDNS/patches/MaraDNS-recvtcp.patch.txt">patch available</a>.
+<p>This is a minor bug because:
+<ul>
+<li>
+<p>DNS-over-TCP is disabled by default in Deadwood, there is no example
+ configuration file with DNS-over-TCP enabled
+</li>
+<li>
+<p>People should not enable DNS-over-TCP; it’s not needed for the use
+ cases Deadwood is meant to address (someone using a DNS server in a
+ small work or home network, usually on a small 32-bit or 64-bit
+ router—Deadwood was written to run well on a 32-bit system)
+</li>
+<li>
+<p>If people want an enterprise DNS server with DNS-over-TCP, they need
+ to pay for an enterprise server. I was not paid a single cent to
+ address this AI-generated security report.
+</li>
+<li>
+<p>This bug does not merit a new MaraDNS release. I have recompiled the
+ Windows binary with this patch, and have made a one-line patch for this
+ issue. I will make a new release sometime in 2027 with this bug fixed.
+</li>
+<li>
+<p>It’s nice to see that the only legitimate issues AI generated
+ security reports have been finding with MaraDNS is issues with the
+ almost always disabled DNS-over-TCP code in Deadwood, and no attack
+ worse than denial of service of <em>just</em> DNS-over-TCP (OK, another
+ AI generated security report was an issue with the <code>mqhash.c</code>
+ program which didn’t even compile since 2022, and was never part of the
+ services MaraDNS uses, nor ever compiled by default).
+</li>
+</ul>
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-08-16 2026 ` -->
 <a name="BlogEntry-2026-08-16"> </a>
 <div class=blogpicx style="text-align: right">
@@ -686,72 +756,13 @@ Back when I was working
 
 </div>
 
-<div class=GitBlogNav><i>Go to: 
-<a href="#GitBlogTop">Top</a>
- - 
-<a href="#GitBlogIndex">Index</a></i></div>
-<div class=blog>
-<!-- `ENTRY: 2026-07-11 2026 ` -->
-<a name="BlogEntry-2026-07-11"> </a>
-<div class=blogpicx style="text-align: right">
-<img src="pics/Terminator.jpg" width=224 height=126>
-</div>
-<h1>Re-watching Terminator 2</h1>
-<h2>July 11, 2026</h2>
-I re-watched Terminator 2 today.
-<a name="2026-07-11-rewatching-terminator-2"> </a>
-<h3>Rewatching Terminator 2</h3>
-<p>I saw “Terminator 2” when it first came out, and just re-watched it
- in light of the fact that AI is now real. In the movie, they were about
- 25 years more optimistic about AI becoming real than what happened in
- the real world; AI was viable in 1997 in the movie, but in real life it
- didn’t become viable until 2023 or 2024, when people starting using
- ChatGPT as a free therapist.
-<p>Also, AI was developed by the military in the movie,<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2026-07-11-1"><a href="#2026-07-11-1">1</a></a></sup> 
-but while the military has helped fund AI development, it has been
- created by and funded in the private sector.
-<p>Yes, this movie describes one risk of AI: It may decide to kill us.
- Whether or not that is a real risk is still up in the air, but what <em>
-has</em> happened is that AI is causing massive economic damage,
- completely destroying the tech industry and highly paid computer
- programmers.
-<p>I remember being a kid working at a gas station, slowly saving up
- enough money to buy a car, and being on the internet for hours every
- night, learning computers and technology to get out of the trap of only
- being able to work in a gas station. Finally, I saved up enough to buy
- an old car, had a friend of a friend who worked for a place that was
- hiring, and got my foot in the door by working as tech support for the
- then nascent internet industry in Silicon Valley. From there, I slowly
- became a highly paid software developer.
-<p>With AI taking over everything, people these days no longer have that
- opportunity. AI is eating away at the middle class, and today’s
- generation of talented artists, musicians, and computer programmers are
- having their jobs being taken away from them by AI agents, forcing them
- to stay in low paying service positions.
-<a name="2026-07-11-picture-credits"> </a>
-<h3>Picture credits</h3>
-<p><em>The picture for this blog is a waxwork of the Terminator at
- Madame Tussauds, London. The picture was taken by</em> <a href="https://www.flickr.com/people/9246636@N02">Daniel  Jurena</a> 
-<em>from Prague, Czech Republic. The picture has been
- altered (resized and cropped), and is</em> <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en">CC-BY-SA 2.0</a> 
-<em>licensed.</em>
-
-<h3>Footnote</h3>
-<p style="margin-left: 1.16em;text-indent: -1.16em;">
-<a name="2026-07-11-1"> </a>
-<a href="#back-2026-07-11-1">1</a>:  The details are more complicated, but in the interest in having no spoilers, this is a reasonable description of how Skynet was created.
-<p>
-
-<p>
-
-</div>
-
 <div class=GitBlogNav><i>
-<a href="entries/2026-07-09.html">Older entries</a>
+<a href="entries/2026-07-11.html">Older entries</a>
 </i></div>
 <div class=blog>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="entries/2026-08-24.html">MaraDNS bugfix (2026-08-24)</a></br>
 <a href="entries/2026-08-16.html">RISC-V will eventually take over (2026-08-16)</a></br>
 <a href="entries/2026-08-14.html">Facebook and Reddit (2026-08-14)</a></br>
 <a href="entries/2026-08-10.html">Grab bag (2026-08-10)</a></br>

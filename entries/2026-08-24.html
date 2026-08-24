@@ -1,4 +1,4 @@
-<html><head><title>2026-08-16</title>
+<html><head><title>2026-08-24</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 @import url("../fonts.css");
@@ -230,60 +230,65 @@ content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
-<!-- `ENTRY: 2026-08-16 2026 ` -->
-<a name="BlogEntry-2026-08-16"> </a>
+<!-- `ENTRY: 2026-08-24 2026 ` -->
+<a name="BlogEntry-2026-08-24"> </a>
 <div class=blogpicx style="text-align: right">
-<img src="../pics/2024-05-01.jpg" width=224 height=126>
+<img src="../pics/MaraDNS.jpg" width=224 height=126>
 </div>
-<h1>RISC-V will eventually take
- over</h1>
-<h2>August 16, 2026</h2>
-I explain why the future of computing is the RISC-V.
-<a name="2026-08-16-risc-v"> </a>
-<h3>RISC-V</h3>
-<p><a href="https://en.wikipedia.org/wiki/RISC-V">RISC-V</a> 
-is an open
- source ISA (an ISA, or instruction set architecture, is the language a
- given chip understands) which, unlike x86_64 and ARM, is free for
- anyone to implement and use.
-<p>I believe there will come a day when RISC-V has comparable or better
- performance than ARM and x86_64.
-<p>This is based on history: I remember when x86 performance compared to
- the DEC Alpha, PA-RISC, SPARC, etc. was a joke. There was a time when,
- if you wanted real performance, you needed to pony up $20,000-$50,000
- for a workstation with a MIPS/<![if gt IE 6]>&#8203;<![endif]><wbr>PA-RISC/<![if gt IE 6]>&#8203;<![endif]><wbr>SPARC/<![if gt IE 6]>&#8203;<![endif]><wbr>Alpha/<![if gt IE 6]>&#8203;<![endif]><wbr>whatever processor.
- All these workstations smoked the x86 computers of the era.
-<p>However, people were buying x86 computers at a far higher rate,
- giving Intel (and AMD) the money needed to invest in better chip
- designs and better fabs. Linux was, at the same time, gaining traction
- and, around the time the dot-com bubble popped and there were no longer
- companies with the money needed to get Sun SPARC workstations (or what
- not) at $50,000 or more a pop to start up a web business, x86 computers
- running Linux had nearly the same performance at a much lower price.
- Once the Itanium sank and x86_64 was mainstream, x86_64 was the ISA of
- choice for performance workstations and servers, and the RISC ISAs that
- survived were now mainly used in the embedded space. Indeed, ARM was
- never a high performance RISC processor, and it was the one that took
- over the embedded space while PA-RISC, Alpha, and SPARC died.
-<p>The ISA for what were cheap computers became the highest performance
- ISA around.
-<p>It has been only in the 2020s that RISC processors have gotten x86_64
- levels of performance, notably in the the Apple M series of processors.
- So now ARM, an ISA which was geared for cheap embedded devices, has
- become a high performance processor, in line with x86.
-<p>Right now, RISC-V is mainly being used in cheap embedded components.
- Considering that x86 and ARM also were made for cheap computing, until
- becoming the dominant high end processor, history tells us that the
- cheapest ISA is the one which will become the highest performance one.
-<p>RISC-V currently has about the same performance as a high end
- Raspberry Pi. I predict it will have medium-level PC performance by the
- end of the 2020s.
-<a name="2026-08-16-further-reading"> </a>
-<h3>Further reading</h3>
-<p>“Hacker news” has a <a href="https://news.ycombinator.com/item?id=49321717">thread</a> 
-about the RISC-V in response to <a href="https://news.ycombinator.com/item?id=49298035">another thread</a> 
-based on an article criticizing RISC-V. This blog
- entry is based on a response I wrote at Hacker News.
+<h1>MaraDNS bugfix</h1>
+<h2>August 24, 2026</h2>
+I fixed a very minor security bug found in MaraDNS by an AI security
+ audit.
+<a name="2026-08-24-maradns-dns-over-tcp-issue"> </a>
+<h3>MaraDNS DNS-over-TCP issue</h3>
+<p>There is a minor DNS-over-TCP issue with Deadwood. The issue is not
+ serious enough to merit a CVE report nor to make a new MaraDNS release.
+<p>If DNS-over-TCP was enabled (it is disabled by default), a remote DNS
+ server could cause the DNS-over-TCP service to not function with a
+ denial of service attack. The issue does not affect DNS-over-UDP
+ operation. This bug was fixed on August 24, 2026, but is not a serious
+ enough bug to merit a new release, since DNS-over-TCP is disabled and
+ really should not be enabled.
+<p>If <code>tcp_listen</code> is not in your dwood3rc file, this bug
+ does not affect you. If <code>tcp_listen</code> is in your dwood3rc
+ file but has the value <code>0</code>, this bug <em>still</em> does not
+ affect you. Only people who have set <code>tcp_listen</code> to have a
+ value of <code>1</code> are affected.
+<p>The bug was patched in <a href="https://github.com/samboy/MaraDNS/commit/13c0af9d3c2b39241d052a438f91c2e4bb77e9c8">commit 13c0af9d3c</a>, 
+with a new Windows binary made (a previous <a href="https://github.com/samboy/MaraDNS/commit/00b1c3361322c30d3c4f19761ef30eae9e1938d8">commit</a> 
+fixes the source code). There is also a <a href="https://samboy.github.io/MaraDNS/patches/MaraDNS-recvtcp.patch.txt">patch available</a>.
+<p>This is a minor bug because:
+<ul>
+<li>
+<p>DNS-over-TCP is disabled by default in Deadwood, there is no example
+ configuration file with DNS-over-TCP enabled
+</li>
+<li>
+<p>People should not enable DNS-over-TCP; it’s not needed for the use
+ cases Deadwood is meant to address (someone using a DNS server in a
+ small work or home network, usually on a small 32-bit or 64-bit
+ router—Deadwood was written to run well on a 32-bit system)
+</li>
+<li>
+<p>If people want an enterprise DNS server with DNS-over-TCP, they need
+ to pay for an enterprise server. I was not paid a single cent to
+ address this AI-generated security report.
+</li>
+<li>
+<p>This bug does not merit a new MaraDNS release. I have recompiled the
+ Windows binary with this patch, and have made a one-line patch for this
+ issue. I will make a new release sometime in 2027 with this bug fixed.
+</li>
+<li>
+<p>It’s nice to see that the only legitimate issues AI generated
+ security reports have been finding with MaraDNS is issues with the
+ almost always disabled DNS-over-TCP code in Deadwood, and no attack
+ worse than denial of service of <em>just</em> DNS-over-TCP (OK, another
+ AI generated security report was an issue with the <code>mqhash.c</code>
+ program which didn’t even compile since 2022, and was never part of the
+ services MaraDNS uses, nor ever compiled by default).
+</li>
+</ul>
 
 
 <p>
@@ -291,8 +296,7 @@ based on an article criticizing RISC-V. This blog
 </div>
 
 <div class=GitBlogNav><i>Go to: 
-<a href="2026-08-14.html">Older</a> - 
-<a href="2026-08-24.html">Newer</a> - 
+<a href="2026-08-16.html">Older</a> - 
 <a href="../archive.html#GitBlogTop">All entries</a>
  - 
 <a href="../index.html#GitBlogIndex">Index</a></i></div>

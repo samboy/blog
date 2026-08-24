@@ -230,6 +230,76 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>MaraDNS blog</h1>
 
+<!-- `ENTRY: 2026-08-24 2026 ` -->
+<a name="BlogEntry-2026-08-24"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="../pics/MaraDNS.jpg" width=224 height=126>
+</div>
+<h1>MaraDNS bugfix</h1>
+<h2>August 24, 2026</h2>
+I fixed a very minor security bug found in MaraDNS by an AI security
+ audit.
+<a name="2026-08-24-maradns-dns-over-tcp-issue"> </a>
+<h3>MaraDNS DNS-over-TCP issue</h3>
+<p>There is a minor DNS-over-TCP issue with Deadwood. The issue is not
+ serious enough to merit a CVE report nor to make a new MaraDNS release.
+<p>If DNS-over-TCP was enabled (it is disabled by default), a remote DNS
+ server could cause the DNS-over-TCP service to not function with a
+ denial of service attack. The issue does not affect DNS-over-UDP
+ operation. This bug was fixed on August 24, 2026, but is not a serious
+ enough bug to merit a new release, since DNS-over-TCP is disabled and
+ really should not be enabled.
+<p>If <code>tcp_listen</code> is not in your dwood3rc file, this bug
+ does not affect you. If <code>tcp_listen</code> is in your dwood3rc
+ file but has the value <code>0</code>, this bug <em>still</em> does not
+ affect you. Only people who have set <code>tcp_listen</code> to have a
+ value of <code>1</code> are affected.
+<p>The bug was patched in <a href="https://github.com/samboy/MaraDNS/commit/13c0af9d3c2b39241d052a438f91c2e4bb77e9c8">commit 13c0af9d3c</a>, 
+with a new Windows binary made (a previous <a href="https://github.com/samboy/MaraDNS/commit/00b1c3361322c30d3c4f19761ef30eae9e1938d8">commit</a> 
+fixes the source code). There is also a <a href="https://samboy.github.io/MaraDNS/patches/MaraDNS-recvtcp.patch.txt">patch available</a>.
+<p>This is a minor bug because:
+<ul>
+<li>
+<p>DNS-over-TCP is disabled by default in Deadwood, there is no example
+ configuration file with DNS-over-TCP enabled
+</li>
+<li>
+<p>People should not enable DNS-over-TCP; it’s not needed for the use
+ cases Deadwood is meant to address (someone using a DNS server in a
+ small work or home network, usually on a small 32-bit or 64-bit
+ router—Deadwood was written to run well on a 32-bit system)
+</li>
+<li>
+<p>If people want an enterprise DNS server with DNS-over-TCP, they need
+ to pay for an enterprise server. I was not paid a single cent to
+ address this AI-generated security report.
+</li>
+<li>
+<p>This bug does not merit a new MaraDNS release. I have recompiled the
+ Windows binary with this patch, and have made a one-line patch for this
+ issue. I will make a new release sometime in 2027 with this bug fixed.
+</li>
+<li>
+<p>It’s nice to see that the only legitimate issues AI generated
+ security reports have been finding with MaraDNS is issues with the
+ almost always disabled DNS-over-TCP code in Deadwood, and no attack
+ worse than denial of service of <em>just</em> DNS-over-TCP (OK, another
+ AI generated security report was an issue with the <code>mqhash.c</code>
+ program which didn’t even compile since 2022, and was never part of the
+ services MaraDNS uses, nor ever compiled by default).
+</li>
+</ul>
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-08-16 2026 ` -->
 <a name="BlogEntry-2026-08-16"> </a>
 <!-- `ENTRY: 2026-08-14 2026 ` -->
@@ -17983,6 +18053,7 @@ not post your comment (with or without editing)</i>
 <a name="BlogEntry-20101224"> </a>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="#BlogEntry-2026-08-24">MaraDNS bugfix (2026-08-24)</a></br>
 <a href="#BlogEntry-2026-07-09">Grab bag (2026-07-09)</a></br>
 <a href="#BlogEntry-2026-07-05">Lunacy 2026-07-05 released (2026-07-05)</a></br>
 <a href="#BlogEntry-2026-07-04">MaraDNS 3.5.0038 released (2026-07-04)</a></br>
