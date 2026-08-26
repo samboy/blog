@@ -1,4 +1,5 @@
-https://www.bbc.com/news/articles/cevmrjd9lj1o summary
+BBC@https://www.bbc.com/news/articles/cevmrjd9lj1o
+Archive@https://archive.ph/20260820173541/https://www.bbc.com/news/articles/cevmrjd9lj1o
 
 The text reports that Nathan Cofnas, a postdoctoral researcher at Ghent University, has been suspended while the university investigates his conduct after he publicly accused the late Cambridge professor Jason Arday of plagiarism and questioned his claimed achievements.
 
