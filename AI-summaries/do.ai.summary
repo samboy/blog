@@ -1,0 +1,14 @@
+#!/bin/sh
+
+FILENAME="$1"
+BASE=${FILENAME%.txt}
+if [ "$BASE" = "$FILENAME" ] ; then
+	echo Usage: $0 YYYY-MM-DD-anything.txt
+	exit 1
+fi
+if [ ! -e "$FILENAME" ] ; then
+	echo $FILENAME not found
+	exit 1
+fi
+../markdown/AIsum2HTML.lua < "$1" > ${BASE}.html
+echo ${BASE}.html created
