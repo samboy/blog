@@ -110,13 +110,24 @@ for line in io.stdin:lines() do
     local elements=split(line,'%@')
     publisher=elements[1]
     url=elements[2]
-    print('This is an AI summary of <a href="'..url..'">an article published'..
-          ' by '..publisher..'</a> ')
+    local action='published by'
+    if publisher:match("[Tt]he [Mm]otte") then
+      action='posted at'
+    end
+    print('<i>This is an AI summary of <a href="'..url..
+          '">an article '..
+          action..
+          ' '..publisher..'</a></i> ')
   elseif line:match("%@") and not archive then
     local elements=split(line,'%@')
     archive=elements[1]
     archiveURL=elements[2]
-    print('(<a href="'..archiveURL..'">Archive link</a>)<hr>')
+    print('<i>(<a href="'..archiveURL..'">Archive link</a>)<br>')
+    print('Please click or tap on the above link if you want to read')
+    print('the original')
+    print('article instead of an AI summary.</i>')
+    print('<hr>')
+    print('<h1>AI Summary</h1>')
   elseif line:match("^%#%#%#") then
     line=line:gsub('^%#%#%#%s*',"")
     print("<h2>"..line.."</h2>")
