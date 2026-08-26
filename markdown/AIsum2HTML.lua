@@ -90,9 +90,9 @@ end
 
 head=[[<html><head><title>AI summary</title>
 <style>
-@import url(font.css);
-body { font-family: Kilroy, Verdana, sans-serif;
-       font-size: 14pt; }
+@import url(../fonts.css);
+body { font-family: Kilroy8, Verdana, sans-serif;
+       font-size: 14px; }
 a { color: #067610; }
 </style>
 <meta name="viewport"
@@ -116,7 +116,7 @@ for line in io.stdin:lines() do
     local elements=split(line,'%@')
     archive=elements[1]
     archiveURL=elements[2]
-    print('(<a href="'..archiveURL..'">Archive link</a>)<br>')
+    print('(<a href="'..archiveURL..'">Archive link</a>)<hr>')
   elseif line:match("^%#%#%#") then
     line=line:gsub('^%#%#%#%s*',"")
     print("<h2>"..line.."</h2>")
