@@ -1,0 +1,101 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/2024-05-01.jpg" width=224 height=126>
+</div>
+<h1>Cofnas’ racism; Lua sorter</h1>
+<h2>August 26, 2026</h2>
+I summarize why I feel Cofnas’ witch hunt of Arday was racially
+ motivated (i.e. <em>Racist</em>), and show an improved Lua sorted table
+ iterator.
+<a name="2026-08-26-cofas-attack-on-arday"> </a>
+<h3>Cofas’ attack on Arday</h3>
+<p>Nathan Cofnas has been suspended for engaging in a <a href="https://www.bbc.com/news/articles/cevmrjd9lj1o">witch hunt against a Black professor</a> 
+(<a href="https://archive.ph/20260820173541/https://www.bbc.com/news/articles/cevmrjd9lj1o">Archive link</a> 
+— <a href="AI-summaries/2026-08-26-bbc.txt">AI summary</a>) who apparently killed himself.
+<p>I think it’s safe to say that Cofnas would not have placed the late
+ Jason Arday under this much scrutiny if he were White. Indeed, Cofnas
+ was fired from his previous job because of his <a href="https://observer.co.uk/news/national/article/nathan-cofnas-the-man-at-the-centre-of-arday-plagiarism-row-was-dismissed-for-views-on-race">offensive</a> 
+(<a href="https://archive.ph/20260820180033/https://observer.co.uk/news/national/article/nathan-cofnas-the-man-at-the-centre-of-arday-plagiarism-row-was-dismissed-for-views-on-race">Archive link</a> 
+— <a href="AI-summaries/2026-08-26-observer.txt">AI summary</a>) 
+<a href="https://www.brusselstimes.com/belgium/2007046/ghent-university-under-fire-for-appointing-us-philosopher-with-ties-to-scientific-racism">
+views</a> 
+(<a href="https://archive.ph/20260307182241/https://www.brusselstimes.com/belgium/2007046/ghent-university-under-fire-for-appointing-us-philosopher-with-ties-to-scientific-racism">Archive link</a> 
+— <a href="AI-summaries/2026-08-26-brussels.txt">AI summary</a>) 
+on race.
+<p>I will link to <a href="https://ncofnas.com/p/dei-fraud-and-cover-up-at-cambridge">Cofnas’s investigation</a> 
+(<a href="https://archive.ph/20260815010930/https://ncofnas.com/p/dei-fraud-and-cover-up-at-cambridge">Archive link</a> 
+— <a href="AI-summaries/2026-08-26-Cofnas.txt">AI summary</a>) 
+in to Arday’s history.
+<p>The racists at The Motte are, as expected, <a href="https://www.themotte.org/post/3893/culture-war-roundup-for-the-week/472663?context=8#context">up in arms</a> 
+(<a href="https://www.themotte.org/post/3893/culture-war-roundup-for-the-week/472663?context=8#context">Archive link</a> 
+(<a href="https://archive.ph/20260826033649/https://www.themotte.org/post/3893/culture-war-roundup-for-the-week/472663?context=8#context">Archive link</a> 
+— <a href="2026-08-26-TheMotte.txt">AI summary</a>)  
+about Cofnas’ suspension.
+<a name="2026-08-26-a-better-lua-table-sorter"> </a>
+<h3>A better Lua table sorter</h3>
+<p>Here is an updated version of sPairs() which won’t raise an error if
+ the table uses functions, booleans, or tables as keys. Like previous
+ version of sPairs(), this function is public domain:
+<pre class="blogPre">-- Like pairs() but sorted
+function sPairs(inTable, sFunc)
+  if not sFunc then
+    sFunc = function(a, b)
+      local ta = type(a)
+      local tb = type(b)
+      if(ta == tb) then
+        if ta == 'number'
+          then return a &lt; b
+        end
+        return tostring(a) &lt;
+               tostring(b)
+      end
+      return ta &lt; tb
+    end
+  end
+  local keyList = {}
+  local index = 1
+  for k,_ in pairs(inTable) do
+    table.insert(keyList,k)
+  end
+  table.sort(keyList, sFunc)
+  return function()
+    key = keyList[index]
+    index = index + 1
+    return key, inTable[key]
+  end
+end
+</pre>
+<p>Example usage of the above function:
+<pre class="blogPre">a={z=1,y=2,c=3,w=4}
+for k,v in sPairs(a) do
+ print(k,v)
+end
+</pre>
+<p>With a sort function that reverse sorts the elements (assuming all
+ elements are of the same type:
+<pre class="blogPre">a={z=1,y=2,c=3,w=4}
+function revS(a,b)
+  return a&gt;b
+end
+for k,v in sPairs(a,revS) do
+  print(k,v)
+end
+</pre>
+<p>This improved sorter’s default sort function will no longer raise an
+ error if using unusual table keys (tables, functions, booleans, etc.):
+<pre class="blogPre">a={}
+b={}
+a[true]=1
+a[function() return 1 end]=2
+a[b]=3
+a[4]=4
+a["5"]=5
+for k,v in sPairs(a) do
+  print(k,v)
+end
+</pre>
+
+
+<p>
+
+</div>
+
