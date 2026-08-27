@@ -30,3 +30,8 @@ I will quote two paragraphs from [New York Times vs. Microsoft
 >Court therefore grants OpenAI’s motion to dismiss CIR’s claim of
 >direct infringement under 17 U.S.C. § 501 insofar as it relates to the
 >“abridgments” contained in Exhibit 11.
+
+Mind you, these articles may not be hosted on a website whose terms
+do not allow LLM-generated content, such as 
+[SourceHut](https://sourcehut.org/blog/2026-08-27-tos-changes-and-llms/),
+but Github does allow LLM generated content.
