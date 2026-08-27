@@ -1,0 +1,45 @@
+Copyright Lately@https://copyrightlately.com/court-rules-ai-news-summaries-may-infringe-copyright/
+Archive@https://archive.ph/20260827160206/https://copyrightlately.com/court-rules-ai-news-summaries-may-infringe-copyright/
+
+A federal judge has allowed a major copyright lawsuit against AI company Cohere to proceed, ruling that AI-generated “substitutive summaries” of news articles could plausibly infringe copyright even when they don't copy the articles word-for-word.
+
+### Main points
+
+The case: Fourteen major publishers—including Forbes, Condé Nast, the Los Angeles Times, and The Atlantic—are suing Cohere over how its AI models reproduce and summarize their journalism.
+
+What publishers allege: Cohere's AI allegedly:
+Reproduces articles verbatim or nearly verbatim.
+Produces summaries that closely follow the originals' structure, sequencing, tone, and storytelling choices.
+Sometimes bypasses paywalls.
+Generates false or “hallucinated” material attributed to publishers.
+
+The complaint identifies 4,000+ allegedly infringed works and 75 example outputs.
+
+The key ruling: Judge Colleen McMahon denied Cohere's motion to dismiss. She found that the publishers had plausibly alleged direct infringement, secondary infringement, and Lanham Act violations.
+
+Why “summary” isn't automatically safe: Copyright doesn't protect facts themselves, but it can protect the creative way facts are organized and presented—including structure, emphasis, pacing, and narrative flow. A summary can potentially infringe if it reproduces those expressive choices closely enough.
+
+Word count isn't the test: The judge emphasized that infringement can't be determined simply by counting overlapping words. Qualitative similarity matters as much as quantitative similarity.
+
+There is precedent: A 1999 Second Circuit case found that news abstracts could infringe when they followed an article essentially sentence-by-sentence and in the same sequence, while summaries using different organization and wording could avoid infringement.
+
+Courts aren't completely consistent: In one 2025 case, a judge rejected copyright claims over AI-generated bullet-point summaries of news articles. In another, claims involving ChatGPT's summary of A Game of Thrones were allowed to proceed because the summary arguably reproduced the original's tone and expressive qualities.
+
+Cohere is significant because: It's one of the first major rulings allowing a non-verbatim, AI-generated news-summary copyright claim to survive a motion to dismiss. It signals that AI companies can't assume that calling an output a “summary” shields them from copyright liability.
+
+The publishers came better prepared: The article contrasts this case with an earlier lawsuit that failed partly because the plaintiffs lacked registered copyrights and concrete evidence of harmful dissemination. The Cohere plaintiffs had registered copyrights and specific allegedly infringing outputs.
+
+### What the ruling does not mean
+
+The publishers have not won the case. The ruling only means their claims are plausible enough to continue. Cohere can still challenge them at later stages, including on substantial similarity and fair use.
+
+### Bigger takeaway
+
+The central issue is becoming: When does an AI summary stop being a summary and become a substitute for the original article?
+
+That matters especially as AI systems using retrieval tools increasingly deliver news directly to users. If users get the substance and expressive presentation of an article from an AI chatbot instead of visiting the publisher's site, publishers could lose readers, pageviews, and advertising revenue.
+
+### Bottom line
+
+The ruling doesn't establish that AI summaries are inherently infringing. It establishes that non-verbatim summaries can still raise serious copyright issues when they closely reproduce the original journalist's expressive choices.
+
