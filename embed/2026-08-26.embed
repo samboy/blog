@@ -60,7 +60,7 @@ for k,v in sPairs(a) do
 end
 </pre>
 <p>With a sort function that reverse sorts the elements (assuming all
- elements are of the same type:
+ elements are of the same type):
 <pre class="blogPre">a={z=1,y=2,c=3,w=4}
 function revS(a,b)
   return a&gt;b
