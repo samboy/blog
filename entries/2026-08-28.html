@@ -1,4 +1,4 @@
-<html><head><title>2026-08-26</title>
+<html><head><title>2026-08-28</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 @import url("../fonts.css");
@@ -230,92 +230,70 @@ content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
-<!-- `ENTRY: 2026-08-26 2026 ` -->
-<a name="BlogEntry-2026-08-26"> </a>
+<!-- `ENTRY: 2026-08-28 2026 ` -->
+<a name="BlogEntry-2026-08-28"> </a>
 <div class=blogpicx style="text-align: right">
-<img src="../pics/2024-05-01.jpg" width=224 height=126>
+<img src="../pics/PueblaSkyline.jpg" width=224 height=126>
 </div>
-<h1>On Cofnas; Lua sorter</h1>
-<h2>August 26, 2026</h2>
-I summarize why I feel Cofnas’ witch hunt of Arday was racially
- motivated. I also show an improved Lua sorted table iterator.
-<a name="2026-08-26-cofas-attack-on-arday"> </a>
-<h3>Cofas’ attack on Arday</h3>
-<p>Nathan Cofnas has been suspended for engaging in a <a href="../AI-summaries/2026-08-26-bbc.html">witch hunt against a Black professor</a> 
-who apparently killed himself.
-<p>I think it’s safe to say that Cofnas would not have placed the late
- Jason Arday under this much scrutiny if he were White. Indeed, Cofnas
- was <a href="../AI-summaries/2026-08-26-observer.html">fired from his previous job</a> 
-because of his <a href="../AI-summaries/2026-08-26-brussels.html">offensive views</a> 
-on race.
-<p>I will link to <a href="../AI-summaries/2026-08-26-Cofnas.html">Cofnas’s investigation</a> 
-into Arday’s history.
-<p>The, shall we say, racially motivated people (or are they AIs; hard
- to tell on today’s internet) at The Motte are, as expected, <a href="../AI-summaries/2026-08-26-TheMotte.html">up in arms</a> 
-about Cofnas’ suspension.
-<a name="2026-08-26-a-better-lua-table-sorter"> </a>
-<h3>A better Lua table sorter</h3>
-<p>Here is an updated version of sPairs() which won’t raise an error if
- the table uses functions, booleans, or tables as keys. Like previous
- version of sPairs(), this function is public domain:
-<pre class="blogPre">-- Like pairs() but sorted
-function sPairs(inTable, sFunc)
-  if not sFunc then
-    sFunc = function(a, b)
-      local ta = type(a)
-      local tb = type(b)
-      if(ta == tb) then
-        if ta == 'number'
-          then return a &lt; b
-        end
-        return tostring(a) &lt;
-               tostring(b)
-      end
-      return ta &lt; tb
-    end
-  end
-  local keyList = {}
-  local index = 1
-  for k,_ in pairs(inTable) do
-    table.insert(keyList,k)
-  end
-  table.sort(keyList, sFunc)
-  return function()
-    key = keyList[index]
-    index = index + 1
-    return key, inTable[key]
-  end
-end
-</pre>
-<p>Example usage of the above function:
-<pre class="blogPre">a={z=1,y=2,c=3,w=4}
-for k,v in sPairs(a) do
- print(k,v)
-end
-</pre>
-<p>With a sort function that reverse sorts the elements (assuming all
- elements are of the same type):
-<pre class="blogPre">a={z=1,y=2,c=3,w=4}
-function revS(a,b)
-  return a&gt;b
-end
-for k,v in sPairs(a,revS) do
-  print(k,v)
-end
-</pre>
-<p>This improved sorter’s default sort function will no longer raise an
- error if using unusual table keys (tables, functions, booleans, etc.):
-<pre class="blogPre">a={}
-b={}
-a[true]=1
-a[function() return 1 end]=2
-a[b]=3
-a[4]=4
-a["5"]=5
-for k,v in sPairs(a) do
-  print(k,v)
-end
-</pre>
+<h1>Round Up</h1>
+<h2>August 28, 2026</h2>
+Today, I look at Lindsay Clancy, Cofnas, a recent article by
+ Kasparov, a webcam “pimp” recently arrested, as well as touching on
+ Lua.
+<a name="2026-08-28-lindsay-clancy"> </a>
+<h3>Lindsay Clancy</h3>
+<p>There are a <a href="../AI-summaries/2026-08-26-NYT.html">lot of  women</a>  
+supporting Lindsay Clacy, a woman who systematically killed her three
+ children. Even the <a href="../AI-summaries/2026-08-26-MotherJones.html">liberal press</a> 
+is saying she shouldn’t be prosecuted for murder.
+<p>While there is nuance in Clancy’s story, at the end of the day this
+ comes off as an extreme case of a certain kind of woman. This kind of
+ woman, when told that another woman has done something bad, will,
+ without even knowing the woman, immediately justify the offending
+ behavior, no matter how egregious. These kinds of women who defend
+ another woman’s behavior, no matter what, are the kinds of women I put
+ up strong, healthy boundaries with.
+<a name="2026-08-28-cofnas-redux"> </a>
+<h3>Cofnas redux</h3>
+<p>While some academics feel <a href="../archive.html#BlogEntry-2026-08-26">Cofnas</a> 
+should
+ not have been placed on suspension, many more feel his <a href="../AI-summaries/2026-08-26-antiCofnas.html">“Race Realism” is downright racist</a> 
+and has no place in academic
+ discourse.
+<p>I personally think it’s OK for Cofnas to have his views on race, even
+ though I strongly disagree with him. Where he crossed the line was
+ looking up a Black person’s academic papers to hound him and accuse him
+ of plagiarism—that comes of to me as targeted harassment, even if the
+ papers were in fact plagiarized.
+<a name="2026-08-28-kasparov-on-woke-1"> </a>
+<h3>Kasparov on “Woke 1”</h3>
+<p>World Chess Champion <a href="../Kasparov.html">Kasparov</a> 
+is <a href="../AI-summaries/2026-08-27-Kasparov.html">no fan of  “Woke 1”</a>, 
+and with good reason: The <a href="../archive.html#BlogEntry-2020-06-16">cancel culture</a> 
+of that era suppressed free speech and reasonable
+ discourse.
+<a name="2026-08-28-webcam-pimp-arrested"> </a>
+<h3>Webcam “pimp” arrested</h3>
+<p>Nikita Tyukalo was a webcam “pimp”—he coerced and manipulated girls
+ in to becoming pornographic webcam “models”. He <a href="../AI-summaries/2026-08-28-webcam.html">was arrested and currently is in jail</a>; 
+the linked article describes
+ his alleged misogyny, how he ran the operation, and what ultimately
+ tipped off police to arrest him.
+<p>While he was being very manipulative with those women, the women in
+ question chose to be in an intimate relationship with someone who, as
+ per the linked article, had a very deep hatred of women.
+<a name="2026-08-28-why-i-stick-with-lua-5.1"> </a>
+<h3>Why I stick with Lua 5.1</h3>
+<p>Sometimes, people argue that Lua 5.1 should no longer be supported,
+ and everyone should move on to Lua 5.5. This is not feasible.
+<p>As <a href="../AI-summaries/2026-08-28-Lua.html">a poster on Lobsters</a>  
+points out, PUC Lua breaks compatibility between point releases, and
+ applications that embed Lua need to not break scripts used by the
+ applications.
+<p>There’s a reason I forked Lua 5.1 and named it <a href="https://samboy.github.io/MaraDNS/webpage/lunacy/">Lunacy</a>—that 
+guarantees that any future changes to Lua don’t break
+ the scripts I use to make this blog nor the scripts that make MaraDNS’
+ documentation.
 
 
 <p>
@@ -323,8 +301,7 @@ end
 </div>
 
 <div class=GitBlogNav><i>Go to: 
-<a href="2026-08-24.html">Older</a> - 
-<a href="2026-08-28.html">Newer</a> - 
+<a href="2026-08-26.html">Older</a> - 
 <a href="../archive.html#GitBlogTop">All entries</a>
  - 
 <a href="../index.html#GitBlogIndex">Index</a></i></div>
