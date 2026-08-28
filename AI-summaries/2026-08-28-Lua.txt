@@ -1,0 +1,24 @@
+Lobsters@https://lobste.rs/s/t7wzko/lua_community_needs_learn_move_on#:~:text=I%20don%27t%20have%20any%20hard%20data%20on%20this
+Archive@https://archive.ph/JuQPl#:~:text=I%20don%27t%20have%20any%20hard%20data%20on%20this
+
+The text argues that Lua’s ecosystem fragmentation is a structural problem caused primarily by backward-incompatible PUC Lua releases, not simply by LuaJIT. Because Lua is commonly embedded in applications, tooling and libraries need to account for users running older Lua versions.
+
+### Main points
+
+Most Lua users may be embedded users. The author disputes the idea that embedded Lua users are merely an application's problem, arguing that they likely make up a large portion of the Lua community.
+
+Supporting multiple Lua versions is often easy. Libraries can frequently support Lua 5.1+ with a few feature checks and compatibility shims. If a library already supports LuaJIT and current PUC Lua, supporting intermediate PUC Lua versions may require little additional work.
+
+PUC Lua's breaking changes are the deeper source of fragmentation. Each new Lua 5.x release has introduced changes to language semantics and/or the standard library. This makes upgrading risky for applications with existing user scripts.
+
+Embedded applications often can't simply upgrade. Particularly when applications permit unsandboxed user scripts, upgrading Lua can break existing ecosystems, leaving developers stuck on older versions.
+
+LuaJIT gets blamed, but it has a different philosophy. LuaJIT deliberately maintained compatibility with older Lua semantics rather than following Lua 5.2's breaking changes. The author sees this as an understandable reason for the split.
+
+LuaJIT's release/versioning process is unusual. Its lack of conventional release tags makes it difficult for users to pin stable versions. The v2.1 branch can change frequently, even though LuaJIT's important promise is that it won't break existing user code.
+
+The author generally prefers newer PUC Lua. They think Lua 5.4's semantics are better than 5.1's, but acknowledge that improving the language while breaking compatibility creates ecosystem-wide consequences.
+
+### Bottom line
+
+The author isn't arguing that developers must support every Lua version. Rather, they're saying that Lua's compatibility problem is real and has social/ecosystem consequences, and “just upgrade” isn't a viable solution for many embedded-Lua users.
