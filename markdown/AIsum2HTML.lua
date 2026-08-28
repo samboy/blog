@@ -111,7 +111,8 @@ for line in io.stdin:lines() do
     publisher=elements[1]
     url=elements[2]
     local action='published by'
-    if publisher:match("[Tt]he [Mm]otte") then
+    if publisher:match("[Tt]he [Mm]otte") 
+       or publisher:match("[Ll]obsters") then
       action='posted at'
     end
     print('<i>This is an AI summary of <a href="'..url..
