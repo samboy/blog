@@ -35,3 +35,10 @@ Mind you, these articles may not be hosted on a website whose terms
 do not allow LLM-generated content, such as 
 [SourceHut](https://sourcehut.org/blog/2026-08-27-tos-changes-and-llms/),
 but Github does allow LLM generated content.
+
+One caveat: The articles being summarized need to be ones reporting on
+factual events.  Facts cannot be copyrighted; however fictional
+characters in fictional universes *can* be copyrighted, so making
+an AI summary of a fictional story may infringe on copyright, just
+as a fan fiction story can be a copyright violation.
+
