@@ -111,8 +111,10 @@ for line in io.stdin:lines() do
     publisher=elements[1]
     url=elements[2]
     local action='published by'
+    -- Fix to determine if it’s a published article or a post
     if publisher:match("[Tt]he [Mm]otte") 
-       or publisher:match("[Ll]obsters") then
+       or publisher:match("[Ll]obsters") 
+       ot publisher:match("[Rr]eddit") then
       action='posted at'
     end
     print('<i>This is an AI summary of <a href="'..url..
