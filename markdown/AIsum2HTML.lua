@@ -110,15 +110,15 @@ for line in io.stdin:lines() do
     local elements=split(line,'%@')
     publisher=elements[1]
     url=elements[2]
-    local action='published by'
+    local action='n article published by'
     -- Fix to determine if it’s a published article or a post
     if publisher:match("[Tt]he [Mm]otte") 
        or publisher:match("[Ll]obsters") 
        or publisher:match("[Rr]eddit") then
-      action='posted at'
+      action=' comment posted at'
     end
     print('<i>This is an AI summary of <a href="'..url..
-          '">an article '..
+          '">a'..
           action..
           ' '..publisher..'</a></i> ')
   elseif line:match("%@") and not archive then
