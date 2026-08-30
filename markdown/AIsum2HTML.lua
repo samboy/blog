@@ -114,7 +114,7 @@ for line in io.stdin:lines() do
     -- Fix to determine if it’s a published article or a post
     if publisher:match("[Tt]he [Mm]otte") 
        or publisher:match("[Ll]obsters") 
-       ot publisher:match("[Rr]eddit") then
+       or publisher:match("[Rr]eddit") then
       action='posted at'
     end
     print('<i>This is an AI summary of <a href="'..url..
