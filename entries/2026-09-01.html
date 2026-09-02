@@ -1,4 +1,4 @@
-<html><head><title>2026-08-29</title>
+<html><head><title>2026-09-01</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 @import url("../fonts.css");
@@ -230,75 +230,79 @@ content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
-<!-- `ENTRY: 2026-08-29 2026 ` -->
-<a name="BlogEntry-2026-08-29"> </a>
+<!-- `ENTRY: 2026-09-01 2026 ` -->
+<a name="BlogEntry-2026-09-01"> </a>
 <div class=blogpicx style="text-align: right">
-<img src="../pics/blog-fire.jpg" width=224 height=126>
+<img src="../pics/MaraDNS.jpg" width=224 height=126>
 </div>
-<h1>Leftists and empathy</h1>
-<h2>August 29, 2026</h2>
-I look at how leftists with a strong agenda are too blinded by
- resentment to have empathy and compassion.
-<a name="2026-08-29-the-offending-comments"> </a>
-<h3>The offending comments</h3>
-<p>On Reddit, there were some comments about <a href="../AI-summaries/2026-08-28-webcam.html">an article I touched on in yesterday’s blog</a> 
-about a Seattle area
- online pimp.
-<p>I found <a href="../AI-summaries/2026-08-29-Reddit.html">two  postings</a>  
-very interesting—these people look to have been exposed to leftist
- propaganda for so long, they see men who consume porn as caricatures of
- evil. They have a hard time fathoming the humanity of the kinds of men
- who are addicted to porn; they see those men as heartless monsters who
- merely see women as sex objects.
-<p>They overlook parts of the story which contradict the hateful
- narrative they have created in their head about these men—e.g. they
- ignore the guy who gave one of the young women some $35,000.
-<p>“Flaming-Framing” does frame the issue in a very flamebait manner:
-<blockquote>
-<p>the guy trying to hurt online sex workers by outing them to their
- family wasn’t doing it because it was his “kink”. He was just angry and
- bitter that beautiful women can choose to have sex with other people
- who aren’t him.
-</blockquote>
-<p>I don’t think that was Yo Yo’s motivation, and the fact that
- “Flaming-Framing” thinks it is means they did not meaningfully read the
- story. I have <a href="../AI-summaries/2026-08-29-YoYo.html">an AI summary of just the Yo Yo part of the story they were commenting on</a>, 
-and there is, to put it mildly, a lot of nuance that
- “Flaming-Framing” didn’t see.
-<p>There is not anything in the article to support the notion that he
- doxxed these young women because he was “angry and bitter that
- beautiful women can choose to have sex with other people”. Indeed,
- reading the original copy, it also mentions that “Some speculated that
- he was an off-duty Baptist preacher”.
-<p>I think Yo Yo is, based on the article, better described as a split
- man. He undoubtedly found the women beautiful and desirable, but he
- also felt they could contribute more to the world than be virtual sex
- toys for lonely men. I would say he wanted those women to do better,
- and he told their families about what these women were doing so that
- the women could make better life choices. It appears he got the girls
- to disclose their most intimate secrets to him because, yes, he did
- deep down truly care for them.
-<p>He didn’t tell the families of these young women about their choice
- to be cam girls to hurt the women because of some imaginary resentment
- from these women not sleeping with him. He told the families to <em>
-help the girls</em>. Yes, there was undoubtedly codependency in his
- behavior, and of course, it wasn’t OK for him to post these women’s
- real identities online for other porn addicts to see, but, yes, he was
- very key in getting the digital pimp arrested.
-<p>It would seem that this “Flaming-Framing” character has a lot of
- hatred towards men. She (they?) laments that “our culture is really
- misogynistic” in <a href="https://archive.ph/Xf3es#selection-1935.10-1935.44">another comment</a>.
-<p>Because of this hatred, she read the story about someone who, in his
- own way, did have a lot of care for these women who were online
- camgirls, and without any evidence decides he just hates women because
- they won’t sleep with him. Her hatred stops her from having empathy and
- compassion.
-<a name="2026-08-29-the-problem-with-social-media"> </a>
-<h3>The problem with social media</a> 
-</h3>
-<p>The problem with social media, especially Reddit, it that it’s full
- of people like “Flaming-Framing” who are too blinded by their hatred
- and ideology to have empathy for people.
+<h1>Another MaraDNS bugfix</h1>
+<h2>September 1, 2026</h2>
+Another patch for a very minor security bug in MaraDNS.
+<a name="2026-09-01-bug-description"> </a>
+<h3>Bug description</h3>
+<p>Deadwood, when sending a RFC8482 reply to an ANY query, would
+ transmit over the network 19 bytes of uninitialized memory. This is a
+ possible (but unlikely) leak of private data. This bug was fixed on
+ September 1, 2026, in <a href="https://github.com/samboy/MaraDNS/commit/cd87cfd9141949b7ca62455574726defee9e3ad7">commit cd87cfd9</a>; 
+a <a href="https://samboy.github.io/MaraDNS/patches/MaraDNS-rfc8482.patch.txt">patch</a> 
+is available, and the Windows 32-bit binary was fixed in <a href="https://github.com/samboy/MaraDNS/commit/0f46565c142377ab415d6c56a0e7ddd488ecc4f6">commit 0f46565c</a>.
+<p>An analysis of the packets for an unpatched Deadwood in Ubuntu 26.04
+ show no significant information is leaked in those 19 bytes.
+<p>This bug does not merit a new MaraDNS release.
+<a name="2026-09-01-thoughts-on-ai"> </a>
+<h3>Thoughts on AI</h3>
+<p>Since this is yet another AI-assisted security report, let me discuss
+ my feelings about AI. I am not a big fan of AI:
+<ul>
+<li>
+<p>Environmental impact of countless datacenters being built
+</li>
+<li>
+<p>Sky high memory and storage prices, making computers too expensive
+</li>
+<li>
+<p>Jobs being replaced by AI, causing high unemployment
+</li>
+<li>
+<p>People using LLMs as therapists or even as girl/<![if gt IE 6]>&#8203;<![endif]><wbr>boyfriends
+</li>
+<li>
+<p>Countless security reports to trawl through, most of which are minor
+</li>
+</ul>
+<p>I am proud, however, that no major security hole has been found with
+ MaraDNS in the age of AI (knock on wood). It’s things like:
+<ul>
+<li>
+<p>Denial of service of just the DNS-over-TCP part of Deadwood (which is
+ disabled by default)
+</li>
+<li>
+<p>A very hard to exploit buffer overflow in a program which hasn’t even
+ compiled since 2022
+</li>
+<li>
+<p>19 bytes of unallocated heap data can be transmitted over the
+ network. To get any important information from this is nay to
+ impossible.
+</li>
+</ul>
+<a name="2026-09-01-how-i-use-ai"> </a>
+<h3>How I use AI</h3>
+<p>AI isn’t entirely bad: I would rather have AI answer a question for
+ me than try and find an answer on Stack Overflow.
+<p>Also, it’s nice to be able to generate AI summaries of articles, so I
+ can have a local mirror of articles I link to in my blog. Indeed, the
+ AI summaries solve a problem AI has created: Since countless web bots
+ are now being run to train LLMs, websites have retaliated by blocking a
+ large number of IPs. To wit, I need to use a VPN to access one of the
+ big archiving websites out there.
+<p>That in mind, I can’t count on a web archive making some news article
+ I link to in my blog permanent anymore; instead I now make an AI
+ summary (to remove copyright from the article; note that this legal
+ trick only works when the article is reporting on facts, since facts
+ are not protected by copyright) so people can get an overview of the
+ news I comment on in my blog.
 
 
 <p>
@@ -306,8 +310,7 @@ help the girls</em>. Yes, there was undoubtedly codependency in his
 </div>
 
 <div class=GitBlogNav><i>Go to: 
-<a href="2026-08-28.html">Older</a> - 
-<a href="2026-09-01.html">Newer</a> - 
+<a href="2026-08-29.html">Older</a> - 
 <a href="../archive.html#GitBlogTop">All entries</a>
  - 
 <a href="../index.html#GitBlogIndex">Index</a></i></div>
