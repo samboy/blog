@@ -39,9 +39,9 @@ The piece argues that Arday's celebrated life story and academic reputation are 
 
 What the text actually establishes vs. alleges
 
-This distinction is important:
+This distinction is important.
 
-Presented as evidence/facts within the article:
+### Presented as evidence/facts within the article
 
 Arday held professorships at several UK universities.
 
@@ -53,7 +53,7 @@ Some of his publications received journal corrections.
 
 The author found textual similarities using plagiarism-detection software.
 
-Allegations or interpretations requiring independent verification:
+### Allegations or interpretations requiring independent verification
 
 That Arday systematically plagiarized his PhD and publications.
 
