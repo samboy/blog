@@ -1,0 +1,1652 @@
+<html><head><title>Memories of Marshall</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+@import url("../fonts.css");
+@font-face { font-family: "GeorgiaF"; src: local(Georgia);
+size-adjust: 118%; }
+@font-palette-values --dark {
+ font-family: "ChessCancunColor";
+ override-colors: 0 rgb(0 0 0), 1 rgb(205 192 180); }
+.widepic { box-shadow: 0 0 4px #888;
+border-radius: 8px; width: 99%; height: auto; }
+@media screen and (max-width: 640px) { 
+.nomobile { display: none; } }
+body { max-width: 95vw; overflow-x: hidden; } 
+a { color: #067610; } 
+.GitBlogNav { display: table; width: 95vw; 
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+text-align: center;
+border-top: 2px solid #aaa;
+margin: 5px; padding: 2px;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 2px solid #aaa; }
+@media (min-width: 640px) {.GitBlogNav {width:640px;}}
+@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}
+@media (max-width: 640px) {.blog {overflow-x:scroll;}}
+body { color: #333; background-color: #fff; }
+.blog { display: table; max-width: 640px;
+color: #333; background-color: #fff;
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+margin-left: auto;
+margin-right: auto; }
+@media (max-width: 640px) {
+.blog pre {max-width: 90vw; overflow-x: scroll;}} 
+.blog pre { font-size: 14px; }
+.blog li pre {max-width: 80vw; overflow-x: scroll; }
+.blog table {max-width: 90vw; overflow-x: scroll; }
+.blog tt {max-width: 90vw; overflow-x: scroll; }
+.blogtable {max-width: 90vw; overflow-x: scroll; }
+@media (max-width: 640px) {.pc {display: none;}}
+.moyet { display: none; }
+.blog h1 { font-size: 28px; }
+.blog b { font-size: 18px; }
+.blog strong { font-size: 18px; }
+.s { font-size: 18px; }
+.blogtitle { font-size: 24px; }
+h3 { font-size: 24px; margin-bottom: 0; }
+.blogpicx { text-align: left !important; }
+.blogpicx img { 
+border-radius: 8px; box-shadow: 0 0 4px #888; }
+a { color: #067610; }
+.blog a { color: #067610; }
+
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 375px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram10x8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+/* 4x8 diagram for showing opening patterns */
+.chessDiagram4 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    border-top: 1px dotted #333;
+}
+
+.chessDiagram4 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+@media (prefers-color-scheme: dark) { 
+body { background-color: #131516; color: #d8d4cf; }
+.blog { background-color: #131516; color: #d8d4cf; }
+a { color: #78dc78; }
+.blog a { color: #78dc78; }
+.chessDiagram8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram8 div { background-color: #aaa; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #888; } 
+.chessDiagram10x8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram10x8 div { background-color: #aaa; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #888; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #ddd; 
+                 border-top: 1px dotted #ddd; font-palette: --dark; }
+.chessDiagram4 div { background-color: #aaa; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+  background-color: #888; } 
+} /* End Dark mode theme */
+@media print {
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; border-top: 1px dotted #333; }
+.chessDiagram4 div { background-color: #fff; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+background-color: #ddd; } 
+} /* End print colors */
+</style>
+<script>
+maxWidth = screen.width;
+maxWidth *= .95;
+if(maxWidth < 480) {
+  boardSize = maxWidth - 5;
+  pieceWidth = (boardSize / 10) * (16/15);
+  capaPieceWidth = (boardSize / 12.5) * (16/15);
+  capaHeight = boardSize * .8;
+}
+</script>
+<script src="../chess/jquery-1.12.4.min.js"></script>
+<script>$.ajaxSetup({contents: {script: false}})</script>
+<script src="../chess/chessboard-0.3.0.min.js" type="text/javascript"></script>
+<script src="../chess/chess.js"></script>
+<link href="../chess/chessboard-0.3.0.min.css" rel="stylesheet"></link>
+<script src="../chess/chessgame.js"></script>
+<meta name=viewport content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
+</head>
+
+<body>
+<a name="GitBlogTop"> </a>
+<div class=blog>
+<a href="https://samboy.github.io/blog/">Current blog entries</a>
+ - 
+<a href="../archive.html#GitBlogIndex">Full blog Index</a></i>
+</div><div class=blog>
+<h1>Memories of Marshall</h1>
+
+<!-- `ENTRY: 2026-09-05 2026 ` -->
+<a name="BlogEntry-2026-09-05"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="../pics/marshall_red_vwbug.jpg" width=224 height=126>
+</div>
+<h1>Another Marshall memory</h1>
+<h2>September 5, 2026</h2>
+I learned sexual morality from Marshall. This is a continuation of my
+ series on Marshall, who I discuss in <a href="#BlogEntry-2026-07-24">two</a>  
+previous <a href="#BlogEntry-2025-08-25">blog</a> 
+entries.
+<a name="2026-09-05-sexual-values"> </a>
+<h3>Sexual values</h3>
+<p>Marshall and I had conversations about sex and relationships. I was
+ still young and a virgin, so there was a lot I still didn’t know about
+ relationships and sex. While sitting with Marshall in his office, we
+ had a conversation about sex that started like this:
+<p>I said, “What sexual values should someone have, Marshall?”
+<p>Marshall said, “Sam, I will tell you the truth. I haven’t been
+ perfect about my sexuality. I have made a lot of mistakes and have done
+ things I regret doing.”
+<p>I said, “Why do you regret having sex? Sex feels good.”
+<p>Marshall said, “Yes, you’re right, Sam. Sex does feel good—while
+ you’re getting a piece of ass and having sex with the girl. It’s what
+ you feel afterwards that sucks.
+<p>See, when you have sex with someone who don’t really know and don’t
+ love, only the physical act of sex feels good. After the sex is done,
+ you feel shallow and empty.” I said, “So, Marshall, it isn’t a good
+ idea to have casual sex?”
+<p>Marshall said, “No, Sam, it isn’t. The truth is that masturbation is
+ more satisfying that having a meaningless purely physical relationship
+ with a girl. Having sex without having feelings for the girl is not
+ what you want to do.”
+<p>I said, “What kind of sexual relationship is the best?”
+<p>Marshall said, “Again, Sam, I haven’t met this ideal, but the best
+ sex you have is to get together with someone you truly love, have a
+ monogamous relationship, and only have sex with one person for your
+ entire life. That is the best sex you can have.”
+<a name="2026-09-05-years-later"> </a>
+<h3>Years later</h3>
+<p>I took those words to heart. I lost my virginity to my first wife; we
+ had a baby together and I was there next to her bed as she succumbed to
+ cancer. The sex with her was fantastic and never got old; the more I
+ knew her, the better the sex got.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
+<!-- `ENTRY: 2026-09-01 2026 ` -->
+<a name="BlogEntry-2026-09-01"> </a>
+<!-- `ENTRY: 2026-08-29 2026 ` -->
+<a name="BlogEntry-2026-08-29"> </a>
+<!-- `ENTRY: 2026-08-28 2026 ` -->
+<a name="BlogEntry-2026-08-28"> </a>
+<!-- `ENTRY: 2026-08-26 2026 ` -->
+<a name="BlogEntry-2026-08-26"> </a>
+<!-- `ENTRY: 2026-08-24 2026 ` -->
+<a name="BlogEntry-2026-08-24"> </a>
+<!-- `ENTRY: 2026-08-16 2026 ` -->
+<a name="BlogEntry-2026-08-16"> </a>
+<!-- `ENTRY: 2026-08-14 2026 ` -->
+<a name="BlogEntry-2026-08-14"> </a>
+<!-- `ENTRY: 2026-08-10 2026 ` -->
+<a name="BlogEntry-2026-08-10"> </a>
+<!-- `ENTRY: 2026-07-25 2026 ` -->
+<a name="BlogEntry-2026-07-25"> </a>
+<!-- `ENTRY: 2026-07-24 2026 ` -->
+<a name="BlogEntry-2026-07-24"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="../pics/marshall_rip.jpg" width=224 height=126>
+</div>
+<h1>More Marshall Memories</h1>
+<h2>July 24, 2026</h2>
+In today’s blog, I go over some more memories of Marshall, who was a
+ father figure to me at a very key point in my life. I wrote about him
+ previously in <a href="#BlogEntry-2025-08-25">a blog from last  year</a>.
+<a name="2026-07-24-marshall-and-god"> </a>
+<h3>Marshall and God</h3>
+<p>When I worked for Marshall, he would read to me from the Bible.
+<p>Marshall was from the deep south; the Bible belt. The state he was
+ from hasn’t given their electoral votes to a Democrat since 1976. He
+ came from a world and a set of values that are very conservative
+ Christian.
+<p>I was, at the time, an atheist. I wasn’t just any old kind of
+ atheist; I was an intolerant atheist who got annoyed by people reading
+ and talking about the Bible in front of me.
+<p>Marshall started wanting to read the Bible to me during our breaks
+ from work in the office. I would object most loudly “I don’t want you
+ reading that book to me!” Marshall was insistent, and since he was the,
+ you know, president of the company, he got his way.
+<p>So he would sometimes read me some passage from the Bible. This would
+ invariably lead to me complaining that God was just a myth. We would
+ have long arguments about this.
+<p>I finally capitulated and told Marshall I was willing to agree that
+ there is a God. This wasn’t good enough for him. He told me I had to
+ have a Christian faith. When I asked him why, he told me because I was
+ born and raised Christian, so that is the only faith I could have.
+<p>Marshall and myself had various spiritual debates. These debates
+ would often get heated; I had a lot of intolerance in my atheism, and
+ Marshall was, at this point, so frustrated with his life he was looking
+ for any reason to get in to an argument.
+<p>One of the our productive debates was when I told him about a dream I
+ had many years before, where I met someone named Peter who guided me to
+ a magical place. He was impressed with the dream; when I mentioned the
+ person who led me in the darkness was named Peter, he told me Peter was
+ one of the important apostles in the New Testament, and that maybe it
+ was that Peter who I saw in the dream.
+<a name="2026-07-24-my-final-conversation-with-marshall"> </a>
+<h3>My final conversation
+ with Marshall</h3>
+<p>Decades after moving on from Marshall, I talked to him one last time.
+ He told me he didn’t even want to remember that part of his life, and
+ with good reason: He lost his car, his house, and the girlfriend he had
+ at the time ended up divorcing him.
+<p>I told him it was a pleasant memory for me and that being with him at
+ that time in his life was key to my spiritual growth and becoming an
+ adult.
+<p>We said “I love you” to each other before ending the call. That was
+ the last time I ever talked to Marshall; I didn’t find out he died
+ until a couple years after he passed away.
+<a name="2026-07-24-remembering-marshall-today"> </a>
+<h3>Remembering Marshall today</h3>
+<p>When I take a daily walk around sunset, something about the light in
+ the air reminds me of my time with Marshall. It is a very pleasant and
+ peaceful feeling today; being with Marshall planted the seed for having
+ a relationship with God that I have to this day. I became a man because
+ Marshall mentored me at a very key moment in my life. This is something
+ I am glad I experienced.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
+<!-- `ENTRY: 2026-07-19 2026 ` -->
+<a name="BlogEntry-2026-07-19"> </a>
+<!-- `ENTRY: 2026-07-11 2026 ` -->
+<a name="BlogEntry-2026-07-11"> </a>
+<!-- `ENTRY: 2026-07-09 2026 ` -->
+<a name="BlogEntry-2026-07-09"> </a>
+<!-- `ENTRY: 2026-07-05 2026 ` -->
+<a name="BlogEntry-2026-07-05"> </a>
+<!-- `ENTRY: 2026-07-04 2026 ` -->
+<a name="BlogEntry-2026-07-04"> </a>
+<!-- `ENTRY: 2026-07-03 2026 ` -->
+<a name="BlogEntry-2026-07-03"> </a>
+<!-- `ENTRY: 2026-07-02 2026 ` -->
+<a name="BlogEntry-2026-07-02"> </a>
+<!-- `ENTRY: 2026-07-01 2026 ` -->
+<a name="BlogEntry-2026-07-01"> </a>
+<!-- `ENTRY: 2026-06-12 2026 ` -->
+<a name="BlogEntry-2026-06-12"> </a>
+<!-- `ENTRY: 2026-05-03 2026 ` -->
+<a name="BlogEntry-2026-05-03"> </a>
+<!-- `ENTRY: 2026-04-10 2026 ` -->
+<a name="BlogEntry-2026-04-10"> </a>
+<!-- `ENTRY: 2026-03-31 2026 ` -->
+<a name="BlogEntry-2026-03-31"> </a>
+<!-- `ENTRY: 2026-03-30 2026 ` -->
+<a name="BlogEntry-2026-03-30"> </a>
+<!-- `ENTRY: 2026-03-21 2026 ` -->
+<a name="BlogEntry-2026-03-21"> </a>
+<!-- `ENTRY: 2026-03-06 2026 ` -->
+<a name="BlogEntry-2026-03-06"> </a>
+<!-- `ENTRY: 2026-02-11 2026 ` -->
+<a name="BlogEntry-2026-02-11"> </a>
+<!-- `ENTRY: 2026-02-07 2026 ` -->
+<a name="BlogEntry-2026-02-07"> </a>
+<!-- `ENTRY: 2026-01-04 2026 ` -->
+<a name="BlogEntry-2026-01-04"> </a>
+<!-- `ENTRY: 2025-12-31 2025 ` -->
+<a name="BlogEntry-2025-12-31"> </a>
+<!-- `ENTRY: 2025-12-28 2025 ` -->
+<a name="BlogEntry-2025-12-28"> </a>
+<!-- `ENTRY: 2025-12-18 2025 ` -->
+<a name="BlogEntry-2025-12-18"> </a>
+<!-- `ENTRY: 2025-12-03 2025 ` -->
+<a name="BlogEntry-2025-12-03"> </a>
+<!-- `ENTRY: 2025-11-30 2025 ` -->
+<a name="BlogEntry-2025-11-30"> </a>
+<!-- `ENTRY: 2025-11-29 2025 ` -->
+<a name="BlogEntry-2025-11-29"> </a>
+<!-- `ENTRY: 2025-11-22 2025 ` -->
+<a name="BlogEntry-2025-11-22"> </a>
+<!-- `ENTRY: 2025-11-19 2025 ` -->
+<a name="BlogEntry-2025-11-19"> </a>
+<!-- `ENTRY: 2025-11-17 2025 ` -->
+<a name="BlogEntry-2025-11-17"> </a>
+<!-- `ENTRY: 2025-11-13 2025 ` -->
+<a name="BlogEntry-2025-11-13"> </a>
+<!-- `ENTRY: 2025-11-10 2025 ` -->
+<a name="BlogEntry-2025-11-10"> </a>
+<!-- `ENTRY: 2025-10-24 2025 ` -->
+<a name="BlogEntry-2025-10-24"> </a>
+<!-- `ENTRY: 2025-10-23 2025 ` -->
+<a name="BlogEntry-2025-10-23"> </a>
+<!-- `ENTRY: 2025-10-21 2025 ` -->
+<a name="BlogEntry-2025-10-21"> </a>
+<!-- `ENTRY: 2025-10-18 2025 ` -->
+<a name="BlogEntry-2025-10-18"> </a>
+<!-- `ENTRY: 2025-10-11 2025 ` -->
+<a name="BlogEntry-2025-10-11"> </a>
+<!-- `ENTRY: 2025-10-09 2025 ` -->
+<a name="BlogEntry-2025-10-09"> </a>
+<!-- `ENTRY: 2025-10-06 2025 ` -->
+<a name="BlogEntry-2025-10-06"> </a>
+<!-- `ENTRY: 2025-10-03 2025 ` -->
+<a name="BlogEntry-2025-10-03"> </a>
+<!-- `ENTRY: 2025-10-01 2025 ` -->
+<a name="BlogEntry-2025-10-01"> </a>
+<!-- `ENTRY: 2025-09-22 2025 ` -->
+<a name="BlogEntry-2025-09-22"> </a>
+<!-- `ENTRY: 2025-09-20 2025 ` -->
+<a name="BlogEntry-2025-09-20"> </a>
+<!-- `ENTRY: 2025-09-19 2025 ` -->
+<a name="BlogEntry-2025-09-19"> </a>
+<!-- `ENTRY: 2025-09-18 2025 ` -->
+<a name="BlogEntry-2025-09-18"> </a>
+<!-- `ENTRY: 2025-09-17 2025 ` -->
+<a name="BlogEntry-2025-09-17"> </a>
+<!-- `ENTRY: 2025-09-16 2025 ` -->
+<a name="BlogEntry-2025-09-16"> </a>
+<!-- `ENTRY: 2025-09-14 2025 ` -->
+<a name="BlogEntry-2025-09-14"> </a>
+<!-- `ENTRY: 2025-09-13 2025 ` -->
+<a name="BlogEntry-2025-09-13"> </a>
+<!-- `ENTRY: 2025-09-11 2025 ` -->
+<a name="BlogEntry-2025-09-11"> </a>
+<!-- `ENTRY: 2025-09-10 2025 ` -->
+<a name="BlogEntry-2025-09-10"> </a>
+<!-- `ENTRY: 2025-09-08 2025 ` -->
+<a name="BlogEntry-2025-09-08"> </a>
+<!-- `ENTRY: 2025-09-06 2025 ` -->
+<a name="BlogEntry-2025-09-06"> </a>
+<!-- `ENTRY: 2025-08-25 2025 ` -->
+<a name="BlogEntry-2025-08-25"> </a>
+<div class=blogpicx style="text-align: right">
+<img src=../pics/marshall_rip.jpg width=224 height=126>
+</div>
+
+<h1>Remembering Marshall</h1>
+<h2>August 25, 2025</h2>
+Marshall was a friend and father figure to me at a very key coming of
+age time in my life. I remember my time with him.
+
+<p>
+
+<A name=Being_with_Marshall></A><A name=BeingwithMarshall></A><span class=moyet>==</span><span class=blogtitle><b>Being with Marshall</b></span><span class=moyet>==</span>
+
+<p>
+
+When I first met Marshall, I immediately liked the guy; he was friendly and took an interest in me. I was 20 and he was about 40, and had an interest in fast cars and young women. None of this I paid attention to at the time; I just liked the fact he was very friendly to me.
+
+<p>
+
+Marshall had a small business that looked very successful. I remember us driving around in his Porsche, with him telling me, in an excited voice, that we were going to be millionaires. I was taken in by the dream. I felt, like he did, that great financial success was just around the corner. So I started working for him. There was one small issue: His company was temporarily having some minor financial problems, and he couldn’t pay me for the moment. But I knew that was going to change.
+
+<p>
+
+The computer I really wanted was this tiny sub-sub-laptop, in an era when tiny computers like that cost a lot of money.
+
+<p>
+
+I knew I was going to get one as soon as Marshall’s company started taking off and the money started coming in. His business consisted of writing a Beauty Salon scheduling program. I started improving the program so we could have the successful business Marshall kept talking about. 
+
+<p>
+
+<A name=My_days_working_for_Marshall></A><A name=MydaysworkingforMarshall></A><span class=moyet>==</span><span class=blogtitle><b>My days “working” for Marshall</b></span><span class=moyet>==</span>
+<br>
+<img class=widepic src="../pics/marshall_sam_employee.jpg" alt="">
+<br class=nomobile>
+<i>I had a cat named Misty at the time</i>
+<p>
+
+<p>
+
+Every morning, I would wake up, shower, and get dressed. Marshall would soon arrive in his Porsche at my house and honk the horn, which told me to get out of the house and go in to his car to go to his office. After working for Marshall all day, I would socialize with him and his friends. This was my entire social life.
+
+<p>
+
+Marshall’s program was slow work; the program was nowhere near ready to ship and had a lot of bugs. Despite this, Marshall was trying to sell the application. He had one salon that he gave a computer with this application to; the owner of the salon didn’t need to pay Marshall for the computer, but instead gave Marshall some money every month.
+
+<p>
+
+We were regularly getting phone calls from him about how the program wasn’t working; he was getting more and more upset every time he had to call us. We kept putting band-aid fixes on it, but it wasn’t enough.
+
+<p>
+
+We were getting a lot of other calls. Indeed, Marshall made me the person answering all of the calls, and with good reason. Bill collectors were constantly calling us. Bill collectors for everything: Software not paid for; stuff bought with postdated and bouncing checks; computers he bought and never fully paid off; and so on.
+
+<p>
+
+<A name=Marshalls_shattered_dream></A><A name=Marshallsshattereddream></A><span class=moyet>==</span><span class=blogtitle><b>Marshall’s shattered dream</b></span><span class=moyet>==</span>
+
+<p>
+
+One phone call in particular disturbed Marshall greatly. It was some loan company; Marshall took the call and was clearly upset. He demanded to talk to the person in charge; he told him he had the money; he mentioned something about a car. After the phone call, I could see a pained look on his face; he just said nothing and I said nothing too. There was nothing to say.
+
+<p>
+
+That evening, as he was driving home, I asked him what the phone call was about. He assured me: “Oh, just some spiritually sick people who have a lot of insecurities. Nothing to worry about.” I almost completely believed him.
+
+<p>
+
+The next day, someone came to repossess Marshall’s car. It would seem that Marshall hadn’t made a single car payment after getting the car three months before. He called up the financial company again, talking to their boss, assuring them he could afford the car; telling them that, if they would only give him a little more time, he would be making the payments. The car was in the garage and the man who came for the car was smoking heavily and called the police. He was waiting to get the garage door opened and take the car.
+
+<p>
+
+Finally, after about 30 minutes of Marshall talking to the financial loan company, the repossession man came in to the office where Marshall was, got on the phone, and said “OK, have you had enough of this guy’s bullshit? I’m taking the car.” As Marshall finally gave the car to them, I could see he was in a lot of pain, though he had too much pride to openly weep—not a very productive day for work.
+
+<p>
+
+When Marshall’s girlfriend came home from work that evening, we went to see a movie at the theater together that night.
+
+<p>
+
+The repossession of the car was what woke me up to seeing the downward spiral Marshall was actually in. After that, things were not the same. I still held on to the hope things would change, but they didn’t. Things got worse and worse; Marshall was now losing his house and every possible avenue for the company getting money was closing. Marshall was getting more and more desperate. He became verbally abusive, yelling at me for no reason. I became the sounding box for the frustrations he was having with his company falling apart. 
+
+<p>
+
+<A name=Relaxing_days></A><A name=Relaxingdays></A><span class=moyet>==</span><span class=blogtitle><b>Relaxing days</b></span><span class=moyet>==</span>
+<br>
+<img class=widepic src="../pics/marshall_red_vwbug.jpg" alt="">
+<br class=nomobile>
+<i>The neighborhood where I worked for Marshall</i>
+<p>
+
+<p>
+
+When I took work breaks, I would take this walk in the neighborhood Marshall lived in; the weather was beautiful sunny California weather. One day I brought my camera with me to work; one of the pictures I took was of that walk I took every day; it’s a picture looking out on a street in the neighborhood, with a red Volkswagen bug parked on the street. It was a beautiful day with hardly a cloud in the sky; I still have that picture today to bring back memories of that time in my life. 
+
+<p>
+
+Desperate for money, one day Marshall got out his phone book and started calling up some local salons. All of them gave Marshall the same reply: They were not interested. His tone got more desperate and shill with each salon he called up; after the fourth one, he just gave up entirely and had a dejected look of despair on his face. 
+
+<p>
+
+After getting all these rejections, Marshall then left the room and came back an hour or two later; I could see from his face that he had been crying. He still had his pride, so he didn’t cry in front of me. He never let go of his pride.
+
+<p>
+
+The writing was on the wall: There was no money stream for Marshall’s company.
+
+<p>
+
+<A name=Ending_things_with_Marshall></A><A name=EndingthingswithMarshall></A><span class=moyet>==</span><span class=blogtitle><b>Ending things with Marshall</b></span><span class=moyet>==</span>
+
+<p>
+
+Marshall was, when he could, using his girlfriend’s car to take me to work; sometimes he couldn’t and I would have to ride a bicycle to work. Things were not changing. One evening, as I was riding home, my bicycle broke down and I had to walk it home. It was then I decided I had enough of working and not getting paid. That was my last day working for Marshall. I was through.
+
+<p>
+
+I ended up going back to school and eventually got high paying jobs as a programmer in the computer industry.
+
+<p>
+
+I had mostly cut off all contact with Marshall. I would see him sometimes, and we even had the occasional conversation, but it was never the same. He was no longer a father figure to me, and no longer the center of my life.
+
+<p>
+
+Marshall eventually married, and later on divorced, his girlfriend. I talked to Marshall one last time many years later; we said a final “I love you” to each other. Marshall died a little over a decade after our final conversation.
+
+<p>
+
+<A name=A_time_of_spiritual_growth></A><A name=Atimeofspiritualgrowth></A><span class=moyet>==</span><span class=blogtitle><b>A time of spiritual growth</b></span><span class=moyet>==</span>
+
+<p>
+
+The time I was with Marshall was a very key part of my spiritual growth.
+We would have long discussions, sometimes arguments, about God. When I
+started “working” for Marshall; I was an atheist. Just after I broke
+contact with him, I had a conversion experience and became a Christian;
+that experience was how I went from being a child to being an adult.
+This experience would not had been possible had Marshall not been a part
+of my life.
+
+<p>
+
+It is a time of my life I remember very fondly.
+
+<p>
+
+<i>I talk about Marshall some more in <a href="#BlogEntry-2026-07-24">a newer
+blog entry</a>.</i>
+
+<p>
+
+<A name=New_blog_mirror></A><A name=Newblogmirror></A><span class=moyet>==</span><span class=blogtitle><b>New blog mirror</b></span><span class=moyet>==</span>
+
+<p>
+
+I have a new mirror of this blog here:
+
+<p>
+
+<blockquote>
+<A href="https://samboy.github.io/blog/">https://samboy.github.io/blog/</A>
+</blockquote>
+
+
+<p>
+
+
+<p>
+
+<p>
+
+<i>Comments for blog entries can be seen in the 
+<a href=https://github.com/samboy/MaraDNS/discussions/93>forum</a>.
+</i>
+
+<p>
+
+<A href=/blog/>Blog index</A>
+
+</div>
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
+<!-- `ENTRY: 2025-07-31 2025 ` -->
+<a name="BlogEntry-2025-07-31"> </a>
+<!-- `ENTRY: 2025-03-09 2025 ` -->
+<a name="BlogEntry-2025-03-09"> </a>
+<!-- `ENTRY: 2024-05-15 2024 ` -->
+<a name="BlogEntry-2024-05-15"> </a>
+<!-- `ENTRY: 2023-02-28 2023 ` -->
+<a name="BlogEntry-2023-02-28"> </a>
+<!-- `ENTRY: 2023-01-28 2023 ` -->
+<a name="BlogEntry-2023-01-28"> </a>
+<!-- `ENTRY: 2022-12-28 2022 ` -->
+<a name="BlogEntry-2022-12-28"> </a>
+<!-- `ENTRY: 2022-11-29 2022 ` -->
+<a name="BlogEntry-2022-11-29"> </a>
+<!-- `ENTRY: 2022-11-18 2022 ` -->
+<a name="BlogEntry-2022-11-18"> </a>
+<!-- `ENTRY: 2022-11-02 2022 ` -->
+<a name="BlogEntry-2022-11-02"> </a>
+<!-- `ENTRY: 2022-10-11 2022 ` -->
+<a name="BlogEntry-2022-10-11"> </a>
+<!-- `ENTRY: 2022-10-09 2022 ` -->
+<a name="BlogEntry-2022-10-09"> </a>
+<!-- `ENTRY: 2022-09-25 2022 ` -->
+<a name="BlogEntry-2022-09-25"> </a>
+<!-- `ENTRY: 2022-09-11 2022 ` -->
+<a name="BlogEntry-2022-09-11"> </a>
+<!-- `ENTRY: 2022-09-06 2022 ` -->
+<a name="BlogEntry-2022-09-06"> </a>
+<!-- `ENTRY: 2022-09-02 2022 ` -->
+<a name="BlogEntry-2022-09-02"> </a>
+<!-- `ENTRY: 2022-08-11 2022 ` -->
+<a name="BlogEntry-2022-08-11"> </a>
+<!-- `ENTRY: 2022-08-01 2022 ` -->
+<a name="BlogEntry-2022-08-01"> </a>
+<!-- `ENTRY: 2022-07-15 2022 ` -->
+<a name="BlogEntry-2022-07-15"> </a>
+<!-- `ENTRY: 2022-06-25 2022 ` -->
+<a name="BlogEntry-2022-06-25"> </a>
+<!-- `ENTRY: 2022-06-24 2022 ` -->
+<a name="BlogEntry-2022-06-24"> </a>
+<!-- `ENTRY: 2022-05-19 2022 ` -->
+<a name="BlogEntry-2022-05-19"> </a>
+<!-- `ENTRY: 2022-05-04 2022 ` -->
+<a name="BlogEntry-2022-05-04"> </a>
+<!-- `ENTRY: 2022-04-17 2022 ` -->
+<a name="BlogEntry-2022-04-17"> </a>
+<!-- `ENTRY: 2022-03-29 2022 ` -->
+<a name="BlogEntry-2022-03-29"> </a>
+<!-- `ENTRY: 2022-02-05 2022 ` -->
+<a name="BlogEntry-2022-02-05"> </a>
+<!-- `ENTRY: 2022-01-29 2022 ` -->
+<a name="BlogEntry-2022-01-29"> </a>
+<!-- `ENTRY: 2022-01-09 2022 ` -->
+<a name="BlogEntry-2022-01-09"> </a>
+<!-- `ENTRY: 2021-12-19 2021 ` -->
+<a name="BlogEntry-2021-12-19"> </a>
+<!-- `ENTRY: 2021-11-07 2021 ` -->
+<a name="BlogEntry-2021-11-07"> </a>
+<!-- `ENTRY: 2021-10-21 2021 ` -->
+<a name="BlogEntry-2021-10-21"> </a>
+<!-- `ENTRY: 2021-09-26 2021 ` -->
+<a name="BlogEntry-2021-09-26"> </a>
+<!-- `ENTRY: 2021-09-14 2021 ` -->
+<a name="BlogEntry-2021-09-14"> </a>
+<!-- `ENTRY: 2021-09-11 2021 ` -->
+<a name="BlogEntry-2021-09-11"> </a>
+<!-- `ENTRY: 2021-08-17 2021 ` -->
+<a name="BlogEntry-2021-08-17"> </a>
+<!-- `ENTRY: 2021-07-31 2021 ` -->
+<a name="BlogEntry-2021-07-31"> </a>
+<!-- `ENTRY: 2021-07-16 2021 ` -->
+<a name="BlogEntry-2021-07-16"> </a>
+<!-- `ENTRY: 2021-06-06 2021 ` -->
+<a name="BlogEntry-2021-06-06"> </a>
+<!-- `ENTRY: 2021-06-02 2021 ` -->
+<a name="BlogEntry-2021-06-02"> </a>
+<!-- `ENTRY: 2021-06-01 2021 ` -->
+<a name="BlogEntry-2021-06-01"> </a>
+<!-- `ENTRY: 2021-05-02 2021 ` -->
+<a name="BlogEntry-2021-05-02"> </a>
+<!-- `ENTRY: 2021-04-01 2021 ` -->
+<a name="BlogEntry-2021-04-01"> </a>
+<!-- `ENTRY: 2021-03-08 2021 ` -->
+<a name="BlogEntry-2021-03-08"> </a>
+<!-- `ENTRY: 2021-02-23 2021 ` -->
+<a name="BlogEntry-2021-02-23"> </a>
+<!-- `ENTRY: 2021-01-16 2021 ` -->
+<a name="BlogEntry-2021-01-16"> </a>
+<!-- `ENTRY: 2020-12-12 2020 ` -->
+<a name="BlogEntry-2020-12-12"> </a>
+<!-- `ENTRY: 2020-11-28 2020 ` -->
+<a name="BlogEntry-2020-11-28"> </a>
+<!-- `ENTRY: 2020-11-02 2020 ` -->
+<a name="BlogEntry-2020-11-02"> </a>
+<!-- `ENTRY: 2020-11-01 2020 ` -->
+<a name="BlogEntry-2020-11-01"> </a>
+<!-- `ENTRY: 2020-10-25 2020 ` -->
+<a name="BlogEntry-2020-10-25"> </a>
+<!-- `ENTRY: 2020-10-04 2020 ` -->
+<a name="BlogEntry-2020-10-04"> </a>
+<!-- `ENTRY: 2020-09-18 2020 ` -->
+<a name="BlogEntry-2020-09-18"> </a>
+<!-- `ENTRY: 2020-09-02 2020 ` -->
+<a name="BlogEntry-2020-09-02"> </a>
+<!-- `ENTRY: 2020-08-29 2020 ` -->
+<a name="BlogEntry-2020-08-29"> </a>
+<!-- `ENTRY: 2020-08-20 2020 ` -->
+<a name="BlogEntry-2020-08-20"> </a>
+<!-- `ENTRY: 2020-08-12 2020 ` -->
+<a name="BlogEntry-2020-08-12"> </a>
+<!-- `ENTRY: 2020-08-11 2020 ` -->
+<a name="BlogEntry-2020-08-11"> </a>
+<!-- `ENTRY: 2020-07-25 2020 ` -->
+<a name="BlogEntry-2020-07-25"> </a>
+<!-- `ENTRY: 2020-07-14 2020 ` -->
+<a name="BlogEntry-2020-07-14"> </a>
+<!-- `ENTRY: 2020-07-09 2020 ` -->
+<a name="BlogEntry-2020-07-09"> </a>
+<!-- `ENTRY: 2020-07-06 2020 ` -->
+<a name="BlogEntry-2020-07-06"> </a>
+<!-- `ENTRY: 2020-07-03 2020 ` -->
+<a name="BlogEntry-2020-07-03"> </a>
+<!-- `ENTRY: 2020-07-02 2020 ` -->
+<a name="BlogEntry-2020-07-02"> </a>
+<!-- `ENTRY: 2020-06-30 2020 ` -->
+<a name="BlogEntry-2020-06-30"> </a>
+<!-- `ENTRY: 2020-06-23 2020 ` -->
+<a name="BlogEntry-2020-06-23"> </a>
+<!-- `ENTRY: 2020-06-19 2020 ` -->
+<a name="BlogEntry-2020-06-19"> </a>
+<!-- `ENTRY: 2020-06-16 2020 ` -->
+<a name="BlogEntry-2020-06-16"> </a>
+<!-- `ENTRY: 2020-06-13 2020 ` -->
+<a name="BlogEntry-2020-06-13"> </a>
+<!-- `ENTRY: 2020-06-12 2020 ` -->
+<a name="BlogEntry-2020-06-12"> </a>
+<!-- `ENTRY: 2020-06-10 2020 ` -->
+<a name="BlogEntry-2020-06-10"> </a>
+<!-- `ENTRY: 2020-06-08 2020 ` -->
+<a name="BlogEntry-2020-06-08"> </a>
+<!-- `ENTRY: 2020-06-06 2020 ` -->
+<a name="BlogEntry-2020-06-06"> </a>
+<!-- `ENTRY: 2020-06-01 2020 ` -->
+<a name="BlogEntry-2020-06-01"> </a>
+<!-- `ENTRY: 2020-05-29 2020 ` -->
+<a name="BlogEntry-2020-05-29"> </a>
+<!-- `ENTRY: 2020-05-11 2020 ` -->
+<a name="BlogEntry-2020-05-11"> </a>
+<!-- `ENTRY: 2020-04-27 2020 ` -->
+<a name="BlogEntry-2020-04-27"> </a>
+<!-- `ENTRY: 2020-04-11 2020 ` -->
+<a name="BlogEntry-2020-04-11"> </a>
+<!-- `ENTRY: 2020-03-22 2020 ` -->
+<a name="BlogEntry-2020-03-22"> </a>
+<!-- `ENTRY: 2020-03-16 2020 ` -->
+<a name="BlogEntry-2020-03-16"> </a>
+<!-- `ENTRY: 2020-03-11 2020 ` -->
+<a name="BlogEntry-2020-03-11"> </a>
+<!-- `ENTRY: 2020-03-05 2020 ` -->
+<a name="BlogEntry-2020-03-05"> </a>
+<!-- `ENTRY: 2020-02-01 2020 ` -->
+<a name="BlogEntry-2020-02-01"> </a>
+<!-- `ENTRY: 2020-01-25 2020 ` -->
+<a name="BlogEntry-2020-01-25"> </a>
+<!-- `ENTRY: 2020-01-17 2020 ` -->
+<a name="BlogEntry-2020-01-17"> </a>
+<!-- `ENTRY: 2020-01-09 2020 ` -->
+<a name="BlogEntry-2020-01-09"> </a>
+<!-- `ENTRY: 2019-12-12 2019 ` -->
+<a name="BlogEntry-2019-12-12"> </a>
+<!-- `ENTRY: 2019-11-16 2019 ` -->
+<a name="BlogEntry-2019-11-16"> </a>
+<!-- `ENTRY: 2019-11-04 2019 ` -->
+<a name="BlogEntry-2019-11-04"> </a>
+<!-- `ENTRY: 2019-10-24 2019 ` -->
+<a name="BlogEntry-2019-10-24"> </a>
+<!-- `ENTRY: 2019-10-05 2019 ` -->
+<a name="BlogEntry-2019-10-05"> </a>
+<!-- `ENTRY: 2019-09-12 2019 ` -->
+<a name="BlogEntry-2019-09-12"> </a>
+<!-- `ENTRY: 2019-07-27 2019 ` -->
+<a name="BlogEntry-2019-07-27"> </a>
+<!-- `ENTRY: 2019-05-30 2019 ` -->
+<a name="BlogEntry-2019-05-30"> </a>
+<!-- `ENTRY: 2019-04-30 2019 ` -->
+<a name="BlogEntry-2019-04-30"> </a>
+<!-- `ENTRY: 2019-03-23 2019 ` -->
+<a name="BlogEntry-2019-03-23"> </a>
+<!-- `ENTRY: 2019-02-23 2019 ` -->
+<a name="BlogEntry-2019-02-23"> </a>
+<!-- `ENTRY: 2019-02-11 2019 ` -->
+<a name="BlogEntry-2019-02-11"> </a>
+<!-- `ENTRY: 2019-01-20 2019 ` -->
+<a name="BlogEntry-2019-01-20"> </a>
+<!-- `ENTRY: 2019-01-19 2019 ` -->
+<a name="BlogEntry-2019-01-19"> </a>
+<!-- `ENTRY: 2018-12-14 2018 ` -->
+<a name="BlogEntry-2018-12-14"> </a>
+<!-- `ENTRY: 2018-12-01 2018 ` -->
+<a name="BlogEntry-2018-12-01"> </a>
+<!-- `ENTRY: 2018-11-11 2018 ` -->
+<a name="BlogEntry-2018-11-11"> </a>
+<!-- `ENTRY: 2018-11-07 2018 ` -->
+<a name="BlogEntry-2018-11-07"> </a>
+<!-- `ENTRY: 2018-10-07 2018 ` -->
+<a name="BlogEntry-2018-10-07"> </a>
+<!-- `ENTRY: 2018-09-22 2018 ` -->
+<a name="BlogEntry-2018-09-22"> </a>
+<!-- `ENTRY: 2018-08-16 2018 ` -->
+<a name="BlogEntry-2018-08-16"> </a>
+<!-- `ENTRY: 2018-08-04 2018 ` -->
+<a name="BlogEntry-2018-08-04"> </a>
+<!-- `ENTRY: 2018-07-07 2018 ` -->
+<a name="BlogEntry-2018-07-07"> </a>
+<!-- `ENTRY: 2018-06-02 2018 ` -->
+<a name="BlogEntry-2018-06-02"> </a>
+<!-- `ENTRY: 2018-05-05 2018 ` -->
+<a name="BlogEntry-2018-05-05"> </a>
+<!-- `ENTRY: 2018-04-10 2018 ` -->
+<a name="BlogEntry-2018-04-10"> </a>
+<!-- `ENTRY: 2018-03-10 2018 ` -->
+<a name="BlogEntry-2018-03-10"> </a>
+<!-- `ENTRY: 2018-02-10 2018 ` -->
+<a name="BlogEntry-2018-02-10"> </a>
+<!-- `ENTRY: 2018-01-04 2018 ` -->
+<a name="BlogEntry-2018-01-04"> </a>
+<!-- `ENTRY: 2017-12-01 2017 ` -->
+<a name="BlogEntry-2017-12-01"> </a>
+<!-- `ENTRY: 2017-11-11 2017 ` -->
+<a name="BlogEntry-2017-11-11"> </a>
+<!-- `ENTRY: 2017-10-26 2017 ` -->
+<a name="BlogEntry-2017-10-26"> </a>
+<!-- `ENTRY: 2017-09-12 2017 ` -->
+<a name="BlogEntry-2017-09-12"> </a>
+<!-- `ENTRY: 2017-08-12 2017 ` -->
+<a name="BlogEntry-2017-08-12"> </a>
+<!-- `ENTRY: 2017-07-08 2017 ` -->
+<a name="BlogEntry-2017-07-08"> </a>
+<!-- `ENTRY: 2017-06-10 2017 ` -->
+<a name="BlogEntry-2017-06-10"> </a>
+<!-- `ENTRY: 2017-05-10 2017 ` -->
+<a name="BlogEntry-2017-05-10"> </a>
+<!-- `ENTRY: 2017-04-03 2017 ` -->
+<a name="BlogEntry-2017-04-03"> </a>
+<!-- `ENTRY: 2017-03-11 2017 ` -->
+<a name="BlogEntry-2017-03-11"> </a>
+<!-- `ENTRY: 2017-02-23 2017 ` -->
+<a name="BlogEntry-2017-02-23"> </a>
+<!-- `ENTRY: 2017-01-17 2017 ` -->
+<a name="BlogEntry-2017-01-17"> </a>
+<!-- `ENTRY: 2016-12-06 2016 ` -->
+<a name="BlogEntry-2016-12-06"> </a>
+<!-- `ENTRY: 2016-11-14 2016 ` -->
+<a name="BlogEntry-2016-11-14"> </a>
+<!-- `ENTRY: 2016-10-08 2016 ` -->
+<a name="BlogEntry-2016-10-08"> </a>
+<!-- `ENTRY: 2016-09-19 2016 ` -->
+<a name="BlogEntry-2016-09-19"> </a>
+<!-- `ENTRY: 2016-08-26 2016 ` -->
+<a name="BlogEntry-2016-08-26"> </a>
+<!-- `ENTRY: 2016-07-21 2016 ` -->
+<a name="BlogEntry-2016-07-21"> </a>
+<!-- `ENTRY: 2016-06-08 2016 ` -->
+<a name="BlogEntry-2016-06-08"> </a>
+<!-- `ENTRY: 2016-05-01 2016 ` -->
+<a name="BlogEntry-2016-05-01"> </a>
+<!-- `ENTRY: 2016-04-21 2016 ` -->
+<a name="BlogEntry-2016-04-21"> </a>
+<!-- `ENTRY: 2016-03-04 2016 ` -->
+<a name="BlogEntry-2016-03-04"> </a>
+<!-- `ENTRY: 2016-02-28 2016 ` -->
+<a name="BlogEntry-2016-02-28"> </a>
+<!-- `ENTRY: 2016-01-29 2016 ` -->
+<a name="BlogEntry-2016-01-29"> </a>
+<!-- `ENTRY: 2015-12-07 2015 ` -->
+<a name="BlogEntry-2015-12-07"> </a>
+<!-- `ENTRY: 2015-11-30 2015 ` -->
+<a name="BlogEntry-2015-11-30"> </a>
+<!-- `ENTRY: 2015-10-08 2015 ` -->
+<a name="BlogEntry-2015-10-08"> </a>
+<!-- `ENTRY: 2015-09-01 2015 ` -->
+<a name="BlogEntry-2015-09-01"> </a>
+<!-- `ENTRY: 2015-08-19 2015 ` -->
+<a name="BlogEntry-2015-08-19"> </a>
+<!-- `ENTRY: 2015-07-24 2015 ` -->
+<a name="BlogEntry-2015-07-24"> </a>
+<!-- `ENTRY: 2015-06-12 2015 ` -->
+<a name="BlogEntry-2015-06-12"> </a>
+<!-- `ENTRY: 2015-05-27 2015 ` -->
+<a name="BlogEntry-2015-05-27"> </a>
+<!-- `ENTRY: 2015-04-14 2015 ` -->
+<a name="BlogEntry-2015-04-14"> </a>
+<!-- `ENTRY: 2015-03-22 2015 ` -->
+<a name="BlogEntry-2015-03-22"> </a>
+<!-- `ENTRY: 2015-03-17 2015 ` -->
+<a name="BlogEntry-2015-03-17"> </a>
+<!-- `ENTRY: 2015-03-06 2015 ` -->
+<a name="BlogEntry-2015-03-06"> </a>
+<!-- `ENTRY: 2015-02-28 2015 ` -->
+<a name="BlogEntry-2015-02-28"> </a>
+<!-- `ENTRY: 2015-02-24 2015 ` -->
+<a name="BlogEntry-2015-02-24"> </a>
+<!-- `ENTRY: 2015-02-15 2015 ` -->
+<a name="BlogEntry-2015-02-15"> </a>
+<!-- `ENTRY: 2015-02-11 2015 ` -->
+<a name="BlogEntry-2015-02-11"> </a>
+<!-- `ENTRY: 2015-02-06 2015 ` -->
+<a name="BlogEntry-2015-02-06"> </a>
+<!-- `ENTRY: 2015-01-29 2015 ` -->
+<a name="BlogEntry-2015-01-29"> </a>
+<!-- `ENTRY: 2015-01-25 2015 ` -->
+<a name="BlogEntry-2015-01-25"> </a>
+<!-- `ENTRY: 2014-12-14 2014 ` -->
+<a name="BlogEntry-2014-12-14"> </a>
+<!-- `ENTRY: 2014-11-05 2014 ` -->
+<a name="BlogEntry-2014-11-05"> </a>
+<!-- `ENTRY: 2014-10-25 2014 ` -->
+<a name="BlogEntry-2014-10-25"> </a>
+<!-- `ENTRY: 2014-09-25 2014 ` -->
+<a name="BlogEntry-2014-09-25"> </a>
+<!-- `ENTRY: 2014-08-07 2014 ` -->
+<a name="BlogEntry-2014-08-07"> </a>
+<!-- `ENTRY: 2014-07-31 2014 ` -->
+<a name="BlogEntry-2014-07-31"> </a>
+<!-- `ENTRY: 2014-07-19 2014 ` -->
+<a name="BlogEntry-2014-07-19"> </a>
+<!-- `ENTRY: 2014-07-04 2014 ` -->
+<a name="BlogEntry-2014-07-04"> </a>
+<!-- `ENTRY: 2014-06-21 2014 ` -->
+<a name="BlogEntry-2014-06-21"> </a>
+<!-- `ENTRY: 2014-06-11 2014 ` -->
+<a name="BlogEntry-2014-06-11"> </a>
+<!-- `ENTRY: 2014-05-24 2014 ` -->
+<a name="BlogEntry-2014-05-24"> </a>
+<!-- `ENTRY: 2014-04-27 2014 ` -->
+<a name="BlogEntry-2014-04-27"> </a>
+<!-- `ENTRY: 2014-04-23 2014 ` -->
+<a name="BlogEntry-2014-04-23"> </a>
+<!-- `ENTRY: 2014-04-12 2014 ` -->
+<a name="BlogEntry-2014-04-12"> </a>
+<!-- `ENTRY: 2014-03-23 2014 ` -->
+<a name="BlogEntry-2014-03-23"> </a>
+<!-- `ENTRY: 2014-03-14 2014 ` -->
+<a name="BlogEntry-2014-03-14"> </a>
+<!-- `ENTRY: 2014-02-12 2014 ` -->
+<a name="BlogEntry-2014-02-12"> </a>
+<!-- `ENTRY: 2014-02-05 2014 ` -->
+<a name="BlogEntry-2014-02-05"> </a>
+<!-- `ENTRY: 2014-01-28 2014 ` -->
+<a name="BlogEntry-2014-01-28"> </a>
+<!-- `ENTRY: 2014-01-22 2014 ` -->
+<a name="BlogEntry-2014-01-22"> </a>
+<!-- `ENTRY: 2014-01-14 2014 ` -->
+<a name="BlogEntry-2014-01-14"> </a>
+<!-- `ENTRY: 2014-01-08 2014 ` -->
+<a name="BlogEntry-2014-01-08"> </a>
+<!-- `ENTRY: 2014-01-01 2014 ` -->
+<a name="BlogEntry-2014-01-01"> </a>
+<!-- `ENTRY: 20131231 2013 ` -->
+<a name="BlogEntry-20131231"> </a>
+<!-- `ENTRY: 20131220 2013 ` -->
+<a name="BlogEntry-20131220"> </a>
+<!-- `ENTRY: 20131215 2013 ` -->
+<a name="BlogEntry-20131215"> </a>
+<!-- `ENTRY: 20131214 2013 ` -->
+<a name="BlogEntry-20131214"> </a>
+<!-- `ENTRY: 20131213 2013 ` -->
+<a name="BlogEntry-20131213"> </a>
+<!-- `ENTRY: 20131212 2013 ` -->
+<a name="BlogEntry-20131212"> </a>
+<!-- `ENTRY: 20131211 2013 ` -->
+<a name="BlogEntry-20131211"> </a>
+<!-- `ENTRY: 20131210 2013 ` -->
+<a name="BlogEntry-20131210"> </a>
+<!-- `ENTRY: 20131206 2013 ` -->
+<a name="BlogEntry-20131206"> </a>
+<!-- `ENTRY: 20131203 2013 ` -->
+<a name="BlogEntry-20131203"> </a>
+<!-- `ENTRY: 20131202 2013 ` -->
+<a name="BlogEntry-20131202"> </a>
+<!-- `ENTRY: 20131127 2013 ` -->
+<a name="BlogEntry-20131127"> </a>
+<!-- `ENTRY: 20131124 2013 ` -->
+<a name="BlogEntry-20131124"> </a>
+<!-- `ENTRY: 20131123 2013 ` -->
+<a name="BlogEntry-20131123"> </a>
+<!-- `ENTRY: 20131119 2013 ` -->
+<a name="BlogEntry-20131119"> </a>
+<!-- `ENTRY: 20131118 2013 ` -->
+<a name="BlogEntry-20131118"> </a>
+<!-- `ENTRY: 20131117 2013 ` -->
+<a name="BlogEntry-20131117"> </a>
+<!-- `ENTRY: 20131113 2013 ` -->
+<a name="BlogEntry-20131113"> </a>
+<!-- `ENTRY: 20131112 2013 ` -->
+<a name="BlogEntry-20131112"> </a>
+<!-- `ENTRY: 20131108 2013 ` -->
+<a name="BlogEntry-20131108"> </a>
+<!-- `ENTRY: 20131022 2013 ` -->
+<a name="BlogEntry-20131022"> </a>
+<!-- `ENTRY: 20131020 2013 ` -->
+<a name="BlogEntry-20131020"> </a>
+<!-- `ENTRY: 20131012 2013 ` -->
+<a name="BlogEntry-20131012"> </a>
+<!-- `ENTRY: 20131006 2013 ` -->
+<a name="BlogEntry-20131006"> </a>
+<!-- `ENTRY: 20131004 2013 ` -->
+<a name="BlogEntry-20131004"> </a>
+<!-- `ENTRY: 20130920 2013 ` -->
+<a name="BlogEntry-20130920"> </a>
+<!-- `ENTRY: 20130915 2013 ` -->
+<a name="BlogEntry-20130915"> </a>
+<!-- `ENTRY: 20130912 2013 ` -->
+<a name="BlogEntry-20130912"> </a>
+<!-- `ENTRY: 20130904 2013 ` -->
+<a name="BlogEntry-20130904"> </a>
+<!-- `ENTRY: 20130903 2013 ` -->
+<a name="BlogEntry-20130903"> </a>
+<!-- `ENTRY: 20130902 2013 ` -->
+<a name="BlogEntry-20130902"> </a>
+<!-- `ENTRY: 20130829 2013 ` -->
+<a name="BlogEntry-20130829"> </a>
+<!-- `ENTRY: 20130828 2013 ` -->
+<a name="BlogEntry-20130828"> </a>
+<!-- `ENTRY: 20130826 2013 ` -->
+<a name="BlogEntry-20130826"> </a>
+<!-- `ENTRY: 20130820 2013 ` -->
+<a name="BlogEntry-20130820"> </a>
+<!-- `ENTRY: 20130818 2013 ` -->
+<a name="BlogEntry-20130818"> </a>
+<!-- `ENTRY: 20130731 2013 ` -->
+<a name="BlogEntry-20130731"> </a>
+<!-- `ENTRY: 20130728 2013 ` -->
+<a name="BlogEntry-20130728"> </a>
+<!-- `ENTRY: 20130721 2013 ` -->
+<a name="BlogEntry-20130721"> </a>
+<!-- `ENTRY: 20130720 2013 ` -->
+<a name="BlogEntry-20130720"> </a>
+<!-- `ENTRY: 20130713 2013 ` -->
+<a name="BlogEntry-20130713"> </a>
+<!-- `ENTRY: 20130706 2013 ` -->
+<a name="BlogEntry-20130706"> </a>
+<!-- `ENTRY: 20130622 2013 ` -->
+<a name="BlogEntry-20130622"> </a>
+<!-- `ENTRY: 20130621 2013 ` -->
+<a name="BlogEntry-20130621"> </a>
+<!-- `ENTRY: 20130617 2013 ` -->
+<a name="BlogEntry-20130617"> </a>
+<!-- `ENTRY: 20130616 2013 ` -->
+<a name="BlogEntry-20130616"> </a>
+<!-- `ENTRY: 20130612 2013 ` -->
+<a name="BlogEntry-20130612"> </a>
+<!-- `ENTRY: 20130608 2013 ` -->
+<a name="BlogEntry-20130608"> </a>
+<!-- `ENTRY: 20130606 2013 ` -->
+<a name="BlogEntry-20130606"> </a>
+<!-- `ENTRY: 20130604 2013 ` -->
+<a name="BlogEntry-20130604"> </a>
+<!-- `ENTRY: 20130523 2013 ` -->
+<a name="BlogEntry-20130523"> </a>
+<!-- `ENTRY: 20130505 2013 ` -->
+<a name="BlogEntry-20130505"> </a>
+<!-- `ENTRY: 20130420 2013 ` -->
+<a name="BlogEntry-20130420"> </a>
+<!-- `ENTRY: 20130415 2013 ` -->
+<a name="BlogEntry-20130415"> </a>
+<!-- `ENTRY: 20130407 2013 ` -->
+<a name="BlogEntry-20130407"> </a>
+<!-- `ENTRY: 20130330 2013 ` -->
+<a name="BlogEntry-20130330"> </a>
+<!-- `ENTRY: 20130329 2013 ` -->
+<a name="BlogEntry-20130329"> </a>
+<!-- `ENTRY: 20130320 2013 ` -->
+<a name="BlogEntry-20130320"> </a>
+<!-- `ENTRY: 20130316 2013 ` -->
+<a name="BlogEntry-20130316"> </a>
+<!-- `ENTRY: 20130307 2013 ` -->
+<a name="BlogEntry-20130307"> </a>
+<!-- `ENTRY: 20130301 2013 ` -->
+<a name="BlogEntry-20130301"> </a>
+<!-- `ENTRY: 20130222 2013 ` -->
+<a name="BlogEntry-20130222"> </a>
+<!-- `ENTRY: 20130217 2013 ` -->
+<a name="BlogEntry-20130217"> </a>
+<!-- `ENTRY: 20130205 2013 ` -->
+<a name="BlogEntry-20130205"> </a>
+<!-- `ENTRY: 20130203 2013 ` -->
+<a name="BlogEntry-20130203"> </a>
+<!-- `ENTRY: 20130131 2013 ` -->
+<a name="BlogEntry-20130131"> </a>
+<!-- `ENTRY: 20130124 2013 ` -->
+<a name="BlogEntry-20130124"> </a>
+<!-- `ENTRY: 20130121 2013 ` -->
+<a name="BlogEntry-20130121"> </a>
+<!-- `ENTRY: 20130120 2013 ` -->
+<a name="BlogEntry-20130120"> </a>
+<!-- `ENTRY: 20130106 2013 ` -->
+<a name="BlogEntry-20130106"> </a>
+<!-- `ENTRY: 20130105 2013 ` -->
+<a name="BlogEntry-20130105"> </a>
+<!-- `ENTRY: 20130101 2013 ` -->
+<a name="BlogEntry-20130101"> </a>
+<!-- `ENTRY: 20121231 2012 ` -->
+<a name="BlogEntry-20121231"> </a>
+<!-- `ENTRY: 20121221 2012 ` -->
+<a name="BlogEntry-20121221"> </a>
+<!-- `ENTRY: 20121220 2012 ` -->
+<a name="BlogEntry-20121220"> </a>
+<!-- `ENTRY: 20121219 2012 ` -->
+<a name="BlogEntry-20121219"> </a>
+<!-- `ENTRY: 20121212 2012 ` -->
+<a name="BlogEntry-20121212"> </a>
+<!-- `ENTRY: 20121201 2012 ` -->
+<a name="BlogEntry-20121201"> </a>
+<!-- `ENTRY: 20121130 2012 ` -->
+<a name="BlogEntry-20121130"> </a>
+<!-- `ENTRY: 20121124 2012 ` -->
+<a name="BlogEntry-20121124"> </a>
+<!-- `ENTRY: 20121114 2012 ` -->
+<a name="BlogEntry-20121114"> </a>
+<!-- `ENTRY: 20121107 2012 ` -->
+<a name="BlogEntry-20121107"> </a>
+<!-- `ENTRY: 20121106 2012 ` -->
+<a name="BlogEntry-20121106"> </a>
+<!-- `ENTRY: 20121104 2012 ` -->
+<a name="BlogEntry-20121104"> </a>
+<!-- `ENTRY: 20121103 2012 ` -->
+<a name="BlogEntry-20121103"> </a>
+<!-- `ENTRY: 20121102 2012 ` -->
+<a name="BlogEntry-20121102"> </a>
+<!-- `ENTRY: 20121101 2012 ` -->
+<a name="BlogEntry-20121101"> </a>
+<!-- `ENTRY: 20121028 2012 ` -->
+<a name="BlogEntry-20121028"> </a>
+<!-- `ENTRY: 20121027 2012 ` -->
+<a name="BlogEntry-20121027"> </a>
+<!-- `ENTRY: 20121026 2012 ` -->
+<a name="BlogEntry-20121026"> </a>
+<!-- `ENTRY: 20121020 2012 ` -->
+<a name="BlogEntry-20121020"> </a>
+<!-- `ENTRY: 20121018 2012 ` -->
+<a name="BlogEntry-20121018"> </a>
+<!-- `ENTRY: 20121017 2012 ` -->
+<a name="BlogEntry-20121017"> </a>
+<!-- `ENTRY: 20121016 2012 ` -->
+<a name="BlogEntry-20121016"> </a>
+<!-- `ENTRY: 20121015 2012 ` -->
+<a name="BlogEntry-20121015"> </a>
+<!-- `ENTRY: 20121006 2012 ` -->
+<a name="BlogEntry-20121006"> </a>
+<!-- `ENTRY: 20121004 2012 ` -->
+<a name="BlogEntry-20121004"> </a>
+<!-- `ENTRY: 20120929 2012 ` -->
+<a name="BlogEntry-20120929"> </a>
+<!-- `ENTRY: 20120922 2012 ` -->
+<a name="BlogEntry-20120922"> </a>
+<!-- `ENTRY: 20120918 2012 ` -->
+<a name="BlogEntry-20120918"> </a>
+<!-- `ENTRY: 20120911 2012 ` -->
+<a name="BlogEntry-20120911"> </a>
+<!-- `ENTRY: 20120908 2012 ` -->
+<a name="BlogEntry-20120908"> </a>
+<!-- `ENTRY: 20120907 2012 ` -->
+<a name="BlogEntry-20120907"> </a>
+<!-- `ENTRY: 20120903 2012 ` -->
+<a name="BlogEntry-20120903"> </a>
+<!-- `ENTRY: 20120901 2012 ` -->
+<a name="BlogEntry-20120901"> </a>
+<!-- `ENTRY: 20120827 2012 ` -->
+<a name="BlogEntry-20120827"> </a>
+<!-- `ENTRY: 20120823 2012 ` -->
+<a name="BlogEntry-20120823"> </a>
+<!-- `ENTRY: 20120818 2012 ` -->
+<a name="BlogEntry-20120818"> </a>
+<!-- `ENTRY: 20120815 2012 ` -->
+<a name="BlogEntry-20120815"> </a>
+<!-- `ENTRY: 20120814 2012 ` -->
+<a name="BlogEntry-20120814"> </a>
+<!-- `ENTRY: 20120806 2012 ` -->
+<a name="BlogEntry-20120806"> </a>
+<!-- `ENTRY: 20120802 2012 ` -->
+<a name="BlogEntry-20120802"> </a>
+<!-- `ENTRY: 20120731 2012 ` -->
+<a name="BlogEntry-20120731"> </a>
+<!-- `ENTRY: 20120723 2012 ` -->
+<a name="BlogEntry-20120723"> </a>
+<!-- `ENTRY: 20120721 2012 ` -->
+<a name="BlogEntry-20120721"> </a>
+<!-- `ENTRY: 20120711 2012 ` -->
+<a name="BlogEntry-20120711"> </a>
+<!-- `ENTRY: 20120623 2012 ` -->
+<a name="BlogEntry-20120623"> </a>
+<!-- `ENTRY: 20120621 2012 ` -->
+<a name="BlogEntry-20120621"> </a>
+<!-- `ENTRY: 20120611 2012 ` -->
+<a name="BlogEntry-20120611"> </a>
+<!-- `ENTRY: 20120521 2012 ` -->
+<a name="BlogEntry-20120521"> </a>
+<!-- `ENTRY: 20120510 2012 ` -->
+<a name="BlogEntry-20120510"> </a>
+<!-- `ENTRY: 20120508 2012 ` -->
+<a name="BlogEntry-20120508"> </a>
+<!-- `ENTRY: 20120424 2012 ` -->
+<a name="BlogEntry-20120424"> </a>
+<!-- `ENTRY: 20120408 2012 ` -->
+<a name="BlogEntry-20120408"> </a>
+<!-- `ENTRY: 20120403 2012 ` -->
+<a name="BlogEntry-20120403"> </a>
+<!-- `ENTRY: 20120402 2012 ` -->
+<a name="BlogEntry-20120402"> </a>
+<!-- `ENTRY: 20120401 2012 ` -->
+<a name="BlogEntry-20120401"> </a>
+<!-- `ENTRY: 20120327 2012 ` -->
+<a name="BlogEntry-20120327"> </a>
+<!-- `ENTRY: 20120326 2012 ` -->
+<a name="BlogEntry-20120326"> </a>
+<!-- `ENTRY: 20120325 2012 ` -->
+<a name="BlogEntry-20120325"> </a>
+<!-- `ENTRY: 20120322 2012 ` -->
+<a name="BlogEntry-20120322"> </a>
+<!-- `ENTRY: 20120321 2012 ` -->
+<a name="BlogEntry-20120321"> </a>
+<!-- `ENTRY: 20120320 2012 ` -->
+<a name="BlogEntry-20120320"> </a>
+<!-- `ENTRY: 20120317 2012 ` -->
+<a name="BlogEntry-20120317"> </a>
+<!-- `ENTRY: 20120314 2012 ` -->
+<a name="BlogEntry-20120314"> </a>
+<!-- `ENTRY: 20120311 2012 ` -->
+<a name="BlogEntry-20120311"> </a>
+<!-- `ENTRY: 20120307 2012 ` -->
+<a name="BlogEntry-20120307"> </a>
+<!-- `ENTRY: 20120306 2012 ` -->
+<a name="BlogEntry-20120306"> </a>
+<!-- `ENTRY: 20120305 2012 ` -->
+<a name="BlogEntry-20120305"> </a>
+<!-- `ENTRY: 20120304 2012 ` -->
+<a name="BlogEntry-20120304"> </a>
+<!-- `ENTRY: 20120303 2012 ` -->
+<a name="BlogEntry-20120303"> </a>
+<!-- `ENTRY: 20120302 2012 ` -->
+<a name="BlogEntry-20120302"> </a>
+<!-- `ENTRY: 20120229 2012 ` -->
+<a name="BlogEntry-20120229"> </a>
+<!-- `ENTRY: 20120228 2012 ` -->
+<a name="BlogEntry-20120228"> </a>
+<!-- `ENTRY: 20120226 2012 ` -->
+<a name="BlogEntry-20120226"> </a>
+<!-- `ENTRY: 20120225 2012 ` -->
+<a name="BlogEntry-20120225"> </a>
+<!-- `ENTRY: 20120218 2012 ` -->
+<a name="BlogEntry-20120218"> </a>
+<!-- `ENTRY: 20120216 2012 ` -->
+<a name="BlogEntry-20120216"> </a>
+<!-- `ENTRY: 20120215 2012 ` -->
+<a name="BlogEntry-20120215"> </a>
+<!-- `ENTRY: 20120214 2012 ` -->
+<a name="BlogEntry-20120214"> </a>
+<!-- `ENTRY: 20120213 2012 ` -->
+<a name="BlogEntry-20120213"> </a>
+<!-- `ENTRY: 20120212 2012 ` -->
+<a name="BlogEntry-20120212"> </a>
+<!-- `ENTRY: 20120211 2012 ` -->
+<a name="BlogEntry-20120211"> </a>
+<!-- `ENTRY: 20120206 2012 ` -->
+<a name="BlogEntry-20120206"> </a>
+<!-- `ENTRY: 20120205 2012 ` -->
+<a name="BlogEntry-20120205"> </a>
+<!-- `ENTRY: 20120203 2012 ` -->
+<a name="BlogEntry-20120203"> </a>
+<!-- `ENTRY: 20120130 2012 ` -->
+<a name="BlogEntry-20120130"> </a>
+<!-- `ENTRY: 20120128 2012 ` -->
+<a name="BlogEntry-20120128"> </a>
+<!-- `ENTRY: 20120125 2012 ` -->
+<a name="BlogEntry-20120125"> </a>
+<!-- `ENTRY: 20120119 2012 ` -->
+<a name="BlogEntry-20120119"> </a>
+<!-- `ENTRY: 20120117 2012 ` -->
+<a name="BlogEntry-20120117"> </a>
+<!-- `ENTRY: 20120113 2012 ` -->
+<a name="BlogEntry-20120113"> </a>
+<!-- `ENTRY: 20120106 2012 ` -->
+<a name="BlogEntry-20120106"> </a>
+<!-- `ENTRY: 20120104 2012 ` -->
+<a name="BlogEntry-20120104"> </a>
+<!-- `ENTRY: 20120101 2012 ` -->
+<a name="BlogEntry-20120101"> </a>
+<!-- `ENTRY: 20111230 2011 ` -->
+<a name="BlogEntry-20111230"> </a>
+<!-- `ENTRY: 20111229 2011 ` -->
+<a name="BlogEntry-20111229"> </a>
+<!-- `ENTRY: 20111224 2011 ` -->
+<a name="BlogEntry-20111224"> </a>
+<!-- `ENTRY: 20111223 2011 ` -->
+<a name="BlogEntry-20111223"> </a>
+<!-- `ENTRY: 20111222 2011 ` -->
+<a name="BlogEntry-20111222"> </a>
+<!-- `ENTRY: 20111221 2011 ` -->
+<a name="BlogEntry-20111221"> </a>
+<!-- `ENTRY: 20111220 2011 ` -->
+<a name="BlogEntry-20111220"> </a>
+<!-- `ENTRY: 20111218 2011 ` -->
+<a name="BlogEntry-20111218"> </a>
+<!-- `ENTRY: 20111217 2011 ` -->
+<a name="BlogEntry-20111217"> </a>
+<!-- `ENTRY: 20111216 2011 ` -->
+<a name="BlogEntry-20111216"> </a>
+<!-- `ENTRY: 20111213 2011 ` -->
+<a name="BlogEntry-20111213"> </a>
+<!-- `ENTRY: 20111211 2011 ` -->
+<a name="BlogEntry-20111211"> </a>
+<!-- `ENTRY: 20111210 2011 ` -->
+<a name="BlogEntry-20111210"> </a>
+<!-- `ENTRY: 20111209 2011 ` -->
+<a name="BlogEntry-20111209"> </a>
+<!-- `ENTRY: 20111207 2011 ` -->
+<a name="BlogEntry-20111207"> </a>
+<!-- `ENTRY: 20111201 2011 ` -->
+<a name="BlogEntry-20111201"> </a>
+<!-- `ENTRY: 20111130 2011 ` -->
+<a name="BlogEntry-20111130"> </a>
+<!-- `ENTRY: 20111129 2011 ` -->
+<a name="BlogEntry-20111129"> </a>
+<!-- `ENTRY: 20111128 2011 ` -->
+<a name="BlogEntry-20111128"> </a>
+<!-- `ENTRY: 20111127 2011 ` -->
+<a name="BlogEntry-20111127"> </a>
+<!-- `ENTRY: 20111123 2011 ` -->
+<a name="BlogEntry-20111123"> </a>
+<!-- `ENTRY: 20111119 2011 ` -->
+<a name="BlogEntry-20111119"> </a>
+<!-- `ENTRY: 20111113 2011 ` -->
+<a name="BlogEntry-20111113"> </a>
+<!-- `ENTRY: 20111112 2011 ` -->
+<a name="BlogEntry-20111112"> </a>
+<!-- `ENTRY: 20111111 2011 ` -->
+<a name="BlogEntry-20111111"> </a>
+<!-- `ENTRY: 20111110 2011 ` -->
+<a name="BlogEntry-20111110"> </a>
+<!-- `ENTRY: 20111109 2011 ` -->
+<a name="BlogEntry-20111109"> </a>
+<!-- `ENTRY: 20111108 2011 ` -->
+<a name="BlogEntry-20111108"> </a>
+<!-- `ENTRY: 20111105 2011 ` -->
+<a name="BlogEntry-20111105"> </a>
+<!-- `ENTRY: 20111104 2011 ` -->
+<a name="BlogEntry-20111104"> </a>
+<!-- `ENTRY: 20111101 2011 ` -->
+<a name="BlogEntry-20111101"> </a>
+<!-- `ENTRY: 20111027 2011 ` -->
+<a name="BlogEntry-20111027"> </a>
+<!-- `ENTRY: 20111023 2011 ` -->
+<a name="BlogEntry-20111023"> </a>
+<!-- `ENTRY: 20111013 2011 ` -->
+<a name="BlogEntry-20111013"> </a>
+<!-- `ENTRY: 20111012 2011 ` -->
+<a name="BlogEntry-20111012"> </a>
+<!-- `ENTRY: 20111010 2011 ` -->
+<a name="BlogEntry-20111010"> </a>
+<!-- `ENTRY: 20111009 2011 ` -->
+<a name="BlogEntry-20111009"> </a>
+<!-- `ENTRY: 20111008 2011 ` -->
+<a name="BlogEntry-20111008"> </a>
+<!-- `ENTRY: 20111006 2011 ` -->
+<a name="BlogEntry-20111006"> </a>
+<!-- `ENTRY: 20111005 2011 ` -->
+<a name="BlogEntry-20111005"> </a>
+<!-- `ENTRY: 20111002 2011 ` -->
+<a name="BlogEntry-20111002"> </a>
+<!-- `ENTRY: 20110912 2011 ` -->
+<a name="BlogEntry-20110912"> </a>
+<!-- `ENTRY: 20110910 2011 ` -->
+<a name="BlogEntry-20110910"> </a>
+<!-- `ENTRY: 20110905 2011 ` -->
+<a name="BlogEntry-20110905"> </a>
+<!-- `ENTRY: 20110901 2011 ` -->
+<a name="BlogEntry-20110901"> </a>
+<!-- `ENTRY: 20110827 2011 ` -->
+<a name="BlogEntry-20110827"> </a>
+<!-- `ENTRY: 20110826 2011 ` -->
+<a name="BlogEntry-20110826"> </a>
+<!-- `ENTRY: 20110823 2011 ` -->
+<a name="BlogEntry-20110823"> </a>
+<!-- `ENTRY: 20110820 2011 ` -->
+<a name="BlogEntry-20110820"> </a>
+<!-- `ENTRY: 20110816 2011 ` -->
+<a name="BlogEntry-20110816"> </a>
+<!-- `ENTRY: 20110815 2011 ` -->
+<a name="BlogEntry-20110815"> </a>
+<!-- `ENTRY: 20110809 2011 ` -->
+<a name="BlogEntry-20110809"> </a>
+<!-- `ENTRY: 20110805 2011 ` -->
+<a name="BlogEntry-20110805"> </a>
+<!-- `ENTRY: 20110722 2011 ` -->
+<a name="BlogEntry-20110722"> </a>
+<!-- `ENTRY: 20110719 2011 ` -->
+<a name="BlogEntry-20110719"> </a>
+<!-- `ENTRY: 20110716 2011 ` -->
+<a name="BlogEntry-20110716"> </a>
+<!-- `ENTRY: 20110714 2011 ` -->
+<a name="BlogEntry-20110714"> </a>
+<!-- `ENTRY: 20110710 2011 ` -->
+<a name="BlogEntry-20110710"> </a>
+<!-- `ENTRY: 20110708 2011 ` -->
+<a name="BlogEntry-20110708"> </a>
+<!-- `ENTRY: 20110703 2011 ` -->
+<a name="BlogEntry-20110703"> </a>
+<!-- `ENTRY: 20110702 2011 ` -->
+<a name="BlogEntry-20110702"> </a>
+<!-- `ENTRY: 20110628 2011 ` -->
+<a name="BlogEntry-20110628"> </a>
+<!-- `ENTRY: 20110624 2011 ` -->
+<a name="BlogEntry-20110624"> </a>
+<!-- `ENTRY: 20110623 2011 ` -->
+<a name="BlogEntry-20110623"> </a>
+<!-- `ENTRY: 20110622 2011 ` -->
+<a name="BlogEntry-20110622"> </a>
+<!-- `ENTRY: 20110619 2011 ` -->
+<a name="BlogEntry-20110619"> </a>
+<!-- `ENTRY: 20110614 2011 ` -->
+<a name="BlogEntry-20110614"> </a>
+<!-- `ENTRY: 20110610 2011 ` -->
+<a name="BlogEntry-20110610"> </a>
+<!-- `ENTRY: 20110609 2011 ` -->
+<a name="BlogEntry-20110609"> </a>
+<!-- `ENTRY: 20110607 2011 ` -->
+<a name="BlogEntry-20110607"> </a>
+<!-- `ENTRY: 20110606 2011 ` -->
+<a name="BlogEntry-20110606"> </a>
+<!-- `ENTRY: 20110604 2011 ` -->
+<a name="BlogEntry-20110604"> </a>
+<!-- `ENTRY: 20110603 2011 ` -->
+<a name="BlogEntry-20110603"> </a>
+<!-- `ENTRY: 20110601 2011 ` -->
+<a name="BlogEntry-20110601"> </a>
+<!-- `ENTRY: 20110529 2011 ` -->
+<a name="BlogEntry-20110529"> </a>
+<!-- `ENTRY: 20110528 2011 ` -->
+<a name="BlogEntry-20110528"> </a>
+<!-- `ENTRY: 20110527 2011 ` -->
+<a name="BlogEntry-20110527"> </a>
+<!-- `ENTRY: 20110526 2011 ` -->
+<a name="BlogEntry-20110526"> </a>
+<!-- `ENTRY: 20110525 2011 ` -->
+<a name="BlogEntry-20110525"> </a>
+<!-- `ENTRY: 20110523 2011 ` -->
+<a name="BlogEntry-20110523"> </a>
+<!-- `ENTRY: 20110521 2011 ` -->
+<a name="BlogEntry-20110521"> </a>
+<!-- `ENTRY: 20110520 2011 ` -->
+<a name="BlogEntry-20110520"> </a>
+<!-- `ENTRY: 20110519 2011 ` -->
+<a name="BlogEntry-20110519"> </a>
+<!-- `ENTRY: 20110518 2011 ` -->
+<a name="BlogEntry-20110518"> </a>
+<!-- `ENTRY: 20110517 2011 ` -->
+<a name="BlogEntry-20110517"> </a>
+<!-- `ENTRY: 20110516 2011 ` -->
+<a name="BlogEntry-20110516"> </a>
+<!-- `ENTRY: 20110515 2011 ` -->
+<a name="BlogEntry-20110515"> </a>
+<!-- `ENTRY: 20110514 2011 ` -->
+<a name="BlogEntry-20110514"> </a>
+<!-- `ENTRY: 20110513 2011 ` -->
+<a name="BlogEntry-20110513"> </a>
+<!-- `ENTRY: 20110512 2011 ` -->
+<a name="BlogEntry-20110512"> </a>
+<!-- `ENTRY: 20110503 2011 ` -->
+<a name="BlogEntry-20110503"> </a>
+<!-- `ENTRY: 20110501 2011 ` -->
+<a name="BlogEntry-20110501"> </a>
+<!-- `ENTRY: 20110429 2011 ` -->
+<a name="BlogEntry-20110429"> </a>
+<!-- `ENTRY: 20110426 2011 ` -->
+<a name="BlogEntry-20110426"> </a>
+<!-- `ENTRY: 20110425 2011 ` -->
+<a name="BlogEntry-20110425"> </a>
+<!-- `ENTRY: 20110423 2011 ` -->
+<a name="BlogEntry-20110423"> </a>
+<!-- `ENTRY: 20110422 2011 ` -->
+<a name="BlogEntry-20110422"> </a>
+<!-- `ENTRY: 20110417 2011 ` -->
+<a name="BlogEntry-20110417"> </a>
+<!-- `ENTRY: 20110415 2011 ` -->
+<a name="BlogEntry-20110415"> </a>
+<!-- `ENTRY: 20110410 2011 ` -->
+<a name="BlogEntry-20110410"> </a>
+<!-- `ENTRY: 20110409 2011 ` -->
+<a name="BlogEntry-20110409"> </a>
+<!-- `ENTRY: 20110325 2011 ` -->
+<a name="BlogEntry-20110325"> </a>
+<!-- `ENTRY: 20110324 2011 ` -->
+<a name="BlogEntry-20110324"> </a>
+<!-- `ENTRY: 20110323 2011 ` -->
+<a name="BlogEntry-20110323"> </a>
+<!-- `ENTRY: 20110319 2011 ` -->
+<a name="BlogEntry-20110319"> </a>
+<!-- `ENTRY: 20110318 2011 ` -->
+<a name="BlogEntry-20110318"> </a>
+<!-- `ENTRY: 20110316 2011 ` -->
+<a name="BlogEntry-20110316"> </a>
+<!-- `ENTRY: 20110315 2011 ` -->
+<a name="BlogEntry-20110315"> </a>
+<!-- `ENTRY: 20110309 2011 ` -->
+<a name="BlogEntry-20110309"> </a>
+<!-- `ENTRY: 20110306 2011 ` -->
+<a name="BlogEntry-20110306"> </a>
+<!-- `ENTRY: 20110305 2011 ` -->
+<a name="BlogEntry-20110305"> </a>
+<!-- `ENTRY: 20110304 2011 ` -->
+<a name="BlogEntry-20110304"> </a>
+<!-- `ENTRY: 20110228 2011 ` -->
+<a name="BlogEntry-20110228"> </a>
+<!-- `ENTRY: 20110227 2011 ` -->
+<a name="BlogEntry-20110227"> </a>
+<!-- `ENTRY: 20110218 2011 ` -->
+<a name="BlogEntry-20110218"> </a>
+<!-- `ENTRY: 20110217 2011 ` -->
+<a name="BlogEntry-20110217"> </a>
+<!-- `ENTRY: 20110215 2011 ` -->
+<a name="BlogEntry-20110215"> </a>
+<!-- `ENTRY: 20110213 2011 ` -->
+<a name="BlogEntry-20110213"> </a>
+<!-- `ENTRY: 20110212 2011 ` -->
+<a name="BlogEntry-20110212"> </a>
+<!-- `ENTRY: 20110211 2011 ` -->
+<a name="BlogEntry-20110211"> </a>
+<!-- `ENTRY: 20110210 2011 ` -->
+<a name="BlogEntry-20110210"> </a>
+<!-- `ENTRY: 20110208 2011 ` -->
+<a name="BlogEntry-20110208"> </a>
+<!-- `ENTRY: 20110207 2011 ` -->
+<a name="BlogEntry-20110207"> </a>
+<!-- `ENTRY: 20110206 2011 ` -->
+<a name="BlogEntry-20110206"> </a>
+<!-- `ENTRY: 20110205 2011 ` -->
+<a name="BlogEntry-20110205"> </a>
+<!-- `ENTRY: 20110201 2011 ` -->
+<a name="BlogEntry-20110201"> </a>
+<!-- `ENTRY: 20110130 2011 ` -->
+<a name="BlogEntry-20110130"> </a>
+<!-- `ENTRY: 20110129 2011 ` -->
+<a name="BlogEntry-20110129"> </a>
+<!-- `ENTRY: 20110126 2011 ` -->
+<a name="BlogEntry-20110126"> </a>
+<!-- `ENTRY: 20110124 2011 ` -->
+<a name="BlogEntry-20110124"> </a>
+<!-- `ENTRY: 20110123 2011 ` -->
+<a name="BlogEntry-20110123"> </a>
+<!-- `ENTRY: 20110122 2011 ` -->
+<a name="BlogEntry-20110122"> </a>
+<!-- `ENTRY: 20110121 2011 ` -->
+<a name="BlogEntry-20110121"> </a>
+<!-- `ENTRY: 20110120 2011 ` -->
+<a name="BlogEntry-20110120"> </a>
+<!-- `ENTRY: 20110119 2011 ` -->
+<a name="BlogEntry-20110119"> </a>
+<!-- `ENTRY: 20110118 2011 ` -->
+<a name="BlogEntry-20110118"> </a>
+<!-- `ENTRY: 20110117 2011 ` -->
+<a name="BlogEntry-20110117"> </a>
+<!-- `ENTRY: 20110116 2011 ` -->
+<a name="BlogEntry-20110116"> </a>
+<!-- `ENTRY: 20110115 2011 ` -->
+<a name="BlogEntry-20110115"> </a>
+<!-- `ENTRY: 20110111 2011 ` -->
+<a name="BlogEntry-20110111"> </a>
+<!-- `ENTRY: 20110109 2011 ` -->
+<a name="BlogEntry-20110109"> </a>
+<!-- `ENTRY: 20110104 2011 ` -->
+<a name="BlogEntry-20110104"> </a>
+<!-- `ENTRY: 20110103 2011 ` -->
+<a name="BlogEntry-20110103"> </a>
+<!-- `ENTRY: 20101225 2010 ` -->
+<a name="BlogEntry-20101225"> </a>
+<!-- `ENTRY: 20101224 2010 ` -->
+<a name="BlogEntry-20101224"> </a>
+<!-- `FOOTER` -->
+<a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="#BlogEntry-2026-09-05">Another Marshall memory (2026-09-05)</a></br>
+<a href="#BlogEntry-2026-07-24">More Marshall Memories (2026-07-24)</a></br>
+<a href="#BlogEntry-2025-08-25">Remembering Marshall (2025-08-25)</a></br>
+
+</div>
+</body></html>
