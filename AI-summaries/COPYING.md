@@ -7,7 +7,7 @@ be copyrighted (Feist Publications, Inc. v. Rural Telephone Service Co.
 1991).
 
 I will quote two paragraphs from [New York Times vs. Microsoft 
-1995](https://law.justia.com/cases/federal/district-courts/new-york/nysdce/1:2023cv11195/612697/514/):
+2025](https://law.justia.com/cases/federal/district-courts/new-york/nysdce/1:2023cv11195/612697/514/):
 
 >Exhibit 11 to the CIR complaint provides website links to articles that
 >CIR alleges were unlawfully abridged by defendants in their ChatGPT and
