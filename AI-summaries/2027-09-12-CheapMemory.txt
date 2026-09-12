@@ -1,0 +1,34 @@
+Wired@https://wired.com/story/a-new-dollar400-million-startup-wants-to-fix-the-ai-memory-bottleneck
+Archive@https://archive.ph/Pvjeu
+
+Kepler Computing, a seven-year-old stealth startup, has emerged claiming it has developed a new way to make high-bandwidth memory (HBM) and SRAM more densely and cheaply without relying on expensive EUV lithography or building entirely new semiconductor fabs.
+
+The company’s strategy combines 3D chip stacking with a proprietary material system, particularly ferroelectric materials, to squeeze more memory into existing manufacturing facilities. If it can scale the technology successfully, Kepler believes it could help relieve the current memory-chip supply bottleneck driven largely by AI and data-center demand.
+
+### Main points
+
+Kepler's core idea: Increase memory density through new architecture and materials rather than relying on EUV lithography.
+
+Two memory targets:
+HBM: Uses 3D stacking to fit more memory into a given footprint and reduce the energy required to move data.
+SRAM: Uses ferroelectric technology and a new low-voltage composite material to increase density and lower operating voltage.
+
+Existing fabs are central to the pitch: Kepler says its technology can be integrated into existing semiconductor facilities instead of requiring new, multibillion-dollar fabs.
+
+Major financial backing: The company has raised $468 million, with investors including GlobalFoundries, Intel Capital, AMD Ventures, Baillie Gifford, and Bill Gates' Gates Frontier fund. The U.S. Commerce Department has also committed up to $245 million for development.
+
+Manufacturing progress: Kepler has produced technology on roughly 2,000 wafers and says it converted a GlobalFoundries fab into a "next-generation" facility in eight months, versus a typical 24-month timeline.
+
+Why now: AI has dramatically increased demand for HBM, while building new memory fabs is extremely expensive and takes years.
+
+Biggest obstacle: scaling: The technology has to move from promising prototypes to millions of reliable devices produced consistently and economically.
+
+Material-contamination problem: Kepler's composite contains iron, which can contaminate semiconductor manufacturing equipment. The company will need dedicated equipment or very effective isolation.
+
+Timeline: Kepler expects to ship its first HBM samples later this year, increase Singapore production next year, and begin U.S. production in 2028.
+
+Industry-wide lesson: Novel semiconductor processes often work in small-scale demonstrations but face major challenges when manufacturers try to produce them reliably, cheaply, and at enormous volumes.
+
+### The key takeaway
+
+Kepler isn't claiming to magically create more semiconductor capacity; it's betting that new materials and 3D architectures can make existing fabs substantially more productive. The technology could be significant if it delivers the claimed density and energy improvements at scale. But the crucial unanswered question is whether Kepler can turn its laboratory and early-fab results into high-volume, reliable commercial production.
