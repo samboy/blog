@@ -107,7 +107,7 @@ border-radius: 8px; width: 99%; height: auto; }
 @media screen and (max-width: 640px) { 
 .nomobile { display: none; } }
 body { max-width: 95vw; overflow-x: hidden; } 
-a { color: #067610; } 
+a { color: #006847; } 
 .GitBlogNav { display: table; width: 95vw; 
 font-family: Kilroy8, GeorgiaF, Georgia, serif;
 font-size: 16px;
@@ -145,8 +145,8 @@ h3 { font-size: 24px; margin-bottom: 0; }
 .blogpicx { text-align: left !important; }
 .blogpicx img { 
 border-radius: 8px; box-shadow: 0 0 4px #888; }
-a { color: #067610; }
-.blog a { color: #067610; }
+a { color: #006847; }
+.blog a { color: #006847; }
 
 .chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
 display: grid;
