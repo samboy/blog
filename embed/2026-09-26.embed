@@ -158,9 +158,9 @@ to get better entropy. Indeed, Deadwood’s use of <code>clock_gettime()</code>
  compilers</h3>
 <p>Post-C23 compilers have broken a lot of programs, making programs
  that used to compile without issue no longer compile. That in mind,
- MaraDNS now has hardcoded in all of her makefiles now have the <code>
--std=c99</code> flag, to make sure MaraDNS always compiles to the 1999
- version of the C standard.
+ MaraDNS now has hardcoded in all of her makefiles the <code>-std=c99</code>
+ flag, to make sure MaraDNS always compiles to the 1999 version of the C
+ standard.
 <p>The reason for using the 1999 standard is because, while I have
  updated MaraDNS to be able to compile with a C23 compiler, the majority
  of MaraDNS’s and Deadwood’s development was done while C99 was the
