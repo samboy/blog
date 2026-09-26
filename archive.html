@@ -230,6 +230,200 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<!-- `ENTRY: 2026-09-26 2026 ` -->
+<a name="BlogEntry-2026-09-26"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/MaraDNS.jpg" width=224 height=126>
+</div>
+<h1>MaraDNS release 3.5.0039</h1>
+<h2>September 26, 2026</h2>
+I have released MaraDNS 3.5.0039 today. It fixes two minor security
+ bugs and has other updates.
+<a name="2026-09-26-changelog"> </a>
+<h3>Changelog</h3>
+<ul>
+<li>
+<p>Two AI-assisted minor security issues patched:
+<ol>
+<li>
+<p>It was possible to perform a denial of service to disable Deadwood’s
+ DNS-over-TCP feature. (DNS-over-UDP was not affected)
+</li>
+<li>
+<p>RFC8482 replies made public 19 bytes of memory in the heap. There
+ does not appear to be any vulnerable private data leaked.
+</li>
+</ol>
+</li>
+<li>
+<p>askmara now has a raw mode, showing the raw DNS packet received, as
+ well as support for AAAA queries. (one can now do <code>
+askmara Lname.foo.</code> to ask for name.foo’s ipv6 address)
+</li>
+<li>
+<p>Improved formatting of HTML documentation: They now look nice on both
+ modern desktop browsers and on mobile (i.e. phone) browsers.
+</li>
+<li>
+<p>Deadwood’s default compile no longer generates any known Valgrind
+ warnings.
+</li>
+<li>
+<p>Deadwood’s entropy pool now uses a combination of /<![if gt IE 6]>&#8203;<![endif]><wbr>dev/<![if gt IE 6]>&#8203;<![endif]><wbr>urandom, the
+ timestamp when Deadwood was started, Deadwood’s PID, and 112 calls to
+ clock_gettime().
+</li>
+<li>
+<p>lunacy (“maralunacy” if you will) updated to compile more cleanly and
+ have working optional lfs and spawner support.
+</li>
+</ul>
+<a name="2026-09-26-security"> </a>
+<h3>Security</h3>
+<p>Here in the age of AI, the number of security reports has really
+ bloomed. Two minor security issues were found with the latest batch of
+ AI security reports I have received.
+<p>One issue allowed someone to disable the DNS-over-TCP service with
+ specially crafted packets. The DNS-over-UDP service was not affected,
+ and this won’t affect most users since DNS-over-TCP is disabled by
+ default.
+<p>The other issue is that ANY queries in Deadwood, when forming an
+ RFC8482 reply, would transmit over the network 19 bytes of unallocated
+ memory. There does not appear to be any sensitive data in those 19
+ bytes, and the bug has now been patched.
+<a name="2026-09-26-askmara"> </a>
+<h3>AskMara</h3>
+<p>askmara is a tool included with MaraDNS to perform DNS queries. It
+ was originally written in 2001; with IPv6 having wide adoption, it has
+ been updated to allow one to perform IPv6 queries more easily. In
+ addition, askmara finally has a formal version number (1.0.0001) and
+ its documentation has been updated.
+<a name="2026-09-26-lunacy"> </a>
+<h3>Lunacy</h3>
+<p>The built in version of Lunacy (a Lua 5.1 fork with security
+ hardening) has been slightly updated, to allow one to optionally have
+ support for the lfs package (list files in a directory) and spawner
+ (open up a sub-process with a two-way pipe) again. The build process
+ has also been updated and is better documented.
+<p>MaraDNS’s version of Lunacy is very slightly different from the <a href="https://github.com/samboy/lunacy">stand alone version of Lunacy</a>, 
+but both versions can run the same
+ scripts (as long as the MaraDNS version of Lunacy has lfs and spawner
+ enabled).
+<p>coLunacyDNS, which uses Lunacy, had its entire build process updated
+ to make sure its embedded Lunacy correctly compiles without lfs nor
+ spawner.
+<a name="2026-09-26-maradnss-documentation"> </a>
+<h3>MaraDNS’s documentation</h3>
+<p>Lunacy is used to build all of the documentation from MaraDNS’s own
+ Easy Journal format to various other formats (text files, man pages,
+ markdown pages, and HTML pages).
+<p>The process for building HTML pages has been updated to have the
+ pages look nicer both on modern desktop browsers, as well as on phone
+ screen web browsers.
+<a name="2026-09-26-the-entropy-pool"> </a>
+<h3>The entropy pool</h3>
+<p>Deadwood uses a cryptographically secure pseudo random number
+ generator (CSPRNG) to combine multiple sources of entropy and then
+ generate numbers which are very hard to guess; this is used to
+ determine the query ID and query source port to <a href="https://web.archive.org/web/20080831100625/http://blogs.zdnet.com/security/?p=1562">make spoofing DNS replies more difficult</a>.
+<p>Because of how the CSPRNG works, the randomness of numbers is at
+ least as good as the best source of entropy it gets. For example, if
+ the CSPRNG is seeded from four sources of entropy, and three of them
+ don’t actually have good entropy, the CSPRNG is still making high
+ quality random numbers if the final source gave gave it secure random
+ numbers.<sup style="font-size: 9pt; line-height: 0; vertical-align: 5px"><a id="back-2026-09-26-1"><a href="#2026-09-26-1">1</a></a></sup>
+<p>Back in 2007, I had Deadwood use the following sources of entropy:
+<ul>
+<li>
+<p><code>/<![if gt IE 6]>&#8203;<![endif]><wbr>dev/<![if gt IE 6]>&#8203;<![endif]><wbr>urandom</code> (<code>CryptGenRandom()</code> in Windows)
+</li>
+<li>
+<p>The timestamp when Deadwood was started
+</li>
+<li>
+<p>Deadwood’s process ID
+</li>
+<li>
+<p>A couple hundred bytes of uninitialized allocated memory
+</li>
+</ul>
+<p>Using uninitialized allocated memory has always been described as
+ leading to “undefined behavior”, but in 2007, the behavior was that we
+ would get some kinda-random looking bytes which would give us a little
+ more entropy.
+<p>Here in 2026, testing shows that the uninitialized memory is
+ frequently replaced with 0s, giving us no entropy, and since using
+ uninitialized memory <em>does</em> generate Valgrind warnings, I
+ decided to find another source of entropy.
+<p>Deadwood now uses the following sources of entropy:
+<ul>
+<li>
+<p><code>/<![if gt IE 6]>&#8203;<![endif]><wbr>dev/<![if gt IE 6]>&#8203;<![endif]><wbr>urandom</code> (<code>CryptGenRandom()</code> in Windows)
+</li>
+<li>
+<p>The timestamp when Deadwood was started
+</li>
+<li>
+<p>Deadwood’s process ID
+</li>
+<li>
+<p>Deadwood now performs 112 calls to <code>clock_gettime()</code>,
+ initializing a dummy copy of the CSPRNG between each call. Testing in
+ Cygwin, Ubuntu 26.04, and Alpine Linux on x86_64 systems shows that
+ each call to <code>clock_gettime()</code> generates <em>at least</em>
+ one bit of entropy, giving us 112 or more bits of entropy independent
+ of <code>/<![if gt IE 6]>&#8203;<![endif]><wbr>dev/<![if gt IE 6]>&#8203;<![endif]><wbr>urandom</code>. The Windows port, alas, can’t get good
+ entropy this way (since its clock has less resolution than the POSIX
+ standard <code>clock_gettime()</code>) but can get about 24 bits of
+ entropy from its sub-microsecond timestamp.
+</li>
+</ul>
+<p>The reason for this system is because, while <code>/<![if gt IE 6]>&#8203;<![endif]><wbr>dev/<![if gt IE 6]>&#8203;<![endif]><wbr>urandom</code>
+ is secure on modern Linux kernels, Deadwood is designed to be compiled
+ on a variety of POSIX compliant systems, and, in particular, embedded
+ devices could very well have a <code>/<![if gt IE 6]>&#8203;<![endif]><wbr>dev/<![if gt IE 6]>&#8203;<![endif]><wbr>urandom</code> without good
+ entropy. For example, there were issues with Linux’s <code>/<![if gt IE 6]>&#8203;<![endif]><wbr>dev/<![if gt IE 6]>&#8203;<![endif]><wbr>urandom</code>
+ on Raspberry PI devices a while ago, resulting in people using a
+ program called <a href="https://github.com/jirka-h/haveged">haveged</a>  
+to get better entropy. Indeed, Deadwood’s use of <code>clock_gettime()</code>
+ is very similar to how haveged got entropy.
+<a name="2026-09-26-compiling-with-newer-compilers"> </a>
+<h3>Compiling with newer
+ compilers</h3>
+<p>Post-C23 compilers have broken a lot of programs, making programs
+ that used to compile without issue no longer compile. That in mind,
+ MaraDNS now has hardcoded in all of her makefiles now have the <code>
+-std=c99</code> flag, to make sure MaraDNS always compiles to the 1999
+ version of the C standard.
+<p>The reason for using the 1999 standard is because, while I have
+ updated MaraDNS to be able to compile with a C23 compiler, the majority
+ of MaraDNS’s and Deadwood’s development was done while C99 was the
+ current C language standard.
+<a name="2026-09-26-maradnss-future"> </a>
+<h3>MaraDNS’s future</h3>
+<p>Now that I have cleaned up MaraDNS to be current here in 2026, the
+ main updates will be security updates: While MaraDNS is remarkably
+ secure (there has <em>never</em> been an attack stronger than remote
+ denial of service found), AI assisted reviewers are able to find many
+ more security bugs than they could in the pre-AI days, so there’s a
+ pretty good chance I will need to make more security patches as other
+ bugs are found by AI.
+
+<h3>Footnote</h3>
+<p style="margin-left: 1.16em;text-indent: -1.16em;">
+<a name="2026-09-26-1"> </a>
+<a href="#back-2026-09-26-1">1</a>:  There is  <a href="https://blog.cr.yp.to/20140205-entropy.html">theoretical attack</a> where,  if a given “entropy” source is actually malicious, and if said source  has access to the numbers generated by other entropy sources, such  source could, in theory, control the output of the CSPRNG.  It would take 2**n work to control n bits of the output, and it requires being able to read the memory of the victim process.  Once one has access to the memory of the victim process, one can perform easier and far more effective attacks, so this is not a real world concern.
+<p>
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-09-17 2026 ` -->
 <a name="BlogEntry-2026-09-17"> </a>
 <div class=blogpicx style="text-align: right">
@@ -64641,6 +64835,7 @@ index</A> for details)</i>
 <div class=blog>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="entries/2026-09-26.html">MaraDNS release 3.5.0039 (2026-09-26)</a></br>
 <a href="entries/2026-09-17.html">Grab bag (2026-09-17)</a></br>
 <a href="entries/2026-09-16.html">Round up (2026-09-16)</a></br>
 <a href="entries/2026-09-12.html">Round up (2026-09-12)</a></br>
