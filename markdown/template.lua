@@ -69,8 +69,12 @@ function sPairs(inputTable,sFunc)
     sFunc = function(a, b)
       local ta = type(a)
       local tb = type(b)
-      if(ta == tb)
-        then return a < b
+      if(ta == tb) then
+        if(ta == 'number') then
+          return a < b
+        end
+        return tostring(a) <
+               tostring(b)
       end
       return ta < tb
     end
