@@ -384,7 +384,7 @@ end
 
 fileList = {}
 for a in lfs.dir("embed/") do
-  if a:match("%.embed$") then
+  if a:match("20.*%.embed$") then
     fileList[a] = true
   end
 end
@@ -469,7 +469,7 @@ repeat
     -- Put a link to this blog entry in the index we have at the bottom of
     -- the page
     -- Entries in 2024 and later have single files too 
-    if(tonumber(year) >= 2024) then
+    if year and (tonumber(year) >= 2024) then
       blogIndex = blogIndex .. '<a href="entries/' .. date .. '.html">'
                   .. title .. ' (' .. date .. ')</a></br>' .. "\n"
       archiveIndex = archiveIndex .. '<a href="entries/' .. date .. '.html">'
