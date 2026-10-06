@@ -1,0 +1,91 @@
+<div class=blogpicx style="text-align: right">
+<img src="pics/PalmCloudsBW.jpg" width=224 height=126>
+</div>
+<h1>Round up</h1>
+<h2>October 6, 2026</h2>
+I discuss various topics in today’s blog.
+<a name="2026-10-06-chess-puzzle"> </a>
+<h3>Chess puzzle</h3>
+<p>In the following position, White has an overwhelming advantage.
+ Indeed, there are two ways White can deliver mate in only two moves:
+<p><div class=chessDiagram8 translate="no"><div></div> <div></div> <div></div> <div></div> <div></div> <div>b</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>p</div> <div>p</div> <div>p</div> <div></div> <div>B</div> <div></div> <div></div> <div>p</div> <div></div> <div></div> <div>k</div> <div></div> <div></div> <div></div> <div></div> <div>Q</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div>N</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>P</div> <div></div> <div>P</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div>R</div> <div>K</div> <div></div> </div>
+<!-- FEN: 5b2/4ppp1/B2p2k1/3Q4/1P6/1P4N1/5P1P/5RK1 -->
+<script> if(maxWidth < 480) { elements = document.querySelectorAll('.chessDiagram8'); i = elements.length - 1; elements[i].style.width = boardSize + 'px'; elements[i].style.height = boardSize + 'px'; elements[i].style.fontSize = pieceWidth + 'px'; }</script> <em>White to move and
+ mate in two</em>
+<p>Find both ways to deliver mate in two. Solution below.
+<a name="2026-10-06-bill-phillips-workout-plan"> </a>
+<h3>Bill Phillips’ workout plan</h3>
+<p>Here are links to Bill Phillips’ current workout plan, which is the
+ template I use for my workout:
+<ul>
+<li>
+<p><a href="https://billphillipsdotcom.wordpress.com/2015/01/05/a-new-look-at-bill-phillips-upper-body-workout/">Upper body workout</a>
+</li>
+<li>
+<p><a href="https://billphillipsdotcom.wordpress.com/2015/01/07/a-new-look-at-bill-phillips-lower-body-workout/">Lower body workout</a>
+</li>
+</ul>
+<a name="2026-10-06-traditional-wives"> </a>
+<h3>Traditional wives</h3>
+<p>I lamented in my <a href="blog:2026-10-02">last blog</a> 
+that the
+ radical left doesn’t like traditional wives. Most women I know want to
+ marry a man who she can start a family with, and that includes women
+ who have slept with over 100 men. <em>Women want marriage and family,</em>
+ so why is the left wing press <a href="AI/2026-10-02-AntiTradWifeNymag.html">publishing articles discouraging  marriage</a>?
+<p>Here’s one <a href="AI/2026-10-06-Bower.html">article</a>, 
+which
+ looks at consent and why we need more than consent to determine whether
+ a given sex act is OK; it looks at how a woman is treated overall by
+ someone affects how she views sex with them.
+<p>There’s a quote <a href="AI/2026-10-06-Bower.html">there</a> 
+that
+ explains some of the left-wing dislike of traditional marriages:
+<blockquote>
+<p>a husband who believes, often with the backing of a church that
+ teaches wifely submission, that sex is his right and her duty, and who
+ treats her like a servant in the rest of their life too. It isn’t the
+ commitment that makes the difference. It’s the degree to which he sees
+ her as a person or as property.
+</blockquote>
+<p>Let’s look at what scripture has to say. Let’s go to that part of
+ Ephesians which the radical left hates:
+<blockquote>
+<p>Wives, be submissive to your own husbands, as to the Lord. For the
+ husband is the head of the wife, and Christ also is the head of the
+ church, being himself the savior of the body. But as the church is
+ subject to Christ, so let the wives also be to their own husbands in
+ everything.
+</blockquote>
+<p>Women don’t like being treated as slaves obviously, and Paul who
+ wrote the above agrees:
+<blockquote>
+<p>Husbands, love your wives, even as Christ also loved the church, and
+ gave himself up for it; that he might sanctify it, having cleansed it
+ by the washing of water with the word, that he might present the church
+ to himself gloriously, not having spot or wrinkle or any such thing;
+ but that it should be holy and without blemish. Even so husbands also
+ ought to love their own wives as their own bodies. He who loves his own
+ wife loves himself.
+</blockquote>
+<p>If men aren’t doing their side of the deal where wives are led by
+ their husbands, that is not a marriage following Christian principles.
+ Since some men don’t follow both sides of the bargain where the husband
+ is in charge, people are understandably turned off by traditional
+ marriage.
+<a name="2026-10-06-solution-to-mating-puzzle"> </a>
+<h3>Solution to mating puzzle</h3>
+<ul>
+<li>
+<p>1. Qf5+ Kh6 2. Qh5#
+</li>
+<li>
+<p>1. Qh5+ Kf6 2. Qf5#
+</li>
+</ul>
+
+
+<p>
+
+</div>
+
