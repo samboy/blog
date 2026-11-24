@@ -1,0 +1,347 @@
+<html><head><title>2026-11-24</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+@import url("../fonts.css");
+@font-face { font-family: "GeorgiaF"; src: local(Georgia);
+size-adjust: 118%; }
+@font-palette-values --dark {
+ font-family: "ChessCancunColor";
+ override-colors: 0 rgb(0 0 0), 1 rgb(205 192 180); }
+.widepic { box-shadow: 0 0 4px #888;
+border-radius: 8px; width: 99%; height: auto; }
+@media screen and (max-width: 640px) { 
+.nomobile { display: none; } }
+body { max-width: 95vw; overflow-x: hidden; } 
+a { color: #006847; } 
+.GitBlogNav { display: table; width: 95vw; 
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+text-align: left;
+border-top: 2px solid #aaa;
+margin: 5px; padding: 2px;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 2px solid #aaa; }
+@media (min-width: 640px) {.GitBlogNav {width:640px; text-align: center}}
+@media (max-width: 640px) {.blogPre {overflow-x:scroll;}}
+@media (max-width: 640px) {.blog {overflow-x:scroll;}}
+body { color: #333; background-color: #fff; }
+.blog { display: table; max-width: 640px;
+color: #333; background-color: #fff;
+font-family: Kilroy8, GeorgiaF, Georgia, serif;
+font-size: 16px;
+margin-left: auto;
+margin-right: auto; }
+@media (max-width: 640px) {
+.blog pre {max-width: 90vw; overflow-x: scroll;}} 
+.blog pre { font-size: 14px; }
+.blog li pre {max-width: 80vw; overflow-x: scroll; }
+.blog table {max-width: 90vw; overflow-x: scroll; }
+.blog tt {max-width: 90vw; overflow-x: scroll; }
+.blogtable {max-width: 90vw; overflow-x: scroll; }
+@media (max-width: 640px) {.pc {display: none;}}
+.moyet { display: none; }
+.blog h1 { font-size: 28px; }
+.blog b { font-size: 18px; }
+.blog strong { font-size: 18px; }
+.s { font-size: 18px; }
+.blogtitle { font-size: 24px; }
+h3 { font-size: 24px; margin-bottom: 0; }
+.blogpicx { text-align: left !important; }
+.blogpicx img { 
+border-radius: 8px; box-shadow: 0 0 4px #888; }
+a { color: #006847; }
+.blog a { color: #006847; }
+
+.chessDiagram8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+.chessDiagram10x8 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 375px;
+    height: 300px;
+    border: 2px solid #333;
+}
+
+.chessDiagram10x8 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+/* 4x8 diagram for showing opening patterns */
+.chessDiagram4 { font-family: ChessCancunColor; font-size: 31.7px; 
+display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 300px;
+    height: 150px;
+    border: 2px solid #333;
+    border-top: 1px dotted #333;
+}
+
+.chessDiagram4 div {
+    text-align: center;
+    background-color: #fff; /* Light square */
+}
+
+/* Alternating colors using nth-child */
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+    background-color: #ccc; /* Dark square */
+}
+
+@media (prefers-color-scheme: dark) { 
+body { background-color: #131516; color: #d8d4cf; }
+.blog { background-color: #131516; color: #d8d4cf; }
+a { color: #78dc78; }
+.blog a { color: #78dc78; }
+.chessDiagram8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram8 div { background-color: #aaa; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #888; } 
+.chessDiagram10x8 { border: 2px solid #ddd; font-palette: --dark; }
+.chessDiagram10x8 div { background-color: #aaa; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #888; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #ddd; 
+                 border-top: 1px dotted #ddd; font-palette: --dark; }
+.chessDiagram4 div { background-color: #aaa; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+  background-color: #888; } 
+} /* End Dark mode theme */
+@media print {
+.chessDiagram8 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; }
+.chessDiagram8 div { background-color: #fff; }
+.chessDiagram8 div:nth-child(-n+8):nth-child(even),
+.chessDiagram8 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram8 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram8 div:nth-child(n+25):nth-child(-n+32):nth-child(odd),
+.chessDiagram8 div:nth-child(n+33):nth-child(-n+40):nth-child(even),
+.chessDiagram8 div:nth-child(n+41):nth-child(-n+48):nth-child(odd),
+.chessDiagram8 div:nth-child(n+49):nth-child(-n+56):nth-child(even),
+.chessDiagram8 div:nth-child(n+57):nth-child(-n+64):nth-child(odd) {
+background-color: #ddd; } 
+.chessDiagram10x8 { border: 2px solid #333; break-inside: avoid;
+                    page-break-inside: avoid;}
+.chessDiagram10x8 div { background-color: #fff; }
+.chessDiagram10x8 div:nth-child(-n+10):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+11):nth-child(-n+20):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+21):nth-child(-n+30):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+31):nth-child(-n+40):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+41):nth-child(-n+50):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+51):nth-child(-n+60):nth-child(odd),
+.chessDiagram10x8 div:nth-child(n+61):nth-child(-n+70):nth-child(even),
+.chessDiagram10x8 div:nth-child(n+71):nth-child(-n+80):nth-child(odd) {
+    background-color: #ddd; /* Dark square */
+}
+.chessDiagram4 { border: 2px solid #333; break-inside: avoid;
+                 page-break-inside: avoid; border-top: 1px dotted #333; }
+.chessDiagram4 div { background-color: #fff; }
+.chessDiagram4 div:nth-child(-n+8):nth-child(even),
+.chessDiagram4 div:nth-child(n+9):nth-child(-n+16):nth-child(odd),
+.chessDiagram4 div:nth-child(n+17):nth-child(-n+24):nth-child(even),
+.chessDiagram4 div:nth-child(n+25):nth-child(-n+32):nth-child(odd) {
+background-color: #ddd; } 
+} /* End print colors */
+</style>
+<script>
+maxWidth = screen.width;
+maxWidth *= .95;
+if(maxWidth < 480) {
+  boardSize = maxWidth - 5;
+  pieceWidth = (boardSize / 10) * (16/15);
+  capaPieceWidth = (boardSize / 12.5) * (16/15);
+  capaHeight = boardSize * .8;
+}
+</script>
+<script src="../chess/jquery-1.12.4.min.js"></script>
+<script>$.ajaxSetup({contents: {script: false}})</script>
+<script 
+ src="../chess/chessboard-0.3.0.min.js" type="text/javascript"></script>
+<script src="../chess/chess.js"></script>
+<link href="../chess/chessboard-0.3.0.min.css" rel="stylesheet"></link>
+<script src="../chess/chessgame.js"></script>
+<meta name=viewport 
+content=width=device-width,initial-scale=1.0,minimum-scale=0.8 >
+</head>
+
+<body>
+<a name="GitBlogTop"> </a>
+<div class=blog>
+<a href="../index.html#GitBlogIndex">Blog Index</a></i>
+</div><div class=blog>
+<h1>Sam Trenholme’s blog</h1>
+
+<!-- `ENTRY: 2026-11-24 2026 ` -->
+<a name="BlogEntry-2026-11-24"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="../pics/palm-bw1.jpg" width=224 height=126>
+</div>
+<h1>Text adventures</h1>
+<h2>November 24, 2026</h2>
+Today, I discuss old school text adventure games.
+<a name="2026-11-24-text-adventures"> </a>
+<h3>Text Adventures</h3>
+<p>Back when a “LLM” was nothing more than a weird mistyping of “LLC”, a
+ lot of home computers, such as the TRS-80, had for all intents and
+ purposes no graphics. People still wanted to play video games on the
+ TRS-80, so one Scott Adams (<em>not</em> the recently deceased guy who
+ made the Dilbert comics) figured out how to make a type of game called
+ a “text adventure” small enough to fit on a TRS-80.
+<p>A text adventure game (or “interactive fiction” game, to use a more
+ recent term for this kind of video game) is a game where the computer
+ uses text to describe where the hero is, and then the hero types in
+ simple one word or two word commands to interact with the world. These
+ games were on very primitive computers with limited memory, so they
+ could not understand natural English. Instead, commands were in the
+ form of “GET BANANA” or “GO POOL” (where “GO POOL” was short for “go in
+ to the pool”).
+<p>In order to minimize the memory used by this game, Scott Adams’s text
+ adventures uses a special data format and an interpreter to run
+ adventure games. Well over two dozen text adventures were eventually
+ made in this format, by both Scott Adams and other developers (such as
+ Brian Howarth). By 1986, text adventures were no longer as popular, and
+ Scott Adams’s company selling these games went out of business.
+<p>The problem these adventures had was two-fold:
+<ul>
+<li>
+<p>Since computers were not at the time capable of any kind of
+ creativity, a person writing the text adventure had to come up with
+ some response to pretty much anything someone typed in. If you typed in
+ something the author wasn’t expecting, the program couldn’t give you a
+ response better than “I don’t understand you” or “I can’t do that”.
+ LLMs fixed this issue many years later.
+</li>
+<li>
+<p>Since the adventures were very tiny (my own Desert Adventure, for
+ example, has under 1300 words of text for the entire game), the only
+ way to keep them interesting for more than a couple of minutes was by
+ adding puzzles to the game. Pretty soon, to keep the game viable, Scott
+ Adams had to add some really nasty nay to impossible puzzles to later
+ releases of his games.
+</li>
+</ul>
+<p>One problem with making difficult puzzles was that they often
+ required frustrating “guess the verb” grinding to solve a puzzle. I
+ will give a real world example.
+<a name="2026-11-24-guess-the-verb"> </a>
+<h3>Guess the verb</h3>
+<p>A long time ago, I spent weeks trying to solve “<a href="https://en.wikipedia.org/wiki/Ghost_Town_(video_game%29">Ghost Town</a>”, 
+and while I was able to get most treasures, I could
+ never complete the game.
+<p>Before continuing, I need to post a warning: A spoiler for this
+ really old text adventure follows.
+<p>One of the puzzles is this: You have a horse in the game which
+ carries you to a distant place and then rides off, leaving the player
+ stranded. But, one can summon an Indian ghost.
+<p>Once the ghost is summoned, it’s obvious that one has to ask the
+ ghost help with getting back home. But, to do so with the ghost is an
+ exercise in frustration. “TALK GHOST” doesn’t work because Ghost Town
+ doesn’t have the verb “TALK”. “ASK GHOST” also doesn’t work—the game
+ doesn’t have the verb “ASK” either. I was never able to figure out how
+ to ask the ghost to take me home again, until many years later I went
+ through the game’s data file and discovered the combination was “SAY
+ HOW” (“SAY HELP” or “SAY HOME” or any other word after “SAY” <em>
+doesn’t</em> work).
+<p>With a modern LLM, one would just say “Tell the ghost I need help
+ getting back to town” then the LLM would have the ghost take the hero
+ back home.
+<p>Another person <a href="https://www.retrogamestrove.com/game-66-ghost-town/">felt that a different puzzle was  unfair</a>; 
+I actually found that
+ puzzle easy (if silly), but, to be fair, unless one is familiar with
+ the board game <a href="https://en.wikipedia.org/wiki/Monopoly_(game">Monopoly</a>), 
+the puzzle won’t make any sense.
+<a name="2026-11-24-playing-these-games"> </a>
+<h3>Playing these games</h3>
+<p>I have made a <a href="https://github.com/samboy/ScottFree">Git  repo</a>  
+of an updated version of the interpreter used to play these old Scott
+ Adams style games, in addition to files for playing adventure games
+ online. Back in 2007, I made a new open source Scott Adams game, which
+ is included with this repo. This game is small and it’s pretty easy,
+ but it’s a good introduction to these old text adventure games.
+<p>While the <a href="https://solutionarchive.com/game/id%2C5346/Desert+Adventure.html">online  reviews</a> 
+felt the game was too easy, it really isn’t: One
+ buddy who play tested this game for me was only able to solve half of
+ it before getting stuck, and someone else sent me an email complaining
+ the final puzzle was too difficult to solve.
+<p>One can play this game <a href="https://samboy.github.io/ScottFree">online</a>; 
+people using smartphones should play the <a href="https://samboy.github.io/ScottFree/p.htm">small screen version of this game</a>.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="2026-11-08.html">Older</a> - 
+<a href="../archive.html#GitBlogTop">All entries</a>
+ - 
+<a href="../index.html#GitBlogIndex">Index</a></i></div>
+<script>
+fontWidth = screen.width / 22;
+if(maxWidth < 480) {
+  elements = document.querySelectorAll('.GitBlogNav');
+  i = elements.length - 1;
+  elements[i].style.fontSize = fontWidth + 'px';
+}
+</script>
+<!-- `FOOTER` -->
+</body></html>

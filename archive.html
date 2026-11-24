@@ -237,6 +237,111 @@ if(maxWidth < 480) {
 </div><div class=blog>
 <h1>Sam Trenholme’s blog</h1>
 
+<!-- `ENTRY: 2026-11-24 2026 ` -->
+<a name="BlogEntry-2026-11-24"> </a>
+<div class=blogpicx style="text-align: right">
+<img src="pics/palm-bw1.jpg" width=224 height=126>
+</div>
+<h1>Text adventures</h1>
+<h2>November 24, 2026</h2>
+Today, I discuss old school text adventure games.
+<a name="2026-11-24-text-adventures"> </a>
+<h3>Text Adventures</h3>
+<p>Back when a “LLM” was nothing more than a weird mistyping of “LLC”, a
+ lot of home computers, such as the TRS-80, had for all intents and
+ purposes no graphics. People still wanted to play video games on the
+ TRS-80, so one Scott Adams (<em>not</em> the recently deceased guy who
+ made the Dilbert comics) figured out how to make a type of game called
+ a “text adventure” small enough to fit on a TRS-80.
+<p>A text adventure game (or “interactive fiction” game, to use a more
+ recent term for this kind of video game) is a game where the computer
+ uses text to describe where the hero is, and then the hero types in
+ simple one word or two word commands to interact with the world. These
+ games were on very primitive computers with limited memory, so they
+ could not understand natural English. Instead, commands were in the
+ form of “GET BANANA” or “GO POOL” (where “GO POOL” was short for “go in
+ to the pool”).
+<p>In order to minimize the memory used by this game, Scott Adams’s text
+ adventures uses a special data format and an interpreter to run
+ adventure games. Well over two dozen text adventures were eventually
+ made in this format, by both Scott Adams and other developers (such as
+ Brian Howarth). By 1986, text adventures were no longer as popular, and
+ Scott Adams’s company selling these games went out of business.
+<p>The problem these adventures had was two-fold:
+<ul>
+<li>
+<p>Since computers were not at the time capable of any kind of
+ creativity, a person writing the text adventure had to come up with
+ some response to pretty much anything someone typed in. If you typed in
+ something the author wasn’t expecting, the program couldn’t give you a
+ response better than “I don’t understand you” or “I can’t do that”.
+ LLMs fixed this issue many years later.
+</li>
+<li>
+<p>Since the adventures were very tiny (my own Desert Adventure, for
+ example, has under 1300 words of text for the entire game), the only
+ way to keep them interesting for more than a couple of minutes was by
+ adding puzzles to the game. Pretty soon, to keep the game viable, Scott
+ Adams had to add some really nasty nay to impossible puzzles to later
+ releases of his games.
+</li>
+</ul>
+<p>One problem with making difficult puzzles was that they often
+ required frustrating “guess the verb” grinding to solve a puzzle. I
+ will give a real world example.
+<a name="2026-11-24-guess-the-verb"> </a>
+<h3>Guess the verb</h3>
+<p>A long time ago, I spent weeks trying to solve “<a href="https://en.wikipedia.org/wiki/Ghost_Town_(video_game%29">Ghost Town</a>”, 
+and while I was able to get most treasures, I could
+ never complete the game.
+<p>Before continuing, I need to post a warning: A spoiler for this
+ really old text adventure follows.
+<p>One of the puzzles is this: You have a horse in the game which
+ carries you to a distant place and then rides off, leaving the player
+ stranded. But, one can summon an Indian ghost.
+<p>Once the ghost is summoned, it’s obvious that one has to ask the
+ ghost help with getting back home. But, to do so with the ghost is an
+ exercise in frustration. “TALK GHOST” doesn’t work because Ghost Town
+ doesn’t have the verb “TALK”. “ASK GHOST” also doesn’t work—the game
+ doesn’t have the verb “ASK” either. I was never able to figure out how
+ to ask the ghost to take me home again, until many years later I went
+ through the game’s data file and discovered the combination was “SAY
+ HOW” (“SAY HELP” or “SAY HOME” or any other word after “SAY” <em>
+doesn’t</em> work).
+<p>With a modern LLM, one would just say “Tell the ghost I need help
+ getting back to town” then the LLM would have the ghost take the hero
+ back home.
+<p>Another person <a href="https://www.retrogamestrove.com/game-66-ghost-town/">felt that a different puzzle was  unfair</a>; 
+I actually found that
+ puzzle easy (if silly), but, to be fair, unless one is familiar with
+ the board game <a href="https://en.wikipedia.org/wiki/Monopoly_(game">Monopoly</a>), 
+the puzzle won’t make any sense.
+<a name="2026-11-24-playing-these-games"> </a>
+<h3>Playing these games</h3>
+<p>I have made a <a href="https://github.com/samboy/ScottFree">Git  repo</a>  
+of an updated version of the interpreter used to play these old Scott
+ Adams style games, in addition to files for playing adventure games
+ online. Back in 2007, I made a new open source Scott Adams game, which
+ is included with this repo. This game is small and it’s pretty easy,
+ but it’s a good introduction to these old text adventure games.
+<p>While the <a href="https://solutionarchive.com/game/id%2C5346/Desert+Adventure.html">online  reviews</a> 
+felt the game was too easy, it really isn’t: One
+ buddy who play tested this game for me was only able to solve half of
+ it before getting stuck, and someone else sent me an email complaining
+ the final puzzle was too difficult to solve.
+<p>One can play this game <a href="https://samboy.github.io/ScottFree">online</a>; 
+people using smartphones should play the <a href="https://samboy.github.io/ScottFree/p.htm">small screen version of this game</a>.
+
+
+<p>
+
+</div>
+
+<div class=GitBlogNav><i>Go to: 
+<a href="#GitBlogTop">Top</a>
+ - 
+<a href="#GitBlogIndex">Index</a></i></div>
+<div class=blog>
 <!-- `ENTRY: 2026-11-08 2026 ` -->
 <a name="BlogEntry-2026-11-08"> </a>
 <div class=blogpicx style="text-align: right">
@@ -65274,6 +65379,7 @@ index</A> for details)</i>
 <div class=blog>
 <!-- `FOOTER` -->
 <a name="GitBlogIndex"> </a><h1>Blog index</h1>
+<a href="entries/2026-11-24.html">Text adventures (2026-11-24)</a></br>
 <a href="entries/2026-11-08.html">The Roland JP-08 (2026-11-08)</a></br>
 <a href="entries/2026-11-05.html">Blue Tsunami (2026-11-05)</a></br>
 <a href="entries/2026-10-29.html">Round up (2026-10-29)</a></br>
